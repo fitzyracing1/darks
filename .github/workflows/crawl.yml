@@ -22,15 +22,22 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
+      - name: keep Joshua's checkboxes (the crawler rewrites QUEUE.md)
+        run: cp QUEUE.md "$RUNNER_TEMP/QUEUE.prev.md" || true
       - name: crawl for dark lights
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           DARKS_REPO: ${{ github.repository }}
         run: node .lr/bin/dark-crawl.mjs --dir . --max-repos 120
+      - name: draft upstream issues (local files only; nothing is sent upstream)
+        continue-on-error: true   # a drafting problem must never block the crawl results
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}   # read-only use: runs, jobs, logs, issue search
+        run: node scripts/draft-upstream.mjs --dir . --prev-queue "$RUNNER_TEMP/QUEUE.prev.md"
       - name: commit results
         run: |
           git config user.name "dark-crawler"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add darks.json QUEUE.md status.json queued.json
+          git add darks.json QUEUE.md status.json queued.json drafts
           git diff --cached --quiet || git commit -m "crawl: $(date -u +%Y-%m-%dT%H:%MZ)"
           git push

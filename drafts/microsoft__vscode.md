@@ -1,0 +1,46 @@
+<!-- dark-draft: microsoft/vscode -->
+<!-- draft-state: ready -->
+# Upstream issue draft: microsoft/vscode
+
+- **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
+- **Would be filed at:** https://github.com/microsoft/vscode/issues/new
+- **Stars:** 193821 · **Generated:** 2026-10-19T00:45:03.964Z
+- Nothing in this file has been sent anywhere.
+- **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
+
+## Suggested title
+
+<!-- BEGIN TITLE -->
+CI: "CSS Cascade-Order Scan" workflow getting cancelled on main since 2026-10-17
+<!-- END TITLE -->
+
+## Body
+
+<!-- BEGIN BODY -->
+Hi! The **CSS Cascade-Order Scan** workflow (`.github/workflows/css-order-scan.yml`) on `main` has been getting cancelled since 2026-10-17. Here is what I saw, in case it's useful:
+
+- Latest run on `main`: https://github.com/microsoft/vscode/actions/runs/39100430588 — dark (conclusion: `cancelled`), 2026-10-18 05:24 UTC
+- Dark since: 2026-10-17 05:24 UTC (first run of the current streak)
+- Job / step: `Scan CSS cascade-order dependencies` → `Run CSS order scan`
+- Likely cause: The job has exceeded the maximum execution time of 6h0m0s
+
+<details><summary>End of the job log</summary>
+
+```
+  probe #1: reverse[169, 338) -> same (6181ms)
+  probe #2: reverse[84, 338) -> same (6183ms)
+  probe #3: reverse[42, 338) -> DIFFERS (6146ms)
+  probe #4: reverse[63, 338) -> DIFFERS (6117ms)
+  probe #5: reverse[73, 338) -> DIFFERS (6154ms)
+  probe #6: reverse[78, 338) -> DIFFERS (6296ms)
+  probe #7: reverse[81, 338) -> same (6183ms)
+##[error]The operation was canceled.
+```
+
+</details>
+
+If this is already known or expected, feel free to close. Thanks for maintaining vscode!
+
+---
+<sub>Found by the [dark crawler](https://github.com/fitzyracing1/darks), which checks the latest default-branch run of each workflow in popular repos. Reviewed and filed by hand.</sub>
+<!-- END BODY -->
