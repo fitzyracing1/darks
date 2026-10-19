@@ -1,0 +1,41 @@
+name: file-approved
+# MANUAL ONLY. Files ONE upstream issue from a draft that Joshua checked [x] in QUEUE.md.
+# Never scheduled. Needs a repo secret UPSTREAM_TOKEN (a token that may open issues as Joshua);
+# the workflow's own GITHUB_TOKEN cannot write to other repos.
+on:
+  workflow_dispatch:
+    inputs:
+      repo:
+        description: 'owner/repo of the ONE approved draft to file (its QUEUE.md line must be [x])'
+        required: true
+      confirm:
+        description: 'Type FILE to really file it. Anything else = dry run, nothing sent.'
+        required: true
+        default: 'dry-run'
+permissions:
+  contents: write   # record the filed issue link in drafts/index.json and QUEUE.md
+concurrency:
+  group: crawl
+  cancel-in-progress: false
+jobs:
+  file:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: file the approved draft
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}       # read-only duplicate check
+          UPSTREAM_TOKEN: ${{ secrets.UPSTREAM_TOKEN }}   # the only token that can file
+          REPO_INPUT: ${{ inputs.repo }}
+          CONFIRM_INPUT: ${{ inputs.confirm }}
+        run: node scripts/file-approved.mjs --dir . --repo "$REPO_INPUT" --confirm "$CONFIRM_INPUT"
+      - name: record what was filed
+        run: |
+          git config user.name "dark-crawler"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add drafts QUEUE.md
+          git diff --cached --quiet || { git commit -m "file-approved: ${{ inputs.repo }}" && git push; }

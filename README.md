@@ -34,6 +34,17 @@ Same active-low lit/dark rule as [fitzyracing1/lit-dark](https://github.com/fitz
 
 **The crawler never opens issues, PRs or comments on anyone else's repo.** It runs with this repo's own `GITHUB_TOKEN`, which can only write here, and every write in the code goes through a guard that refuses any other repo. Proposed upstream actions only go into [`QUEUE.md`](QUEUE.md) / `queued.json` for Joshua's approval; nothing is sent from here.
 
+## Upstream issue drafts (try branch)
+
+After each crawl, `scripts/draft-upstream.mjs` writes one **draft** upstream issue per repo with dark workflows to `drafts/<owner>__<repo>.md` (title, body with the dark run, dark-since, job/step, a likely cause from the end of the job log, and a lit fix branch on a fitzyracing1 fork if one exists) and lists it in [`QUEUE.md`](QUEUE.md) under *Drafted upstream issues — awaiting Joshua's OK* as `- [ ] owner/repo — title — drafts/...`.
+
+- **Nothing is sent.** The drafting script's GitHub client only has GET. It reads runs, jobs, job logs, and searches upstream issues/PRs.
+- **No duplicates:** a read-only search finds open upstream issues/PRs that name the workflow (file name or specific workflow name) and talk about it failing, or link the dark run. Dark workflows that are already tracked upstream are left out; if all of them are, the draft is not queued.
+- **Refresh:** drafts are rewritten each crawl; when a repo is lit again its draft moves to `drafts/resolved/` and its queue line is struck through (kept as history).
+- **Backfill:** `node scripts/draft-upstream.mjs --backfill` also reads past crawls (every `darks.json` in git history, this repo's dark issues, `queued.json`).
+- **Filing:** only by hand. Check a box (`[x]`), then run the **file-approved** workflow with the repo name and the confirm word `FILE` (anything else is a dry run). It files that one draft with the `UPSTREAM_TOKEN` secret, after one more duplicate check. It never runs on a schedule.
+- Tests: `node --test test/*.test.mjs`.
+
 ## Files
 
 | file | what |
@@ -42,6 +53,9 @@ Same active-low lit/dark rule as [fitzyracing1/lit-dark](https://github.com/fitz
 | `status.json` | manual status overrides: `{"owner/repo#.github/workflows/ci.yml": "fix-trying"}` |
 | `queued.json` / `QUEUE.md` | upstream actions waiting for approval |
 | `.github/workflows/crawl.yml` | the schedule (every 6 hours, or run it by hand) |
+| `drafts/`, `drafts/index.json` | upstream issue drafts and their state (ready / duplicate / filed / resolved) |
+| `scripts/draft-upstream.mjs`, `lib/drafts.mjs` | draft generation (read-only) |
+| `scripts/file-approved.mjs`, `.github/workflows/file-approved.yml` | manual filing of one checked draft |
 
 Crawler code: [`bin/dark-crawl.mjs`](https://github.com/fitzyracing1/light-report/blob/main/bin/dark-crawl.mjs) and [`lib/darks.mjs`](https://github.com/fitzyracing1/light-report/blob/main/lib/darks.mjs) in light-report.
 
