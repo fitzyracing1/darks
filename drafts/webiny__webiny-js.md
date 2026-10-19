@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/webiny/webiny-js/issues/new
-- **Stars:** 8047 · **Generated:** 2026-10-19T01:07:32.637Z
+- **Stars:** 8047 · **Generated:** 2026-10-19T07:12:02.054Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -42,7 +42,7 @@ time="2026-10-19T00:24:30Z" level=fatal msg=failed
 
 ### Rebuild Global Cache ("dev" branch) (`.github/workflows/rebuildGlobalCacheDev.yml`)
 
-- Latest run on `next`: https://github.com/webiny/webiny-js/actions/runs/39095737197 — dark (conclusion: `failure`), 2026-10-18 04:02 UTC
+- Latest run on `next`: https://github.com/webiny/webiny-js/actions/runs/39197594698 — dark (conclusion: `failure`), 2026-10-19 04:03 UTC
 - Dark since: 2026-10-10 04:04 UTC (first run of the current streak)
 - Job / step: `Cache dependencies and packages` → `Run actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09`
 - Likely cause: The process '/usr/bin/git' failed with exit code 1
@@ -54,9 +54,9 @@ hint:
 hint: Disable this message with "git config set advice.defaultBranchName false"
 Initialized empty Git repository in /home/runner/work/webiny-js/webiny-js/dev/.git/
 The process '/usr/bin/git' failed with exit code 1
-Waiting 19 seconds before trying again
+Waiting 14 seconds before trying again
 The process '/usr/bin/git' failed with exit code 1
-Waiting 13 seconds before trying again
+Waiting 15 seconds before trying again
 ##[error]The process '/usr/bin/git' failed with exit code 1
 ```
 

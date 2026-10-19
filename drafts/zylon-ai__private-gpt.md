@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/zylon-ai/private-gpt/issues/new
-- **Stars:** 57592 · **Generated:** 2026-10-19T01:07:32.637Z
+- **Stars:** 57593 · **Generated:** 2026-10-19T07:12:02.054Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -18,7 +18,7 @@ CI: "update-claude-specs" workflow failing on main since 2026-09-14
 <!-- BEGIN BODY -->
 Hi! The **update-claude-specs** workflow (`.github/workflows/update-claude-specs.yml`) on `main` has been failing since 2026-09-14. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/zylon-ai/private-gpt/actions/runs/38199965331 — dark (conclusion: `failure`), 2026-10-12 03:29 UTC
+- Latest run on `main`: https://github.com/zylon-ai/private-gpt/actions/runs/39194095706 — dark (conclusion: `failure`), 2026-10-19 03:18 UTC
 - Dark since: 2026-09-14 03:19 UTC (first run of the current streak)
 - Job / step: `update` → `Update Claude specs and lock file`
 - Likely cause: RuntimeError: openapi_spec_url not found in https://raw.githubusercontent.com/anthropics/anthropic-sdk-typescript/main/.stats.yml

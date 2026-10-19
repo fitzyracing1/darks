@@ -4,22 +4,25 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/xberg-io/xberg/issues/new
-- **Stars:** 9426 · **Generated:** 2026-10-19T01:07:32.637Z
+- **Stars:** 9426 · **Generated:** 2026-10-19T07:12:02.054Z
 - Nothing in this file has been sent anywhere.
-- **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
+
+## Skipped: upstream already tracking
+
+- CI E2E (`.github/workflows/ci-e2e.yaml`): [issue #2163](https://github.com/xberg-io/xberg/issues/2163) "ci(e2e): kotlin-android job loses its runner after ~1h50 on every completed run"
+
+These workflows are left out of the body below.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 2 workflows dark on main ("CI Rust", "CI E2E")
+CI: "CI Rust" workflow failing on main since 2026-10-09
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
-
-### CI Rust (`.github/workflows/ci-rust.yaml`)
+Hi! The **CI Rust** workflow (`.github/workflows/ci-rust.yaml`) on `main` has been failing since 2026-10-09. Here is what I saw, in case it's useful:
 
 - Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/39148349652 — dark (conclusion: `failure`), 2026-10-18 17:10 UTC
 - Dark since: 2026-10-09 00:25 UTC (first run of the current streak)
@@ -40,13 +43,6 @@ rustc 1.99.1 (58cf8f9c3 2026-10-13)
 ```
 
 </details>
-
-### CI E2E (`.github/workflows/ci-e2e.yaml`)
-
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/39148349597 — dark (conclusion: `failure`), 2026-10-18 17:10 UTC
-- Dark since: 2026-10-16 08:50 UTC (first run of the current streak)
-- Job / step: `E2E (kotlin-android)` → `Run e2e tests`
-- Likely cause: The hosted runner lost communication with the server. Anything in your workflow that terminates the runner process, starves it for CPU/Memory, or blocks its network access can cause this error.
 
 If this is already known or expected, feel free to close. Thanks for maintaining xberg!
 

@@ -4,36 +4,60 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/google-gemini/gemini-cli/issues/new
-- **Stars:** 107442 · **Generated:** 2026-10-19T01:07:32.637Z
+- **Stars:** 107444 · **Generated:** 2026-10-19T07:12:02.054Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: "📋 Gemini Scheduled Issue Triage" workflow failing on main since 2026-10-18
+CI: 2 workflows dark on main ("Memory Tests: Nightly", "Performance Tests: Nightly")
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! The **📋 Gemini Scheduled Issue Triage** workflow (`.github/workflows/gemini-scheduled-issue-triage.yml`) on `main` has been failing since 2026-10-18. Here is what I saw, in case it's useful:
+Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
 
-- Latest run on `main`: https://github.com/google-gemini/gemini-cli/actions/runs/39181180707 — dark (conclusion: `failure`), 2026-10-19 00:31 UTC
-- Dark since: 2026-10-18 08:13 UTC (first run of the current streak)
-- Job / step: `triage-issues` → `Apply Triaged Labels`
-- Likely cause: Unhandled error: HttpError: Resource not accessible by integration
+### Memory Tests: Nightly (`.github/workflows/memory-nightly.yml`)
+
+- Latest run on `main`: https://github.com/google-gemini/gemini-cli/actions/runs/39190108432 — dark (conclusion: `failure`), 2026-10-19 02:28 UTC
+- Dark since: 2026-10-19 02:28 UTC (first run of the current streak)
+- Job / step: `Run Memory Usage Tests` → `Run Memory Tests`
+- Likely cause: Tests  4 failed | 3 passed (7)
 
 <details><summary>End of the job log</summary>
 
 ```
-    request: {
-      agent: [Agent],
-      fetch: [Function: proxyFetch],
-      hook: [Function: bound bound register]
-    }
-  }
-}
-##[error]Unhandled error: HttpError: Resource not accessible by integration
+    228|           `  Measured:  ${formatMB(result.finalHeapUsed)} heap used\n`…
+ ❯ memory-usage.test.ts:204:15
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[4/4]⎯
+ Test Files  1 failed (1)
+      Tests  4 failed | 3 passed (7)
+   Start at  02:31:02
+   Duration  106.13s (transform 1.88s, setup 0ms, collect 3.30s, tests 102.03s, environment 0ms, prepare 55ms)
+##[error]Process completed with exit code 1.
+```
+
+</details>
+
+### Performance Tests: Nightly (`.github/workflows/perf-nightly.yml`)
+
+- Latest run on `main`: https://github.com/google-gemini/gemini-cli/actions/runs/39194418519 — dark (conclusion: `failure`), 2026-10-19 03:22 UTC
+- Dark since: 2026-10-19 03:22 UTC (first run of the current streak)
+- Job / step: `Run Performance Usage Tests` → `Run Performance Tests`
+- Likely cause: 29|     throw new Error('Failed to download ripgrep binary');
+
+<details><summary>End of the job log</summary>
+
+```
+ ❯ Vitest.initializeGlobalSetup ../node_modules/vitest/dist/chunks/cli-api.BkDphVBG.js:9724:35
+ ❯ ../node_modules/vitest/dist/chunks/cli-api.BkDphVBG.js:9636:5
+ ❯ Vitest.runFiles ../node_modules/vitest/dist/chunks/cli-api.BkDphVBG.js:9666:10
+ ❯ Vitest.start ../node_modules/vitest/dist/chunks/cli-api.BkDphVBG.js:9554:18
+ ❯ startVitest ../node_modules/vitest/dist/chunks/cli-api.BkDphVBG.js:10510:8
+ ❯ start ../node_modules/vitest/dist/chunks/cac.Cb-PYCCB.js:1412:15
+ ❯ CAC.run ../node_modules/vitest/dist/chunks/cac.Cb-PYCCB.js:1391:2
+##[error]Process completed with exit code 1.
 ```
 
 </details>

@@ -4,8 +4,9 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/storytold/wordcraft/issues/new
-- **Stars:** 14398 · **Generated:** 2026-10-19T01:07:32.637Z
+- **Stars:** 14484 · **Generated:** 2026-10-19T07:12:02.054Z
 - Nothing in this file has been sent anywhere.
+- **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Skipped: upstream already tracking
 
@@ -16,33 +17,17 @@ These workflows are left out of the body below.
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: "Printing" workflow failing on main since 2026-10-18
+CI: "Printing" workflow getting cancelled on main since 2026-10-18
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! The **Printing** workflow (`.github/workflows/printing.yml`) on `main` has been failing since 2026-10-18. Here is what I saw, in case it's useful:
+Hi! The **Printing** workflow (`.github/workflows/printing.yml`) on `main` has been getting cancelled since 2026-10-18. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/storytold/wordcraft/actions/runs/39166614455 — dark (conclusion: `failure`), 2026-10-18 21:10 UTC
+- Latest run on `main`: https://github.com/storytold/wordcraft/actions/runs/39213709420 — dark (conclusion: `cancelled`), 2026-10-19 07:05 UTC
 - Dark since: 2026-10-18 15:34 UTC (first run of the current streak)
-- Job / step: `Print (windows-latest)` → `Native app and UI Clippy`
-- Likely cause: warning: build failed, waiting for other jobs to finish...
-
-<details><summary>End of the job log</summary>
-
-```
-error: function `configure_indirect_validation` is never used
-  --> apps\wordcraft\src\graphics.rs:23:8
-   |
-23 | pub fn configure_indirect_validation(options: &mut NativeOptions, skip: bool) {
-   |        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-error: could not compile `wordcraft` (bin "wordcraft") due to 2 previous errors
-warning: build failed, waiting for other jobs to finish...
-##[error]Process completed with exit code 1.
-```
-
-</details>
+- Likely cause: run cancelled
 
 If this is already known or expected, feel free to close. Thanks for maintaining wordcraft!
 

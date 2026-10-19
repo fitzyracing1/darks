@@ -4,36 +4,37 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/storytold/lightcraft/issues/new
-- **Stars:** 13693 · **Generated:** 2026-10-19T01:07:32.637Z
+- **Stars:** 13740 · **Generated:** 2026-10-19T07:12:02.054Z
 - Nothing in this file has been sent anywhere.
+- **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: "FreeBSD" workflow failing on main since 2026-10-18
+CI: "FreeBSD" workflow getting cancelled on main since 2026-10-18
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! The **FreeBSD** workflow (`.github/workflows/freebsd.yml`) on `main` has been failing since 2026-10-18. Here is what I saw, in case it's useful:
+Hi! The **FreeBSD** workflow (`.github/workflows/freebsd.yml`) on `main` has been getting cancelled since 2026-10-18. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/storytold/lightcraft/actions/runs/39136973066 — dark (conclusion: `failure`), 2026-10-18 14:39 UTC
+- Latest run on `main`: https://github.com/storytold/lightcraft/actions/runs/39174594606 — dark (conclusion: `cancelled`), 2026-10-18 22:59 UTC
 - Dark since: 2026-10-18 00:37 UTC (first run of the current streak)
 - Job / step: `freebsd / FreeBSD 15 aarch64 (build + test)` → `Build and test in a FreeBSD VM`
-- Likely cause: ssh exited with code 1
+- Likely cause: The job has exceeded the maximum execution time of 5h0m0s
 
 <details><summary>End of the job log</summary>
 
 ```
-Warning: Permanently added '[127.0.0.1]:10022' (ED25519) to the list of known hosts.
-Sent 0 of 982438052 (0.0%), 0.0 MBs/sec
-Sent 536870912 of 982438052 (54.6%), 256.0 MBs/sec
-Sent 982438052 of 982438052 (100.0%), 321.5 MBs/sec
-Cache saved: freebsd-15.1-2.2.8-aarch64-v3
-Exec SSH: [ -L "$HOME/work" ] || ln -s /home/runner/work $HOME/work
-Warning: Permanently added '[127.0.0.1]:10022' (ED25519) to the list of known hosts.
-##[error]ssh exited with code 1
+   Compiling glutin v0.32.3
+   Compiling lightcraft-sysmem v0.9.1 (/home/runner/work/lightcraft/lightcraft/crates/sysmem)
+   Compiling accesskit_unix v0.21.1
+   Compiling glutin-winit v0.5.0
+   Compiling smithay-clipboard v0.7.3
+   Compiling accesskit_winit v0.32.2
+   Compiling arboard v3.6.1
+##[error]The operation was canceled.
 ```
 
 </details>

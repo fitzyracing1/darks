@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/sequelize/sequelize/issues/new
-- **Stars:** 30347 · **Generated:** 2026-10-19T01:07:32.637Z
+- **Stars:** 30347 · **Generated:** 2026-10-19T07:12:02.054Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title

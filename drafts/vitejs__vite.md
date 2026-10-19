@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/vitejs/vite/issues/new
-- **Stars:** 83392 · **Generated:** 2026-10-19T01:07:32.637Z
+- **Stars:** 83394 · **Generated:** 2026-10-19T07:12:02.054Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -18,20 +18,20 @@ CI: "CI" workflow failing on main since 2026-10-16
 <!-- BEGIN BODY -->
 Hi! The **CI** workflow (`.github/workflows/ci.yml`) on `main` has been failing since 2026-10-16. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/vitejs/vite/actions/runs/39105344499 — dark (conclusion: `failure`), 2026-10-18 06:48 UTC
+- Latest run on `main`: https://github.com/vitejs/vite/actions/runs/39207790462 — dark (conclusion: `failure`), 2026-10-19 06:04 UTC
 - Dark since: 2026-10-16 12:00 UTC (first run of the current streak)
-- Job / step: `Build&Test: node-20, ubuntu-latest` → `Test serve (bundled dev)`
-- Likely cause: Tests  1 failed | 825 passed | 369 skipped | 56 todo (1251)
+- Job / step: `Build&Test: node-22, ubuntu-latest` → `Test serve (bundled dev)`
+- Likely cause: Tests  1 failed | 823 passed | 371 skipped | 56 todo (1251)
 
 <details><summary>End of the job log</summary>
 
 ```
  Test Files  1 failed | 85 passed | 22 skipped (108)
-      Tests  1 failed | 825 passed | 369 skipped | 56 todo (1251)
-   Start at  06:50:49
-   Duration  85.56s (tests 59%, setup 39%, import 1%, transform 1%)
-    Isolate  108 workers spawned · ~175ms startup each (spawn + environment, per file)
-             at least ~6.14s faster with isolate: false — reuses workers across files instead of one per file
+      Tests  1 failed | 823 passed | 371 skipped | 56 todo (1251)
+   Start at  06:05:49
+   Duration  54.08s (tests 66%, setup 32%, import 1%, transform 1%)
+    Isolate  108 workers spawned · ~98ms startup each (spawn + environment, per file)
+             at least ~3.45s faster with isolate: false — reuses workers across files instead of one per file
 [ELIFECYCLE] Command failed with exit code 1.
 ##[error]Process completed with exit code 1.
 ```
