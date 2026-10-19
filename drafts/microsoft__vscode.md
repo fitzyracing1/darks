@@ -4,20 +4,22 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/microsoft/vscode/issues/new
-- **Stars:** 193940 · **Generated:** 2026-10-19T12:57:18.356Z
+- **Stars:** 193972 · **Generated:** 2026-10-19T18:50:18.546Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: "CSS Cascade-Order Scan" workflow getting cancelled on main since 2026-10-17
+CI: 2 workflows dark on main ("CSS Cascade-Order Scan", "CodeQL")
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! The **CSS Cascade-Order Scan** workflow (`.github/workflows/css-order-scan.yml`) on `main` has been getting cancelled since 2026-10-17. Here is what I saw, in case it's useful:
+Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
+
+### CSS Cascade-Order Scan (`.github/workflows/css-order-scan.yml`)
 
 - Latest run on `main`: https://github.com/microsoft/vscode/actions/runs/39204701850 — dark (conclusion: `cancelled`), 2026-10-19 05:28 UTC
 - Dark since: 2026-10-17 05:24 UTC (first run of the current streak)
@@ -38,6 +40,12 @@ Hi! The **CSS Cascade-Order Scan** workflow (`.github/workflows/css-order-scan.y
 ```
 
 </details>
+
+### CodeQL (`.github/workflows/codeql.yml`)
+
+- Latest run on `main`: https://github.com/microsoft/vscode/actions/runs/39301439437 — dark (conclusion: `cancelled`), 2026-10-19 18:18 UTC
+- Dark since: 2026-10-19 18:04 UTC (first run of the current streak)
+- Likely cause: run cancelled
 
 If this is already known or expected, feel free to close. Thanks for maintaining vscode!
 

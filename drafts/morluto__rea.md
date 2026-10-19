@@ -4,43 +4,19 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/morluto/rea/issues/new
-- **Stars:** 330935 · **Generated:** 2026-10-19T12:57:18.356Z
+- **Stars:** 334628 · **Generated:** 2026-10-19T18:50:18.546Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 2 workflows dark on main ("CI", "Mutation sweep")
+CI: "Mutation sweep" workflow failing on main since 2026-10-19
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
-
-### CI (`.github/workflows/ci.yml`)
-
-- Latest run on `main`: https://github.com/morluto/rea/actions/runs/39250630911 — dark (conclusion: `failure`), 2026-10-19 12:15 UTC
-- Dark since: 2026-10-18 23:07 UTC (first run of the current streak)
-- Job / step: `Test shard (1/5)` → `Run built-dependent tests for fast feedback`
-- Likely cause: Tests  4 failed | 1835 passed | 18 skipped (1857)
-
-<details><summary>End of the job log</summary>
-
-```
- ❯ tests/acceptance/setup/geminiWorkspaceTrust.test.ts:173:21
-⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[4/4]⎯
- Test Files  2 failed | 190 passed | 6 skipped (198)
-      Tests  4 failed | 1835 passed | 18 skipped (1857)
-   Start at  12:24:45
-   Duration  683.16s (tests 94%, import 5%, transform 1%)
-blob report written to /home/runner/work/rea/rea/.vitest/blob/blob-built-1-5.json
-##[error]Process completed with exit code 1.
-```
-
-</details>
-
-### Mutation sweep (`.github/workflows/mutation.yml`)
+Hi! The **Mutation sweep** workflow (`.github/workflows/mutation.yml`) on `main` has been failing since 2026-10-19. Here is what I saw, in case it's useful:
 
 - Latest run on `main`: https://github.com/morluto/rea/actions/runs/39201928274 — dark (conclusion: `failure`), 2026-10-19 04:55 UTC
 - Dark since: 2026-10-19 04:55 UTC (first run of the current streak)

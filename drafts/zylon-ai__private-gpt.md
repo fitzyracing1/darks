@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/zylon-ai/private-gpt/issues/new
-- **Stars:** 57593 · **Generated:** 2026-10-19T12:57:18.356Z
+- **Stars:** 57596 · **Generated:** 2026-10-19T18:50:18.546Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title

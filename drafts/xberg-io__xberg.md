@@ -4,7 +4,7 @@
 
 - **Status:** not for filing — upstream already has an open issue/PR about every dark workflow here
 - **Would be filed at:** https://github.com/xberg-io/xberg/issues/new
-- **Stars:** 9427 · **Generated:** 2026-10-19T12:57:18.356Z
+- **Stars:** 9427 · **Generated:** 2026-10-19T18:50:18.546Z
 - Nothing in this file has been sent anywhere.
 
 ## Skipped: upstream already tracking

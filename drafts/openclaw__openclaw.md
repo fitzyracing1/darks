@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/openclaw/openclaw/issues/new
-- **Stars:** 392449 · **Generated:** 2026-10-19T12:57:18.356Z
+- **Stars:** 392462 · **Generated:** 2026-10-19T18:50:18.546Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 - **Note for Joshua:** cancelled by a concurrency group — likely noise
@@ -12,7 +12,7 @@
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 2 workflows dark on main ("CI", "CodeQL")
+CI: 3 workflows dark on main ("CI", "CodeQL", "ClawSweeper Dispatch")
 <!-- END TITLE -->
 
 ## Body
@@ -22,31 +22,23 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### CI (`.github/workflows/ci.yml`)
 
-- Latest run on `main`: https://github.com/openclaw/openclaw/actions/runs/38883182826 — dark (conclusion: `cancelled`), 2026-10-16 09:50 UTC
+- Latest run on `main`: https://github.com/openclaw/openclaw/actions/runs/39211103549 — dark (conclusion: `cancelled`), 2026-10-19 06:38 UTC
 - Dark since: 2026-10-16 04:42 UTC (first run of the current streak)
 - Likely cause: run cancelled
 
 ### CodeQL (`.github/workflows/codeql.yml`)
 
-- Latest run on `main`: https://github.com/openclaw/openclaw/actions/runs/38883266366 — dark (conclusion: `cancelled`), 2026-10-16 09:51 UTC
+- Latest run on `main`: https://github.com/openclaw/openclaw/actions/runs/39211061823 — dark (conclusion: `cancelled`), 2026-10-19 06:38 UTC
 - Dark since: 2026-10-16 09:50 UTC (first run of the current streak)
-- Job / step: `Security High (actions)` → `Analyze`
+- Job / step: `scope`
 - Likely cause: Canceling since a higher priority waiting request for codeql-CodeQL-ref-refs/heads/main exists
 
-<details><summary>End of the job log</summary>
+### ClawSweeper Dispatch (`.github/workflows/clawsweeper-dispatch.yml`)
 
-```
-Starting evaluation of codeql/actions-queries/Security/CWE-367/UntrustedCheckoutTOCTOUCritical.ql.
-Starting evaluation of codeql/actions-queries/Security/CWE-367/UntrustedCheckoutTOCTOUHigh.ql.
-Starting evaluation of codeql/actions-queries/Security/CWE-829/UntrustedCheckoutCritical.ql.
-Starting evaluation of codeql/actions-queries/Security/CWE-829/UntrustedCheckoutHigh.ql.
-[1/11 eval 22.1s] Evaluation done; writing results to codeql/actions-queries/Security/CWE-1395/UseOfKnownVulnerableAction.bqrs.
-[2/11 eval 23.1s] Evaluation done; writing results to codeql/actions-queries/Security/CWE-312/UnmaskedSecretExposure.bqrs.
-[3/11 eval 24.1s] Evaluation done; writing results to codeql/actions-queries/Security/CWE-312/SecretsInArtifacts.bqrs.
-##[error]The operation was canceled.
-```
-
-</details>
+- Latest run on `main`: https://github.com/openclaw/openclaw/actions/runs/39211061830 — dark (conclusion: `cancelled`), 2026-10-19 06:38 UTC
+- Dark since: 2026-10-16 09:50 UTC (first run of the current streak)
+- Job / step: `dispatch`
+- Likely cause: Canceling since a higher priority waiting request for clawsweeper-dispatch-openclaw/openclaw-refs/heads/main exists
 
 If this is already known or expected, feel free to close. Thanks for maintaining openclaw!
 

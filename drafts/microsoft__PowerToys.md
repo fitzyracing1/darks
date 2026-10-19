@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/microsoft/PowerToys/issues/new
-- **Stars:** 139480 · **Generated:** 2026-10-19T12:57:18.356Z
+- **Stars:** 139485 · **Generated:** 2026-10-19T18:50:18.546Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title

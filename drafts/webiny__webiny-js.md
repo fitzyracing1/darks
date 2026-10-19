@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/webiny/webiny-js/issues/new
-- **Stars:** 8047 · **Generated:** 2026-10-19T12:57:18.356Z
+- **Stars:** 8048 · **Generated:** 2026-10-19T18:50:18.546Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -64,22 +64,22 @@ Waiting 15 seconds before trying again
 
 ### Push (`.github/workflows/push.yml`)
 
-- Latest run on `next`: https://github.com/webiny/webiny-js/actions/runs/39247590695 — dark (conclusion: `failure`), 2026-10-19 11:50 UTC
+- Latest run on `next`: https://github.com/webiny/webiny-js/actions/runs/39271213529 — dark (conclusion: `failure`), 2026-10-19 14:41 UTC
 - Dark since: 2026-10-14 08:22 UTC (first run of the current streak)
-- Job / step: `[DDB] webhooks` → `Run tests`
-- Likely cause: AssertionError: expected 999 to be greater than or equal to 1000 (v6/packages/webhooks/__tests__/WebhookDeliver.test.ts:92)
+- Job / step: `[SQL] api-event-handler-standalone-sql` → `Run tests`
+- Likely cause: AssertionError: expected [ …(6) ] to have a length of 3 but got 6 (v6/packages/api-event-handler-standalone-sql/__tests__/rootStorageDecorators.test.ts:62)
 
 <details><summary>End of the job log</summary>
 
 ```
-     93|     });
-     94|
+     63|         expect(resolved.map(isProbed)).toEqual([true, true, true]);
+     64|     });
 ⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
- Test Files  1 failed | 23 passed (24)
-      Tests  1 failed | 138 passed (139)
-   Start at  11:56:30
-   Duration  57.85s (transform 3.74s, setup 30.05s, import 3.90s, tests 22.07s, environment 1ms)
-##[error]AssertionError: expected 999 to be greater than or equal to 1000
+ Test Files  1 failed | 2 passed (3)
+      Tests  1 failed | 2 passed (3)
+   Start at  14:46:05
+   Duration  24.75s (transform 12.23s, setup 10.89s, import 12.78s, tests 664ms, environment 0ms)
+##[error]AssertionError: expected [ …(6) ] to have a length of 3 but got 6
 ```
 
 </details>

@@ -4,19 +4,21 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/react/react/issues/new
-- **Stars:** 251357 · **Generated:** 2026-10-19T12:57:18.356Z
+- **Stars:** 251387 · **Generated:** 2026-10-19T18:50:18.546Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: "(DevTools) Regression Tests" workflow failing on main since 2026-10-11
+CI: 2 workflows dark on main ("(DevTools) Regression Tests", "(Compiler) TypeScript")
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! The **(DevTools) Regression Tests** workflow (`.github/workflows/devtools_regression_tests.yml`) on `main` has been failing since 2026-10-11. Here is what I saw, in case it's useful:
+Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
+
+### (DevTools) Regression Tests (`.github/workflows/devtools_regression_tests.yml`)
 
 - Latest run on `main`: https://github.com/react/react/actions/runs/39179189792 — dark (conclusion: `failure`), 2026-10-19 00:05 UTC
 - Dark since: 2026-10-11 00:06 UTC (first run of the current streak)
@@ -33,6 +35,28 @@ Tests:       4 failed, 437 skipped, 180 passed, 621 total
 Snapshots:   27 failed, 260 passed, 287 total
 Time:        23.693 s
 Ran all test suites.
+##[error]Process completed with exit code 1.
+```
+
+</details>
+
+### (Compiler) TypeScript (`.github/workflows/compiler_typescript.yml`)
+
+- Latest run on `main`: https://github.com/react/react/actions/runs/39290732148 — dark (conclusion: `failure`), 2026-10-19 17:02 UTC
+- Dark since: 2026-10-19 17:02 UTC (first run of the current streak)
+- Job / step: `Test react-forgive` → `Run xvfb-run -a yarn workspace react-forgive test`
+- Likely cause: error Command failed.
+
+<details><summary>End of the job log</summary>
+
+```
+error Command failed.
+Exit code: 1
+Command: /opt/hostedtoolcache/node/20.19.0/x64/bin/node
+Arguments: /usr/local/lib/node_modules/yarn/lib/cli.js test
+Directory: /home/runner/work/react/react/compiler/packages/react-forgive
+Output:
+info Visit https://yarnpkg.com/en/docs/cli/workspace for documentation about this command.
 ##[error]Process completed with exit code 1.
 ```
 

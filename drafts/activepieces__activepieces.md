@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/activepieces/activepieces/issues/new
-- **Stars:** 25107 · **Generated:** 2026-10-19T12:57:18.356Z
+- **Stars:** 25116 · **Generated:** 2026-10-19T18:50:18.546Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -86,21 +86,21 @@ Breaking migrations detected: DropChatRolloutUserTable1870000000000
 
 ### Release Pieces (`.github/workflows/release-pieces.yml`)
 
-- Latest run on `main`: https://github.com/activepieces/activepieces/actions/runs/39250191330 — dark (conclusion: `failure`), 2026-10-19 12:11 UTC
+- Latest run on `main`: https://github.com/activepieces/activepieces/actions/runs/39286506715 — dark (conclusion: `failure`), 2026-10-19 16:34 UTC
 - Dark since: 2026-10-19 12:11 UTC (first run of the current streak)
 - Job / step: `Release-Pieces` → `publish pieces packages`
-- Likely cause: [publishPieces] 1/3 piece(s) failed to publish:
+- Likely cause: [publishPieces] 1/11 piece(s) failed to publish:
 
 <details><summary>End of the job log</summary>
 
 ```
   output: [ null, null, null ],
-  pid: 2672,
+  pid: 2961,
   stdout: null,
   stderr: null
 }
-[publishPieces] 1/3 piece(s) failed to publish:
-  packages/pieces/community/woocommerce
+[publishPieces] 1/11 piece(s) failed to publish:
+  packages/pieces/community/hubspot
 ##[error]Process completed with exit code 1.
 ```
 
