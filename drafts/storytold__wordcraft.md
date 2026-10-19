@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/storytold/wordcraft/issues/new
-- **Stars:** 14309 · **Generated:** 2026-10-19T00:45:03.964Z
+- **Stars:** 14398 · **Generated:** 2026-10-19T01:07:32.637Z
 - Nothing in this file has been sent anywhere.
 
 ## Skipped: upstream already tracking
@@ -24,7 +24,7 @@ CI: "Printing" workflow failing on main since 2026-10-18
 <!-- BEGIN BODY -->
 Hi! The **Printing** workflow (`.github/workflows/printing.yml`) on `main` has been failing since 2026-10-18. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/storytold/wordcraft/actions/runs/39143276049 — dark (conclusion: `failure`), 2026-10-18 16:03 UTC
+- Latest run on `main`: https://github.com/storytold/wordcraft/actions/runs/39166614455 — dark (conclusion: `failure`), 2026-10-18 21:10 UTC
 - Dark since: 2026-10-18 15:34 UTC (first run of the current streak)
 - Job / step: `Print (windows-latest)` → `Native app and UI Clippy`
 - Likely cause: warning: build failed, waiting for other jobs to finish...

@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/public-apis/public-apis/issues/new
-- **Stars:** 490025 · **Generated:** 2026-10-19T00:45:03.964Z
+- **Stars:** 490103 · **Generated:** 2026-10-19T01:07:32.637Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -42,10 +42,10 @@ Hi! A few workflows on `master` have been dark recently. Details below, in case 
 
 ### Validate links (`.github/workflows/validate_links.yml`)
 
-- Latest run on `master`: https://github.com/public-apis/public-apis/actions/runs/39083018478 — dark (conclusion: `failure`), 2026-10-18 00:30 UTC
+- Latest run on `master`: https://github.com/public-apis/public-apis/actions/runs/39181030541 — dark (conclusion: `failure`), 2026-10-19 00:29 UTC
 - Dark since: 2026-10-03 00:29 UTC (first run of the current streak)
 - Job / step: `Check all links are working` → `Validate all links from README.md`
-- Likely cause: (node:2068) [DEP0169] DeprecationWarning: 'url.parse()' behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for 'url.parse()' vulnerabili…
+- Likely cause: (node:2267) [DEP0169] DeprecationWarning: 'url.parse()' behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for 'url.parse()' vulnerabili…
 
 <details><summary>End of the job log</summary>
 

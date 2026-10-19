@@ -4,21 +4,15 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/huggingface/transformers/issues/new
-- **Stars:** 167815 · **Generated:** 2026-10-19T00:45:03.964Z
+- **Stars:** 167823 · **Generated:** 2026-10-19T01:07:32.637Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** workflow failed to start (config/permissions on their side)
 - **Note for Joshua:** self-hosted runner problem — maintainers usually know
 
-## Skipped: upstream already tracking
-
-- Doctests (`.github/workflows/doctests.yml`): [PR #45114](https://github.com/huggingface/transformers/pull/45114) "fix: lets fix all doctests"
-
-These workflows are left out of the body below.
-
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 7 workflows dark on main ("Build docker images (scheduled)", "Check Tiny Models", "Self-hosted runner (nightly-past-ci-caller)", +4 more)
+CI: 8 workflows dark on main ("Build docker images (scheduled)", "Check Tiny Models", "Self-hosted runner (nightly-past-ci-caller)", +5 more)
 <!-- END TITLE -->
 
 ## Body
@@ -82,6 +76,12 @@ ImportError: pyarrow requires NumPy 2.0 or newer, found 1.26.4
 - Dark since: 2026-10-17 02:31 UTC (first run of the current streak)
 - Job / step: `DeepSpeed CI / Intel Gaudi deepspeed tests (2gaudi)`
 - Likely cause: Required runner group 'itac-bm-emr-gaudi3-dell-2gaudi' not found
+
+### Doctests (`.github/workflows/doctests.yml`)
+
+- Latest run on `main`: https://github.com/huggingface/transformers/actions/runs/39090490285 — dark (conclusion: `failure`), 2026-10-18 02:33 UTC
+- Dark since: 2026-10-17 02:32 UTC (first run of the current streak)
+- Likely cause: no cause found in annotations
 
 ### Nvidia CI - Flash Attn (`.github/workflows/self-scheduled-flash-attn-caller.yml`)
 

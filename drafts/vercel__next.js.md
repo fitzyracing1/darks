@@ -4,13 +4,13 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/vercel/next.js/issues/new
-- **Stars:** 143072 · **Generated:** 2026-10-19T00:45:03.964Z
+- **Stars:** 143075 · **Generated:** 2026-10-19T01:07:32.637Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 4 workflows dark on canary ("build-and-test", "Update Font Data", "Rspack Next.js production integration tests", +1 more)
+CI: 3 workflows dark on canary ("Update Font Data", "Rspack Next.js production integration tests", "Rspack Next.js development integration tests")
 <!-- END TITLE -->
 
 ## Body
@@ -18,31 +18,9 @@ CI: 4 workflows dark on canary ("build-and-test", "Update Font Data", "Rspack Ne
 <!-- BEGIN BODY -->
 Hi! A few workflows on `canary` have been dark recently. Details below, in case they're useful:
 
-### build-and-test (`.github/workflows/build_and_test.yml`)
-
-- Latest run on `canary`: https://github.com/vercel/next.js/actions/runs/39078616789 — dark (conclusion: `failure`), 2026-10-17 23:20 UTC
-- Dark since: 2026-10-17 23:20 UTC (first run of the current streak)
-- Job / step: `test rspack production (3/7, 18.3.1) / build` → `Run export NEXT_EXTERNAL_TESTS_FILTERS="$(pwd)/test/rspack-build-tests-manifest.json"`
-- Likely cause: Some tests failed
-
-<details><summary>End of the job log</summary>
-
-```
-Force exiting Jest: Have you considered using `--detectOpenHandles` to detect async operations that kept running after all tests finished?
-end of test/e2e/app-dir/app-static/app-static.test.ts output
---test output start-- {"numFailedTestSuites":1,"numFailedTests":2,"numPassedTestSuites":0,"numPassedTests":0,"numPendingTestSuites":0,"numPendingTests":111,"numRuntimeErrorTestSuites":0,"numTodoTests":0,"numTotalTestSui…
-Test result cache: skipped 199 cached, re-ran 1
-Some tests failed
-Successfully updated test timings in KV store
-exiting with code 1
-##[error]Process completed with exit code 1.
-```
-
-</details>
-
 ### Update Font Data (`.github/workflows/update_fonts_data.yml`)
 
-- Latest run on `canary`: https://github.com/vercel/next.js/actions/runs/39082402261 — dark (conclusion: `failure`), 2026-10-18 00:20 UTC
+- Latest run on `canary`: https://github.com/vercel/next.js/actions/runs/39180390523 — dark (conclusion: `failure`), 2026-10-19 00:21 UTC
 - Dark since: 2026-10-18 00:20 UTC (first run of the current streak)
 - Job / step: `create-pull-request` → `Create Pull Request`
 - Likely cause: 'husky - pre-commit script failed (code 1)\n'

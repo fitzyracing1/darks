@@ -4,25 +4,43 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/awslabs/mcp/issues/new
-- **Stars:** 9791 · **Generated:** 2026-10-19T00:45:03.964Z
+- **Stars:** 9793 · **Generated:** 2026-10-19T01:07:32.637Z
 - Nothing in this file has been sent anywhere.
-
-## Skipped: upstream already tracking
-
-- Check License Header (`.github/workflows/check-license-header.yml`): [PR #4703](https://github.com/awslabs/mcp/pull/4703) "fix(ci): isolate git env in check-license-header pre-commit hook"
-
-These workflows are left out of the body below.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: "trivy" workflow failing on main since 2026-10-16
+CI: 2 workflows dark on main ("Check License Header", "trivy")
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! The **trivy** workflow (`.github/workflows/trivy.yml`) on `main` has been failing since 2026-10-16. Here is what I saw, in case it's useful:
+Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
+
+### Check License Header (`.github/workflows/check-license-header.yml`)
+
+- Latest run on `main`: https://github.com/awslabs/mcp/actions/runs/38943009163 — dark (conclusion: `failure`), 2026-10-16 17:52 UTC
+- Dark since: 2026-10-13 23:49 UTC (first run of the current streak)
+- Job / step: `Code Review Upon All Successful Runs` → `Check license headers`
+- Likely cause: 0 error(s) and 1 warning(s) found. Warnings are treated as errors.
+
+<details><summary>End of the job log</summary>
+
+```
+##[debug]Evaluating success:
+##[debug]=> true
+##[debug]Result: true
+##[debug]Starting: Check license headers
+##[debug]Loading inputs
+##[debug]Loading env
+##[warning]Config does not cover the file 'src/redshift-mcp-server/e2e_tests/config.toml.example'
+##[error]0 error(s) and 1 warning(s) found. Warnings are treated as errors.
+```
+
+</details>
+
+### trivy (`.github/workflows/trivy.yml`)
 
 - Latest run on `main`: https://github.com/awslabs/mcp/actions/runs/38943009170 — dark (conclusion: `failure`), 2026-10-16 17:52 UTC
 - Dark since: 2026-10-16 17:52 UTC (first run of the current streak)

@@ -1,12 +1,30 @@
 <!-- dark-draft: NousResearch/hermes-agent -->
-<!-- draft-state: duplicate -->
+<!-- draft-state: ready -->
 # Upstream issue draft: NousResearch/hermes-agent
 
-- **Status:** not for filing — upstream already has an open issue/PR about every dark workflow here
+- **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/NousResearch/hermes-agent/issues/new
-- **Stars:** 254898 · **Generated:** 2026-10-19T00:45:03.964Z
+- **Stars:** 254954 · **Generated:** 2026-10-19T01:07:32.637Z
 - Nothing in this file has been sent anywhere.
+- **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
-## Skipped: upstream already tracking
+## Suggested title
 
-- Docker Build, Test, and Publish (`.github/workflows/docker.yml`): [PR #128533](https://github.com/NousResearch/hermes-agent/pull/128533) "fix(docker): say why the configured cwd→/workspace bind was skipped"
+<!-- BEGIN TITLE -->
+CI: "Docker Build, Test, and Publish" workflow getting cancelled on main since 2026-10-13
+<!-- END TITLE -->
+
+## Body
+
+<!-- BEGIN BODY -->
+Hi! The **Docker Build, Test, and Publish** workflow (`.github/workflows/docker.yml`) on `main` has been getting cancelled since 2026-10-13. Here is what I saw, in case it's useful:
+
+- Latest run on `main`: https://github.com/NousResearch/hermes-agent/actions/runs/39177457699 — dark (conclusion: `cancelled`), 2026-10-18 23:39 UTC
+- Dark since: 2026-10-13 19:04 UTC (first run of the current streak)
+- Likely cause: run cancelled
+
+If this is already known or expected, feel free to close. Thanks for maintaining hermes-agent!
+
+---
+<sub>Found by the [dark crawler](https://github.com/fitzyracing1/darks), which checks the latest default-branch run of each workflow in popular repos. Reviewed and filed by hand.</sub>
+<!-- END BODY -->

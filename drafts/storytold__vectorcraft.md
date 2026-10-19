@@ -4,9 +4,9 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/storytold/vectorcraft/issues/new
-- **Stars:** 9813 · **Generated:** 2026-10-19T00:45:03.964Z
+- **Stars:** 9844 · **Generated:** 2026-10-19T01:07:32.637Z
 - Nothing in this file has been sent anywhere.
-- **Note for Joshua:** cancelled by a concurrency group — likely noise
+- **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
@@ -19,21 +19,21 @@ CI: "FreeBSD" workflow getting cancelled on main since 2026-10-17
 <!-- BEGIN BODY -->
 Hi! The **FreeBSD** workflow (`.github/workflows/freebsd.yml`) on `main` has been getting cancelled since 2026-10-17. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/storytold/vectorcraft/actions/runs/39151580311 — dark (conclusion: `cancelled`), 2026-10-18 17:52 UTC
+- Latest run on `main`: https://github.com/storytold/vectorcraft/actions/runs/39151597855 — dark (conclusion: `cancelled`), 2026-10-18 17:52 UTC
 - Dark since: 2026-10-17 18:48 UTC (first run of the current streak)
-- Job / step: `freebsd / FreeBSD 15 x86_64 (build + test)` → `Build and test in a FreeBSD VM`
-- Likely cause: Canceling since a higher priority waiting request for freebsd-refs/heads/main exists
+- Job / step: `freebsd / FreeBSD 15 aarch64 (build + test)` → `Build and test in a FreeBSD VM`
+- Likely cause: The job has exceeded the maximum execution time of 5h0m0s
 
 <details><summary>End of the job log</summary>
 
 ```
-Recommended packages:
-  ipxe-qemu-256k-compat-efi-roms qemu-system-gui qemu-system-modules-spice
-  qemu-system-modules-opengl qemu-block-extra cpu-checker
-The following NEW packages will be installed:
-  ipxe-qemu libbrlapi0.8 libcacard0 libdaxctl1 libfdt1 libndctl6 libpcsclite1
-  libpmem1 librdmacm1t64 liburing2 libusbredirparser1t64 ovmf
-  qemu-system-common qemu-system-data qemu-system-x86 qemu-utils seabios
+   Compiling slab v0.4.12
+   Compiling scoped-tls v1.0.1
+   Compiling downcast-rs v1.2.1
+   Compiling polling v3.11.0
+   Compiling quick-xml v0.41.0
+   Compiling wayland-backend v0.3.17
+   Compiling cfg_aliases v0.2.2
 ##[error]The operation was canceled.
 ```
 
