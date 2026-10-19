@@ -1,8 +1,8 @@
 <!-- dark-draft: huggingface/transformers -->
-<!-- draft-state: ready -->
+<!-- draft-state: resolved -->
 # Upstream issue draft: huggingface/transformers
 
-- **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
+- **Status:** resolved — lit again (2026-10-19); nothing to file
 - **Would be filed at:** https://github.com/huggingface/transformers/issues/new
 - **Stars:** 167836 · **Generated:** 2026-10-19T07:12:02.054Z
 - Nothing in this file has been sent anywhere.

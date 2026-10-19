@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/ReactiveX/rxjs/issues/new
-- **Stars:** 31698 · **Generated:** 2026-10-19T07:12:02.054Z
+- **Stars:** 31698 · **Generated:** 2026-10-19T12:57:18.356Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -20,10 +20,10 @@ Hi! A few workflows on `master` have been dark recently. Details below, in case 
 
 ### OSV vulnerability policy (`.github/workflows/osv.yml`)
 
-- Latest run on `master`: https://github.com/ReactiveX/rxjs/actions/runs/38221792865 — dark (conclusion: `failure`), 2026-10-12 08:08 UTC
+- Latest run on `master`: https://github.com/ReactiveX/rxjs/actions/runs/39219266062 — dark (conclusion: `failure`), 2026-10-19 07:56 UTC
 - Dark since: 2026-09-14 07:50 UTC (first run of the current streak)
 - Job / step: `No unreviewed release-reachable vulnerabilities` → `Run full OSV scan with only reviewed docs-tooling exceptions`
-- Likely cause: Filtered 262 vulnerabilities from output
+- Likely cause: Filtered 259 vulnerabilities from output
 
 <details><summary>End of the job log</summary>
 
@@ -33,7 +33,7 @@ GHSA-3h5v-q93c-6h6q and 1 alias have been filtered out because: workspace=apps/r
 GHSA-58qx-3vcg-4xpx and 1 alias have been filtered out because: workspace=apps/rxjs.dev; owner=benlesh; tracking=docs/security/LEGACY_DOCS_VULNERABILITIES.md; reviewed=2026-08-03; unreachable=apps/rxjs.dev is excluded f…
 GHSA-96hv-2xvq-fx4p and 1 alias have been filtered out because: workspace=apps/rxjs.dev; owner=benlesh; tracking=docs/security/LEGACY_DOCS_VULNERABILITIES.md; reviewed=2026-08-03; unreachable=apps/rxjs.dev is excluded f…
 GHSA-776f-qx25-q3cc and 1 alias have been filtered out because: workspace=apps/rxjs.dev; owner=benlesh; tracking=docs/security/LEGACY_DOCS_VULNERABILITIES.md; reviewed=2026-08-03; unreachable=apps/rxjs.dev is excluded f…
-Filtered 262 vulnerabilities from output
+Filtered 259 vulnerabilities from output
 Exit code: 1
 ##[warning]No files were found with the provided path: .security. No artifacts will be uploaded.
 ```

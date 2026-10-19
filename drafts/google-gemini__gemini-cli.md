@@ -4,13 +4,13 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/google-gemini/gemini-cli/issues/new
-- **Stars:** 107444 · **Generated:** 2026-10-19T07:12:02.054Z
+- **Stars:** 107455 · **Generated:** 2026-10-19T12:57:18.356Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 2 workflows dark on main ("Memory Tests: Nightly", "Performance Tests: Nightly")
+CI: 3 workflows dark on main ("Memory Tests: Nightly", "Performance Tests: Nightly", "📋 Gemini Scheduled Issue Triage")
 <!-- END TITLE -->
 
 ## Body
@@ -57,6 +57,28 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
  ❯ startVitest ../node_modules/vitest/dist/chunks/cli-api.BkDphVBG.js:10510:8
  ❯ start ../node_modules/vitest/dist/chunks/cac.Cb-PYCCB.js:1412:15
  ❯ CAC.run ../node_modules/vitest/dist/chunks/cac.Cb-PYCCB.js:1391:2
+##[error]Process completed with exit code 1.
+```
+
+</details>
+
+### 📋 Gemini Scheduled Issue Triage (`.github/workflows/gemini-scheduled-issue-triage.yml`)
+
+- Latest run on `main`: https://github.com/google-gemini/gemini-cli/actions/runs/39251001408 — dark (conclusion: `failure`), 2026-10-19 12:18 UTC
+- Dark since: 2026-10-19 12:18 UTC (first run of the current streak)
+- Job / step: `triage-issues` → `Run Standard Triage Analysis`
+- Likely cause: "message": "exception TypeError: fetch failed sending request",
+
+<details><summary>End of the job log</summary>
+
+```
+  "error": {
+    "type": "Error",
+    "message": "exception TypeError: fetch failed sending request",
+    "code": 1
+  }
+}
+::: End Gemini CLI STDERR :::
 ##[error]Process completed with exit code 1.
 ```
 

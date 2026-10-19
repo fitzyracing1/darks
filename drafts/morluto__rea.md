@@ -4,9 +4,8 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/morluto/rea/issues/new
-- **Stars:** 326850 · **Generated:** 2026-10-19T07:12:02.054Z
+- **Stars:** 330935 · **Generated:** 2026-10-19T12:57:18.356Z
 - Nothing in this file has been sent anywhere.
-- **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
@@ -21,9 +20,25 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### CI (`.github/workflows/ci.yml`)
 
-- Latest run on `main`: https://github.com/morluto/rea/actions/runs/39204311565 — dark (conclusion: `cancelled`), 2026-10-19 05:23 UTC
+- Latest run on `main`: https://github.com/morluto/rea/actions/runs/39250630911 — dark (conclusion: `failure`), 2026-10-19 12:15 UTC
 - Dark since: 2026-10-18 23:07 UTC (first run of the current streak)
-- Likely cause: run cancelled
+- Job / step: `Test shard (1/5)` → `Run built-dependent tests for fast feedback`
+- Likely cause: Tests  4 failed | 1835 passed | 18 skipped (1857)
+
+<details><summary>End of the job log</summary>
+
+```
+ ❯ tests/acceptance/setup/geminiWorkspaceTrust.test.ts:173:21
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[4/4]⎯
+ Test Files  2 failed | 190 passed | 6 skipped (198)
+      Tests  4 failed | 1835 passed | 18 skipped (1857)
+   Start at  12:24:45
+   Duration  683.16s (tests 94%, import 5%, transform 1%)
+blob report written to /home/runner/work/rea/rea/.vitest/blob/blob-built-1-5.json
+##[error]Process completed with exit code 1.
+```
+
+</details>
 
 ### Mutation sweep (`.github/workflows/mutation.yml`)
 

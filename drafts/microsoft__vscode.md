@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/microsoft/vscode/issues/new
-- **Stars:** 193910 · **Generated:** 2026-10-19T07:12:02.054Z
+- **Stars:** 193940 · **Generated:** 2026-10-19T12:57:18.356Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
@@ -19,7 +19,7 @@ CI: "CSS Cascade-Order Scan" workflow getting cancelled on main since 2026-10-17
 <!-- BEGIN BODY -->
 Hi! The **CSS Cascade-Order Scan** workflow (`.github/workflows/css-order-scan.yml`) on `main` has been getting cancelled since 2026-10-17. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/microsoft/vscode/actions/runs/39100430588 — dark (conclusion: `cancelled`), 2026-10-18 05:24 UTC
+- Latest run on `main`: https://github.com/microsoft/vscode/actions/runs/39204701850 — dark (conclusion: `cancelled`), 2026-10-19 05:28 UTC
 - Dark since: 2026-10-17 05:24 UTC (first run of the current streak)
 - Job / step: `Scan CSS cascade-order dependencies` → `Run CSS order scan`
 - Likely cause: The job has exceeded the maximum execution time of 6h0m0s
@@ -27,13 +27,13 @@ Hi! The **CSS Cascade-Order Scan** workflow (`.github/workflows/css-order-scan.y
 <details><summary>End of the job log</summary>
 
 ```
-  probe #1: reverse[169, 338) -> same (6181ms)
-  probe #2: reverse[84, 338) -> same (6183ms)
-  probe #3: reverse[42, 338) -> DIFFERS (6146ms)
-  probe #4: reverse[63, 338) -> DIFFERS (6117ms)
-  probe #5: reverse[73, 338) -> DIFFERS (6154ms)
-  probe #6: reverse[78, 338) -> DIFFERS (6296ms)
-  probe #7: reverse[81, 338) -> same (6183ms)
+  probe #2: reverse[254, 339) -> same (6198ms)
+  probe #3: reverse[211, 339) -> same (6089ms)
+  probe #4: reverse[190, 339) -> DIFFERS (6136ms)
+  probe #5: reverse[200, 339) -> same (6144ms)
+  probe #6: reverse[195, 339) -> same (6151ms)
+  probe #7: reverse[192, 339) -> same (6117ms)
+  probe #8: reverse[191, 339) -> DIFFERS (6163ms)
 ##[error]The operation was canceled.
 ```
 

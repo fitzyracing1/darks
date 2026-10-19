@@ -4,13 +4,13 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/activepieces/activepieces/issues/new
-- **Stars:** 25105 · **Generated:** 2026-10-19T07:12:02.054Z
+- **Stars:** 25107 · **Generated:** 2026-10-19T12:57:18.356Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 2 workflows dark on main ("Benchmark", "Chat Evals")
+CI: 4 workflows dark on main ("Benchmark", "Chat Evals", "Continuous Delivery — Canary", +1 more)
 <!-- END TITLE -->
 
 ## Body
@@ -58,6 +58,50 @@ Node.js v22.23.2
    Start at  06:33:40
    Duration  547.68s (transform 1.65s, setup 63ms, collect 16.95s, tests 541.61s, environment 3ms, prepare 1.17s)
 ##[error]Error: Hook timed out in 540000ms.
+```
+
+</details>
+
+### Continuous Delivery — Canary (`.github/workflows/continuous-delivery-canary.yml`)
+
+- Latest run on `main`: https://github.com/activepieces/activepieces/actions/runs/39227207183 — dark (conclusion: `failure`), 2026-10-19 09:03 UTC
+- Dark since: 2026-10-19 09:03 UTC (first run of the current streak)
+- Job / step: `check-migrations` → `Fail on breaking migrations`
+- Likely cause: Breaking migrations detected: DropChatRolloutUserTable1870000000000
+
+<details><summary>End of the job log</summary>
+
+```
+ Tasks:    7 successful, 7 total
+Cached:    0 cached, 7 total
+  Time:    21.991s
+Found 1 migration(s) to roll back:
+  BREAKING: DropChatRolloutUserTable1870000000000
+1 breaking migration(s) detected.
+Breaking migrations detected: DropChatRolloutUserTable1870000000000
+##[error]Process completed with exit code 1.
+```
+
+</details>
+
+### Release Pieces (`.github/workflows/release-pieces.yml`)
+
+- Latest run on `main`: https://github.com/activepieces/activepieces/actions/runs/39250191330 — dark (conclusion: `failure`), 2026-10-19 12:11 UTC
+- Dark since: 2026-10-19 12:11 UTC (first run of the current streak)
+- Job / step: `Release-Pieces` → `publish pieces packages`
+- Likely cause: [publishPieces] 1/3 piece(s) failed to publish:
+
+<details><summary>End of the job log</summary>
+
+```
+  output: [ null, null, null ],
+  pid: 2672,
+  stdout: null,
+  stderr: null
+}
+[publishPieces] 1/3 piece(s) failed to publish:
+  packages/pieces/community/woocommerce
+##[error]Process completed with exit code 1.
 ```
 
 </details>
