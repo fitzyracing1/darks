@@ -4,9 +4,9 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/storytold/pdfcraft/issues/new
-- **Stars:** 16216 · **Generated:** 2026-10-19T18:50:18.546Z
+- **Stars:** 16302 · **Generated:** 2026-10-20T01:11:13.117Z
 - Nothing in this file has been sent anywhere.
-- **Note for Joshua:** cancelled by a concurrency group — likely noise
+- **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
@@ -19,21 +19,21 @@ CI: "FreeBSD" workflow getting cancelled on main since 2026-10-18
 <!-- BEGIN BODY -->
 Hi! The **FreeBSD** workflow (`.github/workflows/freebsd.yml`) on `main` has been getting cancelled since 2026-10-18. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/storytold/pdfcraft/actions/runs/39290920746 — dark (conclusion: `cancelled`), 2026-10-19 17:03 UTC
+- Latest run on `main`: https://github.com/storytold/pdfcraft/actions/runs/39302098335 — dark (conclusion: `cancelled`), 2026-10-19 18:23 UTC
 - Dark since: 2026-10-18 07:11 UTC (first run of the current streak)
 - Job / step: `freebsd / FreeBSD 15 aarch64 (build + test)` → `Build and test`
-- Likely cause: Canceling since a higher priority waiting request for freebsd-refs/heads/main exists
+- Likely cause: The job has exceeded the maximum execution time of 5h0m0s
 
 <details><summary>End of the job log</summary>
 
 ```
-   Compiling tiff v0.11.3
-   Compiling gif v0.14.2
-   Compiling pdfcraft-annot v0.9.0 (/home/runner/work/pdfcraft/pdfcraft/crates/annot)
-   Compiling parking_lot_core v0.9.12
-   Compiling futures-io v0.3.34
-   Compiling byteorder-lite v0.1.0
-   Compiling image v0.25.10
+   Compiling wayland-protocols v0.32.13
+   Compiling ahash v0.8.12
+   Compiling parking_lot v0.12.5
+   Compiling hashbrown v0.16.1
+   Compiling async-io v2.6.0
+   Compiling raw-window-handle v0.6.2
+   Compiling profiling v1.0.18
 ##[error]The operation was canceled.
 ```
 

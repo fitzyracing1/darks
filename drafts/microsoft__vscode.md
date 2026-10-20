@@ -4,14 +4,14 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/microsoft/vscode/issues/new
-- **Stars:** 193972 · **Generated:** 2026-10-19T18:50:18.546Z
+- **Stars:** 193998 · **Generated:** 2026-10-20T01:11:13.117Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 2 workflows dark on main ("CSS Cascade-Order Scan", "CodeQL")
+CI: 2 workflows dark on main ("CodeQL", "Code OSS (node_modules)")
 <!-- END TITLE -->
 
 ## Body
@@ -19,33 +19,33 @@ CI: 2 workflows dark on main ("CSS Cascade-Order Scan", "CodeQL")
 <!-- BEGIN BODY -->
 Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
 
-### CSS Cascade-Order Scan (`.github/workflows/css-order-scan.yml`)
+### CodeQL (`.github/workflows/codeql.yml`)
 
-- Latest run on `main`: https://github.com/microsoft/vscode/actions/runs/39204701850 — dark (conclusion: `cancelled`), 2026-10-19 05:28 UTC
-- Dark since: 2026-10-17 05:24 UTC (first run of the current streak)
-- Job / step: `Scan CSS cascade-order dependencies` → `Run CSS order scan`
-- Likely cause: The job has exceeded the maximum execution time of 6h0m0s
+- Latest run on `main`: https://github.com/microsoft/vscode/actions/runs/39350891879 — dark (conclusion: `cancelled`), 2026-10-20 00:59 UTC
+- Dark since: 2026-10-19 18:04 UTC (first run of the current streak)
+- Likely cause: run cancelled
+
+### Code OSS (node_modules) (`.github/workflows/pr-node-modules.yml`)
+
+- Latest run on `main`: https://github.com/microsoft/vscode/actions/runs/39350891865 — dark (conclusion: `failure`), 2026-10-20 00:59 UTC
+- Dark since: 2026-10-20 00:59 UTC (first run of the current streak)
+- Job / step: `Detect Missing Caches` → `Detect missing caches`
+- Likely cause: Failed to load /home/runner/work/vscode/vscode/./.github/actions/detect-missing-caches/action.yml
 
 <details><summary>End of the job log</summary>
 
 ```
-  probe #2: reverse[254, 339) -> same (6198ms)
-  probe #3: reverse[211, 339) -> same (6089ms)
-  probe #4: reverse[190, 339) -> DIFFERS (6136ms)
-  probe #5: reverse[200, 339) -> same (6144ms)
-  probe #6: reverse[195, 339) -> same (6151ms)
-  probe #7: reverse[192, 339) -> same (6117ms)
-  probe #8: reverse[191, 339) -> DIFFERS (6163ms)
-##[error]The operation was canceled.
+includeif.gitdir:/github/workspace/.git.path
+includeif.gitdir:/github/workspace/.git/worktrees/*.path
+/home/runner/work/_temp/git-credentials-c01a2c44-ab62-486f-8ba6-7b2b84e11149.config
+/home/runner/work/_temp/git-credentials-c01a2c44-ab62-486f-8ba6-7b2b84e11149.config
+/github/runner_temp/git-credentials-c01a2c44-ab62-486f-8ba6-7b2b84e11149.config
+/github/runner_temp/git-credentials-c01a2c44-ab62-486f-8ba6-7b2b84e11149.config
+Removing credentials config '/home/runner/work/_temp/git-credentials-c01a2c44-ab62-486f-8ba6-7b2b84e11149.config'
+##[error]/home/runner/work/vscode/vscode/./.github/actions/detect-missing-caches/action.yml: (Line: 6, Col: 48, Idx: 206) - (Line: 6, Col: 48, Idx: 206): Mapping values are not allowed in this context.
 ```
 
 </details>
-
-### CodeQL (`.github/workflows/codeql.yml`)
-
-- Latest run on `main`: https://github.com/microsoft/vscode/actions/runs/39301439437 — dark (conclusion: `cancelled`), 2026-10-19 18:18 UTC
-- Dark since: 2026-10-19 18:04 UTC (first run of the current streak)
-- Likely cause: run cancelled
 
 If this is already known or expected, feel free to close. Thanks for maintaining vscode!
 

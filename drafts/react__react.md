@@ -4,25 +4,23 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/react/react/issues/new
-- **Stars:** 251387 · **Generated:** 2026-10-19T18:50:18.546Z
+- **Stars:** 251421 · **Generated:** 2026-10-20T01:11:13.117Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 2 workflows dark on main ("(DevTools) Regression Tests", "(Compiler) TypeScript")
+CI: "(DevTools) Regression Tests" workflow failing on main since 2026-10-11
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
+Hi! The **(DevTools) Regression Tests** workflow (`.github/workflows/devtools_regression_tests.yml`) on `main` has been failing since 2026-10-11. Here is what I saw, in case it's useful:
 
-### (DevTools) Regression Tests (`.github/workflows/devtools_regression_tests.yml`)
-
-- Latest run on `main`: https://github.com/react/react/actions/runs/39179189792 — dark (conclusion: `failure`), 2026-10-19 00:05 UTC
+- Latest run on `main`: https://github.com/react/react/actions/runs/39345496968 — dark (conclusion: `failure`), 2026-10-20 00:05 UTC
 - Dark since: 2026-10-11 00:06 UTC (first run of the current streak)
-- Job / step: `Run DevTools tests for versions (18.0)` → `Run node ./scripts/jest/jest-cli.js --build --project devtools --release-channel=experimental --reactVersion 18.0 --ci`
+- Job / step: `Run DevTools tests for versions (18.2)` → `Run node ./scripts/jest/jest-cli.js --build --project devtools --release-channel=experimental --reactVersion 18.2 --ci`
 - Likely cause: Snapshots:   27 failed, 260 passed, 287 total
 
 <details><summary>End of the job log</summary>
@@ -30,33 +28,11 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 ```
 Snapshot Summary
  › 27 snapshots failed from 2 test suites. Inspect your code changes or re-run jest with `-u` to update them.
-Test Suites: 2 failed, 21 skipped, 19 passed, 21 of 42 total
-Tests:       4 failed, 437 skipped, 180 passed, 621 total
+Test Suites: 2 failed, 20 skipped, 20 passed, 22 of 42 total
+Tests:       4 failed, 435 skipped, 182 passed, 621 total
 Snapshots:   27 failed, 260 passed, 287 total
-Time:        23.693 s
+Time:        16.528 s
 Ran all test suites.
-##[error]Process completed with exit code 1.
-```
-
-</details>
-
-### (Compiler) TypeScript (`.github/workflows/compiler_typescript.yml`)
-
-- Latest run on `main`: https://github.com/react/react/actions/runs/39290732148 — dark (conclusion: `failure`), 2026-10-19 17:02 UTC
-- Dark since: 2026-10-19 17:02 UTC (first run of the current streak)
-- Job / step: `Test react-forgive` → `Run xvfb-run -a yarn workspace react-forgive test`
-- Likely cause: error Command failed.
-
-<details><summary>End of the job log</summary>
-
-```
-error Command failed.
-Exit code: 1
-Command: /opt/hostedtoolcache/node/20.19.0/x64/bin/node
-Arguments: /usr/local/lib/node_modules/yarn/lib/cli.js test
-Directory: /home/runner/work/react/react/compiler/packages/react-forgive
-Output:
-info Visit https://yarnpkg.com/en/docs/cli/workspace for documentation about this command.
 ##[error]Process completed with exit code 1.
 ```
 

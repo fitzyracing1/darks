@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/storytold/effectcraft/issues/new
-- **Stars:** 7401 · **Generated:** 2026-10-19T18:50:18.546Z
+- **Stars:** 7430 · **Generated:** 2026-10-20T01:11:13.117Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 

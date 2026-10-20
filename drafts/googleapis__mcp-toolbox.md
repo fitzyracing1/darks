@@ -4,21 +4,19 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/googleapis/mcp-toolbox/issues/new
-- **Stars:** 16684 · **Generated:** 2026-10-19T18:50:18.546Z
+- **Stars:** 16684 · **Generated:** 2026-10-20T01:11:13.117Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 2 workflows dark on main ("CF: Deploy Dev Docs", "tests")
+CI: "CF: Deploy Dev Docs" workflow failing on main since 2026-09-28
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
-
-### CF: Deploy Dev Docs (`.github/workflows/deploy_dev_docs_to_cf.yaml`)
+Hi! The **CF: Deploy Dev Docs** workflow (`.github/workflows/deploy_dev_docs_to_cf.yaml`) on `main` has been failing since 2026-09-28. Here is what I saw, in case it's useful:
 
 - Latest run on `main`: https://github.com/googleapis/mcp-toolbox/actions/runs/38446709101 — dark (conclusion: `failure`), 2026-10-13 18:26 UTC
 - Dark since: 2026-09-28 21:08 UTC (first run of the current streak)
@@ -36,28 +34,6 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
  create mode 100644 dev/resources/tools/conversational-analytics-update-data-agent/index.html
 fatal: could not read Username for 'https://github.com': No such device or address
 ##[error]Process completed with exit code 128.
-```
-
-</details>
-
-### tests (`.github/workflows/tests.yaml`)
-
-- Latest run on `main`: https://github.com/googleapis/mcp-toolbox/actions/runs/39299791660 — dark (conclusion: `failure`), 2026-10-19 18:06 UTC
-- Dark since: 2026-10-19 18:06 UTC (first run of the current streak)
-- Job / step: `unit tests (macos-latest)` → `Run tests without coverage`
-- Likely cause: FAIL
-
-<details><summary>End of the job log</summary>
-
-```
-    --- PASS: TestGenerateScriptContent/script_with_optional_vars (0.00s)
-    --- PASS: TestGenerateScriptContent/npx_mode_script (0.00s)
-    --- PASS: TestGenerateScriptContent/claude_code_script (0.00s)
-    --- PASS: TestGenerateScriptContent/codex_ci_script (0.00s)
-PASS
-ok  	github.com/googleapis/mcp-toolbox/cmd/internal/skills	(cached)
-FAIL
-##[error]Process completed with exit code 1.
 ```
 
 </details>

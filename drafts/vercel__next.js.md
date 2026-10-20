@@ -4,35 +4,35 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/vercel/next.js/issues/new
-- **Stars:** 143099 · **Generated:** 2026-10-19T18:50:18.546Z
+- **Stars:** 143097 · **Generated:** 2026-10-20T01:11:13.117Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: "Update React" workflow failing on canary since 2026-10-19
+CI: "Update Font Data" workflow failing on canary since 2026-10-20
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! The **Update React** workflow (`.github/workflows/update_react.yml`) on `canary` has been failing since 2026-10-19. Here is what I saw, in case it's useful:
+Hi! The **Update Font Data** workflow (`.github/workflows/update_fonts_data.yml`) on `canary` has been failing since 2026-10-20. Here is what I saw, in case it's useful:
 
-- Latest run on `canary`: https://github.com/vercel/next.js/actions/runs/39288531682 — dark (conclusion: `failure`), 2026-10-19 16:48 UTC
-- Dark since: 2026-10-19 16:48 UTC (first run of the current streak)
+- Latest run on `canary`: https://github.com/vercel/next.js/actions/runs/39346921902 — dark (conclusion: `failure`), 2026-10-20 00:19 UTC
+- Dark since: 2026-10-20 00:19 UTC (first run of the current streak)
 - Job / step: `create-pull-request` → `Create Pull Request`
-- Likely cause: Error: GitHub API PATCH /repos/vercel/next.js/git/refs/heads/update/react/19.3.0-canary-ba39b32a-20261019 failed (422): {"message":"Update is not a fast forward","documentation_url":"https://docs.github.com/rest/git/ref…
+- Likely cause: 'husky - pre-commit script failed (code 1)\n'
 
 <details><summary>End of the job log</summary>
 
 ```
-[16:49:46] Finished ncc in 41.07s
-Error: GitHub API PATCH /repos/vercel/next.js/git/refs/heads/update/react/19.3.0-canary-ba39b32a-20261019 failed (422): {"message":"Update is not a fast forward","documentation_url":"https://docs.github.com/rest/git/ref…
-    at githubRequest (/home/runner/work/next.js/next.js/scripts/github-utils/signed-commit.js:24:11)
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async upsertBranchRef (/home/runner/work/next.js/next.js/scripts/github-utils/signed-commit.js:339:5)
-    at async main (/home/runner/work/next.js/next.js/scripts/sync-react.js:771:5)
-[ELIFECYCLE] Command failed with exit code 1.
+    '\n' +
+    '  ⚠ lint-staged prevented an empty git commit.\n' +
+    '  Use the --allow-empty option to continue, or check your task configuration\n' +
+    '\n' +
+    '[ELIFECYCLE] Command failed with exit code 1.\n' +
+    'husky - pre-commit script failed (code 1)\n'
+}
 ##[error]Process completed with exit code 1.
 ```
 

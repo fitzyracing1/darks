@@ -4,22 +4,19 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/storytold/photocraft/issues/new
-- **Stars:** 68395 · **Generated:** 2026-10-19T18:50:18.546Z
+- **Stars:** 68582 · **Generated:** 2026-10-20T01:11:13.117Z
 - Nothing in this file has been sent anywhere.
-- **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 2 workflows dark on main ("FreeBSD", "CI")
+CI: "FreeBSD" workflow failing on main since 2026-10-19
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
-
-### FreeBSD (`.github/workflows/freebsd.yml`)
+Hi! The **FreeBSD** workflow (`.github/workflows/freebsd.yml`) on `main` has been failing since 2026-10-19. Here is what I saw, in case it's useful:
 
 - Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/39191094779 — dark (conclusion: `failure`), 2026-10-19 02:40 UTC
 - Dark since: 2026-10-19 02:40 UTC (first run of the current streak)
@@ -40,12 +37,6 @@ Warning: Permanently added '[127.0.0.1]:10022' (ED25519) to the list of known ho
 ```
 
 </details>
-
-### CI (`.github/workflows/ci.yml`)
-
-- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/39301872496 — dark (conclusion: `cancelled`), 2026-10-19 18:21 UTC
-- Dark since: 2026-10-19 17:02 UTC (first run of the current streak)
-- Likely cause: run cancelled
 
 If this is already known or expected, feel free to close. Thanks for maintaining photocraft!
 

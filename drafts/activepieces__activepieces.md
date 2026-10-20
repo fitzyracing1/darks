@@ -4,13 +4,13 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/activepieces/activepieces/issues/new
-- **Stars:** 25116 · **Generated:** 2026-10-19T18:50:18.546Z
+- **Stars:** 25123 · **Generated:** 2026-10-20T01:11:13.117Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 4 workflows dark on main ("Benchmark", "Chat Evals", "Continuous Delivery — Canary", +1 more)
+CI: 5 workflows dark on main ("Benchmark", "Chat Evals", "Continuous Delivery — Canary", +2 more)
 <!-- END TITLE -->
 
 ## Body
@@ -102,6 +102,28 @@ Breaking migrations detected: DropChatRolloutUserTable1870000000000
 [publishPieces] 1/11 piece(s) failed to publish:
   packages/pieces/community/hubspot
 ##[error]Process completed with exit code 1.
+```
+
+</details>
+
+### Generate Translation Files for Community Pieces and UI (`.github/workflows/generate-translations.yml`)
+
+- Latest run on `main`: https://github.com/activepieces/activepieces/actions/runs/39276967411 — dark (conclusion: `failure`), 2026-10-19 15:19 UTC
+- Dark since: 2026-10-19 15:19 UTC (first run of the current streak)
+- Job / step: `finalize / finalize` → `Create Pull Request`
+- Likely cause: Unhandled error: HttpError: Pull Request has merge conflicts
+
+<details><summary>End of the job log</summary>
+
+```
+    request: {
+      agent: [Agent],
+      fetch: [Function: proxyFetch],
+      hook: [Function: bound bound register]
+    }
+  }
+}
+##[error]Unhandled error: HttpError: Pull Request has merge conflicts
 ```
 
 </details>
