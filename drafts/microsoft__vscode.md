@@ -4,14 +4,14 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/microsoft/vscode/issues/new
-- **Stars:** 194063 · **Generated:** 2026-10-20T12:54:49.577Z
+- **Stars:** 194159 · **Generated:** 2026-10-20T18:49:07.074Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 2 workflows dark on main ("CodeQL", "CSS Cascade-Order Scan")
+CI: 3 workflows dark on main ("CodeQL", "CSS Cascade-Order Scan", "Code OSS (node_modules)")
 <!-- END TITLE -->
 
 ## Body
@@ -21,7 +21,7 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### CodeQL (`.github/workflows/codeql.yml`)
 
-- Latest run on `main`: https://github.com/microsoft/vscode/actions/runs/39422644931 — dark (conclusion: `cancelled`), 2026-10-20 12:29 UTC
+- Latest run on `main`: https://github.com/microsoft/vscode/actions/runs/39474445541 — dark (conclusion: `cancelled`), 2026-10-20 18:24 UTC
 - Dark since: 2026-10-19 18:04 UTC (first run of the current streak)
 - Likely cause: run cancelled
 
@@ -46,6 +46,12 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 ```
 
 </details>
+
+### Code OSS (node_modules) (`.github/workflows/pr-node-modules.yml`)
+
+- Latest run on `main`: https://github.com/microsoft/vscode/actions/runs/39474445579 — dark (conclusion: `cancelled`), 2026-10-20 18:24 UTC
+- Dark since: 2026-10-20 18:07 UTC (first run of the current streak)
+- Likely cause: run cancelled
 
 If this is already known or expected, feel free to close. Thanks for maintaining vscode!
 

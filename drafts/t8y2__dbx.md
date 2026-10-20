@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/t8y2/dbx/issues/new
-- **Stars:** 27353 · **Generated:** 2026-10-20T12:54:49.577Z
+- **Stars:** 27366 · **Generated:** 2026-10-20T18:49:07.074Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -18,22 +18,22 @@ CI: "CI" workflow failing on main since 2026-10-20
 <!-- BEGIN BODY -->
 Hi! The **CI** workflow (`.github/workflows/ci.yml`) on `main` has been failing since 2026-10-20. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/t8y2/dbx/actions/runs/39422661420 — dark (conclusion: `failure`), 2026-10-20 12:29 UTC
+- Latest run on `main`: https://github.com/t8y2/dbx/actions/runs/39466344109 — dark (conclusion: `failure`), 2026-10-20 17:28 UTC
 - Dark since: 2026-10-20 06:40 UTC (first run of the current streak)
-- Job / step: `frontend-test (2/2)` → `Run frontend test shard`
-- Likely cause: AssertionError: Add a search result or localized keyword on the owning management entry; exclude only transient UI with a reason.: expected [ 'connection.httpTunnelProtocol' ] to deeply equal [] (apps/desktop/src/lib/settings/__tests__/settingsSearchCoverage.spec.ts:152)
+- Job / step: `frontend-test (1/2)` → `Run frontend test shard`
+- Likely cause: AssertionError: expected undefined to be false // Object.is equality (apps/desktop/src/components/objects/__tests__/ObjectSourceDialog.dependencies.spec.ts:83)
 
 <details><summary>End of the job log</summary>
 
 ```
-    153|     });
-    154|   }
+     84|     button("contextMenu.editView").click();
+     85|     await vi.waitFor(() => expect(document.querySelector("[data-object…
 ⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
- Test Files  1 failed | 956 passed (957)
-      Tests  1 failed | 12074 passed (12075)
-   Start at  12:31:11
-   Duration  349.77s (transform 82.17s, setup 0ms, import 475.62s, tests 502.03s, environment 157.89s)
-##[error]AssertionError: Add a search result or localized keyword on the owning management entry; exclude only transient UI with a reason.: expected [ 'connection.httpTunnelProtocol' ] to deeply equal []
+ Test Files  1 failed | 960 passed (961)
+      Tests  1 failed | 13262 passed (13263)
+   Start at  17:29:50
+   Duration  349.85s (transform 85.63s, setup 0ms, import 507.21s, tests 470.24s, environment 155.39s)
+##[error]AssertionError: expected undefined to be false // Object.is equality
 ```
 
 </details>

@@ -4,36 +4,36 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/open-metadata/OpenMetadata/issues/new
-- **Stars:** 15523 · **Generated:** 2026-10-20T12:54:49.577Z
+- **Stars:** 15524 · **Generated:** 2026-10-20T18:49:07.074Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: "Maven Collate Tests" workflow failing on main since 2026-10-20
+CI: "Publish Package to Maven Central Repository" workflow failing on main since 2026-10-20
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! The **Maven Collate Tests** workflow (`.github/workflows/maven-build-collate.yml`) on `main` has been failing since 2026-10-20. Here is what I saw, in case it's useful:
+Hi! The **Publish Package to Maven Central Repository** workflow (`.github/workflows/publish-maven-package.yml`) on `main` has been failing since 2026-10-20. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/39417459114 — dark (conclusion: `failure`), 2026-10-20 11:47 UTC
-- Dark since: 2026-10-20 09:57 UTC (first run of the current streak)
-- Job / step: `maven-collate-ci` → `Trigger Collate build & wait`
-- Likely cause: Collate run did not succeed: https://github.com/open-metadata/openmetadata-collate/actions/runs/39417508202
+- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/39466351206 — dark (conclusion: `failure`), 2026-10-20 17:28 UTC
+- Dark since: 2026-10-20 16:00 UTC (first run of the current streak)
+- Job / step: `publish-maven-packages` → `Publish to Central Repository`
+- Likely cause: [ERROR]   mvn <args> -rf :openmetadata-java-client
 
 <details><summary>End of the job log</summary>
 
 ```
-* maven-collate-om-ci (ID 118610015224)
-  * Integration Tests (MySQL + Elasticsearch)
-X main OpenMetadata Collate Test open-metadata/openmetadata-collate#2548 · 39417508202
-Triggered via workflow_dispatch about 43 minutes ago
-JOBS
-X maven-collate-om-ci in 42m27s (ID 118610015224)
-  X Force workflow fail
-##[error]Collate run did not succeed: https://github.com/open-metadata/openmetadata-collate/actions/runs/39417508202
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR]
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException
+[ERROR]
+[ERROR] After correcting the problems, you can resume the build with the command
+[ERROR]   mvn <args> -rf :openmetadata-java-client
+##[error]Process completed with exit code 1.
 ```
 
 </details>

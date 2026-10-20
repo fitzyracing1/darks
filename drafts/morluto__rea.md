@@ -4,39 +4,24 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/morluto/rea/issues/new
-- **Stars:** 343392 · **Generated:** 2026-10-20T12:54:49.577Z
+- **Stars:** 346219 · **Generated:** 2026-10-20T18:49:07.074Z
 - Nothing in this file has been sent anywhere.
+- **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: "CI" workflow failing on main since 2026-10-20
+CI: "CI" workflow getting cancelled on main since 2026-10-20
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! The **CI** workflow (`.github/workflows/ci.yml`) on `main` has been failing since 2026-10-20. Here is what I saw, in case it's useful:
+Hi! The **CI** workflow (`.github/workflows/ci.yml`) on `main` has been getting cancelled since 2026-10-20. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/morluto/rea/actions/runs/39419984480 — dark (conclusion: `failure`), 2026-10-20 12:08 UTC
+- Latest run on `main`: https://github.com/morluto/rea/actions/runs/39469124087 — dark (conclusion: `cancelled`), 2026-10-20 17:47 UTC
 - Dark since: 2026-10-20 11:29 UTC (first run of the current streak)
-- Job / step: `Static checks` → `Run npm run check:ci`
-- Likely cause: command (/home/runner/work/rea/rea/) /opt/hostedtoolcache/node/24.18.0/x64/bin/npm run jscpd exited (1)
-
-<details><summary>End of the job log</summary>
-
-```
-JSON report saved to .cache/static-checks/jscpd/jscpd-report.json
-time: 5.76s
-Duplication: 3488 files, 3015 clones, 3.53% duplicated lines.
-Full diagnostics: .cache/static-checks/jscpd/jscpd-report.json; npm run jscpd:details
-cache miss, executing 3e97ff0fa44bb407
-> rea-agents@6.7.0 typecheck
-> tsc --noEmit
-##[error]command (/home/runner/work/rea/rea/) /opt/hostedtoolcache/node/24.18.0/x64/bin/npm run jscpd exited (1)
-```
-
-</details>
+- Likely cause: run cancelled
 
 If this is already known or expected, feel free to close. Thanks for maintaining rea!
 

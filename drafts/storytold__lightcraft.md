@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/storytold/lightcraft/issues/new
-- **Stars:** 13974 · **Generated:** 2026-10-20T12:54:49.577Z
+- **Stars:** 14015 · **Generated:** 2026-10-20T18:49:07.074Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
@@ -19,21 +19,21 @@ CI: "FreeBSD" workflow getting cancelled on main since 2026-10-18
 <!-- BEGIN BODY -->
 Hi! The **FreeBSD** workflow (`.github/workflows/freebsd.yml`) on `main` has been getting cancelled since 2026-10-18. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/storytold/lightcraft/actions/runs/39174594606 — dark (conclusion: `cancelled`), 2026-10-18 22:59 UTC
+- Latest run on `main`: https://github.com/storytold/lightcraft/actions/runs/39422049459 — dark (conclusion: `cancelled`), 2026-10-20 12:24 UTC
 - Dark since: 2026-10-18 00:37 UTC (first run of the current streak)
-- Job / step: `freebsd / FreeBSD 15 aarch64 (build + test)` → `Build and test in a FreeBSD VM`
+- Job / step: `freebsd / FreeBSD 15 aarch64 (build + test)` → `Build and test`
 - Likely cause: The job has exceeded the maximum execution time of 5h0m0s
 
 <details><summary>End of the job log</summary>
 
 ```
-   Compiling glutin v0.32.3
-   Compiling lightcraft-sysmem v0.9.1 (/home/runner/work/lightcraft/lightcraft/crates/sysmem)
-   Compiling accesskit_unix v0.21.1
-   Compiling glutin-winit v0.5.0
-   Compiling smithay-clipboard v0.7.3
-   Compiling accesskit_winit v0.32.2
-   Compiling arboard v3.6.1
+   Compiling vello_cpu v0.1.0
+   Compiling wayland-protocols v0.32.13
+   Compiling skrifa v0.44.0
+   Compiling nohash-hasher v0.2.0
+   Compiling epaint_default_fonts v0.36.2
+   Compiling self_cell v1.3.0
+   Compiling epaint v0.36.2
 ##[error]The operation was canceled.
 ```
 

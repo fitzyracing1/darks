@@ -4,9 +4,9 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/storytold/pdfcraft/issues/new
-- **Stars:** 16473 · **Generated:** 2026-10-20T12:54:49.577Z
+- **Stars:** 16583 · **Generated:** 2026-10-20T18:49:07.074Z
 - Nothing in this file has been sent anywhere.
-- **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
+- **Note for Joshua:** cancelled by a concurrency group — likely noise
 
 ## Suggested title
 
@@ -19,21 +19,21 @@ CI: "FreeBSD" workflow getting cancelled on main since 2026-10-18
 <!-- BEGIN BODY -->
 Hi! The **FreeBSD** workflow (`.github/workflows/freebsd.yml`) on `main` has been getting cancelled since 2026-10-18. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/storytold/pdfcraft/actions/runs/39302098335 — dark (conclusion: `cancelled`), 2026-10-19 18:23 UTC
+- Latest run on `main`: https://github.com/storytold/pdfcraft/actions/runs/39450321673 — dark (conclusion: `cancelled`), 2026-10-20 15:38 UTC
 - Dark since: 2026-10-18 07:11 UTC (first run of the current streak)
-- Job / step: `freebsd / FreeBSD 15 aarch64 (build + test)` → `Build and test`
-- Likely cause: The job has exceeded the maximum execution time of 5h0m0s
+- Job / step: `freebsd / FreeBSD 15 aarch64 (build + test)` → `Set up job`
+- Likely cause: Canceling since a higher priority waiting request for freebsd-refs/heads/main exists
 
 <details><summary>End of the job log</summary>
 
 ```
-   Compiling wayland-protocols v0.32.13
-   Compiling ahash v0.8.12
-   Compiling parking_lot v0.12.5
-   Compiling hashbrown v0.16.1
-   Compiling async-io v2.6.0
-   Compiling raw-window-handle v0.6.2
-   Compiling profiling v1.0.18
+Cache mode: write
+Prepare workflow directory
+Prepare all required actions
+Getting action download info
+Download action repository 'actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1' (SHA:3d3c42e5aac5ba805825da76410c181273ba90b1)
+Download action repository 'storytold/craft-common-actions@main' (SHA:fd68caa519bc2fd0f334a5fd6bb877af4a8ba568)
+Download action repository 'vmactions/freebsd-vm@c46abacb49f09938ca4e1702d15d836285d694cc' (SHA:c46abacb49f09938ca4e1702d15d836285d694cc)
 ##[error]The operation was canceled.
 ```
 

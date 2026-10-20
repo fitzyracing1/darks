@@ -4,8 +4,10 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/xberg-io/xberg/issues/new
-- **Stars:** 9430 · **Generated:** 2026-10-20T12:54:49.577Z
+- **Stars:** 9431 · **Generated:** 2026-10-20T18:49:07.074Z
 - Nothing in this file has been sent anywhere.
+- **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
+- **Note for Joshua:** cancelled by a concurrency group — likely noise
 
 ## Skipped: upstream already tracking
 
@@ -16,33 +18,71 @@ These workflows are left out of the body below.
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: "CI Lint" workflow failing on main since 2026-10-19
+CI: 4 workflows dark on main ("CI Lint", "CI Integrations", "CI Rust", +1 more)
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! The **CI Lint** workflow (`.github/workflows/ci-lint.yaml`) on `main` has been failing since 2026-10-19. Here is what I saw, in case it's useful:
+Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
 
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/39321778577 — dark (conclusion: `failure`), 2026-10-19 20:44 UTC
+### CI Lint (`.github/workflows/ci-lint.yaml`)
+
+- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/39460883066 — dark (conclusion: `cancelled`), 2026-10-20 16:50 UTC
 - Dark since: 2026-10-19 19:30 UTC (first run of the current streak)
-- Job / step: `Alef-generated bindings freshness` → `Verify alef-generated bindings are current`
-- Likely cause: exit status 1
+- Job / step: `validate / Validate (poly)` → `Lint`
+- Likely cause: run cancelled in job "validate / Validate (poly)"
 
 <details><summary>End of the job log</summary>
 
 ```
- INFO   dart: generating...
- INFO   php: generating...
- INFO   go: generating...
- INFO   java: generating...
- INFO   ffi: generating...
-ERROR failed to render the e2e stage of alef's managed output: failed to load fixtures from fixtures: duplicate fixture ID '': found in 'repros/bidder-column-alignment/config.json' and 'repros/caltrans-native-table/conf…
-task: Failed to run task "alef:verify": exit status 1
-##[error]exit status 1
+whole-project checks
+  ✓ cargo-clippy
+  ✓ checkstyle
+  ✓ credo
+  ✓ golangci-lint
+  × pyrefly
+      pyrefly: 1: pyrefly: not found
+##[error]Process completed with exit code 1.
 ```
 
 </details>
+
+### CI Integrations (`.github/workflows/ci-integrations.yaml`)
+
+- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/39460882637 — dark (conclusion: `cancelled`), 2026-10-20 16:50 UTC
+- Dark since: 2026-10-20 16:01 UTC (first run of the current streak)
+- Job / step: `Build local integration bindings` → `Build Node package`
+- Likely cause: Canceling since a higher priority waiting request for ci-integrations-refs/heads/main exists
+
+<details><summary>End of the job log</summary>
+
+```
+   Compiling jsonschema v0.59.0
+   Compiling icu_segmenter v2.3.0
+   Compiling rmp-serde v1.3.1
+   Compiling resvg v0.48.1
+   Compiling rqrr-zeroize v0.10.1
+   Compiling model2vec-rs v0.3.0
+   Compiling liter-llm v2.3.0
+##[error]The operation was canceled.
+```
+
+</details>
+
+### CI Rust (`.github/workflows/ci-rust.yaml`)
+
+- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/39460882651 — dark (conclusion: `cancelled`), 2026-10-20 16:50 UTC
+- Dark since: 2026-10-20 16:01 UTC (first run of the current streak)
+- Job / step: `xberg-cli feature leg (paddle-ocr)`
+- Likely cause: Canceling since a higher priority waiting request for ci-rust-refs/heads/main exists
+
+### CI Mobile (`.github/workflows/ci-mobile.yaml`)
+
+- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/39460882630 — dark (conclusion: `cancelled`), 2026-10-20 16:50 UTC
+- Dark since: 2026-10-20 16:50 UTC (first run of the current streak)
+- Job / step: `iOS cargo check (aarch64-apple-ios-sim)`
+- Likely cause: Canceling since a higher priority waiting request for ci-mobile-refs/heads/main exists
 
 If this is already known or expected, feel free to close. Thanks for maintaining xberg!
 
