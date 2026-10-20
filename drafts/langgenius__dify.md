@@ -4,35 +4,35 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/langgenius/dify/issues/new
-- **Stars:** 158937 · **Generated:** 2026-10-20T01:11:13.117Z
+- **Stars:** 158972 · **Generated:** 2026-10-20T06:59:15.323Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: "Post-Merge Checks" workflow failing on main since 2026-10-19
+CI: "CLI Edge Publish" workflow failing on main since 2026-10-20
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! The **Post-Merge Checks** workflow (`.github/workflows/post-merge.yml`) on `main` has been failing since 2026-10-19. Here is what I saw, in case it's useful:
+Hi! The **CLI Edge Publish** workflow (`.github/workflows/cli-edge.yml`) on `main` has been failing since 2026-10-20. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/langgenius/dify/actions/runs/39277572893 — dark (conclusion: `failure`), 2026-10-19 15:23 UTC
-- Dark since: 2026-10-19 13:10 UTC (first run of the current streak)
-- Job / step: `External Runtime E2E / Web Full-Stack E2E` → `Run prepared and external runtime E2E tests`
-- Likely cause: 378 steps (377 passed, 1 failed)
+- Latest run on `main`: https://github.com/langgenius/dify/actions/runs/39379129245 — dark (conclusion: `failure`), 2026-10-20 06:13 UTC
+- Dark since: 2026-10-20 06:13 UTC (first run of the current streak)
+- Job / step: `build + publish edge to R2` → `Publish to R2`
+- Likely cause: upload failed: dist/bin/difyctl-v1.17.1-edge.b2455705bf-darwin-arm64 to s3://cli-dev/difyctl/bin/edge/1.17.1-edge.b2455705bf/difyctl-v1.17.1-edge.b2455705bf-darwin-arm64 AWS_ERROR_HTTP_RESPONSE_FIRST_BYTE_TIMEOUT: Timed…
 
 <details><summary>End of the job log</summary>
 
 ```
- Container docker-ssrf_proxy-1  Removing
- Container docker-ssrf_proxy-1  Removed
- Container docker-sandbox-1  Removed
- Network docker_default  Removing
- Network docker_ssrf_proxy_network  Removing
- Network docker_ssrf_proxy_network  Removed
- Network docker_default  Removed
+Completed 328.7 MiB/372.9 MiB (40.3 MiB/s) with 3 file(s) remaining
+upload: dist/bin/difyctl-v1.17.1-edge.b2455705bf-linux-x64 to s3://cli-dev/difyctl/bin/edge/1.17.1-edge.b2455705bf/difyctl-v1.17.1-edge.b2455705bf-linux-x64
+Completed 328.7 MiB/372.9 MiB (40.3 MiB/s) with 2 file(s) remaining
+Completed 336.7 MiB/372.9 MiB (37.6 MiB/s) with 2 file(s) remaining
+upload: dist/bin/difyctl-v1.17.1-edge.b2455705bf-windows-x64.exe to s3://cli-dev/difyctl/bin/edge/1.17.1-edge.b2455705bf/difyctl-v1.17.1-edge.b2455705bf-windows-x64.exe
+upload failed: dist/bin/difyctl-v1.17.1-edge.b2455705bf-darwin-arm64 to s3://cli-dev/difyctl/bin/edge/1.17.1-edge.b2455705bf/difyctl-v1.17.1-edge.b2455705bf-darwin-arm64 AWS_ERROR_HTTP_RESPONSE_FIRST_BYTE_TIMEOUT: Timed…
+Completed 336.7 MiB/372.9 MiB (37.6 MiB/s) with 1 file(s) remaining
 ##[error]Process completed with exit code 1.
 ```
 

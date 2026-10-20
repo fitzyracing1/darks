@@ -1,8 +1,8 @@
 <!-- dark-draft: morluto/rea -->
-<!-- draft-state: ready -->
+<!-- draft-state: resolved -->
 # Upstream issue draft: morluto/rea
 
-- **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
+- **Status:** resolved — lit again (2026-10-20); nothing to file
 - **Would be filed at:** https://github.com/morluto/rea/issues/new
 - **Stars:** 336945 · **Generated:** 2026-10-20T01:11:13.117Z
 - Nothing in this file has been sent anywhere.

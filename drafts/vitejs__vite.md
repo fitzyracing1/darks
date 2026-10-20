@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/vitejs/vite/issues/new
-- **Stars:** 83410 · **Generated:** 2026-10-20T01:11:13.117Z
+- **Stars:** 83414 · **Generated:** 2026-10-20T06:59:15.323Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -18,7 +18,7 @@ CI: "CI" workflow failing on main since 2026-10-16
 <!-- BEGIN BODY -->
 Hi! The **CI** workflow (`.github/workflows/ci.yml`) on `main` has been failing since 2026-10-16. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/vitejs/vite/actions/runs/39244590997 — dark (conclusion: `failure`), 2026-10-19 11:25 UTC
+- Latest run on `main`: https://github.com/vitejs/vite/actions/runs/39361891055 — dark (conclusion: `failure`), 2026-10-20 02:59 UTC
 - Dark since: 2026-10-16 12:00 UTC (first run of the current streak)
 - Job / step: `Build&Test: node-24, windows-latest` → `Test serve (bundled dev)`
 - Likely cause: Tests  1 failed | 823 passed | 371 skipped | 56 todo (1251)
@@ -28,10 +28,10 @@ Hi! The **CI** workflow (`.github/workflows/ci.yml`) on `main` has been failing 
 ```
  Test Files  1 failed | 85 passed | 22 skipped (108)
       Tests  1 failed | 823 passed | 371 skipped | 56 todo (1251)
-   Start at  11:29:18
-   Duration  91.79s (tests 63%, setup 35%, import 1%)
-    Isolate  108 workers spawned · ~220ms startup each (spawn + environment, per file)
-             at least ~7.71s faster with isolate: false — reuses workers across files instead of one per file
+   Start at  03:02:46
+   Duration  91.52s (tests 65%, setup 33%, import 1%)
+    Isolate  108 workers spawned · ~214ms startup each (spawn + environment, per file)
+             at least ~7.48s faster with isolate: false — reuses workers across files instead of one per file
 [ELIFECYCLE] Command failed with exit code 1.
 ##[error]Process completed with exit code 1.
 ```
