@@ -7,6 +7,12 @@
 - **Stars:** 225400 · **Generated:** 2026-10-19T18:50:18.546Z
 - Nothing in this file has been sent anywhere.
 
+## Proposed fix (proven on fork)
+
+- **Fix branch:** [try/fix-hacktoberfest-retire](https://github.com/fitzyracing1/Python/tree/try/fix-hacktoberfest-retire)
+- **Lit run on fork:** https://github.com/fitzyracing1/Python/actions/runs/39347792759
+- **What:** retire the hacktoberfest_prep workflow + helper script (it fails on purpose after 2026-10-01 as its retirement signal); fork build/ruff/ty/directory_writer lit (sphinx is a Pages deploy, disabled on the fork)
+
 ## Suggested title
 
 <!-- BEGIN TITLE -->

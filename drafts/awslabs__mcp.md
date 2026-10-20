@@ -7,6 +7,12 @@
 - **Stars:** 9794 · **Generated:** 2026-10-19T18:50:18.546Z
 - Nothing in this file has been sent anywhere.
 
+## Proposed fix (proven on fork)
+
+- **Fix branch:** [try/fix-license-header-example](https://github.com/fitzyracing1/mcp/tree/try/fix-license-header-example)
+- **Lit run on fork:** https://github.com/fitzyracing1/mcp/actions/runs/39349159861
+- **What:** exempt `**/*.example` like `**/*.template` so e2e_tests/config.toml.example is covered by the license-header config; all fork push workflows lit incl. Python (61 jobs)
+
 ## Suggested title
 
 <!-- BEGIN TITLE -->

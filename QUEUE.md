@@ -18,7 +18,7 @@ Drafted after each crawl by `scripts/draft-upstream.mjs`, one per repo with dark
 - [ ] morluto/rea — CI: "Mutation sweep" workflow failing on main since 2026-10-19 — drafts/morluto__rea.md
 - [ ] NousResearch/hermes-agent — CI: "Docker Build, Test, and Publish" workflow getting cancelled on main since 2026-10-13 — drafts/NousResearch__hermes-agent.md — note: infra-class dark (runner/timeout/cancel) — lower value
 - [ ] react/react — CI: 2 workflows dark on main ("(DevTools) Regression Tests", "(Compiler) TypeScript") — drafts/react__react.md
-- [ ] TheAlgorithms/Python — CI: "hacktoberfest_prep" workflow failing on master since 2026-10-01 — drafts/TheAlgorithms__Python.md
+- [ ] TheAlgorithms/Python — CI: "hacktoberfest_prep" workflow failing on master since 2026-10-01 — drafts/TheAlgorithms__Python.md — fix: [try/fix-hacktoberfest-retire](https://github.com/fitzyracing1/Python/tree/try/fix-hacktoberfest-retire) · lit run: https://github.com/fitzyracing1/Python/actions/runs/39347792759
 - [ ] n8n-io/n8n — CI: "Security: Sync from Public" workflow not completing (runs skipped) on master since 2026-10-13 — drafts/n8n-io__n8n.md — note: latest run was skipped, not failed — probably not worth filing
 - [ ] tensorflow/tensorflow — CI: 2 workflows dark on master ("Creates a GitHub Issue when a PR Rolled back via Commit to Master", "OSV-Scanner Scheduled Scan") — drafts/tensorflow__tensorflow.md — note: latest run was skipped, not failed — probably not worth filing
 - [ ] microsoft/vscode — CI: 2 workflows dark on main ("CSS Cascade-Order Scan", "CodeQL") — drafts/microsoft__vscode.md
@@ -51,7 +51,7 @@ Drafted after each crawl by `scripts/draft-upstream.mjs`, one per repo with dark
 - [ ] storytold/pdfcraft — CI: "FreeBSD" workflow getting cancelled on main since 2026-10-18 — drafts/storytold__pdfcraft.md — note: cancelled by a concurrency group — likely noise
 - [ ] storytold/lightcraft — CI: "FreeBSD" workflow getting cancelled on main since 2026-10-18 — drafts/storytold__lightcraft.md — note: infra-class dark (runner/timeout/cancel) — lower value
 - [ ] storytold/vectorcraft — CI: "FreeBSD" workflow getting cancelled on main since 2026-10-17 — drafts/storytold__vectorcraft.md — note: infra-class dark (runner/timeout/cancel) — lower value
-- [ ] awslabs/mcp — CI: "Check License Header" workflow failing on main since 2026-10-13 — drafts/awslabs__mcp.md
+- [ ] awslabs/mcp — CI: "Check License Header" workflow failing on main since 2026-10-13 — drafts/awslabs__mcp.md — fix: [try/fix-license-header-example](https://github.com/fitzyracing1/mcp/tree/try/fix-license-header-example) · lit run: https://github.com/fitzyracing1/mcp/actions/runs/39349159861
 - [ ] modelcontextprotocol/modelcontextprotocol — CI: "Publish spec release" workflow not completing (runs skipped) on main since 2026-09-28 — drafts/modelcontextprotocol__modelcontextprotocol.md — note: latest run was skipped, not failed — probably not worth filing
 - [ ] isaacs/node-glob — CI: "typedoc" workflow failing on main since 2026-10-05 — drafts/isaacs__node-glob.md
 - [ ] webiny/webiny-js — CI: 3 workflows dark on next ("Cloud infrastructure Cleanup", "Rebuild Global Cache ("dev" branch)", "Push") — drafts/webiny__webiny-js.md
