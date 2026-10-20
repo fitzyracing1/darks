@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/storytold/effectcraft/issues/new
-- **Stars:** 7444 · **Generated:** 2026-10-20T06:59:15.323Z
+- **Stars:** 7478 · **Generated:** 2026-10-20T12:54:49.577Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
@@ -19,21 +19,21 @@ CI: "FreeBSD" workflow getting cancelled on main since 2026-10-19
 <!-- BEGIN BODY -->
 Hi! The **FreeBSD** workflow (`.github/workflows/freebsd.yml`) on `main` has been getting cancelled since 2026-10-19. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/storytold/effectcraft/actions/runs/39192388694 — dark (conclusion: `cancelled`), 2026-10-19 02:57 UTC
+- Latest run on `main`: https://github.com/storytold/effectcraft/actions/runs/39361575041 — dark (conclusion: `cancelled`), 2026-10-20 02:55 UTC
 - Dark since: 2026-10-19 02:57 UTC (first run of the current streak)
-- Job / step: `freebsd / FreeBSD 15 aarch64 (build + test)` → `Build and test in a FreeBSD VM`
+- Job / step: `freebsd / FreeBSD 15 aarch64 (build + test)` → `Build and test`
 - Likely cause: The job has exceeded the maximum execution time of 5h0m0s
 
 <details><summary>End of the job log</summary>
 
 ```
-   Compiling tag_ptr v0.1.0
-   Compiling wasmi_ir v2.0.0
-   Compiling oneshot v0.2.1
-   Compiling boa_engine v0.22.0
-   Compiling wast v261.0.0
-   Compiling wasmi_core v2.0.0
-   Compiling wasmi v2.0.0
+   Compiling calloop v0.13.0
+   Compiling wgpu-core v30.0.1
+   Compiling x11-dl v2.21.0
+   Compiling gethostname v1.1.0
+   Compiling emath v0.36.2
+   Compiling litrs v1.0.0
+   Compiling x11rb-protocol v0.13.2
 ##[error]The operation was canceled.
 ```
 

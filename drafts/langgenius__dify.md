@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/langgenius/dify/issues/new
-- **Stars:** 158972 · **Generated:** 2026-10-20T06:59:15.323Z
+- **Stars:** 159016 · **Generated:** 2026-10-20T12:54:49.577Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title

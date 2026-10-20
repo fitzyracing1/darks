@@ -4,35 +4,44 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/tangency-labs/solidcraft/issues/new
-- **Stars:** 7595 · **Generated:** 2026-10-20T06:59:15.323Z
+- **Stars:** 7882 · **Generated:** 2026-10-20T12:54:49.577Z
 - Nothing in this file has been sent anywhere.
+- **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: "Pages" workflow failing on main since 2026-10-19
+CI: 2 workflows dark on main ("Pages", "Release")
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! The **Pages** workflow (`.github/workflows/pages.yml`) on `main` has been failing since 2026-10-19. Here is what I saw, in case it's useful:
+Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
 
-- Latest run on `main`: https://github.com/tangency-labs/solidcraft/actions/runs/39371025042 — dark (conclusion: `failure`), 2026-10-20 04:42 UTC
+### Pages (`.github/workflows/pages.yml`)
+
+- Latest run on `main`: https://github.com/tangency-labs/solidcraft/actions/runs/39421403872 — dark (conclusion: `cancelled`), 2026-10-20 12:19 UTC
 - Dark since: 2026-10-19 06:16 UTC (first run of the current streak)
-- Job / step: `build` → `Test the web app offline and across an update (headless Chrome)`
-- Likely cause: error: launch 1 starts build v1: timed out after 240s; last state: {"build":"v1","caches":{"solidcraft-app /solidcraft/app/ 0.16.2-7812db4904efac98":10},"complete":["solidcraft-app /solidcraft/app/ 0.16.2-7812db4904efac…
+- Likely cause: run cancelled
+
+### Release (`.github/workflows/release.yml`)
+
+- Latest run on `main`: https://github.com/tangency-labs/solidcraft/actions/runs/39397013376 — dark (conclusion: `failure`), 2026-10-20 08:56 UTC
+- Dark since: 2026-10-20 08:56 UTC (first run of the current streak)
+- Job / step: `Flatpak aarch64` → `Build the Flatpak bundle`
+- Likely cause: Internal error in ShaderStages(FRAGMENT) shader: WGSL 'textureLoad' from depth textures is not supported in GLSL
 
 <details><summary>End of the job log</summary>
 
 ```
-2026-10-20T05:17:59.522529Z  INFO finished hook cargo
-2026-10-20T05:17:59.522587Z  INFO applying new distribution
-2026-10-20T05:17:59.523117Z  INFO ✅ success
-    Finished `dev` profile [optimized + debuginfo] target(s) in 0.09s
-     Running `target/debug/xtask web-offline-test --site dist/web`
-retry launch 1 starts build v1: timed out after 240s; last state: {"build":"v1","caches":{"solidcraft-app /solidcraft/app/ 0.16.2-7812db4904efac98":10},"complete":["solidcraft-app /solidcraft/app/ 0.16.2-7812db4904efac9…
-error: launch 1 starts build v1: timed out after 240s; last state: {"build":"v1","caches":{"solidcraft-app /solidcraft/app/ 0.16.2-7812db4904efac98":10},"complete":["solidcraft-app /solidcraft/app/ 0.16.2-7812db4904efac…
+wgpu error: Validation Error
+Caused by:
+  In Device::create_render_pipeline, label = 'sc_tris'
+    Internal error in ShaderStages(FRAGMENT) shader: WGSL `textureLoad` from depth textures is not supported in GLSL
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+Flatpak desktop smoke failed: Command '['dbus-run-session', '--', '/usr/bin/python3', '/home/runner/work/solidcraft/solidcraft/packaging/linux/flatpak-smoke.py', '--probe', '--gl-saved-four']' returned non-zero exit sta…
+x11: default sandbox desktop startup and modelling PASS
 ##[error]Process completed with exit code 1.
 ```
 

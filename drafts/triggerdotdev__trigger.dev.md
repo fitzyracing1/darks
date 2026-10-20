@@ -4,19 +4,22 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/triggerdotdev/trigger.dev/issues/new
-- **Stars:** 16584 · **Generated:** 2026-10-20T06:59:15.323Z
+- **Stars:** 16585 · **Generated:** 2026-10-20T12:54:49.577Z
 - Nothing in this file has been sent anywhere.
+- **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: "🛡️ E2E Tests: Webapp Auth (full)" workflow failing on main since 2026-10-08
+CI: 2 workflows dark on main ("🛡️ E2E Tests: Webapp Auth (full)", "🚀 Publish Trigger.dev Docker")
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! The **🛡️ E2E Tests: Webapp Auth (full)** workflow (`.github/workflows/e2e-webapp-auth-full.yml`) on `main` has been failing since 2026-10-08. Here is what I saw, in case it's useful:
+Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
+
+### 🛡️ E2E Tests: Webapp Auth (full) (`.github/workflows/e2e-webapp-auth-full.yml`)
 
 - Latest run on `main`: https://github.com/triggerdotdev/trigger.dev/actions/runs/39367297497 — dark (conclusion: `failure`), 2026-10-20 04:00 UTC
 - Dark since: 2026-10-08 04:02 UTC (first run of the current streak)
@@ -37,6 +40,12 @@ Hi! The **🛡️ E2E Tests: Webapp Auth (full)** workflow (`.github/workflows/e
 ```
 
 </details>
+
+### 🚀 Publish Trigger.dev Docker (`.github/workflows/publish.yml`)
+
+- Latest run on `main`: https://github.com/triggerdotdev/trigger.dev/actions/runs/39420034864 — dark (conclusion: `cancelled`), 2026-10-20 12:08 UTC
+- Dark since: 2026-10-20 12:02 UTC (first run of the current streak)
+- Likely cause: run cancelled
 
 If this is already known or expected, feel free to close. Thanks for maintaining trigger.dev!
 

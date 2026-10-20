@@ -4,37 +4,36 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/t8y2/dbx/issues/new
-- **Stars:** 27306 · **Generated:** 2026-10-20T06:59:15.323Z
+- **Stars:** 27353 · **Generated:** 2026-10-20T12:54:49.577Z
 - Nothing in this file has been sent anywhere.
-- **Note for Joshua:** cancelled by a concurrency group — likely noise
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: "CI" workflow getting cancelled on main since 2026-10-20
+CI: "CI" workflow failing on main since 2026-10-20
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! The **CI** workflow (`.github/workflows/ci.yml`) on `main` has been getting cancelled since 2026-10-20. Here is what I saw, in case it's useful:
+Hi! The **CI** workflow (`.github/workflows/ci.yml`) on `main` has been failing since 2026-10-20. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/t8y2/dbx/actions/runs/39383005411 — dark (conclusion: `cancelled`), 2026-10-20 06:53 UTC
+- Latest run on `main`: https://github.com/t8y2/dbx/actions/runs/39422661420 — dark (conclusion: `failure`), 2026-10-20 12:29 UTC
 - Dark since: 2026-10-20 06:40 UTC (first run of the current streak)
-- Job / step: `frontend-test (1/2)` → `Run frontend test shard`
-- Likely cause: Canceling since a higher priority waiting request for CI-refs/heads/main exists
+- Job / step: `frontend-test (2/2)` → `Run frontend test shard`
+- Likely cause: AssertionError: Add a search result or localized keyword on the owning management entry; exclude only transient UI with a reason.: expected [ 'connection.httpTunnelProtocol' ] to deeply equal [] (apps/desktop/src/lib/settings/__tests__/settingsSearchCoverage.spec.ts:152)
 
 <details><summary>End of the job log</summary>
 
 ```
-  at <App>
- ✓ apps/desktop/src/components/import/__tests__/TableImportDialog.existingTarget.spec.ts (19 tests) 5182ms
-     ✓ maps headerless rows.csv by ordinal position and imports a manual adjustment  664ms
-     ✓ maps headerless rows.tsv by ordinal position and imports a manual adjustment  650ms
-     ✓ maps headerless rows.txt by ordinal position and imports a manual adjustment  553ms
-     ✓ maps headerless rows.xlsx by ordinal position and imports a manual adjustment  514ms
-     ✓ recognizes Doris unique-key columns as primary keys for update-existing  303ms
-##[error]The operation was canceled.
+    153|     });
+    154|   }
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+ Test Files  1 failed | 956 passed (957)
+      Tests  1 failed | 12074 passed (12075)
+   Start at  12:31:11
+   Duration  349.77s (transform 82.17s, setup 0ms, import 475.62s, tests 502.03s, environment 157.89s)
+##[error]AssertionError: Add a search result or localized keyword on the owning management entry; exclude only transient UI with a reason.: expected [ 'connection.httpTunnelProtocol' ] to deeply equal []
 ```
 
 </details>

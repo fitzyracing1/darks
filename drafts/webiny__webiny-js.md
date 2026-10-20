@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/webiny/webiny-js/issues/new
-- **Stars:** 8048 · **Generated:** 2026-10-20T06:59:15.323Z
+- **Stars:** 8048 · **Generated:** 2026-10-20T12:54:49.577Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -64,25 +64,9 @@ Waiting 12 seconds before trying again
 
 ### Push (`.github/workflows/push.yml`)
 
-- Latest run on `next`: https://github.com/webiny/webiny-js/actions/runs/39271213529 — dark (conclusion: `failure`), 2026-10-19 14:41 UTC
+- Latest run on `next`: https://github.com/webiny/webiny-js/actions/runs/39419325472 — dark (conclusion: `failure`), 2026-10-20 12:02 UTC
 - Dark since: 2026-10-14 08:22 UTC (first run of the current streak)
-- Job / step: `[SQL] api-event-handler-standalone-sql` → `Run tests`
-- Likely cause: AssertionError: expected [ …(6) ] to have a length of 3 but got 6 (v6/packages/api-event-handler-standalone-sql/__tests__/rootStorageDecorators.test.ts:62)
-
-<details><summary>End of the job log</summary>
-
-```
-     63|         expect(resolved.map(isProbed)).toEqual([true, true, true]);
-     64|     });
-⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
- Test Files  1 failed | 2 passed (3)
-      Tests  1 failed | 2 passed (3)
-   Start at  14:46:05
-   Duration  24.75s (transform 12.23s, setup 10.89s, import 12.78s, tests 664ms, environment 0ms)
-##[error]AssertionError: expected [ …(6) ] to have a length of 3 but got 6
-```
-
-</details>
+- Likely cause: no cause found in annotations
 
 If this is already known or expected, feel free to close. Thanks for maintaining webiny-js!
 

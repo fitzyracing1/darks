@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/storytold/filmcraft/issues/new
-- **Stars:** 15153 · **Generated:** 2026-10-20T06:59:15.323Z
+- **Stars:** 15212 · **Generated:** 2026-10-20T12:54:49.577Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
@@ -19,21 +19,21 @@ CI: "FreeBSD" workflow getting cancelled on main since 2026-10-19
 <!-- BEGIN BODY -->
 Hi! The **FreeBSD** workflow (`.github/workflows/freebsd.yml`) on `main` has been getting cancelled since 2026-10-19. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/storytold/filmcraft/actions/runs/39191965057 — dark (conclusion: `cancelled`), 2026-10-19 02:52 UTC
+- Latest run on `main`: https://github.com/storytold/filmcraft/actions/runs/39361088819 — dark (conclusion: `cancelled`), 2026-10-20 02:50 UTC
 - Dark since: 2026-10-19 02:52 UTC (first run of the current streak)
-- Job / step: `freebsd / FreeBSD 15 aarch64 (build + test)` → `Build and test in a FreeBSD VM`
+- Job / step: `freebsd / FreeBSD 15 aarch64 (build + test)` → `Build and test`
 - Likely cause: The job has exceeded the maximum execution time of 5h0m0s
 
 <details><summary>End of the job log</summary>
 
 ```
-   Compiling smithay-clipboard v0.7.3
-   Compiling accesskit_winit v0.32.2
-   Compiling arboard v3.6.1
-   Compiling serde_spanned v1.1.1
-   Compiling toml_writer v1.1.2+spec-1.1.0
-   Compiling egui-winit v0.36.2
-   Compiling toml v1.1.6+spec-1.1.0
+   Compiling filmcraft-web v0.9.0 (/home/runner/work/filmcraft/filmcraft/apps/filmcraft-web)
+   Compiling glob v0.3.4
+   Compiling schemars v1.2.2
+   Compiling filmcraft-golden v0.9.0 (/home/runner/work/filmcraft/filmcraft/crates/golden)
+   Compiling filmcraft-automation v0.9.0 (/home/runner/work/filmcraft/filmcraft/crates/automation)
+   Compiling filmcraft-cli v0.9.0 (/home/runner/work/filmcraft/filmcraft/apps/filmcraft-cli)
+   Compiling xtask v0.9.0 (/home/runner/work/filmcraft/filmcraft/xtask)
 ##[error]The operation was canceled.
 ```
 
