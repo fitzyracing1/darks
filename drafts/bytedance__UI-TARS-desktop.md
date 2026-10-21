@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/bytedance/UI-TARS-desktop/issues/new
-- **Stars:** 39357 · **Generated:** 2026-10-21T06:59:28.963Z
+- **Stars:** 39358 · **Generated:** 2026-10-21T12:55:24.472Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** self-hosted runner problem — maintainers usually know
 - **Note for Joshua:** workflow failed to start (config/permissions on their side)

@@ -1,8 +1,8 @@
 <!-- dark-draft: KnifeLemon/Filee -->
-<!-- draft-state: ready -->
+<!-- draft-state: resolved -->
 # Upstream issue draft: KnifeLemon/Filee
 
-- **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
+- **Status:** resolved — lit again (2026-10-21); nothing to file
 - **Would be filed at:** https://github.com/KnifeLemon/Filee/issues/new
 - **Stars:** 8397 · **Generated:** 2026-10-21T06:59:28.963Z
 - Nothing in this file has been sent anywhere.

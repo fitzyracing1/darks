@@ -4,13 +4,13 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/activepieces/activepieces/issues/new
-- **Stars:** 25142 · **Generated:** 2026-10-21T06:59:28.963Z
+- **Stars:** 25149 · **Generated:** 2026-10-21T12:55:24.472Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 4 workflows dark on main ("Chat Evals", "Continuous Delivery — Canary", "Generate Translation Files for Community Pieces and UI", +1 more)
+CI: 3 workflows dark on main ("Chat Evals", "Generate Translation Files for Community Pieces and UI", "Release Pieces")
 <!-- END TITLE -->
 
 ## Body
@@ -40,28 +40,6 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 </details>
 
-### Continuous Delivery — Canary (`.github/workflows/continuous-delivery-canary.yml`)
-
-- Latest run on `main`: https://github.com/activepieces/activepieces/actions/runs/39397539156 — dark (conclusion: `failure`), 2026-10-20 09:00 UTC
-- Dark since: 2026-10-19 09:03 UTC (first run of the current streak)
-- Job / step: `check-migrations` → `Fail on breaking migrations`
-- Likely cause: Breaking migrations detected: DropChatRolloutUserTable1870000000000
-
-<details><summary>End of the job log</summary>
-
-```
-  Time:    19.606s
-Found 3 migration(s) to roll back:
-  safe: AddPieceTranslationTable1873000000000
-  safe: AddBarrierChildAttribution1871000000000
-  BREAKING: DropChatRolloutUserTable1870000000000
-1 breaking migration(s) detected.
-Breaking migrations detected: DropChatRolloutUserTable1870000000000
-##[error]Process completed with exit code 1.
-```
-
-</details>
-
 ### Generate Translation Files for Community Pieces and UI (`.github/workflows/generate-translations.yml`)
 
 - Latest run on `main`: https://github.com/activepieces/activepieces/actions/runs/39447386687 — dark (conclusion: `failure`), 2026-10-20 15:19 UTC
@@ -86,21 +64,21 @@ Breaking migrations detected: DropChatRolloutUserTable1870000000000
 
 ### Release Pieces (`.github/workflows/release-pieces.yml`)
 
-- Latest run on `main`: https://github.com/activepieces/activepieces/actions/runs/39548163300 — dark (conclusion: `failure`), 2026-10-21 05:11 UTC
+- Latest run on `main`: https://github.com/activepieces/activepieces/actions/runs/39584918721 — dark (conclusion: `failure`), 2026-10-21 10:29 UTC
 - Dark since: 2026-10-21 05:11 UTC (first run of the current streak)
 - Job / step: `Release-Pieces` → `publish pieces packages`
-- Likely cause: [publishPieces] 1/4 piece(s) failed to publish:
+- Likely cause: [publishPieces] 3/23 piece(s) failed to publish:
 
 <details><summary>End of the job log</summary>
 
 ```
-  output: [ null, null, null ],
-  pid: 2532,
   stdout: null,
   stderr: null
 }
-[publishPieces] 1/4 piece(s) failed to publish:
-  packages/pieces/community/clockify
+[publishPieces] 3/23 piece(s) failed to publish:
+  packages/pieces/community/ai
+  packages/pieces/community/invoiceninja
+  packages/pieces/community/pdfmonkey
 ##[error]Process completed with exit code 1.
 ```
 

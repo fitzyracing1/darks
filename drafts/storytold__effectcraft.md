@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/storytold/effectcraft/issues/new
-- **Stars:** 7551 · **Generated:** 2026-10-21T06:59:28.963Z
+- **Stars:** 7577 · **Generated:** 2026-10-21T12:55:24.472Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
@@ -19,7 +19,7 @@ CI: "FreeBSD" workflow getting cancelled on main since 2026-10-19
 <!-- BEGIN BODY -->
 Hi! The **FreeBSD** workflow (`.github/workflows/freebsd.yml`) on `main` has been getting cancelled since 2026-10-19. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/storytold/effectcraft/actions/runs/39361575041 — dark (conclusion: `cancelled`), 2026-10-20 02:55 UTC
+- Latest run on `main`: https://github.com/storytold/effectcraft/actions/runs/39535787718 — dark (conclusion: `cancelled`), 2026-10-21 02:56 UTC
 - Dark since: 2026-10-19 02:57 UTC (first run of the current streak)
 - Job / step: `freebsd / FreeBSD 15 aarch64 (build + test)` → `Build and test`
 - Likely cause: The job has exceeded the maximum execution time of 5h0m0s
@@ -27,13 +27,13 @@ Hi! The **FreeBSD** workflow (`.github/workflows/freebsd.yml`) on `main` has bee
 <details><summary>End of the job log</summary>
 
 ```
-   Compiling calloop v0.13.0
-   Compiling wgpu-core v30.0.1
-   Compiling x11-dl v2.21.0
-   Compiling gethostname v1.1.0
-   Compiling emath v0.36.2
-   Compiling litrs v1.0.0
-   Compiling x11rb-protocol v0.13.2
+   Compiling rfd v0.17.2
+   Compiling cpal v0.16.0
+   Compiling effectcraft v0.13.0 (/home/runner/work/effectcraft/effectcraft/apps/effectcraft)
+   Compiling alsa v0.9.1
+   Compiling cpu-time v1.0.0
+   Compiling dasp_sample v0.11.0
+   Compiling effectcraft-cli v0.13.0 (/home/runner/work/effectcraft/effectcraft/apps/effectcraft-cli)
 ##[error]The operation was canceled.
 ```
 

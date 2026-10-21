@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/storytold/pdfcraft/issues/new
-- **Stars:** 16737 · **Generated:** 2026-10-21T06:59:28.963Z
+- **Stars:** 16835 · **Generated:** 2026-10-21T12:55:24.472Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
@@ -43,7 +43,7 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### CI (`.github/workflows/ci.yml`)
 
-- Latest run on `main`: https://github.com/storytold/pdfcraft/actions/runs/39538978018 — dark (conclusion: `failure`), 2026-10-21 03:30 UTC
+- Latest run on `main`: https://github.com/storytold/pdfcraft/actions/runs/39565939296 — dark (conclusion: `failure`), 2026-10-21 07:59 UTC
 - Dark since: 2026-10-21 00:17 UTC (first run of the current streak)
 - Job / step: `dependency licences and advisories` → `Run EmbarkStudios/cargo-deny-action@v2`
 - Likely cause: advisories FAILED, bans ok, licenses ok, sources ok

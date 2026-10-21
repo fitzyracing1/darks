@@ -4,24 +4,26 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/koala73/worldmonitor/issues/new
-- **Stars:** 88980 · **Generated:** 2026-10-21T06:59:28.963Z
+- **Stars:** 89031 · **Generated:** 2026-10-21T12:55:24.472Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: "Railway Native Deploy Health" workflow failing on main since 2026-10-21
+CI: 3 workflows dark on main ("Railway Native Deploy Health", "Umami Storage Monitor", "Railway Registry Sync")
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! The **Railway Native Deploy Health** workflow (`.github/workflows/railway-deploy-drift.yml`) on `main` has been failing since 2026-10-21. Here is what I saw, in case it's useful:
+Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
 
-- Latest run on `main`: https://github.com/koala73/worldmonitor/actions/runs/39556781211 — dark (conclusion: `failure`), 2026-10-21 06:39 UTC
+### Railway Native Deploy Health (`.github/workflows/railway-deploy-drift.yml`)
+
+- Latest run on `main`: https://github.com/koala73/worldmonitor/actions/runs/39600887542 — dark (conclusion: `failure`), 2026-10-21 12:35 UTC
 - Dark since: 2026-10-21 06:39 UTC (first run of the current streak)
 - Job / step: `Railway native deployment health` → `Check Railway deployment configuration and drift`
-- Likely cause: unexpected repository service(s): seed-country-history
+- Likely cause: railway service list --project 29419572-0b0d-437f-8e71-4fa68daf514f --environment production --json failed (1): Unauthorized. Please check that your RAILWAY_API_TOKEN is valid and has access to the resource you're tryin…
 
 <details><summary>End of the job log</summary>
 
@@ -32,7 +34,51 @@ npm warn install-scripts 1 package has install scripts not yet covered by allowS
 npm warn install-scripts   @railway/cli@5.30.1 (postinstall: node ./npm-install/postinstall.js)
 npm warn install-scripts
 npm warn install-scripts Run `npm install -g --allow-scripts=@railway/cli` to allow these scripts once, or `npm config set allow-scripts=@railway/cli --location=user` to allow them for all global installs.
-unexpected repository service(s): seed-country-history
+railway service list --project 29419572-0b0d-437f-8e71-4fa68daf514f --environment production --json failed (1): Unauthorized. Please check that your RAILWAY_API_TOKEN is valid and has access to the resource you're tryin…
+##[error]Process completed with exit code 1.
+```
+
+</details>
+
+### Umami Storage Monitor (`.github/workflows/umami-storage-monitor.yml`)
+
+- Latest run on `main`: https://github.com/koala73/worldmonitor/actions/runs/39601174756 — dark (conclusion: `failure`), 2026-10-21 12:38 UTC
+- Dark since: 2026-10-21 09:45 UTC (first run of the current streak)
+- Job / step: `monitor` → `Read Umami Postgres volume usage`
+- Likely cause: Railway volume read failed: railway volume list failed with exit code 1
+
+<details><summary>End of the job log</summary>
+
+```
+npm warn install-scripts 1 package has install scripts not yet covered by allowScripts:
+npm warn install-scripts   @railway/cli@5.30.1 (postinstall: node ./npm-install/postinstall.js)
+npm warn install-scripts
+npm warn install-scripts Run `npm install -g --allow-scripts=@railway/cli` to allow these scripts once, or `npm config set allow-scripts=@railway/cli --location=user` to allow them for all global installs.
+Restored storage history from run 39597698959.
+Unauthorized. Please check that your RAILWAY_TOKEN is valid and has access to the resource you're trying to use.
+Railway volume read failed: railway volume list failed with exit code 1
+##[error]Process completed with exit code 1.
+```
+
+</details>
+
+### Railway Registry Sync (`.github/workflows/railway-registry-sync.yml`)
+
+- Latest run on `main`: https://github.com/koala73/worldmonitor/actions/runs/39599987811 — dark (conclusion: `failure`), 2026-10-21 12:29 UTC
+- Dark since: 2026-10-21 12:29 UTC (first run of the current streak)
+- Job / step: `Reconcile registry to live configuration` → `Reconcile registry-managed Railway configuration`
+- Likely cause: Railway registry sync apply failed after 3 attempts (last failure: exit 1)
+
+<details><summary>End of the job log</summary>
+
+```
+npm warn install-scripts Run `npm install -g --allow-scripts=@railway/cli` to allow these scripts once, or `npm config set allow-scripts=@railway/cli --location=user` to allow them for all global installs.
+railway service list --project 29419572-0b0d-437f-8e71-4fa68daf514f --environment production --json failed (1): Unauthorized. Please check that your RAILWAY_TOKEN is valid and has access to the resource you're trying to…
+Railway registry sync apply attempt 1 failed (exit 1); retrying in 5000ms.
+railway service list --project 29419572-0b0d-437f-8e71-4fa68daf514f --environment production --json failed (1): Unauthorized. Please check that your RAILWAY_TOKEN is valid and has access to the resource you're trying to…
+Railway registry sync apply attempt 2 failed (exit 1); retrying in 15000ms.
+railway service list --project 29419572-0b0d-437f-8e71-4fa68daf514f --environment production --json failed (1): Unauthorized. Please check that your RAILWAY_TOKEN is valid and has access to the resource you're trying to…
+Railway registry sync apply failed after 3 attempts (last failure: exit 1)
 ##[error]Process completed with exit code 1.
 ```
 
