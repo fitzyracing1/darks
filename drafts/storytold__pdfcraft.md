@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/storytold/pdfcraft/issues/new
-- **Stars:** 16835 · **Generated:** 2026-10-21T12:55:24.472Z
+- **Stars:** 16931 · **Generated:** 2026-10-21T18:50:03.780Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
@@ -21,7 +21,7 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### FreeBSD (`.github/workflows/freebsd.yml`)
 
-- Latest run on `main`: https://github.com/storytold/pdfcraft/actions/runs/39520435155 — dark (conclusion: `cancelled`), 2026-10-21 00:17 UTC
+- Latest run on `main`: https://github.com/storytold/pdfcraft/actions/runs/39565939917 — dark (conclusion: `cancelled`), 2026-10-21 07:59 UTC
 - Dark since: 2026-10-18 07:11 UTC (first run of the current streak)
 - Job / step: `freebsd / FreeBSD 15 aarch64 (build + test)` → `Build and test`
 - Likely cause: The job has exceeded the maximum execution time of 5h0m0s
@@ -29,13 +29,13 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 <details><summary>End of the job log</summary>
 
 ```
-   Compiling epaint_default_fonts v0.36.2
-   Compiling epaint v0.36.2
-   Compiling bit-set v0.10.0
-   Compiling codespan-reporting v0.13.1
-   Compiling calloop v0.13.0
-   Compiling zbus-lockstep-macros v0.5.2
-   Compiling ron v0.12.2
+   Compiling unarray v0.1.4
+   Compiling regex-syntax v0.8.11
+   Compiling pdfcraft-oracle v0.10.1 (/home/runner/work/pdfcraft/pdfcraft/crates/oracle)
+   Compiling pdfcraft-testkit v0.10.1 (/home/runner/work/pdfcraft/pdfcraft/crates/testkit)
+   Compiling proptest v1.11.0
+   Compiling xtask v0.1.0 (/home/runner/work/pdfcraft/pdfcraft/xtask)
+   Compiling pdfcraft-web v0.10.1 (/home/runner/work/pdfcraft/pdfcraft/apps/pdfcraft-web)
 ##[error]The operation was canceled.
 ```
 

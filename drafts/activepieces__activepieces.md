@@ -4,13 +4,13 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/activepieces/activepieces/issues/new
-- **Stars:** 25149 · **Generated:** 2026-10-21T12:55:24.472Z
+- **Stars:** 25155 · **Generated:** 2026-10-21T18:50:03.780Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 3 workflows dark on main ("Chat Evals", "Generate Translation Files for Community Pieces and UI", "Release Pieces")
+CI: 2 workflows dark on main ("Chat Evals", "Generate Translation Files for Community Pieces and UI")
 <!-- END TITLE -->
 
 ## Body
@@ -58,28 +58,6 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
   }
 }
 ##[error]Unhandled error: HttpError: Pull Request has merge conflicts
-```
-
-</details>
-
-### Release Pieces (`.github/workflows/release-pieces.yml`)
-
-- Latest run on `main`: https://github.com/activepieces/activepieces/actions/runs/39584918721 — dark (conclusion: `failure`), 2026-10-21 10:29 UTC
-- Dark since: 2026-10-21 05:11 UTC (first run of the current streak)
-- Job / step: `Release-Pieces` → `publish pieces packages`
-- Likely cause: [publishPieces] 3/23 piece(s) failed to publish:
-
-<details><summary>End of the job log</summary>
-
-```
-  stdout: null,
-  stderr: null
-}
-[publishPieces] 3/23 piece(s) failed to publish:
-  packages/pieces/community/ai
-  packages/pieces/community/invoiceninja
-  packages/pieces/community/pdfmonkey
-##[error]Process completed with exit code 1.
 ```
 
 </details>

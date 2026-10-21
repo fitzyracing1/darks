@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/tailwindlabs/tailwindcss/issues/new
-- **Stars:** 97948 · **Generated:** 2026-10-21T12:55:24.472Z
+- **Stars:** 97959 · **Generated:** 2026-10-21T18:50:03.780Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title

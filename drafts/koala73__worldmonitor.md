@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/koala73/worldmonitor/issues/new
-- **Stars:** 89031 · **Generated:** 2026-10-21T12:55:24.472Z
+- **Stars:** 89074 · **Generated:** 2026-10-21T18:50:03.780Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -20,7 +20,7 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### Railway Native Deploy Health (`.github/workflows/railway-deploy-drift.yml`)
 
-- Latest run on `main`: https://github.com/koala73/worldmonitor/actions/runs/39600887542 — dark (conclusion: `failure`), 2026-10-21 12:35 UTC
+- Latest run on `main`: https://github.com/koala73/worldmonitor/actions/runs/39653306290 — dark (conclusion: `failure`), 2026-10-21 18:30 UTC
 - Dark since: 2026-10-21 06:39 UTC (first run of the current streak)
 - Job / step: `Railway native deployment health` → `Check Railway deployment configuration and drift`
 - Likely cause: railway service list --project 29419572-0b0d-437f-8e71-4fa68daf514f --environment production --json failed (1): Unauthorized. Please check that your RAILWAY_API_TOKEN is valid and has access to the resource you're tryin…
@@ -42,7 +42,7 @@ railway service list --project 29419572-0b0d-437f-8e71-4fa68daf514f --environmen
 
 ### Umami Storage Monitor (`.github/workflows/umami-storage-monitor.yml`)
 
-- Latest run on `main`: https://github.com/koala73/worldmonitor/actions/runs/39601174756 — dark (conclusion: `failure`), 2026-10-21 12:38 UTC
+- Latest run on `main`: https://github.com/koala73/worldmonitor/actions/runs/39653290907 — dark (conclusion: `failure`), 2026-10-21 18:30 UTC
 - Dark since: 2026-10-21 09:45 UTC (first run of the current streak)
 - Job / step: `monitor` → `Read Umami Postgres volume usage`
 - Likely cause: Railway volume read failed: railway volume list failed with exit code 1
@@ -54,7 +54,7 @@ npm warn install-scripts 1 package has install scripts not yet covered by allowS
 npm warn install-scripts   @railway/cli@5.30.1 (postinstall: node ./npm-install/postinstall.js)
 npm warn install-scripts
 npm warn install-scripts Run `npm install -g --allow-scripts=@railway/cli` to allow these scripts once, or `npm config set allow-scripts=@railway/cli --location=user` to allow them for all global installs.
-Restored storage history from run 39597698959.
+Restored storage history from run 39650288117.
 Unauthorized. Please check that your RAILWAY_TOKEN is valid and has access to the resource you're trying to use.
 Railway volume read failed: railway volume list failed with exit code 1
 ##[error]Process completed with exit code 1.
@@ -64,7 +64,7 @@ Railway volume read failed: railway volume list failed with exit code 1
 
 ### Railway Registry Sync (`.github/workflows/railway-registry-sync.yml`)
 
-- Latest run on `main`: https://github.com/koala73/worldmonitor/actions/runs/39599987811 — dark (conclusion: `failure`), 2026-10-21 12:29 UTC
+- Latest run on `main`: https://github.com/koala73/worldmonitor/actions/runs/39634634392 — dark (conclusion: `failure`), 2026-10-21 16:25 UTC
 - Dark since: 2026-10-21 12:29 UTC (first run of the current streak)
 - Job / step: `Reconcile registry to live configuration` → `Reconcile registry-managed Railway configuration`
 - Likely cause: Railway registry sync apply failed after 3 attempts (last failure: exit 1)

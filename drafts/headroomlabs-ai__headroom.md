@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/headroomlabs-ai/headroom/issues/new
-- **Stars:** 76995 · **Generated:** 2026-10-21T12:55:24.472Z
+- **Stars:** 77145 · **Generated:** 2026-10-21T18:50:03.780Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
@@ -21,7 +21,7 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### PR Governance (`.github/workflows/pr-health.yml`)
 
-- Latest run on `main`: https://github.com/headroomlabs-ai/headroom/actions/runs/39440331375 — dark (conclusion: `cancelled`), 2026-10-20 14:33 UTC
+- Latest run on `main`: https://github.com/headroomlabs-ai/headroom/actions/runs/39617919005 — dark (conclusion: `cancelled`), 2026-10-21 14:33 UTC
 - Dark since: 2026-10-12 14:43 UTC (first run of the current streak)
 - Job / step: `label` → `Label open pull requests`
 - Likely cause: The job has exceeded the maximum execution time of 10m0s
@@ -29,13 +29,13 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 <details><summary>End of the job log</summary>
 
 ```
-https://github.com/headroomlabs-ai/headroom/pull/4067
-https://github.com/headroomlabs-ai/headroom/pull/4067
-https://github.com/headroomlabs-ai/headroom/pull/4067
 https://github.com/headroomlabs-ai/headroom/pull/4064
 https://github.com/headroomlabs-ai/headroom/pull/4064
 https://github.com/headroomlabs-ai/headroom/pull/4064
 https://github.com/headroomlabs-ai/headroom/pull/4064
+https://github.com/headroomlabs-ai/headroom/pull/4063
+https://github.com/headroomlabs-ai/headroom/pull/4063
+https://github.com/headroomlabs-ai/headroom/pull/4063
 ##[error]The operation was canceled.
 ```
 

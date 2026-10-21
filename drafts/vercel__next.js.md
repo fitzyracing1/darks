@@ -4,60 +4,36 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/vercel/next.js/issues/new
-- **Stars:** 143108 · **Generated:** 2026-10-21T12:55:24.472Z
+- **Stars:** 143124 · **Generated:** 2026-10-21T18:50:03.780Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 2 workflows dark on canary ("Rspack Next.js production integration tests", "Rspack Next.js development integration tests")
+CI: "Update React" workflow failing on canary since 2026-10-21
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! A few workflows on `canary` have been dark recently. Details below, in case they're useful:
+Hi! The **Update React** workflow (`.github/workflows/update_react.yml`) on `canary` has been failing since 2026-10-21. Here is what I saw, in case it's useful:
 
-### Rspack Next.js production integration tests (`.github/workflows/rspack-nextjs-build-integration-tests.yml`)
-
-- Latest run on `canary`: https://github.com/vercel/next.js/actions/runs/39547512494 — dark (conclusion: `failure`), 2026-10-21 05:04 UTC
-- Dark since: 2026-10-21 05:04 UTC (first run of the current streak)
-- Job / step: `Rspack integration tests / Next.js integration test (Integration) (8/12) / build` → `Run # legacy integration tests with `node run-tests.js``
-- Likely cause: Unable to download artifact(s): Artifact not found for name: next-swc-aarch64-unknown-linux-gnu
+- Latest run on `canary`: https://github.com/vercel/next.js/actions/runs/39638030890 — dark (conclusion: `failure`), 2026-10-21 16:48 UTC
+- Dark since: 2026-10-21 16:48 UTC (first run of the current streak)
+- Job / step: `create-pull-request` → `Create Pull Request`
+- Likely cause: Error: GitHub API POST /repos/vercel/next.js/git/blobs failed (500): {"message": "Something went wrong on our side and we cannot service your request. Sorry about that. Please try resubmitting your request and contact u…
 
 <details><summary>End of the job log</summary>
 
 ```
-/etc/profile.d/apps-bin-path.sh: line 10: XDG_DATA_DIRS: unbound variable
-/etc/profile.d/apps-bin-path.sh: line 10: XDG_DATA_DIRS: unbound variable
-/etc/profile.d/apps-bin-path.sh: line 10: XDG_DATA_DIRS: unbound variable
-Waiting for background step(s) to complete: install-rust
-Finished waiting for background step(s).
-/etc/profile.d/apps-bin-path.sh: line 10: XDG_DATA_DIRS: unbound variable
-Downloading single artifact
-##[error]Unable to download artifact(s): Artifact not found for name: next-swc-aarch64-unknown-linux-gnu
-```
-
-</details>
-
-### Rspack Next.js development integration tests (`.github/workflows/rspack-nextjs-dev-integration-tests.yml`)
-
-- Latest run on `canary`: https://github.com/vercel/next.js/actions/runs/39547970350 — dark (conclusion: `failure`), 2026-10-21 05:09 UTC
-- Dark since: 2026-10-21 05:09 UTC (first run of the current streak)
-- Job / step: `Rspack integration tests / Next.js integration test (Integration) (6/16) / build` → `Run # legacy integration tests with `node run-tests.js``
-- Likely cause: Unable to download artifact(s): Artifact not found for name: next-swc-aarch64-unknown-linux-gnu
-
-<details><summary>End of the job log</summary>
-
-```
-/etc/profile.d/apps-bin-path.sh: line 10: XDG_DATA_DIRS: unbound variable
-/etc/profile.d/apps-bin-path.sh: line 10: XDG_DATA_DIRS: unbound variable
-/etc/profile.d/apps-bin-path.sh: line 10: XDG_DATA_DIRS: unbound variable
-Waiting for background step(s) to complete: install-rust
-Finished waiting for background step(s).
-/etc/profile.d/apps-bin-path.sh: line 10: XDG_DATA_DIRS: unbound variable
-Downloading single artifact
-##[error]Unable to download artifact(s): Artifact not found for name: next-swc-aarch64-unknown-linux-gnu
+    at async createBlobForFile (/home/runner/work/next.js/next.js/scripts/github-utils/signed-commit.js:107:16)
+    at async /home/runner/work/next.js/next.js/scripts/github-utils/signed-commit.js:159:23
+    at async Promise.all (index 26)
+    at async createTreeFromLocalCommit (/home/runner/work/next.js/next.js/scripts/github-utils/signed-commit.js:139:16)
+    at async replayLocalCommitsAsSigned (/home/runner/work/next.js/next.js/scripts/github-utils/signed-commit.js:282:21)
+    at async main (/home/runner/work/next.js/next.js/scripts/sync-react.js:760:41)
+[ELIFECYCLE] Command failed with exit code 1.
+##[error]Process completed with exit code 1.
 ```
 
 </details>

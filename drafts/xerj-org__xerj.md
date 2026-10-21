@@ -4,14 +4,15 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/xerj-org/xerj/issues/new
-- **Stars:** 12621 · **Generated:** 2026-10-21T12:55:24.472Z
+- **Stars:** 12715 · **Generated:** 2026-10-21T18:50:03.780Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
+- **Note for Joshua:** cancelled by a concurrency group — likely noise
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 2 workflows dark on main ("CI", "SEO")
+CI: 4 workflows dark on main ("CI", "SEO", "Fresh-agent field report", +1 more)
 <!-- END TITLE -->
 
 ## Body
@@ -21,29 +22,13 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### CI (`.github/workflows/ci.yml`)
 
-- Latest run on `main`: https://github.com/xerj-org/xerj/actions/runs/39521846939 — dark (conclusion: `failure`), 2026-10-21 00:31 UTC
+- Latest run on `main`: https://github.com/xerj-org/xerj/actions/runs/39648354118 — dark (conclusion: `cancelled`), 2026-10-21 17:57 UTC
 - Dark since: 2026-10-17 07:26 UTC (first run of the current streak)
-- Job / step: `Build + Test` → `Workspace tests (all targets) at default parallelism (contributor's `cargo test`)`
-- Likely cause: The job has exceeded the maximum execution time of 1h0m0s
-
-<details><summary>End of the job log</summary>
-
-```
-test redelivery_converges_at_a_target_that_honours_external_versioning ... ok
-test recreating_an_index_under_the_same_name_does_not_stall_the_tap ... ok
-test cursor_state_is_written_once_per_tick_not_once_per_index ... ok
-test system_indices_are_never_pushed_even_with_a_star_allowlist ... ok
-test the_configured_credential_is_sent_to_the_target ... ok
-test the_allowlist_can_be_changed_at_runtime ... ok
-test the_tap_is_off_by_default_and_inert_without_a_target ... ok
-##[error]The operation was canceled.
-```
-
-</details>
+- Likely cause: run cancelled
 
 ### SEO (`.github/workflows/seo.yml`)
 
-- Latest run on `main`: https://github.com/xerj-org/xerj/actions/runs/39513103785 — dark (conclusion: `failure`), 2026-10-20 23:09 UTC
+- Latest run on `main`: https://github.com/xerj-org/xerj/actions/runs/39642422326 — dark (conclusion: `failure`), 2026-10-21 17:17 UTC
 - Dark since: 2026-10-20 20:40 UTC (first run of the current streak)
 - Job / step: `Technical SEO gate` → `sitemap.xml is generated, not hand-edited`
 - Likely cause: FAIL landing/sitemap.xml is out of date — run 'python3 scripts/seo/gen_sitemap.py --write'
@@ -62,6 +47,19 @@ FAIL landing/sitemap.xml is out of date — run `python3 scripts/seo/gen_sitemap
 ```
 
 </details>
+
+### Fresh-agent field report (`.github/workflows/field-report-e2e.yml`)
+
+- Latest run on `main`: https://github.com/xerj-org/xerj/actions/runs/39643996554 — dark (conclusion: `cancelled`), 2026-10-21 17:27 UTC
+- Dark since: 2026-10-21 16:38 UTC (first run of the current streak)
+- Job / step: `Clean HOME field-report dry-run`
+- Likely cause: Canceling since a higher priority waiting request for field-report-e2e-refs/heads/main exists
+
+### Deploy site (Cloudflare Pages) (`.github/workflows/deploy-pages.yml`)
+
+- Latest run on `main`: https://github.com/xerj-org/xerj/actions/runs/39641394502 — dark (conclusion: `cancelled`), 2026-10-21 17:10 UTC
+- Dark since: 2026-10-21 17:09 UTC (first run of the current streak)
+- Likely cause: run cancelled
 
 If this is already known or expected, feel free to close. Thanks for maintaining xerj!
 
