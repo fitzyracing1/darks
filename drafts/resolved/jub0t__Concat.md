@@ -1,8 +1,8 @@
 <!-- dark-draft: jub0t/Concat -->
-<!-- draft-state: ready -->
+<!-- draft-state: resolved -->
 # Upstream issue draft: jub0t/Concat
 
-- **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
+- **Status:** resolved — lit again (2026-10-21); nothing to file
 - **Would be filed at:** https://github.com/jub0t/Concat/issues/new
 - **Stars:** 9969 · **Generated:** 2026-10-21T01:13:11.013Z
 - Nothing in this file has been sent anywhere.

@@ -4,13 +4,13 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/activepieces/activepieces/issues/new
-- **Stars:** 25140 · **Generated:** 2026-10-21T01:13:11.013Z
+- **Stars:** 25142 · **Generated:** 2026-10-21T06:59:28.963Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 3 workflows dark on main ("Chat Evals", "Continuous Delivery — Canary", "Generate Translation Files for Community Pieces and UI")
+CI: 4 workflows dark on main ("Chat Evals", "Continuous Delivery — Canary", "Generate Translation Files for Community Pieces and UI", +1 more)
 <!-- END TITLE -->
 
 ## Body
@@ -20,22 +20,22 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### Chat Evals (`.github/workflows/agent-evals.yml`)
 
-- Latest run on `main`: https://github.com/activepieces/activepieces/actions/runs/39379920766 — dark (conclusion: `failure`), 2026-10-20 06:21 UTC
+- Latest run on `main`: https://github.com/activepieces/activepieces/actions/runs/39554969136 — dark (conclusion: `failure`), 2026-10-21 06:22 UTC
 - Dark since: 2026-10-13 06:26 UTC (first run of the current streak)
 - Job / step: `Live judge gate` → `Run live chat evals (scope=regression)`
-- Likely cause: AssertionError: see the eval report above for the failing checks: expected [ …(2) ] to deeply equal [] (packages/server/worker/test/lib/agent-eval/agent-eval.test.ts:58)
+- Likely cause: Error: Hook timed out in 540000ms. (packages/server/worker/test/lib/agent-eval/agent-eval.test.ts:20)
 
 <details><summary>End of the job log</summary>
 
 ```
-     59|     })
-     60| })
+     21|         const fixtures = evalFixtures.load().filter((fixture) => SCOPE…
+     22|         const [fixtureResults, agreement] = await Promise.all([
 ⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
  Test Files  1 failed | 12 passed (13)
-      Tests  1 failed | 88 passed (89)
-   Start at  06:26:10
-   Duration  476.68s (transform 1.50s, setup 65ms, collect 15.04s, tests 471.36s, environment 2ms, prepare 992ms)
-##[error]AssertionError: see the eval report above for the failing checks: expected [ …(2) ] to deeply equal []
+      Tests  88 passed | 1 skipped (89)
+   Start at  06:26:39
+   Duration  547.58s (transform 1.58s, setup 69ms, collect 16.87s, tests 541.44s, environment 3ms, prepare 1.17s)
+##[error]Error: Hook timed out in 540000ms.
 ```
 
 </details>
@@ -80,6 +80,28 @@ Breaking migrations detected: DropChatRolloutUserTable1870000000000
   }
 }
 ##[error]Unhandled error: HttpError: Pull Request has merge conflicts
+```
+
+</details>
+
+### Release Pieces (`.github/workflows/release-pieces.yml`)
+
+- Latest run on `main`: https://github.com/activepieces/activepieces/actions/runs/39548163300 — dark (conclusion: `failure`), 2026-10-21 05:11 UTC
+- Dark since: 2026-10-21 05:11 UTC (first run of the current streak)
+- Job / step: `Release-Pieces` → `publish pieces packages`
+- Likely cause: [publishPieces] 1/4 piece(s) failed to publish:
+
+<details><summary>End of the job log</summary>
+
+```
+  output: [ null, null, null ],
+  pid: 2532,
+  stdout: null,
+  stderr: null
+}
+[publishPieces] 1/4 piece(s) failed to publish:
+  packages/pieces/community/clockify
+##[error]Process completed with exit code 1.
 ```
 
 </details>

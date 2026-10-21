@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/react/react/issues/new
-- **Stars:** 251589 · **Generated:** 2026-10-21T01:13:11.013Z
+- **Stars:** 251585 · **Generated:** 2026-10-21T06:59:28.963Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title

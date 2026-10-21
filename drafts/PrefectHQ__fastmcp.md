@@ -1,10 +1,10 @@
 <!-- dark-draft: PrefectHQ/fastmcp -->
-<!-- draft-state: resolved -->
+<!-- draft-state: duplicate -->
 # Upstream issue draft: PrefectHQ/fastmcp
 
-- **Status:** resolved — lit again (2026-10-21); nothing to file
+- **Status:** not for filing — upstream already has an open issue/PR about every dark workflow here
 - **Would be filed at:** https://github.com/PrefectHQ/fastmcp/issues/new
-- **Stars:** 28149 · **Generated:** 2026-10-20T18:49:07.074Z
+- **Stars:** 28153 · **Generated:** 2026-10-21T06:59:28.963Z
 - Nothing in this file has been sent anywhere.
 
 ## Skipped: upstream already tracking

@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/public-apis/public-apis/issues/new
-- **Stars:** 490881 · **Generated:** 2026-10-21T01:13:11.013Z
+- **Stars:** 490933 · **Generated:** 2026-10-21T06:59:28.963Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -20,7 +20,7 @@ Hi! A few workflows on `master` have been dark recently. Details below, in case 
 
 ### Tests of push & pull (`.github/workflows/test_of_push_and_pull.yml`)
 
-- Latest run on `master`: https://github.com/public-apis/public-apis/actions/runs/39252526232 — dark (conclusion: `failure`), 2026-10-19 12:30 UTC
+- Latest run on `master`: https://github.com/public-apis/public-apis/actions/runs/39557708129 — dark (conclusion: `failure`), 2026-10-21 06:48 UTC
 - Dark since: 2026-10-02 22:11 UTC (first run of the current streak)
 - Job / step: `Validate README.md changes` → `Validate Markdown format`
 - Likely cause: (L2632) :--- is not a valid CORS option

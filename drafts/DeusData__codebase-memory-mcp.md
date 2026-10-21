@@ -4,51 +4,33 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/DeusData/codebase-memory-mcp/issues/new
-- **Stars:** 47042 · **Generated:** 2026-10-21T01:13:11.013Z
+- **Stars:** 47063 · **Generated:** 2026-10-21T06:59:28.963Z
 - Nothing in this file has been sent anywhere.
-- **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
-- **Note for Joshua:** cancelled by a concurrency group — likely noise
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 3 workflows dark on main ("test-impact-artifact", "OpenSSF Scorecard", "CodeQL SAST")
+CI: "CodeQL SAST" workflow failing on main since 2026-10-20
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
+Hi! The **CodeQL SAST** workflow (`.github/workflows/codeql.yml`) on `main` has been failing since 2026-10-20. Here is what I saw, in case it's useful:
 
-### test-impact-artifact (`.github/workflows/test-impact-artifact.yml`)
-
-- Latest run on `main`: https://github.com/DeusData/codebase-memory-mcp/actions/runs/39508669344 — dark (conclusion: `cancelled`), 2026-10-20 22:30 UTC
-- Dark since: 2026-10-20 21:27 UTC (first run of the current streak)
-- Job / step: `publish`
-- Likely cause: The run was canceled by @DeusData.
-
-### OpenSSF Scorecard (`.github/workflows/scorecard.yml`)
-
-- Latest run on `main`: https://github.com/DeusData/codebase-memory-mcp/actions/runs/39508669484 — dark (conclusion: `cancelled`), 2026-10-20 22:30 UTC
-- Dark since: 2026-10-20 21:27 UTC (first run of the current streak)
-- Job / step: `scorecard`
-- Likely cause: Canceling since a higher priority waiting request for scorecard-refs/heads/main exists
-
-### CodeQL SAST (`.github/workflows/codeql.yml`)
-
-- Latest run on `main`: https://github.com/DeusData/codebase-memory-mcp/actions/runs/39508669430 — dark (conclusion: `failure`), 2026-10-20 22:30 UTC
+- Latest run on `main`: https://github.com/DeusData/codebase-memory-mcp/actions/runs/39529078131 — dark (conclusion: `failure`), 2026-10-21 01:44 UTC
 - Dark since: 2026-10-20 22:30 UTC (first run of the current streak)
-- Job / step: `analyze (actions, none, codeql-actions)` → `Check for open code scanning alerts`
+- Job / step: `analyze (c-cpp, manual, codeql-cpp)` → `Check for open code scanning alerts`
 - Likely cause: 10 open alert(s) on refs/heads/main -- fix, or dismiss with a reason in the Security tab
 
 <details><summary>End of the job log</summary>
 
 ```
-Scratch directory cleaned up (0ms).
-[command]/opt/hostedtoolcache/CodeQL/2.27.2/x64/codeql/codeql database bundle /home/runner/work/_temp/codeql_databases/actions --output=/home/runner/work/_temp/codeql_databases/actions.zip --name=actions
-Creating bundle metadata for /home/runner/work/_temp/codeql_databases/actions...
-Creating zip file at /home/runner/work/_temp/codeql_databases/actions.zip.
-Skipping upload of TRAP cache for actions as it is too small
+[command]/usr/bin/tar --posix -cf cache.tzst --exclude cache.tzst -P -C /home/runner/work/codebase-memory-mcp/codebase-memory-mcp --files-from manifest.txt --use-compress-program zstdmt
+Sent 0 of 1178137764 (0.0%), 0.0 MBs/sec
+Sent 536870912 of 1178137764 (45.6%), 256.0 MBs/sec
+Sent 1006632960 of 1178137764 (85.4%), 319.9 MBs/sec
+Sent 1178137764 of 1178137764 (100.0%), 299.5 MBs/sec
 Analysis upload status is complete.
 Waiting 60s for alert API to settle...
 ##[error]10 open alert(s) on refs/heads/main -- fix, or dismiss with a reason in the Security tab

@@ -4,8 +4,9 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/xerj-org/xerj/issues/new
-- **Stars:** 12434 · **Generated:** 2026-10-21T01:13:11.013Z
+- **Stars:** 12518 · **Generated:** 2026-10-21T06:59:28.963Z
 - Nothing in this file has been sent anywhere.
+- **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
@@ -20,22 +21,22 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### CI (`.github/workflows/ci.yml`)
 
-- Latest run on `main`: https://github.com/xerj-org/xerj/actions/runs/39513721863 — dark (conclusion: `failure`), 2026-10-20 23:14 UTC
+- Latest run on `main`: https://github.com/xerj-org/xerj/actions/runs/39521846939 — dark (conclusion: `failure`), 2026-10-21 00:31 UTC
 - Dark since: 2026-10-17 07:26 UTC (first run of the current streak)
-- Job / step: `Dependency advisory audit (cargo-audit)` → `cargo audit`
-- Likely cause: error: 3 vulnerabilities found!
+- Job / step: `Build + Test` → `Workspace tests (all targets) at default parallelism (contributor's `cargo test`)`
+- Likely cause: The job has exceeded the maximum execution time of 1h0m0s
 
 <details><summary>End of the job log</summary>
 
 ```
-Warning:   unmaintained
-Title:     unsafe-libyaml is unmaintained
-Date:      2024-03-25
-ID:        RUSTSEC-2024-0449
-URL:       https://rustsec.org/advisories/RUSTSEC-2024-0449
-error: 3 vulnerabilities found!
-warning: 5 allowed warnings found
-##[error]Process completed with exit code 1.
+test redelivery_converges_at_a_target_that_honours_external_versioning ... ok
+test recreating_an_index_under_the_same_name_does_not_stall_the_tap ... ok
+test cursor_state_is_written_once_per_tick_not_once_per_index ... ok
+test system_indices_are_never_pushed_even_with_a_star_allowlist ... ok
+test the_configured_credential_is_sent_to_the_target ... ok
+test the_allowlist_can_be_changed_at_runtime ... ok
+test the_tap_is_off_by_default_and_inert_without_a_target ... ok
+##[error]The operation was canceled.
 ```
 
 </details>

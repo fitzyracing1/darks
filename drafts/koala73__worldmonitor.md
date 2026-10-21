@@ -4,35 +4,35 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/koala73/worldmonitor/issues/new
-- **Stars:** 88940 · **Generated:** 2026-10-21T01:13:11.013Z
+- **Stars:** 88980 · **Generated:** 2026-10-21T06:59:28.963Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: "Seed Freshness Monitor" workflow failing on main since 2026-10-21
+CI: "Railway Native Deploy Health" workflow failing on main since 2026-10-21
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! The **Seed Freshness Monitor** workflow (`.github/workflows/seed-freshness-monitor.yml`) on `main` has been failing since 2026-10-21. Here is what I saw, in case it's useful:
+Hi! The **Railway Native Deploy Health** workflow (`.github/workflows/railway-deploy-drift.yml`) on `main` has been failing since 2026-10-21. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/koala73/worldmonitor/actions/runs/39522630586 — dark (conclusion: `failure`), 2026-10-21 00:39 UTC
-- Dark since: 2026-10-21 00:39 UTC (first run of the current streak)
-- Job / step: `monitor` → `Publish ingestion operational transitions`
-- Likely cause: Ingestion operational acceptance failed: the accepted-problem baseline expired on 2026-09-05T18:00:00Z. Re-review scripts/seed-freshness-baseline.json and set a new expiresAt.
+- Latest run on `main`: https://github.com/koala73/worldmonitor/actions/runs/39556781211 — dark (conclusion: `failure`), 2026-10-21 06:39 UTC
+- Dark since: 2026-10-21 06:39 UTC (first run of the current streak)
+- Job / step: `Railway native deployment health` → `Check Railway deployment configuration and drift`
+- Likely cause: unexpected repository service(s): seed-country-history
 
 <details><summary>End of the job log</summary>
 
 ```
-- naturalEvents: status=SEED_ERROR records=23 age=9m max=540m
-- newsThreatSummary: status=STALE_SEED records=0 age=687m max=60m
-- notamClosures: status=STALE_SEED records=0 age=2199m max=240m
-- oecdLtRates: status=COVERAGE_DEGRADED records=15238 age=3749m max=30240m
-- pizzint: status=STALE_SEED records=0
-- portwatchPortActivity: status=SEED_ERROR records=174 age=754m max=2160m
-Ingestion operational acceptance failed: the accepted-problem baseline expired on 2026-09-05T18:00:00Z. Re-review scripts/seed-freshness-baseline.json and set a new expiresAt.
+3 packages are looking for funding
+  run `npm fund` for details
+npm warn install-scripts 1 package has install scripts not yet covered by allowScripts:
+npm warn install-scripts   @railway/cli@5.30.1 (postinstall: node ./npm-install/postinstall.js)
+npm warn install-scripts
+npm warn install-scripts Run `npm install -g --allow-scripts=@railway/cli` to allow these scripts once, or `npm config set allow-scripts=@railway/cli --location=user` to allow them for all global installs.
+unexpected repository service(s): seed-country-history
 ##[error]Process completed with exit code 1.
 ```
 

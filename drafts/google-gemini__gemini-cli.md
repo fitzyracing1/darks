@@ -4,35 +4,59 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/google-gemini/gemini-cli/issues/new
-- **Stars:** 107477 · **Generated:** 2026-10-21T01:13:11.013Z
+- **Stars:** 107478 · **Generated:** 2026-10-21T06:59:28.963Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: "Testing: CI" workflow failing on main since 2026-10-20
+CI: 2 workflows dark on main ("Memory Tests: Nightly", "Performance Tests: Nightly")
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! The **Testing: CI** workflow (`.github/workflows/ci.yml`) on `main` has been failing since 2026-10-20. Here is what I saw, in case it's useful:
+Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
 
-- Latest run on `main`: https://github.com/google-gemini/gemini-cli/actions/runs/39510335880 — dark (conclusion: `failure`), 2026-10-20 22:44 UTC
-- Dark since: 2026-10-20 22:44 UTC (first run of the current streak)
-- Job / step: `Slow Test - Win - cli` → `Configure Windows Defender exclusions`
-- Likely cause: Add-MpPreference: Operation failed with the following error: 0x800106ba. Operation: MpPreference. Target: ConfigListExtension.
+### Memory Tests: Nightly (`.github/workflows/memory-nightly.yml`)
+
+- Latest run on `main`: https://github.com/google-gemini/gemini-cli/actions/runs/39532950886 — dark (conclusion: `failure`), 2026-10-21 02:25 UTC
+- Dark since: 2026-10-21 02:25 UTC (first run of the current streak)
+- Job / step: `Run Memory Usage Tests` → `Run Memory Tests`
+- Likely cause: Tests  4 failed | 3 passed (7)
 
 <details><summary>End of the job log</summary>
 
 ```
-Received 58720256 of 121812976 (48.2%), 55.8 MBs/sec
-Received 121812976 of 121812976 (100.0%), 77.6 MBs/sec
-Cache Size: ~116 MB (121812976 B)
-[command]"C:\Program Files\Git\usr\bin\tar.exe" -xf C:/a/_temp/081bd932-32aa-4533-ae05-53de42b6c36e/cache.tzst -P -C C:/a/gemini-cli/gemini-cli --force-local --use-compress-program "zstd -d"
-Cache restored successfully
-Cache restored from key: node-cache-Windows-x64-npm-02311d8a86eed0868072dcea14eadbaad434f9734eb852cb8d22ff4edfc4c3b0
-Add-MpPreference: Operation failed with the following error: 0x800106ba. Operation: MpPreference. Target: ConfigListExtension.
+    228|           `  Measured:  ${formatMB(result.finalHeapUsed)} heap used\n`…
+ ❯ memory-usage.test.ts:204:15
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[4/4]⎯
+ Test Files  1 failed (1)
+      Tests  4 failed | 3 passed (7)
+   Start at  02:27:41
+   Duration  105.28s (transform 1.92s, setup 0ms, collect 3.30s, tests 101.19s, environment 0ms, prepare 54ms)
+##[error]Process completed with exit code 1.
+```
+
+</details>
+
+### Performance Tests: Nightly (`.github/workflows/perf-nightly.yml`)
+
+- Latest run on `main`: https://github.com/google-gemini/gemini-cli/actions/runs/39538068500 — dark (conclusion: `failure`), 2026-10-21 03:20 UTC
+- Dark since: 2026-10-21 03:20 UTC (first run of the current streak)
+- Job / step: `Run Performance Usage Tests` → `Run Performance Tests`
+- Likely cause: 29|     throw new Error('Failed to download ripgrep binary');
+
+<details><summary>End of the job log</summary>
+
+```
+ ❯ Vitest.initializeGlobalSetup ../node_modules/vitest/dist/chunks/cli-api.BkDphVBG.js:9724:35
+ ❯ ../node_modules/vitest/dist/chunks/cli-api.BkDphVBG.js:9636:5
+ ❯ Vitest.runFiles ../node_modules/vitest/dist/chunks/cli-api.BkDphVBG.js:9666:10
+ ❯ Vitest.start ../node_modules/vitest/dist/chunks/cli-api.BkDphVBG.js:9554:18
+ ❯ startVitest ../node_modules/vitest/dist/chunks/cli-api.BkDphVBG.js:10510:8
+ ❯ start ../node_modules/vitest/dist/chunks/cac.Cb-PYCCB.js:1412:15
+ ❯ CAC.run ../node_modules/vitest/dist/chunks/cac.Cb-PYCCB.js:1391:2
 ##[error]Process completed with exit code 1.
 ```
 
