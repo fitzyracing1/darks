@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/webiny/webiny-js/issues/new
-- **Stars:** 8048 · **Generated:** 2026-10-20T18:49:07.074Z
+- **Stars:** 8048 · **Generated:** 2026-10-21T01:13:11.013Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -20,21 +20,21 @@ Hi! A few workflows on `next` have been dark recently. Details below, in case th
 
 ### Cloud infrastructure Cleanup (`.github/workflows/cleanup.yml`)
 
-- Latest run on `next`: https://github.com/webiny/webiny-js/actions/runs/39346994354 — dark (conclusion: `failure`), 2026-10-20 00:19 UTC
+- Latest run on `next`: https://github.com/webiny/webiny-js/actions/runs/39520589480 — dark (conclusion: `failure`), 2026-10-21 00:19 UTC
 - Dark since: 2026-10-10 00:23 UTC (first run of the current streak)
 - Job / step: `aws-nuke` → `Run AWS Nuke`
-- Likely cause: time="2026-10-20T00:37:17Z" level=fatal msg=failed
+- Likely cause: time="2026-10-21T00:35:55Z" level=fatal msg=failed
 
 <details><summary>End of the job log</summary>
 
 ```
 global - IAMPolicy - arn:aws:iam::726952677045:policy/DeployWebinyProjectExtra - [ARN: "arn:aws:iam::726952677045:policy/DeployWebinyProjectExtra", CreateDate: "2024-11-08T04:19:21Z", Name: "DeployWebinyProjectExtra", P…
 DeleteConflict: Cannot delete a policy attached to entities.
-	status code: 409, request id: db431d52-65da-46f9-94a6-61acac7d483d
+	status code: 409, request id: a7b24892-d28c-4724-8bac-4dee1b723da4
 global - IAMPolicy - arn:aws:iam::726952677045:policy/DeployWebinyProjectGroup3 - [ARN: "arn:aws:iam::726952677045:policy/DeployWebinyProjectGroup3", CreateDate: "2024-11-28T06:06:51Z", Name: "DeployWebinyProjectGroup3"…
 DeleteConflict: Cannot delete a policy attached to entities.
-	status code: 409, request id: 148adc50-9fbd-48ef-9b20-6e687ed276e3
-time="2026-10-20T00:37:17Z" level=fatal msg=failed
+	status code: 409, request id: 38f2f623-e30b-4701-91b3-9ca701b50316
+time="2026-10-21T00:35:55Z" level=fatal msg=failed
 ##[error]Process completed with exit code 1.
 ```
 
@@ -64,7 +64,7 @@ Waiting 12 seconds before trying again
 
 ### Push (`.github/workflows/push.yml`)
 
-- Latest run on `next`: https://github.com/webiny/webiny-js/actions/runs/39419325472 — dark (conclusion: `failure`), 2026-10-20 12:02 UTC
+- Latest run on `next`: https://github.com/webiny/webiny-js/actions/runs/39490022683 — dark (conclusion: `failure`), 2026-10-20 20:12 UTC
 - Dark since: 2026-10-14 08:22 UTC (first run of the current streak)
 - Likely cause: no cause found in annotations
 

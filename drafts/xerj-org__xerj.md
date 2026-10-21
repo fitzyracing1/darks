@@ -4,24 +4,63 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/xerj-org/xerj/issues/new
-- **Stars:** 12333 · **Generated:** 2026-10-20T18:49:07.074Z
+- **Stars:** 12434 · **Generated:** 2026-10-21T01:13:11.013Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: "CI" workflow failing on main since 2026-10-17
+CI: 2 workflows dark on main ("CI", "SEO")
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! The **CI** workflow (`.github/workflows/ci.yml`) on `main` has been failing since 2026-10-17. Here is what I saw, in case it's useful:
+Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
 
-- Latest run on `main`: https://github.com/xerj-org/xerj/actions/runs/39466687383 — dark (conclusion: `failure`), 2026-10-20 17:30 UTC
+### CI (`.github/workflows/ci.yml`)
+
+- Latest run on `main`: https://github.com/xerj-org/xerj/actions/runs/39513721863 — dark (conclusion: `failure`), 2026-10-20 23:14 UTC
 - Dark since: 2026-10-17 07:26 UTC (first run of the current streak)
-- Job / step: `Autoindex FD smoke (macos-latest)`
-- Likely cause: The job was not acquired by Runner of type hosted even after multiple attempts
+- Job / step: `Dependency advisory audit (cargo-audit)` → `cargo audit`
+- Likely cause: error: 3 vulnerabilities found!
+
+<details><summary>End of the job log</summary>
+
+```
+Warning:   unmaintained
+Title:     unsafe-libyaml is unmaintained
+Date:      2024-03-25
+ID:        RUSTSEC-2024-0449
+URL:       https://rustsec.org/advisories/RUSTSEC-2024-0449
+error: 3 vulnerabilities found!
+warning: 5 allowed warnings found
+##[error]Process completed with exit code 1.
+```
+
+</details>
+
+### SEO (`.github/workflows/seo.yml`)
+
+- Latest run on `main`: https://github.com/xerj-org/xerj/actions/runs/39513103785 — dark (conclusion: `failure`), 2026-10-20 23:09 UTC
+- Dark since: 2026-10-20 20:40 UTC (first run of the current streak)
+- Job / step: `Technical SEO gate` → `sitemap.xml is generated, not hand-edited`
+- Likely cause: FAIL landing/sitemap.xml is out of date — run 'python3 scripts/seo/gen_sitemap.py --write'
+
+<details><summary>End of the job log</summary>
+
+```
+STE /home/runner/work/xerj/xerj/content/compare/best-mcp-server-local-code-search-2026.md:147:84: ERROR STE050 banned synonym 'dumps' for 'snapshot' (concept: point-in-time copy)
+STE /home/runner/work/xerj/xerj/content/compare/best-mcp-server-local-code-search-2026.md:153:1: ERROR STE002 descriptive sentence is 44 words (hard max 32)
+STE /home/runner/work/xerj/xerj/content/compare/xerj-vs-docfetcher.md:134:42: ERROR STE001 procedural sentence is 27 words (max 20)
+STE /home/runner/work/xerj/xerj/content/compare/xerj-vs-localsynapse.md:81:558: ERROR STE002 descriptive sentence is 36 words (hard max 32)
+STE /home/runner/work/xerj/xerj/content/compare/xerj-vs-ripgrep-all.md:148:100: ERROR STE020 passive voice with a named agent: 'is detected ... by ...'
+ok   build_articles.py output is current (207 files; 101 selected article(s))
+FAIL landing/sitemap.xml is out of date — run `python3 scripts/seo/gen_sitemap.py --write`
+##[error]Process completed with exit code 1.
+```
+
+</details>
 
 If this is already known or expected, feel free to close. Thanks for maintaining xerj!
 

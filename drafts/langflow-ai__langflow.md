@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/langflow-ai/langflow/issues/new
-- **Stars:** 155878 · **Generated:** 2026-10-20T18:49:07.074Z
+- **Stars:** 155872 · **Generated:** 2026-10-21T01:13:11.013Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -18,10 +18,10 @@ CI: "Deploy Storybook to GitHub Pages" workflow failing on main since 2026-09-16
 <!-- BEGIN BODY -->
 Hi! The **Deploy Storybook to GitHub Pages** workflow (`.github/workflows/deploy-storybook.yml`) on `main` has been failing since 2026-09-16. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/langflow-ai/langflow/actions/runs/38499145185 — dark (conclusion: `failure`), 2026-10-14 02:04 UTC
+- Latest run on `main`: https://github.com/langflow-ai/langflow/actions/runs/39491949865 — dark (conclusion: `failure`), 2026-10-20 20:26 UTC
 - Dark since: 2026-09-16 01:11 UTC (first run of the current streak)
 - Job / step: `Deploy Storybook` → `Deploy to GitHub Pages`
-- Likely cause: Error: Failed to create deployment (status: 400) with build version a21cd0b51bcc0bc9dfe1865465aad6f41c242a9a. Request ID 5401:1F5F41:34A493:38263E:6ACEE401 Responded with: Missing environment. Ensure your workflow's deployment job has an en
+- Likely cause: Error: Failed to create deployment (status: 400) with build version bcd1e4aaf0b396186e52b93b3625438133842122. Request ID 6401:167ECF:D4D9C:150D34:6AD7CF22 Responded with: Missing environment. Ensure your workflow's deployment job has an env
 
 <details><summary>End of the job log</summary>
 
@@ -29,8 +29,8 @@ Hi! The **Deploy Storybook to GitHub Pages** workflow (`.github/workflows/deploy
 Found 1 artifact(s)
 Creating Pages deployment with payload:
 {
-	"artifact_id": 11865081939,
-	"pages_build_version": "a21cd0b51bcc0bc9dfe1865465aad6f41c242a9a",
+	"artifact_id": 12295243931,
+	"pages_build_version": "bcd1e4aaf0b396186e52b93b3625438133842122",
 	"oidc_token": "***"
 }
 ##[error]Creating Pages deployment failed

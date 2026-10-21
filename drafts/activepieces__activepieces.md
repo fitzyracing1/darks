@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/activepieces/activepieces/issues/new
-- **Stars:** 25134 · **Generated:** 2026-10-20T18:49:07.074Z
+- **Stars:** 25140 · **Generated:** 2026-10-21T01:13:11.013Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -64,7 +64,7 @@ Breaking migrations detected: DropChatRolloutUserTable1870000000000
 
 ### Generate Translation Files for Community Pieces and UI (`.github/workflows/generate-translations.yml`)
 
-- Latest run on `main`: https://github.com/activepieces/activepieces/actions/runs/39276967411 — dark (conclusion: `failure`), 2026-10-19 15:19 UTC
+- Latest run on `main`: https://github.com/activepieces/activepieces/actions/runs/39447386687 — dark (conclusion: `failure`), 2026-10-20 15:19 UTC
 - Dark since: 2026-10-19 15:19 UTC (first run of the current streak)
 - Job / step: `finalize / finalize` → `Create Pull Request`
 - Likely cause: Unhandled error: HttpError: Pull Request has merge conflicts

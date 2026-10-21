@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/open-metadata/OpenMetadata/issues/new
-- **Stars:** 15524 · **Generated:** 2026-10-20T18:49:07.074Z
+- **Stars:** 15525 · **Generated:** 2026-10-21T01:13:11.013Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -18,7 +18,7 @@ CI: "Publish Package to Maven Central Repository" workflow failing on main since
 <!-- BEGIN BODY -->
 Hi! The **Publish Package to Maven Central Repository** workflow (`.github/workflows/publish-maven-package.yml`) on `main` has been failing since 2026-10-20. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/39466351206 — dark (conclusion: `failure`), 2026-10-20 17:28 UTC
+- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/39502813647 — dark (conclusion: `failure`), 2026-10-20 21:44 UTC
 - Dark since: 2026-10-20 16:00 UTC (first run of the current streak)
 - Job / step: `publish-maven-packages` → `Publish to Central Repository`
 - Likely cause: [ERROR]   mvn <args> -rf :openmetadata-java-client

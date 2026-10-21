@@ -4,21 +4,19 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/triggerdotdev/trigger.dev/issues/new
-- **Stars:** 16585 · **Generated:** 2026-10-20T18:49:07.074Z
+- **Stars:** 16589 · **Generated:** 2026-10-21T01:13:11.013Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 2 workflows dark on main ("🛡️ E2E Tests: Webapp Auth (full)", "🚀 Publish Trigger.dev Docker")
+CI: "🛡️ E2E Tests: Webapp Auth (full)" workflow failing on main since 2026-10-08
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
-
-### 🛡️ E2E Tests: Webapp Auth (full) (`.github/workflows/e2e-webapp-auth-full.yml`)
+Hi! The **🛡️ E2E Tests: Webapp Auth (full)** workflow (`.github/workflows/e2e-webapp-auth-full.yml`) on `main` has been failing since 2026-10-08. Here is what I saw, in case it's useful:
 
 - Latest run on `main`: https://github.com/triggerdotdev/trigger.dev/actions/runs/39367297497 — dark (conclusion: `failure`), 2026-10-20 04:00 UTC
 - Dark since: 2026-10-08 04:02 UTC (first run of the current streak)
@@ -36,28 +34,6 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 {"traceId":"719d48f85a29f9735561aefd7938f2ec","message":"ApiRunListPresenter.call","spanId":"9f9b2a339210d203","kind":1,"timestamp":1792469067843000,"duration":3656.811,"attributes":{"db.datasource":"control-plane-write…
 {"traceId":"f2b93ac859f203f4309037379364b9f4","message":"remove team member","spanId":"c78ba14d51745389","kind":0,"timestamp":1792469069155000,"duration":3195.683,"attributes":{"$transaction":true,"isolation_level":"Ser…
 ##[error]Process completed with exit code 1.
-```
-
-</details>
-
-### 🚀 Publish Trigger.dev Docker (`.github/workflows/publish.yml`)
-
-- Latest run on `main`: https://github.com/triggerdotdev/trigger.dev/actions/runs/39474093270 — dark (conclusion: `failure`), 2026-10-20 18:22 UTC
-- Dark since: 2026-10-20 12:02 UTC (first run of the current streak)
-- Job / step: `publish-webapp / publish` → `🐳 Build image and push to GitHub Container Registry`
-- Likely cause: failed with: failed to solve: process "/bin/sh -c SENTRY_AUTH_TOKEN=$(cat /run/secrets/sentry_auth_token)     pnpm run build --filter=webapp..." did not complete successfully: exit code: 1
-
-<details><summary>End of the job log</summary>
-
-```
-#99 80.90 Failed:    webapp#build
-#99 80.90
-#99 80.90  ERROR  run failed: command  exited (1)
-#99 81.13  ELIFECYCLE  Command failed with exit code 1.
-------
-Build Summary: https://depot.dev/orgs/0qjnp57p6r/projects/g2k5ln95n6/builds/6jxc7p7xf0
-failed to solve: process "/bin/sh -c SENTRY_AUTH_TOKEN=[redacted] /run/secrets/sentry_auth_token)     pnpm run build --filter=webapp..." did not complete successfully: exit code: 1
-##[error]failed with: failed to solve: process "/bin/sh -c SENTRY_AUTH_TOKEN=[redacted] /run/secrets/sentry_auth_token)     pnpm run build --filter=webapp..." did not complete successfully: exit code: 1
 ```
 
 </details>
