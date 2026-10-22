@@ -1,8 +1,8 @@
 <!-- dark-draft: vuejs/core -->
-<!-- draft-state: ready -->
+<!-- draft-state: resolved -->
 # Upstream issue draft: vuejs/core
 
-- **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
+- **Status:** resolved — lit again (2026-10-22); nothing to file
 - **Would be filed at:** https://github.com/vuejs/core/issues/new
 - **Stars:** 54719 · **Generated:** 2026-10-22T01:10:56.398Z
 - Nothing in this file has been sent anywhere.

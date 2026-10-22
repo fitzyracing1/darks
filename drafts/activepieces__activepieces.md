@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/activepieces/activepieces/issues/new
-- **Stars:** 25164 · **Generated:** 2026-10-22T01:10:56.398Z
+- **Stars:** 25166 · **Generated:** 2026-10-22T07:02:51.161Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -20,7 +20,7 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### Chat Evals (`.github/workflows/agent-evals.yml`)
 
-- Latest run on `main`: https://github.com/activepieces/activepieces/actions/runs/39554969136 — dark (conclusion: `failure`), 2026-10-21 06:22 UTC
+- Latest run on `main`: https://github.com/activepieces/activepieces/actions/runs/39733468921 — dark (conclusion: `failure`), 2026-10-22 06:21 UTC
 - Dark since: 2026-10-13 06:26 UTC (first run of the current streak)
 - Job / step: `Live judge gate` → `Run live chat evals (scope=regression)`
 - Likely cause: Error: Hook timed out in 540000ms. (packages/server/worker/test/lib/agent-eval/agent-eval.test.ts:20)
@@ -33,8 +33,8 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 ⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
  Test Files  1 failed | 12 passed (13)
       Tests  88 passed | 1 skipped (89)
-   Start at  06:26:39
-   Duration  547.58s (transform 1.58s, setup 69ms, collect 16.87s, tests 541.44s, environment 3ms, prepare 1.17s)
+   Start at  06:26:14
+   Duration  547.36s (transform 1.50s, setup 94ms, collect 16.74s, tests 541.31s, environment 3ms, prepare 1.14s)
 ##[error]Error: Hook timed out in 540000ms.
 ```
 

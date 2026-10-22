@@ -4,32 +4,40 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/storytold/vectorcraft/issues/new
-- **Stars:** 10336 · **Generated:** 2026-10-22T01:10:56.398Z
+- **Stars:** 10357 · **Generated:** 2026-10-22T07:02:51.161Z
 - Nothing in this file has been sent anywhere.
-- **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
+- **Note for Joshua:** cancelled by a concurrency group — likely noise
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 2 workflows dark on main ("FreeBSD", "Windows ARM64")
+CI: "FreeBSD" workflow getting cancelled on main since 2026-10-17
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
+Hi! The **FreeBSD** workflow (`.github/workflows/freebsd.yml`) on `main` has been getting cancelled since 2026-10-17. Here is what I saw, in case it's useful:
 
-### FreeBSD (`.github/workflows/freebsd.yml`)
-
-- Latest run on `main`: https://github.com/storytold/vectorcraft/actions/runs/39700941948 — dark (conclusion: `cancelled`), 2026-10-22 00:38 UTC
+- Latest run on `main`: https://github.com/storytold/vectorcraft/actions/runs/39729751138 — dark (conclusion: `cancelled`), 2026-10-22 05:44 UTC
 - Dark since: 2026-10-17 18:48 UTC (first run of the current streak)
-- Likely cause: run cancelled
+- Job / step: `freebsd / FreeBSD 15 x86_64 (build + test)` → `Build and validate the FreeBSD package`
+- Likely cause: Canceling since a higher priority waiting request for freebsd-refs/heads/main exists
 
-### Windows ARM64 (`.github/workflows/windows-arm64.yml`)
+<details><summary>End of the job log</summary>
 
-- Latest run on `main`: https://github.com/storytold/vectorcraft/actions/runs/39700941911 — dark (conclusion: `cancelled`), 2026-10-22 00:38 UTC
-- Dark since: 2026-10-21 17:25 UTC (first run of the current streak)
-- Likely cause: run cancelled
+```
+   Compiling pollster v1.0.1
+   Compiling eframe v0.36.2
+   Compiling webbrowser v1.2.4
+   Compiling vectorcraft-mcp v0.14.0 (/home/runner/work/vectorcraft/vectorcraft/crates/mcp)
+   Compiling craft-window v0.1.0 (https://github.com/storytold/craft-libs?rev=1f805378d454dac48b5c214029d254055fdf961b#1f805378)
+   Compiling craft-print v0.1.0 (https://github.com/storytold/craft-libs?rev=d991bf6792f8ade99c51358bf3c1d902c8cd96b5#d991bf67)
+   Compiling vectorcraft-cli v0.14.0 (/home/runner/work/vectorcraft/vectorcraft/apps/vectorcraft-cli)
+##[error]The operation was canceled.
+```
+
+</details>
 
 If this is already known or expected, feel free to close. Thanks for maintaining vectorcraft!
 

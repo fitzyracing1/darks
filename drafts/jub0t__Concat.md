@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/jub0t/Concat/issues/new
-- **Stars:** 10520 · **Generated:** 2026-10-22T01:10:56.398Z
+- **Stars:** 10648 · **Generated:** 2026-10-22T07:02:51.161Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -18,22 +18,22 @@ CI: "CI" workflow failing on main since 2026-10-21
 <!-- BEGIN BODY -->
 Hi! The **CI** workflow (`.github/workflows/ci.yml`) on `main` has been failing since 2026-10-21. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/jub0t/Concat/actions/runs/39600340126 — dark (conclusion: `failure`), 2026-10-21 12:31 UTC
+- Latest run on `main`: https://github.com/jub0t/Concat/actions/runs/39708795592 — dark (conclusion: `failure`), 2026-10-22 01:58 UTC
 - Dark since: 2026-10-21 11:12 UTC (first run of the current streak)
-- Job / step: `Engine tests and lints` → `Run cargo fmt --check`
-- Likely cause: No VM guests are running outdated hypervisor (qemu) binaries on this host.
+- Job / step: `Engine tests and lints` → `Build the tests`
+- Likely cause: The action 'Build the tests' has timed out after 25 minutes.
 
 <details><summary>End of the job log</summary>
 
 ```
--        | "svg" | "svgz" => {
--            Some(MediaKind::Image)
--        }
-+        | "svg" | "svgz" => Some(MediaKind::Image),
-         _ => None,
-     }
- }
-##[error]Process completed with exit code 1.
+   Compiling ryu v1.0.23
+   Compiling base64 v0.13.1
+   Compiling smol_str v0.2.2
+   Compiling dpi v0.1.2
+   Compiling macro_rules_attribute-proc_macro v0.2.3
+   Compiling whisper-rs v0.16.0
+   Compiling macro_rules_attribute v0.2.3
+##[error]The action 'Build the tests' has timed out after 25 minutes.
 ```
 
 </details>

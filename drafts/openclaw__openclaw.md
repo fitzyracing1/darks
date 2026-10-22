@@ -4,16 +4,15 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/openclaw/openclaw/issues/new
-- **Stars:** 392701 · **Generated:** 2026-10-22T01:10:56.398Z
+- **Stars:** 392715 · **Generated:** 2026-10-22T07:02:51.161Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** latest run was skipped, not failed — probably not worth filing
 - **Note for Joshua:** cancelled by a concurrency group — likely noise
-- **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 3 workflows dark on main ("Docs", "CodeQL", "CI")
+CI: 2 workflows dark on main ("Docs", "CodeQL")
 <!-- END TITLE -->
 
 ## Body
@@ -29,31 +28,25 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### CodeQL (`.github/workflows/codeql.yml`)
 
-- Latest run on `main`: https://github.com/openclaw/openclaw/actions/runs/39493542316 — dark (conclusion: `cancelled`), 2026-10-20 20:37 UTC
+- Latest run on `main`: https://github.com/openclaw/openclaw/actions/runs/38125805892 — dark (conclusion: `cancelled`), 2026-10-11 08:43 UTC
 - Dark since: 2026-10-16 09:50 UTC (first run of the current streak)
-- Job / step: `Security High (network-ssrf-boundary)` → `Analyze`
+- Job / step: `Security High (process-exec-boundary)` → `Analyze`
 - Likely cause: Canceling since a higher priority waiting request for codeql-CodeQL-ref-refs/heads/main exists
 
 <details><summary>End of the job log</summary>
 
 ```
-Cleaning up existing TRAP files after import...
-TRAP files cleaned up (2ms).
-Cleaning up scratch directory...
-Scratch directory cleaned up (0ms).
-[command]/opt/hostedtoolcache/CodeQL/2.27.2/x64/codeql/codeql database bundle /home/runner/work/_temp/codeql_databases/javascript --output=/home/runner/work/_temp/codeql_databases/javascript.zip --name=javascript
-Creating bundle metadata for /home/runner/work/_temp/codeql_databases/javascript...
-Creating zip file at /home/runner/work/_temp/codeql_databases/javascript.zip.
+Starting evaluation of codeql/javascript-queries/Security/CWE-089/SqlInjection.ql.
+Starting evaluation of codeql/javascript-queries/Security/CWE-094/CodeInjection.ql.
+Starting evaluation of codeql/javascript-queries/Security/CWE-094/UnsafeDynamicMethodAccess.ql.
+Starting evaluation of codeql/javascript-queries/Security/CWE-116/BadTagFilter.ql.
+Starting evaluation of codeql/javascript-queries/Security/CWE-116/DoubleEscaping.ql.
+Starting evaluation of codeql/javascript-queries/Security/CWE-116/IncompleteMultiCharacterSanitization.ql.
+Starting evaluation of codeql/javascript-queries/Security/CWE-116/IncompleteSanitization.ql.
 ##[error]The operation was canceled.
 ```
 
 </details>
-
-### CI (`.github/workflows/ci.yml`)
-
-- Latest run on `main`: https://github.com/openclaw/openclaw/actions/runs/39493543696 — dark (conclusion: `cancelled`), 2026-10-20 20:37 UTC
-- Dark since: 2026-10-16 09:52 UTC (first run of the current streak)
-- Likely cause: run cancelled
 
 If this is already known or expected, feel free to close. Thanks for maintaining openclaw!
 

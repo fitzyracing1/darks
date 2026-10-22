@@ -4,21 +4,23 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/Gentleman-Programming/gentle-ai/issues/new
-- **Stars:** 7915 · **Generated:** 2026-10-22T01:10:56.398Z
+- **Stars:** 7920 · **Generated:** 2026-10-22T07:02:51.161Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: "Windows Full Suite" workflow failing on main since 2026-10-21
+CI: 2 workflows dark on main ("Windows Full Suite", "Gentle Shell macOS qualification")
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! The **Windows Full Suite** workflow (`.github/workflows/windows-full-suite.yml`) on `main` has been failing since 2026-10-21. Here is what I saw, in case it's useful:
+Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
 
-- Latest run on `main`: https://github.com/Gentleman-Programming/gentle-ai/actions/runs/39657649415 — dark (conclusion: `failure`), 2026-10-21 18:59 UTC
+### Windows Full Suite (`.github/workflows/windows-full-suite.yml`)
+
+- Latest run on `main`: https://github.com/Gentleman-Programming/gentle-ai/actions/runs/39733642380 — dark (conclusion: `failure`), 2026-10-22 06:23 UTC
 - Dark since: 2026-10-21 18:46 UTC (first run of the current streak)
 - Job / step: `Windows Full Suite (rest)` → `Run shard`
 - Likely cause: FAIL
@@ -26,12 +28,34 @@ Hi! The **Windows Full Suite** workflow (`.github/workflows/windows-full-suite.y
 <details><summary>End of the job log</summary>
 
 ```
-ok  	github.com/gentleman-programming/gentle-ai/v4/internal/update/upgrade	8.909s
-ok  	github.com/gentleman-programming/gentle-ai/v4/internal/verify	0.031s
+ok  	github.com/gentleman-programming/gentle-ai/v4/internal/update/upgrade	8.441s
+ok  	github.com/gentleman-programming/gentle-ai/v4/internal/verify	0.027s
 ok  	github.com/gentleman-programming/gentle-ai/v4/internal/versions	0.027s
 ?   	github.com/gentleman-programming/gentle-ai/v4/scripts	[no test files]
-ok  	github.com/gentleman-programming/gentle-ai/v4/scripts/crosslane	2.523s
+ok  	github.com/gentleman-programming/gentle-ai/v4/scripts/crosslane	2.797s
 ?   	github.com/gentleman-programming/gentle-ai/v4/scripts/gen-sdd-agent-digests	[no test files]
+FAIL
+##[error]Process completed with exit code 1.
+```
+
+</details>
+
+### Gentle Shell macOS qualification (`.github/workflows/shell-macos-qualification.yml`)
+
+- Latest run on `main`: https://github.com/Gentleman-Programming/gentle-ai/actions/runs/39736583204 — dark (conclusion: `failure`), 2026-10-22 06:51 UTC
+- Dark since: 2026-10-22 06:51 UTC (first run of the current streak)
+- Job / step: `macOS installation and recovery qualification` → `Run native installer package tests`
+- Likely cause: FAIL
+
+<details><summary>End of the job log</summary>
+
+```
+        user_experience_stage_unix_test.go:35: private installation: filesystem
+--- FAIL: TestUserStageExperiencePreservesUnmanagedAndNil (0.00s)
+    user_experience_stage_unix_test.go:80: private installation: filesystem
+FAIL
+FAIL	github.com/gentleman-programming/gentle-ai/v4/internal/shellinstaller	12.979s
+ok  	github.com/gentleman-programming/gentle-ai/v4/scripts	0.386s
 FAIL
 ##[error]Process completed with exit code 1.
 ```

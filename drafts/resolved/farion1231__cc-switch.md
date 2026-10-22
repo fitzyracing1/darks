@@ -1,8 +1,8 @@
 <!-- dark-draft: farion1231/cc-switch -->
-<!-- draft-state: ready -->
+<!-- draft-state: resolved -->
 # Upstream issue draft: farion1231/cc-switch
 
-- **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
+- **Status:** resolved — lit again (2026-10-22); nothing to file
 - **Would be filed at:** https://github.com/farion1231/cc-switch/issues/new
 - **Stars:** 147237 · **Generated:** 2026-10-22T01:10:56.398Z
 - Nothing in this file has been sent anywhere.

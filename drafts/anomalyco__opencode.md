@@ -4,15 +4,14 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/anomalyco/opencode/issues/new
-- **Stars:** 219688 · **Generated:** 2026-10-22T01:10:56.398Z
+- **Stars:** 219848 · **Generated:** 2026-10-22T07:02:51.161Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** latest run was skipped, not failed — probably not worth filing
-- **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 4 workflows dark on dev ("docs-update", "publish", "deploy", +1 more)
+CI: 3 workflows dark on dev ("docs-update", "deploy", "docs-locale-sync")
 <!-- END TITLE -->
 
 ## Body
@@ -26,15 +25,9 @@ Hi! A few workflows on `dev` have been dark recently. Details below, in case the
 - Dark since: 2026-10-21 12:17 UTC (first run of the current streak)
 - Likely cause: run skipped
 
-### publish (`.github/workflows/publish.yml`)
-
-- Latest run on `dev`: https://github.com/anomalyco/opencode/actions/runs/39703078537 — dark (conclusion: `cancelled`), 2026-10-22 01:00 UTC
-- Dark since: 2026-10-21 12:23 UTC (first run of the current streak)
-- Likely cause: run cancelled
-
 ### deploy (`.github/workflows/deploy.yml`)
 
-- Latest run on `dev`: https://github.com/anomalyco/opencode/actions/runs/39703078510 — dark (conclusion: `failure`), 2026-10-22 01:00 UTC
+- Latest run on `dev`: https://github.com/anomalyco/opencode/actions/runs/39725038685 — dark (conclusion: `failure`), 2026-10-22 04:55 UTC
 - Dark since: 2026-10-21 12:23 UTC (first run of the current streak)
 - Job / step: `deploy` → `Run bun sst deploy --stage=dev`
 - Likely cause: "message": "Actor migration tag precondition failed, got tag 'v1' when expected tag is 'v2'. Please make sure the tags match and try again."

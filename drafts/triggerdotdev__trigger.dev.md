@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/triggerdotdev/trigger.dev/issues/new
-- **Stars:** 16592 · **Generated:** 2026-10-22T01:10:56.398Z
+- **Stars:** 16595 · **Generated:** 2026-10-22T07:02:51.161Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -18,21 +18,21 @@ CI: "🛡️ E2E Tests: Webapp Auth (full)" workflow failing on main since 2026-
 <!-- BEGIN BODY -->
 Hi! The **🛡️ E2E Tests: Webapp Auth (full)** workflow (`.github/workflows/e2e-webapp-auth-full.yml`) on `main` has been failing since 2026-10-08. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/triggerdotdev/trigger.dev/actions/runs/39541696892 — dark (conclusion: `failure`), 2026-10-21 04:00 UTC
+- Latest run on `main`: https://github.com/triggerdotdev/trigger.dev/actions/runs/39719974447 — dark (conclusion: `failure`), 2026-10-22 04:00 UTC
 - Dark since: 2026-10-08 04:02 UTC (first run of the current streak)
 - Job / step: `🛡️ E2E Auth Tests (full)` → `🛡️ Run Webapp Full Auth E2E Tests`
-- Likely cause: {"traceId":"1e7175bf930ea80dba8bd66f3235ce37","message":"enqueue","spanId":"4a16d0138bffa7ff","kind":3,"timestamp":1792555431888000,"duration":418.306,"attributes":{"job_type":"scheduleEmail","job_visibility_timeout_ms"…
+- Likely cause: {"traceId":"19b39c47ab7c2a644a2d53f1f90d2e30","message":"sessionsRepository.listSessions","spanId":"bab499bc80fc8097","kind":0,"timestamp":1792641849440000,"duration":2597.182,"attributes":{"repository.name":"clickhouse…
 
 <details><summary>End of the job log</summary>
 
 ```
-{"traceId":"4dade64ce9dadffd520c55ecf2370093","parentId":"6a361f3c0ccecab7","message":"enqueueMessage","spanId":"8c8c76255b577f10","kind":3,"timestamp":1792555431468000,"duration":520.34,"attributes":{"messaging.operati…
-{"traceId":"4dade64ce9dadffd520c55ecf2370093","parentId":"2fff1e641e5bb8fb","message":"trigger","spanId":"6a361f3c0ccecab7","kind":0,"timestamp":1792555431464000,"duration":4656.605,"attributes":{"friendlyId":"run_cmvhl…
-{"traceId":"4dade64ce9dadffd520c55ecf2370093","parentId":"47b3efccd8dd8775","message":"doFlushBatch","spanId":"3add1d1806b0dea4","kind":0,"timestamp":1792555431469000,"duration":952.992,"attributes":{"event_count":1,"de…
-{"traceId":"4dade64ce9dadffd520c55ecf2370093","parentId":"2fff1e641e5bb8fb","message":"flushBatch","spanId":"47b3efccd8dd8775","kind":0,"timestamp":1792555431469000,"duration":1021.662,"attributes":{"flush_id":"ftPjVdDj…
-{"traceId":"4dade64ce9dadffd520c55ecf2370093","parentId":"3141a8105ad5aa14","message":"RunEngineTriggerTaskService.call()","spanId":"2fff1e641e5bb8fb","kind":0,"timestamp":1792555431463000,"duration":6981.056,"attribute…
-{"traceId":"4dade64ce9dadffd520c55ecf2370093","message":"TriggerTaskService.call()","spanId":"3141a8105ad5aa14","kind":1,"timestamp":1792555431462000,"duration":7573.443,"attributes":{"$trigger.env.id":"cmvhl7z1800kc5zu…
-{"traceId":"1e7175bf930ea80dba8bd66f3235ce37","message":"enqueue","spanId":"4a16d0138bffa7ff","kind":3,"timestamp":1792555431888000,"duration":418.306,"attributes":{"job_type":"scheduleEmail","job_visibility_timeout_ms"…
+ Test Files  1 failed | 6 passed (7)
+      Tests  2 failed | 247 passed (249)
+   Start at  04:04:00
+   Duration  9.50s (transform 446ms, setup 0ms, import 1.00s, tests 5.36s, environment 1ms)
+Express server closed gracefully.
+{"traceId":"19b39c47ab7c2a644a2d53f1f90d2e30","parentId":"bab499bc80fc8097","message":"query","spanId":"5a57f9c230686250","kind":0,"timestamp":1792641849441000,"duration":2102.65,"attributes":{"clickhouse.clientName":"c…
+{"traceId":"19b39c47ab7c2a644a2d53f1f90d2e30","message":"sessionsRepository.listSessions","spanId":"bab499bc80fc8097","kind":0,"timestamp":1792641849440000,"duration":2597.182,"attributes":{"repository.name":"clickhouse…
 ##[error]Process completed with exit code 1.
 ```
 
