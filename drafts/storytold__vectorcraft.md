@@ -4,36 +4,60 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/storytold/vectorcraft/issues/new
-- **Stars:** 10357 · **Generated:** 2026-10-22T07:02:51.161Z
+- **Stars:** 10385 · **Generated:** 2026-10-22T12:57:28.437Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** cancelled by a concurrency group — likely noise
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: "FreeBSD" workflow getting cancelled on main since 2026-10-17
+CI: 2 workflows dark on main ("FreeBSD", "Windows ARM64")
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! The **FreeBSD** workflow (`.github/workflows/freebsd.yml`) on `main` has been getting cancelled since 2026-10-17. Here is what I saw, in case it's useful:
+Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
 
-- Latest run on `main`: https://github.com/storytold/vectorcraft/actions/runs/39729751138 — dark (conclusion: `cancelled`), 2026-10-22 05:44 UTC
+### FreeBSD (`.github/workflows/freebsd.yml`)
+
+- Latest run on `main`: https://github.com/storytold/vectorcraft/actions/runs/39777394213 — dark (conclusion: `cancelled`), 2026-10-22 12:19 UTC
 - Dark since: 2026-10-17 18:48 UTC (first run of the current streak)
-- Job / step: `freebsd / FreeBSD 15 x86_64 (build + test)` → `Build and validate the FreeBSD package`
+- Job / step: `freebsd / FreeBSD 15 x86_64 (build + test)` → `Build and test`
 - Likely cause: Canceling since a higher priority waiting request for freebsd-refs/heads/main exists
 
 <details><summary>End of the job log</summary>
 
 ```
-   Compiling pollster v1.0.1
-   Compiling eframe v0.36.2
-   Compiling webbrowser v1.2.4
-   Compiling vectorcraft-mcp v0.14.0 (/home/runner/work/vectorcraft/vectorcraft/crates/mcp)
-   Compiling craft-window v0.1.0 (https://github.com/storytold/craft-libs?rev=1f805378d454dac48b5c214029d254055fdf961b#1f805378)
-   Compiling craft-print v0.1.0 (https://github.com/storytold/craft-libs?rev=d991bf6792f8ade99c51358bf3c1d902c8cd96b5#d991bf67)
-   Compiling vectorcraft-cli v0.14.0 (/home/runner/work/vectorcraft/vectorcraft/apps/vectorcraft-cli)
+   Compiling chacha20 v0.10.2
+   Compiling rusty-fork v0.3.1
+   Compiling vectorcraft-svg v0.14.0 (/home/runner/work/vectorcraft/vectorcraft/crates/svg)
+   Compiling vectorcraft-eps v0.14.0 (/home/runner/work/vectorcraft/vectorcraft/crates/eps)
+   Compiling rand v0.10.3
+   Compiling rand_xorshift v0.5.0
+   Compiling vectorcraft-cad v0.14.0 (/home/runner/work/vectorcraft/vectorcraft/crates/cad)
+##[error]The operation was canceled.
+```
+
+</details>
+
+### Windows ARM64 (`.github/workflows/windows-arm64.yml`)
+
+- Latest run on `main`: https://github.com/storytold/vectorcraft/actions/runs/39777394435 — dark (conclusion: `cancelled`), 2026-10-22 12:19 UTC
+- Dark since: 2026-10-22 12:06 UTC (first run of the current streak)
+- Job / step: `windows-arm64 / package (cross-compiled on x64)` → `Build and package (unsigned)`
+- Likely cause: Canceling since a higher priority waiting request for windows-arm64-refs/heads/main exists
+
+<details><summary>End of the job log</summary>
+
+```
+   Compiling vectorcraft-cad v0.14.0 (D:\a\vectorcraft\vectorcraft\crates\cad)
+   Compiling vectorcraft-scriptcheck v0.14.0 (D:\a\vectorcraft\vectorcraft\crates\scriptcheck)
+   Compiling vectorcraft-ui-egui v0.14.0 (D:\a\vectorcraft\vectorcraft\crates\ui-egui)
+   Compiling vectorcraft v0.14.0 (D:\a\vectorcraft\vectorcraft\apps\vectorcraft)
+   Compiling vectorcraft-engine v0.14.0 (D:\a\vectorcraft\vectorcraft\crates\engine)
+   Compiling vectorcraft-mcp v0.14.0 (D:\a\vectorcraft\vectorcraft\crates\mcp)
+   Compiling vectorcraft-cli v0.14.0 (D:\a\vectorcraft\vectorcraft\apps\vectorcraft-cli)
 ##[error]The operation was canceled.
 ```
 

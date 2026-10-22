@@ -4,13 +4,13 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/koala73/worldmonitor/issues/new
-- **Stars:** 89137 · **Generated:** 2026-10-22T07:02:51.161Z
+- **Stars:** 89172 · **Generated:** 2026-10-22T12:57:28.437Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 3 workflows dark on main ("Railway Native Deploy Health", "Umami Storage Monitor", "Seed Freshness Monitor")
+CI: 4 workflows dark on main ("Railway Native Deploy Health", "Umami Storage Monitor", "Seed Freshness Monitor", +1 more)
 <!-- END TITLE -->
 
 ## Body
@@ -20,7 +20,7 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### Railway Native Deploy Health (`.github/workflows/railway-deploy-drift.yml`)
 
-- Latest run on `main`: https://github.com/koala73/worldmonitor/actions/runs/39735294163 — dark (conclusion: `failure`), 2026-10-22 06:39 UTC
+- Latest run on `main`: https://github.com/koala73/worldmonitor/actions/runs/39779743125 — dark (conclusion: `failure`), 2026-10-22 12:36 UTC
 - Dark since: 2026-10-21 06:39 UTC (first run of the current streak)
 - Job / step: `Railway native deployment health` → `Check Railway deployment configuration and drift`
 - Likely cause: railway service list --project 29419572-0b0d-437f-8e71-4fa68daf514f --environment production --json timed out after 60000ms
@@ -42,7 +42,7 @@ railway service list --project 29419572-0b0d-437f-8e71-4fa68daf514f --environmen
 
 ### Umami Storage Monitor (`.github/workflows/umami-storage-monitor.yml`)
 
-- Latest run on `main`: https://github.com/koala73/worldmonitor/actions/runs/39735883582 — dark (conclusion: `failure`), 2026-10-22 06:44 UTC
+- Latest run on `main`: https://github.com/koala73/worldmonitor/actions/runs/39780227838 — dark (conclusion: `failure`), 2026-10-22 12:40 UTC
 - Dark since: 2026-10-21 09:45 UTC (first run of the current streak)
 - Job / step: `monitor` → `Read Umami Postgres volume usage`
 - Likely cause: Railway volume read failed: railway volume list failed with exit code 1
@@ -50,12 +50,12 @@ railway service list --project 29419572-0b0d-437f-8e71-4fa68daf514f --environmen
 <details><summary>End of the job log</summary>
 
 ```
-npm warn install-scripts Run `npm install -g --allow-scripts=@railway/cli` to allow these scripts once, or `npm config set allow-scripts=@railway/cli --location=user` to allow them for all global installs.
-Restored storage history from run 39732612864.
-Failed to fetch: error decoding response body
+Failed to fetch: error sending request for url (https://backboard.railway.com/graphql/v2)
 Caused by:
-    0: error decoding response body
-    1: expected value at line 1 column 1
+    0: error sending request for url (https://backboard.railway.com/graphql/v2)
+    1: operation timed out
+Railway volume list attempt 1 could not reach Railway.
+Problem processing request
 Railway volume read failed: railway volume list failed with exit code 1
 ##[error]Process completed with exit code 1.
 ```
@@ -64,7 +64,7 @@ Railway volume read failed: railway volume list failed with exit code 1
 
 ### Seed Freshness Monitor (`.github/workflows/seed-freshness-monitor.yml`)
 
-- Latest run on `main`: https://github.com/koala73/worldmonitor/actions/runs/39733900281 — dark (conclusion: `failure`), 2026-10-22 06:26 UTC
+- Latest run on `main`: https://github.com/koala73/worldmonitor/actions/runs/39777977235 — dark (conclusion: `failure`), 2026-10-22 12:23 UTC
 - Dark since: 2026-10-22 06:26 UTC (first run of the current streak)
 - Job / step: `monitor` → `Publish ingestion operational transitions`
 - Likely cause: Ingestion operational acceptance failed: the accepted-problem baseline expired on 2026-09-05T18:00:00Z. Re-review scripts/seed-freshness-baseline.json and set a new expiresAt.
@@ -72,13 +72,35 @@ Railway volume read failed: railway volume list failed with exit code 1
 <details><summary>End of the job log</summary>
 
 ```
-- notamClosures: status=STALE_SEED records=0 age=3985m max=240m
-- oecdLtRates: status=STALE_SEED records=15238 age=5536m max=4320m
+- notamClosures: status=STALE_SEED records=0 age=4343m max=240m
+- oecdLtRates: status=STALE_SEED records=15238 age=5893m max=4320m
 - pizzint: status=STALE_SEED records=0
 - relayGatewayGate: status=RELAY_GATE_REJECTED records=unknown
-- riskScores: status=COVERAGE_PARTIAL records=2 age=5m max=30m
-- strikePressure: status=STALE_SEED records=16 age=329m max=45m
+- riskScores: status=COVERAGE_PARTIAL records=2 age=8m max=30m
+- strikePressure: status=STALE_SEED records=16 age=686m max=45m
 Ingestion operational acceptance failed: the accepted-problem baseline expired on 2026-09-05T18:00:00Z. Re-review scripts/seed-freshness-baseline.json and set a new expiresAt.
+##[error]Process completed with exit code 1.
+```
+
+</details>
+
+### OpenRouter Free Models Live (`.github/workflows/openrouter-free-models-live.yml`)
+
+- Latest run on `main`: https://github.com/koala73/worldmonitor/actions/runs/39737355192 — dark (conclusion: `failure`), 2026-10-22 06:58 UTC
+- Dark since: 2026-10-22 06:58 UTC (first run of the current streak)
+- Job / step: `live-listing` → `Check the free-chain models are still usable for free`
+- Likely cause: # fail 1
+
+<details><summary>End of the job log</summary>
+
+```
+# suites 3
+# pass 6
+# fail 1
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 305.651476
 ##[error]Process completed with exit code 1.
 ```
 

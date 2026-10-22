@@ -1,10 +1,10 @@
 <!-- dark-draft: google-gemini/gemini-cli -->
-<!-- draft-state: resolved -->
+<!-- draft-state: ready -->
 # Upstream issue draft: google-gemini/gemini-cli
 
-- **Status:** resolved — lit again (2026-10-22); nothing to file
+- **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/google-gemini/gemini-cli/issues/new
-- **Stars:** 107488 · **Generated:** 2026-10-21T18:50:03.780Z
+- **Stars:** 107505 · **Generated:** 2026-10-22T12:57:28.437Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -20,21 +20,21 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### Memory Tests: Nightly (`.github/workflows/memory-nightly.yml`)
 
-- Latest run on `main`: https://github.com/google-gemini/gemini-cli/actions/runs/39532950886 — dark (conclusion: `failure`), 2026-10-21 02:25 UTC
-- Dark since: 2026-10-21 02:25 UTC (first run of the current streak)
+- Latest run on `main`: https://github.com/google-gemini/gemini-cli/actions/runs/39711349138 — dark (conclusion: `failure`), 2026-10-22 02:26 UTC
+- Dark since: 2026-10-22 02:26 UTC (first run of the current streak)
 - Job / step: `Run Memory Usage Tests` → `Run Memory Tests`
-- Likely cause: Tests  4 failed | 3 passed (7)
+- Likely cause: Tests  3 failed | 4 passed (7)
 
 <details><summary>End of the job log</summary>
 
 ```
     228|           `  Measured:  ${formatMB(result.finalHeapUsed)} heap used\n`…
  ❯ memory-usage.test.ts:204:15
-⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[4/4]⎯
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[3/3]⎯
  Test Files  1 failed (1)
-      Tests  4 failed | 3 passed (7)
-   Start at  02:27:41
-   Duration  105.28s (transform 1.92s, setup 0ms, collect 3.30s, tests 101.19s, environment 0ms, prepare 54ms)
+      Tests  3 failed | 4 passed (7)
+   Start at  02:28:58
+   Duration  106.41s (transform 1.89s, setup 0ms, collect 3.31s, tests 102.32s, environment 0ms, prepare 55ms)
 ##[error]Process completed with exit code 1.
 ```
 
@@ -42,8 +42,8 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### Performance Tests: Nightly (`.github/workflows/perf-nightly.yml`)
 
-- Latest run on `main`: https://github.com/google-gemini/gemini-cli/actions/runs/39538068500 — dark (conclusion: `failure`), 2026-10-21 03:20 UTC
-- Dark since: 2026-10-21 03:20 UTC (first run of the current streak)
+- Latest run on `main`: https://github.com/google-gemini/gemini-cli/actions/runs/39716291607 — dark (conclusion: `failure`), 2026-10-22 03:20 UTC
+- Dark since: 2026-10-22 03:20 UTC (first run of the current streak)
 - Job / step: `Run Performance Usage Tests` → `Run Performance Tests`
 - Likely cause: 29|     throw new Error('Failed to download ripgrep binary');
 

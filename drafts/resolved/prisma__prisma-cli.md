@@ -1,8 +1,8 @@
 <!-- dark-draft: prisma/prisma-cli -->
-<!-- draft-state: ready -->
+<!-- draft-state: resolved -->
 # Upstream issue draft: prisma/prisma-cli
 
-- **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
+- **Status:** resolved — lit again (2026-10-22); nothing to file
 - **Would be filed at:** https://github.com/prisma/prisma-cli/issues/new
 - **Stars:** 25 · **Generated:** 2026-10-22T07:02:51.161Z
 - Nothing in this file has been sent anywhere.
