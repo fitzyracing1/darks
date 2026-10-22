@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/modelcontextprotocol/rust-sdk/issues/new
-- **Stars:** 4036 · **Generated:** 2026-10-21T18:50:03.780Z
+- **Stars:** 4035 · **Generated:** 2026-10-22T01:10:56.398Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** latest run was skipped, not failed — probably not worth filing
 

@@ -4,39 +4,25 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/DeusData/codebase-memory-mcp/issues/new
-- **Stars:** 47106 · **Generated:** 2026-10-21T18:50:03.780Z
+- **Stars:** 47124 · **Generated:** 2026-10-22T01:10:56.398Z
 - Nothing in this file has been sent anywhere.
+- **Note for Joshua:** cancelled by a concurrency group — likely noise
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: "CodeQL SAST" workflow failing on main since 2026-10-20
+CI: "CodeQL SAST" workflow getting cancelled on main since 2026-10-20
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! The **CodeQL SAST** workflow (`.github/workflows/codeql.yml`) on `main` has been failing since 2026-10-20. Here is what I saw, in case it's useful:
+Hi! The **CodeQL SAST** workflow (`.github/workflows/codeql.yml`) on `main` has been getting cancelled since 2026-10-20. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/DeusData/codebase-memory-mcp/actions/runs/39529078131 — dark (conclusion: `failure`), 2026-10-21 01:44 UTC
+- Latest run on `main`: https://github.com/DeusData/codebase-memory-mcp/actions/runs/39700717347 — dark (conclusion: `cancelled`), 2026-10-22 00:36 UTC
 - Dark since: 2026-10-20 22:30 UTC (first run of the current streak)
-- Job / step: `analyze (c-cpp, manual, codeql-cpp)` → `Check for open code scanning alerts`
-- Likely cause: 10 open alert(s) on refs/heads/main -- fix, or dismiss with a reason in the Security tab
-
-<details><summary>End of the job log</summary>
-
-```
-[command]/usr/bin/tar --posix -cf cache.tzst --exclude cache.tzst -P -C /home/runner/work/codebase-memory-mcp/codebase-memory-mcp --files-from manifest.txt --use-compress-program zstdmt
-Sent 0 of 1178137764 (0.0%), 0.0 MBs/sec
-Sent 536870912 of 1178137764 (45.6%), 256.0 MBs/sec
-Sent 1006632960 of 1178137764 (85.4%), 319.9 MBs/sec
-Sent 1178137764 of 1178137764 (100.0%), 299.5 MBs/sec
-Analysis upload status is complete.
-Waiting 60s for alert API to settle...
-##[error]10 open alert(s) on refs/heads/main -- fix, or dismiss with a reason in the Security tab
-```
-
-</details>
+- Job / step: `analyze (python, none, codeql-py)`
+- Likely cause: Canceling since a higher priority waiting request for codeql-python-refs/heads/main exists
 
 If this is already known or expected, feel free to close. Thanks for maintaining codebase-memory-mcp!
 

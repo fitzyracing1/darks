@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/headroomlabs-ai/headroom/issues/new
-- **Stars:** 77145 · **Generated:** 2026-10-21T18:50:03.780Z
+- **Stars:** 77260 · **Generated:** 2026-10-22T01:10:56.398Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
@@ -43,7 +43,7 @@ https://github.com/headroomlabs-ai/headroom/pull/4063
 
 ### Security (`.github/workflows/security.yml`)
 
-- Latest run on `main`: https://github.com/headroomlabs-ai/headroom/actions/runs/39535067125 — dark (conclusion: `failure`), 2026-10-21 02:48 UTC
+- Latest run on `main`: https://github.com/headroomlabs-ai/headroom/actions/runs/39666907606 — dark (conclusion: `failure`), 2026-10-21 20:02 UTC
 - Dark since: 2026-10-21 00:30 UTC (first run of the current streak)
 - Job / step: `Dependency audit (pip-audit)` → `Audit dependencies (pip-audit)`
 - Likely cause: [pillow](https://pypi.org/project/pillow/) | 12.3.0 | [CVE-2026-112899](https://osv.dev/vulnerability/CVE-2026-112899) | 13.0.0 | ''' ============================================================================ EPS load…

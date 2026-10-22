@@ -4,35 +4,59 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/vercel/next.js/issues/new
-- **Stars:** 143124 · **Generated:** 2026-10-21T18:50:03.780Z
+- **Stars:** 143131 · **Generated:** 2026-10-22T01:10:56.398Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: "Update React" workflow failing on canary since 2026-10-21
+CI: 2 workflows dark on canary ("build-and-test", "Update Font Data")
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! The **Update React** workflow (`.github/workflows/update_react.yml`) on `canary` has been failing since 2026-10-21. Here is what I saw, in case it's useful:
+Hi! A few workflows on `canary` have been dark recently. Details below, in case they're useful:
 
-- Latest run on `canary`: https://github.com/vercel/next.js/actions/runs/39638030890 — dark (conclusion: `failure`), 2026-10-21 16:48 UTC
-- Dark since: 2026-10-21 16:48 UTC (first run of the current streak)
-- Job / step: `create-pull-request` → `Create Pull Request`
-- Likely cause: Error: GitHub API POST /repos/vercel/next.js/git/blobs failed (500): {"message": "Something went wrong on our side and we cannot service your request. Sorry about that. Please try resubmitting your request and contact u…
+### build-and-test (`.github/workflows/build_and_test.yml`)
+
+- Latest run on `canary`: https://github.com/vercel/next.js/actions/runs/39693075492 — dark (conclusion: `failure`), 2026-10-21 23:23 UTC
+- Dark since: 2026-10-21 23:23 UTC (first run of the current streak)
+- Job / step: `test rspack dev (4/5, 18.3.1) / build` → `Run export NEXT_EXTERNAL_TESTS_FILTERS="$(pwd)/test/rspack-dev-tests-manifest.json"`
+- Likely cause: Some tests failed
 
 <details><summary>End of the job log</summary>
 
 ```
-    at async createBlobForFile (/home/runner/work/next.js/next.js/scripts/github-utils/signed-commit.js:107:16)
-    at async /home/runner/work/next.js/next.js/scripts/github-utils/signed-commit.js:159:23
-    at async Promise.all (index 26)
-    at async createTreeFromLocalCommit (/home/runner/work/next.js/next.js/scripts/github-utils/signed-commit.js:139:16)
-    at async replayLocalCommitsAsSigned (/home/runner/work/next.js/next.js/scripts/github-utils/signed-commit.js:282:21)
-    at async main (/home/runner/work/next.js/next.js/scripts/sync-react.js:760:41)
-[ELIFECYCLE] Command failed with exit code 1.
+test/e2e/url-imports/url-imports.test.ts finished on retry 0/2 in 12.884s
+test/e2e/use-router-with-rewrites/use-router-with-rewrites.test.ts finished on retry 0/2 in 14.642s
+test/e2e/prerender.test.ts finished on retry 0/2 in 76.284s
+test/e2e/next-image-new/app-dir/app-dir.test.ts finished on retry 0/2 in 210.238s
+Some tests failed
+Successfully updated test timings in KV store
+exiting with code 1
+##[error]Process completed with exit code 1.
+```
+
+</details>
+
+### Update Font Data (`.github/workflows/update_fonts_data.yml`)
+
+- Latest run on `canary`: https://github.com/vercel/next.js/actions/runs/39698867219 — dark (conclusion: `failure`), 2026-10-22 00:18 UTC
+- Dark since: 2026-10-22 00:18 UTC (first run of the current streak)
+- Job / step: `create-pull-request` → `Create Pull Request`
+- Likely cause: 'husky - pre-commit script failed (code 1)\n'
+
+<details><summary>End of the job log</summary>
+
+```
+    '\n' +
+    '  ⚠ lint-staged prevented an empty git commit.\n' +
+    '  Use the --allow-empty option to continue, or check your task configuration\n' +
+    '\n' +
+    '[ELIFECYCLE] Command failed with exit code 1.\n' +
+    'husky - pre-commit script failed (code 1)\n'
+}
 ##[error]Process completed with exit code 1.
 ```
 

@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/sequelize/sequelize/issues/new
-- **Stars:** 30348 · **Generated:** 2026-10-21T18:50:03.780Z
+- **Stars:** 30348 · **Generated:** 2026-10-22T01:10:56.398Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -18,22 +18,22 @@ CI: "Stale issue handler" workflow failing on main since 2026-09-25
 <!-- BEGIN BODY -->
 Hi! The **Stale issue handler** workflow (`.github/workflows/stale.yml`) on `main` has been failing since 2026-09-25. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/sequelize/sequelize/actions/runs/39520837164 — dark (conclusion: `failure`), 2026-10-21 00:21 UTC
+- Latest run on `main`: https://github.com/sequelize/sequelize/actions/runs/39699223123 — dark (conclusion: `failure`), 2026-10-22 00:21 UTC
 - Dark since: 2026-09-25 00:24 UTC (first run of the current streak)
 - Job / step: `stale` → `Draft unfinished PRs`
-- Likely cause: Error processing PR #18550: Request failed due to following response errors:
+- Likely cause: Error processing PR #18525: Request failed due to following response errors:
 
 <details><summary>End of the job log</summary>
 
 ```
-Listing all open pull requests…
-Found 139 open non-draft PR(s).
-── Checking PR #18571 ──
+── Checking PR #18555 ──
 PR appears ready — no action taken.
-── Checking PR #18569 ──
+── Checking PR #18553 ──
+PR appears ready — no action taken.
+── Checking PR #18550 ──
 ✓ Reason: failing required CI checks
-Converting PR #18569 to draft (failing-required-checks)…
-##[error]Failed to process PR #18569: Request failed due to following response errors:
+Converting PR #18550 to draft (failing-required-checks)…
+##[error]Failed to process PR #18550: Request failed due to following response errors:
 ```
 
 </details>

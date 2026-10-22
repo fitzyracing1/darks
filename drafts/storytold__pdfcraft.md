@@ -4,9 +4,9 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/storytold/pdfcraft/issues/new
-- **Stars:** 16931 · **Generated:** 2026-10-21T18:50:03.780Z
+- **Stars:** 16989 · **Generated:** 2026-10-22T01:10:56.398Z
 - Nothing in this file has been sent anywhere.
-- **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
+- **Note for Joshua:** cancelled by a concurrency group — likely noise
 
 ## Suggested title
 
@@ -21,21 +21,21 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### FreeBSD (`.github/workflows/freebsd.yml`)
 
-- Latest run on `main`: https://github.com/storytold/pdfcraft/actions/runs/39565939917 — dark (conclusion: `cancelled`), 2026-10-21 07:59 UTC
+- Latest run on `main`: https://github.com/storytold/pdfcraft/actions/runs/39698465260 — dark (conclusion: `cancelled`), 2026-10-22 00:14 UTC
 - Dark since: 2026-10-18 07:11 UTC (first run of the current streak)
-- Job / step: `freebsd / FreeBSD 15 aarch64 (build + test)` → `Build and test`
-- Likely cause: The job has exceeded the maximum execution time of 5h0m0s
+- Job / step: `freebsd / FreeBSD 15 x86_64 (build + test)` → `Build and test`
+- Likely cause: Canceling since a higher priority waiting request for freebsd-refs/heads/main exists
 
 <details><summary>End of the job log</summary>
 
 ```
-   Compiling unarray v0.1.4
-   Compiling regex-syntax v0.8.11
-   Compiling pdfcraft-oracle v0.10.1 (/home/runner/work/pdfcraft/pdfcraft/crates/oracle)
-   Compiling pdfcraft-testkit v0.10.1 (/home/runner/work/pdfcraft/pdfcraft/crates/testkit)
-   Compiling proptest v1.11.0
-   Compiling xtask v0.1.0 (/home/runner/work/pdfcraft/pdfcraft/xtask)
-   Compiling pdfcraft-web v0.10.1 (/home/runner/work/pdfcraft/pdfcraft/apps/pdfcraft-web)
+   Compiling bit-vec v0.9.1
+   Compiling unicode-width v0.2.2
+   Compiling bit-set v0.10.0
+   Compiling epaint v0.36.2
+   Compiling codespan-reporting v0.13.1
+   Compiling calloop v0.13.0
+   Compiling zbus-lockstep-macros v0.5.2
 ##[error]The operation was canceled.
 ```
 
@@ -43,22 +43,22 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### CI (`.github/workflows/ci.yml`)
 
-- Latest run on `main`: https://github.com/storytold/pdfcraft/actions/runs/39565939296 — dark (conclusion: `failure`), 2026-10-21 07:59 UTC
+- Latest run on `main`: https://github.com/storytold/pdfcraft/actions/runs/39698464764 — dark (conclusion: `cancelled`), 2026-10-22 00:14 UTC
 - Dark since: 2026-10-21 00:17 UTC (first run of the current streak)
-- Job / step: `dependency licences and advisories` → `Run EmbarkStudios/cargo-deny-action@v2`
-- Likely cause: advisories FAILED, bans ok, licenses ok, sources ok
+- Job / step: `test (windows-latest)` → `Test`
+- Likely cause: Canceling since a higher priority waiting request for ci-refs/heads/main exists
 
 <details><summary>End of the job log</summary>
 
 ```
-              │   │                           ├── pdfcraft v0.10.1 (*)
-              │   │                           └── pdfcraft-web v0.10.1
-              │   └── sigstore-verify v0.6.6 (*)
-              ├── sigstore-tsa v0.6.6
-              │   ├── sigstore-bundle v0.6.6 (*)
-              │   └── sigstore-verify v0.6.6 (*)
-              └── (build) winprint v0.2.1 (*)
-advisories FAILED, bans ok, licenses ok, sources ok
+   Compiling rfd v0.17.2
+   Compiling craft-quit v0.1.0 (https://github.com/storytold/craft-libs?rev=f58bc1a3df490992d633393d0898af0588ce882c#f58bc1a3)
+   Compiling craft-ui v0.1.0 (https://github.com/storytold/craft-libs?rev=5c874d51eeb3de70e735c8ce87a59a7dedd47675#5c874d51)
+   Compiling sys-locale v0.3.2
+   Compiling toml_parser v1.1.3+spec-1.1.0
+   Compiling toml_datetime v1.1.1+spec-1.1.0
+   Compiling serde_spanned v1.1.1
+##[error]The operation was canceled.
 ```
 
 </details>

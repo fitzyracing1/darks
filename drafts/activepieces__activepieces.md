@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/activepieces/activepieces/issues/new
-- **Stars:** 25155 · **Generated:** 2026-10-21T18:50:03.780Z
+- **Stars:** 25164 · **Generated:** 2026-10-22T01:10:56.398Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -42,7 +42,7 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### Generate Translation Files for Community Pieces and UI (`.github/workflows/generate-translations.yml`)
 
-- Latest run on `main`: https://github.com/activepieces/activepieces/actions/runs/39447386687 — dark (conclusion: `failure`), 2026-10-20 15:19 UTC
+- Latest run on `main`: https://github.com/activepieces/activepieces/actions/runs/39624644968 — dark (conclusion: `failure`), 2026-10-21 15:19 UTC
 - Dark since: 2026-10-19 15:19 UTC (first run of the current streak)
 - Job / step: `finalize / finalize` → `Create Pull Request`
 - Likely cause: Unhandled error: HttpError: Pull Request has merge conflicts

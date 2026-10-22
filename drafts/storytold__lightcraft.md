@@ -4,9 +4,9 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/storytold/lightcraft/issues/new
-- **Stars:** 14169 · **Generated:** 2026-10-21T18:50:03.780Z
+- **Stars:** 14215 · **Generated:** 2026-10-22T01:10:56.398Z
 - Nothing in this file has been sent anywhere.
-- **Note for Joshua:** cancelled by a concurrency group — likely noise
+- **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
@@ -19,21 +19,21 @@ CI: "FreeBSD" workflow getting cancelled on main since 2026-10-18
 <!-- BEGIN BODY -->
 Hi! The **FreeBSD** workflow (`.github/workflows/freebsd.yml`) on `main` has been getting cancelled since 2026-10-18. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/storytold/lightcraft/actions/runs/39639752312 — dark (conclusion: `cancelled`), 2026-10-21 16:59 UTC
+- Latest run on `main`: https://github.com/storytold/lightcraft/actions/runs/39649647498 — dark (conclusion: `cancelled`), 2026-10-21 18:05 UTC
 - Dark since: 2026-10-18 00:37 UTC (first run of the current streak)
 - Job / step: `freebsd / FreeBSD 15 aarch64 (build + test)` → `Build and test`
-- Likely cause: Canceling since a higher priority waiting request for freebsd-refs/heads/main exists
+- Likely cause: The job has exceeded the maximum execution time of 5h0m0s
 
 <details><summary>End of the job log</summary>
 
 ```
-   Compiling jxl-oxide-common v1.0.0
-   Compiling jxl-grid v0.6.2
-   Compiling jxl-coding v1.0.1
-   Compiling jxl-threadpool v1.0.0
-   Compiling jxl-modular v0.11.3
-   Compiling ppv-lite86 v0.2.21
-   Compiling rand_chacha v0.9.0
+   Compiling epaint_default_fonts v0.36.2
+   Compiling nohash-hasher v0.2.0
+   Compiling epaint v0.36.2
+   Compiling itertools v0.15.0
+   Compiling toml_edit v0.25.15+spec-1.1.0
+   Compiling egui v0.36.2
+   Compiling serde_spanned v1.1.1
 ##[error]The operation was canceled.
 ```
 

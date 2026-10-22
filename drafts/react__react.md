@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/react/react/issues/new
-- **Stars:** 251615 · **Generated:** 2026-10-21T18:50:03.780Z
+- **Stars:** 251623 · **Generated:** 2026-10-22T01:10:56.398Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -18,7 +18,7 @@ CI: "(DevTools) Regression Tests" workflow failing on main since 2026-10-11
 <!-- BEGIN BODY -->
 Hi! The **(DevTools) Regression Tests** workflow (`.github/workflows/devtools_regression_tests.yml`) on `main` has been failing since 2026-10-11. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/react/react/actions/runs/39519131238 — dark (conclusion: `failure`), 2026-10-21 00:05 UTC
+- Latest run on `main`: https://github.com/react/react/actions/runs/39697478745 — dark (conclusion: `failure`), 2026-10-22 00:04 UTC
 - Dark since: 2026-10-11 00:06 UTC (first run of the current streak)
 - Job / step: `Run DevTools tests for versions (17.0)` → `Run node ./scripts/jest/jest-cli.js --build --project devtools --release-channel=experimental --reactVersion 17.0 --ci`
 - Likely cause: Snapshots:   5 failed, 92 passed, 97 total
@@ -31,7 +31,7 @@ Snapshot Summary
 Test Suites: 1 failed, 27 skipped, 14 passed, 15 of 42 total
 Tests:       3 failed, 518 skipped, 100 passed, 621 total
 Snapshots:   5 failed, 92 passed, 97 total
-Time:        16.046 s
+Time:        11.39 s
 Ran all test suites.
 ##[error]Process completed with exit code 1.
 ```
