@@ -4,9 +4,8 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/anomalyco/opencode/issues/new
-- **Stars:** 219977 · **Generated:** 2026-10-22T12:57:28.437Z
+- **Stars:** 220102 · **Generated:** 2026-10-22T18:48:47.419Z
 - Nothing in this file has been sent anywhere.
-- **Note for Joshua:** latest run was skipped, not failed — probably not worth filing
 
 ## Skipped: upstream already tracking
 
@@ -17,7 +16,7 @@ These workflows are left out of the body below.
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 3 workflows dark on dev ("docs-update", "deploy", "test")
+CI: 2 workflows dark on dev ("test", "publish")
 <!-- END TITLE -->
 
 ## Body
@@ -25,52 +24,46 @@ CI: 3 workflows dark on dev ("docs-update", "deploy", "test")
 <!-- BEGIN BODY -->
 Hi! A few workflows on `dev` have been dark recently. Details below, in case they're useful:
 
-### docs-update (`.github/workflows/docs-update.yml`)
+### test (`.github/workflows/test.yml`)
 
-- Latest run on `dev`: https://github.com/anomalyco/opencode/actions/runs/39777308361 — dark (conclusion: `skipped`), 2026-10-22 12:18 UTC
-- Dark since: 2026-10-21 12:17 UTC (first run of the current streak)
-- Likely cause: run skipped
-
-### deploy (`.github/workflows/deploy.yml`)
-
-- Latest run on `dev`: https://github.com/anomalyco/opencode/actions/runs/39778174637 — dark (conclusion: `failure`), 2026-10-22 12:25 UTC
-- Dark since: 2026-10-21 12:23 UTC (first run of the current streak)
-- Job / step: `deploy` → `Run bun sst deploy --stage=dev`
-- Likely cause: "message": "Actor migration tag precondition failed, got tag 'v1' when expected tag is 'v2'. Please make sure the tags match and try again."
+- Latest run on `dev`: https://github.com/anomalyco/opencode/actions/runs/39821578998 — dark (conclusion: `failure`), 2026-10-22 17:19 UTC
+- Dark since: 2026-10-22 12:25 UTC (first run of the current streak)
+- Job / step: `unit (windows)` → `Run unit tests`
+- Likely cause: @opencode/core#test: command (C:\runner\_work\opencode\opencode\packages\core) C:\Users\runneradmin\.bun\bin\bun.exe run test exited (1)
 
 <details><summary>End of the job log</summary>
 
 ```
-      "code": 10079,
-      "message": "Actor migration tag precondition failed, got tag 'v1' when expected tag is 'v2'. Please make sure the tags match and try again."
-    }
-  ],
-  "messages": []
+[17:36:35.596] INFO (#306274): watcher subscribe {
+  path: "C:\\Users\\runneradmin\\AppData\\Local\\Temp\\oc-nI69VL\\AGENTS.md",
+  type: "file",
+  ignores: 0,
 }
-error: "sst" exited with code 1
-##[error]Process completed with exit code 1.
+[17:36:35.606] INFO (#306274): watcher subscribe {
+  path: "C:\\Users\\runneradmin\\AppData\\Local\\Temp\\oc-nI69VL\\.config\\opencode\\skill",
+##[error]@opencode/core#test: command (C:\runner\_work\opencode\opencode\packages\core) C:\Users\runneradmin\.bun\bin\bun.exe run test exited (1)
 ```
 
 </details>
 
-### test (`.github/workflows/test.yml`)
+### publish (`.github/workflows/publish.yml`)
 
-- Latest run on `dev`: https://github.com/anomalyco/opencode/actions/runs/39778174627 — dark (conclusion: `failure`), 2026-10-22 12:25 UTC
-- Dark since: 2026-10-22 12:25 UTC (first run of the current streak)
-- Job / step: `unit (linux)` → `Run unit tests`
-- Likely cause: @opencode/core#test: command (/home/runner/_work/opencode/opencode/packages/core) /home/runner/.bun/bin/bun run test exited (1)
+- Latest run on `dev`: https://github.com/anomalyco/opencode/actions/runs/39821578820 — dark (conclusion: `failure`), 2026-10-22 17:19 UTC
+- Dark since: 2026-10-22 17:19 UTC (first run of the current streak)
+- Job / step: `sign-cli-windows` → `Run azure/artifact-signing-action@b443cf8ea4124818d2ea9f043cba29fc3ec47b16`
+- Likely cause: Exception: SignTool failed with exit code 1
 
 <details><summary>End of the job log</summary>
 
 ```
-  █  █ █  █ █▀▀▀ █  █ █    █  █ █  █ █▀▀▀
-  ▀▀▀▀ █▀▀▀ ▀▀▀▀ ▀▀▀▀ ▀▀▀▀ ▀▀▀▀ ▀▀▀▀ ▀▀▀▀
-  Session   Model ordering fixture
-  Continue  opencode -s ses_model_order
-                                   ▄
-  █▀▀█ █▀▀█ █▀▀█ █▀▀▄ █▀▀▀ █▀▀█ █▀▀█ █▀▀█
-  █  █ █  █ █▀▀▀ █  █ █    █  █ █  █ █▀▀▀
-##[error]@opencode/core#test: command (/home/runner/_work/opencode/opencode/packages/core) /home/runner/.bun/bin/bun run test exited (1)
+SignTool Error: File not found: C:\runner\_work\opencode\opencode\packages\cli\dist\cli-windows-arm64\bin\opencode.exe
+SignTool Error: File not found: C:\runner\_work\opencode\opencode\packages\cli\dist\cli-windows-x64\bin\opencode.exe
+SignTool Error: File not found: C:\runner\_work\opencode\opencode\packages\cli\dist\cli-windows-x64-baseline\bin\opencode.exe
+Number of files successfully Signed: 0
+Number of warnings: 0
+Number of errors: 3
+Exception: SignTool failed with exit code 1
+##[error]Process completed with exit code 1.
 ```
 
 </details>

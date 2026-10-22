@@ -4,13 +4,13 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/activepieces/activepieces/issues/new
-- **Stars:** 25171 · **Generated:** 2026-10-22T12:57:28.437Z
+- **Stars:** 25173 · **Generated:** 2026-10-22T18:48:47.419Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 2 workflows dark on main ("Chat Evals", "Generate Translation Files for Community Pieces and UI")
+CI: 3 workflows dark on main ("Chat Evals", "Generate Translation Files for Community Pieces and UI", "Continuous Delivery — Staging")
 <!-- END TITLE -->
 
 ## Body
@@ -58,6 +58,28 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
   }
 }
 ##[error]Unhandled error: HttpError: Pull Request has merge conflicts
+```
+
+</details>
+
+### Continuous Delivery — Staging (`.github/workflows/continuous-delivery-stg.yml`)
+
+- Latest run on `main`: https://github.com/activepieces/activepieces/actions/runs/39819856872 — dark (conclusion: `failure`), 2026-10-22 17:07 UTC
+- Dark since: 2026-10-22 17:07 UTC (first run of the current streak)
+- Job / step: `tag-release-candidate` → `Tag release candidate image`
+- Likely cause: ERROR: failed to parse source "ghcr.io/activepieces/activepieces-cloud:", valid sources are digests, references and descriptors: invalid reference format
+
+<details><summary>End of the job log</summary>
+
+```
+17bc6cacb88535898bb3d1737d0dd8824094166e
+Warning: Permanently added '***' (ED25519) to the list of known hosts.
+Connection to *** closed.
+Staging tag:  (SHA: )
+Logging into ghcr.io...
+Login Succeeded!
+ERROR: failed to parse source "ghcr.io/activepieces/activepieces-cloud:", valid sources are digests, references and descriptors: invalid reference format
+##[error]Process completed with exit code 1.
 ```
 
 </details>

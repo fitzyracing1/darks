@@ -4,13 +4,13 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/koala73/worldmonitor/issues/new
-- **Stars:** 89172 · **Generated:** 2026-10-22T12:57:28.437Z
+- **Stars:** 89202 · **Generated:** 2026-10-22T18:48:47.419Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 4 workflows dark on main ("Railway Native Deploy Health", "Umami Storage Monitor", "Seed Freshness Monitor", +1 more)
+CI: 2 workflows dark on main ("Seed Freshness Monitor", "Perf — styleLayout budget")
 <!-- END TITLE -->
 
 ## Body
@@ -18,53 +18,9 @@ CI: 4 workflows dark on main ("Railway Native Deploy Health", "Umami Storage Mon
 <!-- BEGIN BODY -->
 Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
 
-### Railway Native Deploy Health (`.github/workflows/railway-deploy-drift.yml`)
-
-- Latest run on `main`: https://github.com/koala73/worldmonitor/actions/runs/39779743125 — dark (conclusion: `failure`), 2026-10-22 12:36 UTC
-- Dark since: 2026-10-21 06:39 UTC (first run of the current streak)
-- Job / step: `Railway native deployment health` → `Check Railway deployment configuration and drift`
-- Likely cause: railway service list --project 29419572-0b0d-437f-8e71-4fa68daf514f --environment production --json timed out after 60000ms
-
-<details><summary>End of the job log</summary>
-
-```
-3 packages are looking for funding
-  run `npm fund` for details
-npm warn install-scripts 1 package has install scripts not yet covered by allowScripts:
-npm warn install-scripts   @railway/cli@5.30.1 (postinstall: node ./npm-install/postinstall.js)
-npm warn install-scripts
-npm warn install-scripts Run `npm install -g --allow-scripts=@railway/cli` to allow these scripts once, or `npm config set allow-scripts=@railway/cli --location=user` to allow them for all global installs.
-railway service list --project 29419572-0b0d-437f-8e71-4fa68daf514f --environment production --json timed out after 60000ms
-##[error]Process completed with exit code 1.
-```
-
-</details>
-
-### Umami Storage Monitor (`.github/workflows/umami-storage-monitor.yml`)
-
-- Latest run on `main`: https://github.com/koala73/worldmonitor/actions/runs/39780227838 — dark (conclusion: `failure`), 2026-10-22 12:40 UTC
-- Dark since: 2026-10-21 09:45 UTC (first run of the current streak)
-- Job / step: `monitor` → `Read Umami Postgres volume usage`
-- Likely cause: Railway volume read failed: railway volume list failed with exit code 1
-
-<details><summary>End of the job log</summary>
-
-```
-Failed to fetch: error sending request for url (https://backboard.railway.com/graphql/v2)
-Caused by:
-    0: error sending request for url (https://backboard.railway.com/graphql/v2)
-    1: operation timed out
-Railway volume list attempt 1 could not reach Railway.
-Problem processing request
-Railway volume read failed: railway volume list failed with exit code 1
-##[error]Process completed with exit code 1.
-```
-
-</details>
-
 ### Seed Freshness Monitor (`.github/workflows/seed-freshness-monitor.yml`)
 
-- Latest run on `main`: https://github.com/koala73/worldmonitor/actions/runs/39777977235 — dark (conclusion: `failure`), 2026-10-22 12:23 UTC
+- Latest run on `main`: https://github.com/koala73/worldmonitor/actions/runs/39830173962 — dark (conclusion: `failure`), 2026-10-22 18:18 UTC
 - Dark since: 2026-10-22 06:26 UTC (first run of the current streak)
 - Job / step: `monitor` → `Publish ingestion operational transitions`
 - Likely cause: Ingestion operational acceptance failed: the accepted-problem baseline expired on 2026-09-05T18:00:00Z. Re-review scripts/seed-freshness-baseline.json and set a new expiresAt.
@@ -72,35 +28,35 @@ Railway volume read failed: railway volume list failed with exit code 1
 <details><summary>End of the job log</summary>
 
 ```
-- notamClosures: status=STALE_SEED records=0 age=4343m max=240m
-- oecdLtRates: status=STALE_SEED records=15238 age=5893m max=4320m
+- countryHistory: status=STALE_SEED records=196 age=2185m max=2160m
+- demographicsCapability: status=COVERAGE_PARTIAL records=229 age=915m max=36000m
+- imdCycloneMarine: status=SEED_ERROR records=32 age=0m max=45m
+- naturalEvents: status=SEED_ERROR records=25 age=15m max=540m
+- notamClosures: status=STALE_SEED records=0 age=4697m max=240m
 - pizzint: status=STALE_SEED records=0
-- relayGatewayGate: status=RELAY_GATE_REJECTED records=unknown
-- riskScores: status=COVERAGE_PARTIAL records=2 age=8m max=30m
-- strikePressure: status=STALE_SEED records=16 age=686m max=45m
 Ingestion operational acceptance failed: the accepted-problem baseline expired on 2026-09-05T18:00:00Z. Re-review scripts/seed-freshness-baseline.json and set a new expiresAt.
 ##[error]Process completed with exit code 1.
 ```
 
 </details>
 
-### OpenRouter Free Models Live (`.github/workflows/openrouter-free-models-live.yml`)
+### Perf — styleLayout budget (`.github/workflows/perf-style-layout-budget.yml`)
 
-- Latest run on `main`: https://github.com/koala73/worldmonitor/actions/runs/39737355192 — dark (conclusion: `failure`), 2026-10-22 06:58 UTC
-- Dark since: 2026-10-22 06:58 UTC (first run of the current streak)
-- Job / step: `live-listing` → `Check the free-chain models are still usable for free`
-- Likely cause: # fail 1
+- Latest run on `main`: https://github.com/koala73/worldmonitor/actions/runs/39832322792 — dark (conclusion: `failure`), 2026-10-22 18:32 UTC
+- Dark since: 2026-10-22 18:32 UTC (first run of the current streak)
+- Job / step: `measure` → `Enforce the styleLayout budget`
+- Likely cause: No VM guests are running outdated hypervisor (qemu) binaries on this host.
 
 <details><summary>End of the job log</summary>
 
 ```
-# suites 3
-# pass 6
-# fail 1
-# cancelled 0
-# skipped 0
-# todo 0
-# duration_ms 305.651476
+|■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                |  60% of 114.3 MiB
+|■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                        |  70% of 114.3 MiB
+|■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                |  80% of 114.3 MiB
+|■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■        |  90% of 114.3 MiB
+|■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■| 100% of 114.3 MiB
+[style-layout-budget] REGRESSION: styleLayout is 30.1% of attributed main-thread self-time, over the 28% budget
+[style-layout-budget] see docs/perf/desktop-mainthread-baseline-2026-07-02.md
 ##[error]Process completed with exit code 1.
 ```
 

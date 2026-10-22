@@ -4,30 +4,40 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/tangency-labs/solidcraft/issues/new
-- **Stars:** 9098 · **Generated:** 2026-10-22T12:57:28.437Z
+- **Stars:** 9221 · **Generated:** 2026-10-22T18:48:47.419Z
 - Nothing in this file has been sent anywhere.
-- **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
-
-## Skipped: upstream already tracking
-
-- Claim (`.github/workflows/claim.yml`): [issue #4405](https://github.com/tangency-labs/solidcraft/issues/4405) "Claim bot: some claim PRs fail with 403 "Resource not accessible by integration""
-
-These workflows are left out of the body below.
+- **Note for Joshua:** cancelled by a concurrency group — likely noise
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: "Pages" workflow getting cancelled on main since 2026-10-22
+CI: "Docker" workflow getting cancelled on main since 2026-10-22
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! The **Pages** workflow (`.github/workflows/pages.yml`) on `main` has been getting cancelled since 2026-10-22. Here is what I saw, in case it's useful:
+Hi! The **Docker** workflow (`.github/workflows/docker.yml`) on `main` has been getting cancelled since 2026-10-22. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/tangency-labs/solidcraft/actions/runs/39777968599 — dark (conclusion: `cancelled`), 2026-10-22 12:23 UTC
-- Dark since: 2026-10-22 04:22 UTC (first run of the current streak)
-- Likely cause: run cancelled
+- Latest run on `main`: https://github.com/tangency-labs/solidcraft/actions/runs/39833237905 — dark (conclusion: `cancelled`), 2026-10-22 18:39 UTC
+- Dark since: 2026-10-22 18:39 UTC (first run of the current streak)
+- Job / step: `image` → `Build the web app`
+- Likely cause: Canceling since a higher priority waiting request for docker-refs/heads/main exists
+
+<details><summary>End of the job log</summary>
+
+```
+   --> crates/ui-egui/src/dialogs.rs:487:5
+    |
+485 | enum Begun {
+    |      ----- variant in this enum
+486 |     /// It computes off the window thread.
+487 |     Later(Applying),
+    |     ^^^^^
+##[error]The operation was canceled.
+```
+
+</details>
 
 If this is already known or expected, feel free to close. Thanks for maintaining solidcraft!
 

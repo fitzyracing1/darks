@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/microsoft/vscode/issues/new
-- **Stars:** 194202 · **Generated:** 2026-10-22T12:57:28.437Z
+- **Stars:** 194211 · **Generated:** 2026-10-22T18:48:47.419Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
@@ -21,7 +21,7 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### CodeQL (`.github/workflows/codeql.yml`)
 
-- Latest run on `main`: https://github.com/microsoft/vscode/actions/runs/39778146417 — dark (conclusion: `cancelled`), 2026-10-22 12:24 UTC
+- Latest run on `main`: https://github.com/microsoft/vscode/actions/runs/39830367470 — dark (conclusion: `cancelled`), 2026-10-22 18:19 UTC
 - Dark since: 2026-10-21 18:08 UTC (first run of the current streak)
 - Likely cause: run cancelled
 
