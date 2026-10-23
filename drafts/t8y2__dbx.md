@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/t8y2/dbx/issues/new
-- **Stars:** 27627 · **Generated:** 2026-10-23T12:52:35.417Z
+- **Stars:** 27643 · **Generated:** 2026-10-23T18:49:31.715Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -18,7 +18,7 @@ CI: "Deploy Docs" workflow failing on main since 2026-10-23
 <!-- BEGIN BODY -->
 Hi! The **Deploy Docs** workflow (`.github/workflows/docs.yml`) on `main` has been failing since 2026-10-23. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/t8y2/dbx/actions/runs/39937776383 — dark (conclusion: `failure`), 2026-10-23 10:15 UTC
+- Latest run on `main`: https://github.com/t8y2/dbx/actions/runs/39983839338 — dark (conclusion: `failure`), 2026-10-23 16:05 UTC
 - Dark since: 2026-10-23 04:08 UTC (first run of the current streak)
 - Job / step: `build` → `Run cd docs && pnpm install --frozen-lockfile && pnpm build`
 - Likely cause: Error: SEO verification failed:

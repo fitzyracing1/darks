@@ -4,19 +4,22 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/storytold/photocraft/issues/new
-- **Stars:** 71675 · **Generated:** 2026-10-23T12:52:35.417Z
+- **Stars:** 71840 · **Generated:** 2026-10-23T18:49:31.715Z
 - Nothing in this file has been sent anywhere.
+- **Note for Joshua:** cancelled by a concurrency group — likely noise
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: "Perf (nightly)" workflow failing on main since 2026-10-23
+CI: 2 workflows dark on main ("Perf (nightly)", "SonarCloud")
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! The **Perf (nightly)** workflow (`.github/workflows/perf-nightly.yml`) on `main` has been failing since 2026-10-23. Here is what I saw, in case it's useful:
+Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
+
+### Perf (nightly) (`.github/workflows/perf-nightly.yml`)
 
 - Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/39896058423 — dark (conclusion: `failure`), 2026-10-23 03:38 UTC
 - Dark since: 2026-10-23 03:38 UTC (first run of the current streak)
@@ -34,6 +37,28 @@ Hi! The **Perf (nightly)** workflow (`.github/workflows/perf-nightly.yml`) on `m
 | P35 | Marquee drag on 24 MP with Alt/Shift | ≤ 17 ms p95 | Shift/Alt marquee modifiers don't exist yet (#208) and the drag preview is UI-side | [#211](https://github.com/storytold/photocraft/issues/211) |
 wrote /Users/runner/work/photocraft/photocraft/target/perf/results.json
 ##[error]Process completed with exit code 1.
+```
+
+</details>
+
+### SonarCloud (`.github/workflows/sonarcloud.yml`)
+
+- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/40003838812 — dark (conclusion: `cancelled`), 2026-10-23 18:30 UTC
+- Dark since: 2026-10-23 13:54 UTC (first run of the current streak)
+- Job / step: `sonarcloud / SonarCloud Scan` → `Generate Rust coverage`
+- Likely cause: Canceling since a higher priority waiting request for sonarcloud-refs/heads/main exists
+
+<details><summary>End of the job log</summary>
+
+```
+  - /home/runner/work/photocraft/photocraft/crates/text/Cargo.toml
+  - /home/runner/work/photocraft/photocraft/crates/ui-egui/Cargo.toml
+  - /home/runner/work/photocraft/photocraft/crates/vector/Cargo.toml
+  - /home/runner/work/photocraft/photocraft/xtask/Cargo.toml
+... Restoring cache ...
+No cache found.
+info: cargo-llvm-cov currently setting cfg(coverage); you can opt-out it by passing --no-cfg-coverage
+##[error]The operation was canceled.
 ```
 
 </details>

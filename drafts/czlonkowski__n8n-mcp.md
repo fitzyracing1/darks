@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/czlonkowski/n8n-mcp/issues/new
-- **Stars:** 23124 · **Generated:** 2026-10-23T12:52:35.417Z
+- **Stars:** 23126 · **Generated:** 2026-10-23T18:49:31.715Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
@@ -19,21 +19,21 @@ CI: "Test Suite" workflow getting cancelled on main since 2026-10-22
 <!-- BEGIN BODY -->
 Hi! The **Test Suite** workflow (`.github/workflows/test.yml`) on `main` has been getting cancelled since 2026-10-22. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/czlonkowski/n8n-mcp/actions/runs/39808656311 — dark (conclusion: `cancelled`), 2026-10-22 15:50 UTC
+- Latest run on `main`: https://github.com/czlonkowski/n8n-mcp/actions/runs/39969554898 — dark (conclusion: `cancelled`), 2026-10-23 14:25 UTC
 - Dark since: 2026-10-22 15:50 UTC (first run of the current streak)
-- Job / step: `test` → `Run integration tests (live n8n instance)`
+- Job / step: `test` → `Build Docker test image`
 - Likely cause: The job has exceeded the maximum execution time of 15m0s
 
 <details><summary>End of the job log</summary>
 
 ```
- RUN  v3.2.6 /home/runner/work/n8n-mcp/n8n-mcp
-stdout | tests/integration/n8n-api/workflows/smart-parameters.test.ts
-[CI-DEBUG] Global setup starting, NODE_ENV: test
-[CI-DEBUG] Looking for .env.test at: /home/runner/work/n8n-mcp/n8n-mcp/.env.test
-[CI-DEBUG] File exists? true
-[CI-DEBUG] Successfully loaded 58 env vars from .env.test
-[CI-DEBUG] Global setup complete, N8N_API_URL: ***
+#22 2.896
+#22 2.911 [plugin vite:singlefile] Inlining: index-72kVBfbv.js
+#22 2.911 [plugin vite:singlefile] Inlining: style-CodQMfDl.css
+#22 2.913 computing gzip size...
+#22 2.929 dist/validation-summary/index.html  580.68 kB │ gzip: 155.54 kB
+#22 2.929
+#22 2.931 ✓ built in 508ms
 ##[error]The operation was canceled.
 ```
 

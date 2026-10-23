@@ -4,9 +4,9 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/anomalyco/opencode/issues/new
-- **Stars:** 220440 · **Generated:** 2026-10-23T12:52:35.417Z
+- **Stars:** 220539 · **Generated:** 2026-10-23T18:49:31.715Z
 - Nothing in this file has been sent anywhere.
-- **Note for Joshua:** latest run was skipped, not failed — probably not worth filing
+- **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Skipped: upstream already tracking
 
@@ -17,17 +17,17 @@ These workflows are left out of the body below.
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: "docs-locale-sync" workflow not completing (runs skipped) on dev since 2026-10-23
+CI: "publish" workflow getting cancelled on dev since 2026-10-23
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! The **docs-locale-sync** workflow (`.github/workflows/docs-locale-sync.yml`) on `dev` has been not completing (runs skipped) since 2026-10-23. Here is what I saw, in case it's useful:
+Hi! The **publish** workflow (`.github/workflows/publish.yml`) on `dev` has been getting cancelled since 2026-10-23. Here is what I saw, in case it's useful:
 
-- Latest run on `dev`: https://github.com/anomalyco/opencode/actions/runs/39887352944 — dark (conclusion: `skipped`), 2026-10-23 02:02 UTC
-- Dark since: 2026-10-23 01:17 UTC (first run of the current streak)
-- Likely cause: run skipped
+- Latest run on `dev`: https://github.com/anomalyco/opencode/actions/runs/40000630545 — dark (conclusion: `cancelled`), 2026-10-23 18:06 UTC
+- Dark since: 2026-10-23 18:06 UTC (first run of the current streak)
+- Likely cause: run cancelled
 
 If this is already known or expected, feel free to close. Thanks for maintaining opencode!
 

@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/openclaw/openclaw/issues/new
-- **Stars:** 392833 · **Generated:** 2026-10-23T12:52:35.417Z
+- **Stars:** 392866 · **Generated:** 2026-10-23T18:49:31.715Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** cancelled by a concurrency group — likely noise
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
@@ -12,7 +12,7 @@
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 3 workflows dark on main ("CodeQL", "ClawSweeper Dispatch", "CI")
+CI: 2 workflows dark on main ("CodeQL", "CI")
 <!-- END TITLE -->
 
 ## Body
@@ -42,31 +42,9 @@ Resolving extensions
 
 </details>
 
-### ClawSweeper Dispatch (`.github/workflows/clawsweeper-dispatch.yml`)
-
-- Latest run on `main`: https://github.com/openclaw/openclaw/actions/runs/38883181462 — dark (conclusion: `cancelled`), 2026-10-16 09:50 UTC
-- Dark since: 2026-10-16 09:50 UTC (first run of the current streak)
-- Job / step: `dispatch`
-- Likely cause: Canceling since a higher priority waiting request for clawsweeper-dispatch-openclaw/openclaw-refs/heads/main exists
-
-<details><summary>End of the job log</summary>
-
-```
-Prepare all required actions
-Getting action download info
-Download action repository 'actions/create-github-app-token@bcd2ba49218906704ab6c1aa796996da409d3eb1' (SHA:bcd2ba49218906704ab6c1aa796996da409d3eb1)
-Download action repository 'actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1' (SHA:949feb2413d6458794dcd2491c4babbbce0c15c1)
-Complete job name: dispatch
-Inputs 'owner' and 'repositories' are set. Creating token for the following repositories:
-- openclaw/clawsweeper
-Dispatched GitHub activity to ClawSweeper.
-```
-
-</details>
-
 ### CI (`.github/workflows/ci.yml`)
 
-- Latest run on `main`: https://github.com/openclaw/openclaw/actions/runs/38883182826 — dark (conclusion: `cancelled`), 2026-10-16 09:50 UTC
+- Latest run on `main`: https://github.com/openclaw/openclaw/actions/runs/38883485449 — dark (conclusion: `cancelled`), 2026-10-16 09:52 UTC
 - Dark since: 2026-10-16 09:50 UTC (first run of the current streak)
 - Likely cause: run cancelled
 

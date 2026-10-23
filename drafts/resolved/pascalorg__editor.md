@@ -1,8 +1,8 @@
 <!-- dark-draft: pascalorg/editor -->
-<!-- draft-state: ready -->
+<!-- draft-state: resolved -->
 # Upstream issue draft: pascalorg/editor
 
-- **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
+- **Status:** resolved — lit again (2026-10-23); nothing to file
 - **Would be filed at:** https://github.com/pascalorg/editor/issues/new
 - **Stars:** 25069 · **Generated:** 2026-10-23T12:52:35.417Z
 - Nothing in this file has been sent anywhere.

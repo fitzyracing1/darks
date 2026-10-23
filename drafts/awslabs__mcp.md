@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/awslabs/mcp/issues/new
-- **Stars:** 9821 · **Generated:** 2026-10-23T12:52:35.417Z
+- **Stars:** 9822 · **Generated:** 2026-10-23T18:49:31.715Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -18,7 +18,7 @@ CI: "Check License Header" workflow failing on main since 2026-10-13
 <!-- BEGIN BODY -->
 Hi! The **Check License Header** workflow (`.github/workflows/check-license-header.yml`) on `main` has been failing since 2026-10-13. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/awslabs/mcp/actions/runs/39913981955 — dark (conclusion: `failure`), 2026-10-23 06:50 UTC
+- Latest run on `main`: https://github.com/awslabs/mcp/actions/runs/39971976645 — dark (conclusion: `failure`), 2026-10-23 14:42 UTC
 - Dark since: 2026-10-13 23:49 UTC (first run of the current streak)
 - Job / step: `Code Review Upon All Successful Runs` → `Check license headers`
 - Likely cause: 0 error(s) and 1 warning(s) found. Warnings are treated as errors.
