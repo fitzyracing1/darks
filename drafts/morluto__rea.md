@@ -4,24 +4,39 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/morluto/rea/issues/new
-- **Stars:** 364827 · **Generated:** 2026-10-22T18:48:47.419Z
+- **Stars:** 366344 · **Generated:** 2026-10-23T01:13:37.909Z
 - Nothing in this file has been sent anywhere.
-- **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: "CI" workflow getting cancelled on main since 2026-10-22
+CI: "CI" workflow failing on main since 2026-10-22
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! The **CI** workflow (`.github/workflows/ci.yml`) on `main` has been getting cancelled since 2026-10-22. Here is what I saw, in case it's useful:
+Hi! The **CI** workflow (`.github/workflows/ci.yml`) on `main` has been failing since 2026-10-22. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/morluto/rea/actions/runs/39833249303 — dark (conclusion: `cancelled`), 2026-10-22 18:39 UTC
+- Latest run on `main`: https://github.com/morluto/rea/actions/runs/39877590680 — dark (conclusion: `failure`), 2026-10-23 00:21 UTC
 - Dark since: 2026-10-22 17:37 UTC (first run of the current streak)
-- Likely cause: run cancelled
+- Job / step: `Test shard (4/8)` → `Run built-dependent tests for fast feedback`
+- Likely cause: Tests  3 failed | 1800 passed | 32 skipped (1835)
+
+<details><summary>End of the job log</summary>
+
+```
+    269|       );
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/3]⎯
+ Test Files  1 failed | 149 passed (150)
+      Tests  3 failed | 1800 passed | 32 skipped (1835)
+   Start at  00:22:54
+   Duration  528.78s (tests 93%, import 5%, transform 2%)
+blob report written to /home/runner/work/rea/rea/.vitest/blob/blob-built-4-8.json
+##[error]Process completed with exit code 1.
+```
+
+</details>
 
 If this is already known or expected, feel free to close. Thanks for maintaining rea!
 

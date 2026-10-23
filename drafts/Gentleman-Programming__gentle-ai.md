@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/Gentleman-Programming/gentle-ai/issues/new
-- **Stars:** 7932 · **Generated:** 2026-10-22T18:48:47.419Z
+- **Stars:** 7941 · **Generated:** 2026-10-23T01:13:37.909Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -20,7 +20,7 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### Windows Full Suite (`.github/workflows/windows-full-suite.yml`)
 
-- Latest run on `main`: https://github.com/Gentleman-Programming/gentle-ai/actions/runs/39755270080 — dark (conclusion: `failure`), 2026-10-22 09:25 UTC
+- Latest run on `main`: https://github.com/Gentleman-Programming/gentle-ai/actions/runs/39877164041 — dark (conclusion: `failure`), 2026-10-23 00:16 UTC
 - Dark since: 2026-10-21 18:46 UTC (first run of the current streak)
 - Job / step: `Windows Full Suite (rest)` → `Run shard`
 - Likely cause: FAIL
@@ -28,11 +28,11 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 <details><summary>End of the job log</summary>
 
 ```
-ok  	github.com/gentleman-programming/gentle-ai/v4/internal/update/upgrade	6.776s
-ok  	github.com/gentleman-programming/gentle-ai/v4/internal/verify	0.046s
-ok  	github.com/gentleman-programming/gentle-ai/v4/internal/versions	0.036s
+ok  	github.com/gentleman-programming/gentle-ai/v4/internal/update/upgrade	8.397s
+ok  	github.com/gentleman-programming/gentle-ai/v4/internal/verify	0.028s
+ok  	github.com/gentleman-programming/gentle-ai/v4/internal/versions	0.030s
 ?   	github.com/gentleman-programming/gentle-ai/v4/scripts	[no test files]
-ok  	github.com/gentleman-programming/gentle-ai/v4/scripts/crosslane	1.930s
+ok  	github.com/gentleman-programming/gentle-ai/v4/scripts/crosslane	2.495s
 ?   	github.com/gentleman-programming/gentle-ai/v4/scripts/gen-sdd-agent-digests	[no test files]
 FAIL
 ##[error]Process completed with exit code 1.
@@ -42,7 +42,7 @@ FAIL
 
 ### Gentle Shell macOS qualification (`.github/workflows/shell-macos-qualification.yml`)
 
-- Latest run on `main`: https://github.com/Gentleman-Programming/gentle-ai/actions/runs/39755270255 — dark (conclusion: `failure`), 2026-10-22 09:25 UTC
+- Latest run on `main`: https://github.com/Gentleman-Programming/gentle-ai/actions/runs/39877164004 — dark (conclusion: `failure`), 2026-10-23 00:16 UTC
 - Dark since: 2026-10-22 06:51 UTC (first run of the current streak)
 - Job / step: `macOS installation and recovery qualification` → `Run native installer package tests`
 - Likely cause: "strconv" imported and not used

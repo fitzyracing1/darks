@@ -1,8 +1,8 @@
 <!-- dark-draft: freeCodeCamp/freeCodeCamp -->
-<!-- draft-state: ready -->
+<!-- draft-state: resolved -->
 # Upstream issue draft: freeCodeCamp/freeCodeCamp
 
-- **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
+- **Status:** resolved — lit again (2026-10-23); nothing to file
 - **Would be filed at:** https://github.com/freeCodeCamp/freeCodeCamp/issues/new
 - **Stars:** 457704 · **Generated:** 2026-10-22T18:48:47.419Z
 - Nothing in this file has been sent anywhere.

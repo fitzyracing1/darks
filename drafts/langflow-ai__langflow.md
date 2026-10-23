@@ -4,19 +4,21 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/langflow-ai/langflow/issues/new
-- **Stars:** 155923 · **Generated:** 2026-10-22T18:48:47.419Z
+- **Stars:** 155932 · **Generated:** 2026-10-23T01:13:37.909Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: "Deploy Storybook to GitHub Pages" workflow failing on main since 2026-09-16
+CI: 2 workflows dark on main ("Deploy Storybook to GitHub Pages", "Mend")
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! The **Deploy Storybook to GitHub Pages** workflow (`.github/workflows/deploy-storybook.yml`) on `main` has been failing since 2026-09-16. Here is what I saw, in case it's useful:
+Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
+
+### Deploy Storybook to GitHub Pages (`.github/workflows/deploy-storybook.yml`)
 
 - Latest run on `main`: https://github.com/langflow-ai/langflow/actions/runs/39491949865 — dark (conclusion: `failure`), 2026-10-20 20:26 UTC
 - Dark since: 2026-09-16 01:11 UTC (first run of the current streak)
@@ -34,6 +36,28 @@ Creating Pages deployment with payload:
 	"oidc_token": "***"
 }
 ##[error]Creating Pages deployment failed
+```
+
+</details>
+
+### Mend (`.github/workflows/mend.yml`)
+
+- Latest run on `main`: https://github.com/langflow-ai/langflow/actions/runs/39850641469 — dark (conclusion: `failure`), 2026-10-22 20:38 UTC
+- Dark since: 2026-10-22 20:38 UTC (first run of the current streak)
+- Job / step: `mend-scan` → `Run Mend Scan`
+- Likely cause: [ERROR] [2026-10-22 20:55:53,971 +0000] - Process finished with exit code ERROR (-1)
+
+<details><summary>End of the job log</summary>
+
+```
+======================================================================================================================================================
+Fetch Configuration                                  COMPLETED                  00:00:00.389               --------
+======================================================================================================================================================
+Elapsed running time:                                                           00:00:00.389
+======================================================================================================================================================
+Process finished with exit code ERROR (-1)
+[ERROR] [2026-10-22 20:55:53,971 +0000] - Process finished with exit code ERROR (-1)
+##[error]Process completed with exit code 255.
 ```
 
 </details>
