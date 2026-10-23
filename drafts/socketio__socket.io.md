@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/socketio/socket.io/issues/new
-- **Stars:** 63220 · **Generated:** 2026-10-23T06:59:11.689Z
+- **Stars:** 63223 · **Generated:** 2026-10-23T12:52:35.417Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title

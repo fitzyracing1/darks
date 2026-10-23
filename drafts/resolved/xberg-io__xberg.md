@@ -1,8 +1,8 @@
 <!-- dark-draft: xberg-io/xberg -->
-<!-- draft-state: ready -->
+<!-- draft-state: resolved -->
 # Upstream issue draft: xberg-io/xberg
 
-- **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
+- **Status:** resolved — lit again (2026-10-23); nothing to file
 - **Would be filed at:** https://github.com/xberg-io/xberg/issues/new
 - **Stars:** 9440 · **Generated:** 2026-10-23T06:59:11.689Z
 - Nothing in this file has been sent anywhere.

@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/google-gemini/gemini-cli/issues/new
-- **Stars:** 107534 · **Generated:** 2026-10-23T06:59:11.689Z
+- **Stars:** 107557 · **Generated:** 2026-10-23T12:52:35.417Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -20,7 +20,7 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### 📋 Gemini Scheduled Issue Triage (`.github/workflows/gemini-scheduled-issue-triage.yml`)
 
-- Latest run on `main`: https://github.com/google-gemini/gemini-cli/actions/runs/39910790365 — dark (conclusion: `failure`), 2026-10-23 06:19 UTC
+- Latest run on `main`: https://github.com/google-gemini/gemini-cli/actions/runs/39951975079 — dark (conclusion: `failure`), 2026-10-23 12:15 UTC
 - Dark since: 2026-10-22 17:09 UTC (first run of the current streak)
 - Job / step: `triage-issues` → `Apply Triaged Labels`
 - Likely cause: Unhandled error: HttpError: Resource not accessible by integration
@@ -28,13 +28,13 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 <details><summary>End of the job log</summary>
 
 ```
-    request: {
-      agent: [Agent],
-      fetch: [Function: proxyFetch],
-      hook: [Function: bound bound register]
-    }
-  }
-}
+No telemetry log found, skipping upload.
+##[end-action id=gemini_standard_issue_analysis.__run_3;outcome=success;conclusion=success;duration_ms=15]
+Direct JSON parsing failed. Trying to extract from a markdown block.
+Aggregated triage results for 1 issues.
+RequestError [HttpError]: Resource not accessible by integration
+    at /home/runner/work/_actions/actions/github-script/60a0d83039c74a4aee543508d2ffcb1c3799cdea/dist/index.js:9537:21
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
 ##[error]Unhandled error: HttpError: Resource not accessible by integration
 ```
 

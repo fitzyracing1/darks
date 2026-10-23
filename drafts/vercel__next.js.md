@@ -4,41 +4,19 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/vercel/next.js/issues/new
-- **Stars:** 143192 · **Generated:** 2026-10-23T06:59:11.689Z
+- **Stars:** 143194 · **Generated:** 2026-10-23T12:52:35.417Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 3 workflows dark on canary ("Update Font Data", "Rspack Next.js production integration tests", "Rspack Next.js development integration tests")
+CI: 2 workflows dark on canary ("Rspack Next.js production integration tests", "Rspack Next.js development integration tests")
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
 Hi! A few workflows on `canary` have been dark recently. Details below, in case they're useful:
-
-### Update Font Data (`.github/workflows/update_fonts_data.yml`)
-
-- Latest run on `canary`: https://github.com/vercel/next.js/actions/runs/39877435523 — dark (conclusion: `failure`), 2026-10-23 00:19 UTC
-- Dark since: 2026-10-23 00:19 UTC (first run of the current streak)
-- Job / step: `create-pull-request` → `Create Pull Request`
-- Likely cause: 'husky - pre-commit script failed (code 1)\n'
-
-<details><summary>End of the job log</summary>
-
-```
-    '\n' +
-    '  ⚠ lint-staged prevented an empty git commit.\n' +
-    '  Use the --allow-empty option to continue, or check your task configuration\n' +
-    '\n' +
-    '[ELIFECYCLE] Command failed with exit code 1.\n' +
-    'husky - pre-commit script failed (code 1)\n'
-}
-##[error]Process completed with exit code 1.
-```
-
-</details>
 
 ### Rspack Next.js production integration tests (`.github/workflows/rspack-nextjs-build-integration-tests.yml`)
 
