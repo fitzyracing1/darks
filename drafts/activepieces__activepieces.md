@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/activepieces/activepieces/issues/new
-- **Stars:** 25177 · **Generated:** 2026-10-23T01:13:37.909Z
+- **Stars:** 25179 · **Generated:** 2026-10-23T06:59:11.689Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -18,7 +18,7 @@ CI: "Chat Evals" workflow failing on main since 2026-10-13
 <!-- BEGIN BODY -->
 Hi! The **Chat Evals** workflow (`.github/workflows/agent-evals.yml`) on `main` has been failing since 2026-10-13. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/activepieces/activepieces/actions/runs/39733468921 — dark (conclusion: `failure`), 2026-10-22 06:21 UTC
+- Latest run on `main`: https://github.com/activepieces/activepieces/actions/runs/39911075663 — dark (conclusion: `failure`), 2026-10-23 06:22 UTC
 - Dark since: 2026-10-13 06:26 UTC (first run of the current streak)
 - Job / step: `Live judge gate` → `Run live chat evals (scope=regression)`
 - Likely cause: Error: Hook timed out in 540000ms. (packages/server/worker/test/lib/agent-eval/agent-eval.test.ts:20)
@@ -31,8 +31,8 @@ Hi! The **Chat Evals** workflow (`.github/workflows/agent-evals.yml`) on `main` 
 ⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
  Test Files  1 failed | 12 passed (13)
       Tests  88 passed | 1 skipped (89)
-   Start at  06:26:14
-   Duration  547.36s (transform 1.50s, setup 94ms, collect 16.74s, tests 541.31s, environment 3ms, prepare 1.14s)
+   Start at  06:26:57
+   Duration  548.30s (transform 1.74s, setup 85ms, collect 18.42s, tests 541.52s, environment 3ms, prepare 1.24s)
 ##[error]Error: Hook timed out in 540000ms.
 ```
 

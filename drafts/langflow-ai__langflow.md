@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/langflow-ai/langflow/issues/new
-- **Stars:** 155932 · **Generated:** 2026-10-23T01:13:37.909Z
+- **Stars:** 155940 · **Generated:** 2026-10-23T06:59:11.689Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title

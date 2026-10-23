@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/jub0t/Concat/issues/new
-- **Stars:** 10866 · **Generated:** 2026-10-23T01:13:37.909Z
+- **Stars:** 10932 · **Generated:** 2026-10-23T06:59:11.689Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -18,22 +18,22 @@ CI: "CI" workflow failing on main since 2026-10-21
 <!-- BEGIN BODY -->
 Hi! The **CI** workflow (`.github/workflows/ci.yml`) on `main` has been failing since 2026-10-21. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/jub0t/Concat/actions/runs/39708795592 — dark (conclusion: `failure`), 2026-10-22 01:58 UTC
+- Latest run on `main`: https://github.com/jub0t/Concat/actions/runs/39902059751 — dark (conclusion: `failure`), 2026-10-23 04:45 UTC
 - Dark since: 2026-10-21 11:12 UTC (first run of the current streak)
-- Job / step: `Engine tests and lints` → `Build the tests`
-- Likely cause: The action 'Build the tests' has timed out after 25 minutes.
+- Job / step: `Format, locales and models` → `Run python3 scripts/locales.py --check`
+- Likely cause: ##[start-action display=Work around spurious network errors in curl 8.0;id=__dtolnay_rust-toolchain.__run_9]
 
 <details><summary>End of the job log</summary>
 
 ```
-   Compiling ryu v1.0.23
-   Compiling base64 v0.13.1
-   Compiling smol_str v0.2.2
-   Compiling dpi v0.1.2
-   Compiling macro_rules_attribute-proc_macro v0.2.3
-   Compiling whisper-rs v0.16.0
-   Compiling macro_rules_attribute v0.2.3
-##[error]The action 'Build the tests' has timed out after 25 minutes.
+info: syncing channel updates for 1.93.1-x86_64-unknown-linux-gnu
+info: latest update on 2026-02-12 for version 1.93.1 (01f6ddf75 2026-02-11)
+info: component rustfmt is up to date
+info: downloading component clippy
+en.json is out of date: run scripts/locales.py
+    gone:    start.safeMode
+    gone:    start.safeModePhone
+##[error]Process completed with exit code 1.
 ```
 
 </details>

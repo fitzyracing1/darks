@@ -1,10 +1,10 @@
 <!-- dark-draft: vercel/next.js -->
-<!-- draft-state: resolved -->
+<!-- draft-state: ready -->
 # Upstream issue draft: vercel/next.js
 
-- **Status:** resolved — lit again (2026-10-22); nothing to file
+- **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/vercel/next.js/issues/new
-- **Stars:** 143130 · **Generated:** 2026-10-22T07:02:51.161Z
+- **Stars:** 143192 · **Generated:** 2026-10-23T06:59:11.689Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -20,8 +20,8 @@ Hi! A few workflows on `canary` have been dark recently. Details below, in case 
 
 ### Update Font Data (`.github/workflows/update_fonts_data.yml`)
 
-- Latest run on `canary`: https://github.com/vercel/next.js/actions/runs/39698867219 — dark (conclusion: `failure`), 2026-10-22 00:18 UTC
-- Dark since: 2026-10-22 00:18 UTC (first run of the current streak)
+- Latest run on `canary`: https://github.com/vercel/next.js/actions/runs/39877435523 — dark (conclusion: `failure`), 2026-10-23 00:19 UTC
+- Dark since: 2026-10-23 00:19 UTC (first run of the current streak)
 - Job / step: `create-pull-request` → `Create Pull Request`
 - Likely cause: 'husky - pre-commit script failed (code 1)\n'
 
@@ -42,9 +42,9 @@ Hi! A few workflows on `canary` have been dark recently. Details below, in case 
 
 ### Rspack Next.js production integration tests (`.github/workflows/rspack-nextjs-build-integration-tests.yml`)
 
-- Latest run on `canary`: https://github.com/vercel/next.js/actions/runs/39725977400 — dark (conclusion: `failure`), 2026-10-22 05:04 UTC
-- Dark since: 2026-10-22 05:04 UTC (first run of the current streak)
-- Job / step: `Rspack integration tests / Next.js integration test (E2E and production) (8/12) / build` → `Run # e2e and production tests with `node run-tests.js``
+- Latest run on `canary`: https://github.com/vercel/next.js/actions/runs/39903750879 — dark (conclusion: `failure`), 2026-10-23 05:04 UTC
+- Dark since: 2026-10-23 05:04 UTC (first run of the current streak)
+- Job / step: `Rspack integration tests / Next.js integration test (E2E and production) (3/12) / build` → `Run # e2e and production tests with `node run-tests.js``
 - Likely cause: Unable to download artifact(s): Artifact not found for name: next-swc-aarch64-unknown-linux-gnu
 
 <details><summary>End of the job log</summary>
@@ -64,9 +64,9 @@ Downloading single artifact
 
 ### Rspack Next.js development integration tests (`.github/workflows/rspack-nextjs-dev-integration-tests.yml`)
 
-- Latest run on `canary`: https://github.com/vercel/next.js/actions/runs/39726431854 — dark (conclusion: `failure`), 2026-10-22 05:09 UTC
-- Dark since: 2026-10-22 05:09 UTC (first run of the current streak)
-- Job / step: `Rspack integration tests / Next.js integration test (Integration) (8/16) / build` → `Run # legacy integration tests with `node run-tests.js``
+- Latest run on `canary`: https://github.com/vercel/next.js/actions/runs/39904191126 — dark (conclusion: `failure`), 2026-10-23 05:09 UTC
+- Dark since: 2026-10-23 05:09 UTC (first run of the current streak)
+- Job / step: `Rspack integration tests / Next.js integration test (E2E and development) (3/16) / build` → `Run # e2e and development tests with `node run-tests.js``
 - Likely cause: Unable to download artifact(s): Artifact not found for name: next-swc-aarch64-unknown-linux-gnu
 
 <details><summary>End of the job log</summary>

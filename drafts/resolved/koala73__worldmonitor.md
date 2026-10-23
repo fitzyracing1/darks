@@ -1,8 +1,8 @@
 <!-- dark-draft: koala73/worldmonitor -->
-<!-- draft-state: ready -->
+<!-- draft-state: resolved -->
 # Upstream issue draft: koala73/worldmonitor
 
-- **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
+- **Status:** resolved — lit again (2026-10-23); nothing to file
 - **Would be filed at:** https://github.com/koala73/worldmonitor/issues/new
 - **Stars:** 89230 · **Generated:** 2026-10-23T01:13:37.909Z
 - Nothing in this file has been sent anywhere.

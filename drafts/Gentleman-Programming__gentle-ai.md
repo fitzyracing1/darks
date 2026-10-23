@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/Gentleman-Programming/gentle-ai/issues/new
-- **Stars:** 7941 · **Generated:** 2026-10-23T01:13:37.909Z
+- **Stars:** 7945 · **Generated:** 2026-10-23T06:59:11.689Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -20,7 +20,7 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### Windows Full Suite (`.github/workflows/windows-full-suite.yml`)
 
-- Latest run on `main`: https://github.com/Gentleman-Programming/gentle-ai/actions/runs/39877164041 — dark (conclusion: `failure`), 2026-10-23 00:16 UTC
+- Latest run on `main`: https://github.com/Gentleman-Programming/gentle-ai/actions/runs/39899955082 — dark (conclusion: `failure`), 2026-10-23 04:22 UTC
 - Dark since: 2026-10-21 18:46 UTC (first run of the current streak)
 - Job / step: `Windows Full Suite (rest)` → `Run shard`
 - Likely cause: FAIL
@@ -28,11 +28,11 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 <details><summary>End of the job log</summary>
 
 ```
-ok  	github.com/gentleman-programming/gentle-ai/v4/internal/update/upgrade	8.397s
-ok  	github.com/gentleman-programming/gentle-ai/v4/internal/verify	0.028s
-ok  	github.com/gentleman-programming/gentle-ai/v4/internal/versions	0.030s
+ok  	github.com/gentleman-programming/gentle-ai/v4/internal/update/upgrade	4.882s
+ok  	github.com/gentleman-programming/gentle-ai/v4/internal/verify	0.018s
+ok  	github.com/gentleman-programming/gentle-ai/v4/internal/versions	0.034s
 ?   	github.com/gentleman-programming/gentle-ai/v4/scripts	[no test files]
-ok  	github.com/gentleman-programming/gentle-ai/v4/scripts/crosslane	2.495s
+ok  	github.com/gentleman-programming/gentle-ai/v4/scripts/crosslane	2.841s
 ?   	github.com/gentleman-programming/gentle-ai/v4/scripts/gen-sdd-agent-digests	[no test files]
 FAIL
 ##[error]Process completed with exit code 1.
@@ -42,22 +42,22 @@ FAIL
 
 ### Gentle Shell macOS qualification (`.github/workflows/shell-macos-qualification.yml`)
 
-- Latest run on `main`: https://github.com/Gentleman-Programming/gentle-ai/actions/runs/39877164004 — dark (conclusion: `failure`), 2026-10-23 00:16 UTC
+- Latest run on `main`: https://github.com/Gentleman-Programming/gentle-ai/actions/runs/39899955067 — dark (conclusion: `failure`), 2026-10-23 04:22 UTC
 - Dark since: 2026-10-22 06:51 UTC (first run of the current streak)
-- Job / step: `macOS installation and recovery qualification` → `Run native installer package tests`
-- Likely cause: "strconv" imported and not used
+- Job / step: `macOS installation and recovery qualification` → `Qualify native Separate, Shared and recovery`
+- Likely cause: }
 
 <details><summary>End of the job log</summary>
 
 ```
-GOTOOLDIR='/Users/runner/hostedtoolcache/go/1.25.10/arm64/pkg/tool/darwin_arm64'
-GOVCS=''
-GOVERSION='go1.25.10'
-GOWORK=''
-PKG_CONFIG='pkg-config'
-go: downloading golang.org/x/sys v0.47.0
-# github.com/gentleman-programming/gentle-ai/v4/internal/shellinstaller [github.com/gentleman-programming/gentle-ai/v4/internal/shellinstaller.test]
-##[error]internal/shellinstaller/user_shell_apply_unix_test.go:21:2: undefined: writeInstallFixture
+      "gentleShell": "1.3.0",
+      "node": "v24.18.0",
+      "pi": "1.3.0"
+    }
+  },
+  "sourceSHA": "eaff4d5a06900b4fed721abe82c0a58a6c78de03"
+}
+##[error]Process completed with exit code 1.
 ```
 
 </details>

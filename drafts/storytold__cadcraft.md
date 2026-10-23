@@ -4,14 +4,8 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/storytold/cadcraft/issues/new
-- **Stars:** 6469 · **Generated:** 2026-10-23T01:13:37.909Z
+- **Stars:** 6505 · **Generated:** 2026-10-23T06:59:11.689Z
 - Nothing in this file has been sent anywhere.
-
-## Skipped: upstream already tracking
-
-- FreeBSD (`.github/workflows/freebsd.yml`): [issue #1768](https://github.com/storytold/cadcraft/issues/1768) "Release 0.10.0 not published: FreeBSD aarch64 job stalled in the release run"
-
-These workflows are left out of the body below.
 
 ## Suggested title
 
