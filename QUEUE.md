@@ -14,23 +14,22 @@ Edit `queued.json` to add entries: `[{"key": "owner/repo#.github/workflows/ci.ym
 Drafted after each crawl by `scripts/draft-upstream.mjs`, one per repo with dark workflows. **Nothing here is sent.** To approve one, change its `[ ]` to `[x]`; it is filed only when Joshua runs the manual **file-approved** workflow (typing the confirm word). Unchecked lines are never filed.
 
 - [ ] public-apis/public-apis — CI: 2 workflows dark on master ("Tests of push & pull", "Validate links") — drafts/public-apis__public-apis.md
-- [ ] openclaw/openclaw — CI: 2 workflows dark on main ("CodeQL", "CI") — drafts/openclaw__openclaw.md — note: cancelled by a concurrency group — likely noise
-- [ ] morluto/rea — CI: "CI" workflow getting cancelled on main since 2026-10-22 — drafts/morluto__rea.md — note: infra-class dark (runner/timeout/cancel) — lower value
-- [ ] NousResearch/hermes-agent — CI: 2 workflows dark on main ("Docker Build, Test, and Publish", "Deploy Site") — drafts/NousResearch__hermes-agent.md
+- [ ] openclaw/openclaw — CI: "Docs" workflow not completing (runs skipped) on main since 2026-10-20 — drafts/openclaw__openclaw.md — note: latest run was skipped, not failed — probably not worth filing
+- [ ] morluto/rea — CI: 2 workflows dark on main ("CI", "Release") — drafts/morluto__rea.md
+- [ ] NousResearch/hermes-agent — CI: "Docker Build, Test, and Publish" workflow getting cancelled on main since 2026-10-13 — drafts/NousResearch__hermes-agent.md — note: infra-class dark (runner/timeout/cancel) — lower value
 - [ ] react/react — CI: "(DevTools) Regression Tests" workflow failing on main since 2026-10-11 — drafts/react__react.md
 - [ ] TheAlgorithms/Python — CI: "hacktoberfest_prep" workflow failing on master since 2026-10-01 — drafts/TheAlgorithms__Python.md
-- [ ] anomalyco/opencode — CI: "publish" workflow getting cancelled on dev since 2026-10-23 — drafts/anomalyco__opencode.md — note: infra-class dark (runner/timeout/cancel) — lower value
-- [ ] n8n-io/n8n — CI: "Security: Sync from Public" workflow not completing (runs skipped) on master since 2026-10-13 — drafts/n8n-io__n8n.md — note: latest run was skipped, not failed — probably not worth filing
+- [ ] n8n-io/n8n — CI: 2 workflows dark on master ("Security: Sync from Public", "CI: Master (Build, Test, Lint)") — drafts/n8n-io__n8n.md
 - [ ] tensorflow/tensorflow — CI: "Creates a GitHub Issue when a PR Rolled back via Commit to Master" workflow not completing (runs skipped) on master since 2026-10-13 — drafts/tensorflow__tensorflow.md — note: latest run was skipped, not failed — probably not worth filing
-- [ ] microsoft/vscode — CI: "CodeQL" workflow getting cancelled on main since 2026-10-21 — drafts/microsoft__vscode.md — note: infra-class dark (runner/timeout/cancel) — lower value
 - [ ] huggingface/transformers — CI: "Self-hosted runner (nightly-past-ci-caller)" workflow failing to start on main since 2026-10-23 — drafts/huggingface__transformers.md — note: workflow failed to start (config/permissions on their side)
 - [ ] langflow-ai/langflow — CI: 2 workflows dark on main ("Deploy Storybook to GitHub Pages", "Mend") — drafts/langflow-ai__langflow.md
 - [ ] langchain-ai/langchain — CI: "⏰ Integration Tests" workflow failing on master since 2026-10-09 — drafts/langchain-ai__langchain.md
 - [ ] farion1231/cc-switch — CI: "WSL2 Nightly" workflow failing on main since 2026-10-22 — drafts/farion1231__cc-switch.md
+- [ ] vercel/next.js — CI: "Update Font Data" workflow failing on canary since 2026-10-24 — drafts/vercel__next.js.md
 - [ ] microsoft/PowerToys — CI: "Publish Dev Docs Website" workflow failing on main since 2026-10-06 — drafts/microsoft__PowerToys.md
 - [ ] google-gemini/gemini-cli — CI: "📋 Gemini Scheduled Issue Triage" workflow failing on main since 2026-10-22 — drafts/google-gemini__gemini-cli.md
 - [ ] headroomlabs-ai/headroom — CI: "PR Governance" workflow getting cancelled on main since 2026-10-12 — drafts/headroomlabs-ai__headroom.md — note: infra-class dark (runner/timeout/cancel) — lower value
-- [ ] storytold/photocraft — CI: 2 workflows dark on main ("Perf (nightly)", "SonarCloud") — drafts/storytold__photocraft.md
+- [ ] storytold/photocraft — CI: 3 workflows dark on main ("Perf (nightly)", "SonarCloud", "CI") — drafts/storytold__photocraft.md
 - [ ] socketio/socket.io — CI: "Build examples" workflow failing on main since 2026-09-27 — drafts/socketio__socket.io.md
 - [ ] zylon-ai/private-gpt — CI: 2 workflows dark on main ("update-claude-specs", "tests") — drafts/zylon-ai__private-gpt.md
 - [ ] DeusData/codebase-memory-mcp — CI: "CodeQL SAST" workflow failing on main since 2026-10-20 — drafts/DeusData__codebase-memory-mcp.md
@@ -43,15 +42,11 @@ Drafted after each crawl by `scripts/draft-upstream.mjs`, one per repo with dark
 - [ ] czlonkowski/n8n-mcp — CI: "Test Suite" workflow getting cancelled on main since 2026-10-22 — drafts/czlonkowski__n8n-mcp.md — note: infra-class dark (runner/timeout/cancel) — lower value
 - [ ] 1Panel-dev/MaxKB — CI: "sync2gitee" workflow failing on v2 since 2026-09-14 — drafts/1Panel-dev__MaxKB.md
 - [ ] mochajs/mocha — CI: 2 workflows dark on main ("Reusable npm script runner", "Tests") — drafts/mochajs__mocha.md
-- [ ] yetone/magpie — CI: "Test" workflow failing on main since 2026-10-23 — drafts/yetone__magpie.md
-- [ ] storytold/pdfcraft — CI: 2 workflows dark on main ("FreeBSD", "SonarCloud") — drafts/storytold__pdfcraft.md
 - [ ] googleapis/mcp-toolbox — CI: "CF: Deploy Dev Docs" workflow failing on main since 2026-09-28 — drafts/googleapis__mcp-toolbox.md
-- [ ] storytold/filmcraft — CI: "SonarCloud" workflow getting cancelled on main since 2026-10-23 — drafts/storytold__filmcraft.md — note: cancelled by a concurrency group — likely noise
-- [ ] storytold/lightcraft — CI: "SonarCloud" workflow getting cancelled on main since 2026-10-23 — drafts/storytold__lightcraft.md — note: cancelled by a concurrency group — likely noise
-- [ ] xerj-org/xerj — CI: 2 workflows dark on main ("CI", "Release") — drafts/xerj-org__xerj.md
+- [ ] storytold/lightcraft — CI: "SonarCloud" workflow getting cancelled on main since 2026-10-23 — drafts/storytold__lightcraft.md — note: infra-class dark (runner/timeout/cancel) — lower value
+- [ ] xerj-org/xerj — CI: "Release" workflow failing on main since 2026-10-23 — drafts/xerj-org__xerj.md
 - [ ] jub0t/Concat — CI: "CI" workflow failing on main since 2026-10-21 — drafts/jub0t__Concat.md
-- [ ] KnifeLemon/Filee — CI: "CI" workflow getting cancelled on main since 2026-10-23 — drafts/KnifeLemon__Filee.md — note: infra-class dark (runner/timeout/cancel) — lower value
-- [ ] storytold/vectorcraft — CI: 2 workflows dark on main ("FreeBSD", "SonarCloud") — drafts/storytold__vectorcraft.md
+- [ ] storytold/vectorcraft — CI: 3 workflows dark on main ("FreeBSD", "SonarCloud", "Windows ARM64") — drafts/storytold__vectorcraft.md
 - [ ] awslabs/mcp — CI: "Check License Header" workflow failing on main since 2026-10-13 — drafts/awslabs__mcp.md
 - [ ] tangency-labs/solidcraft — CI: "Pages" workflow getting cancelled on main since 2026-10-23 — drafts/tangency-labs__solidcraft.md — note: infra-class dark (runner/timeout/cancel) — lower value
 - [ ] modelcontextprotocol/modelcontextprotocol — CI: "Publish spec release" workflow not completing (runs skipped) on main since 2026-09-28 — drafts/modelcontextprotocol__modelcontextprotocol.md — note: latest run was skipped, not failed — probably not worth filing
@@ -65,24 +60,25 @@ Drafted after each crawl by `scripts/draft-upstream.mjs`, one per repo with dark
 
 ### Not queued — upstream already has an open issue/PR
 
+- anomalyco/opencode — drafts/anomalyco__opencode.md — open upstream: https://github.com/anomalyco/opencode/issues/57878, https://github.com/anomalyco/opencode/issues/53657, https://github.com/anomalyco/opencode/issues/51534, https://github.com/anomalyco/opencode/issues/47481
+- ruvnet/ruflo — drafts/ruvnet__ruflo.md — open upstream: https://github.com/ruvnet/ruflo/issues/3188, https://github.com/ruvnet/ruflo/issues/3111
 - jestjs/jest — drafts/jestjs__jest.md — open upstream: https://github.com/jestjs/jest/issues/16382
 - PrefectHQ/fastmcp — drafts/PrefectHQ__fastmcp.md — open upstream: https://github.com/PrefectHQ/fastmcp/issues/5714
 
-<details><summary>Resolved — lit again (45; drafts in drafts/resolved/, kept as history)</summary>
+<details><summary>Resolved — lit again (48; drafts in drafts/resolved/, kept as history)</summary>
 
 - ~~freeCodeCamp/freeCodeCamp — CI: "CI - Node.js" workflow failing on main since 2026-10-22~~ — drafts/resolved/freeCodeCamp__freeCodeCamp.md — resolved 2026-10-23 (lit again)
 - ~~affaan-m/ECC — CI: "CI" workflow failing on main since 2026-10-19~~ — drafts/resolved/affaan-m__ECC.md — resolved 2026-10-20 (lit again)
+- ~~microsoft/vscode — CI: "CodeQL" workflow getting cancelled on main since 2026-10-21~~ — drafts/resolved/microsoft__vscode.md — resolved 2026-10-24 (lit again)
 - ~~avelino/awesome-go — CI: "Check For Stale Repositories" workflow failing on main since 2026-10-18~~ — drafts/resolved/avelino__awesome-go.md — resolved 2026-10-23 (lit again)
 - ~~flutter/flutter — CI: "No Response" workflow failing on the default branch since 2026-10-14~~ — drafts/resolved/flutter__flutter.md — resolved 2026-10-14 (lit again 2026-10-14: https://github.com/flutter/flutter/actions/runs/38522431001; backfilled from past crawls)
 - ~~langgenius/dify — CI: "CLI Edge Publish" workflow failing on main since 2026-10-20~~ — drafts/resolved/langgenius__dify.md — resolved 2026-10-20 (lit again)
 - ~~open-webui/open-webui — CI: "Release to PyPI" workflow failing on the default branch since 2026-10-10~~ — drafts/resolved/open-webui__open-webui.md — resolved 2026-10-14 (lit again 2026-10-14: https://github.com/open-webui/open-webui/actions/runs/38595211615; backfilled from past crawls)
-- ~~vercel/next.js — CI: 2 workflows dark on canary ("Rspack Next.js production integration tests", "Rspack Next.js development integration tests")~~ — drafts/resolved/vercel__next.js.md — resolved 2026-10-23 (lit again)
 - ~~github/spec-kit — CI: "Deploy Documentation to Pages" workflow getting cancelled on main since 2026-10-16~~ — drafts/resolved/github__spec-kit.md — resolved 2026-10-21 (lit again)
 - ~~microsoft/TypeScript — CI: "CI" workflow failing on the default branch since 2026-10-16~~ — drafts/resolved/microsoft__TypeScript.md — resolved 2026-10-16 (lit again 2026-10-16: https://github.com/microsoft/TypeScript/actions/runs/38980809207; backfilled from past crawls)
 - ~~tailwindlabs/tailwindcss — CI: "Integration Tests" workflow failing on main since 2026-10-19~~ — drafts/resolved/tailwindlabs__tailwindcss.md — resolved 2026-10-22 (lit again)
 - ~~koala73/worldmonitor — CI: "Railway Native Deploy Health" workflow failing on main since 2026-10-23~~ — drafts/resolved/koala73__worldmonitor.md — resolved 2026-10-23 (lit again)
 - ~~vitejs/vite — CI: "CI" workflow failing on main since 2026-10-16~~ — drafts/resolved/vitejs__vite.md — resolved 2026-10-20 (lit again)
-- ~~ruvnet/ruflo — (all dark workflows already tracked upstream)~~ — drafts/resolved/ruvnet__ruflo.md — resolved 2026-10-22 (lit again)
 - ~~webpack/webpack — CI: "Release" workflow failing on main since 2026-10-22~~ — drafts/resolved/webpack__webpack.md — resolved 2026-10-23 (lit again)
 - ~~vuejs/core — CI: "ci" workflow failing on main since 2026-10-21~~ — drafts/resolved/vuejs__core.md — resolved 2026-10-22 (lit again)
 - ~~ChromeDevTools/chrome-devtools-mcp — CI: "Compile and run tests" workflow failing on the default branch since 2026-10-14~~ — drafts/resolved/ChromeDevTools__chrome-devtools-mcp.md — resolved 2026-10-15 (lit again 2026-10-15: https://github.com/ChromeDevTools/chrome-devtools-mcp/actions/runs/38693637676; backfilled from past crawls)
@@ -94,8 +90,11 @@ Drafted after each crawl by `scripts/draft-upstream.mjs`, one per repo with dark
 - ~~Automattic/mongoose — CI: 2 workflows dark on master ("Encryption Tests", "Test")~~ — drafts/resolved/Automattic__mongoose.md — resolved 2026-10-21 (lit again)
 - ~~rollup/rollup — CI: "CI" workflow failing on master since 2026-10-19~~ — drafts/resolved/rollup__rollup.md — resolved 2026-10-20 (lit again)
 - ~~pascalorg/editor — CI: "CI" workflow failing on main since 2026-10-23~~ — drafts/resolved/pascalorg__editor.md — resolved 2026-10-23 (lit again)
+- ~~yetone/magpie — CI: "Test" workflow failing on main since 2026-10-23~~ — drafts/resolved/yetone__magpie.md — resolved 2026-10-24 (lit again)
 - ~~nukeop/nuclear — CI: "CI" workflow failing on the default branch since 2026-10-12~~ — drafts/resolved/nukeop__nuclear.md — resolved 2026-10-13 (lit again 2026-10-13: https://github.com/nukeop/nuclear/actions/runs/38485681034; backfilled from past crawls)
+- ~~storytold/pdfcraft — CI: 2 workflows dark on main ("FreeBSD", "SonarCloud")~~ — drafts/resolved/storytold__pdfcraft.md — resolved 2026-10-24 (lit again)
 - ~~triggerdotdev/trigger.dev — CI: "🛡️ E2E Tests: Webapp Auth (full)" workflow failing on main since 2026-10-08~~ — drafts/resolved/triggerdotdev__trigger.dev.md — resolved 2026-10-23 (lit again)
+- ~~storytold/filmcraft — CI: "SonarCloud" workflow getting cancelled on main since 2026-10-23~~ — drafts/resolved/storytold__filmcraft.md — resolved 2026-10-24 (lit again)
 - ~~open-metadata/OpenMetadata — CI: "Maven Collate Tests" workflow failing on main since 2026-10-23~~ — drafts/resolved/open-metadata__OpenMetadata.md — resolved 2026-10-23 (lit again)
 - ~~storytold/wordcraft — CI: "Printing" workflow getting cancelled on main since 2026-10-18~~ — drafts/resolved/storytold__wordcraft.md — resolved 2026-10-23 (lit again)
 - ~~modelcontextprotocol/typescript-sdk — CI: "Release" workflow failing on main since 2026-10-22~~ — drafts/resolved/modelcontextprotocol__typescript-sdk.md — resolved 2026-10-23 (lit again)
@@ -103,6 +102,7 @@ Drafted after each crawl by `scripts/draft-upstream.mjs`, one per repo with dark
 - ~~Droid-Deck/DroidDeck — CI: "Build desktop package (KDE Plasma)" workflow failing on main since 2026-10-19~~ — drafts/resolved/Droid-Deck__DroidDeck.md — resolved 2026-10-21 (lit again)
 - ~~0xJacky/nginx-ui — CI: "E2E ACME" workflow failing on the default branch since 2026-10-15~~ — drafts/resolved/0xJacky__nginx-ui.md — resolved 2026-10-16 (lit again 2026-10-16: https://github.com/0xJacky/nginx-ui/actions/runs/38956900281; backfilled from past crawls)
 - ~~apify/apify-mcp-server — CI: 2 workflows dark on the default branch ("CI (master)", "CI (master evals)")~~ — drafts/resolved/apify__apify-mcp-server.md — resolved 2026-10-15 (lit again 2026-10-15: https://github.com/apify/apify-mcp-server/actions/runs/38733212683; backfilled from past crawls)
+- ~~KnifeLemon/Filee — CI: "CI" workflow getting cancelled on main since 2026-10-23~~ — drafts/resolved/KnifeLemon__Filee.md — resolved 2026-10-24 (lit again)
 - ~~mcp-use/mcp-use — CI: "CI" workflow failing on the default branch since 2026-10-14~~ — drafts/resolved/mcp-use__mcp-use.md — resolved 2026-10-17 (lit again 2026-10-17: https://github.com/mcp-use/mcp-use/actions/runs/38986854028; backfilled from past crawls)
 - ~~shihabal3amri/DiPlay — CI: "Android checks" workflow failing on the default branch since 2026-10-14~~ — drafts/resolved/shihabal3amri__DiPlay.md — resolved 2026-10-15 (lit again 2026-10-15: https://github.com/shihabal3amri/DiPlay/actions/runs/38722472761; backfilled from past crawls)
 - ~~xberg-io/xberg — CI: 3 workflows dark on main ("CI Integrations", "CI E2E", "CI Lint")~~ — drafts/resolved/xberg-io__xberg.md — resolved 2026-10-23 (lit again)

@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/tensorflow/tensorflow/issues/new
-- **Stars:** 201197 · **Generated:** 2026-10-23T18:49:31.715Z
+- **Stars:** 201202 · **Generated:** 2026-10-24T01:10:25.058Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** latest run was skipped, not failed — probably not worth filing
 
@@ -19,7 +19,7 @@ CI: "Creates a GitHub Issue when a PR Rolled back via Commit to Master" workflow
 <!-- BEGIN BODY -->
 Hi! The **Creates a GitHub Issue when a PR Rolled back via Commit to Master** workflow (`.github/workflows/issue-on-pr-rollback.yml`) on `master` has been not completing (runs skipped) since 2026-10-13. Here is what I saw, in case it's useful:
 
-- Latest run on `master`: https://github.com/tensorflow/tensorflow/actions/runs/40003807983 — dark (conclusion: `skipped`), 2026-10-23 18:30 UTC
+- Latest run on `master`: https://github.com/tensorflow/tensorflow/actions/runs/40044999603 — dark (conclusion: `skipped`), 2026-10-24 00:26 UTC
 - Dark since: 2026-10-13 00:19 UTC (first run of the current streak)
 - Likely cause: run skipped
 

@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/Gentleman-Programming/gentle-ai/issues/new
-- **Stars:** 7958 · **Generated:** 2026-10-23T18:49:31.715Z
+- **Stars:** 7965 · **Generated:** 2026-10-24T01:10:25.058Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -20,7 +20,7 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### Windows Full Suite (`.github/workflows/windows-full-suite.yml`)
 
-- Latest run on `main`: https://github.com/Gentleman-Programming/gentle-ai/actions/runs/39997717095 — dark (conclusion: `failure`), 2026-10-23 17:45 UTC
+- Latest run on `main`: https://github.com/Gentleman-Programming/gentle-ai/actions/runs/40036442600 — dark (conclusion: `failure`), 2026-10-23 22:53 UTC
 - Dark since: 2026-10-21 18:46 UTC (first run of the current streak)
 - Job / step: `Windows Full Suite (rest)` → `Run shard`
 - Likely cause: FAIL
@@ -28,11 +28,11 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 <details><summary>End of the job log</summary>
 
 ```
-ok  	github.com/gentleman-programming/gentle-ai/v4/internal/update/upgrade	8.656s
-ok  	github.com/gentleman-programming/gentle-ai/v4/internal/verify	0.030s
-ok  	github.com/gentleman-programming/gentle-ai/v4/internal/versions	0.026s
+ok  	github.com/gentleman-programming/gentle-ai/v4/internal/update/upgrade	8.153s
+ok  	github.com/gentleman-programming/gentle-ai/v4/internal/verify	0.032s
+ok  	github.com/gentleman-programming/gentle-ai/v4/internal/versions	0.036s
 ?   	github.com/gentleman-programming/gentle-ai/v4/scripts	[no test files]
-ok  	github.com/gentleman-programming/gentle-ai/v4/scripts/crosslane	2.694s
+ok  	github.com/gentleman-programming/gentle-ai/v4/scripts/crosslane	2.053s
 ?   	github.com/gentleman-programming/gentle-ai/v4/scripts/gen-sdd-agent-digests	[no test files]
 FAIL
 ##[error]Process completed with exit code 1.
@@ -42,7 +42,7 @@ FAIL
 
 ### Gentle Shell macOS qualification (`.github/workflows/shell-macos-qualification.yml`)
 
-- Latest run on `main`: https://github.com/Gentleman-Programming/gentle-ai/actions/runs/39997716937 — dark (conclusion: `failure`), 2026-10-23 17:45 UTC
+- Latest run on `main`: https://github.com/Gentleman-Programming/gentle-ai/actions/runs/40036442779 — dark (conclusion: `failure`), 2026-10-23 22:53 UTC
 - Dark since: 2026-10-22 06:51 UTC (first run of the current streak)
 - Job / step: `macOS installation and recovery qualification` → `Qualify native Separate, Shared and recovery`
 - Likely cause: }
@@ -55,7 +55,7 @@ FAIL
       "pi": "1.3.0"
     }
   },
-  "sourceSHA": "49e462a677b0d013dbd238eee312b4967d14b0f5"
+  "sourceSHA": "3489b6cdddf7f3593f177aa32354369395b457ed"
 }
 ##[error]Process completed with exit code 1.
 ```

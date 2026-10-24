@@ -4,49 +4,24 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/openclaw/openclaw/issues/new
-- **Stars:** 392866 · **Generated:** 2026-10-23T18:49:31.715Z
+- **Stars:** 392884 · **Generated:** 2026-10-24T01:10:25.058Z
 - Nothing in this file has been sent anywhere.
-- **Note for Joshua:** cancelled by a concurrency group — likely noise
-- **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
+- **Note for Joshua:** latest run was skipped, not failed — probably not worth filing
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 2 workflows dark on main ("CodeQL", "CI")
+CI: "Docs" workflow not completing (runs skipped) on main since 2026-10-20
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
+Hi! The **Docs** workflow (`.github/workflows/docs.yml`) on `main` has been not completing (runs skipped) since 2026-10-20. Here is what I saw, in case it's useful:
 
-### CodeQL (`.github/workflows/codeql.yml`)
-
-- Latest run on `main`: https://github.com/openclaw/openclaw/actions/runs/38883181484 — dark (conclusion: `cancelled`), 2026-10-16 09:50 UTC
-- Dark since: 2026-10-16 05:55 UTC (first run of the current streak)
-- Job / step: `Security High (network-ssrf-boundary)` → `Analyze`
-- Likely cause: Canceling since a higher priority waiting request for codeql-CodeQL-ref-refs/heads/main exists
-
-<details><summary>End of the job log</summary>
-
-```
-[59/60 eval 95ms] Evaluation done; writing results to codeql/javascript-queries/Security/CWE-916/InsufficientPasswordHash.bqrs.
-[60/60 eval 123ms] Evaluation done; writing results to codeql/javascript-queries/Security/CWE-918/RequestForgery.bqrs.
-Shutting down query evaluator.
-Interpreting code scanning results for javascript
-Writing logs to /home/runner/work/_temp/codeql_databases/javascript/log/database-interpret-results-20261016.095158.345.log.
-Recording pack reference codeql/javascript-queries at /opt/hostedtoolcache/CodeQL/2.27.2/x64/codeql/qlpacks/codeql/javascript-queries/2.4.7.
-Resolving extensions
-##[error]The operation was canceled.
-```
-
-</details>
-
-### CI (`.github/workflows/ci.yml`)
-
-- Latest run on `main`: https://github.com/openclaw/openclaw/actions/runs/38883485449 — dark (conclusion: `cancelled`), 2026-10-16 09:52 UTC
-- Dark since: 2026-10-16 09:50 UTC (first run of the current streak)
-- Likely cause: run cancelled
+- Latest run on `main`: https://github.com/openclaw/openclaw/actions/runs/39493784323 — dark (conclusion: `skipped`), 2026-10-20 20:39 UTC
+- Dark since: 2026-10-20 20:39 UTC (first run of the current streak)
+- Likely cause: run skipped
 
 If this is already known or expected, feel free to close. Thanks for maintaining openclaw!
 

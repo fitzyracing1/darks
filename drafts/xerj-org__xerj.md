@@ -4,28 +4,19 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/xerj-org/xerj/issues/new
-- **Stars:** 14131 · **Generated:** 2026-10-23T18:49:31.715Z
+- **Stars:** 14210 · **Generated:** 2026-10-24T01:10:25.058Z
 - Nothing in this file has been sent anywhere.
-- **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 2 workflows dark on main ("CI", "Release")
+CI: "Release" workflow failing on main since 2026-10-23
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
-
-### CI (`.github/workflows/ci.yml`)
-
-- Latest run on `main`: https://github.com/xerj-org/xerj/actions/runs/39992512191 — dark (conclusion: `cancelled`), 2026-10-23 17:07 UTC
-- Dark since: 2026-10-23 04:56 UTC (first run of the current streak)
-- Likely cause: run cancelled
-
-### Release (`.github/workflows/release.yml`)
+Hi! The **Release** workflow (`.github/workflows/release.yml`) on `main` has been failing since 2026-10-23. Here is what I saw, in case it's useful:
 
 - Latest run on `main`: https://github.com/xerj-org/xerj/actions/runs/39926420615 — dark (conclusion: `failure`), 2026-10-23 08:41 UTC
 - Dark since: 2026-10-23 08:41 UTC (first run of the current streak)

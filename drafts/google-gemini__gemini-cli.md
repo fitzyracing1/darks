@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/google-gemini/gemini-cli/issues/new
-- **Stars:** 107559 · **Generated:** 2026-10-23T18:49:31.715Z
+- **Stars:** 107564 · **Generated:** 2026-10-24T01:10:25.058Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -18,22 +18,22 @@ CI: "📋 Gemini Scheduled Issue Triage" workflow failing on main since 2026-10-
 <!-- BEGIN BODY -->
 Hi! The **📋 Gemini Scheduled Issue Triage** workflow (`.github/workflows/gemini-scheduled-issue-triage.yml`) on `main` has been failing since 2026-10-22. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/google-gemini/gemini-cli/actions/runs/40001548251 — dark (conclusion: `failure`), 2026-10-23 18:13 UTC
+- Latest run on `main`: https://github.com/google-gemini/gemini-cli/actions/runs/40045164965 — dark (conclusion: `failure`), 2026-10-24 00:28 UTC
 - Dark since: 2026-10-22 17:09 UTC (first run of the current streak)
-- Job / step: `triage-issues` → `Run Effort Triage Analysis`
-- Likely cause: Failed to CreateArtifact: Received non-retryable error: Failed request: (409) Conflict: an artifact with this name already exists on the workflow run
+- Job / step: `triage-issues` → `Apply Triaged Labels`
+- Likely cause: Unhandled error: HttpError: Resource not accessible by integration
 
 <details><summary>End of the job log</summary>
 
 ```
-##[start-action display=Run Gemini CLI;id=gemini_effort_issue_analysis.gemini_run]
-##[warning]Gemini CLI stderr was not valid JSON
-##[end-action id=gemini_effort_issue_analysis.gemini_run;outcome=success;conclusion=success;duration_ms=222205]
-##[start-action display=Upload Gemini CLI outputs;id=gemini_effort_issue_analysis.__actions_upload-artifact]
-With the provided path, there will be 3 files uploaded
-Artifact name is valid!
-Root directory input is valid!
-##[error]Failed to CreateArtifact: Received non-retryable error: Failed request: (409) Conflict: an artifact with this name already exists on the workflow run
+##[end-action id=gemini_standard_issue_analysis.__run_3;outcome=success;conclusion=success;duration_ms=29]
+Direct JSON parsing failed. Trying to extract from a markdown block.
+Aggregated triage results for 1 issues.
+RequestError [HttpError]: Resource not accessible by integration
+    at /home/runner/work/_actions/actions/github-script/60a0d83039c74a4aee543508d2ffcb1c3799cdea/dist/index.js:9537:21
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async module.exports (/home/runner/work/gemini-cli/gemini-cli/.github/scripts/apply-issue-labels.cjs:221:7)
+##[error]Unhandled error: HttpError: Resource not accessible by integration
 ```
 
 </details>
