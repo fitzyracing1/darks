@@ -4,13 +4,13 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/google-gemini/gemini-cli/issues/new
-- **Stars:** 107573 · **Generated:** 2026-10-24T06:53:39.693Z
+- **Stars:** 107612 · **Generated:** 2026-10-24T12:48:18.474Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 2 workflows dark on main ("Memory Tests: Nightly", "Performance Tests: Nightly")
+CI: 3 workflows dark on main ("Memory Tests: Nightly", "Performance Tests: Nightly", "📋 Gemini Scheduled Issue Triage")
 <!-- END TITLE -->
 
 ## Body
@@ -58,6 +58,28 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
  ❯ start ../node_modules/vitest/dist/chunks/cac.Cb-PYCCB.js:1412:15
  ❯ CAC.run ../node_modules/vitest/dist/chunks/cac.Cb-PYCCB.js:1391:2
 ##[error]Process completed with exit code 1.
+```
+
+</details>
+
+### 📋 Gemini Scheduled Issue Triage (`.github/workflows/gemini-scheduled-issue-triage.yml`)
+
+- Latest run on `main`: https://github.com/google-gemini/gemini-cli/actions/runs/40093112270 — dark (conclusion: `failure`), 2026-10-24 12:14 UTC
+- Dark since: 2026-10-24 07:10 UTC (first run of the current streak)
+- Job / step: `triage-issues` → `Run Effort Triage Analysis`
+- Likely cause: Failed to CreateArtifact: Received non-retryable error: Failed request: (409) Conflict: an artifact with this name already exists on the workflow run
+
+<details><summary>End of the job log</summary>
+
+```
+##[start-action display=Run Gemini CLI;id=gemini_effort_issue_analysis.gemini_run]
+##[warning]Gemini CLI stderr was not valid JSON
+##[end-action id=gemini_effort_issue_analysis.gemini_run;outcome=success;conclusion=success;duration_ms=71519]
+##[start-action display=Upload Gemini CLI outputs;id=gemini_effort_issue_analysis.__actions_upload-artifact]
+With the provided path, there will be 3 files uploaded
+Artifact name is valid!
+Root directory input is valid!
+##[error]Failed to CreateArtifact: Received non-retryable error: Failed request: (409) Conflict: an artifact with this name already exists on the workflow run
 ```
 
 </details>

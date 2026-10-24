@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/DeusData/codebase-memory-mcp/issues/new
-- **Stars:** 47370 · **Generated:** 2026-10-24T06:53:39.693Z
+- **Stars:** 47382 · **Generated:** 2026-10-24T12:48:18.474Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title

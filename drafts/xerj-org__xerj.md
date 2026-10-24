@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/xerj-org/xerj/issues/new
-- **Stars:** 14279 · **Generated:** 2026-10-24T06:53:39.693Z
+- **Stars:** 15173 · **Generated:** 2026-10-24T12:48:18.474Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
@@ -43,7 +43,7 @@ error: could not compile `xerj-server` (bin "xerj") due to 1 previous error
 
 ### CI (`.github/workflows/ci.yml`)
 
-- Latest run on `main`: https://github.com/xerj-org/xerj/actions/runs/40066614674 — dark (conclusion: `cancelled`), 2026-10-24 05:31 UTC
+- Latest run on `main`: https://github.com/xerj-org/xerj/actions/runs/40090404647 — dark (conclusion: `cancelled`), 2026-10-24 11:33 UTC
 - Dark since: 2026-10-24 05:31 UTC (first run of the current streak)
 - Likely cause: run cancelled
 

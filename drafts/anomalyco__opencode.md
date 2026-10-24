@@ -1,10 +1,10 @@
 <!-- dark-draft: anomalyco/opencode -->
-<!-- draft-state: resolved -->
+<!-- draft-state: duplicate -->
 # Upstream issue draft: anomalyco/opencode
 
-- **Status:** resolved — lit again (2026-10-24); nothing to file
+- **Status:** not for filing — upstream already has an open issue/PR about every dark workflow here
 - **Would be filed at:** https://github.com/anomalyco/opencode/issues/new
-- **Stars:** 220635 · **Generated:** 2026-10-24T01:10:25.058Z
+- **Stars:** 220913 · **Generated:** 2026-10-24T12:48:18.474Z
 - Nothing in this file has been sent anywhere.
 
 ## Skipped: upstream already tracking

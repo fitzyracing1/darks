@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/huggingface/transformers/issues/new
-- **Stars:** 168054 · **Generated:** 2026-10-24T06:53:39.693Z
+- **Stars:** 168060 · **Generated:** 2026-10-24T12:48:18.474Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** workflow failed to start (config/permissions on their side)
 - **Note for Joshua:** self-hosted runner problem — maintainers usually know
@@ -12,7 +12,7 @@
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 7 workflows dark on main ("Self-hosted runner (nightly-past-ci-caller)", "Check Tiny Models", "Self-hosted runner (Intel Gaudi3 scheduled CI caller)", +4 more)
+CI: 8 workflows dark on main ("Self-hosted runner (nightly-past-ci-caller)", "Build docker images (scheduled)", "Check Tiny Models", +5 more)
 <!-- END TITLE -->
 
 ## Body
@@ -25,6 +25,28 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 - Latest run on `main`: https://github.com/huggingface/transformers/actions/runs/40054538642 — dark (conclusion: `startup_failure`), 2026-10-24 02:31 UTC
 - Dark since: 2026-10-23 14:29 UTC (first run of the current streak)
 - Likely cause: run startup_failure
+
+### Build docker images (scheduled) (`.github/workflows/build-docker-images.yml`)
+
+- Latest run on `main`: https://github.com/huggingface/transformers/actions/runs/40047384059 — dark (conclusion: `failure`), 2026-10-24 00:55 UTC
+- Dark since: 2026-10-24 00:55 UTC (first run of the current streak)
+- Job / step: `Doc builder` → `Build and push`
+- Likely cause: buildx failed with: ERROR: failed to build: failed to solve: process "/bin/sh -c doc-builder build transformers transformers/docs/source/en --build_dir doc-build-dev --notebook_dir notebooks/transformers_doc --clean" did not complete succes
+
+<details><summary>End of the job log</summary>
+
+```
+  24 | >>> RUN doc-builder build transformers transformers/docs/source/en --build_dir doc-build-dev --notebook_dir notebooks/transformers_doc --clean
+  25 |     RUN rm -rf doc-build-dev
+  26 |
+--------------------
+ERROR: failed to build: failed to solve: process "/bin/sh -c doc-builder build transformers transformers/docs/source/en --build_dir doc-build-dev --notebook_dir notebooks/transformers_doc --clean" did not complete succe…
+builder-243c7cee-d279-42b3-8358-433f41ab69a8/builder-243c7cee-d279-42b3-8358-433f41ab69a80/9s18x7nskkw7gne0pw9xrcryi
+Build summary supported!
+##[error]buildx failed with: ERROR: failed to build: failed to solve: process "/bin/sh -c doc-builder build transformers transformers/docs/source/en --build_dir doc-build-dev --notebook_dir notebooks/transformers_doc --…
+```
+
+</details>
 
 ### Check Tiny Models (`.github/workflows/check_tiny_models.yml`)
 

@@ -4,14 +4,20 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/storytold/photocraft/issues/new
-- **Stars:** 72047 · **Generated:** 2026-10-24T06:53:39.693Z
+- **Stars:** 72180 · **Generated:** 2026-10-24T12:48:18.474Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
+
+## Skipped: upstream already tracking
+
+- FreeBSD (`.github/workflows/freebsd.yml`): [issue #9119](https://github.com/storytold/photocraft/issues/9119) "Background redraw test fails when the worker finishes before the edit (flaky on FreeBSD nightly)"
+
+These workflows are left out of the body below.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 3 workflows dark on main ("Perf (nightly)", "SonarCloud", "FreeBSD")
+CI: 2 workflows dark on main ("Perf (nightly)", "SonarCloud")
 <!-- END TITLE -->
 
 ## Body
@@ -59,28 +65,6 @@ test retouch_cmds::tests::content_aware_move_moves_the_object_and_fills_its_plac
 test retouch_cmds::tests::content_aware_move_overlapping_at_the_edge_and_on_other_targets has been running for over 60 seconds
 test retouch_cmds::tests::content_aware_move_preview_shows_the_result_without_touching_the_session ... ok
 ##[error]The operation was canceled.
-```
-
-</details>
-
-### FreeBSD (`.github/workflows/freebsd.yml`)
-
-- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/40054875853 — dark (conclusion: `failure`), 2026-10-24 02:36 UTC
-- Dark since: 2026-10-24 02:36 UTC (first run of the current streak)
-- Job / step: `freebsd / FreeBSD 15 x86_64 (build + test)` → `Build and test`
-- Likely cause: error: test failed, to rerun pass '-p photocraft-ui-egui --lib'
-
-<details><summary>End of the job log</summary>
-
-```
-thread 'background_redraw::tests::an_edit_during_a_redraw_is_not_overwritten_by_blocks_drawn_before_it' (541967) panicked at crates/ui-egui/src/background_redraw_tests.rs:220:5:
-the redraw goes on
-note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
-failures:
-    background_redraw::tests::an_edit_during_a_redraw_is_not_overwritten_by_blocks_drawn_before_it
-test result: FAILED. 3792 passed; 1 failed; 18 ignored; 0 measured; 0 filtered out; finished in 134.63s
-error: test failed, to rerun pass `-p photocraft-ui-egui --lib`
-##[error]Process completed with exit code 101.
 ```
 
 </details>
