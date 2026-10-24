@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/microsoft/PowerToys/issues/new
-- **Stars:** 139776 · **Generated:** 2026-10-24T12:48:18.474Z
+- **Stars:** 139807 · **Generated:** 2026-10-24T18:43:51.300Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -18,7 +18,7 @@ CI: "Publish Dev Docs Website" workflow failing on main since 2026-10-06
 <!-- BEGIN BODY -->
 Hi! The **Publish Dev Docs Website** workflow (`.github/workflows/regenerate-devdocs-website.yml`) on `main` has been failing since 2026-10-06. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/microsoft/PowerToys/actions/runs/39808732553 — dark (conclusion: `failure`), 2026-10-22 15:51 UTC
+- Latest run on `main`: https://github.com/microsoft/PowerToys/actions/runs/40095391224 — dark (conclusion: `failure`), 2026-10-24 12:47 UTC
 - Dark since: 2026-10-06 14:52 UTC (first run of the current streak)
 - Job / step: `build` → `Build static site with docmd`
 - Likely cause: Error: Template Render Error: emitBaseTag is not defined

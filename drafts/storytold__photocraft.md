@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/storytold/photocraft/issues/new
-- **Stars:** 72180 · **Generated:** 2026-10-24T12:48:18.474Z
+- **Stars:** 72314 · **Generated:** 2026-10-24T18:43:51.300Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
@@ -49,7 +49,7 @@ wrote /Users/runner/work/photocraft/photocraft/target/perf/results.json
 
 ### SonarCloud (`.github/workflows/sonarcloud.yml`)
 
-- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/40052993411 — dark (conclusion: `cancelled`), 2026-10-24 02:09 UTC
+- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/40106030929 — dark (conclusion: `cancelled`), 2026-10-24 15:14 UTC
 - Dark since: 2026-10-23 13:54 UTC (first run of the current streak)
 - Job / step: `sonarcloud / SonarCloud Scan` → `Generate Rust coverage`
 - Likely cause: The job has exceeded the maximum execution time of 1h0m0s
@@ -57,13 +57,13 @@ wrote /Users/runner/work/photocraft/photocraft/target/perf/results.json
 <details><summary>End of the job log</summary>
 
 ```
-test retouch_cmds::tests::content_aware_move_fails_gracefully ... ok
-test retouch_cmds::tests::content_aware_move_moves_the_object_and_fills_its_place_at_all_depths has been running for over 60 seconds
-test retouch_cmds::tests::content_aware_move_coarse_preview_handles_transform_extend_and_limits ... ok
-test retouch_cmds::content_aware_move::tests::a_preview_within_the_full_resolution_budget_is_the_plain_solve_bit_for_bit ... ok
-test retouch_cmds::tests::content_aware_move_moves_the_object_and_fills_its_place_at_all_depths ... ok
-test retouch_cmds::tests::content_aware_move_overlapping_at_the_edge_and_on_other_targets has been running for over 60 seconds
-test retouch_cmds::tests::content_aware_move_preview_shows_the_result_without_touching_the_session ... ok
+test parity::layer_effects_on_shape_layers ... ok
+test parity::layer_effects_opacity_fill_blend_and_off_canvas ... ok
+test parity::layer_effects_update_incrementally ... ok
+test parity::layer_pages_are_admitted_under_a_zero_budget_and_stay_on_the_gpu ... ok
+test parity::layer_pages_that_just_miss_borrow_the_effect_map_share ... ok
+test parity::many_layers_submit_inside_one_chunk ... ok
+test parity::non_separable_modes_on_hdr_values ... ok
 ##[error]The operation was canceled.
 ```
 

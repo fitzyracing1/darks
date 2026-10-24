@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/awslabs/mcp/issues/new
-- **Stars:** 9823 · **Generated:** 2026-10-24T12:48:18.474Z
+- **Stars:** 9827 · **Generated:** 2026-10-24T18:43:51.300Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title

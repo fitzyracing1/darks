@@ -1,8 +1,8 @@
 <!-- dark-draft: headroomlabs-ai/headroom -->
-<!-- draft-state: ready -->
+<!-- draft-state: resolved -->
 # Upstream issue draft: headroomlabs-ai/headroom
 
-- **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
+- **Status:** resolved — lit again (2026-10-24); nothing to file
 - **Would be filed at:** https://github.com/headroomlabs-ai/headroom/issues/new
 - **Stars:** 77688 · **Generated:** 2026-10-24T12:48:18.474Z
 - Nothing in this file has been sent anywhere.

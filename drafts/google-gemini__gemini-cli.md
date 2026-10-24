@@ -4,13 +4,13 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/google-gemini/gemini-cli/issues/new
-- **Stars:** 107612 · **Generated:** 2026-10-24T12:48:18.474Z
+- **Stars:** 107869 · **Generated:** 2026-10-24T18:43:51.300Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 3 workflows dark on main ("Memory Tests: Nightly", "Performance Tests: Nightly", "📋 Gemini Scheduled Issue Triage")
+CI: 3 workflows dark on main ("Memory Tests: Nightly", "Performance Tests: Nightly", "Label Workstream Rollup")
 <!-- END TITLE -->
 
 ## Body
@@ -62,24 +62,24 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 </details>
 
-### 📋 Gemini Scheduled Issue Triage (`.github/workflows/gemini-scheduled-issue-triage.yml`)
+### Label Workstream Rollup (`.github/workflows/label-workstream-rollup.yml`)
 
-- Latest run on `main`: https://github.com/google-gemini/gemini-cli/actions/runs/40093112270 — dark (conclusion: `failure`), 2026-10-24 12:14 UTC
-- Dark since: 2026-10-24 07:10 UTC (first run of the current streak)
-- Job / step: `triage-issues` → `Run Effort Triage Analysis`
-- Likely cause: Failed to CreateArtifact: Received non-retryable error: Failed request: (409) Conflict: an artifact with this name already exists on the workflow run
+- Latest run on `main`: https://github.com/google-gemini/gemini-cli/actions/runs/40119922560 — dark (conclusion: `failure`), 2026-10-24 18:16 UTC
+- Dark since: 2026-10-24 18:16 UTC (first run of the current streak)
+- Job / step: `labeler` → `Check for Parent Workstream and Apply Label`
+- Likely cause: Workflow failed: We had issues producing the response to your request. Sorry about that. Please try resubmitting your request and contact us if the problem persists.
 
 <details><summary>End of the job log</summary>
 
 ```
-##[start-action display=Run Gemini CLI;id=gemini_effort_issue_analysis.gemini_run]
-##[warning]Gemini CLI stderr was not valid JSON
-##[end-action id=gemini_effort_issue_analysis.gemini_run;outcome=success;conclusion=success;duration_ms=71519]
-##[start-action display=Upload Gemini CLI outputs;id=gemini_effort_issue_analysis.__actions_upload-artifact]
-With the provided path, there will be 3 files uploaded
-Artifact name is valid!
-Root directory input is valid!
-##[error]Failed to CreateArtifact: Received non-retryable error: Failed request: (409) Conflict: an artifact with this name already exists on the workflow run
+SUCCESS: Issue #18280 is a descendant of https://github.com/google-gemini/gemini-cli/issues/15324. Trace: https://github.com/google-gemini/gemini-cli/issues/17760 -> https://github.com/google-gemini/gemini-cli/issues/31…
+SUCCESS: Issue #18282 is a descendant of https://github.com/google-gemini/gemini-cli/issues/15324. Trace: https://github.com/google-gemini/gemini-cli/issues/22597 -> https://github.com/google-gemini/gemini-cli/issues/15…
+SUCCESS: Issue #18283 is a descendant of https://github.com/google-gemini/gemini-cli/issues/15324. Trace: https://github.com/google-gemini/gemini-cli/issues/17762 -> https://github.com/google-gemini/gemini-cli/issues/31…
+SUCCESS: Issue #18285 is a descendant of https://github.com/google-gemini/gemini-cli/issues/15324. Trace: https://github.com/google-gemini/gemini-cli/issues/17764 -> https://github.com/google-gemini/gemini-cli/issues/31…
+SUCCESS: Issue #18286 is a descendant of https://github.com/google-gemini/gemini-cli/issues/15324. Trace: https://github.com/google-gemini/gemini-cli/issues/17764 -> https://github.com/google-gemini/gemini-cli/issues/31…
+SUCCESS: Issue #18287 is a descendant of https://github.com/google-gemini/gemini-cli/issues/15324. Trace: https://github.com/google-gemini/gemini-cli/issues/17764 -> https://github.com/google-gemini/gemini-cli/issues/31…
+Failed to fetch issues batch: RequestError [HttpError]: We had issues producing the response to your request. Sorry about that. Please try resubmitting your request and contact us if the problem persists.
+##[error]Workflow failed: We had issues producing the response to your request. Sorry about that. Please try resubmitting your request and contact us if the problem persists.
 ```
 
 </details>

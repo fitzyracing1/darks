@@ -4,41 +4,20 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/vercel/next.js/issues/new
-- **Stars:** 143218 · **Generated:** 2026-10-24T12:48:18.474Z
+- **Stars:** 143215 · **Generated:** 2026-10-24T18:43:51.300Z
 - Nothing in this file has been sent anywhere.
+- **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 3 workflows dark on canary ("Update Font Data", "Rspack Next.js production integration tests", "Rspack Next.js development integration tests")
+CI: 3 workflows dark on canary ("Rspack Next.js production integration tests", "Rspack Next.js development integration tests", "build-and-test")
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
 Hi! A few workflows on `canary` have been dark recently. Details below, in case they're useful:
-
-### Update Font Data (`.github/workflows/update_fonts_data.yml`)
-
-- Latest run on `canary`: https://github.com/vercel/next.js/actions/runs/40044332231 — dark (conclusion: `failure`), 2026-10-24 00:18 UTC
-- Dark since: 2026-10-24 00:18 UTC (first run of the current streak)
-- Job / step: `create-pull-request` → `Create Pull Request`
-- Likely cause: 'husky - pre-commit script failed (code 1)\n'
-
-<details><summary>End of the job log</summary>
-
-```
-    '\n' +
-    '  ⚠ lint-staged prevented an empty git commit.\n' +
-    '  Use the --allow-empty option to continue, or check your task configuration\n' +
-    '\n' +
-    '[ELIFECYCLE] Command failed with exit code 1.\n' +
-    'husky - pre-commit script failed (code 1)\n'
-}
-##[error]Process completed with exit code 1.
-```
-
-</details>
 
 ### Rspack Next.js production integration tests (`.github/workflows/rspack-nextjs-build-integration-tests.yml`)
 
@@ -83,6 +62,12 @@ Downloading single artifact
 ```
 
 </details>
+
+### build-and-test (`.github/workflows/build_and_test.yml`)
+
+- Latest run on `canary`: https://github.com/vercel/next.js/actions/runs/40110696943 — dark (conclusion: `cancelled`), 2026-10-24 16:15 UTC
+- Dark since: 2026-10-24 16:15 UTC (first run of the current streak)
+- Likely cause: run cancelled
 
 If this is already known or expected, feel free to close. Thanks for maintaining next.js!
 

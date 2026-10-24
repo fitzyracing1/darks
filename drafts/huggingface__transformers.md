@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/huggingface/transformers/issues/new
-- **Stars:** 168060 · **Generated:** 2026-10-24T12:48:18.474Z
+- **Stars:** 168076 · **Generated:** 2026-10-24T18:43:51.300Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** workflow failed to start (config/permissions on their side)
 - **Note for Joshua:** self-hosted runner problem — maintainers usually know
@@ -22,7 +22,7 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### Self-hosted runner (nightly-past-ci-caller) (`.github/workflows/self-nightly-past-ci-caller.yml`)
 
-- Latest run on `main`: https://github.com/huggingface/transformers/actions/runs/40054538642 — dark (conclusion: `startup_failure`), 2026-10-24 02:31 UTC
+- Latest run on `main`: https://github.com/huggingface/transformers/actions/runs/40102219417 — dark (conclusion: `startup_failure`), 2026-10-24 14:22 UTC
 - Dark since: 2026-10-23 14:29 UTC (first run of the current streak)
 - Likely cause: run startup_failure
 

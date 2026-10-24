@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/langchain-ai/langchain/issues/new
-- **Stars:** 148355 · **Generated:** 2026-10-24T12:48:18.474Z
+- **Stars:** 148370 · **Generated:** 2026-10-24T18:43:51.300Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -18,21 +18,21 @@ CI: "⏰ Integration Tests" workflow failing on master since 2026-10-09
 <!-- BEGIN BODY -->
 Hi! The **⏰ Integration Tests** workflow (`.github/workflows/integration_tests.yml`) on `master` has been failing since 2026-10-09. Here is what I saw, in case it's useful:
 
-- Latest run on `master`: https://github.com/langchain-ai/langchain/actions/runs/39958534048 — dark (conclusion: `failure`), 2026-10-23 13:06 UTC
+- Latest run on `master`: https://github.com/langchain-ai/langchain/actions/runs/40096679503 — dark (conclusion: `failure`), 2026-10-24 13:05 UTC
 - Dark since: 2026-10-09 13:10 UTC (first run of the current streak)
-- Job / step: `🐍 Python 3.14: libs/partners/aws` → `🚀 Run Integration Tests`
-- Likely cause: = 279 failed, 256 passed, 230 skipped, 13 xfailed, 5 xpassed, 4 warnings in 181.34s (0:03:01) =
+- Job / step: `🐍 Python 3.14: libs/partners/mistralai` → `🚀 Run Integration Tests`
+- Likely cause: = 2 failed, 56 passed, 11 skipped, 1 xpassed, 4 warnings, 2 retried in 206.28s (0:03:26) =
 
 <details><summary>End of the job log</summary>
 
 ```
-FAILED tests/integration_tests/tools/test_nova.py::TestNovaStreaming::test_with_both_system_tools - botocore.exceptions.ClientError: An error occurred (501) when calling the ConverseStream operation:
-FAILED tests/integration_tests/tools/test_nova.py::TestNovaStreaming::test_chunk_content_structure - botocore.exceptions.ClientError: An error occurred (501) when calling the ConverseStream operation:
-FAILED tests/integration_tests/tools/test_nova.py::TestNovaStreaming::test_reasoning_with_different_effort_levels - botocore.exceptions.ClientError: An error occurred (501) when calling the ConverseStream operation:
-FAILED tests/integration_tests/tools/test_nova.py::TestNovaStreaming::test_with_string_tool_names - botocore.exceptions.ClientError: An error occurred (501) when calling the ConverseStream operation:
-FAILED tests/integration_tests/tools/test_nova.py::TestNovaStreaming::test_empty_chunks_handling - botocore.exceptions.ClientError: An error occurred (501) when calling the ConverseStream operation:
-= 279 failed, 256 passed, 230 skipped, 13 xfailed, 5 xpassed, 4 warnings in 181.34s (0:03:01) =
-make: *** [Makefile:33: integration_tests] Error 1
+24.83s call     tests/integration_tests/test_chat_models.py::test_stop_sequence
+17.43s call     tests/integration_tests/test_standard.py::TestMistralStandard::test_tool_choice
+=========================== short test summary info ============================
+FAILED tests/integration_tests/test_chat_models.py::test_reasoning - assert 0 > 0
+FAILED tests/integration_tests/test_chat_models.py::test_reasoning_v1 - assert 0 > 0
+= 2 failed, 56 passed, 11 skipped, 1 xpassed, 4 warnings, 2 retried in 206.28s (0:03:26) =
+make: *** [Makefile:24: integration_tests] Error 1
 ##[error]Process completed with exit code 2.
 ```
 

@@ -4,36 +4,37 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/morluto/rea/issues/new
-- **Stars:** 375861 · **Generated:** 2026-10-24T12:48:18.474Z
+- **Stars:** 377522 · **Generated:** 2026-10-24T18:43:51.300Z
 - Nothing in this file has been sent anywhere.
+- **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: "CI" workflow failing on main since 2026-10-22
+CI: "CI" workflow getting cancelled on main since 2026-10-22
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! The **CI** workflow (`.github/workflows/ci.yml`) on `main` has been failing since 2026-10-22. Here is what I saw, in case it's useful:
+Hi! The **CI** workflow (`.github/workflows/ci.yml`) on `main` has been getting cancelled since 2026-10-22. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/morluto/rea/actions/runs/40093209250 — dark (conclusion: `failure`), 2026-10-24 12:15 UTC
+- Latest run on `main`: https://github.com/morluto/rea/actions/runs/40120003461 — dark (conclusion: `cancelled`), 2026-10-24 18:17 UTC
 - Dark since: 2026-10-22 17:37 UTC (first run of the current streak)
-- Job / step: `Test shard (4/8)` → `Run built-dependent tests for fast feedback`
-- Likely cause: Tests  10 failed | 2014 passed | 18 skipped (2042)
+- Job / step: `Source tests` → `Run source tests without waiting for build`
+- Likely cause: The run was canceled by @gensokyo-dev.
 
 <details><summary>End of the job log</summary>
 
 ```
-    245|   });
-⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[8/10]⎯
- Test Files  1 failed | 168 passed | 4 skipped (173)
-      Tests  10 failed | 2014 passed | 18 skipped (2042)
-   Start at  12:20:02
-   Duration  712.06s (tests 94%, import 4%, transform 1%)
-blob report written to /home/runner/work/rea/rea/.vitest/blob/blob-built-4-8.json
-##[error]Process completed with exit code 1.
+ ✓  domain  src/domain/process/processCapture.validation.test.ts (30 tests) 33ms
+ ✓  domain  src/domain/analysisView/environmentStateWriteExplain.test.ts (132 tests) 306ms
+ ✓  domain  src/domain/apple/appleApplication.test.ts (39 tests) 116ms
+ ✓  domain  src/domain/javascript/javascriptApplicationGraph.test.ts (25 tests) 188ms
+ ✓  domain  src/domain/javascript/electronModuleInterop.test.ts (189 tests) 1289ms
+ ✓  domain  src/domain/javascript/javascriptSemanticGraphQuery.test.ts (24 tests) 87ms
+ ✓  domain  src/domain/javascript/javascriptSemanticAnalysis.structure.test.ts (102 tests) 135ms
+##[error]The operation was canceled.
 ```
 
 </details>
