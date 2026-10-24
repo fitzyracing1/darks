@@ -4,45 +4,36 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/morluto/rea/issues/new
-- **Stars:** 373265 · **Generated:** 2026-10-24T01:10:25.058Z
+- **Stars:** 374406 · **Generated:** 2026-10-24T06:53:39.693Z
 - Nothing in this file has been sent anywhere.
-- **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 2 workflows dark on main ("CI", "Release")
+CI: "CI" workflow failing on main since 2026-10-22
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
+Hi! The **CI** workflow (`.github/workflows/ci.yml`) on `main` has been failing since 2026-10-22. Here is what I saw, in case it's useful:
 
-### CI (`.github/workflows/ci.yml`)
-
-- Latest run on `main`: https://github.com/morluto/rea/actions/runs/40047452029 — dark (conclusion: `cancelled`), 2026-10-24 00:56 UTC
+- Latest run on `main`: https://github.com/morluto/rea/actions/runs/40066718078 — dark (conclusion: `failure`), 2026-10-24 05:33 UTC
 - Dark since: 2026-10-22 17:37 UTC (first run of the current streak)
-- Likely cause: run cancelled
-
-### Release (`.github/workflows/release.yml`)
-
-- Latest run on `main`: https://github.com/morluto/rea/actions/runs/40047726148 — dark (conclusion: `failure`), 2026-10-24 01:00 UTC
-- Dark since: 2026-10-24 00:49 UTC (first run of the current streak)
-- Job / step: `Update release proposal` → `Run googleapis/release-please-action@5c625bfb5d1ff62eadeeb3772007f7f66fdcf071`
-- Likely cause: release-please failed: API rate limit exceeded for installation. If you reach out to GitHub Support for help, please include the request ID 7019:23E9FB:2C780FF:905DE2C:6ADC0320 and timestamp 2026-10-24 01:00:16 UTC. For more on scraping Git
+- Job / step: `Test shard (1/6)` → `Run complete portable suite with coverage`
+- Likely cause: Tests  1 failed | 5229 passed | 81 skipped (5311)
 
 <details><summary>End of the job log</summary>
 
 ```
-Prepare all required actions
-Getting action download info
-Download action repository 'googleapis/release-please-action@5c625bfb5d1ff62eadeeb3772007f7f66fdcf071' (SHA:5c625bfb5d1ff62eadeeb3772007f7f66fdcf071)
-Complete job name: Update release proposal
-Running release-please version: 17.3.0
-❯ Fetching release-please-config.json from branch main
-❯ Fetching .release-please-manifest.json from branch main
-##[error]release-please failed: API rate limit exceeded for installation. If you reach out to GitHub Support for help, please include the request ID 7019:23E9FB:2C780FF:905DE2C:6ADC0320 and timestamp 2026-10-24 01:00:16…
+     84|
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+ Test Files  1 failed | 380 passed | 7 skipped (388)
+      Tests  1 failed | 5229 passed | 81 skipped (5311)
+   Start at  05:50:25
+   Duration  1007.92s (tests 92%, import 7%, transform 1%)
+blob report written to /home/runner/work/rea/rea/.vitest/blob/blob-1-6.json
+##[error]Process completed with exit code 1.
 ```
 
 </details>

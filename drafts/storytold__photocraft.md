@@ -4,14 +4,14 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/storytold/photocraft/issues/new
-- **Stars:** 71963 · **Generated:** 2026-10-24T01:10:25.058Z
+- **Stars:** 72047 · **Generated:** 2026-10-24T06:53:39.693Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 3 workflows dark on main ("Perf (nightly)", "SonarCloud", "CI")
+CI: 3 workflows dark on main ("Perf (nightly)", "SonarCloud", "FreeBSD")
 <!-- END TITLE -->
 
 ## Body
@@ -21,7 +21,7 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### Perf (nightly) (`.github/workflows/perf-nightly.yml`)
 
-- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/39896058423 — dark (conclusion: `failure`), 2026-10-23 03:38 UTC
+- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/40058999887 — dark (conclusion: `failure`), 2026-10-24 03:36 UTC
 - Dark since: 2026-10-23 03:38 UTC (first run of the current streak)
 - Job / step: `perf (macOS, Apple GPU)` → `Run benchmarks`
 - Likely cause: wrote /Users/runner/work/photocraft/photocraft/target/perf/results.json
@@ -43,7 +43,7 @@ wrote /Users/runner/work/photocraft/photocraft/target/perf/results.json
 
 ### SonarCloud (`.github/workflows/sonarcloud.yml`)
 
-- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/40041241850 — dark (conclusion: `cancelled`), 2026-10-23 23:43 UTC
+- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/40052993411 — dark (conclusion: `cancelled`), 2026-10-24 02:09 UTC
 - Dark since: 2026-10-23 13:54 UTC (first run of the current streak)
 - Job / step: `sonarcloud / SonarCloud Scan` → `Generate Rust coverage`
 - Likely cause: The job has exceeded the maximum execution time of 1h0m0s
@@ -51,36 +51,36 @@ wrote /Users/runner/work/photocraft/photocraft/target/perf/results.json
 <details><summary>End of the job log</summary>
 
 ```
-test retouch_cmds::tests::clone_stamp_sample_all_layers_onto_empty_layer_and_opacity ... ok
-test retouch_cmds::tests::clone_stamp_samples_pre_stroke_state_and_non_aligned_returns_source ... ok
-test retouch_cmds::tests::content_aware_extend_keeps_the_original ... ok
-test retouch_cmds::tests::content_aware_move_coarse_preview_handles_transform_extend_and_limits has been running for over 60 seconds
-test pixels::tests::tiled_adjustment_matches_one_pass_over_the_content ... ok
-test retouch_cmds::tests::content_aware_move_fails_gracefully has been running for over 60 seconds
 test retouch_cmds::tests::content_aware_move_fails_gracefully ... ok
+test retouch_cmds::tests::content_aware_move_moves_the_object_and_fills_its_place_at_all_depths has been running for over 60 seconds
+test retouch_cmds::tests::content_aware_move_coarse_preview_handles_transform_extend_and_limits ... ok
+test retouch_cmds::content_aware_move::tests::a_preview_within_the_full_resolution_budget_is_the_plain_solve_bit_for_bit ... ok
+test retouch_cmds::tests::content_aware_move_moves_the_object_and_fills_its_place_at_all_depths ... ok
+test retouch_cmds::tests::content_aware_move_overlapping_at_the_edge_and_on_other_targets has been running for over 60 seconds
+test retouch_cmds::tests::content_aware_move_preview_shows_the_result_without_touching_the_session ... ok
 ##[error]The operation was canceled.
 ```
 
 </details>
 
-### CI (`.github/workflows/ci.yml`)
+### FreeBSD (`.github/workflows/freebsd.yml`)
 
-- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/40041241880 — dark (conclusion: `failure`), 2026-10-23 23:43 UTC
-- Dark since: 2026-10-23 23:43 UTC (first run of the current streak)
-- Job / step: `test (windows-latest, unit)` → `Test`
-- Likely cause: error: test run failed
+- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/40054875853 — dark (conclusion: `failure`), 2026-10-24 02:36 UTC
+- Dark since: 2026-10-24 02:36 UTC (first run of the current streak)
+- Job / step: `freebsd / FreeBSD 15 x86_64 (build + test)` → `Build and test`
+- Likely cause: error: test failed, to rerun pass '-p photocraft-ui-egui --lib'
 
 <details><summary>End of the job log</summary>
 
 ```
-       2: photocraft_compose::cmyk::tests::the_split_route_agrees_with_the_exact_path
-       3: <tempfile::file::NamedTempFile as core::io::seek::Seek>::seek
-       4: core::ops::function::FnOnce::call_once
-                 at /rustc/58cf8f9c35b355199727627d07ae34a4e2846d67/library\core\src\ops\function.rs:250
-    note: Some details are omitted, run with `RUST_BACKTRACE=full` for a verbose backtrace.
-warning: 7612/9024 tests were not run due to test failure (run with --no-fail-fast to run all tests, or run with --max-fail)
-error: test run failed
-##[error]Process completed with exit code 100.
+thread 'background_redraw::tests::an_edit_during_a_redraw_is_not_overwritten_by_blocks_drawn_before_it' (541967) panicked at crates/ui-egui/src/background_redraw_tests.rs:220:5:
+the redraw goes on
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+failures:
+    background_redraw::tests::an_edit_during_a_redraw_is_not_overwritten_by_blocks_drawn_before_it
+test result: FAILED. 3792 passed; 1 failed; 18 ignored; 0 measured; 0 filtered out; finished in 134.63s
+error: test failed, to rerun pass `-p photocraft-ui-egui --lib`
+##[error]Process completed with exit code 101.
 ```
 
 </details>

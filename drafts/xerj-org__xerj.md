@@ -4,23 +4,26 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/xerj-org/xerj/issues/new
-- **Stars:** 14210 · **Generated:** 2026-10-24T01:10:25.058Z
+- **Stars:** 14279 · **Generated:** 2026-10-24T06:53:39.693Z
 - Nothing in this file has been sent anywhere.
+- **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: "Release" workflow failing on main since 2026-10-23
+CI: 2 workflows dark on main ("Release", "CI")
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! The **Release** workflow (`.github/workflows/release.yml`) on `main` has been failing since 2026-10-23. Here is what I saw, in case it's useful:
+Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
 
-- Latest run on `main`: https://github.com/xerj-org/xerj/actions/runs/39926420615 — dark (conclusion: `failure`), 2026-10-23 08:41 UTC
+### Release (`.github/workflows/release.yml`)
+
+- Latest run on `main`: https://github.com/xerj-org/xerj/actions/runs/40058986935 — dark (conclusion: `failure`), 2026-10-24 03:36 UTC
 - Dark since: 2026-10-23 08:41 UTC (first run of the current streak)
-- Job / step: `Build aarch64-unknown-linux-musl` → `Build xerj-server`
+- Job / step: `Build x86_64-unknown-linux-musl` → `Build xerj-server`
 - Likely cause: error: could not compile 'xerj-server' (bin "xerj") due to 1 previous error
 
 <details><summary>End of the job log</summary>
@@ -37,6 +40,12 @@ error: could not compile `xerj-server` (bin "xerj") due to 1 previous error
 ```
 
 </details>
+
+### CI (`.github/workflows/ci.yml`)
+
+- Latest run on `main`: https://github.com/xerj-org/xerj/actions/runs/40066614674 — dark (conclusion: `cancelled`), 2026-10-24 05:31 UTC
+- Dark since: 2026-10-24 05:31 UTC (first run of the current streak)
+- Likely cause: run cancelled
 
 If this is already known or expected, feel free to close. Thanks for maintaining xerj!
 

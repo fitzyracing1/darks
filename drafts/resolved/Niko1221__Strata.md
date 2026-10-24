@@ -1,8 +1,8 @@
 <!-- dark-draft: Niko1221/Strata -->
-<!-- draft-state: ready -->
+<!-- draft-state: resolved -->
 # Upstream issue draft: Niko1221/Strata
 
-- **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
+- **Status:** resolved — lit again (2026-10-24); nothing to file
 - **Would be filed at:** https://github.com/Niko1221/Strata/issues/new
 - **Stars:** 31187 · **Generated:** 2026-10-24T01:10:25.058Z
 - Nothing in this file has been sent anywhere.

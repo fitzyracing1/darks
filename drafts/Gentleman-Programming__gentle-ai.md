@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/Gentleman-Programming/gentle-ai/issues/new
-- **Stars:** 7965 · **Generated:** 2026-10-24T01:10:25.058Z
+- **Stars:** 7975 · **Generated:** 2026-10-24T06:53:39.693Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -20,7 +20,7 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### Windows Full Suite (`.github/workflows/windows-full-suite.yml`)
 
-- Latest run on `main`: https://github.com/Gentleman-Programming/gentle-ai/actions/runs/40036442600 — dark (conclusion: `failure`), 2026-10-23 22:53 UTC
+- Latest run on `main`: https://github.com/Gentleman-Programming/gentle-ai/actions/runs/40058886604 — dark (conclusion: `failure`), 2026-10-24 03:34 UTC
 - Dark since: 2026-10-21 18:46 UTC (first run of the current streak)
 - Job / step: `Windows Full Suite (rest)` → `Run shard`
 - Likely cause: FAIL
@@ -28,11 +28,11 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 <details><summary>End of the job log</summary>
 
 ```
-ok  	github.com/gentleman-programming/gentle-ai/v4/internal/update/upgrade	8.153s
-ok  	github.com/gentleman-programming/gentle-ai/v4/internal/verify	0.032s
-ok  	github.com/gentleman-programming/gentle-ai/v4/internal/versions	0.036s
+ok  	github.com/gentleman-programming/gentle-ai/v4/internal/update/upgrade	9.496s
+ok  	github.com/gentleman-programming/gentle-ai/v4/internal/verify	0.087s
+ok  	github.com/gentleman-programming/gentle-ai/v4/internal/versions	0.025s
 ?   	github.com/gentleman-programming/gentle-ai/v4/scripts	[no test files]
-ok  	github.com/gentleman-programming/gentle-ai/v4/scripts/crosslane	2.053s
+ok  	github.com/gentleman-programming/gentle-ai/v4/scripts/crosslane	4.940s
 ?   	github.com/gentleman-programming/gentle-ai/v4/scripts/gen-sdd-agent-digests	[no test files]
 FAIL
 ##[error]Process completed with exit code 1.
@@ -42,21 +42,21 @@ FAIL
 
 ### Gentle Shell macOS qualification (`.github/workflows/shell-macos-qualification.yml`)
 
-- Latest run on `main`: https://github.com/Gentleman-Programming/gentle-ai/actions/runs/40036442779 — dark (conclusion: `failure`), 2026-10-23 22:53 UTC
+- Latest run on `main`: https://github.com/Gentleman-Programming/gentle-ai/actions/runs/40071425910 — dark (conclusion: `failure`), 2026-10-24 06:44 UTC
 - Dark since: 2026-10-22 06:51 UTC (first run of the current streak)
-- Job / step: `macOS installation and recovery qualification` → `Qualify native Separate, Shared and recovery`
-- Likely cause: }
+- Job / step: `macOS installation and recovery qualification` → `Run native installer package tests`
+- Likely cause: FAIL
 
 <details><summary>End of the job log</summary>
 
 ```
-      "gentleShell": "1.3.0",
-      "node": "v24.18.0",
-      "pi": "1.3.0"
-    }
-  },
-  "sourceSHA": "3489b6cdddf7f3593f177aa32354369395b457ed"
-}
+    user_channel_overlay_unix_test.go:340: rollback expected an applied failure: applied=false err=<nil>
+--- FAIL: TestUserUnixChannelOverlayRefusesOccupiedComposition (0.00s)
+    user_channel_overlay_unix_test.go:384: occupied composition must refuse: applied=false err=<nil>
+FAIL
+FAIL	github.com/gentleman-programming/gentle-ai/v4/internal/shellinstaller	11.252s
+ok  	github.com/gentleman-programming/gentle-ai/v4/scripts	0.333s
+FAIL
 ##[error]Process completed with exit code 1.
 ```
 
