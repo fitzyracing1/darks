@@ -4,13 +4,14 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/langflow-ai/langflow/issues/new
-- **Stars:** 155988 · **Generated:** 2026-10-25T01:15:05.160Z
+- **Stars:** 155997 · **Generated:** 2026-10-25T06:55:04.561Z
 - Nothing in this file has been sent anywhere.
+- **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 2 workflows dark on main ("Deploy Storybook to GitHub Pages", "Mend")
+CI: 3 workflows dark on main ("Deploy Storybook to GitHub Pages", "Mend", "Nightly Build")
 <!-- END TITLE -->
 
 ## Body
@@ -61,6 +62,12 @@ Process finished with exit code ERROR (-1)
 ```
 
 </details>
+
+### Nightly Build (`.github/workflows/nightly_build.yml`)
+
+- Latest run on `main`: https://github.com/langflow-ai/langflow/actions/runs/40147415049 — dark (conclusion: `cancelled`), 2026-10-25 00:37 UTC
+- Dark since: 2026-10-25 00:37 UTC (first run of the current streak)
+- Likely cause: run cancelled
 
 If this is already known or expected, feel free to close. Thanks for maintaining langflow!
 

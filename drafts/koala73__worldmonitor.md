@@ -4,13 +4,13 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/koala73/worldmonitor/issues/new
-- **Stars:** 89435 · **Generated:** 2026-10-25T01:15:05.160Z
+- **Stars:** 89455 · **Generated:** 2026-10-25T06:55:04.561Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 2 workflows dark on main ("Railway Native Deploy Health", "Seed Freshness Monitor")
+CI: 3 workflows dark on main ("Railway Native Deploy Health", "Seed Freshness Monitor", "Perf — styleLayout budget")
 <!-- END TITLE -->
 
 ## Body
@@ -20,7 +20,7 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### Railway Native Deploy Health (`.github/workflows/railway-deploy-drift.yml`)
 
-- Latest run on `main`: https://github.com/koala73/worldmonitor/actions/runs/40148847721 — dark (conclusion: `failure`), 2026-10-25 00:59 UTC
+- Latest run on `main`: https://github.com/koala73/worldmonitor/actions/runs/40169663296 — dark (conclusion: `failure`), 2026-10-25 06:36 UTC
 - Dark since: 2026-10-24 18:27 UTC (first run of the current streak)
 - Job / step: `Railway native deployment health` → `Check Railway deployment configuration and drift`
 - Likely cause: npm warn deprecated node-domexception@1.0.0: Use your platform's native DOMException instead
@@ -33,8 +33,8 @@ npm warn install-scripts Run `npm install -g --allow-scripts=@railway/cli` to al
 Railway operational-config audit found 1 drifted service(s):
 - seed-notam-nms: source checkSuites true != false
 Read 89 service histories in 1 fleet page(s) (500 records), 0 direct fallback(s).
-Railway deploy-drift check: head=d8ba38d82 source=--head vs-origin-main=exact grace=d8ba38d82 services=89 {"CURRENT":34,"CURRENT_FOR_CLOSURE":55}
-Every service this repository deploys is running d8ba38d82 or building it.
+Railway deploy-drift check: head=b625ce9f2 source=--head vs-origin-main=exact grace=b625ce9f2 services=89 {"CURRENT_FOR_CLOSURE":86,"CURRENT":3}
+Every service this repository deploys is running b625ce9f2 or building it.
 ##[error]Process completed with exit code 1.
 ```
 
@@ -42,7 +42,7 @@ Every service this repository deploys is running d8ba38d82 or building it.
 
 ### Seed Freshness Monitor (`.github/workflows/seed-freshness-monitor.yml`)
 
-- Latest run on `main`: https://github.com/koala73/worldmonitor/actions/runs/40147800607 — dark (conclusion: `failure`), 2026-10-25 00:43 UTC
+- Latest run on `main`: https://github.com/koala73/worldmonitor/actions/runs/40168940754 — dark (conclusion: `failure`), 2026-10-25 06:23 UTC
 - Dark since: 2026-10-25 00:43 UTC (first run of the current streak)
 - Job / step: `monitor` → `Publish ingestion operational transitions`
 - Likely cause: Ingestion operational acceptance failed: the accepted-problem baseline expired on 2026-09-05T18:00:00Z. Re-review scripts/seed-freshness-baseline.json and set a new expiresAt.
@@ -50,13 +50,35 @@ Every service this repository deploys is running d8ba38d82 or building it.
 <details><summary>End of the job log</summary>
 
 ```
-Ingestion operational acceptance failed: 5 unacknowledged problem(s).
-- chokepointTransits: status=COVERAGE_PARTIAL records=3 age=3m max=30m
-- consumerPricesCoverageAU: status=STALE_SEED records=2 age=2772m max=1500m
-- consumerPricesCoverageGB: status=STALE_SEED records=3 age=2772m max=1500m
-- consumerPricesCoverageUS: status=STALE_SEED records=2 age=2772m max=1500m
-- naturalEvents: status=SEED_ERROR records=23 age=13m max=540m
+Exact main revision passed repository gates.
+- recovered: aisGaps:EMPTY no longer reported; remove it from scripts/seed-freshness-baseline.json (#7574).
+in grace: crossStraitActivityTaiwanMnd (SEED_ERROR, alerting at 2026-10-25T09:50:56.791Z)
+Ingestion operational acceptance failed: 2 unacknowledged problem(s).
+- chokepointTransits: status=COVERAGE_PARTIAL records=3 age=4m max=30m
+- forecastResolutions: status=SEED_ERROR records=1581
 Ingestion operational acceptance failed: the accepted-problem baseline expired on 2026-09-05T18:00:00Z. Re-review scripts/seed-freshness-baseline.json and set a new expiresAt.
+##[error]Process completed with exit code 1.
+```
+
+</details>
+
+### Perf — styleLayout budget (`.github/workflows/perf-style-layout-budget.yml`)
+
+- Latest run on `main`: https://github.com/koala73/worldmonitor/actions/runs/40169921337 — dark (conclusion: `failure`), 2026-10-25 06:40 UTC
+- Dark since: 2026-10-25 06:40 UTC (first run of the current streak)
+- Job / step: `measure` → `Enforce the styleLayout budget`
+- Likely cause: No VM guests are running outdated hypervisor (qemu) binaries on this host.
+
+<details><summary>End of the job log</summary>
+
+```
+|■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                |  60% of 114.3 MiB
+|■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                        |  70% of 114.3 MiB
+|■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                |  80% of 114.3 MiB
+|■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■        |  90% of 114.3 MiB
+|■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■| 100% of 114.3 MiB
+[style-layout-budget] REGRESSION: styleLayout is 28.2% of attributed main-thread self-time, over the 28% budget
+[style-layout-budget] see docs/perf/desktop-mainthread-baseline-2026-07-02.md
 ##[error]Process completed with exit code 1.
 ```
 

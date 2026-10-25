@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/storytold/photocraft/issues/new
-- **Stars:** 72406 · **Generated:** 2026-10-25T01:15:05.160Z
+- **Stars:** 72494 · **Generated:** 2026-10-25T06:55:04.561Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
@@ -27,7 +27,7 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### Perf (nightly) (`.github/workflows/perf-nightly.yml`)
 
-- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/40058999887 — dark (conclusion: `failure`), 2026-10-24 03:36 UTC
+- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/40159038499 — dark (conclusion: `failure`), 2026-10-25 03:39 UTC
 - Dark since: 2026-10-23 03:38 UTC (first run of the current streak)
 - Job / step: `perf (macOS, Apple GPU)` → `Run benchmarks`
 - Likely cause: wrote /Users/runner/work/photocraft/photocraft/target/perf/results.json
@@ -49,7 +49,7 @@ wrote /Users/runner/work/photocraft/photocraft/target/perf/results.json
 
 ### SonarCloud (`.github/workflows/sonarcloud.yml`)
 
-- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/40144258491 — dark (conclusion: `cancelled`), 2026-10-24 23:49 UTC
+- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/40164496577 — dark (conclusion: `cancelled`), 2026-10-25 05:09 UTC
 - Dark since: 2026-10-23 13:54 UTC (first run of the current streak)
 - Job / step: `sonarcloud / SonarCloud Scan` → `Generate Rust coverage`
 - Likely cause: The job has exceeded the maximum execution time of 1h0m0s
@@ -57,13 +57,13 @@ wrote /Users/runner/work/photocraft/photocraft/target/perf/results.json
 <details><summary>End of the job log</summary>
 
 ```
-test zoom_window_fit::tests::nothing_to_wrap_asks_for_nothing ... ok
-test zoom_window_fit::tests::the_window_makes_room_for_the_scrollbars ... ok
-test zoom_window_fit::tests::the_window_stays_between_the_minimum_and_the_screen ... ok
-test zoom_window_fit::tests::the_window_wraps_the_image_at_its_zoom ... ok
-test zoom_window_fit::tests::only_a_zoom_change_with_the_preference_on_resizes ... ok
-test zoom_window_fit::tests::with_the_preference_off_the_window_keeps_its_size ... ok
-test zoom_window_fit::tests::the_zoom_tool_options_bar_shows_the_same_setting ... ok
+test retouch_cmds::tests::content_aware_extend_keeps_the_original ... ok
+test retouch_cmds::tests::content_aware_move_coarse_preview_handles_transform_extend_and_limits has been running for over 60 seconds
+test pixels::tests::tiled_adjustment_matches_one_pass_over_the_content ... ok
+test retouch_cmds::tests::content_aware_move_fails_gracefully has been running for over 60 seconds
+test retouch_cmds::tests::content_aware_move_fails_gracefully ... ok
+test retouch_cmds::tests::content_aware_move_moves_the_object_and_fills_its_place_at_all_depths has been running for over 60 seconds
+test retouch_cmds::tests::content_aware_move_coarse_preview_handles_transform_extend_and_limits ... ok
 ##[error]The operation was canceled.
 ```
 

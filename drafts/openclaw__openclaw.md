@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/openclaw/openclaw/issues/new
-- **Stars:** 392961 · **Generated:** 2026-10-25T01:15:05.160Z
+- **Stars:** 392980 · **Generated:** 2026-10-25T06:55:04.561Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 - **Note for Joshua:** cancelled by a concurrency group — likely noise
@@ -23,27 +23,27 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### CI (`.github/workflows/ci.yml`)
 
-- Latest run on `main`: https://github.com/openclaw/openclaw/actions/runs/39755044894 — dark (conclusion: `cancelled`), 2026-10-22 09:23 UTC
+- Latest run on `main`: https://github.com/openclaw/openclaw/actions/runs/39493543696 — dark (conclusion: `cancelled`), 2026-10-20 20:37 UTC
 - Dark since: 2026-10-16 09:52 UTC (first run of the current streak)
 - Likely cause: run cancelled
 
 ### CodeQL (`.github/workflows/codeql.yml`)
 
-- Latest run on `main`: https://github.com/openclaw/openclaw/actions/runs/39755082903 — dark (conclusion: `cancelled`), 2026-10-22 09:23 UTC
+- Latest run on `main`: https://github.com/openclaw/openclaw/actions/runs/39493542316 — dark (conclusion: `cancelled`), 2026-10-20 20:37 UTC
 - Dark since: 2026-10-17 13:46 UTC (first run of the current streak)
-- Job / step: `Security High (process-exec-boundary)` → `Analyze`
+- Job / step: `Security High (network-ssrf-boundary)` → `Analyze`
 - Likely cause: Canceling since a higher priority waiting request for codeql-CodeQL-ref-refs/heads/main exists
 
 <details><summary>End of the job log</summary>
 
 ```
-[2026-10-22 09:26:21] [build-stdout] Done extracting /opt/hostedtoolcache/CodeQL/2.27.3/x64/codeql/javascript/tools/data/externs/nodejs/string_decoder.js (9 ms)
-[2026-10-22 09:26:21] [build-stdout] Done extracting /opt/hostedtoolcache/CodeQL/2.27.3/x64/codeql/javascript/tools/data/externs/nodejs/crypto.js (126 ms)
-[2026-10-22 09:26:21] [build-stdout] Done extracting /opt/hostedtoolcache/CodeQL/2.27.3/x64/codeql/javascript/tools/data/externs/nodejs/globals.js (117 ms)
-[command]/opt/hostedtoolcache/CodeQL/2.27.3/x64/codeql/codeql database finalize --finalize-dataset --threads=4 --ram=14575 /home/runner/work/_temp/codeql_databases/javascript
-Running TRAP import for CodeQL database at /home/runner/work/_temp/codeql_databases/javascript...
-Importing TRAP files
-Merging relations
+Cleaning up existing TRAP files after import...
+TRAP files cleaned up (2ms).
+Cleaning up scratch directory...
+Scratch directory cleaned up (0ms).
+[command]/opt/hostedtoolcache/CodeQL/2.27.2/x64/codeql/codeql database bundle /home/runner/work/_temp/codeql_databases/javascript --output=/home/runner/work/_temp/codeql_databases/javascript.zip --name=javascript
+Creating bundle metadata for /home/runner/work/_temp/codeql_databases/javascript...
+Creating zip file at /home/runner/work/_temp/codeql_databases/javascript.zip.
 ##[error]The operation was canceled.
 ```
 
@@ -51,7 +51,7 @@ Merging relations
 
 ### Docs (`.github/workflows/docs.yml`)
 
-- Latest run on `main`: https://github.com/openclaw/openclaw/actions/runs/39755044052 — dark (conclusion: `skipped`), 2026-10-22 09:23 UTC
+- Latest run on `main`: https://github.com/openclaw/openclaw/actions/runs/39493784323 — dark (conclusion: `skipped`), 2026-10-20 20:39 UTC
 - Dark since: 2026-10-20 20:39 UTC (first run of the current streak)
 - Likely cause: run skipped
 
