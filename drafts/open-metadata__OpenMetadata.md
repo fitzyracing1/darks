@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/open-metadata/OpenMetadata/issues/new
-- **Stars:** 15576 · **Generated:** 2026-10-25T12:49:12.088Z
+- **Stars:** 15577 · **Generated:** 2026-10-25T18:43:35.920Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title

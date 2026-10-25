@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/firecrawl/firecrawl/issues/new
-- **Stars:** 195166 · **Generated:** 2026-10-25T12:49:12.088Z
+- **Stars:** 195268 · **Generated:** 2026-10-25T18:43:35.920Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -18,7 +18,7 @@ CI: "Audit NPM Packages" workflow failing on main since 2026-10-24
 <!-- BEGIN BODY -->
 Hi! The **Audit NPM Packages** workflow (`.github/workflows/npm-audit.yml`) on `main` has been failing since 2026-10-24. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/firecrawl/firecrawl/actions/runs/40114462939 — dark (conclusion: `failure`), 2026-10-24 17:04 UTC
+- Latest run on `main`: https://github.com/firecrawl/firecrawl/actions/runs/40214678547 — dark (conclusion: `failure`), 2026-10-25 17:04 UTC
 - Dark since: 2026-10-24 17:04 UTC (first run of the current streak)
 - Job / step: `audit` → `Report audit failures`
 - Likely cause: Failed security audit due to high, low, moderate vulnerabilities.

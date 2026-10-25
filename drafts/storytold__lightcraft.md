@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/storytold/lightcraft/issues/new
-- **Stars:** 14596 · **Generated:** 2026-10-25T12:49:12.088Z
+- **Stars:** 14637 · **Generated:** 2026-10-25T18:43:35.920Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
@@ -19,7 +19,7 @@ CI: "SonarCloud" workflow getting cancelled on main since 2026-10-23
 <!-- BEGIN BODY -->
 Hi! The **SonarCloud** workflow (`.github/workflows/sonarcloud.yml`) on `main` has been getting cancelled since 2026-10-23. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/storytold/lightcraft/actions/runs/40163810542 — dark (conclusion: `cancelled`), 2026-10-25 04:58 UTC
+- Latest run on `main`: https://github.com/storytold/lightcraft/actions/runs/40197625041 — dark (conclusion: `cancelled`), 2026-10-25 13:26 UTC
 - Dark since: 2026-10-23 15:45 UTC (first run of the current streak)
 - Job / step: `sonarcloud / SonarCloud Scan` → `Generate Rust coverage`
 - Likely cause: The job has exceeded the maximum execution time of 1h0m0s
@@ -27,13 +27,13 @@ Hi! The **SonarCloud** workflow (`.github/workflows/sonarcloud.yml`) on `main` h
 <details><summary>End of the job log</summary>
 
 ```
-test frame_rate::tests::turning_it_back_on_shows_no_spike_for_the_time_it_was_off ... ok
-test headless::tests::a_background_export_holds_photos_while_it_writes ... ok
-test frame_rate::tests::a_long_pause_while_it_shows_is_not_a_frame ... ok
-test headless::tests::a_headless_run_waits_for_its_exports_photos_import ... ok
-test frame_rate::tests::show_frame_rate_is_a_debug_toggle ... ok
-test headless::tests::a_connected_card_opens_the_import_review ... ok
-test headless::tests::a_headless_run_waits_for_its_photos_import_before_ending ... ok
+test tests_album_picker::import_review::import_album_picker_follows_custom_sidebar_order ... ok
+test tests_album_picker::import_review::import_album_picker_handles_an_empty_catalog ... ok
+test tests_album_picker::import_review::import_album_picker_keeps_the_new_name_inside_the_dialog ... ok
+test slideshow_export::tests::video_dialog_asks_for_an_mp4_and_jpeg_for_a_folder_name ... ok
+test tests_album_picker::import_review::import_album_picker_localizes_choices_in_every_shipped_language ... ok
+test tests_album_picker::import_review::import_album_picker_fits_long_names_across_themes_sizes_and_densities ... ok
+test tests_album_picker::import_review::import_album_picker_retains_none_new_and_existing_transitions ... ok
 ##[error]The operation was canceled.
 ```
 

@@ -4,36 +4,127 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/xberg-io/xberg/issues/new
-- **Stars:** 9445 · **Generated:** 2026-10-25T12:49:12.088Z
+- **Stars:** 9447 · **Generated:** 2026-10-25T18:43:35.920Z
 - Nothing in this file has been sent anywhere.
+- **Note for Joshua:** cancelled by a concurrency group — likely noise
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: "CI Lint" workflow failing on main since 2026-10-24
+CI: 5 workflows dark on main ("CI Lint", "CI Integrations", "CI E2E", +2 more)
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! The **CI Lint** workflow (`.github/workflows/ci-lint.yaml`) on `main` has been failing since 2026-10-24. Here is what I saw, in case it's useful:
+Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
 
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/40075812976 — dark (conclusion: `failure`), 2026-10-24 07:51 UTC
+### CI Lint (`.github/workflows/ci-lint.yaml`)
+
+- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/40221589926 — dark (conclusion: `cancelled`), 2026-10-25 18:30 UTC
 - Dark since: 2026-10-24 07:14 UTC (first run of the current streak)
-- Job / step: `Alef-generated bindings freshness` → `Verify alef-generated bindings are current`
-- Likely cause: exit status 1
+- Job / step: `Benchmark script regressions` → `Validate benchmark scripts`
+- Likely cause: Canceling since a higher priority waiting request for ci-lint-refs/heads/main exists
 
 <details><summary>End of the job log</summary>
 
 ```
-      of which 321 are excluded from those headings by `[crates.verify].ignore_ephemeral` (declared ephemeral and never committed; still counted in the 344 above)
-    14 declared user-owned by `[workspace.ownership] user_owned` in alef.toml: not written, stamped or content-checked. Remove the pattern to hand a path back to alef (-vv lists them)
-  tree walk: 8388 file(s) opened, 599 never examined (name and extension outside the ownership walk's scan set, or not readable as text)
-Crates whose generation inputs (Rust sources or alef.toml) changed since their last successful `alef generate`/`alef all` run (rerun to see which files, if any, actually changed):
-  xberg
-ERROR generated bindings, versions, or snippet coverage are out of date
-task: Failed to run task "alef:verify": exit status 1
-##[error]exit status 1
+OK
+task: [benchmark:validate:scripts] python3 -m unittest tools/benchmark-harness/tests/test_mineru_extract.py
+......
+----------------------------------------------------------------------
+Ran 6 tests in 0.019s
+OK
+task: [benchmark:validate:scripts] tools/benchmark-harness/tests/test_restore_corpus_cache.sh
+##[error]The operation was canceled.
+```
+
+</details>
+
+### CI Integrations (`.github/workflows/ci-integrations.yaml`)
+
+- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/40221589583 — dark (conclusion: `cancelled`), 2026-10-25 18:30 UTC
+- Dark since: 2026-10-25 18:30 UTC (first run of the current streak)
+- Job / step: `Build local integration bindings` → `Install system dependencies`
+- Likely cause: Canceling since a higher priority waiting request for ci-integrations-refs/heads/main exists
+
+<details><summary>End of the job log</summary>
+
+```
+Setting up php8.3-snmp (8.3.6-0ubuntu0.24.04.13) ...
+Setting up php8.3-odbc (8.3.6-0ubuntu0.24.04.13) ...
+Setting up php8.3-sybase (8.3.6-0ubuntu0.24.04.13) ...
+Setting up php8.3-curl (8.3.6-0ubuntu0.24.04.13) ...
+Setting up php8.3-imap (8.3.6-0ubuntu0.24.04.13) ...
+Setting up php8.3-pgsql (8.3.6-0ubuntu0.24.04.13) ...
+Setting up php8.3-intl (8.3.6-0ubuntu0.24.04.13) ...
+##[error]The operation was canceled.
+```
+
+</details>
+
+### CI E2E (`.github/workflows/ci-e2e.yaml`)
+
+- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/40221589580 — dark (conclusion: `cancelled`), 2026-10-25 18:30 UTC
+- Dark since: 2026-10-25 18:30 UTC (first run of the current streak)
+- Job / step: `Build FFI (x86_64-unknown-linux-gnu)` → `Install system dependencies`
+- Likely cause: Canceling since a higher priority waiting request for ci-e2e-refs/heads/main exists
+
+<details><summary>End of the job log</summary>
+
+```
+Preparing to unpack .../26-php8.3-cgi_8.3.6-0ubuntu0.24.04.13_amd64.deb ...
+Unpacking php8.3-cgi (8.3.6-0ubuntu0.24.04.13) over (8.3.6-0ubuntu0.24.04.11) ...
+Preparing to unpack .../27-php8.3-bz2_8.3.6-0ubuntu0.24.04.13_amd64.deb ...
+Unpacking php8.3-bz2 (8.3.6-0ubuntu0.24.04.13) over (8.3.6-0ubuntu0.24.04.11) ...
+Preparing to unpack .../28-php8.3-bcmath_8.3.6-0ubuntu0.24.04.13_amd64.deb ...
+Unpacking php8.3-bcmath (8.3.6-0ubuntu0.24.04.13) over (8.3.6-0ubuntu0.24.04.11) ...
+Preparing to unpack .../29-php8.3-common_8.3.6-0ubuntu0.24.04.13_amd64.deb ...
+##[error]The operation was canceled.
+```
+
+</details>
+
+### CI Rust (`.github/workflows/ci-rust.yaml`)
+
+- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/40221589643 — dark (conclusion: `cancelled`), 2026-10-25 18:30 UTC
+- Dark since: 2026-10-25 18:30 UTC (first run of the current streak)
+- Job / step: `Rust tract-only (no-ORT)` → `Install system dependencies`
+- Likely cause: Canceling since a higher priority waiting request for ci-rust-refs/heads/main exists
+
+<details><summary>End of the job log</summary>
+
+```
+Preparing to unpack .../27-php8.3-bz2_8.3.6-0ubuntu0.24.04.13_arm64.deb ...
+Unpacking php8.3-bz2 (8.3.6-0ubuntu0.24.04.13) over (8.3.6-0ubuntu0.24.04.11) ...
+Preparing to unpack .../28-php8.3-bcmath_8.3.6-0ubuntu0.24.04.13_arm64.deb ...
+Unpacking php8.3-bcmath (8.3.6-0ubuntu0.24.04.13) over (8.3.6-0ubuntu0.24.04.11) ...
+Preparing to unpack .../29-php8.3-common_8.3.6-0ubuntu0.24.04.13_arm64.deb ...
+Unpacking php8.3-common (8.3.6-0ubuntu0.24.04.13) over (8.3.6-0ubuntu0.24.04.11) ...
+Setting up php8.3-common (8.3.6-0ubuntu0.24.04.13) ...
+##[error]The operation was canceled.
+```
+
+</details>
+
+### CI Mobile (`.github/workflows/ci-mobile.yaml`)
+
+- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/40221589764 — dark (conclusion: `cancelled`), 2026-10-25 18:30 UTC
+- Dark since: 2026-10-25 18:30 UTC (first run of the current streak)
+- Job / step: `Android cargo check (x86_64)` → `Run xberg-io/actions/setup-rust@v1`
+- Likely cause: Canceling since a higher priority waiting request for ci-mobile-refs/heads/main exists
+
+<details><summary>End of the job log</summary>
+
+```
+warn: to install the active toolchain, use `rustup install` instead
+warn: see <https://github.com/rust-lang/rustup/issues/4836> for more info
+1.99.1-x86_64-unknown-linux-gnu (overridden by '/home/runner/work/xberg/xberg/rust-toolchain.toml')
+info: component rustfmt is up to date
+info: component clippy is up to date
+info: component rust-src is up to date
+info: downloading component llvm-tools
+##[error]The operation was canceled.
 ```
 
 </details>

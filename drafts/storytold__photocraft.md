@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/storytold/photocraft/issues/new
-- **Stars:** 72615 · **Generated:** 2026-10-25T12:49:12.088Z
+- **Stars:** 72747 · **Generated:** 2026-10-25T18:43:35.920Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
@@ -49,7 +49,7 @@ wrote /Users/runner/work/photocraft/photocraft/target/perf/results.json
 
 ### SonarCloud (`.github/workflows/sonarcloud.yml`)
 
-- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/40164496577 — dark (conclusion: `cancelled`), 2026-10-25 05:09 UTC
+- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/40212149911 — dark (conclusion: `cancelled`), 2026-10-25 16:32 UTC
 - Dark since: 2026-10-23 13:54 UTC (first run of the current streak)
 - Job / step: `sonarcloud / SonarCloud Scan` → `Generate Rust coverage`
 - Likely cause: The job has exceeded the maximum execution time of 1h0m0s
@@ -57,13 +57,13 @@ wrote /Users/runner/work/photocraft/photocraft/target/perf/results.json
 <details><summary>End of the job log</summary>
 
 ```
+test retouch_cmds::tests::clone_stamp_respects_selection_and_cmyk ... ok
+test retouch_cmds::tests::clone_stamp_sample_all_layers_onto_empty_layer_and_opacity ... ok
+test retouch_cmds::tests::clone_stamp_samples_pre_stroke_state_and_non_aligned_returns_source ... ok
 test retouch_cmds::tests::content_aware_extend_keeps_the_original ... ok
 test retouch_cmds::tests::content_aware_move_coarse_preview_handles_transform_extend_and_limits has been running for over 60 seconds
 test pixels::tests::tiled_adjustment_matches_one_pass_over_the_content ... ok
 test retouch_cmds::tests::content_aware_move_fails_gracefully has been running for over 60 seconds
-test retouch_cmds::tests::content_aware_move_fails_gracefully ... ok
-test retouch_cmds::tests::content_aware_move_moves_the_object_and_fills_its_place_at_all_depths has been running for over 60 seconds
-test retouch_cmds::tests::content_aware_move_coarse_preview_handles_transform_extend_and_limits ... ok
 ##[error]The operation was canceled.
 ```
 
