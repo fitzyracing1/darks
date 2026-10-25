@@ -1,8 +1,8 @@
 <!-- dark-draft: yetone/magpie -->
-<!-- draft-state: ready -->
+<!-- draft-state: resolved -->
 # Upstream issue draft: yetone/magpie
 
-- **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
+- **Status:** resolved — lit again (2026-10-25); nothing to file
 - **Would be filed at:** https://github.com/yetone/magpie/issues/new
 - **Stars:** 20719 · **Generated:** 2026-10-24T18:43:51.300Z
 - Nothing in this file has been sent anywhere.

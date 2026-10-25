@@ -1,8 +1,8 @@
 <!-- dark-draft: Gentleman-Programming/engram -->
-<!-- draft-state: ready -->
+<!-- draft-state: resolved -->
 # Upstream issue draft: Gentleman-Programming/engram
 
-- **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
+- **Status:** resolved — lit again (2026-10-25); nothing to file
 - **Would be filed at:** https://github.com/Gentleman-Programming/engram/issues/new
 - **Stars:** 7588 · **Generated:** 2026-10-24T18:43:51.300Z
 - Nothing in this file has been sent anywhere.

@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/prettier/prettier/issues/new
-- **Stars:** 52379 · **Generated:** 2026-10-24T18:43:51.300Z
+- **Stars:** 52380 · **Generated:** 2026-10-25T01:15:05.160Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 

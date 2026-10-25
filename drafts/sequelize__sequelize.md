@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/sequelize/sequelize/issues/new
-- **Stars:** 30353 · **Generated:** 2026-10-24T18:43:51.300Z
+- **Stars:** 30354 · **Generated:** 2026-10-25T01:15:05.160Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -18,10 +18,10 @@ CI: "Stale issue handler" workflow failing on main since 2026-09-25
 <!-- BEGIN BODY -->
 Hi! The **Stale issue handler** workflow (`.github/workflows/stale.yml`) on `main` has been failing since 2026-09-25. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/sequelize/sequelize/actions/runs/40044622782 — dark (conclusion: `failure`), 2026-10-24 00:22 UTC
+- Latest run on `main`: https://github.com/sequelize/sequelize/actions/runs/40146578377 — dark (conclusion: `failure`), 2026-10-25 00:24 UTC
 - Dark since: 2026-09-25 00:24 UTC (first run of the current streak)
 - Job / step: `stale` → `Draft unfinished PRs`
-- Likely cause: Error processing PR #18529: Request failed due to following response errors:
+- Likely cause: Error processing PR #18526: Request failed due to following response errors:
 
 <details><summary>End of the job log</summary>
 

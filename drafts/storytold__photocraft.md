@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/storytold/photocraft/issues/new
-- **Stars:** 72314 · **Generated:** 2026-10-24T18:43:51.300Z
+- **Stars:** 72406 · **Generated:** 2026-10-25T01:15:05.160Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
@@ -49,7 +49,7 @@ wrote /Users/runner/work/photocraft/photocraft/target/perf/results.json
 
 ### SonarCloud (`.github/workflows/sonarcloud.yml`)
 
-- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/40106030929 — dark (conclusion: `cancelled`), 2026-10-24 15:14 UTC
+- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/40144258491 — dark (conclusion: `cancelled`), 2026-10-24 23:49 UTC
 - Dark since: 2026-10-23 13:54 UTC (first run of the current streak)
 - Job / step: `sonarcloud / SonarCloud Scan` → `Generate Rust coverage`
 - Likely cause: The job has exceeded the maximum execution time of 1h0m0s
@@ -57,13 +57,13 @@ wrote /Users/runner/work/photocraft/photocraft/target/perf/results.json
 <details><summary>End of the job log</summary>
 
 ```
-test parity::layer_effects_on_shape_layers ... ok
-test parity::layer_effects_opacity_fill_blend_and_off_canvas ... ok
-test parity::layer_effects_update_incrementally ... ok
-test parity::layer_pages_are_admitted_under_a_zero_budget_and_stay_on_the_gpu ... ok
-test parity::layer_pages_that_just_miss_borrow_the_effect_map_share ... ok
-test parity::many_layers_submit_inside_one_chunk ... ok
-test parity::non_separable_modes_on_hdr_values ... ok
+test zoom_window_fit::tests::nothing_to_wrap_asks_for_nothing ... ok
+test zoom_window_fit::tests::the_window_makes_room_for_the_scrollbars ... ok
+test zoom_window_fit::tests::the_window_stays_between_the_minimum_and_the_screen ... ok
+test zoom_window_fit::tests::the_window_wraps_the_image_at_its_zoom ... ok
+test zoom_window_fit::tests::only_a_zoom_change_with_the_preference_on_resizes ... ok
+test zoom_window_fit::tests::with_the_preference_off_the_window_keeps_its_size ... ok
+test zoom_window_fit::tests::the_zoom_tool_options_bar_shows_the_same_setting ... ok
 ##[error]The operation was canceled.
 ```
 

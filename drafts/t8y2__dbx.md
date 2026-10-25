@@ -4,21 +4,19 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/t8y2/dbx/issues/new
-- **Stars:** 27672 · **Generated:** 2026-10-24T18:43:51.300Z
+- **Stars:** 27684 · **Generated:** 2026-10-25T01:15:05.160Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 2 workflows dark on main ("Deploy Docs", "CI")
+CI: "Deploy Docs" workflow failing on main since 2026-10-23
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
-
-### Deploy Docs (`.github/workflows/docs.yml`)
+Hi! The **Deploy Docs** workflow (`.github/workflows/docs.yml`) on `main` has been failing since 2026-10-23. Here is what I saw, in case it's useful:
 
 - Latest run on `main`: https://github.com/t8y2/dbx/actions/runs/40118790098 — dark (conclusion: `failure`), 2026-10-24 18:01 UTC
 - Dark since: 2026-10-23 04:08 UTC (first run of the current streak)
@@ -36,28 +34,6 @@ Error: SEO verification failed:
 Node.js v22.23.3
  ELIFECYCLE  Command failed with exit code 1.
 ##[error]Process completed with exit code 1.
-```
-
-</details>
-
-### CI (`.github/workflows/ci.yml`)
-
-- Latest run on `main`: https://github.com/t8y2/dbx/actions/runs/40120368494 — dark (conclusion: `failure`), 2026-10-24 18:22 UTC
-- Dark since: 2026-10-24 08:21 UTC (first run of the current streak)
-- Job / step: `frontend-test (2/2)` → `Run frontend test shard`
-- Likely cause: AssertionError: Expected values to be strictly equal: (packages/app-tests/dataGridEditor.test.ts:2172)
-
-<details><summary>End of the job log</summary>
-
-```
-    2173|   assert.deepEqual(savedDirtyRows, [[[0, [[1, "Ada 1"]]]], [[0, [[1, "…
-    2174|   assert.equal(editor.dirtyRows.value.size, 0);
-⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[5/5]⎯
- Test Files  1 failed | 1001 passed (1002)
-      Tests  5 failed | 12939 passed (12944)
-   Start at  18:23:54
-   Duration  253.33s (transform 63.68s, setup 0ms, import 348.50s, tests 393.17s, environment 95.77s)
-##[error]AssertionError: Expected values to be strictly equal:
 ```
 
 </details>

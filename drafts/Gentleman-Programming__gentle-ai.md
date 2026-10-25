@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/Gentleman-Programming/gentle-ai/issues/new
-- **Stars:** 7986 · **Generated:** 2026-10-24T18:43:51.300Z
+- **Stars:** 7993 · **Generated:** 2026-10-25T01:15:05.160Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -20,7 +20,7 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### Windows Full Suite (`.github/workflows/windows-full-suite.yml`)
 
-- Latest run on `main`: https://github.com/Gentleman-Programming/gentle-ai/actions/runs/40104847169 — dark (conclusion: `failure`), 2026-10-24 14:58 UTC
+- Latest run on `main`: https://github.com/Gentleman-Programming/gentle-ai/actions/runs/40139229314 — dark (conclusion: `failure`), 2026-10-24 22:35 UTC
 - Dark since: 2026-10-21 18:46 UTC (first run of the current streak)
 - Job / step: `Windows Full Suite (rest)` → `Run shard`
 - Likely cause: FAIL
@@ -28,11 +28,11 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 <details><summary>End of the job log</summary>
 
 ```
-ok  	github.com/gentleman-programming/gentle-ai/v4/internal/update/upgrade	8.742s
-ok  	github.com/gentleman-programming/gentle-ai/v4/internal/verify	0.046s
-ok  	github.com/gentleman-programming/gentle-ai/v4/internal/versions	0.033s
+ok  	github.com/gentleman-programming/gentle-ai/v4/internal/update/upgrade	6.397s
+ok  	github.com/gentleman-programming/gentle-ai/v4/internal/verify	0.027s
+ok  	github.com/gentleman-programming/gentle-ai/v4/internal/versions	0.189s
 ?   	github.com/gentleman-programming/gentle-ai/v4/scripts	[no test files]
-ok  	github.com/gentleman-programming/gentle-ai/v4/scripts/crosslane	2.394s
+ok  	github.com/gentleman-programming/gentle-ai/v4/scripts/crosslane	5.417s
 ?   	github.com/gentleman-programming/gentle-ai/v4/scripts/gen-sdd-agent-digests	[no test files]
 FAIL
 ##[error]Process completed with exit code 1.
@@ -42,7 +42,7 @@ FAIL
 
 ### Gentle Shell macOS qualification (`.github/workflows/shell-macos-qualification.yml`)
 
-- Latest run on `main`: https://github.com/Gentleman-Programming/gentle-ai/actions/runs/40074142926 — dark (conclusion: `failure`), 2026-10-24 07:26 UTC
+- Latest run on `main`: https://github.com/Gentleman-Programming/gentle-ai/actions/runs/40139229311 — dark (conclusion: `failure`), 2026-10-24 22:35 UTC
 - Dark since: 2026-10-22 06:51 UTC (first run of the current streak)
 - Job / step: `macOS installation and recovery qualification` → `Run native installer package tests`
 - Likely cause: FAIL
@@ -54,8 +54,8 @@ FAIL
 --- FAIL: TestUserUnixChannelOverlayRefusesOccupiedComposition (0.00s)
     user_channel_overlay_unix_test.go:384: occupied composition must refuse: applied=false err=<nil>
 FAIL
-FAIL	github.com/gentleman-programming/gentle-ai/v4/internal/shellinstaller	11.683s
-ok  	github.com/gentleman-programming/gentle-ai/v4/scripts	0.345s
+FAIL	github.com/gentleman-programming/gentle-ai/v4/internal/shellinstaller	11.081s
+ok  	github.com/gentleman-programming/gentle-ai/v4/scripts	0.324s
 FAIL
 ##[error]Process completed with exit code 1.
 ```
