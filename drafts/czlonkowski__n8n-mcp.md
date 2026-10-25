@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/czlonkowski/n8n-mcp/issues/new
-- **Stars:** 23128 · **Generated:** 2026-10-25T06:55:04.561Z
+- **Stars:** 23132 · **Generated:** 2026-10-25T12:49:12.088Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -18,20 +18,20 @@ CI: "Test Suite" workflow failing on main since 2026-10-24
 <!-- BEGIN BODY -->
 Hi! The **Test Suite** workflow (`.github/workflows/test.yml`) on `main` has been failing since 2026-10-24. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/czlonkowski/n8n-mcp/actions/runs/40132046280 — dark (conclusion: `failure`), 2026-10-24 20:56 UTC
+- Latest run on `main`: https://github.com/czlonkowski/n8n-mcp/actions/runs/40172804029 — dark (conclusion: `failure`), 2026-10-25 07:27 UTC
 - Dark since: 2026-10-24 17:03 UTC (first run of the current streak)
 - Job / step: `test` → `Run unit tests with coverage`
-- Likely cause: Tests  2 failed | 7451 passed | 35 skipped (7488)
+- Likely cause: Tests  2 failed | 7468 passed | 35 skipped (7505)
 
 <details><summary>End of the job log</summary>
 
 ```
     256|       });
+ Test Files  2 failed | 214 passed (216)
 ⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/2]⎯
- Test Files  2 failed | 212 passed (214)
-      Tests  2 failed | 7451 passed | 35 skipped (7488)
-   Start at  20:58:29
-   Duration  57.15s (transform 10.15s, setup 4.52s, collect 44.25s, tests 100.62s, environment 65ms, prepare 23.58s)
+      Tests  2 failed | 7468 passed | 35 skipped (7505)
+   Start at  07:28:36
+   Duration  75.61s (transform 13.11s, setup 5.78s, collect 60.73s, tests 129.14s, environment 107ms, prepare 33.76s)
 JUNIT report written to /home/runner/work/n8n-mcp/n8n-mcp/test-results/junit.xml
 ##[error]Process completed with exit code 1.
 ```

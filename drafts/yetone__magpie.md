@@ -4,39 +4,24 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/yetone/magpie/issues/new
-- **Stars:** 20986 · **Generated:** 2026-10-25T06:55:04.561Z
+- **Stars:** 21195 · **Generated:** 2026-10-25T12:49:12.088Z
 - Nothing in this file has been sent anywhere.
+- **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: "Test" workflow failing on main since 2026-10-25
+CI: "Test" workflow getting cancelled on main since 2026-10-25
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! The **Test** workflow (`.github/workflows/test.yml`) on `main` has been failing since 2026-10-25. Here is what I saw, in case it's useful:
+Hi! The **Test** workflow (`.github/workflows/test.yml`) on `main` has been getting cancelled since 2026-10-25. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/yetone/magpie/actions/runs/40168356741 — dark (conclusion: `failure`), 2026-10-25 06:13 UTC
+- Latest run on `main`: https://github.com/yetone/magpie/actions/runs/40193310104 — dark (conclusion: `cancelled`), 2026-10-25 12:29 UTC
 - Dark since: 2026-10-25 04:42 UTC (first run of the current streak)
-- Job / step: `test (ubuntu-latest)` → `Test`
-- Likely cause: FAIL
-
-<details><summary>End of the job log</summary>
-
-```
-?   	github.com/yetone/magpie/plugins/routing	[no test files]
-ok  	github.com/yetone/magpie/plugins/search	0.014s
-?   	github.com/yetone/magpie/plugins/sessions	[no test files]
-ok  	github.com/yetone/magpie/plugins/tools	0.009s
-?   	github.com/yetone/magpie/plugins/usage	[no test files]
-?   	github.com/yetone/magpie/plugins/warmups	[no test files]
-FAIL
-##[error]Process completed with exit code 1.
-```
-
-</details>
+- Likely cause: run cancelled
 
 If this is already known or expected, feel free to close. Thanks for maintaining magpie!
 

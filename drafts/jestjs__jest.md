@@ -4,7 +4,7 @@
 
 - **Status:** not for filing — upstream already has an open issue/PR about every dark workflow here
 - **Would be filed at:** https://github.com/jestjs/jest/issues/new
-- **Stars:** 45471 · **Generated:** 2026-10-25T06:55:04.561Z
+- **Stars:** 45471 · **Generated:** 2026-10-25T12:49:12.088Z
 - Nothing in this file has been sent anywhere.
 
 ## Skipped: upstream already tracking

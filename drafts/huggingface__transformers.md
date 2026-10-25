@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/huggingface/transformers/issues/new
-- **Stars:** 168113 · **Generated:** 2026-10-25T06:55:04.561Z
+- **Stars:** 168130 · **Generated:** 2026-10-25T12:49:12.088Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** workflow failed to start (config/permissions on their side)
 - **Note for Joshua:** self-hosted runner problem — maintainers usually know
@@ -28,7 +28,7 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### Build docker images (scheduled) (`.github/workflows/build-docker-images.yml`)
 
-- Latest run on `main`: https://github.com/huggingface/transformers/actions/runs/40047384059 — dark (conclusion: `failure`), 2026-10-24 00:55 UTC
+- Latest run on `main`: https://github.com/huggingface/transformers/actions/runs/40149024554 — dark (conclusion: `failure`), 2026-10-25 01:02 UTC
 - Dark since: 2026-10-24 00:55 UTC (first run of the current streak)
 - Job / step: `Doc builder` → `Build and push`
 - Likely cause: buildx failed with: ERROR: failed to build: failed to solve: process "/bin/sh -c doc-builder build transformers transformers/docs/source/en --build_dir doc-build-dev --notebook_dir notebooks/transformers_doc --clean" did not complete succes
@@ -41,7 +41,7 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
   26 |
 --------------------
 ERROR: failed to build: failed to solve: process "/bin/sh -c doc-builder build transformers transformers/docs/source/en --build_dir doc-build-dev --notebook_dir notebooks/transformers_doc --clean" did not complete succe…
-builder-243c7cee-d279-42b3-8358-433f41ab69a8/builder-243c7cee-d279-42b3-8358-433f41ab69a80/9s18x7nskkw7gne0pw9xrcryi
+builder-e893ef4c-1929-4532-b98f-7992cf58974c/builder-e893ef4c-1929-4532-b98f-7992cf58974c0/lmll2mqhf3edy7ic3znvwytxq
 Build summary supported!
 ##[error]buildx failed with: ERROR: failed to build: failed to solve: process "/bin/sh -c doc-builder build transformers transformers/docs/source/en --build_dir doc-build-dev --notebook_dir notebooks/transformers_doc --…
 ```

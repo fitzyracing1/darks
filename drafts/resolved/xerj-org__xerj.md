@@ -1,8 +1,8 @@
 <!-- dark-draft: xerj-org/xerj -->
-<!-- draft-state: ready -->
+<!-- draft-state: resolved -->
 # Upstream issue draft: xerj-org/xerj
 
-- **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
+- **Status:** resolved — lit again (2026-10-25); nothing to file
 - **Would be filed at:** https://github.com/xerj-org/xerj/issues/new
 - **Stars:** 15373 · **Generated:** 2026-10-25T06:55:04.561Z
 - Nothing in this file has been sent anywhere.

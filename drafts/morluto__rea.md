@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/morluto/rea/issues/new
-- **Stars:** 379975 · **Generated:** 2026-10-25T06:55:04.561Z
+- **Stars:** 381651 · **Generated:** 2026-10-25T12:49:12.088Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
@@ -19,7 +19,7 @@ CI: "CI" workflow getting cancelled on main since 2026-10-22
 <!-- BEGIN BODY -->
 Hi! The **CI** workflow (`.github/workflows/ci.yml`) on `main` has been getting cancelled since 2026-10-22. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/morluto/rea/actions/runs/40168671878 — dark (conclusion: `cancelled`), 2026-10-25 06:19 UTC
+- Latest run on `main`: https://github.com/morluto/rea/actions/runs/40193324189 — dark (conclusion: `cancelled`), 2026-10-25 12:29 UTC
 - Dark since: 2026-10-22 17:37 UTC (first run of the current streak)
 - Likely cause: run cancelled
 
