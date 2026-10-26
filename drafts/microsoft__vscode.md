@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/microsoft/vscode/issues/new
-- **Stars:** 194329 · **Generated:** 2026-10-26T14:20:59.370Z
+- **Stars:** 194333 · **Generated:** 2026-10-26T18:57:58.513Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
@@ -19,7 +19,7 @@ CI: "CodeQL" workflow getting cancelled on main since 2026-10-26
 <!-- BEGIN BODY -->
 Hi! The **CodeQL** workflow (`.github/workflows/codeql.yml`) on `main` has been getting cancelled since 2026-10-26. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/microsoft/vscode/actions/runs/40327097645 — dark (conclusion: `cancelled`), 2026-10-26 13:01 UTC
+- Latest run on `main`: https://github.com/microsoft/vscode/actions/runs/40378275776 — dark (conclusion: `cancelled`), 2026-10-26 18:30 UTC
 - Dark since: 2026-10-26 13:01 UTC (first run of the current streak)
 - Likely cause: run cancelled
 

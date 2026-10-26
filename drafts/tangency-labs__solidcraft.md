@@ -4,40 +4,24 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/tangency-labs/solidcraft/issues/new
-- **Stars:** 10685 · **Generated:** 2026-10-26T14:20:59.370Z
+- **Stars:** 10752 · **Generated:** 2026-10-26T18:57:58.513Z
 - Nothing in this file has been sent anywhere.
-- **Note for Joshua:** cancelled by a concurrency group — likely noise
+- **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: "Docker" workflow getting cancelled on main since 2026-10-26
+CI: "Pages" workflow getting cancelled on main since 2026-10-26
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! The **Docker** workflow (`.github/workflows/docker.yml`) on `main` has been getting cancelled since 2026-10-26. Here is what I saw, in case it's useful:
+Hi! The **Pages** workflow (`.github/workflows/pages.yml`) on `main` has been getting cancelled since 2026-10-26. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/tangency-labs/solidcraft/actions/runs/40337797409 — dark (conclusion: `cancelled`), 2026-10-26 14:14 UTC
-- Dark since: 2026-10-26 14:14 UTC (first run of the current streak)
-- Job / step: `image` → `Build the web app`
-- Likely cause: Canceling since a higher priority waiting request for docker-refs/heads/main exists
-
-<details><summary>End of the job log</summary>
-
-```
-527 | enum Begun {
-    |      ----- variant in this enum
-528 |     /// It computes off the window thread.
-529 |     Later(Applying),
-    |     ^^^^^
-warning: `solidcraft-ui-egui` (lib) generated 4 warnings (run `cargo fix --lib -p solidcraft-ui-egui` to apply 1 suggestion)
-   Compiling solidcraft-web v0.23.1 (/home/runner/work/solidcraft/solidcraft/apps/solidcraft-web)
-##[error]The operation was canceled.
-```
-
-</details>
+- Latest run on `main`: https://github.com/tangency-labs/solidcraft/actions/runs/40372613842 — dark (conclusion: `cancelled`), 2026-10-26 17:52 UTC
+- Dark since: 2026-10-26 17:52 UTC (first run of the current streak)
+- Likely cause: run cancelled
 
 If this is already known or expected, feel free to close. Thanks for maintaining solidcraft!
 

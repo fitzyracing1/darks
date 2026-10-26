@@ -4,21 +4,19 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/zylon-ai/private-gpt/issues/new
-- **Stars:** 57615 · **Generated:** 2026-10-26T14:20:59.370Z
+- **Stars:** 57616 · **Generated:** 2026-10-26T18:57:58.513Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 2 workflows dark on main ("update-claude-specs", "tests")
+CI: "update-claude-specs" workflow failing on main since 2026-09-14
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
-
-### update-claude-specs (`.github/workflows/update-claude-specs.yml`)
+Hi! The **update-claude-specs** workflow (`.github/workflows/update-claude-specs.yml`) on `main` has been failing since 2026-09-14. Here is what I saw, in case it's useful:
 
 - Latest run on `main`: https://github.com/zylon-ai/private-gpt/actions/runs/40263579815 — dark (conclusion: `failure`), 2026-10-26 03:20 UTC
 - Dark since: 2026-09-14 03:19 UTC (first run of the current streak)
@@ -36,28 +34,6 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
     raise RuntimeError(f"openapi_spec_url not found in {ANTHROPIC_STATS_URL}")
 RuntimeError: openapi_spec_url not found in https://raw.githubusercontent.com/anthropics/anthropic-sdk-typescript/main/.stats.yml
 ##[error]Process completed with exit code 1.
-```
-
-</details>
-
-### tests (`.github/workflows/tests.yml`)
-
-- Latest run on `main`: https://github.com/zylon-ai/private-gpt/actions/runs/39927947558 — dark (conclusion: `failure`), 2026-10-23 08:54 UTC
-- Dark since: 2026-10-23 08:54 UTC (first run of the current streak)
-- Job / step: `test` → `Run affected tests`
-- Likely cause: ==== 1 failed, 2756 passed, 1 skipped, 79828 warnings in 605.40s (0:10:05) =====
-
-<details><summary>End of the job log</summary>
-
-```
-    class CustomModel(DynamicBaseModel):  # type: ignore
--- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
-- generated xml file: /home/runner/work/private-gpt/private-gpt/tests-results.xml -
-=========================== short test summary info ============================
-FAILED tests/observability/test_no_blocking.py::test_hanging_backend_does_not_lag_the_event_loop - assert 0.6599335030000002 < 0.05
-==== 1 failed, 2756 passed, 1 skipped, 79828 warnings in 605.40s (0:10:05) =====
-make: *** [Makefile:23: test] Error 1
-##[error]Process completed with exit code 2.
 ```
 
 </details>

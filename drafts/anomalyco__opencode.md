@@ -4,13 +4,14 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/anomalyco/opencode/issues/new
-- **Stars:** 221791 · **Generated:** 2026-10-26T14:20:59.370Z
+- **Stars:** 221882 · **Generated:** 2026-10-26T18:57:58.513Z
 - Nothing in this file has been sent anywhere.
+- **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 3 workflows dark on dev ("bot-nix-hashes", "publish", "nightly-beta")
+CI: 3 workflows dark on dev ("bot-nix-hashes", "nightly-beta", "release")
 <!-- END TITLE -->
 
 ## Body
@@ -20,7 +21,7 @@ Hi! A few workflows on `dev` have been dark recently. Details below, in case the
 
 ### bot-nix-hashes (`.github/workflows/bot-nix-hashes.yml`)
 
-- Latest run on `dev`: https://github.com/anomalyco/opencode/actions/runs/40268422601 — dark (conclusion: `failure`), 2026-10-26 04:18 UTC
+- Latest run on `dev`: https://github.com/anomalyco/opencode/actions/runs/40377024194 — dark (conclusion: `failure`), 2026-10-26 18:21 UTC
 - Dark since: 2026-10-25 22:38 UTC (first run of the current streak)
 - Job / step: `update-hashes` → `Commit changes`
 - Likely cause: error: failed to push some refs to 'https://github.com/anomalyco/opencode'
@@ -36,28 +37,6 @@ To https://github.com/anomalyco/opencode
  ! [remote rejected]       HEAD -> dev (push declined due to repository rule violations)
 error: failed to push some refs to 'https://github.com/anomalyco/opencode'
 ##[error]Process completed with exit code 1.
-```
-
-</details>
-
-### publish (`.github/workflows/publish.yml`)
-
-- Latest run on `dev`: https://github.com/anomalyco/opencode/actions/runs/40332200957 — dark (conclusion: `failure`), 2026-10-26 13:37 UTC
-- Dark since: 2026-10-26 06:02 UTC (first run of the current streak)
-- Job / step: `build-cli` → `Verify bundled models catalog`
-- Likely cause: at models (/home/runner/_work/opencode/opencode/packages/cli/script/catalog-smoke.ts:43:22) (packages/cli/script/catalog-smoke.ts:43)
-
-<details><summary>End of the job log</summary>
-
-```
-ENOENT: no such file or directory, posix_spawn 'packages/cli/dist/cli-linux-x64/bin/opencode'
-    path: "packages/cli/dist/cli-linux-x64/bin/opencode",
- syscall: "posix_spawn",
-   errno: -2,
-    code: "ENOENT"
-      at models (/home/runner/_work/opencode/opencode/packages/cli/script/catalog-smoke.ts:43:22)
-      at /home/runner/_work/opencode/opencode/packages/cli/script/catalog-smoke.ts:29:17
-##[error]
 ```
 
 </details>
@@ -83,6 +62,12 @@ could not create workflow dispatch event: HTTP 422: No ref found for: beta (http
 ```
 
 </details>
+
+### release (`.github/workflows/release.yml`)
+
+- Latest run on `dev`: https://github.com/anomalyco/opencode/actions/runs/40378840330 — dark (conclusion: `cancelled`), 2026-10-26 18:33 UTC
+- Dark since: 2026-10-26 18:33 UTC (first run of the current streak)
+- Likely cause: run cancelled
 
 If this is already known or expected, feel free to close. Thanks for maintaining opencode!
 

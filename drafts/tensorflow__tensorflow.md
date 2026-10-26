@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/tensorflow/tensorflow/issues/new
-- **Stars:** 201266 · **Generated:** 2026-10-26T14:20:59.370Z
+- **Stars:** 201271 · **Generated:** 2026-10-26T18:57:58.513Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** latest run was skipped, not failed — probably not worth filing
 - **Note for Joshua:** workflow failed to start (config/permissions on their side)
@@ -22,7 +22,7 @@ Hi! A few workflows on `master` have been dark recently. Details below, in case 
 
 ### Creates a GitHub Issue when a PR Rolled back via Commit to Master (`.github/workflows/issue-on-pr-rollback.yml`)
 
-- Latest run on `master`: https://github.com/tensorflow/tensorflow/actions/runs/40337053181 — dark (conclusion: `skipped`), 2026-10-26 14:09 UTC
+- Latest run on `master`: https://github.com/tensorflow/tensorflow/actions/runs/40379430458 — dark (conclusion: `skipped`), 2026-10-26 18:37 UTC
 - Dark since: 2026-10-13 00:19 UTC (first run of the current streak)
 - Likely cause: run skipped
 

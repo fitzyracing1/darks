@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/yetone/magpie/issues/new
-- **Stars:** 22327 · **Generated:** 2026-10-26T14:20:59.370Z
+- **Stars:** 22516 · **Generated:** 2026-10-26T18:57:58.513Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -18,7 +18,7 @@ CI: "Test" workflow failing on main since 2026-10-25
 <!-- BEGIN BODY -->
 Hi! The **Test** workflow (`.github/workflows/test.yml`) on `main` has been failing since 2026-10-25. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/yetone/magpie/actions/runs/40328222221 — dark (conclusion: `failure`), 2026-10-26 13:09 UTC
+- Latest run on `main`: https://github.com/yetone/magpie/actions/runs/40377864212 — dark (conclusion: `failure`), 2026-10-26 18:27 UTC
 - Dark since: 2026-10-25 04:42 UTC (first run of the current streak)
 - Job / step: `test (macos-latest)` → `Test`
 - Likely cause: warning: implicit conversion from enumeration type 'enum CGImageAlphaInfo' to different enumeration type 'CGBitmapInfo' (aka 'enum CGBitmapInfo') [-Wimplicit-enum-enum-cast] (internal/gui/trayimage_darwin.go:112)
@@ -26,10 +26,10 @@ Hi! The **Test** workflow (`.github/workflows/test.yml`) on `main` has been fail
 <details><summary>End of the job log</summary>
 
 ```
+go: downloading github.com/ncruces/go-strftime v1.0.0
 go: downloading golang.org/x/exp v0.0.0-20260410095643-746e56fc9e2f
 go: downloading modernc.org/mathutil v1.7.1
 go: downloading modernc.org/memory v1.11.0
-go: downloading github.com/clipperhouse/stringish v0.1.1
 go: downloading github.com/xo/terminfo v0.0.0-20220910002029-abceb7e1c41e
 go: downloading github.com/remyoudompheng/bigfft v0.0.0-20230129092748-24d4a6f8daec
 # github.com/yetone/magpie/internal/gui

@@ -1,8 +1,8 @@
 <!-- dark-draft: Ebony-Vinyl/dsh-our-free-model -->
-<!-- draft-state: ready -->
+<!-- draft-state: resolved -->
 # Upstream issue draft: Ebony-Vinyl/dsh-our-free-model
 
-- **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
+- **Status:** resolved — lit again (2026-10-26); nothing to file
 - **Would be filed at:** https://github.com/Ebony-Vinyl/dsh-our-free-model/issues/new
 - **Stars:** 44364 · **Generated:** 2026-10-26T14:20:59.370Z
 - Nothing in this file has been sent anywhere.

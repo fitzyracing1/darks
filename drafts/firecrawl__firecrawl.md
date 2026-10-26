@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/firecrawl/firecrawl/issues/new
-- **Stars:** 195535 · **Generated:** 2026-10-26T14:20:59.370Z
+- **Stars:** 195624 · **Generated:** 2026-10-26T18:57:58.513Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -18,7 +18,7 @@ CI: "Audit NPM Packages" workflow failing on main since 2026-10-24
 <!-- BEGIN BODY -->
 Hi! The **Audit NPM Packages** workflow (`.github/workflows/npm-audit.yml`) on `main` has been failing since 2026-10-24. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/firecrawl/firecrawl/actions/runs/40214678547 — dark (conclusion: `failure`), 2026-10-25 17:04 UTC
+- Latest run on `main`: https://github.com/firecrawl/firecrawl/actions/runs/40365312916 — dark (conclusion: `failure`), 2026-10-26 17:05 UTC
 - Dark since: 2026-10-24 17:04 UTC (first run of the current streak)
 - Job / step: `audit` → `Report audit failures`
 - Likely cause: Failed security audit due to high, low, moderate vulnerabilities.
@@ -26,8 +26,8 @@ Hi! The **Audit NPM Packages** workflow (`.github/workflows/npm-audit.yml`) on `
 <details><summary>End of the job log</summary>
 
 ```
+Vulnerable advisories are:
 https://github.com/advisories/GHSA-333x-w4r6-6crp
-https://github.com/advisories/GHSA-mrhx-c7xc-m3w5
 https://github.com/advisories/GHSA-q7qp-rjg7-q26m
 https://github.com/advisories/GHSA-w74x-v6f9-j3xg
 https://github.com/advisories/GHSA-wjr9-j795-jxcr
