@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/vercel/next.js/issues/new
-- **Stars:** 143290 · **Generated:** 2026-10-26T01:16:48.554Z
+- **Stars:** 143296 · **Generated:** 2026-10-26T07:12:58.531Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -42,9 +42,9 @@ Hi! A few workflows on `canary` have been dark recently. Details below, in case 
 
 ### Rspack Next.js production integration tests (`.github/workflows/rspack-nextjs-build-integration-tests.yml`)
 
-- Latest run on `canary`: https://github.com/vercel/next.js/actions/runs/40164177657 — dark (conclusion: `failure`), 2026-10-25 05:04 UTC
+- Latest run on `canary`: https://github.com/vercel/next.js/actions/runs/40272435096 — dark (conclusion: `failure`), 2026-10-26 05:05 UTC
 - Dark since: 2026-10-25 05:04 UTC (first run of the current streak)
-- Job / step: `Rspack integration tests / Next.js integration test (E2E and production) (7/12) / build` → `Run # e2e and production tests with `node run-tests.js``
+- Job / step: `Rspack integration tests / Next.js integration test (Integration) (1/12) / build` → `Run # legacy integration tests with `node run-tests.js``
 - Likely cause: Unable to download artifact(s): Artifact not found for name: next-swc-aarch64-unknown-linux-gnu
 
 <details><summary>End of the job log</summary>
@@ -64,9 +64,9 @@ Downloading single artifact
 
 ### Rspack Next.js development integration tests (`.github/workflows/rspack-nextjs-dev-integration-tests.yml`)
 
-- Latest run on `canary`: https://github.com/vercel/next.js/actions/runs/40164472380 — dark (conclusion: `failure`), 2026-10-25 05:08 UTC
+- Latest run on `canary`: https://github.com/vercel/next.js/actions/runs/40272874464 — dark (conclusion: `failure`), 2026-10-26 05:11 UTC
 - Dark since: 2026-10-25 05:08 UTC (first run of the current streak)
-- Job / step: `Rspack integration tests / Next.js integration test (Integration) (6/16) / build` → `Run # legacy integration tests with `node run-tests.js``
+- Job / step: `Rspack integration tests / Next.js integration test (E2E and development) (8/16) / build` → `Run # e2e and development tests with `node run-tests.js``
 - Likely cause: Unable to download artifact(s): Artifact not found for name: next-swc-aarch64-unknown-linux-gnu
 
 <details><summary>End of the job log</summary>

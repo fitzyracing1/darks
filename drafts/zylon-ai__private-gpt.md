@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/zylon-ai/private-gpt/issues/new
-- **Stars:** 57613 · **Generated:** 2026-10-26T01:16:48.554Z
+- **Stars:** 57614 · **Generated:** 2026-10-26T07:12:58.531Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -20,7 +20,7 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### update-claude-specs (`.github/workflows/update-claude-specs.yml`)
 
-- Latest run on `main`: https://github.com/zylon-ai/private-gpt/actions/runs/39194095706 — dark (conclusion: `failure`), 2026-10-19 03:18 UTC
+- Latest run on `main`: https://github.com/zylon-ai/private-gpt/actions/runs/40263579815 — dark (conclusion: `failure`), 2026-10-26 03:20 UTC
 - Dark since: 2026-09-14 03:19 UTC (first run of the current streak)
 - Job / step: `update` → `Update Claude specs and lock file`
 - Likely cause: RuntimeError: openapi_spec_url not found in https://raw.githubusercontent.com/anthropics/anthropic-sdk-typescript/main/.stats.yml

@@ -4,19 +4,21 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/farion1231/cc-switch/issues/new
-- **Stars:** 148595 · **Generated:** 2026-10-26T01:16:48.554Z
+- **Stars:** 148742 · **Generated:** 2026-10-26T07:12:58.531Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: "WSL2 Nightly" workflow failing on main since 2026-10-22
+CI: 2 workflows dark on main ("WSL2 Nightly", "CI")
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! The **WSL2 Nightly** workflow (`.github/workflows/wsl2-nightly.yml`) on `main` has been failing since 2026-10-22. Here is what I saw, in case it's useful:
+Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
+
+### WSL2 Nightly (`.github/workflows/wsl2-nightly.yml`)
 
 - Latest run on `main`: https://github.com/farion1231/cc-switch/actions/runs/40221883713 — dark (conclusion: `failure`), 2026-10-25 18:34 UTC
 - Dark since: 2026-10-22 18:36 UTC (first run of the current streak)
@@ -33,6 +35,28 @@ Hi! The **WSL2 Nightly** workflow (`.github/workflows/wsl2-nightly.yml`) on `mai
   TRY 3 FAIL [   6.563s] (3181/3881) cc-switch services::session_usage_agy::tests::native_tiered_ids_share_the_model_selection_bucket_and_price
   TRY 3 FAIL [   6.566s] (3619/3881) cc-switch session_manager::providers::agy::tests::agy_binary_only_sessions_keep_index_metadata_without_fabricated_transcripts
 error: test run failed
+##[error]Process completed with exit code 1.
+```
+
+</details>
+
+### CI (`.github/workflows/ci.yml`)
+
+- Latest run on `main`: https://github.com/farion1231/cc-switch/actions/runs/40281720259 — dark (conclusion: `failure`), 2026-10-26 06:45 UTC
+- Dark since: 2026-10-26 05:16 UTC (first run of the current streak)
+- Job / step: `Backend Checks (windows-latest)` → `Clippy`
+- Likely cause: error: could not compile 'cc-switch' (lib) due to 1 previous error
+
+<details><summary>End of the job log</summary>
+
+```
+   |
+19 | pub const OPENER_FILENAME: &str = ".open-url";
+   |           ^^^^^^^^^^^^^^^
+   |
+   = note: `-D dead-code` implied by `-D warnings`
+   = help: to override `-D warnings` add `#[expect(dead_code)]` or `#[allow(dead_code)]`
+error: could not compile `cc-switch` (lib) due to 1 previous error
 ##[error]Process completed with exit code 1.
 ```
 

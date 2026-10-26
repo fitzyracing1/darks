@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/modelcontextprotocol/php-sdk/issues/new
-- **Stars:** 1639 · **Generated:** 2026-10-26T01:16:48.554Z
+- **Stars:** 1639 · **Generated:** 2026-10-26T07:12:58.531Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -18,7 +18,7 @@ CI: "conformance-weekly" workflow failing on main since 2026-10-05
 <!-- BEGIN BODY -->
 Hi! The **conformance-weekly** workflow (`.github/workflows/conformance-weekly.yaml`) on `main` has been failing since 2026-10-05. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/modelcontextprotocol/php-sdk/actions/runs/39210327404 — dark (conclusion: `failure`), 2026-10-19 06:30 UTC
+- Latest run on `main`: https://github.com/modelcontextprotocol/php-sdk/actions/runs/40280268259 — dark (conclusion: `failure`), 2026-10-26 06:30 UTC
 - Dark since: 2026-10-05 06:37 UTC (first run of the current streak)
 - Job / step: `conformance / client (2026-07-28, alpha)` → `Run conformance tests`
 - Likely cause: Unexpected failures detected: these are not in your expected-failures baseline.

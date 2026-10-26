@@ -4,21 +4,23 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/anomalyco/opencode/issues/new
-- **Stars:** 221525 · **Generated:** 2026-10-26T01:16:48.554Z
+- **Stars:** 221651 · **Generated:** 2026-10-26T07:12:58.531Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: "bot-nix-hashes" workflow failing on dev since 2026-10-25
+CI: 2 workflows dark on dev ("bot-nix-hashes", "publish")
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! The **bot-nix-hashes** workflow (`.github/workflows/bot-nix-hashes.yml`) on `dev` has been failing since 2026-10-25. Here is what I saw, in case it's useful:
+Hi! A few workflows on `dev` have been dark recently. Details below, in case they're useful:
 
-- Latest run on `dev`: https://github.com/anomalyco/opencode/actions/runs/40241162137 — dark (conclusion: `failure`), 2026-10-25 22:38 UTC
+### bot-nix-hashes (`.github/workflows/bot-nix-hashes.yml`)
+
+- Latest run on `dev`: https://github.com/anomalyco/opencode/actions/runs/40268422601 — dark (conclusion: `failure`), 2026-10-26 04:18 UTC
 - Dark since: 2026-10-25 22:38 UTC (first run of the current streak)
 - Job / step: `update-hashes` → `Commit changes`
 - Likely cause: error: failed to push some refs to 'https://github.com/anomalyco/opencode'
@@ -34,6 +36,28 @@ To https://github.com/anomalyco/opencode
  ! [remote rejected]       HEAD -> dev (push declined due to repository rule violations)
 error: failed to push some refs to 'https://github.com/anomalyco/opencode'
 ##[error]Process completed with exit code 1.
+```
+
+</details>
+
+### publish (`.github/workflows/publish.yml`)
+
+- Latest run on `dev`: https://github.com/anomalyco/opencode/actions/runs/40280535205 — dark (conclusion: `failure`), 2026-10-26 06:33 UTC
+- Dark since: 2026-10-26 06:02 UTC (first run of the current streak)
+- Job / step: `build-cli` → `Verify bundled models catalog`
+- Likely cause: at models (/home/runner/_work/opencode/opencode/packages/cli/script/catalog-smoke.ts:43:22) (packages/cli/script/catalog-smoke.ts:43)
+
+<details><summary>End of the job log</summary>
+
+```
+ENOENT: no such file or directory, posix_spawn 'packages/cli/dist/cli-linux-x64/bin/opencode'
+    path: "packages/cli/dist/cli-linux-x64/bin/opencode",
+ syscall: "posix_spawn",
+   errno: -2,
+    code: "ENOENT"
+      at models (/home/runner/_work/opencode/opencode/packages/cli/script/catalog-smoke.ts:43:22)
+      at /home/runner/_work/opencode/opencode/packages/cli/script/catalog-smoke.ts:29:17
+##[error]
 ```
 
 </details>

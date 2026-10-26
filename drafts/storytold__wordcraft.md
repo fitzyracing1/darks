@@ -4,52 +4,28 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/storytold/wordcraft/issues/new
-- **Stars:** 16052 · **Generated:** 2026-10-26T01:16:48.554Z
+- **Stars:** 16090 · **Generated:** 2026-10-26T07:12:58.531Z
 - Nothing in this file has been sent anywhere.
-- **Note for Joshua:** cancelled by a concurrency group — likely noise
 
 ## Skipped: upstream already tracking
 
 - SonarCloud (`.github/workflows/sonarcloud.yml`): [issue #3772](https://github.com/storytold/wordcraft/issues/3772) "A13-1358b SonarCloud workflow uses `secrets: inherit` on a mutable `@main` shared workflow, handing it every repository secret when it only needs `SONAR_TOKEN`"
+- FreeBSD (`.github/workflows/freebsd.yml`): [issue #2069](https://github.com/storytold/wordcraft/issues/2069) "FreeBSD nightly is red: two layout tests depend on the installed fonts"
 
 These workflows are left out of the body below.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 2 workflows dark on main ("Printing", "CI")
+CI: "CI" workflow failing on main since 2026-10-26
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
+Hi! The **CI** workflow (`.github/workflows/ci.yml`) on `main` has been failing since 2026-10-26. Here is what I saw, in case it's useful:
 
-### Printing (`.github/workflows/printing.yml`)
-
-- Latest run on `main`: https://github.com/storytold/wordcraft/actions/runs/40252840126 — dark (conclusion: `cancelled`), 2026-10-26 01:09 UTC
-- Dark since: 2026-10-26 01:09 UTC (first run of the current streak)
-- Job / step: `Print (ubuntu-24.04)` → `Native app and UI Clippy`
-- Likely cause: Canceling since a higher priority waiting request for printing-refs/heads/main exists
-
-<details><summary>End of the job log</summary>
-
-```
-     |
-1027 -             glossary: other_glossary,
-1028 -         } = other;
-1027 +             glossary: other_glossary, .. } = other;
-     |
-For more information about this error, try `rustc --explain E0027`.
-error: could not compile `wordcraft-doc` (lib) due to 2 previous errors
-##[error]Process completed with exit code 101.
-```
-
-</details>
-
-### CI (`.github/workflows/ci.yml`)
-
-- Latest run on `main`: https://github.com/storytold/wordcraft/actions/runs/40252840834 — dark (conclusion: `failure`), 2026-10-26 01:09 UTC
+- Latest run on `main`: https://github.com/storytold/wordcraft/actions/runs/40274729365 — dark (conclusion: `failure`), 2026-10-26 05:32 UTC
 - Dark since: 2026-10-26 01:09 UTC (first run of the current streak)
 - Job / step: `gate / gate (ubuntu-24.04)` → `Gate`
 - Likely cause: FAIL  clippy: cargo clippy --workspace --all-targets -- -D warnings: exited with exit status: 101
