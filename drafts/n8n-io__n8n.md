@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/n8n-io/n8n/issues/new
-- **Stars:** 208615 · **Generated:** 2026-10-26T07:12:58.531Z
+- **Stars:** 208639 · **Generated:** 2026-10-26T14:20:59.370Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** latest run was skipped, not failed — probably not worth filing
 
@@ -21,13 +21,13 @@ Hi! A few workflows on `master` have been dark recently. Details below, in case 
 
 ### Security: Sync from Public (`.github/workflows/sec-sync-public-to-private.yml`)
 
-- Latest run on `master`: https://github.com/n8n-io/n8n/actions/runs/40281194131 — dark (conclusion: `skipped`), 2026-10-26 06:40 UTC
+- Latest run on `master`: https://github.com/n8n-io/n8n/actions/runs/40334319799 — dark (conclusion: `skipped`), 2026-10-26 13:51 UTC
 - Dark since: 2026-10-13 15:19 UTC (first run of the current streak)
 - Likely cause: run skipped
 
 ### CI: Master (Build, Test, Lint) (`.github/workflows/ci-master.yml`)
 
-- Latest run on `master`: https://github.com/n8n-io/n8n/actions/runs/40282157691 — dark (conclusion: `failure`), 2026-10-26 06:50 UTC
+- Latest run on `master`: https://github.com/n8n-io/n8n/actions/runs/40333708457 — dark (conclusion: `failure`), 2026-10-26 13:47 UTC
 - Dark since: 2026-10-26 06:50 UTC (first run of the current streak)
 - Job / step: `Verify single-instance deps (npm-install) / verify` → `Verify npm-install closure (changed packages)`
 - Likely cause: {"error":"Command failed: npm install --no-audit --no-fund --ignore-scripts --no-package-lock"}
@@ -37,7 +37,7 @@ Hi! A few workflows on `master` have been dark recently. Details below, in case 
 ```
 npm error notsup Valid libc:  musl
 npm error notsup Actual libc: glibc
-npm error A complete log of this run can be found in: /home/runner/.npm/_logs/2026-10-26T06_52_57_161Z-debug-0.log
+npm error A complete log of this run can be found in: /home/runner/.npm/_logs/2026-10-26T13_50_15_091Z-debug-0.log
 npm install failed — its output is in the "npm install output" group above.
 {"error":"Command failed: npm install --no-audit --no-fund --ignore-scripts --no-package-lock"}
 ℹ Safe-chain: Some package versions were suppressed during package metadata resolution due to minimum package age.

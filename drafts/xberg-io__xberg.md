@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/xberg-io/xberg/issues/new
-- **Stars:** 9450 · **Generated:** 2026-10-26T07:12:58.531Z
+- **Stars:** 9449 · **Generated:** 2026-10-26T14:20:59.370Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -20,21 +20,21 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### CI Lint (`.github/workflows/ci-lint.yaml`)
 
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/40221620074 — dark (conclusion: `failure`), 2026-10-25 18:31 UTC
+- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/40324361273 — dark (conclusion: `failure`), 2026-10-26 12:40 UTC
 - Dark since: 2026-10-24 07:14 UTC (first run of the current streak)
-- Job / step: `Alef-generated bindings freshness` → `Verify alef-generated bindings are current`
+- Job / step: `Docs snippets gate` → `Run docs snippets gate`
 - Likely cause: exit status 1
 
 <details><summary>End of the job log</summary>
 
 ```
-      of which 321 are excluded from those headings by `[crates.verify].ignore_ephemeral` (declared ephemeral and never committed; still counted in the 344 above)
-    14 declared user-owned by `[workspace.ownership] user_owned` in alef.toml: not written, stamped or content-checked. Remove the pattern to hand a path back to alef (-vv lists them)
-  tree walk: 8390 file(s) opened, 599 never examined (name and extension outside the ownership walk's scan set, or not readable as text)
-Crates whose generation inputs (Rust sources or alef.toml) changed since their last successful `alef generate`/`alef all` run (rerun to see which files, if any, actually changed):
-  xberg
-ERROR generated bindings, versions, or snippet coverage are out of date
-task: Failed to run task "alef:verify": exit status 1
+    warning: xberg-tesseract@1.4.0: Linking with tesseract (static linking): tesseract
+    warning: xberg-tesseract@1.4.0: Linking with leptonica (static linking): leptonica
+    error: could not compile `xberg` (lib) due to 3 previous errors
+----------------------------------------------------------------------------------------------------
+Checked at requested level: 685/1219 (56.2%) -- capability-capped 363, declared-capped 0, unavailable 0, downgraded 0, failed 171, skipped 0, errors 0 did not fully verify
+Total: 1219  Passed: 1048  Downgraded: 0  Failed: 171  Skipped: 0  Errors: 0  Unavailable: 0
+task: Failed to run task "docs:snippets:all": exit status 1
 ##[error]exit status 1
 ```
 

@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/yetone/magpie/issues/new
-- **Stars:** 21796 · **Generated:** 2026-10-26T07:12:58.531Z
+- **Stars:** 22327 · **Generated:** 2026-10-26T14:20:59.370Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -18,22 +18,22 @@ CI: "Test" workflow failing on main since 2026-10-25
 <!-- BEGIN BODY -->
 Hi! The **Test** workflow (`.github/workflows/test.yml`) on `main` has been failing since 2026-10-25. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/yetone/magpie/actions/runs/40278827704 — dark (conclusion: `failure`), 2026-10-26 06:16 UTC
+- Latest run on `main`: https://github.com/yetone/magpie/actions/runs/40328222221 — dark (conclusion: `failure`), 2026-10-26 13:09 UTC
 - Dark since: 2026-10-25 04:42 UTC (first run of the current streak)
-- Job / step: `test (ubuntu-latest)` → `Install GTK and WebKitGTK`
-- Likely cause: The action 'Install GTK and WebKitGTK' has timed out after 15 minutes.
+- Job / step: `test (macos-latest)` → `Test`
+- Likely cause: warning: implicit conversion from enumeration type 'enum CGImageAlphaInfo' to different enumeration type 'CGBitmapInfo' (aka 'enum CGBitmapInfo') [-Wimplicit-enum-enum-cast] (internal/gui/trayimage_darwin.go:112)
 
 <details><summary>End of the job log</summary>
 
 ```
-Get:73 http://azure.archive.ubuntu.com/ubuntu resolute-updates/main amd64v3 libgstreamer-gl1.0-0 amd64 1.28.2-1ubuntu0.1 [231 kB]
-Get:74 http://azure.archive.ubuntu.com/ubuntu resolute/main amd64v3 libharfbuzz-icu0 amd64 12.3.2-2 [11.8 kB]
-Get:75 http://azure.archive.ubuntu.com/ubuntu resolute/main amd64v3 libhyphen0 amd64 2.8.8-7build4 [26.7 kB]
-Get:76 http://azure.archive.ubuntu.com/ubuntu resolute/main amd64v3 libsecret-common all 0.21.7-2build1 [5608 B]
-Get:77 http://azure.archive.ubuntu.com/ubuntu resolute/main amd64v3 libsecret-1-0 amd64 0.21.7-2build1 [119 kB]
-Get:78 http://azure.archive.ubuntu.com/ubuntu resolute/main amd64v3 libwayland-server0 amd64 1.24.0-2 [36.0 kB]
-Get:79 http://azure.archive.ubuntu.com/ubuntu resolute-updates/main amd64v3 libwebkit2gtk-4.1-0 amd64 2.52.6-0ubuntu0.26.04.1 [25.7 MB]
-##[error]The action 'Install GTK and WebKitGTK' has timed out after 15 minutes.
+go: downloading golang.org/x/exp v0.0.0-20260410095643-746e56fc9e2f
+go: downloading modernc.org/mathutil v1.7.1
+go: downloading modernc.org/memory v1.11.0
+go: downloading github.com/clipperhouse/stringish v0.1.1
+go: downloading github.com/xo/terminfo v0.0.0-20220910002029-abceb7e1c41e
+go: downloading github.com/remyoudompheng/bigfft v0.0.0-20230129092748-24d4a6f8daec
+# github.com/yetone/magpie/internal/gui
+##[error]internal/gui/dockflap_darwin.go:42:77: warning: implicit conversion from enumeration type 'enum CGImageAlphaInfo' to different enumeration type 'CGBitmapInfo' (aka 'enum CGBitmapInfo') [-Wimplicit-enum-enum-cas…
 ```
 
 </details>

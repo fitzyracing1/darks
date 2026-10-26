@@ -4,13 +4,13 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/koala73/worldmonitor/issues/new
-- **Stars:** 89541 · **Generated:** 2026-10-26T07:12:58.531Z
+- **Stars:** 89574 · **Generated:** 2026-10-26T14:20:59.370Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 2 workflows dark on main ("Railway Native Deploy Health", "Perf — styleLayout budget")
+CI: 2 workflows dark on main ("Railway Native Deploy Health", "TPS Open Data Live Contract")
 <!-- END TITLE -->
 
 ## Body
@@ -20,10 +20,10 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### Railway Native Deploy Health (`.github/workflows/railway-deploy-drift.yml`)
 
-- Latest run on `main`: https://github.com/koala73/worldmonitor/actions/runs/40282239540 — dark (conclusion: `failure`), 2026-10-26 06:51 UTC
+- Latest run on `main`: https://github.com/koala73/worldmonitor/actions/runs/40335453328 — dark (conclusion: `failure`), 2026-10-26 13:59 UTC
 - Dark since: 2026-10-24 18:27 UTC (first run of the current streak)
 - Job / step: `Railway native deployment health` → `Check Railway deployment configuration and drift`
-- Likely cause: - seed-iran-events [BUILD_FAILED] the build for ad28d5d00 failed, so 62b302cea is still serving; nothing has built since, so run 'railway redeploy --service seed-iran-events --from-source' to rebuild at head
+- Likely cause: - seed-unrest-events [BUILD_FAILED] the build for df11f886e failed, so 9d7bf6e4b is still serving; nothing has built since, so run 'railway redeploy --service seed-unrest-events --from-source' to rebuild at head
 
 <details><summary>End of the job log</summary>
 
@@ -31,32 +31,32 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 Railway operational-config audit found 1 drifted service(s):
 - seed-notam-nms: source checkSuites true != false
 Read 89 service histories in 1 fleet page(s) (500 records), 0 direct fallback(s).
-Railway deploy-drift check: head=ad28d5d00 source=--head vs-origin-main=exact grace=ad28d5d00 services=89 {"CURRENT_FOR_CLOSURE":58,"CURRENT":29,"BUILD_FAILED":2}
 Railway deploy-drift check found 2 service(s) with deployment or source-verification problems:
-- seed-hormuz [BUILD_FAILED] the build for ad28d5d00 failed, so 62b302cea is still serving; nothing has built since, so run `railway redeploy --service seed-hormuz --from-source` to rebuild at head
-- seed-iran-events [BUILD_FAILED] the build for ad28d5d00 failed, so 62b302cea is still serving; nothing has built since, so run `railway redeploy --service seed-iran-events --from-source` to rebuild at head
+Railway deploy-drift check: head=df11f886e source=--head vs-origin-main=exact grace=62cc4c169 services=89 {"CURRENT_FOR_CLOSURE":58,"CURRENT":10,"PENDING_BUILD":19,"BUILD_FAILED":2}
+- seed-bundle-imf-extended [BUILD_FAILED] the build for df11f886e failed, so 62cc4c169 is still serving; nothing has built since, so run `railway redeploy --service seed-bundle-imf-extended --from-source` to rebuild at …
+- seed-unrest-events [BUILD_FAILED] the build for df11f886e failed, so 9d7bf6e4b is still serving; nothing has built since, so run `railway redeploy --service seed-unrest-events --from-source` to rebuild at head
 ##[error]Process completed with exit code 1.
 ```
 
 </details>
 
-### Perf — styleLayout budget (`.github/workflows/perf-style-layout-budget.yml`)
+### TPS Open Data Live Contract (`.github/workflows/tps-open-data-live.yml`)
 
-- Latest run on `main`: https://github.com/koala73/worldmonitor/actions/runs/40282821152 — dark (conclusion: `failure`), 2026-10-26 06:57 UTC
-- Dark since: 2026-10-25 18:30 UTC (first run of the current streak)
-- Job / step: `measure` → `Enforce the styleLayout budget`
-- Likely cause: No VM guests are running outdated hypervisor (qemu) binaries on this host.
+- Latest run on `main`: https://github.com/koala73/worldmonitor/actions/runs/40335228755 — dark (conclusion: `failure`), 2026-10-26 13:57 UTC
+- Dark since: 2026-10-26 13:57 UTC (first run of the current streak)
+- Job / step: `live-contract` → `Probe the official TPS Open Data source contracts`
+- Likely cause: # fail 1
 
 <details><summary>End of the job log</summary>
 
 ```
-|■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                |  60% of 114.3 MiB
-|■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                        |  70% of 114.3 MiB
-|■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                |  80% of 114.3 MiB
-|■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■        |  90% of 114.3 MiB
-|■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■| 100% of 114.3 MiB
-[style-layout-budget] REGRESSION: styleLayout is 28.8% of attributed main-thread self-time, over the 28% budget
-[style-layout-budget] see docs/perf/desktop-mainthread-baseline-2026-07-02.md
+# suites 1
+# pass 1
+# fail 1
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 56203.185182
 ##[error]Process completed with exit code 1.
 ```
 

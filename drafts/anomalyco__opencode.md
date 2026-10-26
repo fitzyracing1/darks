@@ -4,13 +4,13 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/anomalyco/opencode/issues/new
-- **Stars:** 221651 · **Generated:** 2026-10-26T07:12:58.531Z
+- **Stars:** 221791 · **Generated:** 2026-10-26T14:20:59.370Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 2 workflows dark on dev ("bot-nix-hashes", "publish")
+CI: 3 workflows dark on dev ("bot-nix-hashes", "publish", "nightly-beta")
 <!-- END TITLE -->
 
 ## Body
@@ -42,7 +42,7 @@ error: failed to push some refs to 'https://github.com/anomalyco/opencode'
 
 ### publish (`.github/workflows/publish.yml`)
 
-- Latest run on `dev`: https://github.com/anomalyco/opencode/actions/runs/40280535205 — dark (conclusion: `failure`), 2026-10-26 06:33 UTC
+- Latest run on `dev`: https://github.com/anomalyco/opencode/actions/runs/40332200957 — dark (conclusion: `failure`), 2026-10-26 13:37 UTC
 - Dark since: 2026-10-26 06:02 UTC (first run of the current streak)
 - Job / step: `build-cli` → `Verify bundled models catalog`
 - Likely cause: at models (/home/runner/_work/opencode/opencode/packages/cli/script/catalog-smoke.ts:43:22) (packages/cli/script/catalog-smoke.ts:43)
@@ -58,6 +58,28 @@ ENOENT: no such file or directory, posix_spawn 'packages/cli/dist/cli-linux-x64/
       at models (/home/runner/_work/opencode/opencode/packages/cli/script/catalog-smoke.ts:43:22)
       at /home/runner/_work/opencode/opencode/packages/cli/script/catalog-smoke.ts:29:17
 ##[error]
+```
+
+</details>
+
+### nightly-beta (`.github/workflows/nightly-beta.yml`)
+
+- Latest run on `dev`: https://github.com/anomalyco/opencode/actions/runs/40301781578 — dark (conclusion: `failure`), 2026-10-26 09:43 UTC
+- Dark since: 2026-10-26 09:43 UTC (first run of the current streak)
+- Job / step: `dispatch` → `Dispatch beta test runs`
+- Likely cause: could not create workflow dispatch event: HTTP 422: No ref found for: beta (https://api.github.com/repos/anomalyco/opencode/actions/workflows/396447938/dispatches)
+
+<details><summary>End of the job log</summary>
+
+```
+Metadata: read
+Secret source: Actions
+Cache mode: write
+Prepare workflow directory
+Prepare all required actions
+Complete job name: dispatch
+could not create workflow dispatch event: HTTP 422: No ref found for: beta (https://api.github.com/repos/anomalyco/opencode/actions/workflows/396447938/dispatches)
+##[error]Process completed with exit code 1.
 ```
 
 </details>
