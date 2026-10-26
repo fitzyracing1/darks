@@ -4,14 +4,13 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/koala73/worldmonitor/issues/new
-- **Stars:** 89500 · **Generated:** 2026-10-25T18:43:35.920Z
+- **Stars:** 89520 · **Generated:** 2026-10-26T01:16:48.554Z
 - Nothing in this file has been sent anywhere.
-- **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 4 workflows dark on main ("Railway Native Deploy Health", "CodeQL", "Seed Freshness Monitor", +1 more)
+CI: 3 workflows dark on main ("Railway Native Deploy Health", "Seed Freshness Monitor", "Perf — styleLayout budget")
 <!-- END TITLE -->
 
 ## Body
@@ -21,7 +20,7 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### Railway Native Deploy Health (`.github/workflows/railway-deploy-drift.yml`)
 
-- Latest run on `main`: https://github.com/koala73/worldmonitor/actions/runs/40221325196 — dark (conclusion: `failure`), 2026-10-25 18:27 UTC
+- Latest run on `main`: https://github.com/koala73/worldmonitor/actions/runs/40251905791 — dark (conclusion: `failure`), 2026-10-26 00:58 UTC
 - Dark since: 2026-10-24 18:27 UTC (first run of the current streak)
 - Job / step: `Railway native deployment health` → `Check Railway deployment configuration and drift`
 - Likely cause: npm warn deprecated node-domexception@1.0.0: Use your platform's native DOMException instead
@@ -34,22 +33,16 @@ npm warn install-scripts Run `npm install -g --allow-scripts=@railway/cli` to al
 Railway operational-config audit found 1 drifted service(s):
 - seed-notam-nms: source checkSuites true != false
 Read 89 service histories in 1 fleet page(s) (500 records), 0 direct fallback(s).
-Railway deploy-drift check: head=7129864df source=--head vs-origin-main=exact grace=4f76cbfac services=89 {"CURRENT_FOR_CLOSURE":58,"CURRENT":31}
-Every service this repository deploys is running 7129864df or building it.
+Railway deploy-drift check: head=be3cd8e54 source=--head vs-origin-main=exact grace=be3cd8e54 services=89 {"CURRENT":3,"CURRENT_FOR_CLOSURE":86}
+Every service this repository deploys is running be3cd8e54 or building it.
 ##[error]Process completed with exit code 1.
 ```
 
 </details>
 
-### CodeQL (`.github/workflows/codeql.yml`)
-
-- Latest run on `main`: https://github.com/koala73/worldmonitor/actions/runs/40220799057 — dark (conclusion: `cancelled`), 2026-10-25 18:20 UTC
-- Dark since: 2026-10-25 12:06 UTC (first run of the current streak)
-- Likely cause: run cancelled
-
 ### Seed Freshness Monitor (`.github/workflows/seed-freshness-monitor.yml`)
 
-- Latest run on `main`: https://github.com/koala73/worldmonitor/actions/runs/40220467208 — dark (conclusion: `failure`), 2026-10-25 18:16 UTC
+- Latest run on `main`: https://github.com/koala73/worldmonitor/actions/runs/40250611248 — dark (conclusion: `failure`), 2026-10-26 00:41 UTC
 - Dark since: 2026-10-25 18:16 UTC (first run of the current streak)
 - Job / step: `monitor` → `Publish ingestion operational transitions`
 - Likely cause: Ingestion operational acceptance failed: the accepted-problem baseline expired on 2026-09-05T18:00:00Z. Re-review scripts/seed-freshness-baseline.json and set a new expiresAt.
@@ -57,12 +50,12 @@ Every service this repository deploys is running 7129864df or building it.
 <details><summary>End of the job log</summary>
 
 ```
-Exact main revision passed repository gates.
+Ingestion operational acceptance failed: 4 unacknowledged problem(s).
 - recovered: aisGaps:EMPTY no longer reported; remove it from scripts/seed-freshness-baseline.json (#7574).
-Ingestion operational acceptance failed: 3 unacknowledged problem(s).
-- chokepointTransits: status=COVERAGE_PARTIAL records=3 age=6m max=30m
-- imdCycloneMarine: status=SEED_ERROR records=32 age=1m max=45m
-- naturalEvents: status=SEED_ERROR records=23 age=13m max=540m
+- chinaCoverage: status=CHINA_DEGRADED records=16 age=40m max=180m
+- chokepointTransits: status=COVERAGE_PARTIAL records=3 age=1m max=30m
+- imdCycloneMarine: status=SEED_ERROR records=30 age=10m max=45m
+- naturalEvents: status=SEED_ERROR records=23 age=8m max=540m
 Ingestion operational acceptance failed: the accepted-problem baseline expired on 2026-09-05T18:00:00Z. Re-review scripts/seed-freshness-baseline.json and set a new expiresAt.
 ##[error]Process completed with exit code 1.
 ```

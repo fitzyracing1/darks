@@ -4,23 +4,37 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/NousResearch/hermes-agent/issues/new
-- **Stars:** 256998 · **Generated:** 2026-10-25T18:43:35.920Z
+- **Stars:** 257062 · **Generated:** 2026-10-26T01:16:48.554Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: "Docker Build, Test, and Publish" workflow getting cancelled on main since 2026-10-13
+CI: 3 workflows dark on main ("Docker Build, Test, and Publish", "Deploy Site", "CI")
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! The **Docker Build, Test, and Publish** workflow (`.github/workflows/docker.yml`) on `main` has been getting cancelled since 2026-10-13. Here is what I saw, in case it's useful:
+Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
 
-- Latest run on `main`: https://github.com/NousResearch/hermes-agent/actions/runs/40208111718 — dark (conclusion: `cancelled`), 2026-10-25 15:41 UTC
+### Docker Build, Test, and Publish (`.github/workflows/docker.yml`)
+
+- Latest run on `main`: https://github.com/NousResearch/hermes-agent/actions/runs/40251326423 — dark (conclusion: `cancelled`), 2026-10-26 00:51 UTC
 - Dark since: 2026-10-13 19:04 UTC (first run of the current streak)
+- Likely cause: run cancelled
+
+### Deploy Site (`.github/workflows/deploy-site.yml`)
+
+- Latest run on `main`: https://github.com/NousResearch/hermes-agent/actions/runs/40251326250 — dark (conclusion: `cancelled`), 2026-10-26 00:51 UTC
+- Dark since: 2026-10-26 00:51 UTC (first run of the current streak)
+- Likely cause: run cancelled
+
+### CI (`.github/workflows/ci.yaml`)
+
+- Latest run on `main`: https://github.com/NousResearch/hermes-agent/actions/runs/40251326848 — dark (conclusion: `cancelled`), 2026-10-26 00:51 UTC
+- Dark since: 2026-10-26 00:51 UTC (first run of the current streak)
 - Likely cause: run cancelled
 
 If this is already known or expected, feel free to close. Thanks for maintaining hermes-agent!

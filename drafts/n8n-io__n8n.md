@@ -4,34 +4,24 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/n8n-io/n8n/issues/new
-- **Stars:** 208570 · **Generated:** 2026-10-25T18:43:35.920Z
+- **Stars:** 208591 · **Generated:** 2026-10-26T01:16:48.554Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** latest run was skipped, not failed — probably not worth filing
-- **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 2 workflows dark on master ("Security: Sync from Public", "Test: E2E Coverage Nightly")
+CI: "Security: Sync from Public" workflow not completing (runs skipped) on master since 2026-10-13
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! A few workflows on `master` have been dark recently. Details below, in case they're useful:
+Hi! The **Security: Sync from Public** workflow (`.github/workflows/sec-sync-public-to-private.yml`) on `master` has been not completing (runs skipped) since 2026-10-13. Here is what I saw, in case it's useful:
 
-### Security: Sync from Public (`.github/workflows/sec-sync-public-to-private.yml`)
-
-- Latest run on `master`: https://github.com/n8n-io/n8n/actions/runs/40220650897 — dark (conclusion: `skipped`), 2026-10-25 18:18 UTC
+- Latest run on `master`: https://github.com/n8n-io/n8n/actions/runs/40251117393 — dark (conclusion: `skipped`), 2026-10-26 00:48 UTC
 - Dark since: 2026-10-13 15:19 UTC (first run of the current streak)
 - Likely cause: run skipped
-
-### Test: E2E Coverage Nightly (`.github/workflows/test-e2e-coverage-nightly.yml`)
-
-- Latest run on `master`: https://github.com/n8n-io/n8n/actions/runs/40153302749 — dark (conclusion: `cancelled`), 2026-10-25 02:08 UTC
-- Dark since: 2026-10-24 02:07 UTC (first run of the current streak)
-- Job / step: `Unit Coverage (CLI integration + Postgres)`
-- Likely cause: The job has exceeded the maximum execution time of 6h0m0s
 
 If this is already known or expected, feel free to close. Thanks for maintaining n8n!
 

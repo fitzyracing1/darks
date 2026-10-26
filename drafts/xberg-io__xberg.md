@@ -4,14 +4,13 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/xberg-io/xberg/issues/new
-- **Stars:** 9447 · **Generated:** 2026-10-25T18:43:35.920Z
+- **Stars:** 9448 · **Generated:** 2026-10-26T01:16:48.554Z
 - Nothing in this file has been sent anywhere.
-- **Note for Joshua:** cancelled by a concurrency group — likely noise
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 5 workflows dark on main ("CI Lint", "CI Integrations", "CI E2E", +2 more)
+CI: 3 workflows dark on main ("CI Lint", "CI E2E", "CI Rust")
 <!-- END TITLE -->
 
 ## Body
@@ -21,110 +20,66 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### CI Lint (`.github/workflows/ci-lint.yaml`)
 
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/40221589926 — dark (conclusion: `cancelled`), 2026-10-25 18:30 UTC
+- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/40221620074 — dark (conclusion: `failure`), 2026-10-25 18:31 UTC
 - Dark since: 2026-10-24 07:14 UTC (first run of the current streak)
-- Job / step: `Benchmark script regressions` → `Validate benchmark scripts`
-- Likely cause: Canceling since a higher priority waiting request for ci-lint-refs/heads/main exists
+- Job / step: `Alef-generated bindings freshness` → `Verify alef-generated bindings are current`
+- Likely cause: exit status 1
 
 <details><summary>End of the job log</summary>
 
 ```
-OK
-task: [benchmark:validate:scripts] python3 -m unittest tools/benchmark-harness/tests/test_mineru_extract.py
-......
-----------------------------------------------------------------------
-Ran 6 tests in 0.019s
-OK
-task: [benchmark:validate:scripts] tools/benchmark-harness/tests/test_restore_corpus_cache.sh
-##[error]The operation was canceled.
-```
-
-</details>
-
-### CI Integrations (`.github/workflows/ci-integrations.yaml`)
-
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/40221589583 — dark (conclusion: `cancelled`), 2026-10-25 18:30 UTC
-- Dark since: 2026-10-25 18:30 UTC (first run of the current streak)
-- Job / step: `Build local integration bindings` → `Install system dependencies`
-- Likely cause: Canceling since a higher priority waiting request for ci-integrations-refs/heads/main exists
-
-<details><summary>End of the job log</summary>
-
-```
-Setting up php8.3-snmp (8.3.6-0ubuntu0.24.04.13) ...
-Setting up php8.3-odbc (8.3.6-0ubuntu0.24.04.13) ...
-Setting up php8.3-sybase (8.3.6-0ubuntu0.24.04.13) ...
-Setting up php8.3-curl (8.3.6-0ubuntu0.24.04.13) ...
-Setting up php8.3-imap (8.3.6-0ubuntu0.24.04.13) ...
-Setting up php8.3-pgsql (8.3.6-0ubuntu0.24.04.13) ...
-Setting up php8.3-intl (8.3.6-0ubuntu0.24.04.13) ...
-##[error]The operation was canceled.
+      of which 321 are excluded from those headings by `[crates.verify].ignore_ephemeral` (declared ephemeral and never committed; still counted in the 344 above)
+    14 declared user-owned by `[workspace.ownership] user_owned` in alef.toml: not written, stamped or content-checked. Remove the pattern to hand a path back to alef (-vv lists them)
+  tree walk: 8390 file(s) opened, 599 never examined (name and extension outside the ownership walk's scan set, or not readable as text)
+Crates whose generation inputs (Rust sources or alef.toml) changed since their last successful `alef generate`/`alef all` run (rerun to see which files, if any, actually changed):
+  xberg
+ERROR generated bindings, versions, or snippet coverage are out of date
+task: Failed to run task "alef:verify": exit status 1
+##[error]exit status 1
 ```
 
 </details>
 
 ### CI E2E (`.github/workflows/ci-e2e.yaml`)
 
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/40221589580 — dark (conclusion: `cancelled`), 2026-10-25 18:30 UTC
+- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/40221619737 — dark (conclusion: `failure`), 2026-10-25 18:31 UTC
 - Dark since: 2026-10-25 18:30 UTC (first run of the current streak)
-- Job / step: `Build FFI (x86_64-unknown-linux-gnu)` → `Install system dependencies`
-- Likely cause: Canceling since a higher priority waiting request for ci-e2e-refs/heads/main exists
+- Job / step: `E2E (csharp)` → `Setup .NET`
+- Likely cause: Failed to install dotnet, exit code: 1. dotnet_install: Error: Could not find '.NET Core SDK' with version = 10.0.403
 
 <details><summary>End of the job log</summary>
 
 ```
-Preparing to unpack .../26-php8.3-cgi_8.3.6-0ubuntu0.24.04.13_amd64.deb ...
-Unpacking php8.3-cgi (8.3.6-0ubuntu0.24.04.13) over (8.3.6-0ubuntu0.24.04.11) ...
-Preparing to unpack .../27-php8.3-bz2_8.3.6-0ubuntu0.24.04.13_amd64.deb ...
-Unpacking php8.3-bz2 (8.3.6-0ubuntu0.24.04.13) over (8.3.6-0ubuntu0.24.04.11) ...
-Preparing to unpack .../28-php8.3-bcmath_8.3.6-0ubuntu0.24.04.13_amd64.deb ...
-Unpacking php8.3-bcmath (8.3.6-0ubuntu0.24.04.13) over (8.3.6-0ubuntu0.24.04.11) ...
-Preparing to unpack .../29-php8.3-common_8.3.6-0ubuntu0.24.04.13_amd64.deb ...
-##[error]The operation was canceled.
+dotnet-install: Download attempt #1 has failed: 409 Unable to download https://dotnetorigin.blob.core.windows.net/dotnet/Sdk/10.0.403/dotnet-sdk-10.0.403-linux-x64.tar.gz. Returned HTTP status code: 409.
+dotnet-install: Attempt #2 will start in 10 seconds.
+dotnet-install: Download attempt #2 has failed: 409 Unable to download https://dotnetorigin.blob.core.windows.net/dotnet/Sdk/10.0.403/dotnet-sdk-10.0.403-linux-x64.tar.gz. Returned HTTP status code: 409.
+dotnet-install: Attempt #3 will start in 20 seconds.
+dotnet-install: Failed to download aka.ms link 'https://dotnetorigin.blob.core.windows.net/dotnet/Sdk/10.0.403/dotnet-sdk-10.0.403-linux-x64.tar.gz': 409 Unable to download https://dotnetorigin.blob.core.windows.net/dot…
+dotnet_install: Error: Could not find `.NET Core SDK` with version = 10.0.403
+dotnet_install: Error: Refer to: https://aka.ms/dotnet-os-lifecycle for information on .NET Core support
+##[error]Failed to install dotnet, exit code: 1. dotnet_install: Error: Could not find `.NET Core SDK` with version = 10.0.403
 ```
 
 </details>
 
 ### CI Rust (`.github/workflows/ci-rust.yaml`)
 
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/40221589643 — dark (conclusion: `cancelled`), 2026-10-25 18:30 UTC
+- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/40221619697 — dark (conclusion: `failure`), 2026-10-25 18:31 UTC
 - Dark since: 2026-10-25 18:30 UTC (first run of the current streak)
-- Job / step: `Rust tract-only (no-ORT)` → `Install system dependencies`
-- Likely cause: Canceling since a higher priority waiting request for ci-rust-refs/heads/main exists
+- Job / step: `Rust (macos-latest)` → `Run tests`
+- Likely cause: exit status 1
 
 <details><summary>End of the job log</summary>
 
 ```
-Preparing to unpack .../27-php8.3-bz2_8.3.6-0ubuntu0.24.04.13_arm64.deb ...
-Unpacking php8.3-bz2 (8.3.6-0ubuntu0.24.04.13) over (8.3.6-0ubuntu0.24.04.11) ...
-Preparing to unpack .../28-php8.3-bcmath_8.3.6-0ubuntu0.24.04.13_arm64.deb ...
-Unpacking php8.3-bcmath (8.3.6-0ubuntu0.24.04.13) over (8.3.6-0ubuntu0.24.04.11) ...
-Preparing to unpack .../29-php8.3-common_8.3.6-0ubuntu0.24.04.13_arm64.deb ...
-Unpacking php8.3-common (8.3.6-0ubuntu0.24.04.13) over (8.3.6-0ubuntu0.24.04.11) ...
-Setting up php8.3-common (8.3.6-0ubuntu0.24.04.13) ...
-##[error]The operation was canceled.
-```
-
-</details>
-
-### CI Mobile (`.github/workflows/ci-mobile.yaml`)
-
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/40221589764 — dark (conclusion: `cancelled`), 2026-10-25 18:30 UTC
-- Dark since: 2026-10-25 18:30 UTC (first run of the current streak)
-- Job / step: `Android cargo check (x86_64)` → `Run xberg-io/actions/setup-rust@v1`
-- Likely cause: Canceling since a higher priority waiting request for ci-mobile-refs/heads/main exists
-
-<details><summary>End of the job log</summary>
-
-```
-warn: to install the active toolchain, use `rustup install` instead
-warn: see <https://github.com/rust-lang/rustup/issues/4836> for more info
-1.99.1-x86_64-unknown-linux-gnu (overridden by '/home/runner/work/xberg/xberg/rust-toolchain.toml')
-info: component rustfmt is up to date
-info: component clippy is up to date
-info: component rust-src is up to date
-info: downloading component llvm-tools
-##[error]The operation was canceled.
+Collecting diagnostic information...
+Disk space:
+Filesystem      Size    Used   Avail Capacity iused ifree %iused  Mounted on
+/dev/disk2s5   320Gi   266Gi    32Gi    90%    2.1M  334M    1%   /System/Volumes/Data
+Cargo environment:
+cargo 1.99.1 (5f94df478 2026-08-27)
+rustc 1.99.1 (58cf8f9c3 2026-10-13)
+##[error]exit status 1
 ```
 
 </details>

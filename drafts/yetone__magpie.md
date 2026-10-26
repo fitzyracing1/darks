@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/yetone/magpie/issues/new
-- **Stars:** 21398 · **Generated:** 2026-10-25T18:43:35.920Z
+- **Stars:** 21460 · **Generated:** 2026-10-26T01:16:48.554Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -18,7 +18,7 @@ CI: "Test" workflow failing on main since 2026-10-25
 <!-- BEGIN BODY -->
 Hi! The **Test** workflow (`.github/workflows/test.yml`) on `main` has been failing since 2026-10-25. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/yetone/magpie/actions/runs/40220638746 — dark (conclusion: `failure`), 2026-10-25 18:18 UTC
+- Latest run on `main`: https://github.com/yetone/magpie/actions/runs/40237620835 — dark (conclusion: `failure`), 2026-10-25 21:53 UTC
 - Dark since: 2026-10-25 04:42 UTC (first run of the current streak)
 - Job / step: `test (ubuntu-latest)` → `Test`
 - Likely cause: FAIL
@@ -27,9 +27,9 @@ Hi! The **Test** workflow (`.github/workflows/test.yml`) on `main` has been fail
 
 ```
 ?   	github.com/yetone/magpie/plugins/routing	[no test files]
-ok  	github.com/yetone/magpie/plugins/search	0.011s
+ok  	github.com/yetone/magpie/plugins/search	0.015s
 ?   	github.com/yetone/magpie/plugins/sessions	[no test files]
-ok  	github.com/yetone/magpie/plugins/tools	0.009s
+ok  	github.com/yetone/magpie/plugins/tools	0.011s
 ?   	github.com/yetone/magpie/plugins/usage	[no test files]
 ?   	github.com/yetone/magpie/plugins/warmups	[no test files]
 FAIL

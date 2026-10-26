@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/farion1231/cc-switch/issues/new
-- **Stars:** 148568 · **Generated:** 2026-10-25T18:43:35.920Z
+- **Stars:** 148595 · **Generated:** 2026-10-26T01:16:48.554Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -18,7 +18,7 @@ CI: "WSL2 Nightly" workflow failing on main since 2026-10-22
 <!-- BEGIN BODY -->
 Hi! The **WSL2 Nightly** workflow (`.github/workflows/wsl2-nightly.yml`) on `main` has been failing since 2026-10-22. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/farion1231/cc-switch/actions/runs/40121274164 — dark (conclusion: `failure`), 2026-10-24 18:33 UTC
+- Latest run on `main`: https://github.com/farion1231/cc-switch/actions/runs/40221883713 — dark (conclusion: `failure`), 2026-10-25 18:34 UTC
 - Dark since: 2026-10-22 18:36 UTC (first run of the current streak)
 - Job / step: `Backend Lib Suite (Windows + WSL2 home)` → `Run lib tests against WSL2-backed home`
 - Likely cause: error: test run failed
@@ -26,12 +26,12 @@ Hi! The **WSL2 Nightly** workflow (`.github/workflows/wsl2-nightly.yml`) on `mai
 <details><summary>End of the job log</summary>
 
 ```
-  TRY 3 FAIL [   6.566s] (3170/3880) cc-switch services::session_usage_agy::native_models::tests::skips_missing_references_and_malformed_metadata
-  TRY 3 FAIL [   6.518s] (3171/3880) cc-switch services::session_usage_agy::native_models::tests::uses_step_references_including_zero_instead_of_generation_order
-  TRY 3 FAIL [   6.655s] (3178/3880) cc-switch services::session_usage_agy::tests::native_models_backfill_unknown_rows_without_changing_tokens_or_deduplication
-  TRY 3 FAIL [   6.483s] (3179/3880) cc-switch services::session_usage_agy::tests::native_models_do_not_replace_explicit_models_or_selection_events
-  TRY 3 FAIL [   6.783s] (3180/3880) cc-switch services::session_usage_agy::tests::native_tiered_ids_share_the_model_selection_bucket_and_price
-  TRY 3 FAIL [   6.519s] (3618/3880) cc-switch session_manager::providers::agy::tests::agy_binary_only_sessions_keep_index_metadata_without_fabricated_transcripts
+  TRY 3 FAIL [   6.601s] (3171/3881) cc-switch services::session_usage_agy::native_models::tests::skips_missing_references_and_malformed_metadata
+  TRY 3 FAIL [   6.527s] (3172/3881) cc-switch services::session_usage_agy::native_models::tests::uses_step_references_including_zero_instead_of_generation_order
+  TRY 3 FAIL [   6.563s] (3179/3881) cc-switch services::session_usage_agy::tests::native_models_backfill_unknown_rows_without_changing_tokens_or_deduplication
+  TRY 3 FAIL [   6.384s] (3180/3881) cc-switch services::session_usage_agy::tests::native_models_do_not_replace_explicit_models_or_selection_events
+  TRY 3 FAIL [   6.563s] (3181/3881) cc-switch services::session_usage_agy::tests::native_tiered_ids_share_the_model_selection_bucket_and_price
+  TRY 3 FAIL [   6.566s] (3619/3881) cc-switch session_manager::providers::agy::tests::agy_binary_only_sessions_keep_index_metadata_without_fabricated_transcripts
 error: test run failed
 ##[error]Process completed with exit code 1.
 ```

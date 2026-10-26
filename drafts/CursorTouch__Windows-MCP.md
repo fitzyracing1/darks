@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/CursorTouch/Windows-MCP/issues/new
-- **Stars:** 10320 · **Generated:** 2026-10-25T18:43:35.920Z
+- **Stars:** 10332 · **Generated:** 2026-10-26T01:16:48.554Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title

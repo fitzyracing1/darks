@@ -4,9 +4,8 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/storytold/photocraft/issues/new
-- **Stars:** 72747 · **Generated:** 2026-10-25T18:43:35.920Z
+- **Stars:** 72839 · **Generated:** 2026-10-26T01:16:48.554Z
 - Nothing in this file has been sent anywhere.
-- **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Skipped: upstream already tracking
 
@@ -17,15 +16,13 @@ These workflows are left out of the body below.
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 2 workflows dark on main ("Perf (nightly)", "SonarCloud")
+CI: "Perf (nightly)" workflow failing on main since 2026-10-23
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
-
-### Perf (nightly) (`.github/workflows/perf-nightly.yml`)
+Hi! The **Perf (nightly)** workflow (`.github/workflows/perf-nightly.yml`) on `main` has been failing since 2026-10-23. Here is what I saw, in case it's useful:
 
 - Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/40159038499 — dark (conclusion: `failure`), 2026-10-25 03:39 UTC
 - Dark since: 2026-10-23 03:38 UTC (first run of the current streak)
@@ -43,28 +40,6 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 | P35 | Marquee drag on 24 MP with Alt/Shift | ≤ 17 ms p95 | Shift/Alt marquee modifiers don't exist yet (#208) and the drag preview is UI-side | [#211](https://github.com/storytold/photocraft/issues/211) |
 wrote /Users/runner/work/photocraft/photocraft/target/perf/results.json
 ##[error]Process completed with exit code 1.
-```
-
-</details>
-
-### SonarCloud (`.github/workflows/sonarcloud.yml`)
-
-- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/40212149911 — dark (conclusion: `cancelled`), 2026-10-25 16:32 UTC
-- Dark since: 2026-10-23 13:54 UTC (first run of the current streak)
-- Job / step: `sonarcloud / SonarCloud Scan` → `Generate Rust coverage`
-- Likely cause: The job has exceeded the maximum execution time of 1h0m0s
-
-<details><summary>End of the job log</summary>
-
-```
-test retouch_cmds::tests::clone_stamp_respects_selection_and_cmyk ... ok
-test retouch_cmds::tests::clone_stamp_sample_all_layers_onto_empty_layer_and_opacity ... ok
-test retouch_cmds::tests::clone_stamp_samples_pre_stroke_state_and_non_aligned_returns_source ... ok
-test retouch_cmds::tests::content_aware_extend_keeps_the_original ... ok
-test retouch_cmds::tests::content_aware_move_coarse_preview_handles_transform_extend_and_limits has been running for over 60 seconds
-test pixels::tests::tiled_adjustment_matches_one_pass_over_the_content ... ok
-test retouch_cmds::tests::content_aware_move_fails_gracefully has been running for over 60 seconds
-##[error]The operation was canceled.
 ```
 
 </details>
