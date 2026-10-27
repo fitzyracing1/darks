@@ -4,24 +4,48 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/n8n-io/n8n/issues/new
-- **Stars:** 208742 · **Generated:** 2026-10-27T12:57:18.218Z
+- **Stars:** 208784 · **Generated:** 2026-10-27T18:39:56.972Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** latest run was skipped, not failed — probably not worth filing
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: "Security: Sync from Public" workflow not completing (runs skipped) on master since 2026-10-13
+CI: 2 workflows dark on master ("Security: Sync from Public", "CI: Master (Build, Test, Lint)")
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! The **Security: Sync from Public** workflow (`.github/workflows/sec-sync-public-to-private.yml`) on `master` has been not completing (runs skipped) since 2026-10-13. Here is what I saw, in case it's useful:
+Hi! A few workflows on `master` have been dark recently. Details below, in case they're useful:
 
-- Latest run on `master`: https://github.com/n8n-io/n8n/actions/runs/40503860850 — dark (conclusion: `skipped`), 2026-10-27 12:27 UTC
+### Security: Sync from Public (`.github/workflows/sec-sync-public-to-private.yml`)
+
+- Latest run on `master`: https://github.com/n8n-io/n8n/actions/runs/40558127560 — dark (conclusion: `skipped`), 2026-10-27 18:14 UTC
 - Dark since: 2026-10-13 15:19 UTC (first run of the current streak)
 - Likely cause: run skipped
+
+### CI: Master (Build, Test, Lint) (`.github/workflows/ci-master.yml`)
+
+- Latest run on `master`: https://github.com/n8n-io/n8n/actions/runs/40554189946 — dark (conclusion: `failure`), 2026-10-27 17:49 UTC
+- Dark since: 2026-10-27 15:30 UTC (first run of the current streak)
+- Job / step: `Unit tests (24.22.1) / Backend Unit Tests` → `Test Unit (backend, except cli and nodes-base)`
+- Likely cause: command (/home/runner/_work/n8n/n8n/packages/@n8n/ai-utilities) /home/runner/setup-pnpm/pnpm run test:unit exited (1)
+
+<details><summary>End of the job log</summary>
+
+```
+      Tests  353 passed | 8 skipped (361)
+   Start at  17:56:09
+   Duration  33.13s (tests 53%, import 38%, transform 7%, worker 1%)
+     Import  243 modules were evaluated 789 times · 21.69s total, 38% of tracked time
+             ~4.67s faster with isolate: false — shared modules are evaluated once per worker instead of once per file
+             learn more: https://vitest.dev/guide/improving-performance#test-isolation
+JUNIT report written to /home/runner/_work/n8n/n8n/packages/modules/insights/backend/junit.xml
+##[error]command (/home/runner/_work/n8n/n8n/packages/@n8n/ai-utilities) /home/runner/setup-pnpm/pnpm run test:unit exited (1)
+```
+
+</details>
 
 If this is already known or expected, feel free to close. Thanks for maintaining n8n!
 

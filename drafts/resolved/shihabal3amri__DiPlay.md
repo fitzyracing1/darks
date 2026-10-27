@@ -1,8 +1,8 @@
 <!-- dark-draft: shihabal3amri/DiPlay -->
-<!-- draft-state: ready -->
+<!-- draft-state: resolved -->
 # Upstream issue draft: shihabal3amri/DiPlay
 
-- **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
+- **Status:** resolved — lit again (2026-10-27); nothing to file
 - **Would be filed at:** https://github.com/shihabal3amri/DiPlay/issues/new
 - **Stars:** 12534 · **Generated:** 2026-10-27T12:57:18.218Z
 - Nothing in this file has been sent anywhere.

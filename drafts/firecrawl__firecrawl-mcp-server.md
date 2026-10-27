@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/firecrawl/firecrawl-mcp-server/issues/new
-- **Stars:** 7698 · **Generated:** 2026-10-27T12:57:18.218Z
+- **Stars:** 7699 · **Generated:** 2026-10-27T18:39:56.972Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
@@ -43,7 +43,7 @@ npm error A complete log of this run can be found in: /home/runner/.npm/_logs/20
 
 ### Deploy Images to GHCR (`.github/workflows/image.yml`)
 
-- Latest run on `main`: https://github.com/firecrawl/firecrawl-mcp-server/actions/runs/40436908810 — dark (conclusion: `cancelled`), 2026-10-27 02:10 UTC
+- Latest run on `main`: https://github.com/firecrawl/firecrawl-mcp-server/actions/runs/40525940359 — dark (conclusion: `cancelled`), 2026-10-27 14:56 UTC
 - Dark since: 2026-10-27 02:10 UTC (first run of the current streak)
 - Job / step: `push-image`
 - Likely cause: run cancelled in job "push-image"

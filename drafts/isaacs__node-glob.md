@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/isaacs/node-glob/issues/new
-- **Stars:** 8710 · **Generated:** 2026-10-27T12:57:18.218Z
+- **Stars:** 8710 · **Generated:** 2026-10-27T18:39:56.972Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
