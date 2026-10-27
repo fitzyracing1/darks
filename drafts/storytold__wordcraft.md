@@ -4,7 +4,7 @@
 
 - **Status:** not for filing — upstream already has an open issue/PR about every dark workflow here
 - **Would be filed at:** https://github.com/storytold/wordcraft/issues/new
-- **Stars:** 16229 · **Generated:** 2026-10-27T01:14:41.631Z
+- **Stars:** 16259 · **Generated:** 2026-10-27T07:00:32.421Z
 - Nothing in this file has been sent anywhere.
 
 ## Skipped: upstream already tracking

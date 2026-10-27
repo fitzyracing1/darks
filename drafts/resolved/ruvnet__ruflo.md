@@ -1,8 +1,8 @@
 <!-- dark-draft: ruvnet/ruflo -->
-<!-- draft-state: duplicate -->
+<!-- draft-state: resolved -->
 # Upstream issue draft: ruvnet/ruflo
 
-- **Status:** not for filing — upstream already has an open issue/PR about every dark workflow here
+- **Status:** resolved — lit again (2026-10-27); nothing to file
 - **Would be filed at:** https://github.com/ruvnet/ruflo/issues/new
 - **Stars:** 79544 · **Generated:** 2026-10-27T01:14:41.631Z
 - Nothing in this file has been sent anywhere.

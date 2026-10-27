@@ -4,19 +4,22 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/firecrawl/firecrawl-mcp-server/issues/new
-- **Stars:** 7694 · **Generated:** 2026-10-27T01:14:41.631Z
+- **Stars:** 7697 · **Generated:** 2026-10-27T07:00:32.421Z
 - Nothing in this file has been sent anywhere.
+- **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: "Publish Package" workflow failing on main since 2026-10-26
+CI: 2 workflows dark on main ("Publish Package", "Deploy Images to GHCR")
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! The **Publish Package** workflow (`.github/workflows/publish.yml`) on `main` has been failing since 2026-10-26. Here is what I saw, in case it's useful:
+Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
+
+### Publish Package (`.github/workflows/publish.yml`)
 
 - Latest run on `main`: https://github.com/firecrawl/firecrawl-mcp-server/actions/runs/40398792784 — dark (conclusion: `failure`), 2026-10-26 20:47 UTC
 - Dark since: 2026-10-26 16:01 UTC (first run of the current streak)
@@ -37,6 +40,13 @@ npm error A complete log of this run can be found in: /home/runner/.npm/_logs/20
 ```
 
 </details>
+
+### Deploy Images to GHCR (`.github/workflows/image.yml`)
+
+- Latest run on `main`: https://github.com/firecrawl/firecrawl-mcp-server/actions/runs/40436908810 — dark (conclusion: `cancelled`), 2026-10-27 02:10 UTC
+- Dark since: 2026-10-27 02:10 UTC (first run of the current streak)
+- Job / step: `push-image`
+- Likely cause: run cancelled in job "push-image"
 
 If this is already known or expected, feel free to close. Thanks for maintaining firecrawl-mcp-server!
 

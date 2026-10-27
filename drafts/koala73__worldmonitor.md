@@ -4,13 +4,13 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/koala73/worldmonitor/issues/new
-- **Stars:** 89601 · **Generated:** 2026-10-27T01:14:41.631Z
+- **Stars:** 89617 · **Generated:** 2026-10-27T07:00:32.421Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 2 workflows dark on main ("Railway Native Deploy Health", "TPS Open Data Live Contract")
+CI: 2 workflows dark on main ("Railway Registry Sync", "Perf — styleLayout budget")
 <!-- END TITLE -->
 
 ## Body
@@ -18,45 +18,45 @@ CI: 2 workflows dark on main ("Railway Native Deploy Health", "TPS Open Data Liv
 <!-- BEGIN BODY -->
 Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
 
-### Railway Native Deploy Health (`.github/workflows/railway-deploy-drift.yml`)
+### Railway Registry Sync (`.github/workflows/railway-registry-sync.yml`)
 
-- Latest run on `main`: https://github.com/koala73/worldmonitor/actions/runs/40429634132 — dark (conclusion: `failure`), 2026-10-27 00:57 UTC
-- Dark since: 2026-10-24 18:27 UTC (first run of the current streak)
-- Job / step: `Railway native deployment health` → `Check Railway deployment configuration and drift`
-- Likely cause: npm warn deprecated node-domexception@1.0.0: Use your platform's native DOMException instead
+- Latest run on `main`: https://github.com/koala73/worldmonitor/actions/runs/40456569798 — dark (conclusion: `failure`), 2026-10-27 05:39 UTC
+- Dark since: 2026-10-27 05:39 UTC (first run of the current streak)
+- Job / step: `Reconcile registry to live configuration` → `Verify live configuration with the Viewer identity`
+- Likely cause: Required environment variables were not evaluated: the Viewer projection cannot request their values.
 
 <details><summary>End of the job log</summary>
 
 ```
-npm warn install-scripts
-npm warn install-scripts Run `npm install -g --allow-scripts=@railway/cli` to allow these scripts once, or `npm config set allow-scripts=@railway/cli --location=user` to allow them for all global installs.
-Railway operational-config audit found 1 drifted service(s):
+Railway operational-config audit passed: live Railway configuration matches repository policy.
+Railway operational-config audit: environment=production mode=deployment-only
+Required environment variables were not evaluated: the Viewer projection cannot request their values.
+Railway operational-config audit found 2 drifted service(s):
+- seed-no2-activity: source checkSuites true != false
 - seed-notam-nms: source checkSuites true != false
-Read 89 service histories in 1 fleet page(s) (500 records), 0 direct fallback(s).
-Railway deploy-drift check: head=393709bff source=--head vs-origin-main=exact grace=393709bff services=89 {"CURRENT":3,"CURRENT_FOR_CLOSURE":86}
-Every service this repository deploys is running 393709bff or building it.
+Railway registry sync verify reported configuration drift (exit 2); verdicts are not retried
 ##[error]Process completed with exit code 1.
 ```
 
 </details>
 
-### TPS Open Data Live Contract (`.github/workflows/tps-open-data-live.yml`)
+### Perf — styleLayout budget (`.github/workflows/perf-style-layout-budget.yml`)
 
-- Latest run on `main`: https://github.com/koala73/worldmonitor/actions/runs/40429420080 — dark (conclusion: `failure`), 2026-10-27 00:55 UTC
-- Dark since: 2026-10-27 00:55 UTC (first run of the current streak)
-- Job / step: `live-contract` → `Probe the official TPS Open Data source contracts`
-- Likely cause: # fail 1
+- Latest run on `main`: https://github.com/koala73/worldmonitor/actions/runs/40463023935 — dark (conclusion: `failure`), 2026-10-27 06:45 UTC
+- Dark since: 2026-10-27 06:45 UTC (first run of the current streak)
+- Job / step: `measure` → `Enforce the styleLayout budget`
+- Likely cause: No VM guests are running outdated hypervisor (qemu) binaries on this host.
 
 <details><summary>End of the job log</summary>
 
 ```
-# suites 1
-# pass 1
-# fail 1
-# cancelled 0
-# skipped 0
-# todo 0
-# duration_ms 31021.819291
+|■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                |  60% of 114.3 MiB
+|■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                        |  70% of 114.3 MiB
+|■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                |  80% of 114.3 MiB
+|■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■        |  90% of 114.3 MiB
+|■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■| 100% of 114.3 MiB
+[style-layout-budget] REGRESSION: styleLayout is 29.5% of attributed main-thread self-time, over the 28% budget
+[style-layout-budget] see docs/perf/desktop-mainthread-baseline-2026-07-02.md
 ##[error]Process completed with exit code 1.
 ```
 
