@@ -4,13 +4,13 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/langflow-ai/langflow/issues/new
-- **Stars:** 156039 · **Generated:** 2026-10-26T18:57:58.513Z
+- **Stars:** 156042 · **Generated:** 2026-10-27T01:14:41.631Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 3 workflows dark on main ("Deploy Storybook to GitHub Pages", "Mend", "Cross-Bundle Test")
+CI: 4 workflows dark on main ("Deploy Storybook to GitHub Pages", "Mend", "Cross-Bundle Test", +1 more)
 <!-- END TITLE -->
 
 ## Body
@@ -67,6 +67,28 @@ Process finished with exit code ERROR (-1)
 - Latest run on `main`: https://github.com/langflow-ai/langflow/actions/runs/40279758044 — dark (conclusion: `failure`), 2026-10-26 06:25 UTC
 - Dark since: 2026-10-26 06:25 UTC (first run of the current streak)
 - Likely cause: no cause found in annotations
+
+### GP Download Translations (`.github/workflows/gp-download.yml`)
+
+- Latest run on `main`: https://github.com/langflow-ai/langflow/actions/runs/40416774534 — dark (conclusion: `failure`), 2026-10-26 23:01 UTC
+- Dark since: 2026-10-26 23:01 UTC (first run of the current streak)
+- Job / step: `Download translations from Globalization Pipeline` → `Download translations from GP`
+- Likely cause: FAILED languages: ['fr', 'ja', 'es', 'de', 'pt', 'zh-Hans']
+
+<details><summary>End of the job log</summary>
+
+```
+Downloading 'de' translations...
+  Error downloading 'de': HTTPSConnectionPool(host='g11n-pipeline-api.straker.global', port=443): Max retries exceeded with url: /translate/rest/langflow-test/v2/bundles/langflow-ui/de (Caused by ConnectTimeoutError(<HT…
+Downloading 'pt' translations...
+  Error downloading 'pt': HTTPSConnectionPool(host='g11n-pipeline-api.straker.global', port=443): Max retries exceeded with url: /translate/rest/langflow-test/v2/bundles/langflow-ui/pt (Caused by ConnectTimeoutError(<HT…
+Downloading 'zh-Hans' translations...
+  Error downloading 'zh-Hans': HTTPSConnectionPool(host='g11n-pipeline-api.straker.global', port=443): Max retries exceeded with url: /translate/rest/langflow-test/v2/bundles/langflow-ui/zh-Hans (Caused by ConnectTimeou…
+FAILED languages: ['fr', 'ja', 'es', 'de', 'pt', 'zh-Hans']
+##[error]Process completed with exit code 1.
+```
+
+</details>
 
 If this is already known or expected, feel free to close. Thanks for maintaining langflow!
 

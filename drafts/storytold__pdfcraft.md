@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/storytold/pdfcraft/issues/new
-- **Stars:** 18004 · **Generated:** 2026-10-26T18:57:58.513Z
+- **Stars:** 18052 · **Generated:** 2026-10-27T01:14:41.631Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -18,7 +18,7 @@ CI: "FreeBSD" workflow failing on main since 2026-10-26
 <!-- BEGIN BODY -->
 Hi! The **FreeBSD** workflow (`.github/workflows/freebsd.yml`) on `main` has been failing since 2026-10-26. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/storytold/pdfcraft/actions/runs/40271729133 — dark (conclusion: `failure`), 2026-10-26 04:57 UTC
+- Latest run on `main`: https://github.com/storytold/pdfcraft/actions/runs/40421232004 — dark (conclusion: `failure`), 2026-10-26 23:39 UTC
 - Dark since: 2026-10-26 04:57 UTC (first run of the current streak)
 - Job / step: `freebsd / FreeBSD 15 aarch64 (build + test)` → `Build and test`
 - Likely cause: error: no matching package named 'craft-menu' found

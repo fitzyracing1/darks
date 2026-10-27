@@ -4,19 +4,36 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/firecrawl/firecrawl/issues/new
-- **Stars:** 195624 · **Generated:** 2026-10-26T18:57:58.513Z
+- **Stars:** 195706 · **Generated:** 2026-10-27T01:14:41.631Z
 - Nothing in this file has been sent anywhere.
+- **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: "Audit NPM Packages" workflow failing on main since 2026-10-24
+CI: 3 workflows dark on main ("Publish PHP SDK", "Publish Go SDK", "Audit NPM Packages")
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! The **Audit NPM Packages** workflow (`.github/workflows/npm-audit.yml`) on `main` has been failing since 2026-10-24. Here is what I saw, in case it's useful:
+Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
+
+### Publish PHP SDK (`.github/workflows/publish-php-sdk.yml`)
+
+- Latest run on `main`: https://github.com/firecrawl/firecrawl/actions/runs/40035031098 — dark (conclusion: `cancelled`), 2026-10-23 22:39 UTC
+- Dark since: 2026-10-23 07:52 UTC (first run of the current streak)
+- Job / step: `Publish to Packagist`
+- Likely cause: run cancelled in job "Publish to Packagist"
+
+### Publish Go SDK (`.github/workflows/publish-go-sdk.yml`)
+
+- Latest run on `main`: https://github.com/firecrawl/firecrawl/actions/runs/39920726909 — dark (conclusion: `cancelled`), 2026-10-23 07:52 UTC
+- Dark since: 2026-10-23 07:52 UTC (first run of the current streak)
+- Job / step: `Tag and index on pkg.go.dev`
+- Likely cause: run cancelled in job "Tag and index on pkg.go.dev"
+
+### Audit NPM Packages (`.github/workflows/npm-audit.yml`)
 
 - Latest run on `main`: https://github.com/firecrawl/firecrawl/actions/runs/40365312916 — dark (conclusion: `failure`), 2026-10-26 17:05 UTC
 - Dark since: 2026-10-24 17:04 UTC (first run of the current streak)

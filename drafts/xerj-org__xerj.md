@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/xerj-org/xerj/issues/new
-- **Stars:** 16785 · **Generated:** 2026-10-26T18:57:58.513Z
+- **Stars:** 16846 · **Generated:** 2026-10-27T01:14:41.631Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
@@ -43,9 +43,25 @@ repin: classes=weekly; 7 corpus(es) moved
 
 ### CI (`.github/workflows/ci.yml`)
 
-- Latest run on `main`: https://github.com/xerj-org/xerj/actions/runs/40378856419 — dark (conclusion: `cancelled`), 2026-10-26 18:33 UTC
+- Latest run on `main`: https://github.com/xerj-org/xerj/actions/runs/40424326466 — dark (conclusion: `cancelled`), 2026-10-27 00:07 UTC
 - Dark since: 2026-10-26 14:11 UTC (first run of the current streak)
-- Likely cause: run cancelled
+- Job / step: `Build + Test` → `Unit + integration tests`
+- Likely cause: The job has exceeded the maximum execution time of 1h0m0s
+
+<details><summary>End of the job log</summary>
+
+```
+test every_help_surface_invites_a_report_by_default ... ok
+test disable_feedback_works_in_either_argument_order ... ok
+test json_examples_in_help_still_parse ... ok
+test the_env_var_silences_every_surface ... ok
+test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 1.41s
+     Running tests/grpc_h2c_fail_closed.rs (target/ci-test/deps/grpc_h2c_fail_closed-002cb3db46d6c426)
+running 3 tests
+##[error]The operation was canceled.
+```
+
+</details>
 
 If this is already known or expected, feel free to close. Thanks for maintaining xerj!
 

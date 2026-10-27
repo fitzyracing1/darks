@@ -4,24 +4,21 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/anomalyco/opencode/issues/new
-- **Stars:** 221882 · **Generated:** 2026-10-26T18:57:58.513Z
+- **Stars:** 221971 · **Generated:** 2026-10-27T01:14:41.631Z
 - Nothing in this file has been sent anywhere.
-- **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 3 workflows dark on dev ("bot-nix-hashes", "nightly-beta", "release")
+CI: "bot-nix-hashes" workflow failing on dev since 2026-10-25
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! A few workflows on `dev` have been dark recently. Details below, in case they're useful:
+Hi! The **bot-nix-hashes** workflow (`.github/workflows/bot-nix-hashes.yml`) on `dev` has been failing since 2026-10-25. Here is what I saw, in case it's useful:
 
-### bot-nix-hashes (`.github/workflows/bot-nix-hashes.yml`)
-
-- Latest run on `dev`: https://github.com/anomalyco/opencode/actions/runs/40377024194 — dark (conclusion: `failure`), 2026-10-26 18:21 UTC
+- Latest run on `dev`: https://github.com/anomalyco/opencode/actions/runs/40429380383 — dark (conclusion: `failure`), 2026-10-27 00:54 UTC
 - Dark since: 2026-10-25 22:38 UTC (first run of the current streak)
 - Job / step: `update-hashes` → `Commit changes`
 - Likely cause: error: failed to push some refs to 'https://github.com/anomalyco/opencode'
@@ -40,34 +37,6 @@ error: failed to push some refs to 'https://github.com/anomalyco/opencode'
 ```
 
 </details>
-
-### nightly-beta (`.github/workflows/nightly-beta.yml`)
-
-- Latest run on `dev`: https://github.com/anomalyco/opencode/actions/runs/40301781578 — dark (conclusion: `failure`), 2026-10-26 09:43 UTC
-- Dark since: 2026-10-26 09:43 UTC (first run of the current streak)
-- Job / step: `dispatch` → `Dispatch beta test runs`
-- Likely cause: could not create workflow dispatch event: HTTP 422: No ref found for: beta (https://api.github.com/repos/anomalyco/opencode/actions/workflows/396447938/dispatches)
-
-<details><summary>End of the job log</summary>
-
-```
-Metadata: read
-Secret source: Actions
-Cache mode: write
-Prepare workflow directory
-Prepare all required actions
-Complete job name: dispatch
-could not create workflow dispatch event: HTTP 422: No ref found for: beta (https://api.github.com/repos/anomalyco/opencode/actions/workflows/396447938/dispatches)
-##[error]Process completed with exit code 1.
-```
-
-</details>
-
-### release (`.github/workflows/release.yml`)
-
-- Latest run on `dev`: https://github.com/anomalyco/opencode/actions/runs/40378840330 — dark (conclusion: `cancelled`), 2026-10-26 18:33 UTC
-- Dark since: 2026-10-26 18:33 UTC (first run of the current streak)
-- Likely cause: run cancelled
 
 If this is already known or expected, feel free to close. Thanks for maintaining opencode!
 

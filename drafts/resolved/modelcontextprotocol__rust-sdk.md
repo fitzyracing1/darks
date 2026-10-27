@@ -1,8 +1,8 @@
 <!-- dark-draft: modelcontextprotocol/rust-sdk -->
-<!-- draft-state: ready -->
+<!-- draft-state: resolved -->
 # Upstream issue draft: modelcontextprotocol/rust-sdk
 
-- **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
+- **Status:** resolved — lit again (2026-10-27); nothing to file
 - **Would be filed at:** https://github.com/modelcontextprotocol/rust-sdk/issues/new
 - **Stars:** 4053 · **Generated:** 2026-10-26T18:57:58.513Z
 - Nothing in this file has been sent anywhere.

@@ -4,48 +4,24 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/n8n-io/n8n/issues/new
-- **Stars:** 208656 · **Generated:** 2026-10-26T18:57:58.513Z
+- **Stars:** 208676 · **Generated:** 2026-10-27T01:14:41.631Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** latest run was skipped, not failed — probably not worth filing
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 2 workflows dark on master ("Security: Sync from Public", "CI: Master (Build, Test, Lint)")
+CI: "Security: Sync from Public" workflow not completing (runs skipped) on master since 2026-10-13
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! A few workflows on `master` have been dark recently. Details below, in case they're useful:
+Hi! The **Security: Sync from Public** workflow (`.github/workflows/sec-sync-public-to-private.yml`) on `master` has been not completing (runs skipped) since 2026-10-13. Here is what I saw, in case it's useful:
 
-### Security: Sync from Public (`.github/workflows/sec-sync-public-to-private.yml`)
-
-- Latest run on `master`: https://github.com/n8n-io/n8n/actions/runs/40377899043 — dark (conclusion: `skipped`), 2026-10-26 18:27 UTC
+- Latest run on `master`: https://github.com/n8n-io/n8n/actions/runs/40428563716 — dark (conclusion: `skipped`), 2026-10-27 00:46 UTC
 - Dark since: 2026-10-13 15:19 UTC (first run of the current streak)
 - Likely cause: run skipped
-
-### CI: Master (Build, Test, Lint) (`.github/workflows/ci-master.yml`)
-
-- Latest run on `master`: https://github.com/n8n-io/n8n/actions/runs/40377134305 — dark (conclusion: `failure`), 2026-10-26 18:22 UTC
-- Dark since: 2026-10-26 06:50 UTC (first run of the current streak)
-- Job / step: `Verify single-instance deps (npm-install) / verify` → `Verify npm-install closure (changed packages)`
-- Likely cause: {"error":"Command failed: npm install --no-audit --no-fund --ignore-scripts --no-package-lock"}
-
-<details><summary>End of the job log</summary>
-
-```
-npm error notsup Valid libc:  musl
-npm error notsup Actual libc: glibc
-npm error A complete log of this run can be found in: /home/runner/.npm/_logs/2026-10-26T18_25_05_652Z-debug-0.log
-npm install failed — its output is in the "npm install output" group above.
-{"error":"Command failed: npm install --no-audit --no-fund --ignore-scripts --no-package-lock"}
-ℹ Safe-chain: Some package versions were suppressed during package metadata resolution due to minimum package age.
-  To disable this check, use: --safe-chain-skip-minimum-package-age
-##[error]Process completed with exit code 2.
-```
-
-</details>
 
 If this is already known or expected, feel free to close. Thanks for maintaining n8n!
 

@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/Gentleman-Programming/gentle-ai/issues/new
-- **Stars:** 8033 · **Generated:** 2026-10-26T18:57:58.513Z
+- **Stars:** 8039 · **Generated:** 2026-10-27T01:14:41.631Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -18,7 +18,7 @@ CI: "Windows Full Suite" workflow failing on main since 2026-10-25
 <!-- BEGIN BODY -->
 Hi! The **Windows Full Suite** workflow (`.github/workflows/windows-full-suite.yml`) on `main` has been failing since 2026-10-25. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/Gentleman-Programming/gentle-ai/actions/runs/40377223674 — dark (conclusion: `failure`), 2026-10-26 18:22 UTC
+- Latest run on `main`: https://github.com/Gentleman-Programming/gentle-ai/actions/runs/40427799267 — dark (conclusion: `failure`), 2026-10-27 00:39 UTC
 - Dark since: 2026-10-25 12:37 UTC (first run of the current streak)
 - Job / step: `Windows Full Suite (rest)` → `Run shard`
 - Likely cause: FAIL
@@ -26,11 +26,11 @@ Hi! The **Windows Full Suite** workflow (`.github/workflows/windows-full-suite.y
 <details><summary>End of the job log</summary>
 
 ```
-ok  	github.com/gentleman-programming/gentle-ai/v4/internal/update/upgrade	8.360s
-ok  	github.com/gentleman-programming/gentle-ai/v4/internal/verify	0.027s
-ok  	github.com/gentleman-programming/gentle-ai/v4/internal/versions	0.030s
+ok  	github.com/gentleman-programming/gentle-ai/v4/internal/update/upgrade	5.649s
+ok  	github.com/gentleman-programming/gentle-ai/v4/internal/verify	0.023s
+ok  	github.com/gentleman-programming/gentle-ai/v4/internal/versions	0.025s
 ?   	github.com/gentleman-programming/gentle-ai/v4/scripts	[no test files]
-ok  	github.com/gentleman-programming/gentle-ai/v4/scripts/crosslane	2.868s
+ok  	github.com/gentleman-programming/gentle-ai/v4/scripts/crosslane	4.672s
 ?   	github.com/gentleman-programming/gentle-ai/v4/scripts/gen-sdd-agent-digests	[no test files]
 FAIL
 ##[error]Process completed with exit code 1.
