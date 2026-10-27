@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/ReactiveX/rxjs/issues/new
-- **Stars:** 31705 · **Generated:** 2026-10-27T07:00:32.421Z
+- **Stars:** 31704 · **Generated:** 2026-10-27T12:57:18.218Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title

@@ -4,43 +4,19 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/triggerdotdev/trigger.dev/issues/new
-- **Stars:** 16623 · **Generated:** 2026-10-27T07:00:32.421Z
+- **Stars:** 16628 · **Generated:** 2026-10-27T12:57:18.218Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 2 workflows dark on main ("🦋 Changesets PR", "🛡️ E2E Tests: Webapp Auth (full)")
+CI: "🛡️ E2E Tests: Webapp Auth (full)" workflow failing on main since 2026-10-27
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
-
-### 🦋 Changesets PR (`.github/workflows/changesets-pr.yml`)
-
-- Latest run on `main`: https://github.com/triggerdotdev/trigger.dev/actions/runs/40374557539 — dark (conclusion: `failure`), 2026-10-26 18:05 UTC
-- Dark since: 2026-10-26 18:05 UTC (first run of the current streak)
-- Job / step: `Create Release PR` → `Update PR title and enhance body`
-- Likely cause: "message": "Server Error"
-
-<details><summary>End of the job log</summary>
-
-```
-From https://github.com/triggerdotdev/trigger.dev
- * branch                changeset-release/main -> FETCH_HEAD
-https://github.com/triggerdotdev/trigger.dev/pull/5073
-gh: Server Error (HTTP 502)
-{
-  "message": "Server Error"
-}
-##[error]Process completed with exit code 1.
-```
-
-</details>
-
-### 🛡️ E2E Tests: Webapp Auth (full) (`.github/workflows/e2e-webapp-auth-full.yml`)
+Hi! The **🛡️ E2E Tests: Webapp Auth (full)** workflow (`.github/workflows/e2e-webapp-auth-full.yml`) on `main` has been failing since 2026-10-27. Here is what I saw, in case it's useful:
 
 - Latest run on `main`: https://github.com/triggerdotdev/trigger.dev/actions/runs/40447349222 — dark (conclusion: `failure`), 2026-10-27 04:00 UTC
 - Dark since: 2026-10-27 04:00 UTC (first run of the current streak)

@@ -1,8 +1,8 @@
 <!-- dark-draft: OpenByteInc/QuantDinger -->
-<!-- draft-state: ready -->
+<!-- draft-state: resolved -->
 # Upstream issue draft: OpenByteInc/QuantDinger
 
-- **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
+- **Status:** resolved — lit again (2026-10-27); nothing to file
 - **Would be filed at:** https://github.com/OpenByteInc/QuantDinger/issues/new
 - **Stars:** 13148 · **Generated:** 2026-10-27T07:00:32.421Z
 - Nothing in this file has been sent anywhere.

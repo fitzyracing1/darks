@@ -4,59 +4,35 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/koala73/worldmonitor/issues/new
-- **Stars:** 89617 · **Generated:** 2026-10-27T07:00:32.421Z
+- **Stars:** 89633 · **Generated:** 2026-10-27T12:57:18.218Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 2 workflows dark on main ("Railway Registry Sync", "Perf — styleLayout budget")
+CI: "Seed Freshness Monitor" workflow failing on main since 2026-10-27
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
+Hi! The **Seed Freshness Monitor** workflow (`.github/workflows/seed-freshness-monitor.yml`) on `main` has been failing since 2026-10-27. Here is what I saw, in case it's useful:
 
-### Railway Registry Sync (`.github/workflows/railway-registry-sync.yml`)
-
-- Latest run on `main`: https://github.com/koala73/worldmonitor/actions/runs/40456569798 — dark (conclusion: `failure`), 2026-10-27 05:39 UTC
-- Dark since: 2026-10-27 05:39 UTC (first run of the current streak)
-- Job / step: `Reconcile registry to live configuration` → `Verify live configuration with the Viewer identity`
-- Likely cause: Required environment variables were not evaluated: the Viewer projection cannot request their values.
+- Latest run on `main`: https://github.com/koala73/worldmonitor/actions/runs/40503401753 — dark (conclusion: `failure`), 2026-10-27 12:23 UTC
+- Dark since: 2026-10-27 12:23 UTC (first run of the current streak)
+- Job / step: `monitor` → `Publish ingestion operational transitions`
+- Likely cause: Ingestion operational acceptance failed: the accepted-problem baseline expired on 2026-09-05T18:00:00Z. Re-review scripts/seed-freshness-baseline.json and set a new expiresAt.
 
 <details><summary>End of the job log</summary>
 
 ```
-Railway operational-config audit passed: live Railway configuration matches repository policy.
-Railway operational-config audit: environment=production mode=deployment-only
-Required environment variables were not evaluated: the Viewer projection cannot request their values.
-Railway operational-config audit found 2 drifted service(s):
-- seed-no2-activity: source checkSuites true != false
-- seed-notam-nms: source checkSuites true != false
-Railway registry sync verify reported configuration drift (exit 2); verdicts are not retried
-##[error]Process completed with exit code 1.
-```
-
-</details>
-
-### Perf — styleLayout budget (`.github/workflows/perf-style-layout-budget.yml`)
-
-- Latest run on `main`: https://github.com/koala73/worldmonitor/actions/runs/40463023935 — dark (conclusion: `failure`), 2026-10-27 06:45 UTC
-- Dark since: 2026-10-27 06:45 UTC (first run of the current streak)
-- Job / step: `measure` → `Enforce the styleLayout budget`
-- Likely cause: No VM guests are running outdated hypervisor (qemu) binaries on this host.
-
-<details><summary>End of the job log</summary>
-
-```
-|■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                |  60% of 114.3 MiB
-|■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                        |  70% of 114.3 MiB
-|■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                |  80% of 114.3 MiB
-|■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■        |  90% of 114.3 MiB
-|■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■| 100% of 114.3 MiB
-[style-layout-budget] REGRESSION: styleLayout is 29.5% of attributed main-thread self-time, over the 28% budget
-[style-layout-budget] see docs/perf/desktop-mainthread-baseline-2026-07-02.md
+Exact main revision passed repository gates.
+- recovered: aisGaps:EMPTY no longer reported; remove it from scripts/seed-freshness-baseline.json (#7574).
+Ingestion operational acceptance failed: 3 unacknowledged problem(s).
+- chokepointTransits: status=COVERAGE_PARTIAL records=3 age=3m max=30m
+- naturalEvents: status=SEED_ERROR records=25 age=19m max=540m
+- portwatchPortActivity: status=SEED_ERROR records=174 age=741m max=2160m
+Ingestion operational acceptance failed: the accepted-problem baseline expired on 2026-09-05T18:00:00Z. Re-review scripts/seed-freshness-baseline.json and set a new expiresAt.
 ##[error]Process completed with exit code 1.
 ```
 

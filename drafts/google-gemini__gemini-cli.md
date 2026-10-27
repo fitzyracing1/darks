@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/google-gemini/gemini-cli/issues/new
-- **Stars:** 108560 · **Generated:** 2026-10-27T07:00:32.421Z
+- **Stars:** 108564 · **Generated:** 2026-10-27T12:57:18.218Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -20,7 +20,7 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### 📋 Gemini Scheduled Issue Triage (`.github/workflows/gemini-scheduled-issue-triage.yml`)
 
-- Latest run on `main`: https://github.com/google-gemini/gemini-cli/actions/runs/40460418720 — dark (conclusion: `failure`), 2026-10-27 06:19 UTC
+- Latest run on `main`: https://github.com/google-gemini/gemini-cli/actions/runs/40502601869 — dark (conclusion: `failure`), 2026-10-27 12:17 UTC
 - Dark since: 2026-10-26 17:10 UTC (first run of the current streak)
 - Job / step: `triage-issues` → `Apply Triaged Labels`
 - Likely cause: Unhandled error: HttpError: Resource not accessible by integration
@@ -28,13 +28,13 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 <details><summary>End of the job log</summary>
 
 ```
-    request: {
-      agent: [Agent],
-      fetch: [Function: proxyFetch],
-      hook: [Function: bound bound register]
-    }
-  }
-}
+##[end-action id=gemini_standard_issue_analysis.__run_3;outcome=success;conclusion=success;duration_ms=17]
+Direct JSON parsing failed. Trying to extract from a markdown block.
+Aggregated triage results for 1 issues.
+RequestError [HttpError]: Resource not accessible by integration
+    at /home/runner/work/_actions/actions/github-script/60a0d83039c74a4aee543508d2ffcb1c3799cdea/dist/index.js:9537:21
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async module.exports (/home/runner/work/gemini-cli/gemini-cli/.github/scripts/apply-issue-labels.cjs:221:7)
 ##[error]Unhandled error: HttpError: Resource not accessible by integration
 ```
 

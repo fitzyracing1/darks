@@ -4,14 +4,14 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/xberg-io/xberg/issues/new
-- **Stars:** 9451 · **Generated:** 2026-10-27T07:00:32.421Z
+- **Stars:** 9453 · **Generated:** 2026-10-27T12:57:18.218Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 6 workflows dark on main ("CI Lint", "CI E2E", "CI Rust", +3 more)
+CI: 8 workflows dark on main ("CI Lint", "CI E2E", "CI Rust", +5 more)
 <!-- END TITLE -->
 
 ## Body
@@ -21,21 +21,21 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### CI Lint (`.github/workflows/ci-lint.yaml`)
 
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/40453201625 — dark (conclusion: `cancelled`), 2026-10-27 05:04 UTC
+- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/40478820302 — dark (conclusion: `failure`), 2026-10-27 09:10 UTC
 - Dark since: 2026-10-24 07:14 UTC (first run of the current streak)
-- Job / step: `Generated e2e suites freshness` → `Verify generated e2e suites are current`
+- Job / step: `Docs snippets gate` → `Run docs snippets gate`
 - Likely cause: exit status 1
 
 <details><summary>End of the job log</summary>
 
 ```
- INFO Hiding binding-excluded fields: BrowserConfig.private_pipe (alef(skip))
- INFO Hiding binding-excluded fields: CrawlConfig.dispatch (alef(skip)), CrawlConfig.credential_scope (doc(hidden)), CrawlConfig.cookie_store (doc(hidden)), CrawlConfig.proxy_provider (dyn-trait-object)
-ERROR - [lossy_sanitized_surface] item `function pages_for_call_with_security_limits` function signature contains a sanitized parameter or return type
-- [lossy_sanitized_surface] item `function pages_for_call_with_security_limits parameter mode` parameter type `StructuredCallMode` was sanitized to `String`
-- [lossy_sanitized_surface] item `function pages_for_call_with_security_limits return` return type was sanitized to `Vec<String>`
-- [backend_stub_path] item `function pages_for_call_with_security_limits` function signature was sanitized and may require backend stub generation
-task: Failed to run task "e2e:verify": exit status 1
+    warning: xberg-tesseract@1.4.0: Linking with tesseract (static linking): tesseract
+    warning: xberg-tesseract@1.4.0: Linking with leptonica (static linking): leptonica
+    error: could not compile `xberg` (lib) due to 3 previous errors
+----------------------------------------------------------------------------------------------------
+Checked at requested level: 685/1219 (56.2%) -- capability-capped 363, declared-capped 0, unavailable 0, downgraded 0, failed 171, skipped 0, errors 0 did not fully verify
+Total: 1219  Passed: 1048  Downgraded: 0  Failed: 171  Skipped: 0  Errors: 0  Unavailable: 0
+task: Failed to run task "docs:snippets:all": exit status 1
 ##[error]exit status 1
 ```
 
@@ -43,7 +43,7 @@ task: Failed to run task "e2e:verify": exit status 1
 
 ### CI E2E (`.github/workflows/ci-e2e.yaml`)
 
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/40452492230 — dark (conclusion: `cancelled`), 2026-10-27 04:56 UTC
+- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/40469638017 — dark (conclusion: `cancelled`), 2026-10-27 07:51 UTC
 - Dark since: 2026-10-25 18:30 UTC (first run of the current streak)
 - Job / step: `Build FFI (x86_64-unknown-linux-gnu)` → `Build FFI library`
 - Likely cause: The run was canceled by @Goldziher.
@@ -51,13 +51,13 @@ task: Failed to run task "e2e:verify": exit status 1
 <details><summary>End of the job log</summary>
 
 ```
-     Running `CARGO=/home/runner/.rustup/toolchains/1.99.1-x86_64-unknown-linux-gnu/bin/cargo CARGO_CFG_FEATURE=default,std CARGO_CFG_PANIC=unwind CARGO_CFG_TARGET_ABI='' CARGO_CFG_TARGET_ARCH=x86_64 CARGO_CFG_TARGET_EN…
-[httparse 1.10.1] cargo:rustc-cfg=httparse_simd_neon_intrinsics
-[httparse 1.10.1] cargo:rustc-cfg=httparse_simd
-     Running `CARGO=/home/runner/.rustup/toolchains/1.99.1-x86_64-unknown-linux-gnu/bin/cargo CARGO_CFG_FEATURE=default,std CARGO_CFG_PANIC=unwind CARGO_CFG_TARGET_ABI='' CARGO_CFG_TARGET_ARCH=x86_64 CARGO_CFG_TARGET_EN…
-[httparse 1.10.1] cargo:rustc-cfg=httparse_simd_neon_intrinsics
-[httparse 1.10.1] cargo:rustc-cfg=httparse_simd
-     Running `CARGO=/home/runner/.rustup/toolchains/1.99.1-x86_64-unknown-linux-gnu/bin/cargo CARGO_CFG_FEATURE=alloc,default,dev_urandom_fallback CARGO_CFG_PANIC=unwind CARGO_CFG_TARGET_ABI='' CARGO_CFG_TARGET_ARCH=x86…
+   Compiling similar v3.2.0
+     Running `CARGO=/home/runner/.rustup/toolchains/1.99.1-x86_64-unknown-linux-gnu/bin/cargo CARGO_CRATE_NAME=similar CARGO_MANIFEST_DIR=/home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/similar-3.2.0 C…
+     Running `CARGO=/home/runner/.rustup/toolchains/1.99.1-x86_64-unknown-linux-gnu/bin/cargo CARGO_CFG_FEATURE=analysis,api,api-types,archives,auto-rotate,auto-rotate-types,captioning,chunking,chunking-tokenizers,class…
+[xberg-ffi 1.4.0] cargo:rerun-if-changed=src
+[xberg-ffi 1.4.0] cargo:rerun-if-changed=cbindgen.toml
+[xberg-ffi 1.4.0] cargo:rerun-if-env-changed=ALEF_EXPORT_GENERATED_HEADERS
+     Running `CARGO=/home/runner/.rustup/toolchains/1.99.1-x86_64-unknown-linux-gnu/bin/cargo CARGO_CRATE_NAME=xberg CARGO_MANIFEST_DIR=/home/runner/work/xberg/xberg/crates/xberg CARGO_MANIFEST_PATH=/home/runner/work/xb…
 ##[error]The operation was canceled.
 ```
 
@@ -65,21 +65,21 @@ task: Failed to run task "e2e:verify": exit status 1
 
 ### CI Rust (`.github/workflows/ci-rust.yaml`)
 
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/40452492215 — dark (conclusion: `cancelled`), 2026-10-27 04:56 UTC
+- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/40472058001 — dark (conclusion: `cancelled`), 2026-10-27 08:13 UTC
 - Dark since: 2026-10-25 18:30 UTC (first run of the current streak)
-- Job / step: `Narrow feature leg (wasm-target, wasm32)` → `cargo check -p xberg --no-default-features --features wasm-target --target wasm32-unknown-unknown`
+- Job / step: `Rust (windows-latest)` → `Clippy Windows ORT surface`
 - Likely cause: The run was canceled by @Goldziher.
 
 <details><summary>End of the job log</summary>
 
 ```
-WASI_SYSROOT set to: /opt/hostedtoolcache/wasi-sdk/share/wasi-sysroot
-##[end-action id=__xberg-io_actions_2.__run_3;outcome=success;conclusion=success;duration_ms=219]
-    Updating crates.io index
-   Compiling xberg-tesseract v1.4.0 (/home/runner/work/xberg/xberg/crates/xberg-tesseract)
-   Compiling xberg v1.4.0 (/home/runner/work/xberg/xberg/crates/xberg)
-    Checking xberg-native-pdf v1.4.0 (/home/runner/work/xberg/xberg/crates/xberg-native-pdf)
-    Checking xberg-gliner v1.4.0 (/home/runner/work/xberg/xberg/crates/xberg-gliner)
+    Checking similar v3.2.0
+    Checking criterion v0.8.2
+    Checking serial_test v4.0.1
+    Checking wiremock v0.6.5
+    Checking tokio-test v0.4.6
+    Checking qrcode v0.14.1
+    Checking dotenvy v0.15.7
 ##[error]The operation was canceled.
 ```
 
@@ -87,43 +87,28 @@ WASI_SYSROOT set to: /opt/hostedtoolcache/wasi-sdk/share/wasi-sysroot
 
 ### CI Integrations (`.github/workflows/ci-integrations.yaml`)
 
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/40452492234 — dark (conclusion: `cancelled`), 2026-10-27 04:56 UTC
+- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/40468355719 — dark (conclusion: `cancelled`), 2026-10-27 07:38 UTC
 - Dark since: 2026-10-26 19:36 UTC (first run of the current streak)
-- Job / step: `Build local integration bindings` → `Build abi3 Python wheel`
+- Job / step: `Build local integration bindings`
 - Likely cause: The run was canceled by @Goldziher.
-
-<details><summary>End of the job log</summary>
-
-```
-   Compiling xet-runtime v1.7.0
-   Compiling xet-core-structures v1.7.0
-   Compiling reqwest-middleware v0.5.2
-   Compiling xet-client v1.7.0
-   Compiling xet-data v1.7.0
-   Compiling hf-xet v1.7.0
-   Compiling hf-hub v1.0.0
-##[error]The operation was canceled.
-```
-
-</details>
 
 ### CI Mobile (`.github/workflows/ci-mobile.yaml`)
 
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/40452492120 — dark (conclusion: `cancelled`), 2026-10-27 04:56 UTC
+- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/40468355717 — dark (conclusion: `cancelled`), 2026-10-27 07:38 UTC
 - Dark since: 2026-10-26 19:57 UTC (first run of the current streak)
-- Job / step: `iOS cargo check (aarch64-apple-ios-sim)` → `cargo check xberg-dart`
+- Job / step: `Android cargo check (arm64-v8a)` → `cargo ndk check xberg-dart`
 - Likely cause: The run was canceled by @Goldziher.
 
 <details><summary>End of the job log</summary>
 
 ```
-    Checking roxmltree v0.20.0
-    Checking num-cmp v0.1.0
-    Checking hex v0.4.3
-   Compiling build-target v0.4.0
-    Checking streaming-iterator v0.1.9
-    Checking daachorse v3.0.3
-    Checking rangemap v1.8.0
+    Checking linux-raw-sys v0.12.1
+    Checking httpdate v1.0.3
+    Checking rawpointer v0.2.1
+    Checking unicase v2.10.0
+   Compiling crunchy v0.2.4
+    Checking tower-layer v0.3.3
+    Checking hyper v1.12.0
 ##[error]The operation was canceled.
 ```
 
@@ -135,6 +120,35 @@ WASI_SYSROOT set to: /opt/hostedtoolcache/wasi-sdk/share/wasi-sysroot
 - Dark since: 2026-10-27 00:03 UTC (first run of the current streak)
 - Job / step: `Docker (cli)`
 - Likely cause: The run was canceled by @Goldziher.
+
+### CI Docs (`.github/workflows/ci-docs.yaml`)
+
+- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/40472794107 — dark (conclusion: `cancelled`), 2026-10-27 08:20 UTC
+- Dark since: 2026-10-27 08:20 UTC (first run of the current streak)
+- Job / step: `docs / Deploy`
+- Likely cause: The run was canceled by @Goldziher.
+
+### AI-Rulez validation (`.github/workflows/ai-rulez-validation.yml`)
+
+- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/40478819841 — dark (conclusion: `failure`), 2026-10-27 09:10 UTC
+- Dark since: 2026-10-27 09:10 UTC (first run of the current streak)
+- Job / step: `validate` → `Run xberg-io/agent-conventions/actions/context-exposure@6e7f6a6793ea7380b916367e10a8acd13c3afbc3`
+- Likely cause: xberg/claude: 5224 start tokens, budget 4100
+
+<details><summary>End of the job log</summary>
+
+```
+WARN  OpenCode needs a provider-qualified model (provider/model); omitting it so the agent inherits the session model agent=performance-engineer model=sonnet hint=set opencode_model in the agent frontmatter or defaults.…
+WARN  OpenCode needs a provider-qualified model (provider/model); omitting it so the agent inherits the session model agent=security-auditor model=sonnet hint=set opencode_model in the agent frontmatter or defaults.mode…
+WARN  OpenCode needs a provider-qualified model (provider/model); omitting it so the agent inherits the session model agent=test-writer model=sonnet hint=set opencode_model in the agent frontmatter or defaults.model_by_…
+INFO  Generated files are up to date roots=1
+expected configs=2; validated configs=2; tracked files checked=9576
+##[end-action id=__xberg-io_actions_2.__run;outcome=success;conclusion=success;duration_ms=28686]
+##[start-action display=Check context exposure;id=__xberg-io_agent-conventions.__run]
+##[error]xberg/claude: 5224 start tokens, budget 4100
+```
+
+</details>
 
 If this is already known or expected, feel free to close. Thanks for maintaining xberg!
 
