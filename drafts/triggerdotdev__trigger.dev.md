@@ -4,19 +4,21 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/triggerdotdev/trigger.dev/issues/new
-- **Stars:** 16631 · **Generated:** 2026-10-27T18:39:56.972Z
+- **Stars:** 16634 · **Generated:** 2026-10-28T01:00:05.584Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: "🛡️ E2E Tests: Webapp Auth (full)" workflow failing on main since 2026-10-27
+CI: 2 workflows dark on main ("🛡️ E2E Tests: Webapp Auth (full)", "🚀 Publish Trigger.dev Docker")
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! The **🛡️ E2E Tests: Webapp Auth (full)** workflow (`.github/workflows/e2e-webapp-auth-full.yml`) on `main` has been failing since 2026-10-27. Here is what I saw, in case it's useful:
+Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
+
+### 🛡️ E2E Tests: Webapp Auth (full) (`.github/workflows/e2e-webapp-auth-full.yml`)
 
 - Latest run on `main`: https://github.com/triggerdotdev/trigger.dev/actions/runs/40447349222 — dark (conclusion: `failure`), 2026-10-27 04:00 UTC
 - Dark since: 2026-10-27 04:00 UTC (first run of the current streak)
@@ -34,6 +36,28 @@ Hi! The **🛡️ E2E Tests: Webapp Auth (full)** workflow (`.github/workflows/e
 {"traceId":"bfca77c363952c28fd4eba422286e378","message":"ApiRetrieveRunPresenter.call","spanId":"9609e5dec80accbf","kind":1,"timestamp":1793073860534000,"duration":109.807,"attributes":{"$trigger.env.id":"cmvq5vpgq00amy…
 {"traceId":"4b1d11229a1acf284b9b3d35932ce285","message":"queryWithStats","spanId":"9f11dc80450bfea7","kind":0,"timestamp":1793073861081000,"duration":2905.723,"attributes":{"clickhouse.clientName":"query-clickhouse","cl…
 ##[error]Process completed with exit code 1.
+```
+
+</details>
+
+### 🚀 Publish Trigger.dev Docker (`.github/workflows/publish.yml`)
+
+- Latest run on `main`: https://github.com/triggerdotdev/trigger.dev/actions/runs/40594652205 — dark (conclusion: `failure`), 2026-10-27 22:25 UTC
+- Dark since: 2026-10-27 22:25 UTC (first run of the current streak)
+- Job / step: `units / packages / 🧪 Unit Tests: Packages (2, 3)` → `🧪 Run Package Unit Tests`
+- Likely cause: @trigger.dev/core#test: command (/home/runner/work/trigger.dev/trigger.dev/packages/core) /home/runner/setup-pnpm/node_modules/.bin/bin/pnpm run test --run --reporter=default --reporter=blob --shard=2/3 --passWithNoTests exited (1)
+
+<details><summary>End of the job log</summary>
+
+```
+ Test Files  1 failed | 27 passed (28)
+      Tests  1 failed | 391 passed (392)
+   Start at  22:26:36
+   Duration  5.33s (transform 1.69s, setup 0ms, import 4.91s, tests 7.72s, environment 2ms)
+blob report written to /home/runner/work/trigger.dev/trigger.dev/packages/core/.vitest-reports/blob-2-3.json
+ ELIFECYCLE  Test failed. See above for more details.
+[ERROR] command finished with error: command (/home/runner/work/trigger.dev/trigger.dev/packages/core) /home/runner/setup-pnpm/node_modules/.bin/bin/pnpm run test --run --reporter=default --reporter=blob --shard=2/3 --p…
+##[error]@trigger.dev/core#test: command (/home/runner/work/trigger.dev/trigger.dev/packages/core) /home/runner/setup-pnpm/node_modules/.bin/bin/pnpm run test --run --reporter=default --reporter=blob --shard=2/3 --passW…
 ```
 
 </details>

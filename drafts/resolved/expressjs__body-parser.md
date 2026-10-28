@@ -1,8 +1,8 @@
 <!-- dark-draft: expressjs/body-parser -->
-<!-- draft-state: ready -->
+<!-- draft-state: resolved -->
 # Upstream issue draft: expressjs/body-parser
 
-- **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
+- **Status:** resolved — lit again (2026-10-28); nothing to file
 - **Would be filed at:** https://github.com/expressjs/body-parser/issues/new
 - **Stars:** 5500 · **Generated:** 2026-10-27T18:39:56.972Z
 - Nothing in this file has been sent anywhere.
