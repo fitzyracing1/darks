@@ -1,8 +1,8 @@
 <!-- dark-draft: prettier/prettier -->
-<!-- draft-state: ready -->
+<!-- draft-state: resolved -->
 # Upstream issue draft: prettier/prettier
 
-- **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
+- **Status:** resolved — lit again (2026-10-28); nothing to file
 - **Would be filed at:** https://github.com/prettier/prettier/issues/new
 - **Stars:** 52385 · **Generated:** 2026-10-28T06:48:10.228Z
 - Nothing in this file has been sent anywhere.

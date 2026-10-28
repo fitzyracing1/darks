@@ -4,13 +4,13 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/webiny/webiny-js/issues/new
-- **Stars:** 8049 · **Generated:** 2026-10-28T06:48:10.228Z
+- **Stars:** 8049 · **Generated:** 2026-10-28T12:44:35.285Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 2 workflows dark on next ("Cloud infrastructure Cleanup", "Rebuild Global Cache ("dev" branch)")
+CI: 3 workflows dark on next ("Cloud infrastructure Cleanup", "Rebuild Global Cache ("dev" branch)", "Push")
 <!-- END TITLE -->
 
 ## Body
@@ -58,6 +58,28 @@ Waiting 15 seconds before trying again
 The process '/usr/bin/git' failed with exit code 1
 Waiting 13 seconds before trying again
 ##[error]The process '/usr/bin/git' failed with exit code 1
+```
+
+</details>
+
+### Push (`.github/workflows/push.yml`)
+
+- Latest run on `next`: https://github.com/webiny/webiny-js/actions/runs/40675656393 — dark (conclusion: `failure`), 2026-10-28 10:53 UTC
+- Dark since: 2026-10-28 10:53 UTC (first run of the current streak)
+- Job / step: `Static code analysis` → `Install dependencies`
+- Likely cause: ➤ YN0000: · Failed with errors in 2m 50s
+
+<details><summary>End of the job log</summary>
+
+```
+gyp ERR! node -v v24.21.0
+gyp ERR! node-gyp -v v13.0.1
+gyp ERR! $npm_package_name better-sqlite3
+gyp ERR! $npm_package_version 13.0.3
+gyp ERR! not ok
+➤ YN0000: └ Completed in 2m 48s
+➤ YN0000: · Failed with errors in 2m 50s
+##[error]Process completed with exit code 1.
 ```
 
 </details>

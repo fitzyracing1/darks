@@ -4,35 +4,35 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/NousResearch/hermes-agent/issues/new
-- **Stars:** 257831 · **Generated:** 2026-10-28T06:48:10.228Z
+- **Stars:** 257934 · **Generated:** 2026-10-28T12:44:35.285Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: "CI" workflow failing on main since 2026-10-28
+CI: "Docker Build, Test, and Publish" workflow failing on main since 2026-10-28
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! The **CI** workflow (`.github/workflows/ci.yaml`) on `main` has been failing since 2026-10-28. Here is what I saw, in case it's useful:
+Hi! The **Docker Build, Test, and Publish** workflow (`.github/workflows/docker.yml`) on `main` has been failing since 2026-10-28. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/NousResearch/hermes-agent/actions/runs/40639475553 — dark (conclusion: `failure`), 2026-10-28 05:41 UTC
-- Dark since: 2026-10-28 05:41 UTC (first run of the current streak)
-- Job / step: `Python tests / Run tests (2/2)` → `Run tests`
-- Likely cause: tests/gateway/test_managed_worker_images.py  (2 tests failed)
+- Latest run on `main`: https://github.com/NousResearch/hermes-agent/actions/runs/40681314468 — dark (conclusion: `failure`), 2026-10-28 11:36 UTC
+- Dark since: 2026-10-28 11:25 UTC (first run of the current streak)
+- Job / step: `Build and test image (desktop/arm64)` → `Run docker integration tests`
+- Likely cause: tests/docker/test_dashboard.py  (1 test failed)
 
 <details><summary>End of the job log</summary>
 
 ```
-../../_temp/setup-pm/tools/python-3.14.9+20261021-linux-x64/lib/python3.14/asyncio/timeouts.py:115: TimeoutError
+../../_temp/setup-pm/tools/python-3.14.9+20261021-linux-arm64/lib/python3.14/subprocess.py:1268: TimeoutExpired
 =========================== short test summary info ============================
-FAILED tests/gateway/test_managed_worker_images.py::test_admitted_images_reach_managed_worker[image-fixture-managed] - TimeoutError
-FAILED tests/gateway/test_managed_worker_images.py::test_admitted_images_reach_managed_worker[image-fixture-safe] - TimeoutError
-==================== 2 failed, 4 passed in 75.98s (0:01:15) ====================
-=== 1 file with test failures ===
-  tests/gateway/test_managed_worker_images.py  (2 tests failed)
+FAILED tests/docker/test_dashboard.py::test_dashboard_insecure_env_var_no_longer_bypasses_gate - subprocess.TimeoutExpired: Command '['docker', 'exec', '-u', 'hermes', 'hermes-test-test_dashboard_insecure_env_var_no_lon…
+========================= 1 failed, 2 passed in 26.60s =========================
+=== 2 files with test failures ===
+  tests/docker/test_stage2_browser_discovery.py  (1 test failed)
+  tests/docker/test_dashboard.py  (1 test failed)
 ##[error]Process completed with exit code 1.
 ```
 

@@ -4,36 +4,43 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/tangency-labs/solidcraft/issues/new
-- **Stars:** 11348 · **Generated:** 2026-10-28T06:48:10.228Z
+- **Stars:** 11468 · **Generated:** 2026-10-28T12:44:35.285Z
 - Nothing in this file has been sent anywhere.
+- **Note for Joshua:** cancelled by a concurrency group — likely noise
+
+## Skipped: upstream already tracking
+
+- Claim (`.github/workflows/claim.yml`): [issue #6739](https://github.com/tangency-labs/solidcraft/issues/6739) "Claim bot: a cross-reference blocks legitimate PRs, and the bot cannot post its own message", [issue #4405](https://github.com/tangency-labs/solidcraft/issues/4405) "Claim bot: some claim PRs fail with 403 "Resource not accessible by integration""
+
+These workflows are left out of the body below.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: "Pages" workflow failing on main since 2026-10-27
+CI: "Docker" workflow getting cancelled on main since 2026-10-28
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! The **Pages** workflow (`.github/workflows/pages.yml`) on `main` has been failing since 2026-10-27. Here is what I saw, in case it's useful:
+Hi! The **Docker** workflow (`.github/workflows/docker.yml`) on `main` has been getting cancelled since 2026-10-28. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/tangency-labs/solidcraft/actions/runs/40633335436 — dark (conclusion: `failure`), 2026-10-28 04:37 UTC
-- Dark since: 2026-10-27 23:51 UTC (first run of the current streak)
-- Job / step: `build` → `Test the web app offline and across an update (headless Chrome)`
-- Likely cause: error: v5's download is finished, not dropped: timed out after 240s; last state: {"build":"v6","caches":{"solidcraft-app /solidcraft/app/ 0.25.1-1d30dea8c4eea6aa":11,"solidcraft-app /solidcraft/app/ 0.25.1-c2849f639bdd2…
+- Latest run on `main`: https://github.com/tangency-labs/solidcraft/actions/runs/40688254728 — dark (conclusion: `cancelled`), 2026-10-28 12:29 UTC
+- Dark since: 2026-10-28 12:29 UTC (first run of the current streak)
+- Job / step: `image` → `Build the web app`
+- Likely cause: Canceling since a higher priority waiting request for docker-refs/heads/main exists
 
 <details><summary>End of the job log</summary>
 
 ```
-ok    deployed mid-download: v4's page doesn't fit v3's files, so v1 starts (4.0s)
-ok    update: build v3 starts on the first launch; only it stays kept (4.0s)
-ok    offline: build v3 starts from the kept copy (4.1s)
-ok    slow network: build v3 starts from the kept copy (4.8s)
-ok    update in another tab: the kept v3 still starts; its copy is retired, not deleted (5.7s)
-ok    no open page uses them any more: the retired copies are deleted; v4 starts (4.0s)
-error: v5's download is finished, not dropped: timed out after 240s; last state: {"build":"v6","caches":{"solidcraft-app /solidcraft/app/ 0.25.1-1d30dea8c4eea6aa":11,"solidcraft-app /solidcraft/app/ 0.25.1-c2849f639bdd2…
-##[error]Process completed with exit code 1.
+warning: unused variable: `ctx`
+   --> crates/ui-egui/src/home.rs:532:35
+    |
+532 | fn ask_present(h: &mut HomeState, ctx: &egui::Context, recent: &[String]) {
+    |                                   ^^^ help: if this is intentional, prefix it with an underscore: `_ctx`
+    |
+    = note: `#[warn(unused_variables)]` (part of `#[warn(unused)]`) on by default
+##[error]The operation was canceled.
 ```
 
 </details>

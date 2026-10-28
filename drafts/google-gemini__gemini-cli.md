@@ -4,41 +4,19 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/google-gemini/gemini-cli/issues/new
-- **Stars:** 108589 · **Generated:** 2026-10-28T06:48:10.228Z
+- **Stars:** 108591 · **Generated:** 2026-10-28T12:44:35.285Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 3 workflows dark on main ("📋 Gemini Scheduled Issue Triage", "Memory Tests: Nightly", "Performance Tests: Nightly")
+CI: 2 workflows dark on main ("Memory Tests: Nightly", "Performance Tests: Nightly")
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
 Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
-
-### 📋 Gemini Scheduled Issue Triage (`.github/workflows/gemini-scheduled-issue-triage.yml`)
-
-- Latest run on `main`: https://github.com/google-gemini/gemini-cli/actions/runs/40642628697 — dark (conclusion: `failure`), 2026-10-28 06:14 UTC
-- Dark since: 2026-10-28 00:22 UTC (first run of the current streak)
-- Job / step: `triage-issues` → `Run Effort Triage Analysis`
-- Likely cause: Unhandled error: HttpError: Resource not accessible by integration
-
-<details><summary>End of the job log</summary>
-
-```
-##[start-action display=Run Gemini CLI;id=gemini_effort_issue_analysis.gemini_run]
-##[warning]Gemini CLI stderr was not valid JSON
-##[end-action id=gemini_effort_issue_analysis.gemini_run;outcome=success;conclusion=success;duration_ms=202915]
-##[start-action display=Upload Gemini CLI outputs;id=gemini_effort_issue_analysis.__actions_upload-artifact]
-With the provided path, there will be 3 files uploaded
-Artifact name is valid!
-Root directory input is valid!
-##[error]Failed to CreateArtifact: Received non-retryable error: Failed request: (409) Conflict: an artifact with this name already exists on the workflow run
-```
-
-</details>
 
 ### Memory Tests: Nightly (`.github/workflows/memory-nightly.yml`)
 
