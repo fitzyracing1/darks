@@ -4,13 +4,13 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/triggerdotdev/trigger.dev/issues/new
-- **Stars:** 16640 · **Generated:** 2026-10-28T12:44:35.285Z
+- **Stars:** 16645 · **Generated:** 2026-10-28T18:42:06.150Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 3 workflows dark on main ("🛡️ E2E Tests: Webapp Auth (full)", "🚀 Publish Trigger.dev Docker", "🗺️ Observability Map")
+CI: 2 workflows dark on main ("🛡️ E2E Tests: Webapp Auth (full)", "🗺️ Observability Map")
 <!-- END TITLE -->
 
 ## Body
@@ -36,28 +36,6 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 {"traceId":"00bddace81af1f0a80d54a030b8d9c15","parentId":"6395594704428d18","message":"RunEngineTriggerTaskService.call()","spanId":"52e0e0f3b61de26e","kind":0,"timestamp":1793160264260000,"duration":9310.122,"attribute…
 {"traceId":"00bddace81af1f0a80d54a030b8d9c15","message":"TriggerTaskService.call()","spanId":"6395594704428d18","kind":1,"timestamp":1793160264259000,"duration":10108.487,"attributes":{"$trigger.env.id":"cmvrlbn0d003y31…
 ##[error]Process completed with exit code 1.
-```
-
-</details>
-
-### 🚀 Publish Trigger.dev Docker (`.github/workflows/publish.yml`)
-
-- Latest run on `main`: https://github.com/triggerdotdev/trigger.dev/actions/runs/40683525389 — dark (conclusion: `failure`), 2026-10-28 11:54 UTC
-- Dark since: 2026-10-27 22:25 UTC (first run of the current streak)
-- Job / step: `units / packages / 🧪 Unit Tests: Packages (1, 3)` → `🧪 Run Package Unit Tests`
-- Likely cause: @trigger.dev/core#test: command (/home/runner/work/trigger.dev/trigger.dev/packages/core) /home/runner/setup-pnpm/node_modules/.bin/bin/pnpm run test --run --reporter=default --reporter=blob --shard=1/3 --passWithNoTests exited (1)
-
-<details><summary>End of the job log</summary>
-
-```
- Test Files  1 failed | 27 passed (28)
-      Tests  1 failed | 395 passed (396)
-   Start at  11:55:25
-   Duration  6.53s (transform 2.09s, setup 0ms, import 4.35s, tests 11.20s, environment 2ms)
-blob report written to /home/runner/work/trigger.dev/trigger.dev/packages/core/.vitest-reports/blob-1-3.json
- ELIFECYCLE  Test failed. See above for more details.
-[ERROR] command finished with error: command (/home/runner/work/trigger.dev/trigger.dev/packages/core) /home/runner/setup-pnpm/node_modules/.bin/bin/pnpm run test --run --reporter=default --reporter=blob --shard=1/3 --p…
-##[error]@trigger.dev/core#test: command (/home/runner/work/trigger.dev/trigger.dev/packages/core) /home/runner/setup-pnpm/node_modules/.bin/bin/pnpm run test --run --reporter=default --reporter=blob --shard=1/3 --passW…
 ```
 
 </details>

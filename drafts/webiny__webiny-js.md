@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/webiny/webiny-js/issues/new
-- **Stars:** 8049 · **Generated:** 2026-10-28T12:44:35.285Z
+- **Stars:** 8050 · **Generated:** 2026-10-28T18:42:06.150Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -64,21 +64,21 @@ Waiting 13 seconds before trying again
 
 ### Push (`.github/workflows/push.yml`)
 
-- Latest run on `next`: https://github.com/webiny/webiny-js/actions/runs/40675656393 — dark (conclusion: `failure`), 2026-10-28 10:53 UTC
+- Latest run on `next`: https://github.com/webiny/webiny-js/actions/runs/40712423175 — dark (conclusion: `failure`), 2026-10-28 15:05 UTC
 - Dark since: 2026-10-28 10:53 UTC (first run of the current streak)
-- Job / step: `Static code analysis` → `Install dependencies`
-- Likely cause: ➤ YN0000: · Failed with errors in 2m 50s
+- Job / step: `E2E (DDB+OS) - Project setup` → `Version and publish to Verdaccio`
+- Likely cause: npm error A complete log of this run can be found in: /home/runner/.npm/_logs/2026-10-28T15_16_32_882Z-debug-0.log
 
 <details><summary>End of the job log</summary>
 
 ```
-gyp ERR! node -v v24.21.0
-gyp ERR! node-gyp -v v13.0.1
-gyp ERR! $npm_package_name better-sqlite3
-gyp ERR! $npm_package_version 13.0.3
-gyp ERR! not ok
-➤ YN0000: └ Completed in 2m 48s
-➤ YN0000: · Failed with errors in 2m 50s
+npm notice
+npm notice Publishing to http://localhost:4873 with tag local-npm and public access
+npm error code E401
+npm error Unable to authenticate, your authentication token seems to be invalid.
+npm error To correct this please try logging in again with:
+npm error   npm login
+npm error A complete log of this run can be found in: /home/runner/.npm/_logs/2026-10-28T15_16_32_882Z-debug-0.log
 ##[error]Process completed with exit code 1.
 ```
 

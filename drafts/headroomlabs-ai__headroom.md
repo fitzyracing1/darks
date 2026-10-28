@@ -4,15 +4,9 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/headroomlabs-ai/headroom/issues/new
-- **Stars:** 78098 · **Generated:** 2026-10-28T12:44:35.285Z
+- **Stars:** 78135 · **Generated:** 2026-10-28T18:42:06.150Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
-
-## Skipped: upstream already tracking
-
-- Security (`.github/workflows/security.yml`): [issue #4422](https://github.com/headroomlabs-ai/headroom/issues/4422) "DOCS security-model.mdx: network egress table omits two default-on pollers, and some counts and permission notes no longer match the code", [issue #4433](https://github.com/headroomlabs-ai/headroom/issues/4433) "BUG security-model.mdx says an unsafe x-headroom-base-url override is "ignored", but the proxy routes answer 400"
-
-These workflows are left out of the body below.
 
 ## Suggested title
 
@@ -25,7 +19,7 @@ CI: "PR Governance" workflow getting cancelled on main since 2026-10-26
 <!-- BEGIN BODY -->
 Hi! The **PR Governance** workflow (`.github/workflows/pr-health.yml`) on `main` has been getting cancelled since 2026-10-26. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/headroomlabs-ai/headroom/actions/runs/40523042233 — dark (conclusion: `cancelled`), 2026-10-27 14:38 UTC
+- Latest run on `main`: https://github.com/headroomlabs-ai/headroom/actions/runs/40706275305 — dark (conclusion: `cancelled`), 2026-10-28 14:28 UTC
 - Dark since: 2026-10-26 15:15 UTC (first run of the current streak)
 - Job / step: `label` → `Label open pull requests`
 - Likely cause: The job has exceeded the maximum execution time of 10m0s
@@ -33,13 +27,13 @@ Hi! The **PR Governance** workflow (`.github/workflows/pr-health.yml`) on `main`
 <details><summary>End of the job log</summary>
 
 ```
-https://github.com/headroomlabs-ai/headroom/pull/4334
-https://github.com/headroomlabs-ai/headroom/pull/4334
-https://github.com/headroomlabs-ai/headroom/pull/4334
-https://github.com/headroomlabs-ai/headroom/pull/4333
-https://github.com/headroomlabs-ai/headroom/pull/4333
-https://github.com/headroomlabs-ai/headroom/pull/4333
-https://github.com/headroomlabs-ai/headroom/pull/4333
+https://github.com/headroomlabs-ai/headroom/pull/4318
+https://github.com/headroomlabs-ai/headroom/pull/4317
+https://github.com/headroomlabs-ai/headroom/pull/4317
+https://github.com/headroomlabs-ai/headroom/pull/4317
+https://github.com/headroomlabs-ai/headroom/pull/4316
+https://github.com/headroomlabs-ai/headroom/pull/4316
+https://github.com/headroomlabs-ai/headroom/pull/4316
 ##[error]The operation was canceled.
 ```
 

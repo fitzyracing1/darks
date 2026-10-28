@@ -4,43 +4,60 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/tangency-labs/solidcraft/issues/new
-- **Stars:** 11468 · **Generated:** 2026-10-28T12:44:35.285Z
+- **Stars:** 11576 · **Generated:** 2026-10-28T18:42:06.150Z
 - Nothing in this file has been sent anywhere.
-- **Note for Joshua:** cancelled by a concurrency group — likely noise
-
-## Skipped: upstream already tracking
-
-- Claim (`.github/workflows/claim.yml`): [issue #6739](https://github.com/tangency-labs/solidcraft/issues/6739) "Claim bot: a cross-reference blocks legitimate PRs, and the bot cannot post its own message", [issue #4405](https://github.com/tangency-labs/solidcraft/issues/4405) "Claim bot: some claim PRs fail with 403 "Resource not accessible by integration""
-
-These workflows are left out of the body below.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: "Docker" workflow getting cancelled on main since 2026-10-28
+CI: 2 workflows dark on main ("Docker", "Pages")
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! The **Docker** workflow (`.github/workflows/docker.yml`) on `main` has been getting cancelled since 2026-10-28. Here is what I saw, in case it's useful:
+Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
 
-- Latest run on `main`: https://github.com/tangency-labs/solidcraft/actions/runs/40688254728 — dark (conclusion: `cancelled`), 2026-10-28 12:29 UTC
+### Docker (`.github/workflows/docker.yml`)
+
+- Latest run on `main`: https://github.com/tangency-labs/solidcraft/actions/runs/40742881101 — dark (conclusion: `failure`), 2026-10-28 18:12 UTC
 - Dark since: 2026-10-28 12:29 UTC (first run of the current streak)
 - Job / step: `image` → `Build the web app`
-- Likely cause: Canceling since a higher priority waiting request for docker-refs/heads/main exists
+- Likely cause: 2026-10-28T18:15:10.959012Z  INFO   4: error during cargo build execution
 
 <details><summary>End of the job log</summary>
 
 ```
-warning: unused variable: `ctx`
-   --> crates/ui-egui/src/home.rs:532:35
-    |
-532 | fn ask_present(h: &mut HomeState, ctx: &egui::Context, recent: &[String]) {
-    |                                   ^^^ help: if this is intentional, prefix it with an underscore: `_ctx`
-    |
-    = note: `#[warn(unused_variables)]` (part of `#[warn(unused)]`) on by default
-##[error]The operation was canceled.
+    4: cargo call to executable 'cargo' with args: '["build", "--target=wasm32-unknown-unknown", "--manifest-path", "/home/runner/work/solidcraft/solidcraft/apps/solidcraft-web/Cargo.toml", "--release", "--bin", "solidc…
+2026-10-28T18:15:10.958998Z ERROR error from build pipeline
+2026-10-28T18:15:10.959008Z  INFO   1: HTML build pipeline failed (1 errors), showing first
+2026-10-28T18:15:10.959010Z  INFO   2: error from asset pipeline
+2026-10-28T18:15:10.959011Z  INFO   3: running cargo build
+2026-10-28T18:15:10.959012Z  INFO   4: error during cargo build execution
+2026-10-28T18:15:10.959013Z  INFO   5: cargo call to executable 'cargo' with args: '["build", "--target=wasm32-unknown-unknown", "--manifest-path", "/home/runner/work/solidcraft/solidcraft/apps/solidcraft-web/Cargo.toml…
+##[error]Process completed with exit code 1.
+```
+
+</details>
+
+### Pages (`.github/workflows/pages.yml`)
+
+- Latest run on `main`: https://github.com/tangency-labs/solidcraft/actions/runs/40742881085 — dark (conclusion: `failure`), 2026-10-28 18:12 UTC
+- Dark since: 2026-10-28 18:08 UTC (first run of the current streak)
+- Job / step: `build` → `Build the web app`
+- Likely cause: 2026-10-28T18:32:13.552524Z  INFO   4: error during cargo build execution
+
+<details><summary>End of the job log</summary>
+
+```
+    4: cargo call to executable 'cargo' with args: '["build", "--target=wasm32-unknown-unknown", "--manifest-path", "/home/runner/work/solidcraft/solidcraft/apps/solidcraft-web/Cargo.toml", "--release", "--bin", "solidc…
+2026-10-28T18:32:13.552506Z ERROR error from build pipeline
+2026-10-28T18:32:13.552520Z  INFO   1: HTML build pipeline failed (1 errors), showing first
+2026-10-28T18:32:13.552522Z  INFO   2: error from asset pipeline
+2026-10-28T18:32:13.552523Z  INFO   3: running cargo build
+2026-10-28T18:32:13.552524Z  INFO   4: error during cargo build execution
+2026-10-28T18:32:13.552524Z  INFO   5: cargo call to executable 'cargo' with args: '["build", "--target=wasm32-unknown-unknown", "--manifest-path", "/home/runner/work/solidcraft/solidcraft/apps/solidcraft-web/Cargo.toml…
+##[error]Process completed with exit code 1.
 ```
 
 </details>

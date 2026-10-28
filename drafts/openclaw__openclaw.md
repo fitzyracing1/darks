@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/openclaw/openclaw/issues/new
-- **Stars:** 393247 · **Generated:** 2026-10-28T12:44:35.285Z
+- **Stars:** 393280 · **Generated:** 2026-10-28T18:42:06.150Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** cancelled by a concurrency group — likely noise
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
@@ -22,9 +22,9 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### CodeQL (`.github/workflows/codeql.yml`)
 
-- Latest run on `main`: https://github.com/openclaw/openclaw/actions/runs/39493542316 — dark (conclusion: `cancelled`), 2026-10-20 20:37 UTC
+- Latest run on `main`: https://github.com/openclaw/openclaw/actions/runs/38959209737 — dark (conclusion: `cancelled`), 2026-10-16 20:01 UTC
 - Dark since: 2026-10-16 05:07 UTC (first run of the current streak)
-- Job / step: `Security High (network-ssrf-boundary)` → `Analyze`
+- Job / step: `Security High (process-exec-boundary)` → `Analyze`
 - Likely cause: Canceling since a higher priority waiting request for codeql-CodeQL-ref-refs/heads/main exists
 
 <details><summary>End of the job log</summary>
@@ -44,7 +44,7 @@ Creating zip file at /home/runner/work/_temp/codeql_databases/javascript.zip.
 
 ### CI (`.github/workflows/ci.yml`)
 
-- Latest run on `main`: https://github.com/openclaw/openclaw/actions/runs/39493543696 — dark (conclusion: `cancelled`), 2026-10-20 20:37 UTC
+- Latest run on `main`: https://github.com/openclaw/openclaw/actions/runs/38883485449 — dark (conclusion: `cancelled`), 2026-10-16 09:52 UTC
 - Dark since: 2026-10-16 05:07 UTC (first run of the current streak)
 - Likely cause: run cancelled
 

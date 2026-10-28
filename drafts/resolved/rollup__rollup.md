@@ -1,8 +1,8 @@
 <!-- dark-draft: rollup/rollup -->
-<!-- draft-state: ready -->
+<!-- draft-state: resolved -->
 # Upstream issue draft: rollup/rollup
 
-- **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
+- **Status:** resolved — lit again (2026-10-28); nothing to file
 - **Would be filed at:** https://github.com/rollup/rollup/issues/new
 - **Stars:** 26305 · **Generated:** 2026-10-28T12:44:35.285Z
 - Nothing in this file has been sent anywhere.

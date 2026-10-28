@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/Gentleman-Programming/engram/issues/new
-- **Stars:** 7663 · **Generated:** 2026-10-28T12:44:35.285Z
+- **Stars:** 7669 · **Generated:** 2026-10-28T18:42:06.150Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -42,10 +42,10 @@ Path changes are a release-lag signal, not proof of a fix.
 
 ### CI (`.github/workflows/ci.yml`)
 
-- Latest run on `main`: https://github.com/Gentleman-Programming/engram/actions/runs/40576929420 — dark (conclusion: `failure`), 2026-10-27 20:18 UTC
+- Latest run on `main`: https://github.com/Gentleman-Programming/engram/actions/runs/40740689691 — dark (conclusion: `failure`), 2026-10-28 17:58 UTC
 - Dark since: 2026-10-27 20:07 UTC (first run of the current streak)
 - Job / step: `Windows Full Suite (Observational)` → `Run full default-tags module suite`
-- Likely cause: {"Time":"2026-10-27T20:41:30.6204483Z","Action":"pass","Package":"github.com/Gentleman-Programming/engram/v3/tools/release-candidate","Test":"TestSourceEvidence/link_cannot_execute_source","Elapsed":0.58}
+- Likely cause: {"Time":"2026-10-28T18:20:08.6352058Z","Action":"pass","Package":"github.com/Gentleman-Programming/engram/v3/tools/release-candidate","Test":"TestSourceEvidence/link_cannot_execute_source","Elapsed":0.62}
 
 <details><summary>End of the job log</summary>
 

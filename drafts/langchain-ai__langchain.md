@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/langchain-ai/langchain/issues/new
-- **Stars:** 148609 · **Generated:** 2026-10-28T12:44:35.285Z
+- **Stars:** 148622 · **Generated:** 2026-10-28T18:42:06.150Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -18,22 +18,22 @@ CI: "⏰ Integration Tests" workflow failing on master since 2026-10-09
 <!-- BEGIN BODY -->
 Hi! The **⏰ Integration Tests** workflow (`.github/workflows/integration_tests.yml`) on `master` has been failing since 2026-10-09. Here is what I saw, in case it's useful:
 
-- Latest run on `master`: https://github.com/langchain-ai/langchain/actions/runs/40509851195 — dark (conclusion: `failure`), 2026-10-27 13:11 UTC
+- Latest run on `master`: https://github.com/langchain-ai/langchain/actions/runs/40693165539 — dark (conclusion: `failure`), 2026-10-28 13:04 UTC
 - Dark since: 2026-10-09 13:10 UTC (first run of the current streak)
 - Job / step: `🐍 Python 3.10: libs/partners/google-genai` → `🚀 Run Integration Tests`
-- Likely cause: Event loop is closed
+- Likely cause: = 1 failed, 212 passed, 19 skipped, 1 xfailed, 1 xpassed, 30 warnings, 3 retried in 673.92s (0:11:13) =
 
 <details><summary>End of the job log</summary>
 
 ```
-  File "/home/runner/work/_temp/uv-python-dir/cpython-3.10-linux-x86_64-gnu/lib/python3.10/asyncio/selector_events.py", line 725, in _fatal_error
-    self._force_close(exc)
-  File "/home/runner/work/_temp/uv-python-dir/cpython-3.10-linux-x86_64-gnu/lib/python3.10/asyncio/selector_events.py", line 737, in _force_close
-    self._loop.call_soon(self._call_connection_lost, exc)
-  File "/home/runner/work/_temp/uv-python-dir/cpython-3.10-linux-x86_64-gnu/lib/python3.10/asyncio/base_events.py", line 753, in call_soon
-    self._check_closed()
-  File "/home/runner/work/_temp/uv-python-dir/cpython-3.10-linux-x86_64-gnu/lib/python3.10/asyncio/base_events.py", line 515, in _check_closed
-##[error]    raise RuntimeError('Event loop is closed')
+	    result: TResult | None = func()
+	langchain_google_genai.chat_models.GoogleAPIError: 503 UNAVAILABLE. ***'error': ***'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again lat…
+=========================== end of test retry report ===========================
+=========================== short test summary info ============================
+FAILED tests/integration_tests/test_chat_models.py::test_computer_use_tool[google_ai] - langchain_google_genai.chat_models.GoogleAPIError: 503 UNAVAILABLE. ***'error': ***'code': 503, 'message': 'This model is currently…
+= 1 failed, 212 passed, 19 skipped, 1 xfailed, 1 xpassed, 30 warnings, 3 retried in 673.92s (0:11:13) =
+make: *** [Makefile:18: integration_tests] Error 1
+##[error]Process completed with exit code 2.
 ```
 
 </details>
