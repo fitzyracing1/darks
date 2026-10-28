@@ -4,61 +4,36 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/tangency-labs/solidcraft/issues/new
-- **Stars:** 11255 · **Generated:** 2026-10-28T01:00:05.584Z
+- **Stars:** 11348 · **Generated:** 2026-10-28T06:48:10.228Z
 - Nothing in this file has been sent anywhere.
-- **Note for Joshua:** cancelled by a concurrency group — likely noise
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 2 workflows dark on main ("Pages", "Docker")
+CI: "Pages" workflow failing on main since 2026-10-27
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
+Hi! The **Pages** workflow (`.github/workflows/pages.yml`) on `main` has been failing since 2026-10-27. Here is what I saw, in case it's useful:
 
-### Pages (`.github/workflows/pages.yml`)
-
-- Latest run on `main`: https://github.com/tangency-labs/solidcraft/actions/runs/40605008253 — dark (conclusion: `failure`), 2026-10-27 23:51 UTC
+- Latest run on `main`: https://github.com/tangency-labs/solidcraft/actions/runs/40633335436 — dark (conclusion: `failure`), 2026-10-28 04:37 UTC
 - Dark since: 2026-10-27 23:51 UTC (first run of the current streak)
-- Job / step: `build` → `Include the published Flatpak repository`
-- Likely cause: flatpak-site.sh: line 45: "ostree --repo="$repo_dir" pull --mirror previous" failed (exit 1)
+- Job / step: `build` → `Test the web app offline and across an update (headless Chrome)`
+- Likely cause: error: v5's download is finished, not dropped: timed out after 240s; last state: {"build":"v6","caches":{"solidcraft-app /solidcraft/app/ 0.25.1-1d30dea8c4eea6aa":11,"solidcraft-app /solidcraft/app/ 0.25.1-c2849f639bdd2…
 
 <details><summary>End of the job log</summary>
 
 ```
-Running kernel seems to be up-to-date.
-No services need to be restarted.
-No containers need to be restarted.
-No user sessions are running outdated binaries.
-No VM guests are running outdated hypervisor (qemu) binaries on this host.
-error: Server returned HTTP 503
-flatpak-site.sh: line 45: "ostree --repo="$repo_dir" pull --mirror previous" failed (exit 1)
+ok    deployed mid-download: v4's page doesn't fit v3's files, so v1 starts (4.0s)
+ok    update: build v3 starts on the first launch; only it stays kept (4.0s)
+ok    offline: build v3 starts from the kept copy (4.1s)
+ok    slow network: build v3 starts from the kept copy (4.8s)
+ok    update in another tab: the kept v3 still starts; its copy is retired, not deleted (5.7s)
+ok    no open page uses them any more: the retired copies are deleted; v4 starts (4.0s)
+error: v5's download is finished, not dropped: timed out after 240s; last state: {"build":"v6","caches":{"solidcraft-app /solidcraft/app/ 0.25.1-1d30dea8c4eea6aa":11,"solidcraft-app /solidcraft/app/ 0.25.1-c2849f639bdd2…
 ##[error]Process completed with exit code 1.
-```
-
-</details>
-
-### Docker (`.github/workflows/docker.yml`)
-
-- Latest run on `main`: https://github.com/tangency-labs/solidcraft/actions/runs/40610673635 — dark (conclusion: `cancelled`), 2026-10-28 00:44 UTC
-- Dark since: 2026-10-28 00:44 UTC (first run of the current streak)
-- Job / step: `image` → `Build the web app`
-- Likely cause: Canceling since a higher priority waiting request for docker-refs/heads/main exists
-
-<details><summary>End of the job log</summary>
-
-```
-58 |     Later(Deferred),
-   |     ^^^^^
-   |
-   = note: `#[warn(dead_code)]` (part of `#[warn(unused)]`) on by default
-warning: `solidcraft-engine` (lib) generated 1 warning
-warning: `solidcraft-ui-egui` (lib) generated 2 warnings (run `cargo fix --lib -p solidcraft-ui-egui` to apply 1 suggestion)
-   Compiling solidcraft-web v0.25.0 (/home/runner/work/solidcraft/solidcraft/apps/solidcraft-web)
-##[error]The operation was canceled.
 ```
 
 </details>

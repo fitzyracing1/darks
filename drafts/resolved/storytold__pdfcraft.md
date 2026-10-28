@@ -1,8 +1,8 @@
 <!-- dark-draft: storytold/pdfcraft -->
-<!-- draft-state: ready -->
+<!-- draft-state: resolved -->
 # Upstream issue draft: storytold/pdfcraft
 
-- **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
+- **Status:** resolved — lit again (2026-10-28); nothing to file
 - **Would be filed at:** https://github.com/storytold/pdfcraft/issues/new
 - **Stars:** 18245 · **Generated:** 2026-10-28T01:00:05.584Z
 - Nothing in this file has been sent anywhere.

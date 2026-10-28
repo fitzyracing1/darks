@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/modelcontextprotocol/php-sdk/issues/new
-- **Stars:** 1650 · **Generated:** 2026-10-28T01:00:05.584Z
+- **Stars:** 1650 · **Generated:** 2026-10-28T06:48:10.228Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title

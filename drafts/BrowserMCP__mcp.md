@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/BrowserMCP/mcp/issues/new
-- **Stars:** 7229 · **Generated:** 2026-10-28T01:00:05.584Z
+- **Stars:** 7231 · **Generated:** 2026-10-28T06:48:10.228Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -18,7 +18,7 @@ CI: "CI" workflow failing on main since 2026-10-27
 <!-- BEGIN BODY -->
 Hi! The **CI** workflow (`.github/workflows/ci.yml`) on `main` has been failing since 2026-10-27. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/BrowserMCP/mcp/actions/runs/40482372442 — dark (conclusion: `failure`), 2026-10-27 09:38 UTC
+- Latest run on `main`: https://github.com/BrowserMCP/mcp/actions/runs/40634685378 — dark (conclusion: `failure`), 2026-10-28 04:51 UTC
 - Dark since: 2026-10-27 09:05 UTC (first run of the current streak)
 - Job / step: `checks` → `Smoke test`
 - Likely cause: × "pnpm recursive run" failed in /home/runner/work/mcp/mcp/apps/extension

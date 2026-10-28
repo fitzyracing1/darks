@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/ReactiveX/rxjs/issues/new
-- **Stars:** 31704 · **Generated:** 2026-10-28T01:00:05.584Z
+- **Stars:** 31705 · **Generated:** 2026-10-28T06:48:10.228Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -42,7 +42,7 @@ Exit code: 1
 
 ### Extended property fuzzing (`.github/workflows/fuzz.yml`)
 
-- Latest run on `master`: https://github.com/ReactiveX/rxjs/actions/runs/39557620295 — dark (conclusion: `failure`), 2026-10-21 06:47 UTC
+- Latest run on `master`: https://github.com/ReactiveX/rxjs/actions/runs/40644853484 — dark (conclusion: `failure`), 2026-10-28 06:36 UTC
 - Dark since: 2026-09-16 06:45 UTC (first run of the current streak)
 - Job / step: `Observable and release-policy properties` → `Run extended properties; fast-check reports the reproduction seed on failure`
 - Likely cause: Could not find 'scripts/release/authorize-stage.test.mjs, scripts/release/install-pinned-npm.test.mjs, scripts/release/release-policy.test.mjs, scripts/release/release-candidate.test.mjs, scripts/release/stage-release.t…
@@ -51,12 +51,12 @@ Exit code: 1
 <details><summary>End of the job log</summary>
 
 ```
- ✓ src/lifecycle.fuzz.spec.ts (1 test) 969ms
-     ✓ preserves sharing, ref-count, restart, terminal, abort, and teardown invariants  967ms
+ ✓ src/lifecycle.fuzz.spec.ts (1 test) 699ms
+     ✓ preserves sharing, ref-count, restart, terminal, abort, and teardown invariants  698ms
  Test Files  1 passed (1)
       Tests  1 passed (1)
-   Start at  06:48:00
-   Duration  1.22s (transform 92ms, setup 0ms, import 121ms, tests 969ms, environment 0ms)
+   Start at  06:36:48
+   Duration  887ms (transform 64ms, setup 0ms, import 86ms, tests 699ms, environment 0ms)
 Could not find 'scripts/release/authorize-stage.test.mjs, scripts/release/install-pinned-npm.test.mjs, scripts/release/release-policy.test.mjs, scripts/release/release-candidate.test.mjs, scripts/release/stage-release.t…
 ##[error]Process completed with exit code 1.
 ```
