@@ -1,8 +1,8 @@
 <!-- dark-draft: openclaw/openclaw -->
-<!-- draft-state: ready -->
+<!-- draft-state: resolved -->
 # Upstream issue draft: openclaw/openclaw
 
-- **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
+- **Status:** resolved — lit again (2026-10-29); nothing to file
 - **Would be filed at:** https://github.com/openclaw/openclaw/issues/new
 - **Stars:** 393292 · **Generated:** 2026-10-29T01:00:37.542Z
 - Nothing in this file has been sent anywhere.

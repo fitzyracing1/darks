@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/activepieces/activepieces/issues/new
-- **Stars:** 25265 · **Generated:** 2026-10-29T01:00:37.542Z
+- **Stars:** 25267 · **Generated:** 2026-10-29T06:47:23.232Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -18,10 +18,10 @@ CI: "Chat Evals" workflow failing on main since 2026-10-13
 <!-- BEGIN BODY -->
 Hi! The **Chat Evals** workflow (`.github/workflows/agent-evals.yml`) on `main` has been failing since 2026-10-13. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/activepieces/activepieces/actions/runs/40642849150 — dark (conclusion: `failure`), 2026-10-28 06:16 UTC
+- Latest run on `main`: https://github.com/activepieces/activepieces/actions/runs/40828247550 — dark (conclusion: `failure`), 2026-10-29 06:16 UTC
 - Dark since: 2026-10-13 06:26 UTC (first run of the current streak)
 - Job / step: `Live judge gate` → `Run live chat evals (scope=regression)`
-- Likely cause: AssertionError: see the eval report above for the failing checks: expected [ 'memory-saves-when-asked' ] to deeply equal [] (packages/server/worker/test/lib/agent-eval/agent-eval.test.ts:58)
+- Likely cause: AssertionError: see the eval report above for the failing checks: expected [ 'guard-duplicate-flow-not-agent' ] to deeply equal [] (packages/server/worker/test/lib/agent-eval/agent-eval.test.ts:58)
 
 <details><summary>End of the job log</summary>
 
@@ -31,9 +31,9 @@ Hi! The **Chat Evals** workflow (`.github/workflows/agent-evals.yml`) on `main` 
 ⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
  Test Files  1 failed | 12 passed (13)
       Tests  1 failed | 89 passed (90)
-   Start at  06:19:57
-   Duration  269.19s (transform 1.34s, setup 103ms, collect 12.21s, tests 264.73s, environment 2ms, prepare 787ms)
-##[error]AssertionError: see the eval report above for the failing checks: expected [ 'memory-saves-when-asked' ] to deeply equal []
+   Start at  06:21:23
+   Duration  481.91s (transform 1.60s, setup 75ms, collect 16.63s, tests 475.72s, environment 3ms, prepare 1.15s)
+##[error]AssertionError: see the eval report above for the failing checks: expected [ 'guard-duplicate-flow-not-agent' ] to deeply equal []
 ```
 
 </details>

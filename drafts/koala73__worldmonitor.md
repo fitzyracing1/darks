@@ -4,35 +4,35 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/koala73/worldmonitor/issues/new
-- **Stars:** 89717 · **Generated:** 2026-10-29T01:00:37.542Z
+- **Stars:** 89731 · **Generated:** 2026-10-29T06:47:23.232Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: "Seed Freshness Monitor" workflow failing on main since 2026-10-28
+CI: "Desktop Canary (Linux)" workflow failing on main since 2026-10-29
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! The **Seed Freshness Monitor** workflow (`.github/workflows/seed-freshness-monitor.yml`) on `main` has been failing since 2026-10-28. Here is what I saw, in case it's useful:
+Hi! The **Desktop Canary (Linux)** workflow (`.github/workflows/test-linux-app.yml`) on `main` has been failing since 2026-10-29. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/koala73/worldmonitor/actions/runs/40794554048 — dark (conclusion: `failure`), 2026-10-29 00:30 UTC
-- Dark since: 2026-10-28 17:49 UTC (first run of the current streak)
-- Job / step: `monitor` → `Publish ingestion operational transitions`
-- Likely cause: Ingestion operational acceptance failed: the accepted-problem baseline expired on 2026-09-05T18:00:00Z. Re-review scripts/seed-freshness-baseline.json and set a new expiresAt.
+- Latest run on `main`: https://github.com/koala73/worldmonitor/actions/runs/40823444326 — dark (conclusion: `failure`), 2026-10-29 05:26 UTC
+- Dark since: 2026-10-29 05:26 UTC (first run of the current streak)
+- Job / step: `test-linux-app` → `Smoke-test AppImage`
+- Likely cause: ✅ Sidecar remained alive through the observation window
 
 <details><summary>End of the job log</summary>
 
 ```
-- imdCycloneMarine: status=SEED_ERROR records=28 age=13m max=45m
-- naturalEvents: status=SEED_ERROR records=24 age=27m max=540m
-- outages: status=STALE_SEED records=13 age=89m max=30m
-- portwatchPortActivity: status=SEED_ERROR records=174 age=749m max=2160m
-- riskScores: status=COVERAGE_PARTIAL records=2 age=7m max=30m
-- trafficAnomalies: status=STALE_SEED records=8 age=89m max=60m
-Ingestion operational acceptance failed: the accepted-problem baseline expired on 2026-09-05T18:00:00Z. Re-review scripts/seed-freshness-baseline.json and set a new expiresAt.
+SIDECAR_STATUS=ready
+SIDECAR_FINAL_STATUS=alive
+sidecar remained alive with HTTP 401
+APP_STATUS=running
+✅ AppImage launched successfully
+✅ Sidecar became ready on 127.0.0.1:46123
+✅ Sidecar remained alive through the observation window
 ##[error]Process completed with exit code 1.
 ```
 

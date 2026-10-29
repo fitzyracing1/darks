@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/tangency-labs/solidcraft/issues/new
-- **Stars:** 11661 · **Generated:** 2026-10-29T01:00:37.542Z
+- **Stars:** 11739 · **Generated:** 2026-10-29T06:47:23.232Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** cancelled by a concurrency group — likely noise
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
@@ -12,7 +12,7 @@
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 4 workflows dark on main ("Docker", "Pages", "CI", +1 more)
+CI: 2 workflows dark on main ("Docker", "Pages")
 <!-- END TITLE -->
 
 ## Body
@@ -22,7 +22,7 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### Docker (`.github/workflows/docker.yml`)
 
-- Latest run on `main`: https://github.com/tangency-labs/solidcraft/actions/runs/40796799884 — dark (conclusion: `cancelled`), 2026-10-29 00:51 UTC
+- Latest run on `main`: https://github.com/tangency-labs/solidcraft/actions/runs/40828876137 — dark (conclusion: `cancelled`), 2026-10-29 06:23 UTC
 - Dark since: 2026-10-28 12:29 UTC (first run of the current streak)
 - Job / step: `image` → `Build the web app`
 - Likely cause: Canceling since a higher priority waiting request for docker-refs/heads/main exists
@@ -30,12 +30,12 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 <details><summary>End of the job log</summary>
 
 ```
-   Compiling truck-meshalgo v0.4.0 (/home/runner/work/solidcraft/solidcraft/vendor/truck-meshalgo)
+   Compiling truck-stepio v0.3.0 (/home/runner/work/solidcraft/solidcraft/vendor/truck-stepio)
+   Compiling eframe v0.36.2
    Compiling truck-shapeops v0.4.0 (/home/runner/work/solidcraft/solidcraft/vendor/truck-shapeops)
    Compiling solidcraft-render v0.26.0 (/home/runner/work/solidcraft/solidcraft/crates/render)
-   Compiling truck-stepio v0.3.0 (/home/runner/work/solidcraft/solidcraft/vendor/truck-stepio)
-   Compiling solidcraft-kernel v0.26.0 (/home/runner/work/solidcraft/solidcraft/crates/kernel)
    Compiling solidcraft-sketch v0.26.0 (/home/runner/work/solidcraft/solidcraft/crates/sketch)
+   Compiling solidcraft-kernel v0.26.0 (/home/runner/work/solidcraft/solidcraft/crates/kernel)
    Compiling solidcraft-gpu v0.26.0 (/home/runner/work/solidcraft/solidcraft/crates/gpu)
 ##[error]The operation was canceled.
 ```
@@ -44,20 +44,8 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### Pages (`.github/workflows/pages.yml`)
 
-- Latest run on `main`: https://github.com/tangency-labs/solidcraft/actions/runs/40796799906 — dark (conclusion: `cancelled`), 2026-10-29 00:51 UTC
+- Latest run on `main`: https://github.com/tangency-labs/solidcraft/actions/runs/40828876086 — dark (conclusion: `cancelled`), 2026-10-29 06:23 UTC
 - Dark since: 2026-10-28 18:08 UTC (first run of the current streak)
-- Likely cause: run cancelled
-
-### CI (`.github/workflows/ci.yml`)
-
-- Latest run on `main`: https://github.com/tangency-labs/solidcraft/actions/runs/40796799950 — dark (conclusion: `cancelled`), 2026-10-29 00:51 UTC
-- Dark since: 2026-10-29 00:51 UTC (first run of the current streak)
-- Likely cause: run cancelled
-
-### Generated files (`.github/workflows/generated.yml`)
-
-- Latest run on `main`: https://github.com/tangency-labs/solidcraft/actions/runs/40796799928 — dark (conclusion: `cancelled`), 2026-10-29 00:51 UTC
-- Dark since: 2026-10-29 00:51 UTC (first run of the current streak)
 - Likely cause: run cancelled
 
 If this is already known or expected, feel free to close. Thanks for maintaining solidcraft!

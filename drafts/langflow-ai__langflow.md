@@ -4,13 +4,13 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/langflow-ai/langflow/issues/new
-- **Stars:** 156116 · **Generated:** 2026-10-29T01:00:37.542Z
+- **Stars:** 156123 · **Generated:** 2026-10-29T06:47:23.232Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 4 workflows dark on main ("Deploy Storybook to GitHub Pages", "Mend", "Cross-Bundle Test", +1 more)
+CI: 3 workflows dark on main ("Deploy Storybook to GitHub Pages", "Mend", "Cross-Bundle Test")
 <!-- END TITLE -->
 
 ## Body
@@ -67,28 +67,6 @@ Process finished with exit code ERROR (-1)
 - Latest run on `main`: https://github.com/langflow-ai/langflow/actions/runs/40279758044 — dark (conclusion: `failure`), 2026-10-26 06:25 UTC
 - Dark since: 2026-10-26 06:25 UTC (first run of the current streak)
 - Likely cause: no cause found in annotations
-
-### A11y / IBM Equal Access Scans (`.github/workflows/a11y-scan.yml`)
-
-- Latest run on `main`: https://github.com/langflow-ai/langflow/actions/runs/40619995184 — dark (conclusion: `failure`), 2026-10-28 02:16 UTC
-- Dark since: 2026-10-28 02:16 UTC (first run of the current streak)
-- Job / step: `Python route scan (real backend, nightly)` → `Run Python Route Scan`
-- Likely cause: No files were found with the provided path: python-route-scan. No artifacts will be uploaded.
-
-<details><summary>End of the job log</summary>
-
-```
-    )
-    ^
-  File "/home/runner/work/_temp/setup-uv-cache/archive-v0/j1wah91vczRA0HX1/lib/python3.13/site-packages/playwright/_impl/_connection.py", line 563, in wrap_api_call
-    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
-playwright._impl._errors.TimeoutError: Page.goto: Timeout 45000ms exceeded.
-Call log:
-  - navigating to "http://localhost:3000/flows", waiting until "domcontentloaded"
-##[error]Process completed with exit code 1.
-```
-
-</details>
 
 If this is already known or expected, feel free to close. Thanks for maintaining langflow!
 

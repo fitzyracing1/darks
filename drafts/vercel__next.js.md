@@ -4,36 +4,60 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/vercel/next.js/issues/new
-- **Stars:** 143187 · **Generated:** 2026-10-29T01:00:37.542Z
+- **Stars:** 143190 · **Generated:** 2026-10-29T06:47:23.232Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: "build-and-test" workflow failing on canary since 2026-10-28
+CI: 2 workflows dark on canary ("Rspack Next.js production integration tests", "Rspack Next.js development integration tests")
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! The **build-and-test** workflow (`.github/workflows/build_and_test.yml`) on `canary` has been failing since 2026-10-28. Here is what I saw, in case it's useful:
+Hi! A few workflows on `canary` have been dark recently. Details below, in case they're useful:
 
-- Latest run on `canary`: https://github.com/vercel/next.js/actions/runs/40786385843 — dark (conclusion: `failure`), 2026-10-28 23:18 UTC
-- Dark since: 2026-10-28 23:18 UTC (first run of the current streak)
-- Job / step: `test rspack production (1/7, 18.3.1) / build` → `Run export NEXT_EXTERNAL_TESTS_FILTERS="$(pwd)/test/rspack-build-tests-manifest.json"`
-- Likely cause: Some tests failed
+### Rspack Next.js production integration tests (`.github/workflows/rspack-nextjs-build-integration-tests.yml`)
+
+- Latest run on `canary`: https://github.com/vercel/next.js/actions/runs/40821189405 — dark (conclusion: `failure`), 2026-10-29 05:03 UTC
+- Dark since: 2026-10-29 05:03 UTC (first run of the current streak)
+- Job / step: `Rspack integration tests / Next.js integration test (E2E and production) (9/12) / build` → `Run # e2e and production tests with `node run-tests.js``
+- Likely cause: Unable to download artifact(s): Artifact not found for name: next-swc-aarch64-unknown-linux-gnu
 
 <details><summary>End of the job log</summary>
 
 ```
-test/production/standalone-mode/required-server-files/required-server-files-app.test.ts finished on retry 0/2 in 27.281s
-test/production/typescript-ignore-errors/typescript-ignore-errors.test.ts finished on retry 0/2 in 22.501s
-test/production/static-404/static-404.test.ts finished on retry 0/2 in 31.137s
-test/production/standalone-mode/required-server-files/required-server-files-node-middleware.test.ts finished on retry 0/2 in 55.443s
-Some tests failed
-Successfully updated test timings in KV store
-exiting with code 1
-##[error]Process completed with exit code 1.
+/etc/profile.d/apps-bin-path.sh: line 10: XDG_DATA_DIRS: unbound variable
+/etc/profile.d/apps-bin-path.sh: line 10: XDG_DATA_DIRS: unbound variable
+/etc/profile.d/apps-bin-path.sh: line 10: XDG_DATA_DIRS: unbound variable
+Waiting for background step(s) to complete: install-rust
+Finished waiting for background step(s).
+/etc/profile.d/apps-bin-path.sh: line 10: XDG_DATA_DIRS: unbound variable
+Downloading single artifact
+##[error]Unable to download artifact(s): Artifact not found for name: next-swc-aarch64-unknown-linux-gnu
+```
+
+</details>
+
+### Rspack Next.js development integration tests (`.github/workflows/rspack-nextjs-dev-integration-tests.yml`)
+
+- Latest run on `canary`: https://github.com/vercel/next.js/actions/runs/40821560508 — dark (conclusion: `failure`), 2026-10-29 05:07 UTC
+- Dark since: 2026-10-29 05:07 UTC (first run of the current streak)
+- Job / step: `Rspack integration tests / Next.js integration test (E2E and development) (13/16) / build` → `Run # e2e and development tests with `node run-tests.js``
+- Likely cause: Unable to download artifact(s): Artifact not found for name: next-swc-aarch64-unknown-linux-gnu
+
+<details><summary>End of the job log</summary>
+
+```
+/etc/profile.d/apps-bin-path.sh: line 10: XDG_DATA_DIRS: unbound variable
+/etc/profile.d/apps-bin-path.sh: line 10: XDG_DATA_DIRS: unbound variable
+/etc/profile.d/apps-bin-path.sh: line 10: XDG_DATA_DIRS: unbound variable
+Waiting for background step(s) to complete: install-rust
+Finished waiting for background step(s).
+/etc/profile.d/apps-bin-path.sh: line 10: XDG_DATA_DIRS: unbound variable
+Downloading single artifact
+##[error]Unable to download artifact(s): Artifact not found for name: next-swc-aarch64-unknown-linux-gnu
 ```
 
 </details>

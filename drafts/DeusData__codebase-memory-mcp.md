@@ -4,41 +4,40 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/DeusData/codebase-memory-mcp/issues/new
-- **Stars:** 47736 · **Generated:** 2026-10-29T01:00:37.542Z
+- **Stars:** 47753 · **Generated:** 2026-10-29T06:47:23.232Z
 - Nothing in this file has been sent anywhere.
-- **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 - **Note for Joshua:** cancelled by a concurrency group — likely noise
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 3 workflows dark on main ("test-impact-artifact", "CodeQL SAST", "OpenSSF Scorecard")
+CI: "CodeQL SAST" workflow getting cancelled on main since 2026-10-29
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
+Hi! The **CodeQL SAST** workflow (`.github/workflows/codeql.yml`) on `main` has been getting cancelled since 2026-10-29. Here is what I saw, in case it's useful:
 
-### test-impact-artifact (`.github/workflows/test-impact-artifact.yml`)
-
-- Latest run on `main`: https://github.com/DeusData/codebase-memory-mcp/actions/runs/40792037277 — dark (conclusion: `cancelled`), 2026-10-29 00:08 UTC
-- Dark since: 2026-10-28 17:08 UTC (first run of the current streak)
-- Likely cause: run cancelled
-
-### CodeQL SAST (`.github/workflows/codeql.yml`)
-
-- Latest run on `main`: https://github.com/DeusData/codebase-memory-mcp/actions/runs/40792037052 — dark (conclusion: `cancelled`), 2026-10-29 00:08 UTC
+- Latest run on `main`: https://github.com/DeusData/codebase-memory-mcp/actions/runs/40814126317 — dark (conclusion: `cancelled`), 2026-10-29 03:47 UTC
 - Dark since: 2026-10-29 00:08 UTC (first run of the current streak)
-- Job / step: `analyze (c-cpp, manual, codeql-cpp)`
+- Job / step: `analyze (c-cpp, manual, codeql-cpp)` → `Build for CodeQL analysis (full)`
 - Likely cause: Canceling since a higher priority waiting request for codeql-c-cpp-refs/heads/main exists
 
-### OpenSSF Scorecard (`.github/workflows/scorecard.yml`)
+<details><summary>End of the job log</summary>
 
-- Latest run on `main`: https://github.com/DeusData/codebase-memory-mcp/actions/runs/40792037114 — dark (conclusion: `cancelled`), 2026-10-29 00:08 UTC
-- Dark since: 2026-10-29 00:08 UTC (first run of the current streak)
-- Job / step: `scorecard`
-- Likely cause: Canceling since a higher priority waiting request for scorecard-refs/heads/main exists
+```
+gcc  -std=c11 -D_DEFAULT_SOURCE -O2 -w -Iinternal/cbm -Iinternal/cbm/vendored/ts_runtime/include -Iinternal/cbm/vendored/ts_runtime/src   -c -o build/c/prod_grammar_mojo.o internal/cbm/grammar_mojo.c
+gcc  -std=c11 -D_DEFAULT_SOURCE -O2 -w -Iinternal/cbm -Iinternal/cbm/vendored/ts_runtime/include -Iinternal/cbm/vendored/ts_runtime/src   -c -o build/c/prod_grammar_move.o internal/cbm/grammar_move.c
+gcc  -std=c11 -D_DEFAULT_SOURCE -O2 -w -Iinternal/cbm -Iinternal/cbm/vendored/ts_runtime/include -Iinternal/cbm/vendored/ts_runtime/src   -c -o build/c/prod_grammar_nasm.o internal/cbm/grammar_nasm.c
+gcc  -std=c11 -D_DEFAULT_SOURCE -O2 -w -Iinternal/cbm -Iinternal/cbm/vendored/ts_runtime/include -Iinternal/cbm/vendored/ts_runtime/src   -c -o build/c/prod_grammar_nickel.o internal/cbm/grammar_nickel.c
+gcc  -std=c11 -D_DEFAULT_SOURCE -O2 -w -Iinternal/cbm -Iinternal/cbm/vendored/ts_runtime/include -Iinternal/cbm/vendored/ts_runtime/src   -c -o build/c/prod_grammar_nix.o internal/cbm/grammar_nix.c
+gcc  -std=c11 -D_DEFAULT_SOURCE -O2 -w -Iinternal/cbm -Iinternal/cbm/vendored/ts_runtime/include -Iinternal/cbm/vendored/ts_runtime/src   -c -o build/c/prod_grammar_objc.o internal/cbm/grammar_objc.c
+gcc  -std=c11 -D_DEFAULT_SOURCE -O2 -w -Iinternal/cbm -Iinternal/cbm/vendored/ts_runtime/include -Iinternal/cbm/vendored/ts_runtime/src   -c -o build/c/prod_grammar_objectscript_routine.o internal/cbm/grammar_objectscri…
+##[error]The operation was canceled.
+```
+
+</details>
 
 If this is already known or expected, feel free to close. Thanks for maintaining codebase-memory-mcp!
 

@@ -4,37 +4,36 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/headroomlabs-ai/headroom/issues/new
-- **Stars:** 78158 · **Generated:** 2026-10-29T01:00:37.542Z
+- **Stars:** 78178 · **Generated:** 2026-10-29T06:47:23.232Z
 - Nothing in this file has been sent anywhere.
-- **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: "PR Governance" workflow getting cancelled on main since 2026-10-26
+CI: "CI" workflow failing on main since 2026-10-29
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! The **PR Governance** workflow (`.github/workflows/pr-health.yml`) on `main` has been getting cancelled since 2026-10-26. Here is what I saw, in case it's useful:
+Hi! The **CI** workflow (`.github/workflows/ci.yml`) on `main` has been failing since 2026-10-29. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/headroomlabs-ai/headroom/actions/runs/40706275305 — dark (conclusion: `cancelled`), 2026-10-28 14:28 UTC
-- Dark since: 2026-10-26 15:15 UTC (first run of the current streak)
-- Job / step: `label` → `Label open pull requests`
-- Likely cause: The job has exceeded the maximum execution time of 10m0s
+- Latest run on `main`: https://github.com/headroomlabs-ai/headroom/actions/runs/40819536349 — dark (conclusion: `failure`), 2026-10-29 04:45 UTC
+- Dark since: 2026-10-29 04:45 UTC (first run of the current streak)
+- Job / step: `build-wheel-windows` → `Build wheel (fast CI cargo profile)`
+- Likely cause: A device which does not exist was specified. : 'D:\a\_temp\_runner_file_commands\add_path_25f340a1-5492-4719-90c3-a1075c8af9bd'
 
 <details><summary>End of the job log</summary>
 
 ```
-https://github.com/headroomlabs-ai/headroom/pull/4318
-https://github.com/headroomlabs-ai/headroom/pull/4317
-https://github.com/headroomlabs-ai/headroom/pull/4317
-https://github.com/headroomlabs-ai/headroom/pull/4317
-https://github.com/headroomlabs-ai/headroom/pull/4316
-https://github.com/headroomlabs-ai/headroom/pull/4316
-https://github.com/headroomlabs-ai/headroom/pull/4316
-##[error]The operation was canceled.
+warning: build failed, waiting for other jobs to finish...
+error: could not compile `encoding_rs` (lib) due to 1 previous error
+error: could not compile `image` (lib) due to 1 previous error
+error: could not compile `tokenizers` (lib) due to 1 previous error
+💥 maturin failed
+  Caused by: Failed to build a native library through cargo
+  Caused by: Cargo build finished with "exit code: 101": `"cargo" "rustc" "--profile" "ci" "--features" "extension-module" "--message-format" "json-render-diagnostics" "--manifest-path" "D:\\a\\headroom\\headroom\\crate…
+##[error]Process completed with exit code 1.
 ```
 
 </details>

@@ -4,34 +4,24 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/xerj-org/xerj/issues/new
-- **Stars:** 17327 · **Generated:** 2026-10-29T01:00:37.542Z
+- **Stars:** 17393 · **Generated:** 2026-10-29T06:47:23.232Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
-- **Note for Joshua:** cancelled by a concurrency group — likely noise
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 2 workflows dark on main ("CI", "Fresh-agent field report")
+CI: "CI" workflow getting cancelled on main since 2026-10-28
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
+Hi! The **CI** workflow (`.github/workflows/ci.yml`) on `main` has been getting cancelled since 2026-10-28. Here is what I saw, in case it's useful:
 
-### CI (`.github/workflows/ci.yml`)
-
-- Latest run on `main`: https://github.com/xerj-org/xerj/actions/runs/40791953176 — dark (conclusion: `cancelled`), 2026-10-29 00:07 UTC
+- Latest run on `main`: https://github.com/xerj-org/xerj/actions/runs/40826474555 — dark (conclusion: `cancelled`), 2026-10-29 05:58 UTC
 - Dark since: 2026-10-28 22:33 UTC (first run of the current streak)
 - Likely cause: run cancelled
-
-### Fresh-agent field report (`.github/workflows/field-report-e2e.yml`)
-
-- Latest run on `main`: https://github.com/xerj-org/xerj/actions/runs/40791946302 — dark (conclusion: `cancelled`), 2026-10-29 00:07 UTC
-- Dark since: 2026-10-29 00:07 UTC (first run of the current streak)
-- Job / step: `Clean HOME field-report dry-run`
-- Likely cause: Canceling since a higher priority waiting request for field-report-e2e-refs/heads/main exists
 
 If this is already known or expected, feel free to close. Thanks for maintaining xerj!
 

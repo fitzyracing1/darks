@@ -4,8 +4,10 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/xberg-io/xberg/issues/new
-- **Stars:** 9458 · **Generated:** 2026-10-29T01:00:37.542Z
+- **Stars:** 9460 · **Generated:** 2026-10-29T06:47:23.232Z
 - Nothing in this file has been sent anywhere.
+- **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
+- **Note for Joshua:** cancelled by a concurrency group — likely noise
 
 ## Suggested title
 
@@ -20,7 +22,7 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### CI Lint (`.github/workflows/ci-lint.yaml`)
 
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/40758649459 — dark (conclusion: `failure`), 2026-10-28 19:55 UTC
+- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/40821941111 — dark (conclusion: `cancelled`), 2026-10-29 05:11 UTC
 - Dark since: 2026-10-24 07:14 UTC (first run of the current streak)
 - Job / step: `Benchmark script regressions` → `Validate benchmark scripts`
 - Likely cause: exit status 1
@@ -32,7 +34,7 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
     raise ValueError(f"{job}: matrix dimension {key!r} has no values")
 ValueError: bench-unstructured: matrix dimension 'cohort' has no values
 ----------------------------------------------------------------------
-Ran 8 tests in 0.022s
+Ran 8 tests in 0.029s
 FAILED (errors=2)
 task: Failed to run task "benchmark:validate:scripts": exit status 1
 ##[error]exit status 1
@@ -42,85 +44,85 @@ task: Failed to run task "benchmark:validate:scripts": exit status 1
 
 ### CI Rust (`.github/workflows/ci-rust.yaml`)
 
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/40758648887 — dark (conclusion: `failure`), 2026-10-28 19:55 UTC
+- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/40821940764 — dark (conclusion: `cancelled`), 2026-10-29 05:11 UTC
 - Dark since: 2026-10-25 18:30 UTC (first run of the current streak)
-- Job / step: `Chunking scaling guard` → `Chunking pipeline tests (release)`
-- Likely cause: function 'extract_bytes' is never used (crates/xberg/src/core/extractor/bytes.rs:66)
+- Job / step: `Rust (windows-latest, static-embeddings link)` → `Install system dependencies`
+- Likely cause: Canceling since a higher priority waiting request for ci-rust-refs/heads/main exists
 
 <details><summary>End of the job log</summary>
 
 ```
-   Compiling wiremock v0.6.5
-   Compiling safetensors v0.8.0
-   Compiling tar v0.4.46
-   Compiling serial_test v4.0.1
-   Compiling tokio-test v0.4.6
-   Compiling qrcode v0.14.1
-error: function `extract_bytes` is never used
-##[error]  --> crates/xberg/src/core/extractor/bytes.rs:66:21
+Building libde265:x64-windows-static-md@1.1.3...
+Downloading https://github.com/strukturag/libde265/archive/v1.1.3.tar.gz -> strukturag-libde265-v1.1.3.tar.gz
+Successfully downloaded strukturag-libde265-v1.1.3.tar.gz
+-- Extracting source C:/xberg-vcpkg-5363acb7/downloads/strukturag-libde265-v1.1.3.tar.gz
+-- Applying patch fix-linkage.patch
+-- Using source at C:/xberg-vcpkg-5363acb7/buildtrees/libde265/src/v1.1.3-12fadf1eaf.clean
+-- Configuring x64-windows-static-md
+##[error]The operation was canceled.
 ```
 
 </details>
 
 ### CI Integrations (`.github/workflows/ci-integrations.yaml`)
 
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/40758648816 — dark (conclusion: `failure`), 2026-10-28 19:55 UTC
+- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/40821940756 — dark (conclusion: `cancelled`), 2026-10-29 05:11 UTC
 - Dark since: 2026-10-28 14:02 UTC (first run of the current streak)
-- Job / step: `Node` → `Test integrations against local Node binding`
-- Likely cause: exit status 1
+- Job / step: `Build local integration bindings` → `Build abi3 Python wheel`
+- Likely cause: Canceling since a higher priority waiting request for ci-integrations-refs/heads/main exists
 
 <details><summary>End of the job log</summary>
 
 ```
-      8|
- ❯ tests/reader.test.ts:3:1
-⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
- Test Files  1 failed | 1 passed (2)
-      Tests  7 passed (7)
-   Start at  21:49:05
-   Duration  444ms (import 80%, transform 17%, tests 2%, worker 1%)
-##[error]Error: Failed to resolve entry for package "@xberg-io/xberg". The package may have incorrect main/module/exports specified in its package.json.
+   Compiling aes v0.9.3
+   Compiling libz-sys v1.1.30
+   Compiling gemm-f64 v0.19.0
+   Compiling gemm-c64 v0.19.0
+   Compiling gemm-c32 v0.19.0
+   Compiling cfg-expr v0.20.10
+   Compiling aws-smithy-async v1.3.1
+##[error]The operation was canceled.
 ```
 
 </details>
 
 ### CI E2E (`.github/workflows/ci-e2e.yaml`)
 
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/40758648854 — dark (conclusion: `failure`), 2026-10-28 19:55 UTC
+- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/40821940658 — dark (conclusion: `cancelled`), 2026-10-29 05:11 UTC
 - Dark since: 2026-10-28 14:02 UTC (first run of the current streak)
-- Job / step: `E2E (python)` → `Run e2e tests`
-- Likely cause: exit status 1
+- Job / step: `Build FFI (aarch64-unknown-linux-gnu)` → `Build FFI library`
+- Likely cause: Canceling since a higher priority waiting request for ci-e2e-refs/heads/main exists
 
 <details><summary>End of the job log</summary>
 
 ```
-[python] =========================== short test summary info ============================
-[python] FAILED tests/test_stub_conformance.py::test_stub_declares_only_members_present_at_runtime - AssertionError: declared in the stub but absent at runtime: ['DoctorCheck.pass_', 'Registry.global_', 'TierStrategy.TI…
-[python] assert not ['DoctorCheck.pass_', 'Registry.global_', 'TierStrategy.TIER1']
-[python] ======================== 1 failed, 110 passed in 3.43s =========================
-ERROR test failed: python — Command failed: cd e2e/python && uv run --no-sync python -m pytest tests/ -q (env: LD_LIBRARY_PATH, CRAWLBERG_ALLOW_PRIVATE_NETWORK, RUST_MIN_STACK)
-ERROR Command failed: cd e2e/python && uv run --no-sync python -m pytest tests/ -q (env: LD_LIBRARY_PATH, CRAWLBERG_ALLOW_PRIVATE_NETWORK, RUST_MIN_STACK)
-task: Failed to run task "python:e2e": exit status 1
-##[error]exit status 1
+[xberg-tesseract 1.4.0] [ 30%] Building C object src/CMakeFiles/leptonica.dir/edge.c.o
+[xberg-tesseract 1.4.0] cd /home/runner/work/xberg/xberg/target/release/build/xberg-tesseract-547ad9c009f4808d/out/build/src && /usr/bin/cc -DHAVE_CONFIG_H -I/home/runner/work/xberg/xberg/target/release/build/xberg-tess…
+[xberg-tesseract 1.4.0] [ 30%] Building C object src/CMakeFiles/leptonica.dir/encoding.c.o
+[xberg-tesseract 1.4.0] cd /home/runner/work/xberg/xberg/target/release/build/xberg-tesseract-547ad9c009f4808d/out/build/src && /usr/bin/cc -DHAVE_CONFIG_H -I/home/runner/work/xberg/xberg/target/release/build/xberg-tess…
+   Compiling strum_macros v0.27.2
+     Running `CARGO=/home/runner/.rustup/toolchains/1.99.1-aarch64-unknown-linux-gnu/bin/cargo CARGO_CRATE_NAME=strum_macros CARGO_MANIFEST_DIR=/home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/strum_mac…
+[xberg-tesseract 1.4.0] [ 31%] Building C object src/CMakeFiles/leptonica.dir/enhance.c.o
+##[error]The operation was canceled.
 ```
 
 </details>
 
 ### CI Mobile (`.github/workflows/ci-mobile.yaml`)
 
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/40758648952 — dark (conclusion: `failure`), 2026-10-28 19:55 UTC
+- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/40822762628 — dark (conclusion: `failure`), 2026-10-29 05:19 UTC
 - Dark since: 2026-10-28 18:22 UTC (first run of the current streak)
-- Job / step: `iOS cargo check (aarch64-apple-ios)` → `cargo check xberg-dart`
+- Job / step: `iOS cargo check (aarch64-apple-ios-sim)` → `cargo check xberg-dart`
 - Likely cause: unresolved import 'libc::RTM_IFINFO2'
 
 <details><summary>End of the job log</summary>
 
 ```
-    Checking git-version v0.3.9
-    Checking metrics v0.24.6
     Checking rustfft v6.4.1
     Checking inout v0.2.5
    Compiling darling_macro v0.24.1
+    Checking whoami v2.1.3
+    Checking rustls-webpki v0.103.16
     Checking sysinfo v0.39.6
 error[E0432]: unresolved import `libc::RTM_IFINFO2`
 ##[error] --> /Users/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/sysinfo-0.39.6/src/unix/apple/network.rs:4:77
@@ -130,21 +132,21 @@ error[E0432]: unresolved import `libc::RTM_IFINFO2`
 
 ### CI Scripts (`.github/workflows/ci-scripts.yaml`)
 
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/40758648856 — dark (conclusion: `failure`), 2026-10-28 19:55 UTC
+- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/40822762489 — dark (conclusion: `failure`), 2026-10-29 05:19 UTC
 - Dark since: 2026-10-28 19:55 UTC (first run of the current streak)
-- Job / step: `Bats on macos-26` → `Run the shell contract tests`
-- Likely cause: ok 226 sync should preserve the vendored helper when the source fetch fails
+- Job / step: `Bats on ubuntu-latest` → `Run the shell contract tests`
+- Likely cause: ok 379 sync should preserve the vendored helper when the source fetch fails
 
 <details><summary>End of the job log</summary>
 
 ```
-ok 233 Tesseract cache setup should isolate both cache directories by label and preserve existing files
-ok 234 Tesseract cache setup should reject a missing label without creating directories
-The following warnings were encountered during tests:
-BW02: Using flags on `run` requires at least BATS_VERSION=1.5.0. Use `bats_require_minimum_version 1.5.0` to fix this message.
-      (from function `bats_warn_minimum_guaranteed_version' in file /Users/runner/work/_temp/bats/bats-core-1.14.0/lib/bats-core/warnings.bash, line 32,
-       from function `run' in file /Users/runner/work/_temp/bats/bats-core-1.14.0/lib/bats-core/test_functions.bash, line 359,
-       in test file scripts/tests/bats/benchmark_liteparse.bats, line 26)
+       in test file scripts/tests/bats/integration_node_binding_artifacts.bats, line 34)
+BW01: `run`'s command `task build` exited with code 127, indicating 'Command not found'. Use run's return code checks, e.g. `run -127`, to fix this message.
+      (from function `run' in file /home/runner/work/_temp/bats/bats-core-1.14.0/lib/bats-core/test_functions.bash, line 442,
+       in test file scripts/tests/bats/integration_node_binding_artifacts.bats, line 50)
+BW01: `run`'s command `task build` exited with code 127, indicating 'Command not found'. Use run's return code checks, e.g. `run -127`, to fix this message.
+      (from function `run' in file /home/runner/work/_temp/bats/bats-core-1.14.0/lib/bats-core/test_functions.bash, line 442,
+       in test file scripts/tests/bats/integration_node_binding_artifacts.bats, line 58)
 ##[error]Process completed with exit code 1.
 ```
 

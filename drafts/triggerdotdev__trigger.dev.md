@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/triggerdotdev/trigger.dev/issues/new
-- **Stars:** 16647 · **Generated:** 2026-10-29T01:00:37.542Z
+- **Stars:** 16648 · **Generated:** 2026-10-29T06:47:23.232Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -20,21 +20,21 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### 🛡️ E2E Tests: Webapp Auth (full) (`.github/workflows/e2e-webapp-auth-full.yml`)
 
-- Latest run on `main`: https://github.com/triggerdotdev/trigger.dev/actions/runs/40629910937 — dark (conclusion: `failure`), 2026-10-28 04:01 UTC
+- Latest run on `main`: https://github.com/triggerdotdev/trigger.dev/actions/runs/40815337915 — dark (conclusion: `failure`), 2026-10-29 04:00 UTC
 - Dark since: 2026-10-27 04:00 UTC (first run of the current streak)
 - Job / step: `🛡️ E2E Auth Tests (full)` → `🛡️ Run Webapp Full Auth E2E Tests`
-- Likely cause: {"traceId":"00bddace81af1f0a80d54a030b8d9c15","parentId":"c3e74736ada70443","message":"enqueue","spanId":"f263ad52e6fdda6c","kind":3,"timestamp":1793160264267000,"duration":457.533,"attributes":{"job_type":"expireRun","…
+- Likely cause: {"traceId":"6650c0cbebeb4b56ee7414c76f9728d4","parentId":"0bdc6b8561aa3558","message":"enqueue","spanId":"f6cfdc8fead6cddb","kind":3,"timestamp":1793246628424000,"duration":261.863,"attributes":{"job_type":"expireRun","…
 
 <details><summary>End of the job log</summary>
 
 ```
-{"traceId":"00bddace81af1f0a80d54a030b8d9c15","parentId":"c3e74736ada70443","message":"enqueue","spanId":"f263ad52e6fdda6c","kind":3,"timestamp":1793160264267000,"duration":457.533,"attributes":{"job_type":"expireRun","…
-{"traceId":"00bddace81af1f0a80d54a030b8d9c15","parentId":"c3e74736ada70443","message":"enqueueMessage","spanId":"10da9db12712f032","kind":3,"timestamp":1793160264267000,"duration":599.812,"attributes":{"messaging.operat…
-{"traceId":"00bddace81af1f0a80d54a030b8d9c15","parentId":"52e0e0f3b61de26e","message":"trigger","spanId":"c3e74736ada70443","kind":0,"timestamp":1793160264262000,"duration":6326.233,"attributes":{"friendlyId":"run_cmvrl…
-{"traceId":"00bddace81af1f0a80d54a030b8d9c15","parentId":"173627d48867ea09","message":"doFlushBatch","spanId":"b33ebdc86abe2a0d","kind":0,"timestamp":1793160264268000,"duration":1089.665,"attributes":{"event_count":1,"d…
-{"traceId":"00bddace81af1f0a80d54a030b8d9c15","parentId":"52e0e0f3b61de26e","message":"flushBatch","spanId":"173627d48867ea09","kind":0,"timestamp":1793160264268000,"duration":1206.817,"attributes":{"flush_id":"YG2S4a37…
-{"traceId":"00bddace81af1f0a80d54a030b8d9c15","parentId":"6395594704428d18","message":"RunEngineTriggerTaskService.call()","spanId":"52e0e0f3b61de26e","kind":0,"timestamp":1793160264260000,"duration":9310.122,"attribute…
-{"traceId":"00bddace81af1f0a80d54a030b8d9c15","message":"TriggerTaskService.call()","spanId":"6395594704428d18","kind":1,"timestamp":1793160264259000,"duration":10108.487,"attributes":{"$trigger.env.id":"cmvrlbn0d003y31…
+{"traceId":"6650c0cbebeb4b56ee7414c76f9728d4","parentId":"0bdc6b8561aa3558","message":"enqueueMessage","spanId":"013d6b0b811babdc","kind":3,"timestamp":1793246628424000,"duration":449.767,"attributes":{"messaging.operat…
+{"traceId":"6650c0cbebeb4b56ee7414c76f9728d4","parentId":"5c90e0ad810f5136","message":"trigger","spanId":"0bdc6b8561aa3558","kind":0,"timestamp":1793246628421000,"duration":3529.925,"attributes":{"friendlyId":"run_cmvt0…
+{"traceId":"6650c0cbebeb4b56ee7414c76f9728d4","parentId":"4319112ca841562d","message":"doFlushBatch","spanId":"617e1a6ed55f0d8c","kind":0,"timestamp":1793246628425000,"duration":819.653,"attributes":{"event_count":1,"de…
+{"traceId":"6650c0cbebeb4b56ee7414c76f9728d4","parentId":"5c90e0ad810f5136","message":"flushBatch","spanId":"4319112ca841562d","kind":0,"timestamp":1793246628425000,"duration":911.817,"attributes":{"flush_id":"xRwkIEY0T…
+{"traceId":"6650c0cbebeb4b56ee7414c76f9728d4","parentId":"255b448b26b0dc0e","message":"RunEngineTriggerTaskService.call()","spanId":"5c90e0ad810f5136","kind":0,"timestamp":1793246628420000,"duration":5764.562,"attribute…
+{"traceId":"6650c0cbebeb4b56ee7414c76f9728d4","message":"TriggerTaskService.call()","spanId":"255b448b26b0dc0e","kind":1,"timestamp":1793246628419000,"duration":6338.903,"attributes":{"$trigger.env.id":"cmvt0qq0u00krulu…
+{"traceId":"c41e109a9ba7aa9c16e6c492494daf88","message":"sessionRunManager.claimSessionRun","spanId":"98eb1fc011ba34df","kind":0,"timestamp":1793246628426000,"duration":1450.921,"attributes":{"$transaction":true,"max_wa…
 ##[error]Process completed with exit code 1.
 ```
 
@@ -42,7 +42,7 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### 🗺️ Observability Map (`.github/workflows/observability-map.yml`)
 
-- Latest run on `main`: https://github.com/triggerdotdev/trigger.dev/actions/runs/40626447269 — dark (conclusion: `failure`), 2026-10-28 03:23 UTC
+- Latest run on `main`: https://github.com/triggerdotdev/trigger.dev/actions/runs/40811896173 — dark (conclusion: `failure`), 2026-10-29 03:23 UTC
 - Dark since: 2026-10-28 03:23 UTC (first run of the current streak)
 - Job / step: `🧬 Mutation corpus` → `🧬 Run the corpus`
 - Likely cause: AssertionError: expected [ 'api.v2.packets.$.ts' ] to deeply equal [] (internal-packages/observability-map/src/mutationCorpus.test.ts:287)
@@ -55,8 +55,8 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 ⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
  Test Files  1 failed (1)
       Tests  1 failed | 55 passed | 2 expected fail (58)
-   Start at  03:24:32
-   Duration  121.32s (transform 112ms, setup 0ms, import 261ms, tests 120.98s, environment 0ms)
+   Start at  03:24:30
+   Duration  119.41s (transform 108ms, setup 0ms, import 247ms, tests 119.08s, environment 0ms)
 ##[error]AssertionError: expected [ 'api.v2.packets.$.ts' ] to deeply equal []
 ```
 
