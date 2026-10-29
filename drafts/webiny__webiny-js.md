@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/webiny/webiny-js/issues/new
-- **Stars:** 8050 · **Generated:** 2026-10-29T06:47:23.232Z
+- **Stars:** 8050 · **Generated:** 2026-10-29T12:46:05.949Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -64,10 +64,10 @@ Waiting 18 seconds before trying again
 
 ### Push (`.github/workflows/push.yml`)
 
-- Latest run on `next`: https://github.com/webiny/webiny-js/actions/runs/40712423175 — dark (conclusion: `failure`), 2026-10-28 15:05 UTC
+- Latest run on `next`: https://github.com/webiny/webiny-js/actions/runs/40871954364 — dark (conclusion: `failure`), 2026-10-29 12:16 UTC
 - Dark since: 2026-10-28 10:53 UTC (first run of the current streak)
-- Job / step: `E2E (DDB+OS) - Project setup` → `Version and publish to Verdaccio`
-- Likely cause: npm error A complete log of this run can be found in: /home/runner/.npm/_logs/2026-10-28T15_16_32_882Z-debug-0.log
+- Job / step: `E2E (Standalone SQLite)` → `Version and publish to Verdaccio`
+- Likely cause: npm error A complete log of this run can be found in: /home/runner/.npm/_logs/2026-10-29T12_28_52_624Z-debug-0.log
 
 <details><summary>End of the job log</summary>
 
@@ -78,7 +78,7 @@ npm error code E401
 npm error Unable to authenticate, your authentication token seems to be invalid.
 npm error To correct this please try logging in again with:
 npm error   npm login
-npm error A complete log of this run can be found in: /home/runner/.npm/_logs/2026-10-28T15_16_32_882Z-debug-0.log
+npm error A complete log of this run can be found in: /home/runner/.npm/_logs/2026-10-29T12_28_52_624Z-debug-0.log
 ##[error]Process completed with exit code 1.
 ```
 

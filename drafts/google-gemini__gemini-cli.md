@@ -4,41 +4,19 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/google-gemini/gemini-cli/issues/new
-- **Stars:** 108606 · **Generated:** 2026-10-29T06:47:23.232Z
+- **Stars:** 108610 · **Generated:** 2026-10-29T12:46:05.949Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 3 workflows dark on main ("Release: Nightly", "Memory Tests: Nightly", "Performance Tests: Nightly")
+CI: 2 workflows dark on main ("Memory Tests: Nightly", "Performance Tests: Nightly")
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
 Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
-
-### Release: Nightly (`.github/workflows/release-nightly.yml`)
-
-- Latest run on `main`: https://github.com/google-gemini/gemini-cli/actions/runs/40793711761 — dark (conclusion: `failure`), 2026-10-29 00:23 UTC
-- Dark since: 2026-10-29 00:23 UTC (first run of the current streak)
-- Job / step: `build-mac / Build Unsigned (x64)` → `Install dependencies`
-- Likely cause: 1: 0x102c25058 node::AsyncHooks::FailWithCorruptedAsyncStack(double) [/Users/runner/hostedtoolcache/node/20.20.2/x64/bin/node]
-
-<details><summary>End of the job log</summary>
-
-```
-11: 0x1038424b1 uv__async_io [/Users/runner/hostedtoolcache/node/20.20.2/x64/bin/node]
-12: 0x103855ee3 uv__io_poll [/Users/runner/hostedtoolcache/node/20.20.2/x64/bin/node]
-13: 0x103842a30 uv_run [/Users/runner/hostedtoolcache/node/20.20.2/x64/bin/node]
-14: 0x102be5793 node::SpinEventLoopInternal(node::Environment*) [/Users/runner/hostedtoolcache/node/20.20.2/x64/bin/node]
-15: 0x102d30ca3 node::NodeMainInstance::Run() [/Users/runner/hostedtoolcache/node/20.20.2/x64/bin/node]
-16: 0x102ca108d node::Start(int, char**) [/Users/runner/hostedtoolcache/node/20.20.2/x64/bin/node]
-17: 0x2087721c8
-##[error]Process completed with exit code 1.
-```
-
-</details>
 
 ### Memory Tests: Nightly (`.github/workflows/memory-nightly.yml`)
 

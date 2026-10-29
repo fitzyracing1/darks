@@ -4,35 +4,35 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/koala73/worldmonitor/issues/new
-- **Stars:** 89731 · **Generated:** 2026-10-29T06:47:23.232Z
+- **Stars:** 89749 · **Generated:** 2026-10-29T12:46:05.949Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: "Desktop Canary (Linux)" workflow failing on main since 2026-10-29
+CI: "Seed Freshness Monitor" workflow failing on main since 2026-10-29
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! The **Desktop Canary (Linux)** workflow (`.github/workflows/test-linux-app.yml`) on `main` has been failing since 2026-10-29. Here is what I saw, in case it's useful:
+Hi! The **Seed Freshness Monitor** workflow (`.github/workflows/seed-freshness-monitor.yml`) on `main` has been failing since 2026-10-29. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/koala73/worldmonitor/actions/runs/40823444326 — dark (conclusion: `failure`), 2026-10-29 05:26 UTC
-- Dark since: 2026-10-29 05:26 UTC (first run of the current streak)
-- Job / step: `test-linux-app` → `Smoke-test AppImage`
-- Likely cause: ✅ Sidecar remained alive through the observation window
+- Latest run on `main`: https://github.com/koala73/worldmonitor/actions/runs/40872097998 — dark (conclusion: `failure`), 2026-10-29 12:17 UTC
+- Dark since: 2026-10-29 11:48 UTC (first run of the current streak)
+- Job / step: `monitor` → `Publish ingestion operational transitions`
+- Likely cause: Ingestion operational acceptance failed: the accepted-problem baseline expired on 2026-09-05T18:00:00Z. Re-review scripts/seed-freshness-baseline.json and set a new expiresAt.
 
 <details><summary>End of the job log</summary>
 
 ```
-SIDECAR_STATUS=ready
-SIDECAR_FINAL_STATUS=alive
-sidecar remained alive with HTTP 401
-APP_STATUS=running
-✅ AppImage launched successfully
-✅ Sidecar became ready on 127.0.0.1:46123
-✅ Sidecar remained alive through the observation window
+- consumerPricesCategories: status=EMPTY_DATA records=0 age=522m max=1500m
+- crossStraitActivityJapanMod: status=SEED_ERROR records=2 age=692m max=720m
+- imdCycloneMarine: status=SEED_ERROR records=30 age=1m max=45m
+- jodiOil: status=STALE_CONTENT records=77 contentAge=434177m maxContentAge=267840m (seed age=282m ok)
+- naturalEvents: status=SEED_ERROR records=22 age=13m max=540m
+- portwatchPortActivity: status=SEED_ERROR records=174 age=1456m max=2160m
+Ingestion operational acceptance failed: the accepted-problem baseline expired on 2026-09-05T18:00:00Z. Re-review scripts/seed-freshness-baseline.json and set a new expiresAt.
 ##[error]Process completed with exit code 1.
 ```
 

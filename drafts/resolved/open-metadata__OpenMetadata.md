@@ -1,8 +1,8 @@
 <!-- dark-draft: open-metadata/OpenMetadata -->
-<!-- draft-state: ready -->
+<!-- draft-state: resolved -->
 # Upstream issue draft: open-metadata/OpenMetadata
 
-- **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
+- **Status:** resolved — lit again (2026-10-29); nothing to file
 - **Would be filed at:** https://github.com/open-metadata/OpenMetadata/issues/new
 - **Stars:** 15617 · **Generated:** 2026-10-29T06:47:23.232Z
 - Nothing in this file has been sent anywhere.
