@@ -1,39 +1,39 @@
 <!-- dark-draft: prettier/prettier -->
-<!-- draft-state: resolved -->
+<!-- draft-state: ready -->
 # Upstream issue draft: prettier/prettier
 
-- **Status:** resolved — lit again (2026-10-28); nothing to file
+- **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/prettier/prettier/issues/new
-- **Stars:** 52385 · **Generated:** 2026-10-28T06:48:10.228Z
+- **Stars:** 52387 · **Generated:** 2026-10-29T18:41:19.911Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: "Prod" workflow getting cancelled on main since 2026-10-24
+CI: "Prod" workflow getting cancelled on main since 2026-10-29
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! The **Prod** workflow (`.github/workflows/prod-test.yml`) on `main` has been getting cancelled since 2026-10-24. Here is what I saw, in case it's useful:
+Hi! The **Prod** workflow (`.github/workflows/prod-test.yml`) on `main` has been getting cancelled since 2026-10-29. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/prettier/prettier/actions/runs/40053505441 — dark (conclusion: `cancelled`), 2026-10-24 02:16 UTC
-- Dark since: 2026-10-24 02:16 UTC (first run of the current streak)
+- Latest run on `main`: https://github.com/prettier/prettier/actions/runs/40886041701 — dark (conclusion: `cancelled`), 2026-10-29 13:52 UTC
+- Dark since: 2026-10-29 13:52 UTC (first run of the current streak)
 - Job / step: `Node.js 14 on MacOS` → `Run Tests`
 - Likely cause: The job has exceeded the maximum execution time of 15m0s
 
 <details><summary>End of the job log</summary>
 
 ```
-PASS tests/format/css/case/format.test.js
-PASS tests/format/css/character-escaping/format.test.js
 PASS tests/format/css/color/format.test.js
-PASS tests/format/css/atword/format.test.js
+PASS tests/format/css/character-escaping/format.test.js
+PASS tests/format/css/case/format.test.js
 PASS tests/format/css/bom/format.test.js
-PASS tests/format/css/_errors_/format.test.js
+PASS tests/format/css/atword/format.test.js
 PASS tests/format/css/atrule/format.test.js
+PASS tests/format/css/_errors_/format.test.js
 ##[error]The operation was canceled.
 ```
 

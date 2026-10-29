@@ -4,43 +4,19 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/seedds/nxnative/issues/new
-- **Stars:** 9360 · **Generated:** 2026-10-29T12:46:05.949Z
+- **Stars:** 9499 · **Generated:** 2026-10-29T18:41:19.911Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 2 workflows dark on main ("lint-python", "fuzz")
+CI: "fuzz" workflow failing on main since 2026-10-29
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
-
-### lint-python (`.github/workflows/lint-python.yml`)
-
-- Latest run on `main`: https://github.com/seedds/nxnative/actions/runs/40852857347 — dark (conclusion: `failure`), 2026-10-29 09:51 UTC
-- Dark since: 2026-10-29 09:14 UTC (first run of the current streak)
-- Job / step: `ruff and pyright (ratchet)` → `ruff and pyright against the baseline`
-- Likely cause: "start" is not a known attribute of "None" (dm/gfx/tools/dmsh_alpha.py:51)
-
-<details><summary>End of the job log</summary>
-
-```
-Using cached lz4-4.4.5-cp314-cp314-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (1.4 MB)
-Using cached capstone-5.0.9-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (1.5 MB)
-Using cached fonttools-4.67.0-cp314-cp314-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (5.3 MB)
-Using cached nodeenv-1.11.0-py2.py3-none-any.whl (34 kB)
-Using cached typing_extensions-4.16.0-py3-none-any.whl (45 kB)
-Installing collected packages: typing-extensions, ruff, nodeenv, lz4, fonttools, capstone, pyright
-Successfully installed capstone-5.0.9 fonttools-4.67.0 lz4-4.4.5 nodeenv-1.11.0 pyright-1.1.414 ruff-0.17.2 typing-extensions-4.16.0
-##[error]"start" is not a known attribute of "None"
-```
-
-</details>
-
-### fuzz (`.github/workflows/fuzz.yml`)
+Hi! The **fuzz** workflow (`.github/workflows/fuzz.yml`) on `main` has been failing since 2026-10-29. Here is what I saw, in case it's useful:
 
 - Latest run on `main`: https://github.com/seedds/nxnative/actions/runs/40853457362 — dark (conclusion: `failure`), 2026-10-29 09:55 UTC
 - Dark since: 2026-10-29 09:55 UTC (first run of the current streak)

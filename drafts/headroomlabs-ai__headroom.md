@@ -4,19 +4,22 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/headroomlabs-ai/headroom/issues/new
-- **Stars:** 78219 · **Generated:** 2026-10-29T12:46:05.949Z
+- **Stars:** 78251 · **Generated:** 2026-10-29T18:41:19.911Z
 - Nothing in this file has been sent anywhere.
+- **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: "CI" workflow failing on main since 2026-10-29
+CI: 2 workflows dark on main ("CI", "PR Governance")
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! The **CI** workflow (`.github/workflows/ci.yml`) on `main` has been failing since 2026-10-29. Here is what I saw, in case it's useful:
+Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
+
+### CI (`.github/workflows/ci.yml`)
 
 - Latest run on `main`: https://github.com/headroomlabs-ai/headroom/actions/runs/40819536349 — dark (conclusion: `failure`), 2026-10-29 04:45 UTC
 - Dark since: 2026-10-29 04:45 UTC (first run of the current streak)
@@ -34,6 +37,28 @@ error: could not compile `tokenizers` (lib) due to 1 previous error
   Caused by: Failed to build a native library through cargo
   Caused by: Cargo build finished with "exit code: 101": `"cargo" "rustc" "--profile" "ci" "--features" "extension-module" "--message-format" "json-render-diagnostics" "--manifest-path" "D:\\a\\headroom\\headroom\\crate…
 ##[error]Process completed with exit code 1.
+```
+
+</details>
+
+### PR Governance (`.github/workflows/pr-health.yml`)
+
+- Latest run on `main`: https://github.com/headroomlabs-ai/headroom/actions/runs/40891960075 — dark (conclusion: `cancelled`), 2026-10-29 14:29 UTC
+- Dark since: 2026-10-29 14:29 UTC (first run of the current streak)
+- Job / step: `label` → `Label open pull requests`
+- Likely cause: The job has exceeded the maximum execution time of 10m0s
+
+<details><summary>End of the job log</summary>
+
+```
+https://github.com/headroomlabs-ai/headroom/pull/4365
+https://github.com/headroomlabs-ai/headroom/pull/4361
+https://github.com/headroomlabs-ai/headroom/pull/4361
+https://github.com/headroomlabs-ai/headroom/pull/4361
+https://github.com/headroomlabs-ai/headroom/pull/4361
+https://github.com/headroomlabs-ai/headroom/pull/4360
+https://github.com/headroomlabs-ai/headroom/pull/4360
+##[error]The operation was canceled.
 ```
 
 </details>

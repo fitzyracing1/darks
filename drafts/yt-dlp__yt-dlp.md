@@ -4,28 +4,20 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/yt-dlp/yt-dlp/issues/new
-- **Stars:** 203609 · **Generated:** 2026-10-29T12:46:05.949Z
+- **Stars:** 203684 · **Generated:** 2026-10-29T18:41:19.911Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** latest run was skipped, not failed — probably not worth filing
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 2 workflows dark on master ("Quick Test", "Core Tests")
+CI: "Core Tests" workflow not completing (runs skipped) on master since 2026-10-26
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! A few workflows on `master` have been dark recently. Details below, in case they're useful:
-
-### Quick Test (`.github/workflows/quick-test.yml`)
-
-- Latest run on `master`: https://github.com/yt-dlp/yt-dlp/actions/runs/40409938824 — dark (conclusion: `skipped`), 2026-10-26 22:07 UTC
-- Dark since: 2026-10-26 22:07 UTC (first run of the current streak)
-- Likely cause: run skipped
-
-### Core Tests (`.github/workflows/core.yml`)
+Hi! The **Core Tests** workflow (`.github/workflows/core.yml`) on `master` has been not completing (runs skipped) since 2026-10-26. Here is what I saw, in case it's useful:
 
 - Latest run on `master`: https://github.com/yt-dlp/yt-dlp/actions/runs/40409938717 — dark (conclusion: `skipped`), 2026-10-26 22:07 UTC
 - Dark since: 2026-10-26 22:07 UTC (first run of the current streak)

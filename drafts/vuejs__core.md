@@ -1,25 +1,25 @@
 <!-- dark-draft: vuejs/core -->
-<!-- draft-state: resolved -->
+<!-- draft-state: ready -->
 # Upstream issue draft: vuejs/core
 
-- **Status:** resolved — lit again (2026-10-22); nothing to file
+- **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/vuejs/core/issues/new
-- **Stars:** 54719 · **Generated:** 2026-10-22T01:10:56.398Z
+- **Stars:** 54806 · **Generated:** 2026-10-29T18:41:19.911Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: "ci" workflow failing on main since 2026-10-21
+CI: "ci" workflow failing on main since 2026-10-29
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! The **ci** workflow (`.github/workflows/ci.yml`) on `main` has been failing since 2026-10-21. Here is what I saw, in case it's useful:
+Hi! The **ci** workflow (`.github/workflows/ci.yml`) on `main` has been failing since 2026-10-29. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/vuejs/core/actions/runs/39533998254 — dark (conclusion: `failure`), 2026-10-21 02:36 UTC
-- Dark since: 2026-10-21 02:36 UTC (first run of the current streak)
+- Latest run on `main`: https://github.com/vuejs/core/actions/runs/40840579968 — dark (conclusion: `failure`), 2026-10-29 08:13 UTC
+- Dark since: 2026-10-29 08:13 UTC (first run of the current streak)
 - Job / step: `test / e2e-test` → `Run e2e tests`
 - Likely cause: AssertionError: expected '<div class="test-enter-active test-en…' to be '<div class="" style="display: none;">…' // Object.is equality (packages/vue/__tests__/e2e/Transition.spec.ts:1942)
 
@@ -31,8 +31,8 @@ Hi! The **ci** workflow (`.github/workflows/ci.yml`) on `main` has been failing 
 ⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
  Test Files  1 failed | 12 passed (13)
       Tests  1 failed | 119 passed (120)
-   Start at  02:37:25
-   Duration  21.42s (transform 2.25s, setup 556ms, import 4.66s, tests 61.52s, environment 13.97s)
+   Start at  08:13:51
+   Duration  20.05s (transform 1.12s, setup 280ms, import 3.18s, tests 56.85s, environment 8.30s)
 ##[error]AssertionError: expected '<div class="test-enter-active test-en…' to be '<div class="" style="display: none;">…' // Object.is equality
 ```
 

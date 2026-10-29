@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/langchain-ai/langchain/issues/new
-- **Stars:** 148683 · **Generated:** 2026-10-29T12:46:05.949Z
+- **Stars:** 148684 · **Generated:** 2026-10-29T18:41:19.911Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -18,21 +18,21 @@ CI: "⏰ Integration Tests" workflow failing on master since 2026-10-09
 <!-- BEGIN BODY -->
 Hi! The **⏰ Integration Tests** workflow (`.github/workflows/integration_tests.yml`) on `master` has been failing since 2026-10-09. Here is what I saw, in case it's useful:
 
-- Latest run on `master`: https://github.com/langchain-ai/langchain/actions/runs/40693165539 — dark (conclusion: `failure`), 2026-10-28 13:04 UTC
+- Latest run on `master`: https://github.com/langchain-ai/langchain/actions/runs/40878711447 — dark (conclusion: `failure`), 2026-10-29 13:05 UTC
 - Dark since: 2026-10-09 13:10 UTC (first run of the current streak)
-- Job / step: `🐍 Python 3.10: libs/partners/google-genai` → `🚀 Run Integration Tests`
-- Likely cause: = 1 failed, 212 passed, 19 skipped, 1 xfailed, 1 xpassed, 30 warnings, 3 retried in 673.92s (0:11:13) =
+- Job / step: `🐍 Python 3.14: libs/partners/mistralai` → `🚀 Run Integration Tests`
+- Likely cause: = 2 failed, 56 passed, 11 skipped, 1 xpassed, 4 warnings, 2 retried in 202.84s (0:03:22) =
 
 <details><summary>End of the job log</summary>
 
 ```
-	    result: TResult | None = func()
-	langchain_google_genai.chat_models.GoogleAPIError: 503 UNAVAILABLE. ***'error': ***'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again lat…
-=========================== end of test retry report ===========================
+26.06s call     tests/integration_tests/test_chat_models.py::test_structured_output_json_schema_async[Book]
+24.17s call     tests/integration_tests/test_chat_models.py::test_stop_sequence
 =========================== short test summary info ============================
-FAILED tests/integration_tests/test_chat_models.py::test_computer_use_tool[google_ai] - langchain_google_genai.chat_models.GoogleAPIError: 503 UNAVAILABLE. ***'error': ***'code': 503, 'message': 'This model is currently…
-= 1 failed, 212 passed, 19 skipped, 1 xfailed, 1 xpassed, 30 warnings, 3 retried in 673.92s (0:11:13) =
-make: *** [Makefile:18: integration_tests] Error 1
+FAILED tests/integration_tests/test_chat_models.py::test_reasoning - assert 0 > 0
+FAILED tests/integration_tests/test_chat_models.py::test_reasoning_v1 - assert 0 > 0
+= 2 failed, 56 passed, 11 skipped, 1 xpassed, 4 warnings, 2 retried in 202.84s (0:03:22) =
+make: *** [Makefile:24: integration_tests] Error 1
 ##[error]Process completed with exit code 2.
 ```
 
