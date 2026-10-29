@@ -4,13 +4,15 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/tangency-labs/solidcraft/issues/new
-- **Stars:** 11576 · **Generated:** 2026-10-28T18:42:06.150Z
+- **Stars:** 11661 · **Generated:** 2026-10-29T01:00:37.542Z
 - Nothing in this file has been sent anywhere.
+- **Note for Joshua:** cancelled by a concurrency group — likely noise
+- **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 2 workflows dark on main ("Docker", "Pages")
+CI: 4 workflows dark on main ("Docker", "Pages", "CI", +1 more)
 <!-- END TITLE -->
 
 ## Body
@@ -20,47 +22,43 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### Docker (`.github/workflows/docker.yml`)
 
-- Latest run on `main`: https://github.com/tangency-labs/solidcraft/actions/runs/40742881101 — dark (conclusion: `failure`), 2026-10-28 18:12 UTC
+- Latest run on `main`: https://github.com/tangency-labs/solidcraft/actions/runs/40796799884 — dark (conclusion: `cancelled`), 2026-10-29 00:51 UTC
 - Dark since: 2026-10-28 12:29 UTC (first run of the current streak)
 - Job / step: `image` → `Build the web app`
-- Likely cause: 2026-10-28T18:15:10.959012Z  INFO   4: error during cargo build execution
+- Likely cause: Canceling since a higher priority waiting request for docker-refs/heads/main exists
 
 <details><summary>End of the job log</summary>
 
 ```
-    4: cargo call to executable 'cargo' with args: '["build", "--target=wasm32-unknown-unknown", "--manifest-path", "/home/runner/work/solidcraft/solidcraft/apps/solidcraft-web/Cargo.toml", "--release", "--bin", "solidc…
-2026-10-28T18:15:10.958998Z ERROR error from build pipeline
-2026-10-28T18:15:10.959008Z  INFO   1: HTML build pipeline failed (1 errors), showing first
-2026-10-28T18:15:10.959010Z  INFO   2: error from asset pipeline
-2026-10-28T18:15:10.959011Z  INFO   3: running cargo build
-2026-10-28T18:15:10.959012Z  INFO   4: error during cargo build execution
-2026-10-28T18:15:10.959013Z  INFO   5: cargo call to executable 'cargo' with args: '["build", "--target=wasm32-unknown-unknown", "--manifest-path", "/home/runner/work/solidcraft/solidcraft/apps/solidcraft-web/Cargo.toml…
-##[error]Process completed with exit code 1.
+   Compiling truck-meshalgo v0.4.0 (/home/runner/work/solidcraft/solidcraft/vendor/truck-meshalgo)
+   Compiling truck-shapeops v0.4.0 (/home/runner/work/solidcraft/solidcraft/vendor/truck-shapeops)
+   Compiling solidcraft-render v0.26.0 (/home/runner/work/solidcraft/solidcraft/crates/render)
+   Compiling truck-stepio v0.3.0 (/home/runner/work/solidcraft/solidcraft/vendor/truck-stepio)
+   Compiling solidcraft-kernel v0.26.0 (/home/runner/work/solidcraft/solidcraft/crates/kernel)
+   Compiling solidcraft-sketch v0.26.0 (/home/runner/work/solidcraft/solidcraft/crates/sketch)
+   Compiling solidcraft-gpu v0.26.0 (/home/runner/work/solidcraft/solidcraft/crates/gpu)
+##[error]The operation was canceled.
 ```
 
 </details>
 
 ### Pages (`.github/workflows/pages.yml`)
 
-- Latest run on `main`: https://github.com/tangency-labs/solidcraft/actions/runs/40742881085 — dark (conclusion: `failure`), 2026-10-28 18:12 UTC
+- Latest run on `main`: https://github.com/tangency-labs/solidcraft/actions/runs/40796799906 — dark (conclusion: `cancelled`), 2026-10-29 00:51 UTC
 - Dark since: 2026-10-28 18:08 UTC (first run of the current streak)
-- Job / step: `build` → `Build the web app`
-- Likely cause: 2026-10-28T18:32:13.552524Z  INFO   4: error during cargo build execution
+- Likely cause: run cancelled
 
-<details><summary>End of the job log</summary>
+### CI (`.github/workflows/ci.yml`)
 
-```
-    4: cargo call to executable 'cargo' with args: '["build", "--target=wasm32-unknown-unknown", "--manifest-path", "/home/runner/work/solidcraft/solidcraft/apps/solidcraft-web/Cargo.toml", "--release", "--bin", "solidc…
-2026-10-28T18:32:13.552506Z ERROR error from build pipeline
-2026-10-28T18:32:13.552520Z  INFO   1: HTML build pipeline failed (1 errors), showing first
-2026-10-28T18:32:13.552522Z  INFO   2: error from asset pipeline
-2026-10-28T18:32:13.552523Z  INFO   3: running cargo build
-2026-10-28T18:32:13.552524Z  INFO   4: error during cargo build execution
-2026-10-28T18:32:13.552524Z  INFO   5: cargo call to executable 'cargo' with args: '["build", "--target=wasm32-unknown-unknown", "--manifest-path", "/home/runner/work/solidcraft/solidcraft/apps/solidcraft-web/Cargo.toml…
-##[error]Process completed with exit code 1.
-```
+- Latest run on `main`: https://github.com/tangency-labs/solidcraft/actions/runs/40796799950 — dark (conclusion: `cancelled`), 2026-10-29 00:51 UTC
+- Dark since: 2026-10-29 00:51 UTC (first run of the current streak)
+- Likely cause: run cancelled
 
-</details>
+### Generated files (`.github/workflows/generated.yml`)
+
+- Latest run on `main`: https://github.com/tangency-labs/solidcraft/actions/runs/40796799928 — dark (conclusion: `cancelled`), 2026-10-29 00:51 UTC
+- Dark since: 2026-10-29 00:51 UTC (first run of the current streak)
+- Likely cause: run cancelled
 
 If this is already known or expected, feel free to close. Thanks for maintaining solidcraft!
 

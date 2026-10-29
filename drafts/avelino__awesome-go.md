@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/avelino/awesome-go/issues/new
-- **Stars:** 190831 · **Generated:** 2026-10-28T18:42:06.150Z
+- **Stars:** 190876 · **Generated:** 2026-10-29T01:00:37.542Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title

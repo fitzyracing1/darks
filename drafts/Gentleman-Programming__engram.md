@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/Gentleman-Programming/engram/issues/new
-- **Stars:** 7669 · **Generated:** 2026-10-28T18:42:06.150Z
+- **Stars:** 7677 · **Generated:** 2026-10-29T01:00:37.542Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -42,10 +42,10 @@ Path changes are a release-lag signal, not proof of a fix.
 
 ### CI (`.github/workflows/ci.yml`)
 
-- Latest run on `main`: https://github.com/Gentleman-Programming/engram/actions/runs/40740689691 — dark (conclusion: `failure`), 2026-10-28 17:58 UTC
+- Latest run on `main`: https://github.com/Gentleman-Programming/engram/actions/runs/40769893442 — dark (conclusion: `failure`), 2026-10-28 21:11 UTC
 - Dark since: 2026-10-27 20:07 UTC (first run of the current streak)
 - Job / step: `Windows Full Suite (Observational)` → `Run full default-tags module suite`
-- Likely cause: {"Time":"2026-10-28T18:20:08.6352058Z","Action":"pass","Package":"github.com/Gentleman-Programming/engram/v3/tools/release-candidate","Test":"TestSourceEvidence/link_cannot_execute_source","Elapsed":0.62}
+- Likely cause: {"Time":"2026-10-28T21:33:50.5601956Z","Action":"pass","Package":"github.com/Gentleman-Programming/engram/v3/tools/release-candidate","Test":"TestSourceEvidence/link_cannot_execute_source","Elapsed":0.54}
 
 <details><summary>End of the job log</summary>
 
@@ -53,9 +53,9 @@ Path changes are a release-lag signal, not proof of a fix.
 go: downloading github.com/mailru/easyjson v0.7.7
 go: downloading github.com/xo/terminfo v0.0.0-20220910002029-abceb7e1c41e
 go: downloading github.com/ncruces/go-strftime v1.0.0
+go: downloading github.com/dustin/go-humanize v1.0.1
 go: downloading modernc.org/memory v1.12.1
 go: downloading modernc.org/mathutil v1.7.1
-go: downloading github.com/dustin/go-humanize v1.0.1
 go: downloading github.com/remyoudompheng/bigfft v0.0.0-20230129092748-24d4a6f8daec
 ##[error]Process completed with exit code 1.
 ```
