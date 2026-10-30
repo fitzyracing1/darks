@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/microsoft/PowerToys/issues/new
-- **Stars:** 140268 · **Generated:** 2026-10-30T12:45:05.868Z
+- **Stars:** 140284 · **Generated:** 2026-10-30T18:36:41.749Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -18,7 +18,7 @@ CI: "Publish Dev Docs Website" workflow failing on main since 2026-10-06
 <!-- BEGIN BODY -->
 Hi! The **Publish Dev Docs Website** workflow (`.github/workflows/regenerate-devdocs-website.yml`) on `main` has been failing since 2026-10-06. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/microsoft/PowerToys/actions/runs/40594564023 — dark (conclusion: `failure`), 2026-10-27 22:24 UTC
+- Latest run on `main`: https://github.com/microsoft/PowerToys/actions/runs/41102602830 — dark (conclusion: `failure`), 2026-10-30 17:56 UTC
 - Dark since: 2026-10-06 14:52 UTC (first run of the current streak)
 - Job / step: `build` → `Build static site with docmd`
 - Likely cause: Error: Template Render Error: emitBaseTag is not defined
@@ -26,8 +26,8 @@ Hi! The **Publish Dev Docs Website** workflow (`.github/workflows/regenerate-dev
 <details><summary>End of the job log</summary>
 
 ```
-Error: Template Render Error: emitBaseTag is not defined
     at Module.renderTemplateAsync (file:///home/runner/work/PowerToys/PowerToys/doc/devdocs-website/node_modules/@docmd/parser/dist/html-renderer.js:56:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
     at async file:///home/runner/work/PowerToys/PowerToys/doc/devdocs-website/node_modules/@docmd/core/dist/engine/generator.js:479:28
     at async Promise.all (index 0)
     at async renderPages (file:///home/runner/work/PowerToys/PowerToys/doc/devdocs-website/node_modules/@docmd/core/dist/engine/generator.js:364:9)

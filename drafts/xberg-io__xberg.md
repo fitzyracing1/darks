@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/xberg-io/xberg/issues/new
-- **Stars:** 9466 · **Generated:** 2026-10-30T12:45:05.868Z
+- **Stars:** 9468 · **Generated:** 2026-10-30T18:36:41.749Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** cancelled by a concurrency group — likely noise
 
@@ -21,50 +21,49 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### CI Rust (`.github/workflows/ci-rust.yaml`)
 
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/41048712541 — dark (conclusion: `cancelled`), 2026-10-30 11:31 UTC
+- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/41103610680 — dark (conclusion: `cancelled`), 2026-10-30 18:03 UTC
 - Dark since: 2026-10-25 18:30 UTC (first run of the current streak)
-- Job / step: `Rust (macos-26)` → `Clippy full ORT surface (layout + OCR + ML)`
 - Likely cause: Canceling since a higher priority waiting request for ci-rust-refs/heads/main exists
+
+### CI Integrations (`.github/workflows/ci-integrations.yaml`)
+
+- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/41103610306 — dark (conclusion: `cancelled`), 2026-10-30 18:03 UTC
+- Dark since: 2026-10-30 03:50 UTC (first run of the current streak)
+- Job / step: `Build local integration bindings`
+- Likely cause: Canceling since a higher priority waiting request for ci-integrations-refs/heads/main exists
 
 <details><summary>End of the job log</summary>
 
 ```
-    Checking opentelemetry_sdk v0.33.1
-    Checking outlook-pst v1.2.0
-    Checking criterion v0.8.2
-    Checking serial_test v4.0.1
-    Checking wiremock v0.6.5
-    Checking tokio-test v0.4.6
-    Checking qrcode v0.14.1
+   Compiling model2vec-rs v0.3.0
+   Compiling liter-llm v2.4.2
+warning: xberg-tesseract@1.4.0: Library already available at expected location: /home/runner/work/xberg/xberg/target/release/build/xberg-tesseract-e9dc4fa51a2fa58d/out/leptonica/lib/libleptonica.a
+warning: xberg-tesseract@1.4.0: Library already available at expected location: /home/runner/work/xberg/xberg/target/release/build/xberg-tesseract-e9dc4fa51a2fa58d/out/tesseract/lib/libtesseract.a
+warning: xberg-tesseract@1.4.0: Linking with tesseract (static linking): tesseract
+warning: xberg-tesseract@1.4.0: Linking with leptonica (static linking): leptonica
+   Compiling mail-parser v0.11.9
 ##[error]The operation was canceled.
 ```
 
 </details>
 
-### CI Integrations (`.github/workflows/ci-integrations.yaml`)
-
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/41048712568 — dark (conclusion: `cancelled`), 2026-10-30 11:31 UTC
-- Dark since: 2026-10-30 03:50 UTC (first run of the current streak)
-- Job / step: `Build local integration bindings`
-- Likely cause: Canceling since a higher priority waiting request for ci-integrations-refs/heads/main exists
-
 ### CI E2E (`.github/workflows/ci-e2e.yaml`)
 
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/41048712646 — dark (conclusion: `cancelled`), 2026-10-30 11:31 UTC
+- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/41103610287 — dark (conclusion: `cancelled`), 2026-10-30 18:03 UTC
 - Dark since: 2026-10-30 03:50 UTC (first run of the current streak)
-- Job / step: `Build FFI (x86_64-unknown-linux-gnu)` → `Build CLI`
+- Job / step: `Build FFI (x86_64-unknown-linux-gnu)`
 - Likely cause: Canceling since a higher priority waiting request for ci-e2e-refs/heads/main exists
 
 <details><summary>End of the job log</summary>
 
 ```
-   Compiling wyz v0.5.1
-   Compiling html-to-markdown-rs v3.19.0
-   Compiling tar v0.4.46
-   Compiling memchr-n v0.1.10
-   Compiling candle-transformers v0.11.0
-   Compiling notify v8.2.1
-   Compiling image v0.24.9
+   Compiling org v0.3.1
+     Running `CARGO=/home/runner/.rustup/toolchains/1.99.1-x86_64-unknown-linux-gnu/bin/cargo CARGO_CRATE_NAME=org CARGO_MANIFEST_DIR=/home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/org-0.3.1 CARGO_MAN…
+   Compiling minijinja v3.0.5
+     Running `CARGO=/home/runner/.rustup/toolchains/1.99.1-x86_64-unknown-linux-gnu/bin/cargo CARGO_CRATE_NAME=minijinja CARGO_MANIFEST_DIR=/home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/minijinja-3.0…
+   Compiling jotdown v0.10.0
+     Running `CARGO=/home/runner/.rustup/toolchains/1.99.1-x86_64-unknown-linux-gnu/bin/cargo CARGO_CRATE_NAME=jotdown CARGO_MANIFEST_DIR=/home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/jotdown-0.10.0 …
+     Running `CARGO=/home/runner/.rustup/toolchains/1.99.1-x86_64-unknown-linux-gnu/bin/cargo CARGO_CRATE_NAME=xberg CARGO_MANIFEST_DIR=/home/runner/work/xberg/xberg/crates/xberg CARGO_MANIFEST_PATH=/home/runner/work/xb…
 ##[error]The operation was canceled.
 ```
 
@@ -72,25 +71,10 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### CI Lint (`.github/workflows/ci-lint.yaml`)
 
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/41048712939 — dark (conclusion: `cancelled`), 2026-10-30 11:31 UTC
+- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/41106106339 — dark (conclusion: `cancelled`), 2026-10-30 18:20 UTC
 - Dark since: 2026-10-30 05:08 UTC (first run of the current streak)
-- Job / step: `Docs snippets gate` → `Run docs snippets gate`
+- Job / step: `AI governance validation`
 - Likely cause: Canceling since a higher priority waiting request for ci-lint-refs/heads/main exists
-
-<details><summary>End of the job log</summary>
-
-```
- INFO Finished batched snippet validation language=ruby snippet_count=143 duration_ms=850
- INFO Starting batched snippet validation language=rust snippet_count=171 timeout_secs=39600
- INFO Finished batched snippet validation language=php snippet_count=108 duration_ms=189
- INFO Starting batched snippet validation language=csharp snippet_count=146 timeout_secs=34200
- INFO Finished batched snippet validation language=java snippet_count=147 duration_ms=4607
- INFO Finished batched snippet validation language=c snippet_count=111 duration_ms=6543
- INFO Finished batched snippet validation language=csharp snippet_count=146 duration_ms=23102
-##[error]The operation was canceled.
-```
-
-</details>
 
 If this is already known or expected, feel free to close. Thanks for maintaining xberg!
 

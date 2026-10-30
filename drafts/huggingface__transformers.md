@@ -4,39 +4,32 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/huggingface/transformers/issues/new
-- **Stars:** 168348 · **Generated:** 2026-10-30T12:45:05.868Z
+- **Stars:** 168358 · **Generated:** 2026-10-30T18:36:41.749Z
 - Nothing in this file has been sent anywhere.
+- **Note for Joshua:** workflow failed to start (config/permissions on their side)
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: "Build documentation" workflow failing on main since 2026-10-30
+CI: 2 workflows dark on main (".github/workflows/build_documentation.yml", "Self-hosted runner (nightly-past-ci-caller)")
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! The **Build documentation** workflow (`.github/workflows/build_documentation.yml`) on `main` has been failing since 2026-10-30. Here is what I saw, in case it's useful:
+Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
 
-- Latest run on `main`: https://github.com/huggingface/transformers/actions/runs/41047268616 — dark (conclusion: `failure`), 2026-10-30 11:19 UTC
+### .github/workflows/build_documentation.yml (`.github/workflows/build_documentation.yml`)
+
+- Latest run on `main`: https://github.com/huggingface/transformers/actions/runs/41072438986 — dark (conclusion: `failure`), 2026-10-30 14:32 UTC
 - Dark since: 2026-10-30 01:10 UTC (first run of the current streak)
-- Job / step: `build_other_lang / build_main_documentation` → `Make documentation`
-- Likely cause: Unable to find Llama4ImageProcessorPil in transformers. Make sure the path to that object is correct.
+- Likely cause: no cause found in annotations
 
-<details><summary>End of the job log</summary>
+### Self-hosted runner (nightly-past-ci-caller) (`.github/workflows/self-nightly-past-ci-caller.yml`)
 
-```
-  File "/home/runner/work/transformers/transformers/.venv/lib/python3.11/site-packages/doc_builder/build_doc.py", line 397, in build_doc
-    anchors_mapping, source_files_mapping = build_mdx_files(
-                                            ^^^^^^^^^^^^^^^^
-  File "/home/runner/work/transformers/transformers/.venv/lib/python3.11/site-packages/doc_builder/build_doc.py", line 255, in build_mdx_files
-    raise type(e)(f"There was an error when converting {file} to the MDX format.\n" + e.args[0]) from e
-ValueError: There was an error when converting ../transformers/docs/source/ko/model_doc/llama4.md to the MDX format.
-Unable to find Llama4ImageProcessorPil in transformers. Make sure the path to that object is correct.
-##[error]Process completed with exit code 1.
-```
-
-</details>
+- Latest run on `main`: https://github.com/huggingface/transformers/actions/runs/41071051826 — dark (conclusion: `startup_failure`), 2026-10-30 14:20 UTC
+- Dark since: 2026-10-30 14:20 UTC (first run of the current streak)
+- Likely cause: run startup_failure
 
 If this is already known or expected, feel free to close. Thanks for maintaining transformers!
 

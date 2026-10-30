@@ -1,8 +1,8 @@
 <!-- dark-draft: vercel/next.js -->
-<!-- draft-state: ready -->
+<!-- draft-state: resolved -->
 # Upstream issue draft: vercel/next.js
 
-- **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
+- **Status:** resolved — lit again (2026-10-30); nothing to file
 - **Would be filed at:** https://github.com/vercel/next.js/issues/new
 - **Stars:** 143205 · **Generated:** 2026-10-30T12:45:05.868Z
 - Nothing in this file has been sent anywhere.

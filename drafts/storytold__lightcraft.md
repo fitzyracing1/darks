@@ -4,36 +4,36 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/storytold/lightcraft/issues/new
-- **Stars:** 15080 · **Generated:** 2026-10-30T12:45:05.868Z
+- **Stars:** 15094 · **Generated:** 2026-10-30T18:36:41.749Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: "CI" workflow failing on main since 2026-10-30
+CI: "SonarCloud" workflow failing on main since 2026-10-30
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! The **CI** workflow (`.github/workflows/ci.yml`) on `main` has been failing since 2026-10-30. Here is what I saw, in case it's useful:
+Hi! The **SonarCloud** workflow (`.github/workflows/sonarcloud.yml`) on `main` has been failing since 2026-10-30. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/storytold/lightcraft/actions/runs/41008578053 — dark (conclusion: `failure`), 2026-10-30 05:27 UTC
-- Dark since: 2026-10-30 05:27 UTC (first run of the current streak)
-- Job / step: `gate / gate (ubuntu-24.04)` → `Gate`
-- Likely cause: error: ci failed at 'test'
+- Latest run on `main`: https://github.com/storytold/lightcraft/actions/runs/41059950908 — dark (conclusion: `failure`), 2026-10-30 13:02 UTC
+- Dark since: 2026-10-30 13:02 UTC (first run of the current streak)
+- Job / step: `sonarcloud / SonarCloud Scan` → `Download shard profiles and archive`
+- Likely cause: Unable to download artifact(s): Unable to download and extract artifact: Artifact download failed after 5 retries.
 
 <details><summary>End of the job log</summary>
 
 ```
-      1× set LIGHTCRAFT_SAM3_DIR and LIGHTCRAFT_SAM3_REF (segment/it::reference::matches_reference)
-  fonts (2): needs craft-fonts (`CRAFT_FONTS_DIR`, see the README)
-      1× ru: built without a craft-fonts face for Cyrl (lightcraft_ui_egui::i18n::tests::catalog_characters_are_paintable)
-      1× uk: built without a craft-fonts face for Cyrl (lightcraft_ui_egui::i18n::tests::catalog_characters_are_paintable)
-  system (1): needs what the operating system provides
-      1× no system ICC profiles (codecs/it::corpus::system_icc_profiles)
-Report: target/ci/report.json; to paste into a PR: target/ci/summary.md (or run with --summary-md)
-##[error]Process completed with exit code 1.
+Artifact download completed successfully.
+SHA256 digest of downloaded artifact is 54b84ae30788138b2a69c43f9c82667a81f4b98cdace1ab5eabf769fe9d00e50
+Artifact download completed successfully.
+SHA256 digest of downloaded artifact is b0c308354cb471a19da7adfbf6c06912ca76cc3536d2fef287054f8a0921bc0c
+Artifact download completed successfully.
+SHA256 digest of downloaded artifact is 76bdbf1fca46b329065022611be22ef3cb73af419c35977193d4d7ee7d90d7b6
+Artifact download completed successfully.
+##[error]Unable to download artifact(s): Unable to download and extract artifact: Artifact download failed after 5 retries.
 ```
 
 </details>

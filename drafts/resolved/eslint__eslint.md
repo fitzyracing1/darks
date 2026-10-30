@@ -1,8 +1,8 @@
 <!-- dark-draft: eslint/eslint -->
-<!-- draft-state: ready -->
+<!-- draft-state: resolved -->
 # Upstream issue draft: eslint/eslint
 
-- **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
+- **Status:** resolved — lit again (2026-10-30); nothing to file
 - **Would be filed at:** https://github.com/eslint/eslint/issues/new
 - **Stars:** 27602 · **Generated:** 2026-10-30T12:45:05.868Z
 - Nothing in this file has been sent anywhere.
