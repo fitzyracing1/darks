@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/headroomlabs-ai/headroom/issues/new
-- **Stars:** 78274 · **Generated:** 2026-10-30T01:00:38.631Z
+- **Stars:** 78293 · **Generated:** 2026-10-30T06:48:43.256Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
@@ -21,21 +21,21 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### CI (`.github/workflows/ci.yml`)
 
-- Latest run on `main`: https://github.com/headroomlabs-ai/headroom/actions/runs/40819536349 — dark (conclusion: `failure`), 2026-10-29 04:45 UTC
+- Latest run on `main`: https://github.com/headroomlabs-ai/headroom/actions/runs/40986096769 — dark (conclusion: `failure`), 2026-10-30 01:28 UTC
 - Dark since: 2026-10-29 04:45 UTC (first run of the current streak)
-- Job / step: `build-wheel-windows` → `Build wheel (fast CI cargo profile)`
-- Likely cause: A device which does not exist was specified. : 'D:\a\_temp\_runner_file_commands\add_path_25f340a1-5492-4719-90c3-a1075c8af9bd'
+- Job / step: `test (3)` → `Run test shard 3/4`
+- Likely cause: = 1 failed, 4497 passed, 91 skipped, 13725 deselected, 3931 warnings in 567.26s (0:09:27) =
 
 <details><summary>End of the job log</summary>
 
 ```
-warning: build failed, waiting for other jobs to finish...
-error: could not compile `encoding_rs` (lib) due to 1 previous error
-error: could not compile `image` (lib) due to 1 previous error
-error: could not compile `tokenizers` (lib) due to 1 previous error
-💥 maturin failed
-  Caused by: Failed to build a native library through cargo
-  Caused by: Cargo build finished with "exit code: 101": `"cargo" "rustc" "--profile" "ci" "--features" "extension-module" "--message-format" "json-render-diagnostics" "--manifest-path" "D:\\a\\headroom\\headroom\\crate…
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+================================ tests coverage ================================
+_______________ coverage: platform linux, python 3.12.15-final-0 _______________
+Coverage XML written to file coverage-3.xml
+=========================== short test summary info ============================
+FAILED tests/test_platform_stabilization_functional.py::test_v1_compress_timeout_fails_open_quickly - assert 1.2716040849999786 < 0.5
+= 1 failed, 4497 passed, 91 skipped, 13725 deselected, 3931 warnings in 567.26s (0:09:27) =
 ##[error]Process completed with exit code 1.
 ```
 

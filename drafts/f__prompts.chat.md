@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/f/prompts.chat/issues/new
-- **Stars:** 175096 · **Generated:** 2026-10-30T01:00:38.631Z
+- **Stars:** 175130 · **Generated:** 2026-10-30T06:48:43.256Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title

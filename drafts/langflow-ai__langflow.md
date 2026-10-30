@@ -4,13 +4,13 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/langflow-ai/langflow/issues/new
-- **Stars:** 156147 · **Generated:** 2026-10-30T01:00:38.631Z
+- **Stars:** 156154 · **Generated:** 2026-10-30T06:48:43.256Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 5 workflows dark on main ("Deploy Storybook to GitHub Pages", "Mend", "Cross-Bundle Test", +2 more)
+CI: 4 workflows dark on main ("Deploy Storybook to GitHub Pages", "Mend", "Cross-Bundle Test", +1 more)
 <!-- END TITLE -->
 
 ## Body
@@ -42,21 +42,21 @@ Creating Pages deployment with payload:
 
 ### Mend (`.github/workflows/mend.yml`)
 
-- Latest run on `main`: https://github.com/langflow-ai/langflow/actions/runs/39850641469 — dark (conclusion: `failure`), 2026-10-22 20:38 UTC
+- Latest run on `main`: https://github.com/langflow-ai/langflow/actions/runs/40988763171 — dark (conclusion: `failure`), 2026-10-30 01:56 UTC
 - Dark since: 2026-10-22 20:38 UTC (first run of the current streak)
 - Job / step: `mend-scan` → `Run Mend Scan`
-- Likely cause: [ERROR] [2026-10-22 20:55:53,971 +0000] - Process finished with exit code ERROR (-1)
+- Likely cause: [ERROR] [2026-10-30 02:13:39,679 +0000] - Process finished with exit code ERROR (-1)
 
 <details><summary>End of the job log</summary>
 
 ```
 ======================================================================================================================================================
-Fetch Configuration                                  COMPLETED                  00:00:00.389               --------
+Fetch Configuration                                  COMPLETED                  00:00:00.438               --------
 ======================================================================================================================================================
-Elapsed running time:                                                           00:00:00.389
+Elapsed running time:                                                           00:00:00.438
 ======================================================================================================================================================
 Process finished with exit code ERROR (-1)
-[ERROR] [2026-10-22 20:55:53,971 +0000] - Process finished with exit code ERROR (-1)
+[ERROR] [2026-10-30 02:13:39,679 +0000] - Process finished with exit code ERROR (-1)
 ##[error]Process completed with exit code 255.
 ```
 
@@ -86,28 +86,6 @@ To https://github.com/langflow-ai/langflow
  ! [remote rejected] translations/update-gp-1793314896 -> translations/update-gp-1793314896 (Unable to determine if workflow can be created or updated due to timeout; `workflows` scope may be required.)
 error: failed to push some refs to 'https://github.com/langflow-ai/langflow'
 ##[error]The process '/usr/bin/git' failed with exit code 1
-```
-
-</details>
-
-### Nightly Build (`.github/workflows/nightly_build.yml`)
-
-- Latest run on `main`: https://github.com/langflow-ai/langflow/actions/runs/40979751505 — dark (conclusion: `failure`), 2026-10-30 00:27 UTC
-- Dark since: 2026-10-30 00:27 UTC (first run of the current streak)
-- Job / step: `create-nightly-tag` → `Commit tag`
-- Likely cause: Tag push failed. Check if the tag already exists. Exiting the workflow.
-
-<details><summary>End of the job log</summary>
-
-```
-Pushing main tag v1.14.0.dev10
-To https://github.com/langflow-ai/langflow
- ! [remote rejected]       v1.14.0.dev10 -> v1.14.0.dev10 (Unable to determine if workflow can be created or updated due to timeout; `workflows` scope may be required.)
-error: failed to push some refs to 'https://github.com/langflow-ai/langflow'
-+ echo 'Tag push failed. Check if the tag already exists. Exiting the workflow.'
-Tag push failed. Check if the tag already exists. Exiting the workflow.
-+ exit 1
-##[error]Process completed with exit code 1.
 ```
 
 </details>

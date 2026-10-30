@@ -4,23 +4,21 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/awslabs/mcp/issues/new
-- **Stars:** 9851 · **Generated:** 2026-10-30T01:00:38.631Z
+- **Stars:** 9851 · **Generated:** 2026-10-30T06:48:43.256Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 2 workflows dark on main ("Check License Header", "Scorecard analysis workflow")
+CI: "Check License Header" workflow failing on main since 2026-10-13
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
+Hi! The **Check License Header** workflow (`.github/workflows/check-license-header.yml`) on `main` has been failing since 2026-10-13. Here is what I saw, in case it's useful:
 
-### Check License Header (`.github/workflows/check-license-header.yml`)
-
-- Latest run on `main`: https://github.com/awslabs/mcp/actions/runs/40982306836 — dark (conclusion: `failure`), 2026-10-30 00:51 UTC
+- Latest run on `main`: https://github.com/awslabs/mcp/actions/runs/40994893097 — dark (conclusion: `failure`), 2026-10-30 03:00 UTC
 - Dark since: 2026-10-13 23:49 UTC (first run of the current streak)
 - Job / step: `Code Review Upon All Successful Runs` → `Check license headers`
 - Likely cause: 0 error(s) and 1 warning(s) found. Warnings are treated as errors.
@@ -37,28 +35,6 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 ##[debug]Loading env
 ##[warning]Config does not cover the file 'src/redshift-mcp-server/e2e_tests/config.toml.example'
 ##[error]0 error(s) and 1 warning(s) found. Warnings are treated as errors.
-```
-
-</details>
-
-### Scorecard analysis workflow (`.github/workflows/scorecard-analysis.yml`)
-
-- Latest run on `main`: https://github.com/awslabs/mcp/actions/runs/40982306708 — dark (conclusion: `failure`), 2026-10-30 00:51 UTC
-- Dark since: 2026-10-30 00:51 UTC (first run of the current streak)
-- Job / step: `Scorecard analysis` → `Run analysis`
-- Likely cause: 2026/10/30 00:52:55 scorecard had an error: repo unreachable: GET https://api.github.com/repos/awslabs/mcp: 401 Bad credentials []
-
-<details><summary>End of the job log</summary>
-
-```
-##[debug]Evaluating Index:
-##[debug]..Evaluating github:
-##[debug]..=> Object
-##[debug]..Evaluating String:
-##[debug]..=> 'token'
-##[debug]=> '***'
-##[debug]Result: '***'
-##[debug]Loading env
 ```
 
 </details>

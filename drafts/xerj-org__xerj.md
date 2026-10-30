@@ -4,39 +4,24 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/xerj-org/xerj/issues/new
-- **Stars:** 17582 · **Generated:** 2026-10-30T01:00:38.631Z
+- **Stars:** 17602 · **Generated:** 2026-10-30T06:48:43.256Z
 - Nothing in this file has been sent anywhere.
+- **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: "CI" workflow failing on main since 2026-10-29
+CI: "CI" workflow getting cancelled on main since 2026-10-29
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! The **CI** workflow (`.github/workflows/ci.yml`) on `main` has been failing since 2026-10-29. Here is what I saw, in case it's useful:
+Hi! The **CI** workflow (`.github/workflows/ci.yml`) on `main` has been getting cancelled since 2026-10-29. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/xerj-org/xerj/actions/runs/40958538493 — dark (conclusion: `failure`), 2026-10-29 21:31 UTC
+- Latest run on `main`: https://github.com/xerj-org/xerj/actions/runs/41008827244 — dark (conclusion: `cancelled`), 2026-10-30 05:30 UTC
 - Dark since: 2026-10-29 17:28 UTC (first run of the current streak)
-- Job / step: `UX pipeline tests` → `Console browser security suite (headless Chrome)`
-- Likely cause: # fail 1
-
-<details><summary>End of the job log</summary>
-
-```
-# suites 0
-# pass 24
-# fail 1
-# cancelled 0
-# skipped 0
-# todo 0
-# duration_ms 24348.562839
-##[error]Process completed with exit code 1.
-```
-
-</details>
+- Likely cause: run cancelled
 
 If this is already known or expected, feel free to close. Thanks for maintaining xerj!
 

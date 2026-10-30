@@ -4,60 +4,36 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/triggerdotdev/trigger.dev/issues/new
-- **Stars:** 16656 · **Generated:** 2026-10-30T01:00:38.631Z
+- **Stars:** 16659 · **Generated:** 2026-10-30T06:48:43.256Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 2 workflows dark on main ("🛡️ E2E Tests: Webapp Auth (full)", "🗺️ Observability Map")
+CI: "🛡️ E2E Tests: Webapp Auth (full)" workflow failing on main since 2026-10-27
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
+Hi! The **🛡️ E2E Tests: Webapp Auth (full)** workflow (`.github/workflows/e2e-webapp-auth-full.yml`) on `main` has been failing since 2026-10-27. Here is what I saw, in case it's useful:
 
-### 🛡️ E2E Tests: Webapp Auth (full) (`.github/workflows/e2e-webapp-auth-full.yml`)
-
-- Latest run on `main`: https://github.com/triggerdotdev/trigger.dev/actions/runs/40815337915 — dark (conclusion: `failure`), 2026-10-29 04:00 UTC
+- Latest run on `main`: https://github.com/triggerdotdev/trigger.dev/actions/runs/41000510476 — dark (conclusion: `failure`), 2026-10-30 04:00 UTC
 - Dark since: 2026-10-27 04:00 UTC (first run of the current streak)
 - Job / step: `🛡️ E2E Auth Tests (full)` → `🛡️ Run Webapp Full Auth E2E Tests`
-- Likely cause: {"traceId":"6650c0cbebeb4b56ee7414c76f9728d4","parentId":"0bdc6b8561aa3558","message":"enqueue","spanId":"f6cfdc8fead6cddb","kind":3,"timestamp":1793246628424000,"duration":261.863,"attributes":{"job_type":"expireRun","…
+- Likely cause: {"traceId":"c6925bf77d71036664a93fbedb812184","message":"sessionsRepository.listSessions","spanId":"35e0bfbe08d7386e","kind":0,"timestamp":1793333036639000,"duration":2151.227,"attributes":{"repository.name":"clickhouse…
 
 <details><summary>End of the job log</summary>
 
 ```
-{"traceId":"6650c0cbebeb4b56ee7414c76f9728d4","parentId":"0bdc6b8561aa3558","message":"enqueueMessage","spanId":"013d6b0b811babdc","kind":3,"timestamp":1793246628424000,"duration":449.767,"attributes":{"messaging.operat…
-{"traceId":"6650c0cbebeb4b56ee7414c76f9728d4","parentId":"5c90e0ad810f5136","message":"trigger","spanId":"0bdc6b8561aa3558","kind":0,"timestamp":1793246628421000,"duration":3529.925,"attributes":{"friendlyId":"run_cmvt0…
-{"traceId":"6650c0cbebeb4b56ee7414c76f9728d4","parentId":"4319112ca841562d","message":"doFlushBatch","spanId":"617e1a6ed55f0d8c","kind":0,"timestamp":1793246628425000,"duration":819.653,"attributes":{"event_count":1,"de…
-{"traceId":"6650c0cbebeb4b56ee7414c76f9728d4","parentId":"5c90e0ad810f5136","message":"flushBatch","spanId":"4319112ca841562d","kind":0,"timestamp":1793246628425000,"duration":911.817,"attributes":{"flush_id":"xRwkIEY0T…
-{"traceId":"6650c0cbebeb4b56ee7414c76f9728d4","parentId":"255b448b26b0dc0e","message":"RunEngineTriggerTaskService.call()","spanId":"5c90e0ad810f5136","kind":0,"timestamp":1793246628420000,"duration":5764.562,"attribute…
-{"traceId":"6650c0cbebeb4b56ee7414c76f9728d4","message":"TriggerTaskService.call()","spanId":"255b448b26b0dc0e","kind":1,"timestamp":1793246628419000,"duration":6338.903,"attributes":{"$trigger.env.id":"cmvt0qq0u00krulu…
-{"traceId":"c41e109a9ba7aa9c16e6c492494daf88","message":"sessionRunManager.claimSessionRun","spanId":"98eb1fc011ba34df","kind":0,"timestamp":1793246628426000,"duration":1450.921,"attributes":{"$transaction":true,"max_wa…
+Express server closed gracefully.
+{"traceId":"1a9fd970f83d6a3125f5ef8ecc268c23","parentId":"066cc3a84c2e3a92","message":"enqueue","spanId":"3a87c2f0c30185b8","kind":3,"timestamp":1793333035566000,"duration":976.451,"attributes":{"job_type":"schedule.tri…
+{"traceId":"1a9fd970f83d6a3125f5ef8ecc268c23","parentId":"58e18065fa10a090","message":"enqueueScheduledTask","spanId":"066cc3a84c2e3a92","kind":0,"timestamp":1793333035566000,"duration":1224.349,"attributes":{"instanceI…
+{"traceId":"1a9fd970f83d6a3125f5ef8ecc268c23","message":"registerNextTaskScheduleInstance","spanId":"58e18065fa10a090","kind":0,"timestamp":1793333035560000,"duration":7109.37,"attributes":{"instanceId":"cmvug6q7a000l0a…
+{"traceId":"05db17827f0519e5b136ad97c03c0e1c","message":"ApiRetrieveRunPresenter.call","spanId":"4cb5852388018f10","kind":1,"timestamp":1793333036179000,"duration":99.046,"attributes":{"$trigger.env.id":"cmvug6qob00bq0a…
+{"traceId":"c6925bf77d71036664a93fbedb812184","parentId":"35e0bfbe08d7386e","message":"query","spanId":"eb7e7be6989d4160","kind":0,"timestamp":1793333036639000,"duration":1922.085,"attributes":{"clickhouse.clientName":"…
+{"traceId":"c6925bf77d71036664a93fbedb812184","message":"sessionsRepository.listSessions","spanId":"35e0bfbe08d7386e","kind":0,"timestamp":1793333036639000,"duration":2151.227,"attributes":{"repository.name":"clickhouse…
 ##[error]Process completed with exit code 1.
-```
-
-</details>
-
-### 🗺️ Observability Map (`.github/workflows/observability-map.yml`)
-
-- Latest run on `main`: https://github.com/triggerdotdev/trigger.dev/actions/runs/40811896173 — dark (conclusion: `failure`), 2026-10-29 03:23 UTC
-- Dark since: 2026-10-28 03:23 UTC (first run of the current streak)
-- Job / step: `🧬 Mutation corpus` → `🧬 Run the corpus`
-- Likely cause: AssertionError: expected [ 'api.v2.packets.$.ts' ] to deeply equal [] (internal-packages/observability-map/src/mutationCorpus.test.ts:287)
-
-<details><summary>End of the job log</summary>
-
-```
-    288|   });
-    289|
-⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
- Test Files  1 failed (1)
-      Tests  1 failed | 55 passed | 2 expected fail (58)
-   Start at  03:24:30
-   Duration  119.41s (transform 108ms, setup 0ms, import 247ms, tests 119.08s, environment 0ms)
-##[error]AssertionError: expected [ 'api.v2.packets.$.ts' ] to deeply equal []
 ```
 
 </details>

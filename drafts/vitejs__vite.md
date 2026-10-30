@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/vitejs/vite/issues/new
-- **Stars:** 83619 · **Generated:** 2026-10-30T01:00:38.631Z
+- **Stars:** 83622 · **Generated:** 2026-10-30T06:48:43.256Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -18,21 +18,21 @@ CI: "CI" workflow failing on main since 2026-10-27
 <!-- BEGIN BODY -->
 Hi! The **CI** workflow (`.github/workflows/ci.yml`) on `main` has been failing since 2026-10-27. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/vitejs/vite/actions/runs/40480434396 — dark (conclusion: `failure`), 2026-10-27 09:23 UTC
+- Latest run on `main`: https://github.com/vitejs/vite/actions/runs/40996084381 — dark (conclusion: `failure`), 2026-10-30 03:12 UTC
 - Dark since: 2026-10-27 08:50 UTC (first run of the current streak)
-- Job / step: `Build&Test: node-20, ubuntu-latest` → `Test build`
-- Likely cause: Tests  1 failed | 962 passed | 314 skipped (1277)
+- Job / step: `Build&Test: node-24, windows-latest` → `Test serve`
+- Likely cause: (node:9984) [DEP0169] DeprecationWarning: 'url.parse()' behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for 'url.parse()' vulnerabili…
 
 <details><summary>End of the job log</summary>
 
 ```
-     43| })
-⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
- Test Files  1 failed | 93 passed | 17 skipped (111)
-      Tests  1 failed | 962 passed | 314 skipped (1277)
-   Start at  09:26:16
-   Duration  34.84s (tests 95%, setup 3%, import 1%, transform 1%)
+`transformWithEsbuild` is deprecated and will be removed in the future. Please migrate to `transformWithOxc`.
+·········································-····················--·······················-···························--············-----·······--·············--------···················································--··…
+✓ 11 modules transformed.
+rendering chunks...
+computing gzip size...
 [ELIFECYCLE] Command failed with exit code 1.
+-·-················---························--·-·······································-············-----····---·····--········--······-··--·----·--················-·------·---------·-····--
 ##[error]Process completed with exit code 1.
 ```
 
