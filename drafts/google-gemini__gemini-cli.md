@@ -4,41 +4,19 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/google-gemini/gemini-cli/issues/new
-- **Stars:** 108624 · **Generated:** 2026-10-30T06:48:43.256Z
+- **Stars:** 108626 · **Generated:** 2026-10-30T12:45:05.868Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 3 workflows dark on main ("Testing: CI", "Memory Tests: Nightly", "Performance Tests: Nightly")
+CI: 2 workflows dark on main ("Memory Tests: Nightly", "Performance Tests: Nightly")
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
 Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
-
-### Testing: CI (`.github/workflows/ci.yml`)
-
-- Latest run on `main`: https://github.com/google-gemini/gemini-cli/actions/runs/40952570363 — dark (conclusion: `failure`), 2026-10-29 20:50 UTC
-- Dark since: 2026-10-29 20:48 UTC (first run of the current streak)
-- Job / step: `Slow Test - Win - cli` → `Run tests and generate reports`
-- Likely cause: The strategy configuration was canceled because "test_windows.others" failed
-
-<details><summary>End of the job log</summary>
-
-```
-   ✓ CloudFreePrivacyNotice > exits on Escape in 'non-free tier state': true  2027ms
-   ✓ CloudFreePrivacyNotice > exits on Escape in 'tier unavailable state': true  2017ms
-   ✓ CloudFreePrivacyNotice > exits on Escape in 'free tier state (no selection)': false  2023ms
-   ✓ CloudFreePrivacyNotice > provides renderItem to RadioButtonSelect that wraps option text without truncation  1024ms
-   ✓ CloudFreePrivacyNotice > RadioButtonSelect interaction > calls correct functions on selecting "'Yes'"  2029ms
-   ✓ CloudFreePrivacyNotice > RadioButtonSelect interaction > calls correct functions on selecting "'No'"  2028ms
-Terminate batch job (Y/N)?
-##[error]The operation was canceled.
-```
-
-</details>
 
 ### Memory Tests: Nightly (`.github/workflows/memory-nightly.yml`)
 
