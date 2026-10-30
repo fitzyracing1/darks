@@ -4,35 +4,59 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/Gentleman-Programming/gentle-ai/issues/new
-- **Stars:** 8130 · **Generated:** 2026-10-29T18:41:19.911Z
+- **Stars:** 8135 · **Generated:** 2026-10-30T01:00:38.631Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: "Windows Full Suite" workflow failing on main since 2026-10-29
+CI: 2 workflows dark on main ("Windows Full Suite", "Gentle Shell macOS qualification")
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! The **Windows Full Suite** workflow (`.github/workflows/windows-full-suite.yml`) on `main` has been failing since 2026-10-29. Here is what I saw, in case it's useful:
+Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
 
-- Latest run on `main`: https://github.com/Gentleman-Programming/gentle-ai/actions/runs/40879365629 — dark (conclusion: `failure`), 2026-10-29 13:09 UTC
+### Windows Full Suite (`.github/workflows/windows-full-suite.yml`)
+
+- Latest run on `main`: https://github.com/Gentleman-Programming/gentle-ai/actions/runs/40976835003 — dark (conclusion: `failure`), 2026-10-30 00:00 UTC
 - Dark since: 2026-10-29 05:10 UTC (first run of the current streak)
-- Job / step: `Windows Full Suite (cli-p-q-s-z)` → `Run shard`
+- Job / step: `Windows Full Suite (rest)` → `Run shard`
 - Likely cause: FAIL
 
 <details><summary>End of the job log</summary>
 
 ```
-To install only into the current workspace, rerun with --scope=workspace.
-WARNING: missing dependencies:
-Missing 0 required dependency(ies): none
-Install hints:
+ok  	github.com/gentleman-programming/gentle-ai/v4/internal/update/upgrade	8.905s
+ok  	github.com/gentleman-programming/gentle-ai/v4/internal/verify	0.028s
+ok  	github.com/gentleman-programming/gentle-ai/v4/internal/versions	0.032s
+?   	github.com/gentleman-programming/gentle-ai/v4/scripts	[no test files]
+ok  	github.com/gentleman-programming/gentle-ai/v4/scripts/crosslane	2.333s
+?   	github.com/gentleman-programming/gentle-ai/v4/scripts/gen-sdd-agent-digests	[no test files]
 FAIL
-FAIL	github.com/gentleman-programming/gentle-ai/v4/internal/cli	862.932s
-FAIL
+##[error]Process completed with exit code 1.
+```
+
+</details>
+
+### Gentle Shell macOS qualification (`.github/workflows/shell-macos-qualification.yml`)
+
+- Latest run on `main`: https://github.com/Gentleman-Programming/gentle-ai/actions/runs/40981559952 — dark (conclusion: `failure`), 2026-10-30 00:44 UTC
+- Dark since: 2026-10-30 00:00 UTC (first run of the current streak)
+- Job / step: `macOS installation and recovery qualification` → `Qualify native Separate, Shared and recovery`
+- Likely cause: No files were found with the provided path: /Users/runner/work/_temp/macos-qualification/receipt.json. No artifacts will be uploaded.
+
+<details><summary>End of the job log</summary>
+
+```
+----------------------------------------------------------------------
+Ran 10 tests in 0.062s
+OK
+Traceback (most recent call last):
+  File "/Users/runner/work/gentle-ai/gentle-ai/e2e/shell-macos-qualification.py", line 56, in <module>
+    REVIEWED_SUPPLIERS = json.loads((pathlib.Path(__file__).resolve().parents[1] / 'scripts/gentle-pi-suppliers.json').read_text())['releases']
+NameError: name 'pathlib' is not defined
 ##[error]Process completed with exit code 1.
 ```
 

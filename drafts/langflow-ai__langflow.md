@@ -4,13 +4,13 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/langflow-ai/langflow/issues/new
-- **Stars:** 156142 · **Generated:** 2026-10-29T18:41:19.911Z
+- **Stars:** 156147 · **Generated:** 2026-10-30T01:00:38.631Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 3 workflows dark on main ("Deploy Storybook to GitHub Pages", "Mend", "Cross-Bundle Test")
+CI: 5 workflows dark on main ("Deploy Storybook to GitHub Pages", "Mend", "Cross-Bundle Test", +2 more)
 <!-- END TITLE -->
 
 ## Body
@@ -67,6 +67,50 @@ Process finished with exit code ERROR (-1)
 - Latest run on `main`: https://github.com/langflow-ai/langflow/actions/runs/40279758044 — dark (conclusion: `failure`), 2026-10-26 06:25 UTC
 - Dark since: 2026-10-26 06:25 UTC (first run of the current streak)
 - Likely cause: no cause found in annotations
+
+### GP Download Translations (`.github/workflows/gp-download.yml`)
+
+- Latest run on `main`: https://github.com/langflow-ai/langflow/actions/runs/40970156544 — dark (conclusion: `failure`), 2026-10-29 23:01 UTC
+- Dark since: 2026-10-29 23:01 UTC (first run of the current streak)
+- Job / step: `Download translations from Globalization Pipeline` → `Create Pull Request`
+- Likely cause: The process '/usr/bin/git' failed with exit code 1
+
+<details><summary>End of the job log</summary>
+
+```
+5c2ced7008373e1c487a9a749a41d2fa83d81481
+Deleted branch 61a64fcc-5350-4f18-900f-166d0ead05c8 (was 5c2ced7).
+Switched to branch 'release-1.14.0'
+Your branch is up to date with 'origin/release-1.14.0'.
+To https://github.com/langflow-ai/langflow
+ ! [remote rejected] translations/update-gp-1793314896 -> translations/update-gp-1793314896 (Unable to determine if workflow can be created or updated due to timeout; `workflows` scope may be required.)
+error: failed to push some refs to 'https://github.com/langflow-ai/langflow'
+##[error]The process '/usr/bin/git' failed with exit code 1
+```
+
+</details>
+
+### Nightly Build (`.github/workflows/nightly_build.yml`)
+
+- Latest run on `main`: https://github.com/langflow-ai/langflow/actions/runs/40979751505 — dark (conclusion: `failure`), 2026-10-30 00:27 UTC
+- Dark since: 2026-10-30 00:27 UTC (first run of the current streak)
+- Job / step: `create-nightly-tag` → `Commit tag`
+- Likely cause: Tag push failed. Check if the tag already exists. Exiting the workflow.
+
+<details><summary>End of the job log</summary>
+
+```
+Pushing main tag v1.14.0.dev10
+To https://github.com/langflow-ai/langflow
+ ! [remote rejected]       v1.14.0.dev10 -> v1.14.0.dev10 (Unable to determine if workflow can be created or updated due to timeout; `workflows` scope may be required.)
+error: failed to push some refs to 'https://github.com/langflow-ai/langflow'
++ echo 'Tag push failed. Check if the tag already exists. Exiting the workflow.'
+Tag push failed. Check if the tag already exists. Exiting the workflow.
++ exit 1
+##[error]Process completed with exit code 1.
+```
+
+</details>
 
 If this is already known or expected, feel free to close. Thanks for maintaining langflow!
 

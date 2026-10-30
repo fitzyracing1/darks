@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/googleapis/mcp-toolbox/issues/new
-- **Stars:** 16753 · **Generated:** 2026-10-29T18:41:19.911Z
+- **Stars:** 16754 · **Generated:** 2026-10-30T01:00:38.631Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title

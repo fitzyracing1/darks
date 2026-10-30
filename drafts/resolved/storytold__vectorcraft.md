@@ -1,8 +1,8 @@
 <!-- dark-draft: storytold/vectorcraft -->
-<!-- draft-state: ready -->
+<!-- draft-state: resolved -->
 # Upstream issue draft: storytold/vectorcraft
 
-- **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
+- **Status:** resolved — lit again (2026-10-30); nothing to file
 - **Would be filed at:** https://github.com/storytold/vectorcraft/issues/new
 - **Stars:** 10985 · **Generated:** 2026-10-29T18:41:19.911Z
 - Nothing in this file has been sent anywhere.
