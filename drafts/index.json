@@ -3,7 +3,7 @@
   "drafts": {
     "public-apis/public-apis": {
       "repo": "public-apis/public-apis",
-      "stars": 493687,
+      "stars": 493765,
       "file": "drafts/public-apis__public-apis.md",
       "state": "ready",
       "title": "CI: 2 workflows dark on master (\"Tests of push & pull\", \"Validate links\")",
@@ -14,7 +14,7 @@
       "approved": false,
       "hint": null,
       "duplicateLinks": [],
-      "updatedAt": "2026-10-31T12:37:42.482Z",
+      "updatedAt": "2026-10-31T18:33:59.606Z",
       "cache": {
         "public-apis/public-apis#.github/workflows/test_of_push_and_pull.yml": {
           "v": 4,
@@ -91,7 +91,7 @@
     },
     "react/react": {
       "repo": "react/react",
-      "stars": 251862,
+      "stars": 251898,
       "file": "drafts/react__react.md",
       "state": "ready",
       "title": "CI: \"(DevTools) Regression Tests\" workflow failing on main since 2026-10-11",
@@ -101,7 +101,7 @@
       "approved": false,
       "hint": null,
       "duplicateLinks": [],
-      "updatedAt": "2026-10-31T12:37:42.482Z",
+      "updatedAt": "2026-10-31T18:33:59.606Z",
       "cache": {
         "react/react#.github/workflows/devtools_regression_tests.yml": {
           "v": 4,
@@ -130,8 +130,8 @@
     "thealgorithms/python": {
       "repo": "TheAlgorithms/Python",
       "stars": 225731,
-      "file": "drafts/TheAlgorithms__Python.md",
-      "state": "ready",
+      "file": "drafts/resolved/TheAlgorithms__Python.md",
+      "state": "resolved",
       "title": "CI: \"hacktoberfest_prep\" workflow failing on master since 2026-10-01",
       "keys": [
         "TheAlgorithms/Python#.github/workflows/hacktoberfest_prep.yml"
@@ -163,11 +163,13 @@
           "duplicates": [],
           "fix": null
         }
-      }
+      },
+      "resolvedAt": "2026-10-31T18:33:59.606Z",
+      "resolvedNote": "lit again"
     },
     "n8n-io/n8n": {
       "repo": "n8n-io/n8n",
-      "stars": 209185,
+      "stars": 209205,
       "file": "drafts/n8n-io__n8n.md",
       "state": "ready",
       "title": "CI: 2 workflows dark on master (\"Security: Sync from Public\", \"Test: E2E Coverage Nightly\")",
@@ -178,12 +180,12 @@
       "approved": false,
       "hint": "latest run was skipped, not failed — probably not worth filing",
       "duplicateLinks": [],
-      "updatedAt": "2026-10-31T12:37:42.482Z",
+      "updatedAt": "2026-10-31T18:33:59.606Z",
       "cache": {
         "n8n-io/n8n#.github/workflows/sec-sync-public-to-private.yml": {
           "v": 4,
-          "run": "https://github.com/n8n-io/n8n/actions/runs/41200172086",
-          "fetchedAt": "2026-10-31T12:38:14.630Z",
+          "run": "https://github.com/n8n-io/n8n/actions/runs/41228170969",
+          "fetchedAt": "2026-10-31T18:34:24.310Z",
           "branch": "master",
           "fullName": "n8n-io/n8n",
           "duplicates": [],
@@ -204,7 +206,7 @@
     },
     "tensorflow/tensorflow": {
       "repo": "tensorflow/tensorflow",
-      "stars": 201240,
+      "stars": 201248,
       "file": "drafts/tensorflow__tensorflow.md",
       "state": "ready",
       "title": "CI: \"Creates a GitHub Issue when a PR Rolled back via Commit to Master\" workflow not completing (runs skipped) on master since 2026-10-13",
@@ -214,12 +216,12 @@
       "approved": false,
       "hint": "latest run was skipped, not failed — probably not worth filing",
       "duplicateLinks": [],
-      "updatedAt": "2026-10-31T12:37:42.482Z",
+      "updatedAt": "2026-10-31T18:33:59.606Z",
       "cache": {
         "tensorflow/tensorflow#.github/workflows/issue-on-pr-rollback.yml": {
           "v": 4,
-          "run": "https://github.com/tensorflow/tensorflow/actions/runs/41180234841",
-          "fetchedAt": "2026-10-31T12:38:21.971Z",
+          "run": "https://github.com/tensorflow/tensorflow/actions/runs/41204800690",
+          "fetchedAt": "2026-10-31T18:34:29.639Z",
           "branch": "master",
           "fullName": "tensorflow/tensorflow",
           "duplicates": [],
@@ -296,12 +298,13 @@
     },
     "huggingface/transformers": {
       "repo": "huggingface/transformers",
-      "stars": 168387,
+      "stars": 168391,
       "file": "drafts/huggingface__transformers.md",
       "state": "ready",
-      "title": "CI: 8 workflows dark on main (\"Nightly integration-failure triage\", \"Check Tiny Models\", \"Self-hosted runner (nightly-past-ci-caller)\", +5 more)",
+      "title": "CI: 9 workflows dark on main (\"Nightly integration-failure triage\", \"Build docker images (scheduled)\", \"Check Tiny Models\", +6 more)",
       "keys": [
         "huggingface/transformers#.github/workflows/nightly-integration-failure-triage-caller.yml",
+        "huggingface/transformers#.github/workflows/build-docker-images.yml",
         "huggingface/transformers#.github/workflows/check_tiny_models.yml",
         "huggingface/transformers#.github/workflows/self-nightly-past-ci-caller.yml",
         "huggingface/transformers#.github/workflows/self-scheduled-intel-gaudi3-caller.yml",
@@ -313,7 +316,7 @@
       "approved": false,
       "hint": null,
       "duplicateLinks": [],
-      "updatedAt": "2026-10-31T12:37:42.482Z",
+      "updatedAt": "2026-10-31T18:33:59.606Z",
       "cache": {
         "huggingface/transformers#.github/workflows/nightly-integration-failure-triage-caller.yml": {
           "v": 4,
@@ -333,6 +336,28 @@
             "    raise RemoteDisconnected(\"Remote end closed connection without\"",
             "http.client.RemoteDisconnected: Remote end closed connection without response",
             "##[error]Process completed with exit code 1."
+          ],
+          "duplicates": [],
+          "fix": null
+        },
+        "huggingface/transformers#.github/workflows/build-docker-images.yml": {
+          "v": 4,
+          "run": "https://github.com/huggingface/transformers/actions/runs/41151180232",
+          "fetchedAt": "2026-10-31T18:34:35.249Z",
+          "branch": "main",
+          "fullName": "huggingface/transformers",
+          "job": "Doc builder",
+          "step": "Build and push",
+          "logCause": "buildx failed with: ERROR: failed to build: failed to solve: process \"/bin/sh -c doc-builder build transformers transformers/docs/source/en --build_dir doc-build-dev --notebook_dir notebooks/transformers_doc --clean\" di…",
+          "tail": [
+            "  24 | >>> RUN doc-builder build transformers transformers/docs/source/en --build_dir doc-build-dev --notebook_dir notebooks/transformers_doc --clean",
+            "  25 |     RUN rm -rf doc-build-dev",
+            "  26 |",
+            "--------------------",
+            "ERROR: failed to build: failed to solve: process \"/bin/sh -c doc-builder build transformers transformers/docs/source/en --build_dir doc-build-dev --notebook_dir notebooks/transformers_doc --clean\" did not complete succe…",
+            "builder-1ca8c181-c008-4c01-a2d5-2bcf368f49e6/builder-1ca8c181-c008-4c01-a2d5-2bcf368f49e60/lv7yw4f0czrwvwbysnepuhyfg",
+            "Build summary supported!",
+            "##[error]buildx failed with: ERROR: failed to build: failed to solve: process \"/bin/sh -c doc-builder build transformers transformers/docs/source/en --build_dir doc-build-dev --notebook_dir notebooks/transformers_doc --…"
           ],
           "duplicates": [],
           "fix": null
@@ -361,8 +386,8 @@
         },
         "huggingface/transformers#.github/workflows/self-nightly-past-ci-caller.yml": {
           "v": 4,
-          "run": "https://github.com/huggingface/transformers/actions/runs/41159573649",
-          "fetchedAt": "2026-10-31T06:40:20.613Z",
+          "run": "https://github.com/huggingface/transformers/actions/runs/41209426923",
+          "fetchedAt": "2026-10-31T18:34:41.465Z",
           "branch": "main",
           "fullName": "huggingface/transformers",
           "duplicates": [],
@@ -458,7 +483,7 @@
     },
     "langflow-ai/langflow": {
       "repo": "langflow-ai/langflow",
-      "stars": 156186,
+      "stars": 156196,
       "file": "drafts/langflow-ai__langflow.md",
       "state": "ready",
       "title": "CI: 3 workflows dark on main (\"Deploy Storybook to GitHub Pages\", \"Mend\", \"Cross-Bundle Test\")",
@@ -470,7 +495,7 @@
       "approved": false,
       "hint": null,
       "duplicateLinks": [],
-      "updatedAt": "2026-10-31T12:37:42.482Z",
+      "updatedAt": "2026-10-31T18:33:59.606Z",
       "cache": {
         "langflow-ai/langflow#.github/workflows/deploy-storybook.yml": {
           "v": 4,
@@ -529,7 +554,7 @@
     },
     "langchain-ai/langchain": {
       "repo": "langchain-ai/langchain",
-      "stars": 148764,
+      "stars": 148773,
       "file": "drafts/langchain-ai__langchain.md",
       "state": "ready",
       "title": "CI: \"⏰ Integration Tests\" workflow failing on master since 2026-10-09",
@@ -539,25 +564,25 @@
       "approved": false,
       "hint": null,
       "duplicateLinks": [],
-      "updatedAt": "2026-10-31T12:37:42.482Z",
+      "updatedAt": "2026-10-31T18:33:59.606Z",
       "cache": {
         "langchain-ai/langchain#.github/workflows/integration_tests.yml": {
           "v": 4,
-          "run": "https://github.com/langchain-ai/langchain/actions/runs/41060256971",
-          "fetchedAt": "2026-10-30T18:37:57.025Z",
+          "run": "https://github.com/langchain-ai/langchain/actions/runs/41203800817",
+          "fetchedAt": "2026-10-31T18:35:04.993Z",
           "branch": "master",
           "fullName": "langchain-ai/langchain",
-          "job": "🐍 Python 3.10: libs/partners/aws",
+          "job": "🐍 Python 3.14: libs/partners/fireworks",
           "step": "🚀 Run Integration Tests",
-          "logCause": "= 283 failed, 233 passed, 198 skipped, 13 xfailed, 5 xpassed, 4 warnings in 197.96s (0:03:17) =",
+          "logCause": "= 2 failed, 60 passed, 11 skipped, 1 xpassed, 5 warnings, 2 retried in 190.85s (0:03:10) =",
           "tail": [
-            "FAILED tests/integration_tests/tools/test_nova.py::TestNovaStreaming::test_accumulating_chunks_into_full_message - botocore.exceptions.ClientError: An error occurred (501) when calling the ConverseStream operation:",
-            "FAILED tests/integration_tests/tools/test_nova.py::TestNovaStreaming::test_reasoning_content_chunks - botocore.exceptions.ClientError: An error occurred (501) when calling the ConverseStream operation:",
-            "FAILED tests/integration_tests/tools/test_nova.py::TestNovaStreaming::test_reasoning_with_different_effort_levels - botocore.exceptions.ClientError: An error occurred (501) when calling the ConverseStream operation:",
-            "FAILED tests/integration_tests/tools/test_nova.py::TestNovaStreaming::test_chunk_content_structure - botocore.exceptions.ClientError: An error occurred (501) when calling the ConverseStream operation:",
-            "FAILED tests/integration_tests/tools/test_nova.py::TestNovaStreaming::test_empty_chunks_handling - botocore.exceptions.ClientError: An error occurred (501) when calling the ConverseStream operation:",
-            "FAILED tests/integration_tests/tools/test_nova.py::TestNovaStreaming::test_with_string_tool_names - botocore.exceptions.ClientError: An error occurred (501) when calling the ConverseStream operation:",
-            "= 283 failed, 233 passed, 198 skipped, 13 xfailed, 5 xpassed, 4 warnings in 197.96s (0:03:17) =",
+            "=========================== short test summary info ============================",
+            "FAILED tests/integration_tests/test_chat_models.py::test_astream - AssertionError: Expected exactly one chunk with token counts or response_metadata. AIMessageChunk aggregation adds / appends counts and metadata. Check …",
+            "FAILED tests/integration_tests/test_standard.py::TestFireworksStandard::test_usage_metadata_streaming - AssertionError: Only one chunk should set input_tokens, the rest should be 0 or None",
+            "assert (not ***'input_tokens': 85, 'output_tokens': 4, 'total_tokens': 89, 'input_token_details': ***'cache_read': 84*** or not 85)",
+            " +  where ***'input_tokens': 85, 'output_tokens': 4, 'total_tokens': 89, 'input_token_details': ***'cache_read': 84*** = AIMessageChunk(content='', additional_kwargs=***'reasoning_content': 'The'***, response_metadata=*…",
+            "= 2 failed, 60 passed, 11 skipped, 1 xpassed, 5 warnings, 2 retried in 190.85s (0:03:10) =",
+            "make: *** [Makefile:18: integration_tests] Error 1",
             "##[error]Process completed with exit code 2."
           ],
           "duplicates": [],
@@ -594,7 +619,7 @@
     },
     "microsoft/powertoys": {
       "repo": "microsoft/PowerToys",
-      "stars": 140328,
+      "stars": 140342,
       "file": "drafts/microsoft__PowerToys.md",
       "state": "ready",
       "title": "CI: \"Publish Dev Docs Website\" workflow failing on main since 2026-10-06",
@@ -604,7 +629,7 @@
       "approved": false,
       "hint": null,
       "duplicateLinks": [],
-      "updatedAt": "2026-10-31T12:37:42.482Z",
+      "updatedAt": "2026-10-31T18:33:59.606Z",
       "cache": {
         "microsoft/PowerToys#.github/workflows/regenerate-devdocs-website.yml": {
           "v": 4,
@@ -632,7 +657,7 @@
     },
     "google-gemini/gemini-cli": {
       "repo": "google-gemini/gemini-cli",
-      "stars": 108646,
+      "stars": 108651,
       "file": "drafts/google-gemini__gemini-cli.md",
       "state": "ready",
       "title": "CI: 3 workflows dark on main (\"📋 Gemini Scheduled Issue Triage\", \"Memory Tests: Nightly\", \"Performance Tests: Nightly\")",
@@ -644,25 +669,25 @@
       "approved": false,
       "hint": null,
       "duplicateLinks": [],
-      "updatedAt": "2026-10-31T12:37:42.482Z",
+      "updatedAt": "2026-10-31T18:33:59.606Z",
       "cache": {
         "google-gemini/gemini-cli#.github/workflows/gemini-scheduled-issue-triage.yml": {
           "v": 4,
-          "run": "https://github.com/google-gemini/gemini-cli/actions/runs/41199828543",
-          "fetchedAt": "2026-10-31T12:38:59.243Z",
+          "run": "https://github.com/google-gemini/gemini-cli/actions/runs/41227837465",
+          "fetchedAt": "2026-10-31T18:35:12.074Z",
           "branch": "main",
           "fullName": "google-gemini/gemini-cli",
           "job": "triage-issues",
           "step": "Apply Triaged Labels",
           "logCause": "Unhandled error: HttpError: Resource not accessible by integration",
           "tail": [
-            "    request: {",
-            "      agent: [Agent],",
-            "      fetch: [Function: proxyFetch],",
-            "      hook: [Function: bound bound register]",
-            "    }",
-            "  }",
-            "}",
+            "##[start-action display=Upload Telemetry to Google Cloud;id=gemini_standard_issue_analysis.__run_3]",
+            "No telemetry log found, skipping upload.",
+            "##[end-action id=gemini_standard_issue_analysis.__run_3;outcome=success;conclusion=success;duration_ms=18]",
+            "Aggregated triage results for 1 issues.",
+            "RequestError [HttpError]: Resource not accessible by integration",
+            "    at /home/runner/work/_actions/actions/github-script/60a0d83039c74a4aee543508d2ffcb1c3799cdea/dist/index.js:9537:21",
+            "    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)",
             "##[error]Unhandled error: HttpError: Resource not accessible by integration"
           ],
           "duplicates": [],
@@ -826,7 +851,7 @@
     },
     "headroomlabs-ai/headroom": {
       "repo": "headroomlabs-ai/headroom",
-      "stars": 78439,
+      "stars": 78457,
       "file": "drafts/headroomlabs-ai__headroom.md",
       "state": "ready",
       "title": "CI: \"PR Governance\" workflow getting cancelled on main since 2026-10-29",
@@ -836,7 +861,7 @@
       "approved": false,
       "hint": "infra-class dark (runner/timeout/cancel) — lower value",
       "duplicateLinks": [],
-      "updatedAt": "2026-10-31T12:37:42.482Z",
+      "updatedAt": "2026-10-31T18:33:59.606Z",
       "cache": {
         "headroomlabs-ai/headroom#.github/workflows/pr-health.yml": {
           "v": 4,
@@ -904,7 +929,7 @@
     },
     "socketio/socket.io": {
       "repo": "socketio/socket.io",
-      "stars": 63232,
+      "stars": 63233,
       "file": "drafts/socketio__socket.io.md",
       "state": "ready",
       "title": "CI: \"Build examples\" workflow failing on main since 2026-09-27",
@@ -914,7 +939,7 @@
       "approved": false,
       "hint": null,
       "duplicateLinks": [],
-      "updatedAt": "2026-10-31T12:37:42.482Z",
+      "updatedAt": "2026-10-31T18:33:59.606Z",
       "cache": {
         "socketio/socket.io#.github/workflows/build-examples.yml": {
           "v": 4,
@@ -942,7 +967,7 @@
     },
     "zylon-ai/private-gpt": {
       "repo": "zylon-ai/private-gpt",
-      "stars": 57621,
+      "stars": 57624,
       "file": "drafts/zylon-ai__private-gpt.md",
       "state": "ready",
       "title": "CI: \"update-claude-specs\" workflow failing on main since 2026-09-14",
@@ -952,7 +977,7 @@
       "approved": false,
       "hint": null,
       "duplicateLinks": [],
-      "updatedAt": "2026-10-31T12:37:42.482Z",
+      "updatedAt": "2026-10-31T18:33:59.606Z",
       "cache": {
         "zylon-ai/private-gpt#.github/workflows/update-claude-specs.yml": {
           "v": 4,
@@ -1020,7 +1045,7 @@
     },
     "jestjs/jest": {
       "repo": "jestjs/jest",
-      "stars": 45468,
+      "stars": 45467,
       "file": "drafts/jestjs__jest.md",
       "state": "duplicate",
       "title": "(all dark workflows already tracked upstream)",
@@ -1032,7 +1057,7 @@
       "duplicateLinks": [
         "https://github.com/jestjs/jest/issues/16382"
       ],
-      "updatedAt": "2026-10-31T12:37:42.482Z",
+      "updatedAt": "2026-10-31T18:33:59.606Z",
       "cache": {
         "jestjs/jest#.github/workflows/nightly.yml": {
           "v": 4,
@@ -1067,7 +1092,7 @@
     },
     "colinhacks/zod": {
       "repo": "colinhacks/zod",
-      "stars": 44236,
+      "stars": 44235,
       "file": "drafts/colinhacks__zod.md",
       "state": "ready",
       "title": "CI: 2 workflows dark on main (\"Check zod and @zod/mini lockstep on npm\", \"test\")",
@@ -1078,7 +1103,7 @@
       "approved": false,
       "hint": null,
       "duplicateLinks": [],
-      "updatedAt": "2026-10-31T12:37:42.482Z",
+      "updatedAt": "2026-10-31T18:33:59.606Z",
       "cache": {
         "colinhacks/zod#.github/workflows/lockstep.yml": {
           "v": 4,
@@ -1128,7 +1153,7 @@
     },
     "bytedance/ui-tars-desktop": {
       "repo": "bytedance/UI-TARS-desktop",
-      "stars": 39477,
+      "stars": 39485,
       "file": "drafts/bytedance__UI-TARS-desktop.md",
       "state": "ready",
       "title": "CI: 3 workflows dark on main (\"Scorecard supply-chain security\", \"UI-TARS E2E Test\", \"secretlint\")",
@@ -1140,7 +1165,7 @@
       "approved": false,
       "hint": null,
       "duplicateLinks": [],
-      "updatedAt": "2026-10-31T12:37:42.482Z",
+      "updatedAt": "2026-10-31T18:33:59.606Z",
       "cache": {
         "bytedance/UI-TARS-desktop#.github/workflows/scorecard.yml": {
           "v": 4,
@@ -1199,7 +1224,7 @@
       "approved": false,
       "hint": null,
       "duplicateLinks": [],
-      "updatedAt": "2026-10-31T12:37:42.482Z",
+      "updatedAt": "2026-10-31T18:33:59.606Z",
       "cache": {
         "reactivex/rxjs#.github/workflows/osv.yml": {
           "v": 4,
@@ -1263,7 +1288,7 @@
       "approved": false,
       "hint": null,
       "duplicateLinks": [],
-      "updatedAt": "2026-10-31T12:37:42.482Z",
+      "updatedAt": "2026-10-31T18:33:59.606Z",
       "cache": {
         "sequelize/sequelize#.github/workflows/autoupdate.yml": {
           "v": 4,
@@ -1331,7 +1356,7 @@
     },
     "activepieces/activepieces": {
       "repo": "activepieces/activepieces",
-      "stars": 25305,
+      "stars": 25311,
       "file": "drafts/activepieces__activepieces.md",
       "state": "ready",
       "title": "CI: 2 workflows dark on main (\"Chat Evals\", \"Benchmark\")",
@@ -1342,7 +1367,7 @@
       "approved": false,
       "hint": null,
       "duplicateLinks": [],
-      "updatedAt": "2026-10-31T12:37:42.482Z",
+      "updatedAt": "2026-10-31T18:33:59.606Z",
       "cache": {
         "activepieces/activepieces#.github/workflows/agent-evals.yml": {
           "v": 4,
@@ -1392,7 +1417,7 @@
     },
     "1panel-dev/maxkb": {
       "repo": "1Panel-dev/MaxKB",
-      "stars": 23083,
+      "stars": 23085,
       "file": "drafts/1Panel-dev__MaxKB.md",
       "state": "ready",
       "title": "CI: \"sync2gitee\" workflow failing on v2 since 2026-09-14",
@@ -1402,7 +1427,7 @@
       "approved": false,
       "hint": null,
       "duplicateLinks": [],
-      "updatedAt": "2026-10-31T12:37:42.482Z",
+      "updatedAt": "2026-10-31T18:33:59.606Z",
       "cache": {
         "1Panel-dev/MaxKB#.github/workflows/sync2gitee.yml": {
           "v": 4,
@@ -1441,7 +1466,7 @@
       "approved": false,
       "hint": null,
       "duplicateLinks": [],
-      "updatedAt": "2026-10-31T12:37:42.482Z",
+      "updatedAt": "2026-10-31T18:33:59.606Z",
       "cache": {
         "mochajs/mocha#.github/workflows/npm-script.yml": {
           "v": 4,
@@ -1465,7 +1490,7 @@
     },
     "googleapis/mcp-toolbox": {
       "repo": "googleapis/mcp-toolbox",
-      "stars": 16763,
+      "stars": 16764,
       "file": "drafts/googleapis__mcp-toolbox.md",
       "state": "ready",
       "title": "CI: \"CF: Deploy Dev Docs\" workflow failing on main since 2026-09-28",
@@ -1475,7 +1500,7 @@
       "approved": false,
       "hint": null,
       "duplicateLinks": [],
-      "updatedAt": "2026-10-31T12:37:42.482Z",
+      "updatedAt": "2026-10-31T18:33:59.606Z",
       "cache": {
         "googleapis/mcp-toolbox#.github/workflows/deploy_dev_docs_to_cf.yaml": {
           "v": 4,
@@ -1503,7 +1528,7 @@
     },
     "triggerdotdev/trigger.dev": {
       "repo": "triggerdotdev/trigger.dev",
-      "stars": 16667,
+      "stars": 16666,
       "file": "drafts/triggerdotdev__trigger.dev.md",
       "state": "ready",
       "title": "CI: \"🛡️ E2E Tests: Webapp Auth (full)\" workflow failing on main since 2026-10-27",
@@ -1513,7 +1538,7 @@
       "approved": false,
       "hint": null,
       "duplicateLinks": [],
-      "updatedAt": "2026-10-31T12:37:42.482Z",
+      "updatedAt": "2026-10-31T18:33:59.606Z",
       "cache": {
         "triggerdotdev/trigger.dev#.github/workflows/e2e-webapp-auth-full.yml": {
           "v": 4,
@@ -1541,7 +1566,7 @@
     },
     "storytold/pdfcraft": {
       "repo": "storytold/pdfcraft",
-      "stars": 18867,
+      "stars": 18900,
       "file": "drafts/storytold__pdfcraft.md",
       "state": "ready",
       "title": "CI: \"CI\" workflow failing on main since 2026-10-30",
@@ -1551,7 +1576,7 @@
       "approved": false,
       "hint": null,
       "duplicateLinks": [],
-      "updatedAt": "2026-10-31T12:37:42.482Z",
+      "updatedAt": "2026-10-31T18:33:59.606Z",
       "cache": {
         "storytold/pdfcraft#.github/workflows/ci.yml": {
           "v": 4,
@@ -1580,8 +1605,8 @@
     "open-metadata/openmetadata": {
       "repo": "open-metadata/OpenMetadata",
       "stars": 15637,
-      "file": "drafts/open-metadata__OpenMetadata.md",
-      "state": "ready",
+      "file": "drafts/resolved/open-metadata__OpenMetadata.md",
+      "state": "resolved",
       "title": "CI: 2 workflows dark on main (\"Integration Tests - MySQL + Elasticsearch\", \"Populate Playwright CI caches\")",
       "keys": [
         "open-metadata/OpenMetadata#.github/workflows/integration-tests-mysql-elasticsearch.yml",
@@ -1625,7 +1650,9 @@
           "duplicates": [],
           "fix": null
         }
-      }
+      },
+      "resolvedAt": "2026-10-31T18:33:59.606Z",
+      "resolvedNote": "lit again"
     },
     "storytold/wordcraft": {
       "repo": "storytold/wordcraft",
@@ -1809,7 +1836,7 @@
     },
     "modelcontextprotocol/modelcontextprotocol": {
       "repo": "modelcontextprotocol/modelcontextprotocol",
-      "stars": 9572,
+      "stars": 9573,
       "file": "drafts/modelcontextprotocol__modelcontextprotocol.md",
       "state": "ready",
       "title": "CI: \"Publish spec release\" workflow not completing (runs skipped) on main since 2026-09-28",
@@ -1819,12 +1846,12 @@
       "approved": false,
       "hint": "latest run was skipped, not failed — probably not worth filing",
       "duplicateLinks": [],
-      "updatedAt": "2026-10-31T12:37:42.482Z",
+      "updatedAt": "2026-10-31T18:33:59.606Z",
       "cache": {
         "modelcontextprotocol/modelcontextprotocol#.github/workflows/publish-release.yml": {
           "v": 4,
-          "run": "https://github.com/modelcontextprotocol/modelcontextprotocol/actions/runs/41183527455",
-          "fetchedAt": "2026-10-31T12:40:38.222Z",
+          "run": "https://github.com/modelcontextprotocol/modelcontextprotocol/actions/runs/41216215535",
+          "fetchedAt": "2026-10-31T18:36:25.754Z",
           "branch": "main",
           "fullName": "modelcontextprotocol/modelcontextprotocol",
           "duplicates": [],
@@ -1834,94 +1861,82 @@
     },
     "xberg-io/xberg": {
       "repo": "xberg-io/xberg",
-      "stars": 9472,
+      "stars": 9481,
       "file": "drafts/xberg-io__xberg.md",
       "state": "ready",
-      "title": "CI: 4 workflows dark on main (\"CI Rust\", \"CI Integrations\", \"CI E2E\", +1 more)",
+      "title": "CI: 3 workflows dark on main (\"CI Rust\", \"CI E2E\", \"CI Docker\")",
       "keys": [
         "xberg-io/xberg#.github/workflows/ci-rust.yaml",
-        "xberg-io/xberg#.github/workflows/ci-integrations.yaml",
         "xberg-io/xberg#.github/workflows/ci-e2e.yaml",
-        "xberg-io/xberg#.github/workflows/ci-lint.yaml"
+        "xberg-io/xberg#.github/workflows/ci-docker.yaml"
       ],
       "approved": false,
       "hint": null,
       "duplicateLinks": [],
-      "updatedAt": "2026-10-31T12:37:42.482Z",
+      "updatedAt": "2026-10-31T18:33:59.606Z",
       "cache": {
         "xberg-io/xberg#.github/workflows/ci-rust.yaml": {
           "v": 4,
-          "run": "https://github.com/xberg-io/xberg/actions/runs/41187629962",
-          "fetchedAt": "2026-10-31T12:40:41.254Z",
+          "run": "https://github.com/xberg-io/xberg/actions/runs/41199536053",
+          "fetchedAt": "2026-10-31T18:36:28.571Z",
           "branch": "main",
           "fullName": "xberg-io/xberg",
           "job": "Rust (macos-26)",
           "step": "Run tests",
-          "logCause": "The operation was canceled.",
+          "logCause": "[rust:test:ci] ERROR task failed",
           "tail": [
-            "     Running `sccache /Users/runner/.rustup/toolchains/1.99.1-aarch64-apple-darwin/bin/rustc --crate-name pdf_picture_ocr_text --edition=2024 crates/xberg/tests/pdf_picture_ocr_text.rs --error-format=json --json=diagnos…",
-            "     Running `sccache /Users/runner/.rustup/toolchains/1.99.1-aarch64-apple-darwin/bin/rustc --crate-name ocr_table_right_aligned_amounts --edition=2024 crates/xberg/tests/ocr_table_right_aligned_amounts.rs --error-form…",
-            "     Running `sccache /Users/runner/.rustup/toolchains/1.99.1-aarch64-apple-darwin/bin/rustc --crate-name issue_122_citation_detail_dropped --edition=2024 crates/xberg/tests/issue_122_citation_detail_dropped.rs --error-…",
-            "     Running `sccache /Users/runner/.rustup/toolchains/1.99.1-aarch64-apple-darwin/bin/rustc --crate-name diagram_dot_pdf --edition=2024 crates/xberg/tests/diagram_dot_pdf.rs --error-format=json --json=diagnostic-render…",
-            "     Running `sccache /Users/runner/.rustup/toolchains/1.99.1-aarch64-apple-darwin/bin/rustc --crate-name footnote_reference_placement --edition=2024 crates/xberg/tests/footnote_reference_placement.rs --error-format=jso…",
-            "     Running `sccache /Users/runner/.rustup/toolchains/1.99.1-aarch64-apple-darwin/bin/rustc --crate-name issue_141_fictionbook_footnotes --edition=2024 crates/xberg/tests/issue_141_fictionbook_footnotes.rs --error-form…",
-            "     Running `sccache /Users/runner/.rustup/toolchains/1.99.1-aarch64-apple-darwin/bin/rustc --crate-name issue_270_config_validation_beyond_env --edition=2024 crates/xberg/tests/issue_270_config_validation_beyond_env.r…",
-            "##[error]The operation was canceled."
+            "Filesystem      Size    Used   Avail Capacity iused ifree %iused  Mounted on",
+            "/dev/disk2s5   320Gi   269Gi    29Gi    91%    2.1M  302M    1%   /System/Volumes/Data",
+            "Cargo environment:",
+            "cargo 1.99.1 (5f94df478 2026-08-27)",
+            "rustc 1.99.1 (58cf8f9c3 2026-10-13)",
+            "Finished in 5026.25s",
+            "[rust:test:ci] ERROR task failed",
+            "##[error]Process completed with exit code 1."
           ],
-          "duplicates": [],
-          "fix": null
-        },
-        "xberg-io/xberg#.github/workflows/ci-integrations.yaml": {
-          "v": 4,
-          "run": "https://github.com/xberg-io/xberg/actions/runs/41187629952",
-          "fetchedAt": "2026-10-31T12:40:46.291Z",
-          "branch": "main",
-          "fullName": "xberg-io/xberg",
-          "job": "Java (spring-ai)",
-          "logError": "log not readable (404)",
           "duplicates": [],
           "fix": null
         },
         "xberg-io/xberg#.github/workflows/ci-e2e.yaml": {
           "v": 4,
-          "run": "https://github.com/xberg-io/xberg/actions/runs/41187629958",
-          "fetchedAt": "2026-10-31T12:40:49.824Z",
+          "run": "https://github.com/xberg-io/xberg/actions/runs/41203549508",
+          "fetchedAt": "2026-10-31T18:36:33.265Z",
           "branch": "main",
           "fullName": "xberg-io/xberg",
-          "job": "E2E (swift)",
-          "step": "Run e2e tests (swift, instrumented)",
+          "job": "Build FFI (x86_64-unknown-linux-gnu)",
+          "step": "Build CLI",
           "logCause": "The operation was canceled.",
           "tail": [
-            "warning: xberg-libwpd@1.4.0:   255 |         BOOST_PROTO_TRANSFORM_(PrimitiveTransform, X)",
-            "warning: xberg-libwpd@1.4.0:       |         ^~~~~~~~~~~~~~~~~~~~~~",
-            "warning: xberg-tesseract@1.4.0: Library already available at expected location: /home/runner/work/xberg/xberg/target/release/build/xberg-tesseract-e17425b3b3cc2064/out/leptonica/lib/libleptonica.a",
-            "warning: xberg-tesseract@1.4.0: Library already available at expected location: /home/runner/work/xberg/xberg/target/release/build/xberg-tesseract-e17425b3b3cc2064/out/tesseract/lib/libtesseract.a",
-            "warning: xberg-tesseract@1.4.0: Linking with tesseract (static linking): tesseract",
-            "warning: xberg-tesseract@1.4.0: Linking with leptonica (static linking): leptonica",
-            "   Compiling xberg v1.4.0 (/home/runner/work/xberg/xberg/crates/xberg)",
+            "   Compiling lru v0.19.0",
+            "   Compiling similar v3.2.1",
+            "   Compiling org v0.3.1",
+            "   Compiling minijinja v3.0.5",
+            "   Compiling xberg-cli v1.4.0 (/home/runner/work/xberg/xberg/crates/xberg-cli)",
+            "   Compiling jotdown v0.10.0",
+            "   Compiling clap_complete v4.6.11",
             "##[error]The operation was canceled."
           ],
           "duplicates": [],
           "fix": null
         },
-        "xberg-io/xberg#.github/workflows/ci-lint.yaml": {
+        "xberg-io/xberg#.github/workflows/ci-docker.yaml": {
           "v": 4,
-          "run": "https://github.com/xberg-io/xberg/actions/runs/41187630237",
-          "fetchedAt": "2026-10-31T12:40:54.045Z",
+          "run": "https://github.com/xberg-io/xberg/actions/runs/41215099611",
+          "fetchedAt": "2026-10-31T18:36:36.926Z",
           "branch": "main",
           "fullName": "xberg-io/xberg",
-          "job": "Benchmark script regressions",
-          "step": "Validate benchmark scripts",
-          "logCause": "[benchmark:validate:scripts] ERROR task failed",
+          "job": "Docker (cli)",
+          "step": "Build Docker image",
+          "logCause": "The operation was canceled.",
           "tail": [
-            "----------------------------------------------------------------------",
-            "Ran 69 tests in 4.620s",
-            "OK",
-            "[benchmark:validate:scripts] $ scripts/ci/benchmarks/validate-workflow-build-config.sh",
-            "benchmark workflow validation failed: standalone harness validation must check out the dispatched benchmark revision",
-            "Finished in 5.09s",
-            "[benchmark:validate:scripts] ERROR task failed",
-            "##[error]Process completed with exit code 1."
+            "#26 3325.5    Compiling lru v0.19.0",
+            "#26 3325.8    Compiling similar v3.2.1",
+            "#26 3342.2    Compiling minijinja v3.0.5",
+            "#26 3362.7    Compiling org v0.3.1",
+            "#26 3363.1    Compiling xberg-cli v1.4.0 (/build/crates/xberg-cli)",
+            "#26 3363.3    Compiling jotdown v0.10.0",
+            "#26 4391.5    Compiling clap_complete v4.6.11",
+            "##[error]The operation was canceled."
           ],
           "duplicates": [],
           "fix": null
@@ -2021,7 +2036,7 @@
       "approved": false,
       "hint": null,
       "duplicateLinks": [],
-      "updatedAt": "2026-10-31T12:37:42.482Z",
+      "updatedAt": "2026-10-31T18:33:59.606Z",
       "cache": {
         "webiny/webiny-js#.github/workflows/cleanup.yml": {
           "v": 4,
@@ -2135,7 +2150,7 @@
       "approved": false,
       "hint": null,
       "duplicateLinks": [],
-      "updatedAt": "2026-10-31T12:37:42.482Z",
+      "updatedAt": "2026-10-31T18:33:59.606Z",
       "cache": {
         "modelcontextprotocol/php-sdk#.github/workflows/conformance-weekly.yaml": {
           "v": 4,
@@ -2354,54 +2369,22 @@
     },
     "openclaw/openclaw": {
       "repo": "openclaw/openclaw",
-      "stars": 393528,
+      "stars": 393549,
       "file": "drafts/openclaw__openclaw.md",
       "state": "ready",
-      "title": "CI: 3 workflows dark on main (\"CI\", \"ClawSweeper Dispatch\", \"CodeQL\")",
+      "title": "CI: \"Docs\" workflow not completing (runs skipped) on main since 2026-10-21",
       "keys": [
-        "openclaw/openclaw#.github/workflows/ci.yml",
-        "openclaw/openclaw#.github/workflows/clawsweeper-dispatch.yml",
-        "openclaw/openclaw#.github/workflows/codeql.yml"
+        "openclaw/openclaw#.github/workflows/docs.yml"
       ],
       "approved": false,
-      "hint": null,
+      "hint": "latest run was skipped, not failed — probably not worth filing",
       "duplicateLinks": [],
-      "updatedAt": "2026-10-31T12:37:42.482Z",
+      "updatedAt": "2026-10-31T18:33:59.606Z",
       "cache": {
-        "openclaw/openclaw#.github/workflows/ci.yml": {
+        "openclaw/openclaw#.github/workflows/docs.yml": {
           "v": 4,
-          "run": "https://github.com/openclaw/openclaw/actions/runs/39263321789",
-          "fetchedAt": "2026-10-31T12:37:54.486Z",
-          "branch": "main",
-          "fullName": "openclaw/openclaw",
-          "duplicates": [],
-          "fix": null
-        },
-        "openclaw/openclaw#.github/workflows/clawsweeper-dispatch.yml": {
-          "v": 4,
-          "run": "https://github.com/openclaw/openclaw/actions/runs/39263457867",
-          "fetchedAt": "2026-10-31T12:37:57.735Z",
-          "branch": "main",
-          "fullName": "openclaw/openclaw",
-          "job": "dispatch",
-          "logCause": "Dispatched GitHub activity to ClawSweeper.",
-          "tail": [
-            "Prepare all required actions",
-            "Getting action download info",
-            "Download action repository 'actions/create-github-app-token@64ab729a6294000f5aa4a4bc0b73d1f32bc45510' (SHA:64ab729a6294000f5aa4a4bc0b73d1f32bc45510)",
-            "Download action repository 'actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1' (SHA:949feb2413d6458794dcd2491c4babbbce0c15c1)",
-            "Complete job name: dispatch",
-            "Inputs 'owner' and 'repositories' are set. Creating token for the following repositories:",
-            "- openclaw/clawsweeper",
-            "Dispatched GitHub activity to ClawSweeper."
-          ],
-          "duplicates": [],
-          "fix": null
-        },
-        "openclaw/openclaw#.github/workflows/codeql.yml": {
-          "v": 4,
-          "run": "https://github.com/openclaw/openclaw/actions/runs/39263457610",
-          "fetchedAt": "2026-10-31T12:38:01.584Z",
+          "run": "https://github.com/openclaw/openclaw/actions/runs/39578680946",
+          "fetchedAt": "2026-10-31T18:34:12.404Z",
           "branch": "main",
           "fullName": "openclaw/openclaw",
           "duplicates": [],
@@ -2411,17 +2394,18 @@
     },
     "anomalyco/opencode": {
       "repo": "anomalyco/opencode",
-      "stars": 223455,
+      "stars": 223530,
       "file": "drafts/anomalyco__opencode.md",
       "state": "ready",
-      "title": "CI: \"nightly-beta\" workflow failing on dev since 2026-10-31",
+      "title": "CI: 2 workflows dark on dev (\"nightly-beta\", \"release\")",
       "keys": [
-        "anomalyco/opencode#.github/workflows/nightly-beta.yml"
+        "anomalyco/opencode#.github/workflows/nightly-beta.yml",
+        "anomalyco/opencode#.github/workflows/release.yml"
       ],
       "approved": false,
       "hint": null,
       "duplicateLinks": [],
-      "updatedAt": "2026-10-31T12:37:42.482Z",
+      "updatedAt": "2026-10-31T18:33:59.606Z",
       "cache": {
         "anomalyco/opencode#.github/workflows/nightly-beta.yml": {
           "v": 4,
@@ -2444,52 +2428,46 @@
           ],
           "duplicates": [],
           "fix": null
+        },
+        "anomalyco/opencode#.github/workflows/release.yml": {
+          "v": 4,
+          "run": "https://github.com/anomalyco/opencode/actions/runs/41225636619",
+          "fetchedAt": "2026-10-31T18:34:21.008Z",
+          "branch": "dev",
+          "fullName": "anomalyco/opencode",
+          "duplicates": [],
+          "fix": null
         }
       }
     },
     "morluto/rea": {
       "repo": "morluto/rea",
-      "stars": 409018,
-      "file": "drafts/resolved/morluto__rea.md",
-      "state": "resolved",
-      "title": "CI: \"CI\" workflow failing on main since 2026-10-29",
+      "stars": 414942,
+      "file": "drafts/morluto__rea.md",
+      "state": "ready",
+      "title": "CI: \"CI\" workflow getting cancelled on main since 2026-10-31",
       "keys": [
         "morluto/rea#.github/workflows/ci.yml"
       ],
       "approved": false,
-      "hint": null,
+      "hint": "infra-class dark (runner/timeout/cancel) — lower value",
       "duplicateLinks": [],
-      "updatedAt": "2026-10-30T06:48:43.256Z",
+      "updatedAt": "2026-10-31T18:33:59.606Z",
       "cache": {
         "morluto/rea#.github/workflows/ci.yml": {
           "v": 4,
-          "run": "https://github.com/morluto/rea/actions/runs/41008651194",
-          "fetchedAt": "2026-10-30T06:48:57.666Z",
+          "run": "https://github.com/morluto/rea/actions/runs/41228288894",
+          "fetchedAt": "2026-10-31T18:34:09.471Z",
           "branch": "main",
           "fullName": "morluto/rea",
-          "job": "Deep static checks",
-          "step": "Run deep static checks",
-          "logCause": "command (/home/runner/work/rea/rea/) /opt/hostedtoolcache/node/24.22.1/x64/bin/npm run knip exited (1)",
-          "tail": [
-            "Unused exported types (3)",
-            "GroupingViewKind              analysisView  type  src/domain/analysisView/analysisView.ts:157:15",
-            "JavaScriptRpcEndpoint                       type  src/domain/javascript/javascriptRpcEndpoints.ts:18:3",
-            "JavaScriptOpaqueScopeEffects                type  src/domain/javascript/javascriptSemanticOpaqueEffects.ts:17:15",
-            "Duplicate exports (2)",
-            "MAX_PROVIDER_STARTUP_TIMEOUT_MS|MAXIMUM_HOPPER_CALLER_SCAN_BUDGET_MS    src/domain/analysisResourceLimits.ts",
-            "DEFAULT_DEBUGGER_MAX_COMMAND_OUTPUT_BYTES|DEBUGGER_CONTROL_REPLY_BYTES  src/domain/analysisResourceLimits.ts",
-            "##[error]command (/home/runner/work/rea/rea/) /opt/hostedtoolcache/node/24.22.1/x64/bin/npm run knip exited (1)"
-          ],
           "duplicates": [],
           "fix": null
         }
-      },
-      "resolvedAt": "2026-10-30T12:45:05.868Z",
-      "resolvedNote": "lit again"
+      }
     },
     "yetone/magpie": {
       "repo": "yetone/magpie",
-      "stars": 26691,
+      "stars": 26888,
       "file": "drafts/yetone__magpie.md",
       "state": "ready",
       "title": "CI: \"Test\" workflow getting cancelled on main since 2026-10-25",
@@ -2499,12 +2477,12 @@
       "approved": false,
       "hint": "infra-class dark (runner/timeout/cancel) — lower value",
       "duplicateLinks": [],
-      "updatedAt": "2026-10-31T12:37:42.482Z",
+      "updatedAt": "2026-10-31T18:33:59.606Z",
       "cache": {
         "yetone/magpie#.github/workflows/test.yml": {
           "v": 4,
-          "run": "https://github.com/yetone/magpie/actions/runs/41200301319",
-          "fetchedAt": "2026-10-31T12:39:43.490Z",
+          "run": "https://github.com/yetone/magpie/actions/runs/41229069279",
+          "fetchedAt": "2026-10-31T18:35:57.651Z",
           "branch": "main",
           "fullName": "yetone/magpie",
           "duplicates": [],
@@ -2655,7 +2633,7 @@
     },
     "gentleman-programming/engram": {
       "repo": "Gentleman-Programming/engram",
-      "stars": 7711,
+      "stars": 7714,
       "file": "drafts/Gentleman-Programming__engram.md",
       "state": "ready",
       "title": "CI: \"CI\" workflow failing on main since 2026-10-27",
@@ -2665,7 +2643,7 @@
       "approved": false,
       "hint": null,
       "duplicateLinks": [],
-      "updatedAt": "2026-10-31T12:37:42.482Z",
+      "updatedAt": "2026-10-31T18:33:59.606Z",
       "cache": {
         "Gentleman-Programming/engram#.github/workflows/ci.yml": {
           "v": 4,
@@ -2711,43 +2689,41 @@
     },
     "webpack/webpack": {
       "repo": "webpack/webpack",
-      "stars": 65970,
-      "file": "drafts/resolved/webpack__webpack.md",
-      "state": "resolved",
-      "title": "CI: \"Github Actions\" workflow failing on main since 2026-10-27",
+      "stars": 65972,
+      "file": "drafts/webpack__webpack.md",
+      "state": "ready",
+      "title": "CI: \"Github Actions\" workflow failing on main since 2026-10-31",
       "keys": [
         "webpack/webpack#.github/workflows/test.yml"
       ],
       "approved": false,
       "hint": null,
       "duplicateLinks": [],
-      "updatedAt": "2026-10-27T18:39:56.972Z",
+      "updatedAt": "2026-10-31T18:33:59.606Z",
       "cache": {
         "webpack/webpack#.github/workflows/test.yml": {
           "v": 4,
-          "run": "https://github.com/webpack/webpack/actions/runs/40537384065",
-          "fetchedAt": "2026-10-27T18:41:31.372Z",
+          "run": "https://github.com/webpack/webpack/actions/runs/41221169583",
+          "fetchedAt": "2026-10-31T18:35:22.656Z",
           "branch": "main",
           "fullName": "webpack/webpack",
-          "job": "syntax-equivalence",
-          "step": "Install the pinned browser",
-          "logCause": "The action 'Install the pinned browser' has timed out after 40 minutes.",
+          "job": "runtimes (bun)",
+          "step": "Run yarn test:bun --ci",
+          "logCause": "Tests:       1 failed, 377 skipped, 107540 passed, 107918 total",
           "tail": [
-            "Get:116 http://azure.archive.ubuntu.com/ubuntu resolute/universe amd64v3 libinstpatch-1.0-2 amd64 1.1.7-1.1 [253 kB]",
-            "Get:117 http://azure.archive.ubuntu.com/ubuntu resolute/main amd64v3 libjack-jackd2-0 amd64 1.9.22~dfsg-5build1 [294 kB]",
-            "Get:118 http://azure.archive.ubuntu.com/ubuntu resolute/main amd64v3 libwebrtc-audio-processing-1-3 amd64 1.3-3build2 [416 kB]",
-            "Get:119 http://azure.archive.ubuntu.com/ubuntu resolute-updates/main amd64v3 libspa-0.2-modules amd64 1.6.2-1ubuntu1.2 [1163 kB]",
-            "Get:120 http://azure.archive.ubuntu.com/ubuntu resolute-updates/main amd64v3 libpipewire-0.3-0t64 amd64 1.6.2-1ubuntu1.2 [302 kB]",
-            "Get:121 http://azure.archive.ubuntu.com/ubuntu resolute/universe amd64v3 libsdl3-0 amd64 3.4.2+ds-1ubuntu1 [1155 kB]",
-            "Get:122 http://azure.archive.ubuntu.com/ubuntu resolute/universe amd64v3 timgm6mb-soundfont all 1.3-5build1 [5577 kB]",
-            "##[error]The action 'Install the pinned browser' has timed out after 40 minutes."
+            "Snapshots:   3551 passed, 3551 total",
+            "Time:        737.272 s",
+            "Ran all test suites.",
+            "error Command failed with exit code 1.",
+            "info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.",
+            "error Command failed with exit code 1.",
+            "info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.",
+            "##[error]Process completed with exit code 1."
           ],
           "duplicates": [],
           "fix": null
         }
-      },
-      "resolvedAt": "2026-10-28T01:00:05.584Z",
-      "resolvedNote": "lit again"
+      }
     },
     "eslint/eslint": {
       "repo": "eslint/eslint",
@@ -3291,8 +3267,8 @@
     "tangency-labs/solidcraft": {
       "repo": "tangency-labs/solidcraft",
       "stars": 12497,
-      "file": "drafts/tangency-labs__solidcraft.md",
-      "state": "ready",
+      "file": "drafts/resolved/tangency-labs__solidcraft.md",
+      "state": "resolved",
       "title": "CI: \"Docker\" workflow getting cancelled on main since 2026-10-30",
       "keys": [
         "tangency-labs/solidcraft#.github/workflows/pages.yml",
@@ -3388,7 +3364,9 @@
           ],
           "fix": null
         }
-      }
+      },
+      "resolvedAt": "2026-10-31T18:33:59.606Z",
+      "resolvedNote": "lit again"
     },
     "affaan-m/ecc": {
       "repo": "affaan-m/ECC",
@@ -3575,7 +3553,7 @@
     },
     "xerj-org/xerj": {
       "repo": "xerj-org/xerj",
-      "stars": 17837,
+      "stars": 17887,
       "file": "drafts/xerj-org__xerj.md",
       "state": "ready",
       "title": "CI: \"CI\" workflow getting cancelled on main since 2026-10-30",
@@ -3585,12 +3563,12 @@
       "approved": false,
       "hint": "infra-class dark (runner/timeout/cancel) — lower value",
       "duplicateLinks": [],
-      "updatedAt": "2026-10-31T12:37:42.482Z",
+      "updatedAt": "2026-10-31T18:33:59.606Z",
       "cache": {
         "xerj-org/xerj#.github/workflows/ci.yml": {
           "v": 4,
-          "run": "https://github.com/xerj-org/xerj/actions/runs/41197362940",
-          "fetchedAt": "2026-10-31T12:40:01.451Z",
+          "run": "https://github.com/xerj-org/xerj/actions/runs/41222595424",
+          "fetchedAt": "2026-10-31T18:36:15.439Z",
           "branch": "main",
           "fullName": "xerj-org/xerj",
           "duplicates": [],
@@ -3667,7 +3645,7 @@
     },
     "vuejs/core": {
       "repo": "vuejs/core",
-      "stars": 54859,
+      "stars": 54876,
       "file": "drafts/vuejs__core.md",
       "state": "ready",
       "title": "CI: \"ci\" workflow failing on main since 2026-10-29",
@@ -3677,7 +3655,7 @@
       "approved": false,
       "hint": null,
       "duplicateLinks": [],
-      "updatedAt": "2026-10-31T12:37:42.482Z",
+      "updatedAt": "2026-10-31T18:33:59.606Z",
       "cache": {
         "vuejs/core#.github/workflows/ci.yml": {
           "v": 4,
@@ -3768,66 +3746,41 @@
     },
     "gentleman-programming/gentle-ai": {
       "repo": "Gentleman-Programming/gentle-ai",
-      "stars": 8135,
-      "file": "drafts/resolved/Gentleman-Programming__gentle-ai.md",
-      "state": "resolved",
-      "title": "CI: 2 workflows dark on main (\"Windows Full Suite\", \"Gentle Shell macOS qualification\")",
+      "stars": 8158,
+      "file": "drafts/Gentleman-Programming__gentle-ai.md",
+      "state": "ready",
+      "title": "CI: \"Windows Full Suite\" workflow failing on main since 2026-10-31",
       "keys": [
-        "Gentleman-Programming/gentle-ai#.github/workflows/windows-full-suite.yml",
-        "Gentleman-Programming/gentle-ai#.github/workflows/shell-macos-qualification.yml"
+        "Gentleman-Programming/gentle-ai#.github/workflows/windows-full-suite.yml"
       ],
       "approved": false,
       "hint": null,
       "duplicateLinks": [],
-      "updatedAt": "2026-10-30T01:00:38.631Z",
+      "updatedAt": "2026-10-31T18:33:59.606Z",
       "cache": {
         "Gentleman-Programming/gentle-ai#.github/workflows/windows-full-suite.yml": {
           "v": 4,
-          "run": "https://github.com/Gentleman-Programming/gentle-ai/actions/runs/40976835003",
-          "fetchedAt": "2026-10-30T01:04:00.145Z",
+          "run": "https://github.com/Gentleman-Programming/gentle-ai/actions/runs/41220257669",
+          "fetchedAt": "2026-10-31T18:36:40.233Z",
           "branch": "main",
           "fullName": "Gentleman-Programming/gentle-ai",
           "job": "Windows Full Suite (rest)",
           "step": "Run shard",
           "logCause": "FAIL",
           "tail": [
-            "ok  \tgithub.com/gentleman-programming/gentle-ai/v4/internal/update/upgrade\t8.905s",
-            "ok  \tgithub.com/gentleman-programming/gentle-ai/v4/internal/verify\t0.028s",
-            "ok  \tgithub.com/gentleman-programming/gentle-ai/v4/internal/versions\t0.032s",
+            "ok  \tgithub.com/gentleman-programming/gentle-ai/v4/internal/update/upgrade\t14.128s",
+            "ok  \tgithub.com/gentleman-programming/gentle-ai/v4/internal/verify\t0.046s",
+            "ok  \tgithub.com/gentleman-programming/gentle-ai/v4/internal/versions\t0.071s",
             "?   \tgithub.com/gentleman-programming/gentle-ai/v4/scripts\t[no test files]",
-            "ok  \tgithub.com/gentleman-programming/gentle-ai/v4/scripts/crosslane\t2.333s",
+            "ok  \tgithub.com/gentleman-programming/gentle-ai/v4/scripts/crosslane\t2.924s",
             "?   \tgithub.com/gentleman-programming/gentle-ai/v4/scripts/gen-sdd-agent-digests\t[no test files]",
             "FAIL",
             "##[error]Process completed with exit code 1."
           ],
           "duplicates": [],
           "fix": null
-        },
-        "Gentleman-Programming/gentle-ai#.github/workflows/shell-macos-qualification.yml": {
-          "v": 4,
-          "run": "https://github.com/Gentleman-Programming/gentle-ai/actions/runs/40981559952",
-          "fetchedAt": "2026-10-30T01:04:04.316Z",
-          "branch": "main",
-          "fullName": "Gentleman-Programming/gentle-ai",
-          "job": "macOS installation and recovery qualification",
-          "step": "Qualify native Separate, Shared and recovery",
-          "logCause": "NameError: name 'pathlib' is not defined",
-          "tail": [
-            "----------------------------------------------------------------------",
-            "Ran 10 tests in 0.062s",
-            "OK",
-            "Traceback (most recent call last):",
-            "  File \"/Users/runner/work/gentle-ai/gentle-ai/e2e/shell-macos-qualification.py\", line 56, in <module>",
-            "    REVIEWED_SUPPLIERS = json.loads((pathlib.Path(__file__).resolve().parents[1] / 'scripts/gentle-pi-suppliers.json').read_text())['releases']",
-            "NameError: name 'pathlib' is not defined",
-            "##[error]Process completed with exit code 1."
-          ],
-          "duplicates": [],
-          "fix": null
         }
-      },
-      "resolvedAt": "2026-10-30T06:48:43.256Z",
-      "resolvedNote": "lit again"
+      }
     },
     "pascalorg/editor": {
       "repo": "pascalorg/editor",
@@ -3881,7 +3834,7 @@
       "approved": false,
       "hint": "infra-class dark (runner/timeout/cancel) — lower value",
       "duplicateLinks": [],
-      "updatedAt": "2026-10-31T12:37:42.482Z",
+      "updatedAt": "2026-10-31T18:33:59.606Z",
       "cache": {
         "expressjs/body-parser#.github/workflows/ci.yml": {
           "v": 4,
@@ -4571,7 +4524,7 @@
     },
     "liketrek/trek": {
       "repo": "liketrek/TREK",
-      "stars": 15266,
+      "stars": 15273,
       "file": "drafts/liketrek__TREK.md",
       "state": "ready",
       "title": "CI: \"Tests & SonarQube\" workflow getting cancelled on main since 2026-10-31",
@@ -4581,7 +4534,7 @@
       "approved": false,
       "hint": "infra-class dark (runner/timeout/cancel) — lower value",
       "duplicateLinks": [],
-      "updatedAt": "2026-10-31T12:37:42.482Z",
+      "updatedAt": "2026-10-31T18:33:59.606Z",
       "cache": {
         "liketrek/TREK#.github/workflows/test.yml": {
           "v": 4,

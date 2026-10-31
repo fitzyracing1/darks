@@ -1,8 +1,8 @@
 <!-- dark-draft: TheAlgorithms/Python -->
-<!-- draft-state: ready -->
+<!-- draft-state: resolved -->
 # Upstream issue draft: TheAlgorithms/Python
 
-- **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
+- **Status:** resolved — lit again (2026-10-31); nothing to file
 - **Would be filed at:** https://github.com/TheAlgorithms/Python/issues/new
 - **Stars:** 225731 · **Generated:** 2026-10-31T12:37:42.482Z
 - Nothing in this file has been sent anywhere.

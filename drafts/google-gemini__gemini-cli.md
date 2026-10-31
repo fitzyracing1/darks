@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/google-gemini/gemini-cli/issues/new
-- **Stars:** 108646 · **Generated:** 2026-10-31T12:37:42.482Z
+- **Stars:** 108651 · **Generated:** 2026-10-31T18:33:59.606Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -20,7 +20,7 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### 📋 Gemini Scheduled Issue Triage (`.github/workflows/gemini-scheduled-issue-triage.yml`)
 
-- Latest run on `main`: https://github.com/google-gemini/gemini-cli/actions/runs/41199828543 — dark (conclusion: `failure`), 2026-10-31 12:09 UTC
+- Latest run on `main`: https://github.com/google-gemini/gemini-cli/actions/runs/41227837465 — dark (conclusion: `failure`), 2026-10-31 18:07 UTC
 - Dark since: 2026-10-30 15:07 UTC (first run of the current streak)
 - Job / step: `triage-issues` → `Apply Triaged Labels`
 - Likely cause: Unhandled error: HttpError: Resource not accessible by integration
@@ -28,13 +28,13 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 <details><summary>End of the job log</summary>
 
 ```
-    request: {
-      agent: [Agent],
-      fetch: [Function: proxyFetch],
-      hook: [Function: bound bound register]
-    }
-  }
-}
+##[start-action display=Upload Telemetry to Google Cloud;id=gemini_standard_issue_analysis.__run_3]
+No telemetry log found, skipping upload.
+##[end-action id=gemini_standard_issue_analysis.__run_3;outcome=success;conclusion=success;duration_ms=18]
+Aggregated triage results for 1 issues.
+RequestError [HttpError]: Resource not accessible by integration
+    at /home/runner/work/_actions/actions/github-script/60a0d83039c74a4aee543508d2ffcb1c3799cdea/dist/index.js:9537:21
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
 ##[error]Unhandled error: HttpError: Resource not accessible by integration
 ```
 

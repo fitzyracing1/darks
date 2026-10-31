@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/huggingface/transformers/issues/new
-- **Stars:** 168387 · **Generated:** 2026-10-31T12:37:42.482Z
+- **Stars:** 168391 · **Generated:** 2026-10-31T18:33:59.606Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** workflow failed to start (config/permissions on their side)
 - **Note for Joshua:** self-hosted runner problem — maintainers usually know
@@ -12,7 +12,7 @@
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 8 workflows dark on main ("Nightly integration-failure triage", "Check Tiny Models", "Self-hosted runner (nightly-past-ci-caller)", +5 more)
+CI: 9 workflows dark on main ("Nightly integration-failure triage", "Build docker images (scheduled)", "Check Tiny Models", +6 more)
 <!-- END TITLE -->
 
 ## Body
@@ -42,6 +42,28 @@ http.client.RemoteDisconnected: Remote end closed connection without response
 
 </details>
 
+### Build docker images (scheduled) (`.github/workflows/build-docker-images.yml`)
+
+- Latest run on `main`: https://github.com/huggingface/transformers/actions/runs/41151180232 — dark (conclusion: `failure`), 2026-10-31 00:37 UTC
+- Dark since: 2026-10-31 00:37 UTC (first run of the current streak)
+- Job / step: `Doc builder` → `Build and push`
+- Likely cause: buildx failed with: ERROR: failed to build: failed to solve: process "/bin/sh -c doc-builder build transformers transformers/docs/source/en --build_dir doc-build-dev --notebook_dir notebooks/transformers_doc --clean" did not complete succes
+
+<details><summary>End of the job log</summary>
+
+```
+  24 | >>> RUN doc-builder build transformers transformers/docs/source/en --build_dir doc-build-dev --notebook_dir notebooks/transformers_doc --clean
+  25 |     RUN rm -rf doc-build-dev
+  26 |
+--------------------
+ERROR: failed to build: failed to solve: process "/bin/sh -c doc-builder build transformers transformers/docs/source/en --build_dir doc-build-dev --notebook_dir notebooks/transformers_doc --clean" did not complete succe…
+builder-1ca8c181-c008-4c01-a2d5-2bcf368f49e6/builder-1ca8c181-c008-4c01-a2d5-2bcf368f49e60/lv7yw4f0czrwvwbysnepuhyfg
+Build summary supported!
+##[error]buildx failed with: ERROR: failed to build: failed to solve: process "/bin/sh -c doc-builder build transformers transformers/docs/source/en --build_dir doc-build-dev --notebook_dir notebooks/transformers_doc --…
+```
+
+</details>
+
 ### Check Tiny Models (`.github/workflows/check_tiny_models.yml`)
 
 - Latest run on `main`: https://github.com/huggingface/transformers/actions/runs/41158741359 — dark (conclusion: `failure`), 2026-10-31 02:10 UTC
@@ -66,7 +88,7 @@ ImportError: pyarrow requires NumPy 2.0 or newer, found 1.26.4
 
 ### Self-hosted runner (nightly-past-ci-caller) (`.github/workflows/self-nightly-past-ci-caller.yml`)
 
-- Latest run on `main`: https://github.com/huggingface/transformers/actions/runs/41159573649 — dark (conclusion: `startup_failure`), 2026-10-31 02:20 UTC
+- Latest run on `main`: https://github.com/huggingface/transformers/actions/runs/41209426923 — dark (conclusion: `startup_failure`), 2026-10-31 14:17 UTC
 - Dark since: 2026-10-31 02:20 UTC (first run of the current streak)
 - Likely cause: run startup_failure
 
