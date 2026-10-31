@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/colinhacks/zod/issues/new
-- **Stars:** 44235 · **Generated:** 2026-10-31T00:51:41.679Z
+- **Stars:** 44235 · **Generated:** 2026-10-31T06:39:29.667Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -20,7 +20,7 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### Check zod and @zod/mini lockstep on npm (`.github/workflows/lockstep.yml`)
 
-- Latest run on `main`: https://github.com/colinhacks/zod/actions/runs/41014531054 — dark (conclusion: `failure`), 2026-10-30 06:30 UTC
+- Latest run on `main`: https://github.com/colinhacks/zod/actions/runs/41176436299 — dark (conclusion: `failure`), 2026-10-31 06:23 UTC
 - Dark since: 2026-10-30 06:30 UTC (first run of the current streak)
 - Job / step: `check` → `Run nub run check:lockstep`
 - Likely cause: Error: ERR_NUB_NODE_PROVISION_FAILED: failed to provision Node latest (pinned via .nvmrc): downloading Node 27.0.0: downloading https://nodejs.org/dist/v27.0.0/node-v27.0.0-linux-x64.tar.xz: HTTP status client error (40…

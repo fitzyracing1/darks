@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/activepieces/activepieces/issues/new
-- **Stars:** 25300 · **Generated:** 2026-10-31T00:51:41.679Z
+- **Stars:** 25303 · **Generated:** 2026-10-31T06:39:29.667Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -20,29 +20,29 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### Chat Evals (`.github/workflows/agent-evals.yml`)
 
-- Latest run on `main`: https://github.com/activepieces/activepieces/actions/runs/41013136340 — dark (conclusion: `failure`), 2026-10-30 06:16 UTC
+- Latest run on `main`: https://github.com/activepieces/activepieces/actions/runs/41175615565 — dark (conclusion: `failure`), 2026-10-31 06:12 UTC
 - Dark since: 2026-10-13 06:26 UTC (first run of the current streak)
 - Job / step: `Live judge gate` → `Run live chat evals (scope=regression)`
-- Likely cause: AssertionError: see the eval report above for the failing checks: expected [ 'guard-duplicate-flow-not-agent' ] to deeply equal [] (packages/server/worker/test/lib/agent-eval/agent-eval.test.ts:58)
+- Likely cause: AssertionError: see the eval report above for the failing checks: expected [ …(2) ] to deeply equal [] (packages/server/worker/test/lib/agent-eval/agent-eval.test.ts:58)
 
 <details><summary>End of the job log</summary>
 
 ```
      59|     })
      60| })
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
  Test Files  1 failed | 12 passed (13)
       Tests  1 failed | 89 passed (90)
-   Start at  06:20:34
-⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
-   Duration  437.43s (transform 1.19s, setup 55ms, collect 13.02s, tests 432.84s, environment 2ms, prepare 859ms)
-##[error]AssertionError: see the eval report above for the failing checks: expected [ 'guard-duplicate-flow-not-agent' ] to deeply equal []
+   Start at  06:15:29
+   Duration  427.10s (transform 1.14s, setup 53ms, collect 11.25s, tests 422.94s, environment 2ms, prepare 719ms)
+##[error]AssertionError: see the eval report above for the failing checks: expected [ …(2) ] to deeply equal []
 ```
 
 </details>
 
 ### Benchmark (`.github/workflows/benchmark.yml`)
 
-- Latest run on `main`: https://github.com/activepieces/activepieces/actions/runs/40995476610 — dark (conclusion: `failure`), 2026-10-30 03:06 UTC
+- Latest run on `main`: https://github.com/activepieces/activepieces/actions/runs/41162821481 — dark (conclusion: `failure`), 2026-10-31 03:05 UTC
 - Dark since: 2026-10-30 03:06 UTC (first run of the current streak)
 - Job / step: `benchmark (dedicated, 1, 28, 0.5, 1G, 1, 768, true, 28)` → `Detect regression against trailing 14 runs (scheduled runs only)`
 - Likely cause: Box signals API responded 401: {"error":"Unknown token. Send it as \"Authorization: ***"."}
@@ -50,11 +50,11 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 <details><summary>End of the job log</summary>
 
 ```
-      "pct": -35.34290057224607,
+      "pct": 5.861201006832085,
       "breach": false
     }
   ],
-  "breachCount": 3
+  "breachCount": 1
 }
 Box signals API responded 401: {"error":"Unknown token. Send it as \"Authorization: ***"."}
 ##[error]Process completed with exit code 1.

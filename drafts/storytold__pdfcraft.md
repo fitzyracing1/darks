@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/storytold/pdfcraft/issues/new
-- **Stars:** 18790 · **Generated:** 2026-10-31T00:51:41.679Z
+- **Stars:** 18828 · **Generated:** 2026-10-31T06:39:29.667Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -18,7 +18,7 @@ CI: "CI" workflow failing on main since 2026-10-30
 <!-- BEGIN BODY -->
 Hi! The **CI** workflow (`.github/workflows/ci.yml`) on `main` has been failing since 2026-10-30. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/storytold/pdfcraft/actions/runs/41080444100 — dark (conclusion: `failure`), 2026-10-30 15:24 UTC
+- Latest run on `main`: https://github.com/storytold/pdfcraft/actions/runs/41171245003 — dark (conclusion: `failure`), 2026-10-31 05:06 UTC
 - Dark since: 2026-10-30 15:24 UTC (first run of the current streak)
 - Job / step: `gate / gate (windows-latest)` → `Gate`
 - Likely cause: error: test failed, to rerun pass '-p pdfcraft-optimize --test optimize'
@@ -31,7 +31,7 @@ Hi! The **CI** workflow (`.github/workflows/ci.yml`) on `main` has been failing 
 note: Some details are omitted, run with `RUST_BACKTRACE=full` for a verbose backtrace.
 failures:
     monochrome_images_keep_what_they_should
-test result: FAILED. 62 passed; 1 failed; 0 ignored; 0 measured; 0 filtered out; finished in 3.43s
+test result: FAILED. 62 passed; 1 failed; 0 ignored; 0 measured; 0 filtered out; finished in 3.42s
 error: test failed, to rerun pass `-p pdfcraft-optimize --test optimize`
 ##[error]Process completed with exit code 101.
 ```
