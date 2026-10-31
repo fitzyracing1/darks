@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/expressjs/body-parser/issues/new
-- **Stars:** 5499 · **Generated:** 2026-10-31T06:39:29.667Z
+- **Stars:** 5499 · **Generated:** 2026-10-31T12:37:42.482Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 

@@ -4,43 +4,19 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/Gentleman-Programming/engram/issues/new
-- **Stars:** 7708 · **Generated:** 2026-10-31T06:39:29.667Z
+- **Stars:** 7711 · **Generated:** 2026-10-31T12:37:42.482Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 2 workflows dark on main ("Stable release gap audit", "CI")
+CI: "CI" workflow failing on main since 2026-10-27
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
-
-### Stable release gap audit (`.github/workflows/release-gap-audit.yml`)
-
-- Latest run on `main`: https://github.com/Gentleman-Programming/engram/actions/runs/40301736593 — dark (conclusion: `failure`), 2026-10-26 09:43 UTC
-- Dark since: 2026-10-26 09:43 UTC (first run of the current streak)
-- Job / step: `audit` → `Compare published stable releases with main`
-- Likely cause: ℹ fail 0
-
-<details><summary>End of the job log</summary>
-
-```
-ℹ skipped 0
-ℹ todo 0
-ℹ duration_ms 74.066302
-## Stable release gap audit
-Path changes are a release-lag signal, not proof of a fix.
-- **Pi npm latest: gap after pi-v0.4.2.** 49 relevant path(s) changed on main: `".github/workflows/publish-pi.yml"`, `"plugin/pi/.gitignore"`, `"plugin/pi/cli.js"`, `"plugin/pi/index.ts"`, `"plugin/pi/memory-tool-chrome…
-- **Go latest stable GitHub Release: gap after v3.6.0.** 11 relevant path(s) changed on main: `"cmd/engram/main.go"`, `"cmd/engram/mcp_stdio_eof_test.go"`, `"cmd/engram/prompt_discard_test.go"`, `"internal/cloud/cloudst…
-##[error]Process completed with exit code 1.
-```
-
-</details>
-
-### CI (`.github/workflows/ci.yml`)
+Hi! The **CI** workflow (`.github/workflows/ci.yml`) on `main` has been failing since 2026-10-27. Here is what I saw, in case it's useful:
 
 - Latest run on `main`: https://github.com/Gentleman-Programming/engram/actions/runs/41122234694 — dark (conclusion: `failure`), 2026-10-30 20:19 UTC
 - Dark since: 2026-10-27 20:07 UTC (first run of the current streak)

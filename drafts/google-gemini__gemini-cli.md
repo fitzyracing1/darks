@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/google-gemini/gemini-cli/issues/new
-- **Stars:** 108642 · **Generated:** 2026-10-31T06:39:29.667Z
+- **Stars:** 108646 · **Generated:** 2026-10-31T12:37:42.482Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -20,7 +20,7 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### 📋 Gemini Scheduled Issue Triage (`.github/workflows/gemini-scheduled-issue-triage.yml`)
 
-- Latest run on `main`: https://github.com/google-gemini/gemini-cli/actions/runs/41175527540 — dark (conclusion: `failure`), 2026-10-31 06:10 UTC
+- Latest run on `main`: https://github.com/google-gemini/gemini-cli/actions/runs/41199828543 — dark (conclusion: `failure`), 2026-10-31 12:09 UTC
 - Dark since: 2026-10-30 15:07 UTC (first run of the current streak)
 - Job / step: `triage-issues` → `Apply Triaged Labels`
 - Likely cause: Unhandled error: HttpError: Resource not accessible by integration

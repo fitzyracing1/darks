@@ -4,14 +4,14 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/xberg-io/xberg/issues/new
-- **Stars:** 9469 · **Generated:** 2026-10-31T06:39:29.667Z
+- **Stars:** 9472 · **Generated:** 2026-10-31T12:37:42.482Z
 - Nothing in this file has been sent anywhere.
-- **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
+- **Note for Joshua:** cancelled by a concurrency group — likely noise
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 5 workflows dark on main ("CI Rust", "CI Integrations", "CI E2E", +2 more)
+CI: 4 workflows dark on main ("CI Rust", "CI Integrations", "CI E2E", +1 more)
 <!-- END TITLE -->
 
 ## Body
@@ -21,79 +21,72 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### CI Rust (`.github/workflows/ci-rust.yaml`)
 
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/41156693941 — dark (conclusion: `cancelled`), 2026-10-31 01:43 UTC
+- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/41187629962 — dark (conclusion: `cancelled`), 2026-10-31 09:10 UTC
 - Dark since: 2026-10-25 18:30 UTC (first run of the current streak)
 - Job / step: `Rust (macos-26)` → `Run tests`
-- Likely cause: run cancelled in job "Rust (macos-26)"
+- Likely cause: Canceling since a higher priority waiting request for ci-rust-refs/heads/main exists
 
 <details><summary>End of the job log</summary>
 
 ```
-Filesystem      Size    Used   Avail Capacity iused ifree %iused  Mounted on
-/dev/disk2s5   320Gi   269Gi    28Gi    91%    2.1M  297M    1%   /System/Volumes/Data
-Cargo environment:
-cargo 1.99.1 (5f94df478 2026-08-27)
-rustc 1.99.1 (58cf8f9c3 2026-10-13)
-Finished in 3759.73s
-[rust:test:ci] ERROR task failed
-##[error]Process completed with exit code 1.
+     Running `sccache /Users/runner/.rustup/toolchains/1.99.1-aarch64-apple-darwin/bin/rustc --crate-name pdf_picture_ocr_text --edition=2024 crates/xberg/tests/pdf_picture_ocr_text.rs --error-format=json --json=diagnos…
+     Running `sccache /Users/runner/.rustup/toolchains/1.99.1-aarch64-apple-darwin/bin/rustc --crate-name ocr_table_right_aligned_amounts --edition=2024 crates/xberg/tests/ocr_table_right_aligned_amounts.rs --error-form…
+     Running `sccache /Users/runner/.rustup/toolchains/1.99.1-aarch64-apple-darwin/bin/rustc --crate-name issue_122_citation_detail_dropped --edition=2024 crates/xberg/tests/issue_122_citation_detail_dropped.rs --error-…
+     Running `sccache /Users/runner/.rustup/toolchains/1.99.1-aarch64-apple-darwin/bin/rustc --crate-name diagram_dot_pdf --edition=2024 crates/xberg/tests/diagram_dot_pdf.rs --error-format=json --json=diagnostic-render…
+     Running `sccache /Users/runner/.rustup/toolchains/1.99.1-aarch64-apple-darwin/bin/rustc --crate-name footnote_reference_placement --edition=2024 crates/xberg/tests/footnote_reference_placement.rs --error-format=jso…
+     Running `sccache /Users/runner/.rustup/toolchains/1.99.1-aarch64-apple-darwin/bin/rustc --crate-name issue_141_fictionbook_footnotes --edition=2024 crates/xberg/tests/issue_141_fictionbook_footnotes.rs --error-form…
+     Running `sccache /Users/runner/.rustup/toolchains/1.99.1-aarch64-apple-darwin/bin/rustc --crate-name issue_270_config_validation_beyond_env --edition=2024 crates/xberg/tests/issue_270_config_validation_beyond_env.r…
+##[error]The operation was canceled.
 ```
 
 </details>
 
 ### CI Integrations (`.github/workflows/ci-integrations.yaml`)
 
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/41170429913 — dark (conclusion: `cancelled`), 2026-10-31 04:54 UTC
+- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/41187629952 — dark (conclusion: `cancelled`), 2026-10-31 09:10 UTC
 - Dark since: 2026-10-30 03:50 UTC (first run of the current streak)
-- Job / step: `Build local integration bindings`
-- Likely cause: The run was canceled by @Goldziher.
+- Job / step: `Java (spring-ai)`
+- Likely cause: Canceling since a higher priority waiting request for ci-integrations-refs/heads/main exists
 
 ### CI E2E (`.github/workflows/ci-e2e.yaml`)
 
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/41170430051 — dark (conclusion: `cancelled`), 2026-10-31 04:54 UTC
+- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/41187629958 — dark (conclusion: `cancelled`), 2026-10-31 09:10 UTC
 - Dark since: 2026-10-30 03:50 UTC (first run of the current streak)
-- Job / step: `Build FFI (x86_64-unknown-linux-gnu)` → `Set up job`
-- Likely cause: The run was canceled by @Goldziher.
+- Job / step: `E2E (swift)` → `Run e2e tests (swift, instrumented)`
+- Likely cause: Canceling since a higher priority waiting request for ci-e2e-refs/heads/main exists
 
 <details><summary>End of the job log</summary>
 
 ```
-Download action repository 'actions/upload-artifact@v7' (SHA:cf430e030ddbb5b0abf93d22962f4752f3646cd9)
-Getting action download info
-Download action repository 'actions-rust-lang/setup-rust-toolchain@v2' (SHA:ecabd13d1c56bd1345c230e542e9144811ad706f)
-Download action repository 'mozilla-actions/sccache-action@v0.0.11' (SHA:fc920bf0ec8de6ee65d409111f7ec508035751ba)
-Download action repository 'taiki-e/install-action@v2' (SHA:68a389c788b2cd04016ce8c80ee23b80d2ab3d68)
-Getting action download info
-Download action repository 'Swatinem/rust-cache@6323deb102c322ba6fcbdcafc7e3dddab59af2b6' (SHA:6323deb102c322ba6fcbdcafc7e3dddab59af2b6)
-##[error]A task was canceled.
+warning: xberg-libwpd@1.4.0:   255 |         BOOST_PROTO_TRANSFORM_(PrimitiveTransform, X)
+warning: xberg-libwpd@1.4.0:       |         ^~~~~~~~~~~~~~~~~~~~~~
+warning: xberg-tesseract@1.4.0: Library already available at expected location: /home/runner/work/xberg/xberg/target/release/build/xberg-tesseract-e17425b3b3cc2064/out/leptonica/lib/libleptonica.a
+warning: xberg-tesseract@1.4.0: Library already available at expected location: /home/runner/work/xberg/xberg/target/release/build/xberg-tesseract-e17425b3b3cc2064/out/tesseract/lib/libtesseract.a
+warning: xberg-tesseract@1.4.0: Linking with tesseract (static linking): tesseract
+warning: xberg-tesseract@1.4.0: Linking with leptonica (static linking): leptonica
+   Compiling xberg v1.4.0 (/home/runner/work/xberg/xberg/crates/xberg)
+##[error]The operation was canceled.
 ```
 
 </details>
 
 ### CI Lint (`.github/workflows/ci-lint.yaml`)
 
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/41170430196 — dark (conclusion: `cancelled`), 2026-10-31 04:54 UTC
+- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/41187630237 — dark (conclusion: `failure`), 2026-10-31 09:10 UTC
 - Dark since: 2026-10-30 05:08 UTC (first run of the current streak)
-- Job / step: `Toolchain baseline`
-- Likely cause: The run was canceled by @Goldziher.
-
-### CI Scripts (`.github/workflows/ci-scripts.yaml`)
-
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/41172758701 — dark (conclusion: `failure`), 2026-10-31 05:28 UTC
-- Dark since: 2026-10-31 04:54 UTC (first run of the current streak)
-- Job / step: `Bats on ubuntu-latest` → `Run the shell contract tests`
-- Likely cause: ok 667 WASM test runner should propagate the actual wasm-pack test failure
+- Job / step: `Benchmark script regressions` → `Validate benchmark scripts`
+- Likely cause: [benchmark:validate:scripts] ERROR task failed
 
 <details><summary>End of the job log</summary>
 
 ```
-ok 666 WASM test runner should reject a failing executed POSIX probe rather than only checking the binary exists
-ok 667 WASM test runner should propagate the actual wasm-pack test failure
-The following warnings were encountered during tests:
-BW02: Using flags on `run` requires at least BATS_VERSION=1.5.0. Use `bats_require_minimum_version 1.5.0` to fix this message.
-      (from function `bats_warn_minimum_guaranteed_version' in file /home/runner/work/_temp/bats/bats-core-1.14.0/lib/bats-core/warnings.bash, line 32,
-       from function `run' in file /home/runner/work/_temp/bats/bats-core-1.14.0/lib/bats-core/test_functions.bash, line 359,
-       in test file scripts/tests/bats/benchmark_liteparse.bats, line 26)
+----------------------------------------------------------------------
+Ran 69 tests in 4.620s
+OK
+[benchmark:validate:scripts] $ scripts/ci/benchmarks/validate-workflow-build-config.sh
+benchmark workflow validation failed: standalone harness validation must check out the dispatched benchmark revision
+Finished in 5.09s
+[benchmark:validate:scripts] ERROR task failed
 ##[error]Process completed with exit code 1.
 ```
 

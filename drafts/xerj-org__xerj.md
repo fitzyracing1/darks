@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/xerj-org/xerj/issues/new
-- **Stars:** 17790 · **Generated:** 2026-10-31T06:39:29.667Z
+- **Stars:** 17837 · **Generated:** 2026-10-31T12:37:42.482Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
@@ -19,7 +19,7 @@ CI: "CI" workflow getting cancelled on main since 2026-10-30
 <!-- BEGIN BODY -->
 Hi! The **CI** workflow (`.github/workflows/ci.yml`) on `main` has been getting cancelled since 2026-10-30. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/xerj-org/xerj/actions/runs/41174673195 — dark (conclusion: `cancelled`), 2026-10-31 05:58 UTC
+- Latest run on `main`: https://github.com/xerj-org/xerj/actions/runs/41197362940 — dark (conclusion: `cancelled`), 2026-10-31 11:33 UTC
 - Dark since: 2026-10-30 20:02 UTC (first run of the current streak)
 - Likely cause: run cancelled
 
