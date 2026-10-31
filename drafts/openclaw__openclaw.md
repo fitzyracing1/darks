@@ -4,15 +4,16 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/openclaw/openclaw/issues/new
-- **Stars:** 393460 · **Generated:** 2026-10-30T18:36:41.749Z
+- **Stars:** 393479 · **Generated:** 2026-10-31T00:51:41.679Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** cancelled by a concurrency group — likely noise
+- **Note for Joshua:** latest run was skipped, not failed — probably not worth filing
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 3 workflows dark on main ("ClawSweeper Dispatch", "CI", "CodeQL")
+CI: 4 workflows dark on main ("ClawSweeper Dispatch", "Docs", "CI", +1 more)
 <!-- END TITLE -->
 
 ## Body
@@ -41,6 +42,12 @@ Dispatched GitHub activity to ClawSweeper.
 ```
 
 </details>
+
+### Docs (`.github/workflows/docs.yml`)
+
+- Latest run on `main`: https://github.com/openclaw/openclaw/actions/runs/39253320320 — dark (conclusion: `skipped`), 2026-10-19 12:36 UTC
+- Dark since: 2026-10-19 11:03 UTC (first run of the current streak)
+- Likely cause: run skipped
 
 ### CI (`.github/workflows/ci.yml`)
 

@@ -4,14 +4,14 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/storytold/vectorcraft/issues/new
-- **Stars:** 11057 · **Generated:** 2026-10-30T18:36:41.749Z
+- **Stars:** 11074 · **Generated:** 2026-10-31T00:51:41.679Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 2 workflows dark on main ("FreeBSD", "SonarCloud")
+CI: 3 workflows dark on main ("FreeBSD", "SonarCloud", "Affinity 3 corpus")
 <!-- END TITLE -->
 
 ## Body
@@ -43,8 +43,14 @@ error: test failed, to rerun pass `-p vectorcraft-ui-egui --lib`
 
 ### SonarCloud (`.github/workflows/sonarcloud.yml`)
 
-- Latest run on `main`: https://github.com/storytold/vectorcraft/actions/runs/41102132149 — dark (conclusion: `cancelled`), 2026-10-30 17:52 UTC
+- Latest run on `main`: https://github.com/storytold/vectorcraft/actions/runs/41150771754 — dark (conclusion: `cancelled`), 2026-10-31 00:33 UTC
 - Dark since: 2026-10-30 17:48 UTC (first run of the current streak)
+- Likely cause: run cancelled
+
+### Affinity 3 corpus (`.github/workflows/affinity-corpus.yml`)
+
+- Latest run on `main`: https://github.com/storytold/vectorcraft/actions/runs/41150771641 — dark (conclusion: `cancelled`), 2026-10-31 00:33 UTC
+- Dark since: 2026-10-31 00:32 UTC (first run of the current streak)
 - Likely cause: run cancelled
 
 If this is already known or expected, feel free to close. Thanks for maintaining vectorcraft!

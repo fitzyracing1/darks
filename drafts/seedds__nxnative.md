@@ -4,23 +4,63 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/seedds/nxnative/issues/new
-- **Stars:** 10120 · **Generated:** 2026-10-30T18:36:41.749Z
+- **Stars:** 10233 · **Generated:** 2026-10-31T00:51:41.679Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: "lint-python" workflow failing on main since 2026-10-30
+CI: 2 workflows dark on main ("lint-python", "lint-c")
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! The **lint-python** workflow (`.github/workflows/lint-python.yml`) on `main` has been failing since 2026-10-30. Here is what I saw, in case it's useful:
+Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
 
-- Latest run on `main`: https://github.com/seedds/nxnative/actions/runs/41095906568 — dark (conclusion: `failure`), 2026-10-30 17:06 UTC
+### lint-python (`.github/workflows/lint-python.yml`)
+
+- Latest run on `main`: https://github.com/seedds/nxnative/actions/runs/41146577280 — dark (conclusion: `failure`), 2026-10-30 23:47 UTC
 - Dark since: 2026-10-30 17:06 UTC (first run of the current streak)
-- Likely cause: cause not readable (GET /repos/seedds/nxnative/actions/runs/41095906568/jobs?filter=latest&per_page=)
+- Job / step: `ruff and pyright (ratchet)` → `ruff and pyright against the baseline`
+- Likely cause: Operator "<<" not supported for "None" (dm/tools/patch_nso.py:1188)
+
+<details><summary>End of the job log</summary>
+
+```
+Using cached lz4-4.4.5-cp314-cp314-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (1.4 MB)
+Using cached capstone-5.0.9-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (1.5 MB)
+Using cached fonttools-4.67.0-cp314-cp314-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (5.3 MB)
+Downloading nodeenv-1.11.1-py2.py3-none-any.whl (34 kB)
+Using cached typing_extensions-4.16.0-py3-none-any.whl (45 kB)
+Installing collected packages: typing-extensions, ruff, nodeenv, lz4, fonttools, capstone, pyright
+Successfully installed capstone-5.0.9 fonttools-4.67.0 lz4-4.4.5 nodeenv-1.11.1 pyright-1.1.414 ruff-0.17.2 typing-extensions-4.16.0
+##[error]Function definition does not bind loop variable `ins`
+```
+
+</details>
+
+### lint-c (`.github/workflows/lint-c.yml`)
+
+- Latest run on `main`: https://github.com/seedds/nxnative/actions/runs/41146055203 — dark (conclusion: `failure`), 2026-10-30 23:42 UTC
+- Dark since: 2026-10-30 23:28 UTC (first run of the current streak)
+- Job / step: `clang-tidy (ratchet)` → `clang-tidy against the baseline`
+- Likely cause: Nullable pointer is dereferenced [clang-analyzer-nullability.NullableDereferenced] (1 in this file, the baseline has 0) (dm/host/tests/t_pollwait.c:12)
+
+<details><summary>End of the job log</summary>
+
+```
+[197/201] dm/host/tests/t_time.c: 0 findings
+[198/201] dm/host/tests/t_touch.c: 0 findings
+[199/201] dm/host/tests/t_uecvar.c: 0 findings
+[200/201] dm/host/tests/t_vorbis.c: 0 findings
+[201/201] dm/host/thread.c: 1 findings
+LLVM 23.1.4: 274 findings in 78 files, 141 file/check pairs
+dm/host/tests/t_pollwait.c: clang-analyzer-nullability.NullableDereferenced: 1 findings, the baseline has 0
+##[error]Nullable pointer is dereferenced [clang-analyzer-nullability.NullableDereferenced] (1 in this file, the baseline has 0)
+```
+
+</details>
 
 If this is already known or expected, feel free to close. Thanks for maintaining nxnative!
 

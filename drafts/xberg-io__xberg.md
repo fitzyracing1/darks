@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/xberg-io/xberg/issues/new
-- **Stars:** 9468 · **Generated:** 2026-10-30T18:36:41.749Z
+- **Stars:** 9469 · **Generated:** 2026-10-31T00:51:41.679Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** cancelled by a concurrency group — likely noise
 
@@ -21,27 +21,28 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### CI Rust (`.github/workflows/ci-rust.yaml`)
 
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/41103610680 — dark (conclusion: `cancelled`), 2026-10-30 18:03 UTC
+- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/41144256914 — dark (conclusion: `cancelled`), 2026-10-30 23:24 UTC
 - Dark since: 2026-10-25 18:30 UTC (first run of the current streak)
+- Job / step: `Narrow feature leg (email)`
 - Likely cause: Canceling since a higher priority waiting request for ci-rust-refs/heads/main exists
 
 ### CI Integrations (`.github/workflows/ci-integrations.yaml`)
 
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/41103610306 — dark (conclusion: `cancelled`), 2026-10-30 18:03 UTC
+- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/41144256830 — dark (conclusion: `cancelled`), 2026-10-30 23:24 UTC
 - Dark since: 2026-10-30 03:50 UTC (first run of the current streak)
-- Job / step: `Build local integration bindings`
+- Job / step: `Build local integration bindings` → `Build abi3 Python wheel`
 - Likely cause: Canceling since a higher priority waiting request for ci-integrations-refs/heads/main exists
 
 <details><summary>End of the job log</summary>
 
 ```
-   Compiling model2vec-rs v0.3.0
-   Compiling liter-llm v2.4.2
-warning: xberg-tesseract@1.4.0: Library already available at expected location: /home/runner/work/xberg/xberg/target/release/build/xberg-tesseract-e9dc4fa51a2fa58d/out/leptonica/lib/libleptonica.a
-warning: xberg-tesseract@1.4.0: Library already available at expected location: /home/runner/work/xberg/xberg/target/release/build/xberg-tesseract-e9dc4fa51a2fa58d/out/tesseract/lib/libtesseract.a
-warning: xberg-tesseract@1.4.0: Linking with tesseract (static linking): tesseract
-warning: xberg-tesseract@1.4.0: Linking with leptonica (static linking): leptonica
-   Compiling mail-parser v0.11.9
+   Compiling rake v0.3.6
+   Compiling lru v0.19.0
+   Compiling minijinja v3.0.5
+   Compiling org v0.3.1
+   Compiling similar v3.2.1
+   Compiling jotdown v0.10.0
+   Compiling pyo3-async-runtimes v0.30.0
 ##[error]The operation was canceled.
 ```
 
@@ -49,21 +50,21 @@ warning: xberg-tesseract@1.4.0: Linking with leptonica (static linking): leptoni
 
 ### CI E2E (`.github/workflows/ci-e2e.yaml`)
 
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/41103610287 — dark (conclusion: `cancelled`), 2026-10-30 18:03 UTC
+- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/41144256919 — dark (conclusion: `cancelled`), 2026-10-30 23:24 UTC
 - Dark since: 2026-10-30 03:50 UTC (first run of the current streak)
-- Job / step: `Build FFI (x86_64-unknown-linux-gnu)`
+- Job / step: `Build FFI (aarch64-unknown-linux-gnu)` → `Build CLI`
 - Likely cause: Canceling since a higher priority waiting request for ci-e2e-refs/heads/main exists
 
 <details><summary>End of the job log</summary>
 
 ```
-   Compiling org v0.3.1
-     Running `CARGO=/home/runner/.rustup/toolchains/1.99.1-x86_64-unknown-linux-gnu/bin/cargo CARGO_CRATE_NAME=org CARGO_MANIFEST_DIR=/home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/org-0.3.1 CARGO_MAN…
-   Compiling minijinja v3.0.5
-     Running `CARGO=/home/runner/.rustup/toolchains/1.99.1-x86_64-unknown-linux-gnu/bin/cargo CARGO_CRATE_NAME=minijinja CARGO_MANIFEST_DIR=/home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/minijinja-3.0…
-   Compiling jotdown v0.10.0
-     Running `CARGO=/home/runner/.rustup/toolchains/1.99.1-x86_64-unknown-linux-gnu/bin/cargo CARGO_CRATE_NAME=jotdown CARGO_MANIFEST_DIR=/home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/jotdown-0.10.0 …
-     Running `CARGO=/home/runner/.rustup/toolchains/1.99.1-x86_64-unknown-linux-gnu/bin/cargo CARGO_CRATE_NAME=xberg CARGO_MANIFEST_DIR=/home/runner/work/xberg/xberg/crates/xberg CARGO_MANIFEST_PATH=/home/runner/work/xb…
+   Compiling xberg-gliner v1.4.0 (/home/runner/work/xberg/xberg/crates/xberg-gliner)
+   Compiling xberg-cli v1.4.0 (/home/runner/work/xberg/xberg/crates/xberg-cli)
+   Compiling xet-data v1.8.0
+   Compiling hf-xet v1.8.0
+   Compiling hf-hub v1.0.0
+   Compiling xberg-candle-ocr v1.4.0 (/home/runner/work/xberg/xberg/crates/xberg-candle-ocr)
+   Compiling sceptre v0.8.2
 ##[error]The operation was canceled.
 ```
 
@@ -71,9 +72,9 @@ warning: xberg-tesseract@1.4.0: Linking with leptonica (static linking): leptoni
 
 ### CI Lint (`.github/workflows/ci-lint.yaml`)
 
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/41106106339 — dark (conclusion: `cancelled`), 2026-10-30 18:20 UTC
+- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/41144257304 — dark (conclusion: `cancelled`), 2026-10-30 23:24 UTC
 - Dark since: 2026-10-30 05:08 UTC (first run of the current streak)
-- Job / step: `AI governance validation`
+- Job / step: `Submodule gitlinks reachable`
 - Likely cause: Canceling since a higher priority waiting request for ci-lint-refs/heads/main exists
 
 If this is already known or expected, feel free to close. Thanks for maintaining xberg!
