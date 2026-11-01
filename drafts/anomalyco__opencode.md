@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/anomalyco/opencode/issues/new
-- **Stars:** 223662 · **Generated:** 2026-11-01T06:42:01.505Z
+- **Stars:** 223718 · **Generated:** 2026-11-01T12:36:12.706Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** latest run was skipped, not failed — probably not worth filing
 
@@ -21,7 +21,7 @@ Hi! A few workflows on `dev` have been dark recently. Details below, in case the
 
 ### nightly-beta (`.github/workflows/nightly-beta.yml`)
 
-- Latest run on `dev`: https://github.com/anomalyco/opencode/actions/runs/41188347679 — dark (conclusion: `failure`), 2026-10-31 09:21 UTC
+- Latest run on `dev`: https://github.com/anomalyco/opencode/actions/runs/41292748654 — dark (conclusion: `failure`), 2026-11-01 09:20 UTC
 - Dark since: 2026-10-31 09:21 UTC (first run of the current streak)
 - Job / step: `dispatch` → `Dispatch beta test runs`
 - Likely cause: could not create workflow dispatch event: HTTP 422: No ref found for: beta (https://api.github.com/repos/anomalyco/opencode/actions/workflows/396447938/dispatches)

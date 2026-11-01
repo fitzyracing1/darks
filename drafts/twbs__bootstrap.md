@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/twbs/bootstrap/issues/new
-- **Stars:** 174970 · **Generated:** 2026-11-01T06:42:01.505Z
+- **Stars:** 174972 · **Generated:** 2026-11-01T12:36:12.706Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
