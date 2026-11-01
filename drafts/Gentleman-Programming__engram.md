@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/Gentleman-Programming/engram/issues/new
-- **Stars:** 7723 · **Generated:** 2026-11-01T12:36:12.706Z
+- **Stars:** 7729 · **Generated:** 2026-11-01T18:34:58.241Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -18,21 +18,21 @@ CI: "CI" workflow failing on main since 2026-11-01
 <!-- BEGIN BODY -->
 Hi! The **CI** workflow (`.github/workflows/ci.yml`) on `main` has been failing since 2026-11-01. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/Gentleman-Programming/engram/actions/runs/41282395206 — dark (conclusion: `failure`), 2026-11-01 06:50 UTC
+- Latest run on `main`: https://github.com/Gentleman-Programming/engram/actions/runs/41324367581 — dark (conclusion: `failure`), 2026-11-01 16:03 UTC
 - Dark since: 2026-11-01 06:07 UTC (first run of the current streak)
 - Job / step: `Windows Full Suite (Observational)` → `Run full default-tags module suite`
-- Likely cause: {"Time":"2026-11-01T07:12:38.8329322Z","Action":"pass","Package":"github.com/Gentleman-Programming/engram/v3/tools/release-candidate","Test":"TestSourceEvidence/link_cannot_execute_source","Elapsed":0.59}
+- Likely cause: {"Time":"2026-11-01T16:14:16.5391196Z","Action":"fail","Package":"github.com/Gentleman-Programming/engram/v3/plugin","Elapsed":370.166}
 
 <details><summary>End of the job log</summary>
 
 ```
-go: downloading github.com/mailru/easyjson v0.7.7
-go: downloading github.com/xo/terminfo v0.0.0-20220910002029-abceb7e1c41e
-go: downloading github.com/ncruces/go-strftime v1.0.0
-go: downloading github.com/dustin/go-humanize v1.0.1
-go: downloading modernc.org/memory v1.12.1
-go: downloading modernc.org/mathutil v1.7.1
-go: downloading github.com/remyoudompheng/bigfft v0.0.0-20230129092748-24d4a6f8daec
+{"Time":"2026-11-01T16:14:16.5264558Z","Action":"output","Package":"github.com/Gentleman-Programming/engram/v3/plugin","Test":"TestHooksJSONPluginRootIsQuoted","Output":"--- PASS: TestHooksJSONPluginRootIsQuoted (0.00s)…
+{"Time":"2026-11-01T16:14:16.5264558Z","Action":"pass","Package":"github.com/Gentleman-Programming/engram/v3/plugin","Test":"TestHooksJSONPluginRootIsQuoted","Elapsed":0}
+{"Time":"2026-11-01T16:14:16.5264558Z","Action":"output","Package":"github.com/Gentleman-Programming/engram/v3/plugin","Output":"FAIL\n"}
+{"Time":"2026-11-01T16:14:16.5391196Z","Action":"output","Package":"github.com/Gentleman-Programming/engram/v3/plugin","Output":"FAIL\tgithub.com/Gentleman-Programming/engram/v3/plugin\t370.166s\n"}
+{"Time":"2026-11-01T16:14:16.5391196Z","Action":"fail","Package":"github.com/Gentleman-Programming/engram/v3/plugin","Elapsed":370.166}
+{"Time":"2026-11-01T16:14:23.6010913Z","Action":"pass","Package":"github.com/Gentleman-Programming/engram/v3/internal/store","Elapsed":447.213}
+go: downloading golang.org/x/net v0.57.0
 ##[error]Process completed with exit code 1.
 ```
 

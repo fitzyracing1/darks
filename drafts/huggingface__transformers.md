@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/huggingface/transformers/issues/new
-- **Stars:** 168404 · **Generated:** 2026-11-01T12:36:12.706Z
+- **Stars:** 168412 · **Generated:** 2026-11-01T18:34:58.241Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** workflow failed to start (config/permissions on their side)
 - **Note for Joshua:** self-hosted runner problem — maintainers usually know
@@ -66,7 +66,7 @@ ImportError: pyarrow requires NumPy 2.0 or newer, found 1.26.4
 
 ### Self-hosted runner (nightly-past-ci-caller) (`.github/workflows/self-nightly-past-ci-caller.yml`)
 
-- Latest run on `main`: https://github.com/huggingface/transformers/actions/runs/41264867700 — dark (conclusion: `startup_failure`), 2026-11-01 02:21 UTC
+- Latest run on `main`: https://github.com/huggingface/transformers/actions/runs/41315434966 — dark (conclusion: `startup_failure`), 2026-11-01 14:17 UTC
 - Dark since: 2026-10-31 02:20 UTC (first run of the current streak)
 - Likely cause: run startup_failure
 

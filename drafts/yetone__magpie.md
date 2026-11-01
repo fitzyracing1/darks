@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/yetone/magpie/issues/new
-- **Stars:** 27347 · **Generated:** 2026-11-01T12:36:12.706Z
+- **Stars:** 27520 · **Generated:** 2026-11-01T18:34:58.241Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -18,22 +18,22 @@ CI: "Test" workflow failing on main since 2026-10-25
 <!-- BEGIN BODY -->
 Hi! The **Test** workflow (`.github/workflows/test.yml`) on `main` has been failing since 2026-10-25. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/yetone/magpie/actions/runs/41300185755 — dark (conclusion: `failure`), 2026-11-01 11:03 UTC
+- Latest run on `main`: https://github.com/yetone/magpie/actions/runs/41327492894 — dark (conclusion: `failure`), 2026-11-01 16:40 UTC
 - Dark since: 2026-10-25 04:42 UTC (first run of the current streak)
-- Job / step: `test (macos-latest)` → `Test`
-- Likely cause: warning: implicit conversion from enumeration type 'enum CGImageAlphaInfo' to different enumeration type 'CGBitmapInfo' (aka 'enum CGBitmapInfo') [-Wimplicit-enum-enum-cast] (internal/gui/trayimage_darwin.go:131)
+- Job / step: `test (ubuntu-latest)` → `Test`
+- Likely cause: FAIL
 
 <details><summary>End of the job log</summary>
 
 ```
-GOTOOLCHAIN='auto'
-GOTOOLDIR='/Users/runner/hostedtoolcache/go/1.26.8/arm64/pkg/tool/darwin_arm64'
-GOVCS=''
-GOVERSION='go1.26.8'
-GOWORK=''
-PKG_CONFIG='pkg-config'
-# github.com/yetone/magpie/internal/gui [github.com/yetone/magpie/internal/gui.test]
-##[error]internal/gui/dockflap_darwin.go:42:77: warning: implicit conversion from enumeration type 'enum CGImageAlphaInfo' to different enumeration type 'CGBitmapInfo' (aka 'enum CGBitmapInfo') [-Wimplicit-enum-enum-cas…
+?   	github.com/yetone/magpie/plugins/routing	[no test files]
+ok  	github.com/yetone/magpie/plugins/search	0.024s
+?   	github.com/yetone/magpie/plugins/sessions	[no test files]
+ok  	github.com/yetone/magpie/plugins/tools	0.013s
+?   	github.com/yetone/magpie/plugins/usage	[no test files]
+?   	github.com/yetone/magpie/plugins/warmups	[no test files]
+FAIL
+##[error]Process completed with exit code 1.
 ```
 
 </details>

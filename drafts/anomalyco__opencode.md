@@ -4,14 +4,14 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/anomalyco/opencode/issues/new
-- **Stars:** 223718 · **Generated:** 2026-11-01T12:36:12.706Z
+- **Stars:** 223780 · **Generated:** 2026-11-01T18:34:58.241Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** latest run was skipped, not failed — probably not worth filing
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 2 workflows dark on dev ("nightly-beta", "bot-docs-locale")
+CI: 3 workflows dark on dev ("nightly-beta", "bot-docs-locale", "check-test")
 <!-- END TITLE -->
 
 ## Body
@@ -46,6 +46,28 @@ could not create workflow dispatch event: HTTP 422: No ref found for: beta (http
 - Latest run on `dev`: https://github.com/anomalyco/opencode/actions/runs/41258306679 — dark (conclusion: `skipped`), 2026-11-01 00:47 UTC
 - Dark since: 2026-11-01 00:47 UTC (first run of the current streak)
 - Likely cause: run skipped
+
+### check-test (`.github/workflows/check-test.yml`)
+
+- Latest run on `dev`: https://github.com/anomalyco/opencode/actions/runs/41329534446 — dark (conclusion: `failure`), 2026-11-01 17:04 UTC
+- Dark since: 2026-11-01 17:04 UTC (first run of the current streak)
+- Job / step: `unit (windows)` → `Run unit tests`
+- Likely cause: @opencode/core#test: command (C:\runner\_work\opencode\opencode\packages\core) C:\Users\runneradmin\.bun\bin\bun.exe run test exited (1)
+
+<details><summary>End of the job log</summary>
+
+```
+Failed to persist session tabs 148 |     const token = [redacted] ?? randomBytes(16).toString("hex")
+149 |     const metaPath = path.join(lockDir, "meta.json")
+150 |     const heartbeatPath = path.join(lockDir, "heartbeat")
+151 |
+152 |     try {
+153 |       await mkdir(lockDir, { mode: 0o700 })
+                  ^
+##[error]@opencode/core#test: command (C:\runner\_work\opencode\opencode\packages\core) C:\Users\runneradmin\.bun\bin\bun.exe run test exited (1)
+```
+
+</details>
 
 If this is already known or expected, feel free to close. Thanks for maintaining opencode!
 

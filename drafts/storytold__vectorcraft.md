@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/storytold/vectorcraft/issues/new
-- **Stars:** 11154 · **Generated:** 2026-11-01T12:36:12.706Z
+- **Stars:** 11174 · **Generated:** 2026-11-01T18:34:58.241Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -42,7 +42,7 @@ error: test failed, to rerun pass `-p vectorcraft-render --lib`
 
 ### SonarCloud (`.github/workflows/sonarcloud.yml`)
 
-- Latest run on `main`: https://github.com/storytold/vectorcraft/actions/runs/41295180212 — dark (conclusion: `failure`), 2026-11-01 09:55 UTC
+- Latest run on `main`: https://github.com/storytold/vectorcraft/actions/runs/41331765715 — dark (conclusion: `failure`), 2026-11-01 17:30 UTC
 - Dark since: 2026-11-01 09:55 UTC (first run of the current streak)
 - Job / step: `sonarcloud / SonarCloud Scan` → `SonarCloud Scan`
 - Likely cause: Action failed: The process '/opt/hostedtoolcache/sonar-scanner-cli/8.3.0-build.16463/linux-x64/bin/sonar-scanner' failed with exit code 1
@@ -50,13 +50,13 @@ error: test failed, to rerun pass `-p vectorcraft-render --lib`
 <details><summary>End of the job log</summary>
 
 ```
-10:31:37.986 INFO  SonarScanner CLI 8.3.0.16463
-10:31:37.992 INFO  Linux 7.0.0-1017-azure amd64
-10:31:40.616 INFO  Communicating with SonarQube Cloud
-10:31:40.617 INFO  JRE provisioning: os[linux], arch[x86_64]
-10:31:41.208 ERROR Failed to query JRE metadata: GET https://api.sonarcloud.io/analysis/jres?os=linux&arch=x86_64 failed with HTTP 403 Forbidden. Please check the property sonar.token or the environment variable SONAR_T…
-10:31:41.208 INFO  EXECUTION FAILURE
-10:31:41.209 INFO  Total time: 3.244s
+18:07:59.087 INFO  SonarScanner CLI 8.3.0.16463
+18:07:59.092 INFO  Linux 7.0.0-1017-azure amd64
+18:08:01.346 INFO  Communicating with SonarQube Cloud
+18:08:01.347 INFO  JRE provisioning: os[linux], arch[x86_64]
+18:08:01.934 ERROR Failed to query JRE metadata: GET https://api.sonarcloud.io/analysis/jres?os=linux&arch=x86_64 failed with HTTP 403 Forbidden. Please check the property sonar.token or the environment variable SONAR_T…
+18:08:01.934 INFO  EXECUTION FAILURE
+18:08:01.935 INFO  Total time: 2.867s
 ##[error]Action failed: The process '/opt/hostedtoolcache/sonar-scanner-cli/8.3.0-build.16463/linux-x64/bin/sonar-scanner' failed with exit code 1
 ```
 
