@@ -4,36 +4,37 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/storytold/pdfcraft/issues/new
-- **Stars:** 18900 · **Generated:** 2026-10-31T18:33:59.606Z
+- **Stars:** 18944 · **Generated:** 2026-11-01T00:58:31.984Z
 - Nothing in this file has been sent anywhere.
+- **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: "CI" workflow failing on main since 2026-10-30
+CI: "SonarCloud" workflow getting cancelled on main since 2026-10-31
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! The **CI** workflow (`.github/workflows/ci.yml`) on `main` has been failing since 2026-10-30. Here is what I saw, in case it's useful:
+Hi! The **SonarCloud** workflow (`.github/workflows/sonarcloud.yml`) on `main` has been getting cancelled since 2026-10-31. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/storytold/pdfcraft/actions/runs/41171245003 — dark (conclusion: `failure`), 2026-10-31 05:06 UTC
-- Dark since: 2026-10-30 15:24 UTC (first run of the current streak)
-- Job / step: `gate / gate (windows-latest)` → `Gate`
-- Likely cause: error: test failed, to rerun pass '-p pdfcraft-optimize --test optimize'
+- Latest run on `main`: https://github.com/storytold/pdfcraft/actions/runs/41249376208 — dark (conclusion: `cancelled`), 2026-10-31 22:42 UTC
+- Dark since: 2026-10-31 22:42 UTC (first run of the current streak)
+- Job / step: `sonarcloud / Tests 4/4` → `Install Linux build dependencies`
+- Likely cause: The job has exceeded the maximum execution time of 1h30m0s
 
 <details><summary>End of the job log</summary>
 
 ```
-   7: core::ops::function::FnOnce::call_once
-             at /rustc/58cf8f9c35b355199727627d07ae34a4e2846d67/library\core\src\ops\function.rs:250
-note: Some details are omitted, run with `RUST_BACKTRACE=full` for a verbose backtrace.
-failures:
-    monochrome_images_keep_what_they_should
-test result: FAILED. 62 passed; 1 failed; 0 ignored; 0 measured; 0 filtered out; finished in 3.42s
-error: test failed, to rerun pass `-p pdfcraft-optimize --test optimize`
-##[error]Process completed with exit code 101.
+Ign:11 http://azure.archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages
+Ign:12 http://azure.archive.ubuntu.com/ubuntu noble-updates/universe Translation-en
+Ign:13 http://azure.archive.ubuntu.com/ubuntu noble-updates/restricted amd64 Packages
+Ign:14 http://azure.archive.ubuntu.com/ubuntu noble-updates/restricted Translation-en
+Ign:15 http://azure.archive.ubuntu.com/ubuntu noble-updates/multiverse Translation-en
+Get:4 https://archive.ubuntu.com/ubuntu noble-backports InRelease [126 kB]
+Get:5 https://archive.ubuntu.com/ubuntu noble-security InRelease [126 kB]
+##[error]The operation was canceled.
 ```
 
 </details>

@@ -4,15 +4,14 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/xberg-io/xberg/issues/new
-- **Stars:** 9481 · **Generated:** 2026-10-31T18:33:59.606Z
+- **Stars:** 9491 · **Generated:** 2026-11-01T00:58:31.984Z
 - Nothing in this file has been sent anywhere.
-- **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 - **Note for Joshua:** cancelled by a concurrency group — likely noise
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 3 workflows dark on main ("CI Rust", "CI E2E", "CI Docker")
+CI: 3 workflows dark on main ("CI Rust", "CI E2E", "CI Lint")
 <!-- END TITLE -->
 
 ## Body
@@ -22,20 +21,20 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### CI Rust (`.github/workflows/ci-rust.yaml`)
 
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/41199536053 — dark (conclusion: `cancelled`), 2026-10-31 12:05 UTC
+- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/41232653037 — dark (conclusion: `failure`), 2026-10-31 19:06 UTC
 - Dark since: 2026-10-25 18:30 UTC (first run of the current streak)
-- Job / step: `Rust (macos-26)` → `Run tests`
-- Likely cause: run cancelled in job "Rust (macos-26)"
+- Job / step: `Rust (ubuntu-24.04-arm)` → `Run tests`
+- Likely cause: [rust:test:ci] ERROR task failed
 
 <details><summary>End of the job log</summary>
 
 ```
-Filesystem      Size    Used   Avail Capacity iused ifree %iused  Mounted on
-/dev/disk2s5   320Gi   269Gi    29Gi    91%    2.1M  302M    1%   /System/Volumes/Data
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/root       145G  142G  2.8G  99% /
 Cargo environment:
 cargo 1.99.1 (5f94df478 2026-08-27)
 rustc 1.99.1 (58cf8f9c3 2026-10-13)
-Finished in 5026.25s
+Finished in 5331.82s
 [rust:test:ci] ERROR task failed
 ##[error]Process completed with exit code 1.
 ```
@@ -44,44 +43,44 @@ Finished in 5026.25s
 
 ### CI E2E (`.github/workflows/ci-e2e.yaml`)
 
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/41203549508 — dark (conclusion: `cancelled`), 2026-10-31 13:00 UTC
+- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/41247380468 — dark (conclusion: `cancelled`), 2026-10-31 22:15 UTC
 - Dark since: 2026-10-30 03:50 UTC (first run of the current streak)
-- Job / step: `Build FFI (x86_64-unknown-linux-gnu)` → `Build CLI`
+- Job / step: `E2E (java)` → `Run e2e tests`
 - Likely cause: Canceling since a higher priority waiting request for ci-e2e-refs/heads/main exists
 
 <details><summary>End of the job log</summary>
 
 ```
-   Compiling lru v0.19.0
-   Compiling similar v3.2.1
-   Compiling org v0.3.1
-   Compiling minijinja v3.0.5
-   Compiling xberg-cli v1.4.0 (/home/runner/work/xberg/xberg/crates/xberg-cli)
-   Compiling jotdown v0.10.0
-   Compiling clap_complete v4.6.11
+   Compiling tempfile v3.27.0
+   Compiling zune-jpeg v0.5.15
+   Compiling derive_builder_core v0.20.2
+   Compiling futures v0.3.34
+   Compiling phf_codegen v0.14.0
+   Compiling symphonia-core v0.6.1
+   Compiling bstr v1.13.1
 ##[error]The operation was canceled.
 ```
 
 </details>
 
-### CI Docker (`.github/workflows/ci-docker.yaml`)
+### CI Lint (`.github/workflows/ci-lint.yaml`)
 
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/41215099611 — dark (conclusion: `cancelled`), 2026-10-31 15:29 UTC
-- Dark since: 2026-10-31 12:05 UTC (first run of the current streak)
-- Job / step: `Docker (cli)` → `Build Docker image`
-- Likely cause: Canceling since a higher priority waiting request for ci-docker-refs/heads/main exists
+- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/41247380742 — dark (conclusion: `failure`), 2026-10-31 22:15 UTC
+- Dark since: 2026-10-31 17:19 UTC (first run of the current streak)
+- Job / step: `Generated e2e suites freshness` → `Verify generated e2e suites are current`
+- Likely cause: [e2e:verify] ERROR task failed
 
 <details><summary>End of the job log</summary>
 
 ```
-#26 3325.5    Compiling lru v0.19.0
-#26 3325.8    Compiling similar v3.2.1
-#26 3342.2    Compiling minijinja v3.0.5
-#26 3362.7    Compiling org v0.3.1
-#26 3363.1    Compiling xberg-cli v1.4.0 (/build/crates/xberg-cli)
-#26 3363.3    Compiling jotdown v0.10.0
-#26 4391.5    Compiling clap_complete v4.6.11
-##[error]The operation was canceled.
+ #    Do NOT spawn our own server.
+-# 2. Standalone mode (direct `mix test` / `mise run elixir:smoke`): Build the
++# 2. Standalone mode (`mix test` run directly or from a `mise run` task): Build the
+ #    mock-server binary if it is missing, then spawn it, capture its URL, and
+ #    let it run for the duration of the test suite.
+ mock_server_bin = Path.expand("../../rust/target/release/mock-server", __DIR__)
+[e2e:verify] ERROR task failed
+##[error]Process completed with exit code 1.
 ```
 
 </details>

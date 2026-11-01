@@ -1,32 +1,32 @@
 <!-- dark-draft: avelino/awesome-go -->
-<!-- draft-state: resolved -->
+<!-- draft-state: ready -->
 # Upstream issue draft: avelino/awesome-go
 
-- **Status:** resolved — lit again (2026-10-30); nothing to file
+- **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/avelino/awesome-go/issues/new
-- **Stars:** 191060 · **Generated:** 2026-10-30T01:00:38.631Z
+- **Stars:** 191379 · **Generated:** 2026-11-01T00:58:31.984Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: "Check For Stale Repositories" workflow failing on main since 2026-10-25
+CI: "Check For Stale Repositories" workflow failing on main since 2026-11-01
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! The **Check For Stale Repositories** workflow (`.github/workflows/run-check.yaml`) on `main` has been failing since 2026-10-25. Here is what I saw, in case it's useful:
+Hi! The **Check For Stale Repositories** workflow (`.github/workflows/run-check.yaml`) on `main` has been failing since 2026-11-01. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/avelino/awesome-go/actions/runs/40146366592 — dark (conclusion: `failure`), 2026-10-25 00:21 UTC
-- Dark since: 2026-10-25 00:21 UTC (first run of the current streak)
+- Latest run on `main`: https://github.com/avelino/awesome-go/actions/runs/41255969925 — dark (conclusion: `failure`), 2026-11-01 00:15 UTC
+- Dark since: 2026-11-01 00:15 UTC (first run of the current streak)
 - Job / step: `Running test` → `run script`
 - Likely cause: FAIL	github.com/avelino/awesome-go	0.234s
 
 <details><summary>End of the job log</summary>
 
 ```
-be87bc4b73447b87438ad8434032d3abce59ad02
+2d96e5a9df8fcb1d0ceed64ffda28f9ac0fe6b93
 === RUN   TestStaleRepository
     stale_repositories_test.go:274: getAllFlaggedRepositories: rate limit or auth failure (status 401)
 --- FAIL: TestStaleRepository (0.23s)
