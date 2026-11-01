@@ -1,10 +1,10 @@
-<!-- dark-draft: storytold/lightcraft -->
-<!-- draft-state: ready -->
-# Upstream issue draft: storytold/lightcraft
+<!-- dark-draft: storytold/photocraft -->
+<!-- draft-state: resolved -->
+# Upstream issue draft: storytold/photocraft
 
-- **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
-- **Would be filed at:** https://github.com/storytold/lightcraft/issues/new
-- **Stars:** 15188 · **Generated:** 2026-11-01T00:58:31.984Z
+- **Status:** resolved — lit again (2026-11-01); nothing to file
+- **Would be filed at:** https://github.com/storytold/photocraft/issues/new
+- **Stars:** 75570 · **Generated:** 2026-11-01T00:58:31.984Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
@@ -21,10 +21,10 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### CI (`.github/workflows/ci.yml`)
 
-- Latest run on `main`: https://github.com/storytold/lightcraft/actions/runs/41250146254 — dark (conclusion: `cancelled`), 2026-10-31 22:53 UTC
+- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/41250150504 — dark (conclusion: `cancelled`), 2026-10-31 22:53 UTC
 - Dark since: 2026-10-31 22:53 UTC (first run of the current streak)
 - Job / step: `gate / gate (ubuntu-24.04)` → `Install Linux build dependencies`
-- Likely cause: The job has exceeded the maximum execution time of 1h30m0s
+- Likely cause: The job has exceeded the maximum execution time of 1h40m0s
 
 <details><summary>End of the job log</summary>
 
@@ -43,7 +43,7 @@ Get:5 https://archive.ubuntu.com/ubuntu noble-security InRelease [126 kB]
 
 ### Packaging lint (`.github/workflows/packaging-lint.yml`)
 
-- Latest run on `main`: https://github.com/storytold/lightcraft/actions/runs/41250146222 — dark (conclusion: `cancelled`), 2026-10-31 22:53 UTC
+- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/41250150465 — dark (conclusion: `cancelled`), 2026-10-31 22:53 UTC
 - Dark since: 2026-10-31 22:53 UTC (first run of the current streak)
 - Job / step: `lint / lint` → `Run packaging lint`
 - Likely cause: The job has exceeded the maximum execution time of 15m0s
@@ -63,7 +63,7 @@ Get:5 https://archive.ubuntu.com/ubuntu noble-security InRelease [126 kB]
 
 </details>
 
-If this is already known or expected, feel free to close. Thanks for maintaining lightcraft!
+If this is already known or expected, feel free to close. Thanks for maintaining photocraft!
 
 ---
 <sub>Found by the [dark crawler](https://github.com/fitzyracing1/darks), which checks the latest default-branch run of each workflow in popular repos. Reviewed and filed by hand.</sub>

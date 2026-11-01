@@ -4,15 +4,14 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/anomalyco/opencode/issues/new
-- **Stars:** 223602 · **Generated:** 2026-11-01T00:58:31.984Z
+- **Stars:** 223662 · **Generated:** 2026-11-01T06:42:01.505Z
 - Nothing in this file has been sent anywhere.
-- **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 - **Note for Joshua:** latest run was skipped, not failed — probably not worth filing
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 3 workflows dark on dev ("nightly-beta", "release", "bot-docs-locale")
+CI: 2 workflows dark on dev ("nightly-beta", "bot-docs-locale")
 <!-- END TITLE -->
 
 ## Body
@@ -41,12 +40,6 @@ could not create workflow dispatch event: HTTP 422: No ref found for: beta (http
 ```
 
 </details>
-
-### release (`.github/workflows/release.yml`)
-
-- Latest run on `dev`: https://github.com/anomalyco/opencode/actions/runs/41258306699 — dark (conclusion: `cancelled`), 2026-11-01 00:47 UTC
-- Dark since: 2026-10-31 17:39 UTC (first run of the current streak)
-- Likely cause: run cancelled
 
 ### bot-docs-locale (`.github/workflows/bot-docs-locale.yml`)
 

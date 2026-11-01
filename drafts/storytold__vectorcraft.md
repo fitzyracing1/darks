@@ -4,24 +4,39 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/storytold/vectorcraft/issues/new
-- **Stars:** 11133 · **Generated:** 2026-11-01T00:58:31.984Z
+- **Stars:** 11139 · **Generated:** 2026-11-01T06:42:01.505Z
 - Nothing in this file has been sent anywhere.
-- **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: "SonarCloud" workflow getting cancelled on main since 2026-11-01
+CI: "FreeBSD" workflow failing on main since 2026-11-01
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! The **SonarCloud** workflow (`.github/workflows/sonarcloud.yml`) on `main` has been getting cancelled since 2026-11-01. Here is what I saw, in case it's useful:
+Hi! The **FreeBSD** workflow (`.github/workflows/freebsd.yml`) on `main` has been failing since 2026-11-01. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/storytold/vectorcraft/actions/runs/41257538683 — dark (conclusion: `cancelled`), 2026-11-01 00:37 UTC
-- Dark since: 2026-11-01 00:36 UTC (first run of the current streak)
-- Likely cause: run cancelled
+- Latest run on `main`: https://github.com/storytold/vectorcraft/actions/runs/41272764802 — dark (conclusion: `failure`), 2026-11-01 04:21 UTC
+- Dark since: 2026-11-01 04:21 UTC (first run of the current streak)
+- Job / step: `freebsd / FreeBSD 15 x86_64 (build + test)` → `Build and test`
+- Likely cause: error: test failed, to rerun pass '-p vectorcraft-render --lib'
+
+<details><summary>End of the job log</summary>
+
+```
+---- tests::placed_document::a_ready_bitmap_draws_again_where_its_file_shows stdout ----
+thread 'tests::placed_document::a_ready_bitmap_draws_again_where_its_file_shows' (159355) panicked at crates/render/src/tests/placed_document.rs:276:5:
+the bitmaps show
+failures:
+    tests::placed_document::a_ready_bitmap_draws_again_where_its_file_shows
+test result: FAILED. 477 passed; 1 failed; 4 ignored; 0 measured; 0 filtered out; finished in 46.01s
+error: test failed, to rerun pass `-p vectorcraft-render --lib`
+##[error]Process completed with exit code 101.
+```
+
+</details>
 
 If this is already known or expected, feel free to close. Thanks for maintaining vectorcraft!
 

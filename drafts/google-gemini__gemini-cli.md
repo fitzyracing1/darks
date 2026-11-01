@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/google-gemini/gemini-cli/issues/new
-- **Stars:** 108633 · **Generated:** 2026-11-01T00:58:31.984Z
+- **Stars:** 108643 · **Generated:** 2026-11-01T06:42:01.505Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -20,7 +20,7 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### 📋 Gemini Scheduled Issue Triage (`.github/workflows/gemini-scheduled-issue-triage.yml`)
 
-- Latest run on `main`: https://github.com/google-gemini/gemini-cli/actions/runs/41256530417 — dark (conclusion: `failure`), 2026-11-01 00:23 UTC
+- Latest run on `main`: https://github.com/google-gemini/gemini-cli/actions/runs/41279823295 — dark (conclusion: `failure`), 2026-11-01 06:11 UTC
 - Dark since: 2026-10-30 15:07 UTC (first run of the current streak)
 - Job / step: `triage-issues` → `Apply Triaged Labels`
 - Likely cause: Unhandled error: HttpError: Resource not accessible by integration
@@ -28,13 +28,13 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 <details><summary>End of the job log</summary>
 
 ```
-    request: {
-      agent: [Agent],
-      fetch: [Function: proxyFetch],
-      hook: [Function: bound bound register]
-    }
-  }
-}
+##[start-action display=Upload Telemetry to Google Cloud;id=gemini_standard_issue_analysis.__run_3]
+No telemetry log found, skipping upload.
+##[end-action id=gemini_standard_issue_analysis.__run_3;outcome=success;conclusion=success;duration_ms=16]
+Aggregated triage results for 1 issues.
+RequestError [HttpError]: Resource not accessible by integration
+    at /home/runner/work/_actions/actions/github-script/60a0d83039c74a4aee543508d2ffcb1c3799cdea/dist/index.js:9537:21
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
 ##[error]Unhandled error: HttpError: Resource not accessible by integration
 ```
 
@@ -42,21 +42,21 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### Memory Tests: Nightly (`.github/workflows/memory-nightly.yml`)
 
-- Latest run on `main`: https://github.com/google-gemini/gemini-cli/actions/runs/41159138473 — dark (conclusion: `failure`), 2026-10-31 02:15 UTC
+- Latest run on `main`: https://github.com/google-gemini/gemini-cli/actions/runs/41264497476 — dark (conclusion: `failure`), 2026-11-01 02:16 UTC
 - Dark since: 2026-10-31 02:15 UTC (first run of the current streak)
 - Job / step: `Run Memory Usage Tests` → `Run Memory Tests`
-- Likely cause: 226|       throw new Error(
+- Likely cause: Tests  4 failed | 3 passed (7)
 
 <details><summary>End of the job log</summary>
 
 ```
-    225|     if (deltaPercent > tolerance) {
-    226|       throw new Error(
-       |             ^
-    227|         `Memory regression detected for "${result.scenarioName}"!\n` +
     228|           `  Measured:  ${formatMB(result.finalHeapUsed)} heap used\n`…
- ❯ memory-usage.test.ts:311:17
-⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[3/3]⎯
+ ❯ memory-usage.test.ts:360:17
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[4/4]⎯
+ Test Files  1 failed (1)
+      Tests  4 failed | 3 passed (7)
+   Start at  02:18:50
+   Duration  105.49s (transform 1.93s, setup 0ms, collect 3.33s, tests 101.35s, environment 0ms, prepare 54ms)
 ##[error]Process completed with exit code 1.
 ```
 
@@ -64,7 +64,7 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### Performance Tests: Nightly (`.github/workflows/perf-nightly.yml`)
 
-- Latest run on `main`: https://github.com/google-gemini/gemini-cli/actions/runs/41163323815 — dark (conclusion: `failure`), 2026-10-31 03:12 UTC
+- Latest run on `main`: https://github.com/google-gemini/gemini-cli/actions/runs/41268383500 — dark (conclusion: `failure`), 2026-11-01 03:14 UTC
 - Dark since: 2026-10-31 03:12 UTC (first run of the current streak)
 - Job / step: `Run Performance Usage Tests` → `Run Performance Tests`
 - Likely cause: 29|     throw new Error('Failed to download ripgrep binary');

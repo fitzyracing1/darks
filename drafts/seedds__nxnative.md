@@ -4,36 +4,37 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/seedds/nxnative/issues/new
-- **Stars:** 10638 · **Generated:** 2026-11-01T00:58:31.984Z
+- **Stars:** 10706 · **Generated:** 2026-11-01T06:42:01.505Z
 - Nothing in this file has been sent anywhere.
+- **Note for Joshua:** cancelled by a concurrency group — likely noise
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: "lint-python" workflow failing on main since 2026-11-01
+CI: "tests" workflow getting cancelled on main since 2026-11-01
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! The **lint-python** workflow (`.github/workflows/lint-python.yml`) on `main` has been failing since 2026-11-01. Here is what I saw, in case it's useful:
+Hi! The **tests** workflow (`.github/workflows/tests.yml`) on `main` has been getting cancelled since 2026-11-01. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/seedds/nxnative/actions/runs/41256604016 — dark (conclusion: `failure`), 2026-11-01 00:24 UTC
-- Dark since: 2026-11-01 00:18 UTC (first run of the current streak)
-- Job / step: `ruff and pyright (ratchet)` → `ruff and pyright against the baseline`
-- Likely cause: Argument of type "list[FunctionDef]" cannot be assigned to parameter "body" of type "list[stmt]" in function "__init__" "list[FunctionDef]" is not assignable to "list[stmt]" Type parameter "_T@list" is invariant, but "FunctionDef" is not th (dm/tools/tests/test_shader_toolchain_cache.py:134)
+- Latest run on `main`: https://github.com/seedds/nxnative/actions/runs/41280208174 — dark (conclusion: `cancelled`), 2026-11-01 06:17 UTC
+- Dark since: 2026-11-01 06:14 UTC (first run of the current streak)
+- Job / step: `Build check (Mac host, gfx tests, iOS sources)` → `Every gfx test compiled, not run`
+- Likely cause: Canceling since a higher priority waiting request for tests-refs/heads/main exists
 
 <details><summary>End of the job log</summary>
 
 ```
-Using cached lz4-4.4.5-cp314-cp314-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (1.4 MB)
-Using cached capstone-5.0.9-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (1.5 MB)
-Using cached fonttools-4.67.0-cp314-cp314-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (5.3 MB)
-Downloading nodeenv-1.12.0-py3-none-any.whl (39 kB)
-Using cached typing_extensions-4.16.0-py3-none-any.whl (45 kB)
-Installing collected packages: typing-extensions, ruff, nodeenv, lz4, fonttools, capstone, pyright
-Successfully installed capstone-5.0.9 fonttools-4.67.0 lz4-4.4.5 nodeenv-1.12.0 pyright-1.1.414 ruff-0.17.2 typing-extensions-4.16.0
-##[error]Argument of type "list[FunctionDef]" cannot be assigned to parameter "body" of type "list[stmt]" in function "__init__" "list[FunctionDef]" is not assignable to "list[stmt]" Type parameter "_T@list" is invarian…
+      |                                                                    ^
+./../nvn/nvn_mtl.m:9838:43: warning: passing '__strong id<MTLRenderCommandEncoder>' to parameter of incompatible type 'id<MTL4RenderCommandEncoder>'
+ 9838 |         if (di->count) enc_r_draw_indexed(en, mp, di->count, di->itype == 1 ? MTLIndexTypeUInt16 : MTLIndexTypeUInt32, gpu, ((__bridge id<MTLBuffer>)mb).length - mo,
+      |                                           ^~
+./../nvn/nvn_mtl.m:976:68: note: passing argument to parameter 'e' here
+  976 | static inline void enc_r_draw_indexed(id<MTL4RenderCommandEncoder> e, MTLPrimitiveType p, NSUInteger n, MTLIndexType t, uint64_t gpu, NSUInteger len, NSUInteger i, NSInteger bv, NSUInteger bi) { [e drawIndexedPr…
+      |                                                                    ^
+##[error]The operation was canceled.
 ```
 
 </details>
