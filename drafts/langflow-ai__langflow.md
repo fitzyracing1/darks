@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/langflow-ai/langflow/issues/new
-- **Stars:** 156255 · **Generated:** 2026-11-02T12:41:31.933Z
+- **Stars:** 156265 · **Generated:** 2026-11-02T18:39:26.456Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -66,7 +66,7 @@ Process finished with exit code ERROR (-1)
 
 - Latest run on `main`: https://github.com/langflow-ai/langflow/actions/runs/41398915115 — dark (conclusion: `failure`), 2026-11-02 06:16 UTC
 - Dark since: 2026-10-26 06:25 UTC (first run of the current streak)
-- Likely cause: cause not readable (GET /repos/langflow-ai/langflow/actions/runs/41398915115/jobs?filter=latest&per_)
+- Likely cause: no cause found in annotations
 
 ### A11y / IBM Equal Access Scans (`.github/workflows/a11y-scan.yml`)
 

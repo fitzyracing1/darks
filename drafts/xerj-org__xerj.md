@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/xerj-org/xerj/issues/new
-- **Stars:** 18755 · **Generated:** 2026-11-02T12:41:31.933Z
+- **Stars:** 18804 · **Generated:** 2026-11-02T18:39:26.456Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -42,7 +42,7 @@ repin: classes=weekly; 8 corpus(es) moved
 
 ### CI (`.github/workflows/ci.yml`)
 
-- Latest run on `main`: https://github.com/xerj-org/xerj/actions/runs/41425045734 — dark (conclusion: `failure`), 2026-11-02 09:58 UTC
+- Latest run on `main`: https://github.com/xerj-org/xerj/actions/runs/41454019116 — dark (conclusion: `failure`), 2026-11-02 13:33 UTC
 - Dark since: 2026-11-02 09:33 UTC (first run of the current streak)
 - Job / step: `Dependency advisory audit (cargo-audit)` → `cargo audit`
 - Likely cause: error: 1 vulnerability found!

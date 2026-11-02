@@ -4,13 +4,14 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/seedds/nxnative/issues/new
-- **Stars:** 11216 · **Generated:** 2026-11-02T12:41:31.933Z
+- **Stars:** 11328 · **Generated:** 2026-11-02T18:39:26.456Z
 - Nothing in this file has been sent anywhere.
+- **Note for Joshua:** cancelled by a concurrency group — likely noise
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 2 workflows dark on main ("lint-c", "fuzz")
+CI: 3 workflows dark on main ("lint-c", "fuzz", "tests")
 <!-- END TITLE -->
 
 ## Body
@@ -20,7 +21,7 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### lint-c (`.github/workflows/lint-c.yml`)
 
-- Latest run on `main`: https://github.com/seedds/nxnative/actions/runs/41431290480 — dark (conclusion: `failure`), 2026-11-02 10:45 UTC
+- Latest run on `main`: https://github.com/seedds/nxnative/actions/runs/41481560591 — dark (conclusion: `failure`), 2026-11-02 16:26 UTC
 - Dark since: 2026-11-02 10:43 UTC (first run of the current streak)
 - Job / step: `clang-tidy (ratchet)` → `clang-tidy against the baseline`
 - Likely cause: Potential leak of an object stored into 'pr' [clang-analyzer-osx.cocoa.RetainCount] (1 in this file, the baseline has 0) (dm/gfx/tests/t_geometry_hazards.m:141)
@@ -28,11 +29,11 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 <details><summary>End of the job log</summary>
 
 ```
-[211/215] dm/host/tests/t_time.c: 0 findings
-[212/215] dm/host/tests/t_touch.c: 0 findings
-[213/215] dm/host/tests/t_uecvar.c: 0 findings
-[214/215] dm/host/tests/t_vorbis.c: 0 findings
-[215/215] dm/host/thread.c: 1 findings
+[213/217] dm/host/tests/t_time.c: 0 findings
+[214/217] dm/host/tests/t_touch.c: 0 findings
+[215/217] dm/host/tests/t_uecvar.c: 0 findings
+[216/217] dm/host/tests/t_vorbis.c: 0 findings
+[217/217] dm/host/thread.c: 1 findings
 LLVM 23.1.4: 273 findings in 78 files, 142 file/check pairs
 dm/gfx/tests/t_geometry_hazards.m: clang-analyzer-nullability.NullablePassedToNonnull: 1 findings, the baseline has 0
 ##[error]Nullable pointer is passed to a callee that requires a non-null 6th parameter [clang-analyzer-nullability.NullablePassedToNonnull] (1 in this file, the baseline has 0)
@@ -61,6 +62,13 @@ Base64: TkRTUgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 ```
 
 </details>
+
+### tests (`.github/workflows/tests.yml`)
+
+- Latest run on `main`: https://github.com/seedds/nxnative/actions/runs/41480959596 — dark (conclusion: `cancelled`), 2026-11-02 16:23 UTC
+- Dark since: 2026-11-02 13:00 UTC (first run of the current streak)
+- Job / step: `Sanitizers (ASan, UBSan and TSan over the host and CPU texture tests)`
+- Likely cause: Canceling since a higher priority waiting request for tests-refs/heads/main exists
 
 If this is already known or expected, feel free to close. Thanks for maintaining nxnative!
 

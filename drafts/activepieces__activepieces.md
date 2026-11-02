@@ -4,14 +4,13 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/activepieces/activepieces/issues/new
-- **Stars:** 25336 · **Generated:** 2026-11-02T12:41:31.933Z
+- **Stars:** 25342 · **Generated:** 2026-11-02T18:39:26.456Z
 - Nothing in this file has been sent anywhere.
-- **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 3 workflows dark on main ("Chat Evals", "Benchmark", "Continuous Delivery — Staging")
+CI: 2 workflows dark on main ("Chat Evals", "Benchmark")
 <!-- END TITLE -->
 
 ## Body
@@ -62,12 +61,6 @@ Box signals API responded 401: {"error":"Unknown token. Send it as \"Authorizati
 ```
 
 </details>
-
-### Continuous Delivery — Staging (`.github/workflows/continuous-delivery-stg.yml`)
-
-- Latest run on `main`: https://github.com/activepieces/activepieces/actions/runs/41443370472 — dark (conclusion: `cancelled`), 2026-11-02 12:16 UTC
-- Dark since: 2026-11-02 06:38 UTC (first run of the current streak)
-- Likely cause: run cancelled
 
 If this is already known or expected, feel free to close. Thanks for maintaining activepieces!
 

@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/storytold/cadcraft/issues/new
-- **Stars:** 7442 · **Generated:** 2026-11-02T12:41:31.933Z
+- **Stars:** 7467 · **Generated:** 2026-11-02T18:39:26.456Z
 - Nothing in this file has been sent anywhere.
 
 ## Skipped: upstream already tracking
@@ -24,7 +24,7 @@ CI: "SonarCloud" workflow failing on main since 2026-11-01
 <!-- BEGIN BODY -->
 Hi! The **SonarCloud** workflow (`.github/workflows/sonarcloud.yml`) on `main` has been failing since 2026-11-01. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/storytold/cadcraft/actions/runs/41429480212 — dark (conclusion: `failure`), 2026-11-02 10:31 UTC
+- Latest run on `main`: https://github.com/storytold/cadcraft/actions/runs/41490692922 — dark (conclusion: `failure`), 2026-11-02 17:23 UTC
 - Dark since: 2026-11-01 12:11 UTC (first run of the current streak)
 - Job / step: `sonarcloud / SonarCloud Scan` → `SonarCloud Scan`
 - Likely cause: Action failed: The process '/opt/hostedtoolcache/sonar-scanner-cli/8.3.0-build.16463/linux-x64/bin/sonar-scanner' failed with exit code 1
@@ -32,13 +32,13 @@ Hi! The **SonarCloud** workflow (`.github/workflows/sonarcloud.yml`) on `main` h
 <details><summary>End of the job log</summary>
 
 ```
-10:52:43.284 INFO  SonarScanner CLI 8.3.0.16463
-10:52:43.289 INFO  Linux 7.0.0-1017-azure amd64
-10:52:45.626 INFO  Communicating with SonarQube Cloud
-10:52:45.627 INFO  JRE provisioning: os[linux], arch[x86_64]
-10:52:46.116 ERROR Failed to query JRE metadata: GET https://api.sonarcloud.io/analysis/jres?os=linux&arch=x86_64 failed with HTTP 403 Forbidden. Please check the property sonar.token or the environment variable SONAR_T…
-10:52:46.117 INFO  EXECUTION FAILURE
-10:52:46.117 INFO  Total time: 2.849s
+17:34:24.803 INFO  SonarScanner CLI 8.3.0.16463
+17:34:24.808 INFO  Linux 7.0.0-1017-azure amd64
+17:34:27.907 INFO  Communicating with SonarQube Cloud
+17:34:27.908 INFO  JRE provisioning: os[linux], arch[x86_64]
+17:34:28.407 ERROR Failed to query JRE metadata: GET https://api.sonarcloud.io/analysis/jres?os=linux&arch=x86_64 failed with HTTP 403 Forbidden. Please check the property sonar.token or the environment variable SONAR_T…
+17:34:28.408 INFO  EXECUTION FAILURE
+17:34:28.408 INFO  Total time: 3.625s
 ##[error]Action failed: The process '/opt/hostedtoolcache/sonar-scanner-cli/8.3.0-build.16463/linux-x64/bin/sonar-scanner' failed with exit code 1
 ```
 

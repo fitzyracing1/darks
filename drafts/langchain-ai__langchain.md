@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/langchain-ai/langchain/issues/new
-- **Stars:** 148878 · **Generated:** 2026-11-02T12:41:31.933Z
+- **Stars:** 148884 · **Generated:** 2026-11-02T18:39:26.456Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -18,20 +18,20 @@ CI: "⏰ Integration Tests" workflow failing on master since 2026-10-09
 <!-- BEGIN BODY -->
 Hi! The **⏰ Integration Tests** workflow (`.github/workflows/integration_tests.yml`) on `master` has been failing since 2026-10-09. Here is what I saw, in case it's useful:
 
-- Latest run on `master`: https://github.com/langchain-ai/langchain/actions/runs/41309392003 — dark (conclusion: `failure`), 2026-11-01 13:03 UTC
+- Latest run on `master`: https://github.com/langchain-ai/langchain/actions/runs/41449949575 — dark (conclusion: `failure`), 2026-11-02 13:05 UTC
 - Dark since: 2026-10-09 13:10 UTC (first run of the current streak)
 - Job / step: `🐍 Python 3.14: libs/partners/mistralai` → `🚀 Run Integration Tests`
-- Likely cause: = 2 failed, 56 passed, 11 skipped, 1 xpassed, 4 warnings, 2 retried in 203.01s (0:03:23) =
+- Likely cause: = 2 failed, 56 passed, 11 skipped, 1 xpassed, 4 warnings, 2 retried in 201.40s (0:03:21) =
 
 <details><summary>End of the job log</summary>
 
 ```
-24.29s call     tests/integration_tests/test_chat_models.py::test_stop_sequence
-16.95s call     tests/integration_tests/test_chat_models.py::test_structured_output_json_schema_async[Book]
+24.14s call     tests/integration_tests/test_chat_models.py::test_stop_sequence
+17.06s call     tests/integration_tests/test_standard.py::TestMistralStandard::test_tool_calling[model1]
 =========================== short test summary info ============================
 FAILED tests/integration_tests/test_chat_models.py::test_reasoning - assert 0 > 0
 FAILED tests/integration_tests/test_chat_models.py::test_reasoning_v1 - assert 0 > 0
-= 2 failed, 56 passed, 11 skipped, 1 xpassed, 4 warnings, 2 retried in 203.01s (0:03:23) =
+= 2 failed, 56 passed, 11 skipped, 1 xpassed, 4 warnings, 2 retried in 201.40s (0:03:21) =
 make: *** [Makefile:24: integration_tests] Error 1
 ##[error]Process completed with exit code 2.
 ```
