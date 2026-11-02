@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/ReactiveX/rxjs/issues/new
-- **Stars:** 31714 · **Generated:** 2026-11-02T06:51:01.101Z
+- **Stars:** 31714 · **Generated:** 2026-11-02T12:41:31.933Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -20,22 +20,22 @@ Hi! A few workflows on `master` have been dark recently. Details below, in case 
 
 ### OSV vulnerability policy (`.github/workflows/osv.yml`)
 
-- Latest run on `master`: https://github.com/ReactiveX/rxjs/actions/runs/40289129650 — dark (conclusion: `failure`), 2026-10-26 07:58 UTC
+- Latest run on `master`: https://github.com/ReactiveX/rxjs/actions/runs/41407933342 — dark (conclusion: `failure`), 2026-11-02 07:41 UTC
 - Dark since: 2026-09-14 07:50 UTC (first run of the current streak)
-- Job / step: `No unreviewed release-reachable vulnerabilities` → `Run full OSV scan with only reviewed docs-tooling exceptions`
-- Likely cause: Filtered 259 vulnerabilities from output
+- Job / step: `No unreviewed release-reachable vulnerabilities` → `Reject expired, unowned, untracked, or overlong exceptions`
+- Likely cause: expected: [],
 
 <details><summary>End of the job log</summary>
 
 ```
-GHSA-96hv-2xvq-fx4p and 1 alias have been filtered out because: workspace=apps/rxjs.dev; owner=benlesh; tracking=docs/security/LEGACY_DOCS_VULNERABILITIES.md; reviewed=2026-08-03; unreachable=apps/rxjs.dev is excluded f…
-GHSA-3h5v-q93c-6h6q and 1 alias have been filtered out because: workspace=apps/rxjs.dev; owner=benlesh; tracking=docs/security/LEGACY_DOCS_VULNERABILITIES.md; reviewed=2026-08-03; unreachable=apps/rxjs.dev is excluded f…
-GHSA-58qx-3vcg-4xpx and 1 alias have been filtered out because: workspace=apps/rxjs.dev; owner=benlesh; tracking=docs/security/LEGACY_DOCS_VULNERABILITIES.md; reviewed=2026-08-03; unreachable=apps/rxjs.dev is excluded f…
-GHSA-96hv-2xvq-fx4p and 1 alias have been filtered out because: workspace=apps/rxjs.dev; owner=benlesh; tracking=docs/security/LEGACY_DOCS_VULNERABILITIES.md; reviewed=2026-08-03; unreachable=apps/rxjs.dev is excluded f…
-GHSA-776f-qx25-q3cc and 1 alias have been filtered out because: workspace=apps/rxjs.dev; owner=benlesh; tracking=docs/security/LEGACY_DOCS_VULNERABILITIES.md; reviewed=2026-08-03; unreachable=apps/rxjs.dev is excluded f…
-Filtered 259 vulnerabilities from output
-Exit code: 1
-##[warning]No files were found with the provided path: .security. No artifacts will be uploaded.
+    ... 77 more items
+  ],
+  expected: [],
+  operator: 'deepStrictEqual',
+  diff: 'simple'
+}
+Node.js v24.12.0
+##[error]Process completed with exit code 1.
 ```
 
 </details>

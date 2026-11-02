@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/liketrek/TREK/issues/new
-- **Stars:** 15310 · **Generated:** 2026-11-02T06:51:01.101Z
+- **Stars:** 15322 · **Generated:** 2026-11-02T12:41:31.933Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 

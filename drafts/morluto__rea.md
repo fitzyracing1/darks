@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/morluto/rea/issues/new
-- **Stars:** 419843 · **Generated:** 2026-11-02T06:51:01.101Z
+- **Stars:** 420969 · **Generated:** 2026-11-02T12:41:31.933Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** latest run was skipped, not failed — probably not worth filing
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
@@ -22,7 +22,7 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### CodeQL production (`.github/workflows/codeql.yml`)
 
-- Latest run on `main`: https://github.com/morluto/rea/actions/runs/41395203839 — dark (conclusion: `skipped`), 2026-11-02 05:38 UTC
+- Latest run on `main`: https://github.com/morluto/rea/actions/runs/41416014317 — dark (conclusion: `skipped`), 2026-11-02 08:50 UTC
 - Dark since: 2026-11-01 07:24 UTC (first run of the current streak)
 - Likely cause: run skipped
 

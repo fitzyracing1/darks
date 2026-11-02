@@ -4,13 +4,14 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/headroomlabs-ai/headroom/issues/new
-- **Stars:** 78588 · **Generated:** 2026-11-02T06:51:01.101Z
+- **Stars:** 78622 · **Generated:** 2026-11-02T12:41:31.933Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Skipped: upstream already tracking
 
 - Security (`.github/workflows/security.yml`): [issue #4422](https://github.com/headroomlabs-ai/headroom/issues/4422) "DOCS security-model.mdx: network egress table omits two default-on pollers, and some counts and permission notes no longer match the code", [issue #4433](https://github.com/headroomlabs-ai/headroom/issues/4433) "BUG security-model.mdx says an unsafe x-headroom-base-url override is "ignored", but the proxy routes answer 400"
+- rust (`.github/workflows/rust.yml`): [issue #4549](https://github.com/headroomlabs-ai/headroom/issues/4549) "BUG Rust Kompress builds an ort Session without the dylib loader and AVX2 guards the crate says must run first"
 
 These workflows are left out of the body below.
 

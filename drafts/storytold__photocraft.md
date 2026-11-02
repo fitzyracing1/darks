@@ -4,13 +4,13 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/storytold/photocraft/issues/new
-- **Stars:** 75958 · **Generated:** 2026-11-02T06:51:01.101Z
+- **Stars:** 76056 · **Generated:** 2026-11-02T12:41:31.933Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 3 workflows dark on main ("SonarCloud", "CI", "Perf (nightly)")
+CI: 2 workflows dark on main ("SonarCloud", "Perf (nightly)")
 <!-- END TITLE -->
 
 ## Body
@@ -20,7 +20,7 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### SonarCloud (`.github/workflows/sonarcloud.yml`)
 
-- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/41365774712 — dark (conclusion: `failure`), 2026-11-02 00:11 UTC
+- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/41413620479 — dark (conclusion: `failure`), 2026-11-02 08:30 UTC
 - Dark since: 2026-11-01 11:33 UTC (first run of the current streak)
 - Job / step: `sonarcloud / SonarCloud Scan` → `SonarCloud Scan`
 - Likely cause: Action failed: The process '/opt/hostedtoolcache/sonar-scanner-cli/8.3.0-build.16463/linux-x64/bin/sonar-scanner' failed with exit code 1
@@ -28,36 +28,14 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 <details><summary>End of the job log</summary>
 
 ```
-01:08:31.182 INFO  SonarScanner CLI 8.3.0.16463
-01:08:31.188 INFO  Linux 7.0.0-1017-azure amd64
-01:08:33.882 INFO  Communicating with SonarQube Cloud
-01:08:33.883 INFO  JRE provisioning: os[linux], arch[x86_64]
-01:08:34.371 ERROR Failed to query JRE metadata: GET https://api.sonarcloud.io/analysis/jres?os=linux&arch=x86_64 failed with HTTP 403 Forbidden. Please check the property sonar.token or the environment variable SONAR_T…
-01:08:34.371 INFO  EXECUTION FAILURE
-01:08:34.372 INFO  Total time: 3.208s
+10:15:07.909 INFO  SonarScanner CLI 8.3.0.16463
+10:15:07.913 INFO  Linux 7.0.0-1017-azure amd64
+10:15:10.209 INFO  Communicating with SonarQube Cloud
+10:15:10.210 INFO  JRE provisioning: os[linux], arch[x86_64]
+10:15:10.720 ERROR Failed to query JRE metadata: GET https://api.sonarcloud.io/analysis/jres?os=linux&arch=x86_64 failed with HTTP 403 Forbidden. Please check the property sonar.token or the environment variable SONAR_T…
+10:15:10.721 INFO  EXECUTION FAILURE
+10:15:10.721 INFO  Total time: 2.828s
 ##[error]Action failed: The process '/opt/hostedtoolcache/sonar-scanner-cli/8.3.0-build.16463/linux-x64/bin/sonar-scanner' failed with exit code 1
-```
-
-</details>
-
-### CI (`.github/workflows/ci.yml`)
-
-- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/41365774750 — dark (conclusion: `failure`), 2026-11-02 00:11 UTC
-- Dark since: 2026-11-01 23:46 UTC (first run of the current streak)
-- Job / step: `test (windows-latest, unit)` → `Test`
-- Likely cause: error: test run failed
-
-<details><summary>End of the job log</summary>
-
-```
-                 at /rustc/58cf8f9c35b355199727627d07ae34a4e2846d67/library\core\src\panicking.rs:80
-       2: photocraft_compose::cmyk::tests::the_split_route_agrees_with_the_exact_path
-       3: <&<photocraft_compose::Buffer>::to_rgba8::{closure#1} as core::ops::function::FnMut<((&mut [[u8; 4]], &[[f32; 4]]),)>>::call_mut
-       4: core::ops::function::FnOnce::call_once
-                 at /rustc/58cf8f9c35b355199727627d07ae34a4e2846d67/library\core\src\ops\function.rs:250
-    note: Some details are omitted, run with `RUST_BACKTRACE=full` for a verbose backtrace.
-error: test run failed
-##[error]Process completed with exit code 100.
 ```
 
 </details>

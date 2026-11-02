@@ -4,15 +4,9 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/activepieces/activepieces/issues/new
-- **Stars:** 25330 · **Generated:** 2026-11-02T06:51:01.101Z
+- **Stars:** 25336 · **Generated:** 2026-11-02T12:41:31.933Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
-
-## Skipped: upstream already tracking
-
-- Release Pieces (`.github/workflows/release-pieces.yml`): [issue #16721](https://github.com/activepieces/activepieces/issues/16721) "Release Pieces: wait for the npm tarball before inserting piece metadata"
-
-These workflows are left out of the body below.
 
 ## Suggested title
 
@@ -71,7 +65,7 @@ Box signals API responded 401: {"error":"Unknown token. Send it as \"Authorizati
 
 ### Continuous Delivery — Staging (`.github/workflows/continuous-delivery-stg.yml`)
 
-- Latest run on `main`: https://github.com/activepieces/activepieces/actions/runs/41401189261 — dark (conclusion: `cancelled`), 2026-11-02 06:38 UTC
+- Latest run on `main`: https://github.com/activepieces/activepieces/actions/runs/41443370472 — dark (conclusion: `cancelled`), 2026-11-02 12:16 UTC
 - Dark since: 2026-11-02 06:38 UTC (first run of the current streak)
 - Likely cause: run cancelled
 
