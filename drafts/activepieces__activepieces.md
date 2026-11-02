@@ -4,13 +4,20 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/activepieces/activepieces/issues/new
-- **Stars:** 25327 · **Generated:** 2026-11-02T00:55:52.981Z
+- **Stars:** 25330 · **Generated:** 2026-11-02T06:51:01.101Z
 - Nothing in this file has been sent anywhere.
+- **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
+
+## Skipped: upstream already tracking
+
+- Release Pieces (`.github/workflows/release-pieces.yml`): [issue #16721](https://github.com/activepieces/activepieces/issues/16721) "Release Pieces: wait for the npm tarball before inserting piece metadata"
+
+These workflows are left out of the body below.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 2 workflows dark on main ("Chat Evals", "Benchmark")
+CI: 3 workflows dark on main ("Chat Evals", "Benchmark", "Continuous Delivery — Staging")
 <!-- END TITLE -->
 
 ## Body
@@ -20,9 +27,9 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### Chat Evals (`.github/workflows/agent-evals.yml`)
 
-- Latest run on `main`: https://github.com/activepieces/activepieces/actions/runs/41283676158 — dark (conclusion: `failure`), 2026-11-01 07:09 UTC
+- Latest run on `main`: https://github.com/activepieces/activepieces/actions/runs/41399154691 — dark (conclusion: `failure`), 2026-11-02 06:19 UTC
 - Dark since: 2026-10-13 06:26 UTC (first run of the current streak)
-- Job / step: `Live judge gate` → `Run live chat evals (scope=all)`
+- Job / step: `Live judge gate` → `Run live chat evals (scope=regression)`
 - Likely cause: Error: Hook timed out in 540000ms. (packages/server/worker/test/lib/agent-eval/agent-eval.test.ts:20)
 
 <details><summary>End of the job log</summary>
@@ -33,8 +40,8 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 ⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
  Test Files  1 failed | 12 passed (13)
       Tests  89 passed | 1 skipped (90)
-   Start at  07:13:52
-   Duration  545.94s (transform 1.30s, setup 54ms, collect 13.19s, tests 541.19s, environment 2ms, prepare 848ms)
+   Start at  06:23:41
+   Duration  547.62s (transform 1.57s, setup 60ms, collect 17.24s, tests 541.32s, environment 3ms, prepare 1.15s)
 ##[error]Error: Hook timed out in 540000ms.
 ```
 
@@ -42,15 +49,15 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### Benchmark (`.github/workflows/benchmark.yml`)
 
-- Latest run on `main`: https://github.com/activepieces/activepieces/actions/runs/41267786018 — dark (conclusion: `failure`), 2026-11-01 03:05 UTC
+- Latest run on `main`: https://github.com/activepieces/activepieces/actions/runs/41381183806 — dark (conclusion: `failure`), 2026-11-02 03:05 UTC
 - Dark since: 2026-10-30 03:06 UTC (first run of the current streak)
-- Job / step: `benchmark (shared, 1, 28, 0.5, 1G, 1, 768, false, 28)` → `Detect regression against trailing 14 runs (scheduled runs only)`
+- Job / step: `benchmark (dedicated, 1, 28, 0.5, 1G, 1, 768, true, 28)` → `Detect regression against trailing 14 runs (scheduled runs only)`
 - Likely cause: Box signals API responded 401: {"error":"Unknown token. Send it as \"Authorization: ***"."}
 
 <details><summary>End of the job log</summary>
 
 ```
-      "pct": -19.80021405636817,
+      "pct": 1.5264465743698865,
       "breach": false
     }
   ],
@@ -61,6 +68,12 @@ Box signals API responded 401: {"error":"Unknown token. Send it as \"Authorizati
 ```
 
 </details>
+
+### Continuous Delivery — Staging (`.github/workflows/continuous-delivery-stg.yml`)
+
+- Latest run on `main`: https://github.com/activepieces/activepieces/actions/runs/41401189261 — dark (conclusion: `cancelled`), 2026-11-02 06:38 UTC
+- Dark since: 2026-11-02 06:38 UTC (first run of the current streak)
+- Likely cause: run cancelled
 
 If this is already known or expected, feel free to close. Thanks for maintaining activepieces!
 

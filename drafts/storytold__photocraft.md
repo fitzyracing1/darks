@@ -4,13 +4,13 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/storytold/photocraft/issues/new
-- **Stars:** 75894 · **Generated:** 2026-11-02T00:55:52.981Z
+- **Stars:** 75958 · **Generated:** 2026-11-02T06:51:01.101Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 2 workflows dark on main ("SonarCloud", "CI")
+CI: 3 workflows dark on main ("SonarCloud", "CI", "Perf (nightly)")
 <!-- END TITLE -->
 
 ## Body
@@ -20,7 +20,7 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### SonarCloud (`.github/workflows/sonarcloud.yml`)
 
-- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/41363702021 — dark (conclusion: `failure`), 2026-11-01 23:46 UTC
+- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/41365774712 — dark (conclusion: `failure`), 2026-11-02 00:11 UTC
 - Dark since: 2026-11-01 11:33 UTC (first run of the current streak)
 - Job / step: `sonarcloud / SonarCloud Scan` → `SonarCloud Scan`
 - Likely cause: Action failed: The process '/opt/hostedtoolcache/sonar-scanner-cli/8.3.0-build.16463/linux-x64/bin/sonar-scanner' failed with exit code 1
@@ -28,13 +28,13 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 <details><summary>End of the job log</summary>
 
 ```
-00:30:55.819 INFO  SonarScanner CLI 8.3.0.16463
-00:30:55.823 INFO  Linux 7.0.0-1017-azure amd64
-00:30:58.523 INFO  Communicating with SonarQube Cloud
-00:30:58.523 INFO  JRE provisioning: os[linux], arch[x86_64]
-00:30:58.988 ERROR Failed to query JRE metadata: GET https://api.sonarcloud.io/analysis/jres?os=linux&arch=x86_64 failed with HTTP 403 Forbidden. Please check the property sonar.token or the environment variable SONAR_T…
-00:30:58.988 INFO  EXECUTION FAILURE
-00:30:58.989 INFO  Total time: 3.187s
+01:08:31.182 INFO  SonarScanner CLI 8.3.0.16463
+01:08:31.188 INFO  Linux 7.0.0-1017-azure amd64
+01:08:33.882 INFO  Communicating with SonarQube Cloud
+01:08:33.883 INFO  JRE provisioning: os[linux], arch[x86_64]
+01:08:34.371 ERROR Failed to query JRE metadata: GET https://api.sonarcloud.io/analysis/jres?os=linux&arch=x86_64 failed with HTTP 403 Forbidden. Please check the property sonar.token or the environment variable SONAR_T…
+01:08:34.371 INFO  EXECUTION FAILURE
+01:08:34.372 INFO  Total time: 3.208s
 ##[error]Action failed: The process '/opt/hostedtoolcache/sonar-scanner-cli/8.3.0-build.16463/linux-x64/bin/sonar-scanner' failed with exit code 1
 ```
 
@@ -58,6 +58,28 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
     note: Some details are omitted, run with `RUST_BACKTRACE=full` for a verbose backtrace.
 error: test run failed
 ##[error]Process completed with exit code 100.
+```
+
+</details>
+
+### Perf (nightly) (`.github/workflows/perf-nightly.yml`)
+
+- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/41383399775 — dark (conclusion: `failure`), 2026-11-02 03:29 UTC
+- Dark since: 2026-11-02 03:29 UTC (first run of the current streak)
+- Job / step: `perf (macOS, Apple GPU)` → `Run benchmarks`
+- Likely cause: wrote /Users/runner/work/photocraft/photocraft/target/perf/results.json
+
+<details><summary>End of the job log</summary>
+
+```
+| Id | Scenario | Target | Why | Issue |
+|---|---|---|---|---|
+| P15 | Zoom / pan frame time on a 15000×10000 16-bit document | ≤ 16 ms per frame | no headless canvas frame harness yet (zoom and pan sample the GPU texture in the egui paint callback) | [#209](https://github.com/stor…
+| P23 | Warp / Puppet / Perspective preview at 4K | ≤ 16 ms per frame, commit in the background | the previews run inside the UI tools; no headless frame harness, no background commit | [#210](https://github.com/storyto…
+| P34 | Brush preview memory, small dab on an 8K viewport | ≤ 2 MiB | the live brush preview buffers are UI-side; no headless counter yet | [#211](https://github.com/storytold/photocraft/issues/211) |
+| P35 | Marquee drag on 24 MP with Alt/Shift | ≤ 17 ms p95 | Shift/Alt marquee modifiers don't exist yet (#208) and the drag preview is UI-side | [#211](https://github.com/storytold/photocraft/issues/211) |
+wrote /Users/runner/work/photocraft/photocraft/target/perf/results.json
+##[error]Process completed with exit code 1.
 ```
 
 </details>

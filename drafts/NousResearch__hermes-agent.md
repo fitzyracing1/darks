@@ -1,12 +1,38 @@
 <!-- dark-draft: NousResearch/hermes-agent -->
-<!-- draft-state: duplicate -->
+<!-- draft-state: ready -->
 # Upstream issue draft: NousResearch/hermes-agent
 
-- **Status:** not for filing — upstream already has an open issue/PR about every dark workflow here
+- **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/NousResearch/hermes-agent/issues/new
-- **Stars:** 259510 · **Generated:** 2026-11-02T00:55:52.981Z
+- **Stars:** 259587 · **Generated:** 2026-11-02T06:51:01.101Z
 - Nothing in this file has been sent anywhere.
+- **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
-## Skipped: upstream already tracking
+## Suggested title
 
-- Build Skills Index (`.github/workflows/skills-index.yml`): [issue #62086](https://github.com/NousResearch/hermes-agent/issues/62086) "ci: skills-index.yml has no concurrency group; overlapping runs build the index twice", [issue #122609](https://github.com/NousResearch/hermes-agent/issues/122609) "skills-index-watchdog Skills index is stale or degraded (degraded)", [issue #139372](https://github.com/NousResearch/hermes-agent/issues/139372) "fix(ci): align skills-index freshness watchdog floors with build_skills_index.py EXPECTED_FLOORS", [issue #66787](https://github.com/NousResearch/hermes-agent/issues/66787) "Skills index stuck since 2026-07-16: ClawHub crawl (~15k) below EXPECTED_FLOORS (20k) fails every rebuild", [issue #71481](https://github.com/NousResearch/hermes-agent/issues/71481) "Names-only skills index breaks spontaneous discovery: the skills_list fallback is not taken (measured)"
+<!-- BEGIN TITLE -->
+CI: 2 workflows dark on main ("Docker Build, Test, and Publish", "CI")
+<!-- END TITLE -->
+
+## Body
+
+<!-- BEGIN BODY -->
+Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
+
+### Docker Build, Test, and Publish (`.github/workflows/docker.yml`)
+
+- Latest run on `main`: https://github.com/NousResearch/hermes-agent/actions/runs/41400069932 — dark (conclusion: `cancelled`), 2026-11-02 06:28 UTC
+- Dark since: 2026-11-02 06:26 UTC (first run of the current streak)
+- Likely cause: run cancelled
+
+### CI (`.github/workflows/ci.yaml`)
+
+- Latest run on `main`: https://github.com/NousResearch/hermes-agent/actions/runs/41400070640 — dark (conclusion: `cancelled`), 2026-11-02 06:28 UTC
+- Dark since: 2026-11-02 06:28 UTC (first run of the current streak)
+- Likely cause: run cancelled
+
+If this is already known or expected, feel free to close. Thanks for maintaining hermes-agent!
+
+---
+<sub>Found by the [dark crawler](https://github.com/fitzyracing1/darks), which checks the latest default-branch run of each workflow in popular repos. Reviewed and filed by hand.</sub>
+<!-- END BODY -->

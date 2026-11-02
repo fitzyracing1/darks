@@ -4,13 +4,13 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/langflow-ai/langflow/issues/new
-- **Stars:** 156230 · **Generated:** 2026-11-02T00:55:52.981Z
+- **Stars:** 156242 · **Generated:** 2026-11-02T06:51:01.101Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 3 workflows dark on main ("Deploy Storybook to GitHub Pages", "Mend", "Cross-Bundle Test")
+CI: 4 workflows dark on main ("Deploy Storybook to GitHub Pages", "Mend", "Cross-Bundle Test", +1 more)
 <!-- END TITLE -->
 
 ## Body
@@ -64,9 +64,31 @@ Process finished with exit code ERROR (-1)
 
 ### Cross-Bundle Test (`.github/workflows/cross-bundle-test.yml`)
 
-- Latest run on `main`: https://github.com/langflow-ai/langflow/actions/runs/40279758044 — dark (conclusion: `failure`), 2026-10-26 06:25 UTC
+- Latest run on `main`: https://github.com/langflow-ai/langflow/actions/runs/41398915115 — dark (conclusion: `failure`), 2026-11-02 06:16 UTC
 - Dark since: 2026-10-26 06:25 UTC (first run of the current streak)
 - Likely cause: no cause found in annotations
+
+### A11y / IBM Equal Access Scans (`.github/workflows/a11y-scan.yml`)
+
+- Latest run on `main`: https://github.com/langflow-ai/langflow/actions/runs/41376780498 — dark (conclusion: `failure`), 2026-11-02 02:15 UTC
+- Dark since: 2026-11-02 02:15 UTC (first run of the current streak)
+- Job / step: `Playwright scan runner (shard 6)` → `Install Playwright Browsers`
+- Likely cause: Error: ERROR: Playwright does not support chromium on ubuntu26.04-x64
+
+<details><summary>End of the job log</summary>
+
+```
+  npm audit fix --force
+Some issues need review, and may require choosing
+a different dependency.
+Run `npm audit` for details.
+Cache not found for input keys: playwright-1.60.0-chromium-Linux, playwright-1.60.0-chromium-Linux
+Failed to install browsers
+Error: ERROR: Playwright does not support chromium on ubuntu26.04-x64
+##[error]Process completed with exit code 1.
+```
+
+</details>
 
 If this is already known or expected, feel free to close. Thanks for maintaining langflow!
 

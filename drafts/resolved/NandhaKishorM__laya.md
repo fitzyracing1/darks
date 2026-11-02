@@ -1,8 +1,8 @@
 <!-- dark-draft: NandhaKishorM/laya -->
-<!-- draft-state: ready -->
+<!-- draft-state: resolved -->
 # Upstream issue draft: NandhaKishorM/laya
 
-- **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
+- **Status:** resolved — lit again (2026-11-02); nothing to file
 - **Would be filed at:** https://github.com/NandhaKishorM/laya/issues/new
 - **Stars:** 34815 · **Generated:** 2026-11-02T00:55:52.981Z
 - Nothing in this file has been sent anywhere.
