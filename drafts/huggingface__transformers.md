@@ -4,65 +4,30 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/huggingface/transformers/issues/new
-- **Stars:** 168412 · **Generated:** 2026-11-01T18:34:58.241Z
+- **Stars:** 168420 · **Generated:** 2026-11-02T00:55:52.981Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** workflow failed to start (config/permissions on their side)
 - **Note for Joshua:** self-hosted runner problem — maintainers usually know
 
+## Skipped: upstream already tracking
+
+- Build docker images (scheduled) (`.github/workflows/build-docker-images.yml`): [issue #50220](https://github.com/huggingface/transformers/issues/50220) "CI: build-docker-images Doc builder failing: pyarrow requires NumPy>=2.0 but image has 1.26.4"
+- Check Tiny Models (`.github/workflows/check_tiny_models.yml`): [issue #50221](https://github.com/huggingface/transformers/issues/50221) "CI: check_tiny_models failing: `from datasets import load_dataset` ImportError — pyarrow needs NumPy>=2.0 (found 1.26.4)"
+- Nvidia CI (`.github/workflows/self-scheduled-caller.yml`): [issue #50222](https://github.com/huggingface/transformers/issues/50222) "CI: Torch pipeline CI failing: 39 pipeline tests fail with RuntimeError ignore_mismatched_sizes=False"
+- vLLM Integration Tests (`.github/workflows/vllm-ci-caller.yml`): [issue #50223](https://github.com/huggingface/transformers/issues/50223) "CI: vllm-ci failing: uv 'No solution found' torch==2.14.0+cpu unavailable for vllm cpu build; step uses `sh` with ``"
+
+These workflows are left out of the body below.
+
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 8 workflows dark on main ("Build docker images (scheduled)", "Check Tiny Models", "Self-hosted runner (nightly-past-ci-caller)", +5 more)
+CI: 4 workflows dark on main ("Self-hosted runner (nightly-past-ci-caller)", "Self-hosted runner (Intel Gaudi3 scheduled CI caller)", "Doctests", +1 more)
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
 Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
-
-### Build docker images (scheduled) (`.github/workflows/build-docker-images.yml`)
-
-- Latest run on `main`: https://github.com/huggingface/transformers/actions/runs/41258138159 — dark (conclusion: `failure`), 2026-11-01 00:45 UTC
-- Dark since: 2026-10-31 00:37 UTC (first run of the current streak)
-- Job / step: `Doc builder` → `Build and push`
-- Likely cause: buildx failed with: ERROR: failed to build: failed to solve: process "/bin/sh -c doc-builder build transformers transformers/docs/source/en --build_dir doc-build-dev --notebook_dir notebooks/transformers_doc --clean" did not complete succes
-
-<details><summary>End of the job log</summary>
-
-```
-  24 | >>> RUN doc-builder build transformers transformers/docs/source/en --build_dir doc-build-dev --notebook_dir notebooks/transformers_doc --clean
-  25 |     RUN rm -rf doc-build-dev
-  26 |
---------------------
-ERROR: failed to build: failed to solve: process "/bin/sh -c doc-builder build transformers transformers/docs/source/en --build_dir doc-build-dev --notebook_dir notebooks/transformers_doc --clean" did not complete succe…
-builder-6a554f97-c918-41bf-ad73-c0f48c6b4613/builder-6a554f97-c918-41bf-ad73-c0f48c6b46130/wb4mlaw3km2fuaaft9xdv8e60
-Build summary supported!
-##[error]buildx failed with: ERROR: failed to build: failed to solve: process "/bin/sh -c doc-builder build transformers transformers/docs/source/en --build_dir doc-build-dev --notebook_dir notebooks/transformers_doc --…
-```
-
-</details>
-
-### Check Tiny Models (`.github/workflows/check_tiny_models.yml`)
-
-- Latest run on `main`: https://github.com/huggingface/transformers/actions/runs/41264136796 — dark (conclusion: `failure`), 2026-11-01 02:11 UTC
-- Dark since: 2026-10-31 02:10 UTC (first run of the current streak)
-- Job / step: `Check tiny models` → `Create all tiny models (locally)`
-- Likely cause: ImportError: pyarrow requires NumPy 2.0 or newer, found 1.26.4
-
-<details><summary>End of the job log</summary>
-
-```
-    from .arrow_dataset import Column, Dataset
-  File "/opt/hostedtoolcache/Python/3.11.17/x64/lib/python3.11/site-packages/datasets/arrow_dataset.py", line 59, in <module>
-    import pyarrow as pa
-  File "/opt/hostedtoolcache/Python/3.11.17/x64/lib/python3.11/site-packages/pyarrow/__init__.py", line 59, in <module>
-    from pyarrow.lib import (BuildInfo, CppBuildInfo, RuntimeInfo, set_timezone_db_path,
-  File "pyarrow/lib.pyx", line 42, in init pyarrow.lib
-ImportError: pyarrow requires NumPy 2.0 or newer, found 1.26.4
-##[error]Process completed with exit code 1.
-```
-
-</details>
 
 ### Self-hosted runner (nightly-past-ci-caller) (`.github/workflows/self-nightly-past-ci-caller.yml`)
 
@@ -101,50 +66,6 @@ drwxr-xr-x.  1 root root    67 Nov  1 00:47 src
 drwxr-xr-x.  1 root root   111 Nov  1 02:35 tests
 drwxr-xr-x.  1 root root    33 Nov  1 00:47 utils
 ##[error]Error: failed to run script step: command terminated with non-zero exit code: error executing command [sh -e /__w/_temp/e0502800-d59c-11f1-9822-15b3ffcf8f4b.sh], exit code 1
-```
-
-</details>
-
-### Nvidia CI (`.github/workflows/self-scheduled-caller.yml`)
-
-- Latest run on `main`: https://github.com/huggingface/transformers/actions/runs/41265048322 — dark (conclusion: `failure`), 2026-11-01 02:24 UTC
-- Dark since: 2026-10-31 02:23 UTC (first run of the current streak)
-- Job / step: `Torch pipeline CI / PyTorch pipelines (aws-g5-12xlarge-cache)` → `Run all pipeline tests on GPU`
-- Likely cause: Executing the custom container implementation failed. Please contact your self hosted runner administrator.
-
-<details><summary>End of the job log</summary>
-
-```
-                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/transformers/src/transformers/modeling_utils.py", line 4540, in _finalize_model_loading
-    log_state_dict_report(
-  File "/transformers/src/transformers/utils/loading_report.py", line 316, in log_state_dict_report
-    raise RuntimeError(
-RuntimeError: You set `ignore_mismatched_sizes` to `False`, thus raising an error. For details look at the above report!
-===== 39 failed, 222 passed, 11 skipped, 26 warnings in 801.56s (0:13:21) ======
-##[error]Error: failed to run script step: command terminated with non-zero exit code: error executing command [sh -e /__w/_temp/0c8ba990-d59c-11f1-a98c-e15610be8b89.sh], exit code 1
-```
-
-</details>
-
-### vLLM Integration Tests (`.github/workflows/vllm-ci-caller.yml`)
-
-- Latest run on `main`: https://github.com/huggingface/transformers/actions/runs/41268188779 — dark (conclusion: `failure`), 2026-11-01 03:11 UTC
-- Dark since: 2026-10-31 03:09 UTC (first run of the current streak)
-- Job / step: `Test vLLM integration` → `Install dependencies`
-- Likely cause: Executing the custom container implementation failed. Please contact your self hosted runner administrator.
-
-<details><summary>End of the job log</summary>
-
-```
- + pytest-opentelemetry==1.1.0
- + transformers-ci==0.1.0 (from git+https://github.com/huggingface/transformers-ci@644d374244dbbbaa25fba95c169ab5c7000253e9)
- + wrapt==2.5.2
-Using Python 3.12.16 environment at: /opt/venv312
-error: No solution found when resolving dependencies
-  cause: Because there is no version of torch{platform_machine == 'aarch64' or platform_machine == 's390x' or platform_machine == 'x86_64'}==2.14.0+cpu and vllm==0.1.dev1+g2b009fc6d.cpu depends on torch{platform_machine…
-         And because only vllm==0.1.dev1+g2b009fc6d.cpu is available and you require vllm, we can conclude that your requirements are unsatisfiable.
-##[error]Error: failed to run script step: command terminated with non-zero exit code: error executing command [sh -e /__w/_temp/411e0260-d5a2-11f1-9367-a177a9bf7dcb.sh], exit code 1
 ```
 
 </details>

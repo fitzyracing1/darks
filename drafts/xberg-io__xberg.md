@@ -4,27 +4,45 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/xberg-io/xberg/issues/new
-- **Stars:** 9505 · **Generated:** 2026-11-01T18:34:58.241Z
+- **Stars:** 9509 · **Generated:** 2026-11-02T00:55:52.981Z
 - Nothing in this file has been sent anywhere.
-
-## Skipped: upstream already tracking
-
-- CI Rust (`.github/workflows/ci-rust.yaml`): [issue #2333](https://github.com/xberg-io/xberg/issues/2333) "chore(deps): remove the Candle ZIP 9 backport after release"
-
-These workflows are left out of the body below.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: "CI E2E" workflow failing on main since 2026-10-30
+CI: 2 workflows dark on main ("CI Rust", "CI E2E")
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! The **CI E2E** workflow (`.github/workflows/ci-e2e.yaml`) on `main` has been failing since 2026-10-30. Here is what I saw, in case it's useful:
+Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
 
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/41280832115 — dark (conclusion: `failure`), 2026-11-01 06:26 UTC
+### CI Rust (`.github/workflows/ci-rust.yaml`)
+
+- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/41344525515 — dark (conclusion: `failure`), 2026-11-01 19:59 UTC
+- Dark since: 2026-10-25 18:30 UTC (first run of the current streak)
+- Job / step: `Rust (ubuntu-latest)` → `Run tests`
+- Likely cause: [rust:test:ci] ERROR task failed
+
+<details><summary>End of the job log</summary>
+
+```
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/root       145G   54G   91G  38% /
+Cargo environment:
+cargo 1.99.1 (5f94df478 2026-08-27)
+rustc 1.99.1 (58cf8f9c3 2026-10-13)
+Finished in 3272.61s
+[rust:test:ci] ERROR task failed
+##[error]Process completed with exit code 1.
+```
+
+</details>
+
+### CI E2E (`.github/workflows/ci-e2e.yaml`)
+
+- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/41344525391 — dark (conclusion: `failure`), 2026-11-01 19:59 UTC
 - Dark since: 2026-10-30 03:50 UTC (first run of the current streak)
 - Job / step: `E2E (kotlin-android)` → `Run e2e tests`
 - Likely cause: [kotlin-android:e2e] ERROR task failed

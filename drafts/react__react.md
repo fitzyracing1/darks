@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/react/react/issues/new
-- **Stars:** 252063 · **Generated:** 2026-11-01T18:34:58.241Z
+- **Stars:** 252071 · **Generated:** 2026-11-02T00:55:52.981Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -18,7 +18,7 @@ CI: "(DevTools) Regression Tests" workflow failing on main since 2026-10-11
 <!-- BEGIN BODY -->
 Hi! The **(DevTools) Regression Tests** workflow (`.github/workflows/devtools_regression_tests.yml`) on `main` has been failing since 2026-10-11. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/react/react/actions/runs/41255066831 — dark (conclusion: `failure`), 2026-11-01 00:03 UTC
+- Latest run on `main`: https://github.com/react/react/actions/runs/41365095483 — dark (conclusion: `failure`), 2026-11-02 00:03 UTC
 - Dark since: 2026-10-11 00:06 UTC (first run of the current streak)
 - Job / step: `Download base build` → `Download react-devtools artifacts for base revision`
 - Likely cause: The workflow run for the specified commit (76baa3b5434fad315ece9cfd4d20d7a8d6c34a25) could not be found.
@@ -26,11 +26,11 @@ Hi! The **(DevTools) Regression Tests** workflow (`.github/workflows/devtools_re
 <details><summary>End of the job log</summary>
 
 ```
-⠙ Downloading artifacts from GitHub for commit 76baa3b5434fad315ece9cfd4d20d7a8d
-6c34a25)
 ⠹ Downloading artifacts from GitHub for commit 76baa3b5434fad315ece9cfd4d20d7a8d
 6c34a25)
 ⠸ Downloading artifacts from GitHub for commit 76baa3b5434fad315ece9cfd4d20d7a8d
+6c34a25)
+⠼ Downloading artifacts from GitHub for commit 76baa3b5434fad315ece9cfd4d20d7a8d
 6c34a25)
 The workflow run for the specified commit (76baa3b5434fad315ece9cfd4d20d7a8d6c34a25) could not be found.
 ##[error]Process completed with exit code 1.
