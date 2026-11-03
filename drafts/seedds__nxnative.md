@@ -4,14 +4,13 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/seedds/nxnative/issues/new
-- **Stars:** 11328 · **Generated:** 2026-11-02T18:39:26.456Z
+- **Stars:** 11457 · **Generated:** 2026-11-03T00:52:20.983Z
 - Nothing in this file has been sent anywhere.
-- **Note for Joshua:** cancelled by a concurrency group — likely noise
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 3 workflows dark on main ("lint-c", "fuzz", "tests")
+CI: 3 workflows dark on main ("lint-c", "fuzz", "lint-python")
 <!-- END TITLE -->
 
 ## Body
@@ -21,7 +20,7 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### lint-c (`.github/workflows/lint-c.yml`)
 
-- Latest run on `main`: https://github.com/seedds/nxnative/actions/runs/41481560591 — dark (conclusion: `failure`), 2026-11-02 16:26 UTC
+- Latest run on `main`: https://github.com/seedds/nxnative/actions/runs/41551307758 — dark (conclusion: `failure`), 2026-11-03 00:13 UTC
 - Dark since: 2026-11-02 10:43 UTC (first run of the current streak)
 - Job / step: `clang-tidy (ratchet)` → `clang-tidy against the baseline`
 - Likely cause: Potential leak of an object stored into 'pr' [clang-analyzer-osx.cocoa.RetainCount] (1 in this file, the baseline has 0) (dm/gfx/tests/t_geometry_hazards.m:141)
@@ -63,12 +62,27 @@ Base64: TkRTUgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 
 </details>
 
-### tests (`.github/workflows/tests.yml`)
+### lint-python (`.github/workflows/lint-python.yml`)
 
-- Latest run on `main`: https://github.com/seedds/nxnative/actions/runs/41480959596 — dark (conclusion: `cancelled`), 2026-11-02 16:23 UTC
-- Dark since: 2026-11-02 13:00 UTC (first run of the current streak)
-- Job / step: `Sanitizers (ASan, UBSan and TSan over the host and CPU texture tests)`
-- Likely cause: Canceling since a higher priority waiting request for tests-refs/heads/main exists
+- Latest run on `main`: https://github.com/seedds/nxnative/actions/runs/41551307771 — dark (conclusion: `failure`), 2026-11-03 00:13 UTC
+- Dark since: 2026-11-03 00:13 UTC (first run of the current streak)
+- Job / step: `ruff and pyright (ratchet)` → `ruff and pyright against the baseline`
+- Likely cause: Operator "+" not supported for types "str | Any" and "str | list[Unknown]" Operator "+" not supported for types "str" and "list[Unknown]" (dm/gfx/tools/dmsh_logic.py:83)
+
+<details><summary>End of the job log</summary>
+
+```
+Using cached lz4-4.4.5-cp314-cp314-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (1.4 MB)
+Using cached capstone-5.0.9-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (1.5 MB)
+Using cached fonttools-4.67.0-cp314-cp314-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (5.3 MB)
+Downloading nodeenv-1.12.0-py3-none-any.whl (39 kB)
+Using cached typing_extensions-4.16.0-py3-none-any.whl (45 kB)
+Installing collected packages: typing-extensions, ruff, nodeenv, lz4, fonttools, capstone, pyright
+Successfully installed capstone-5.0.9 fonttools-4.67.0 lz4-4.4.5 nodeenv-1.12.0 pyright-1.1.414 ruff-0.17.2 typing-extensions-4.16.0
+##[error]Operator "+" not supported for types "str | Any" and "str | list[Unknown]" Operator "+" not supported for types "str" and "list[Unknown]"
+```
+
+</details>
 
 If this is already known or expected, feel free to close. Thanks for maintaining nxnative!
 

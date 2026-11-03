@@ -4,14 +4,14 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/xberg-io/xberg/issues/new
-- **Stars:** 9513 · **Generated:** 2026-11-02T18:39:26.456Z
+- **Stars:** 9515 · **Generated:** 2026-11-03T00:52:20.983Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** cancelled by a concurrency group — likely noise
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 5 workflows dark on main ("CI Rust", "CI Lint", "CI Integrations", +2 more)
+CI: 3 workflows dark on main ("CI Rust", "CI Integrations", "CI E2E")
 <!-- END TITLE -->
 
 ## Body
@@ -21,79 +21,65 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### CI Rust (`.github/workflows/ci-rust.yaml`)
 
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/41490535437 — dark (conclusion: `cancelled`), 2026-11-02 17:22 UTC
+- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/41537164946 — dark (conclusion: `cancelled`), 2026-11-02 22:25 UTC
 - Dark since: 2026-10-25 18:30 UTC (first run of the current streak)
-- Job / step: `Rust (windows-latest)` → `Install system dependencies`
+- Job / step: `xberg-cli feature leg (all)` → `cargo clippy -p xberg-cli --features all`
 - Likely cause: Canceling since a higher priority waiting request for ci-rust-refs/heads/main exists
 
 <details><summary>End of the job log</summary>
 
 ```
-  tesseractclass.cpp
-  tessvars.cpp
-  tfacepp.cpp
-  thresholder.cpp
-  werdit.cpp
-  blamer.cpp
-  Generating Code...
+    Checking lru v0.19.0
+   Compiling xberg-cli v1.4.0 (/home/runner/work/xberg/xberg/crates/xberg-cli)
+    Checking jotdown v0.10.0
+    Checking org v0.3.1
+    Checking minijinja v3.0.5
+    Checking similar v3.2.1
+    Checking clap_complete v4.6.11
 ##[error]The operation was canceled.
 ```
 
 </details>
 
-### CI Lint (`.github/workflows/ci-lint.yaml`)
-
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/41493847951 — dark (conclusion: `cancelled`), 2026-11-02 17:43 UTC
-- Dark since: 2026-11-02 04:52 UTC (first run of the current streak)
-- Job / step: `Submodule gitlinks reachable`
-- Likely cause: Canceling since a higher priority waiting request for ci-lint-refs/heads/main exists
-
 ### CI Integrations (`.github/workflows/ci-integrations.yaml`)
 
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/41493847663 — dark (conclusion: `cancelled`), 2026-11-02 17:43 UTC
+- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/41528581577 — dark (conclusion: `cancelled`), 2026-11-02 21:27 UTC
 - Dark since: 2026-11-02 11:54 UTC (first run of the current streak)
-- Job / step: `Build local integration bindings`
+- Job / step: `Build local integration bindings` → `Build and stage Java binding`
 - Likely cause: Canceling since a higher priority waiting request for ci-integrations-refs/heads/main exists
+
+<details><summary>End of the job log</summary>
+
+```
+   Compiling multer v3.1.0
+   Compiling tar v0.4.46
+   Compiling memchr-n v0.1.10
+   Compiling parking_lot v0.13.0
+   Compiling notify v8.2.1
+   Compiling image v0.24.9
+   Compiling tokenizers v0.21.4
+##[error]The operation was canceled.
+```
+
+</details>
 
 ### CI E2E (`.github/workflows/ci-e2e.yaml`)
 
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/41493847828 — dark (conclusion: `cancelled`), 2026-11-02 17:43 UTC
+- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/41537164957 — dark (conclusion: `cancelled`), 2026-11-02 22:25 UTC
 - Dark since: 2026-11-02 11:54 UTC (first run of the current streak)
-- Job / step: `Build FFI (aarch64-unknown-linux-gnu)` → `Install system dependencies`
+- Job / step: `Build FFI (aarch64-unknown-linux-gnu)` → `Post Setup Rust`
 - Likely cause: Canceling since a higher priority waiting request for ci-e2e-refs/heads/main exists
 
 <details><summary>End of the job log</summary>
 
 ```
-[ 47%] Building C object src/CMakeFiles/leptonica.dir/map.c.o
-[ 48%] Building C object src/CMakeFiles/leptonica.dir/maze.c.o
-[ 48%] Building C object src/CMakeFiles/leptonica.dir/morph.c.o
-[ 49%] Building C object src/CMakeFiles/leptonica.dir/morphapp.c.o
-[ 49%] Building C object src/CMakeFiles/leptonica.dir/morphdwa.c.o
-[ 50%] Building C object src/CMakeFiles/leptonica.dir/morphseq.c.o
-[ 50%] Building C object src/CMakeFiles/leptonica.dir/numabasic.c.o
-##[error]The operation was canceled.
-```
-
-</details>
-
-### CI Docs (`.github/workflows/ci-docs.yaml`)
-
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/41493848572 — dark (conclusion: `cancelled`), 2026-11-02 17:43 UTC
-- Dark since: 2026-11-02 17:22 UTC (first run of the current streak)
-- Job / step: `docs / Build` → `Build site`
-- Likely cause: Canceling since a higher priority waiting request for ci-docs-refs/heads/main exists
-
-<details><summary>End of the job log</summary>
-
-```
-18:16:39 [build] Rearranging server assets...
- generating static routes
-18:16:44 [WARN] [content] The collection "i18n" does not exist or is empty. Please check your content config file for errors.
-18:16:44   ├─ /_llms-txt/get-started.txt (+1.64s)
-18:16:46   ├─ /_llms-txt/guides.txt (+5.74s)
-18:16:52   ├─ /_llms-txt/concepts.txt (+239ms)
-18:16:52   ├─ /_llms-txt/integrations.txt (+189ms)
+##[end-action id=__f65ae1a0-afe6-43bf-bfc8-24c731d73a7c.cache-tesseract-linux;outcome=success;conclusion=success;duration_ms=890]
+##[start-action display=Set up mise;id=__c6b94cd0-3588-48ed-8cc3-77b0c78fc01c.__xberg-io_actions]
+##[start-action display=Install mise and tools;id=__c6b94cd0-3588-48ed-8cc3-77b0c78fc01c.__xberg-io_actions.__jdx_mise-action]
+##[end-action id=__c6b94cd0-3588-48ed-8cc3-77b0c78fc01c.__xberg-io_actions.__jdx_mise-action;outcome=success;conclusion=success;duration_ms=182]
+##[end-action id=__c6b94cd0-3588-48ed-8cc3-77b0c78fc01c.__xberg-io_actions;outcome=success;conclusion=success;duration_ms=193]
+##[start-action display=Cache Rust build artifacts;id=__c6b94cd0-3588-48ed-8cc3-77b0c78fc01c.cache-rust]
+[command]/usr/bin/tar --posix -cf cache.tzst --exclude cache.tzst -P -C /home/runner/work/xberg/xberg --files-from manifest.txt --use-compress-program zstdmt
 ##[error]The operation was canceled.
 ```
 

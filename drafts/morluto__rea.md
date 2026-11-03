@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/morluto/rea/issues/new
-- **Stars:** 422151 · **Generated:** 2026-11-02T18:39:26.456Z
+- **Stars:** 422919 · **Generated:** 2026-11-03T00:52:20.983Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** latest run was skipped, not failed — probably not worth filing
 
@@ -19,7 +19,7 @@ CI: "CodeQL production" workflow not completing (runs skipped) on main since 202
 <!-- BEGIN BODY -->
 Hi! The **CodeQL production** workflow (`.github/workflows/codeql.yml`) on `main` has been not completing (runs skipped) since 2026-11-01. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/morluto/rea/actions/runs/41499562139 — dark (conclusion: `skipped`), 2026-11-02 18:20 UTC
+- Latest run on `main`: https://github.com/morluto/rea/actions/runs/41510545971 — dark (conclusion: `skipped`), 2026-11-02 19:30 UTC
 - Dark since: 2026-11-01 07:24 UTC (first run of the current streak)
 - Likely cause: run skipped
 

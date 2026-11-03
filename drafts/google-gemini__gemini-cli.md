@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/google-gemini/gemini-cli/issues/new
-- **Stars:** 108672 · **Generated:** 2026-11-02T18:39:26.456Z
+- **Stars:** 108683 · **Generated:** 2026-11-03T00:52:20.983Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -18,22 +18,22 @@ CI: "📋 Gemini Scheduled Issue Triage" workflow failing on main since 2026-11-
 <!-- BEGIN BODY -->
 Hi! The **📋 Gemini Scheduled Issue Triage** workflow (`.github/workflows/gemini-scheduled-issue-triage.yml`) on `main` has been failing since 2026-11-02. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/google-gemini/gemini-cli/actions/runs/41497765909 — dark (conclusion: `failure`), 2026-11-02 18:08 UTC
+- Latest run on `main`: https://github.com/google-gemini/gemini-cli/actions/runs/41551938044 — dark (conclusion: `failure`), 2026-11-03 00:18 UTC
 - Dark since: 2026-11-02 11:06 UTC (first run of the current streak)
-- Job / step: `triage-issues` → `Run Effort Triage Analysis`
-- Likely cause: Failed to CreateArtifact: Received non-retryable error: Failed request: (409) Conflict: an artifact with this name already exists on the workflow run
+- Job / step: `triage-issues` → `Apply Triaged Labels`
+- Likely cause: Unhandled error: HttpError: Resource not accessible by integration
 
 <details><summary>End of the job log</summary>
 
 ```
-##[start-action display=Run Gemini CLI;id=gemini_effort_issue_analysis.gemini_run]
-##[warning]Gemini CLI stderr was not valid JSON
-##[end-action id=gemini_effort_issue_analysis.gemini_run;outcome=success;conclusion=success;duration_ms=47047]
-##[start-action display=Upload Gemini CLI outputs;id=gemini_effort_issue_analysis.__actions_upload-artifact]
-With the provided path, there will be 3 files uploaded
-Artifact name is valid!
-Root directory input is valid!
-##[error]Failed to CreateArtifact: Received non-retryable error: Failed request: (409) Conflict: an artifact with this name already exists on the workflow run
+    request: {
+      agent: [Agent],
+      fetch: [Function: proxyFetch],
+      hook: [Function: bound bound register]
+    }
+  }
+}
+##[error]Unhandled error: HttpError: Resource not accessible by integration
 ```
 
 </details>

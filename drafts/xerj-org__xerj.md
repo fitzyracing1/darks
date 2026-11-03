@@ -4,21 +4,19 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/xerj-org/xerj/issues/new
-- **Stars:** 18804 · **Generated:** 2026-11-02T18:39:26.456Z
+- **Stars:** 18812 · **Generated:** 2026-11-03T00:52:20.983Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 2 workflows dark on main ("hub packs", "CI")
+CI: "hub packs" workflow failing on main since 2026-11-02
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
-
-### hub packs (`.github/workflows/hub-packs.yml`)
+Hi! The **hub packs** workflow (`.github/workflows/hub-packs.yml`) on `main` has been failing since 2026-11-02. Here is what I saw, in case it's useful:
 
 - Latest run on `main`: https://github.com/xerj-org/xerj/actions/runs/41393564601 — dark (conclusion: `failure`), 2026-11-02 05:21 UTC
 - Dark since: 2026-11-02 05:21 UTC (first run of the current streak)
@@ -36,28 +34,6 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 ##[warning]exploit-pocs-2026/K52-ai--CVE-2026-83627: cannot read HEAD of https://github.com/K52-ai/CVE-2026-83627; skipped
 repin: classes=weekly; 8 corpus(es) moved
 ##[error]8 re-pin PR(s) could not be opened
-```
-
-</details>
-
-### CI (`.github/workflows/ci.yml`)
-
-- Latest run on `main`: https://github.com/xerj-org/xerj/actions/runs/41454019116 — dark (conclusion: `failure`), 2026-11-02 13:33 UTC
-- Dark since: 2026-11-02 09:33 UTC (first run of the current streak)
-- Job / step: `Dependency advisory audit (cargo-audit)` → `cargo audit`
-- Likely cause: error: 1 vulnerability found!
-
-<details><summary>End of the job log</summary>
-
-```
-Crate:     tokio
-Version:   1.52.0
-Warning:   unsound
-Title:     `AsyncFd::new` and related constructors violate I/O safety
-Date:      2026-10-13
-ID:        RUSTSEC-2026-0386
-URL:       https://rustsec.org/advisories/RUSTSEC-2026-0386
-##[error]Process completed with exit code 1.
 ```
 
 </details>

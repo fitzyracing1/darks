@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/modelcontextprotocol/modelcontextprotocol/issues/new
-- **Stars:** 9593 · **Generated:** 2026-11-02T18:39:26.456Z
+- **Stars:** 9595 · **Generated:** 2026-11-03T00:52:20.983Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** latest run was skipped, not failed — probably not worth filing
 
@@ -19,7 +19,7 @@ CI: "Publish spec release" workflow not completing (runs skipped) on main since 
 <!-- BEGIN BODY -->
 Hi! The **Publish spec release** workflow (`.github/workflows/publish-release.yml`) on `main` has been not completing (runs skipped) since 2026-09-28. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/modelcontextprotocol/modelcontextprotocol/actions/runs/41216215535 — dark (conclusion: `skipped`), 2026-10-31 15:43 UTC
+- Latest run on `main`: https://github.com/modelcontextprotocol/modelcontextprotocol/actions/runs/41554546772 — dark (conclusion: `skipped`), 2026-11-03 00:40 UTC
 - Dark since: 2026-09-28 22:50 UTC (first run of the current streak)
 - Likely cause: run skipped
 
