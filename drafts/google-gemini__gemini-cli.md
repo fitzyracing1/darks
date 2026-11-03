@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/google-gemini/gemini-cli/issues/new
-- **Stars:** 108690 · **Generated:** 2026-11-03T06:44:54.436Z
+- **Stars:** 108699 · **Generated:** 2026-11-03T12:42:36.291Z
 - Nothing in this file has been sent anywhere.
 
 ## Skipped: upstream already tracking
@@ -16,13 +16,15 @@ These workflows are left out of the body below.
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: "Performance Tests: Nightly" workflow failing on main since 2026-11-03
+CI: 2 workflows dark on main ("Performance Tests: Nightly", "📋 Gemini Scheduled Issue Triage")
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! The **Performance Tests: Nightly** workflow (`.github/workflows/perf-nightly.yml`) on `main` has been failing since 2026-11-03. Here is what I saw, in case it's useful:
+Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
+
+### Performance Tests: Nightly (`.github/workflows/perf-nightly.yml`)
 
 - Latest run on `main`: https://github.com/google-gemini/gemini-cli/actions/runs/41570873661 — dark (conclusion: `failure`), 2026-11-03 03:13 UTC
 - Dark since: 2026-11-03 03:13 UTC (first run of the current streak)
@@ -40,6 +42,28 @@ Hi! The **Performance Tests: Nightly** workflow (`.github/workflows/perf-nightly
  ❯ start ../node_modules/vitest/dist/chunks/cac.Cb-PYCCB.js:1412:15
  ❯ CAC.run ../node_modules/vitest/dist/chunks/cac.Cb-PYCCB.js:1391:2
 ##[error]Process completed with exit code 1.
+```
+
+</details>
+
+### 📋 Gemini Scheduled Issue Triage (`.github/workflows/gemini-scheduled-issue-triage.yml`)
+
+- Latest run on `main`: https://github.com/google-gemini/gemini-cli/actions/runs/41633445669 — dark (conclusion: `failure`), 2026-11-03 12:10 UTC
+- Dark since: 2026-11-03 11:06 UTC (first run of the current streak)
+- Job / step: `triage-issues` → `Apply Triaged Labels`
+- Likely cause: Unhandled error: HttpError: Resource not accessible by integration
+
+<details><summary>End of the job log</summary>
+
+```
+    request: {
+      agent: [Agent],
+      fetch: [Function: proxyFetch],
+      hook: [Function: bound bound register]
+    }
+  }
+}
+##[error]Unhandled error: HttpError: Resource not accessible by integration
 ```
 
 </details>

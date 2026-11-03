@@ -4,8 +4,9 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/xberg-io/xberg/issues/new
-- **Stars:** 9516 · **Generated:** 2026-11-03T06:44:54.436Z
+- **Stars:** 9516 · **Generated:** 2026-11-03T12:42:36.291Z
 - Nothing in this file has been sent anywhere.
+- **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 - **Note for Joshua:** cancelled by a concurrency group — likely noise
 
 ## Suggested title
@@ -21,65 +22,65 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### CI Rust (`.github/workflows/ci-rust.yaml`)
 
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/41569251703 — dark (conclusion: `failure`), 2026-11-03 02:57 UTC
+- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/41623898201 — dark (conclusion: `cancelled`), 2026-11-03 11:00 UTC
 - Dark since: 2026-10-25 18:30 UTC (first run of the current streak)
-- Job / step: `Rust (windows-latest)` → `Clippy Windows ORT surface`
+- Job / step: `Rust (macos-26)` → `Run clippy`
 - Likely cause: unnecessary use of 'clone' to create a slice from a reference (crates/xberg/src/rendering/markdown/parenthesis_roundtrip_tests.rs:150)
 
 <details><summary>End of the job log</summary>
 
 ```
-    Checking criterion v0.8.2
-    Checking serial_test v4.0.1
-    Checking wiremock v0.6.5
-    Checking tokio-test v0.4.6
-    Checking qrcode v0.14.1
-    Checking dotenvy v0.15.7
+   Compiling wasm-bindgen-test-macro v0.3.80
+    Checking wasm-bindgen-test-shared v0.2.130
+    Checking swift-bridge v0.1.59
+    Checking wasm-bindgen-test v0.3.80
+    Checking xberg-py v1.4.0 (/Users/runner/work/xberg/xberg/crates/xberg-py)
+    Checking xberg-php v1.4.0 (/Users/runner/work/xberg/xberg/crates/xberg-php)
 error: unnecessary use of `clone` to create a slice from a reference
-##[error]   --> crates\xberg\src\rendering\markdown\parenthesis_roundtrip_tests.rs:150:5
+##[error]   --> crates/xberg/src/rendering/markdown/parenthesis_roundtrip_tests.rs:150:5
 ```
 
 </details>
 
 ### CI Integrations (`.github/workflows/ci-integrations.yaml`)
 
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/41569251907 — dark (conclusion: `failure`), 2026-11-03 02:57 UTC
+- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/41623898130 — dark (conclusion: `cancelled`), 2026-11-03 11:00 UTC
 - Dark since: 2026-11-02 11:54 UTC (first run of the current streak)
-- Job / step: `Python (py3.11.18)` → `Test integrations against local Xberg wheel`
-- Likely cause: [integrations:ci:test:python-all] ERROR task failed
+- Job / step: `Build local integration bindings` → `Build abi3 Python wheel`
+- Likely cause: Canceling since a higher priority waiting request for ci-integrations-refs/heads/main exists
 
 <details><summary>End of the job log</summary>
 
 ```
-E       xberg.IoError: IO error: No such file or directory (os error 2)
-.venv/lib/python3.11/site-packages/xberg/api.py:3813: IoError
-=========================== short test summary info ============================
-FAILED tests/test_tools.py::test_extract_tool_file_not_found - xberg.IoError: IO error: No such file or directory (os error 2)
-FAILED tests/test_tools.py::test_metadata_tool_file_not_found - xberg.IoError: IO error: No such file or directory (os error 2)
-2 failed, 33 passed in 4.11s
-[integrations:ci:test:python-all] ERROR task failed
-##[error]Process completed with exit code 1.
+   Compiling lru v0.19.0
+   Compiling minijinja v3.0.5
+   Compiling jotdown v0.10.0
+   Compiling org v0.3.1
+   Compiling similar v3.2.1
+   Compiling pyo3-async-runtimes v0.30.0
+   Compiling xberg-py v1.4.0 (/home/runner/work/xberg/xberg/crates/xberg-py)
+##[error]The operation was canceled.
 ```
 
 </details>
 
 ### CI E2E (`.github/workflows/ci-e2e.yaml`)
 
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/41567180815 — dark (conclusion: `cancelled`), 2026-11-03 02:36 UTC
+- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/41623898198 — dark (conclusion: `cancelled`), 2026-11-03 11:00 UTC
 - Dark since: 2026-11-02 11:54 UTC (first run of the current streak)
-- Job / step: `Build FFI (x86_64-unknown-linux-gnu)` → `Build FFI library`
+- Job / step: `Build FFI (aarch64-unknown-linux-gnu)` → `Build CLI`
 - Likely cause: Canceling since a higher priority waiting request for ci-e2e-refs/heads/main exists
 
 <details><summary>End of the job log</summary>
 
 ```
+   Compiling lru v0.19.0
+   Compiling similar v3.2.1
+   Compiling xberg-cli v1.4.0 (/home/runner/work/xberg/xberg/crates/xberg-cli)
    Compiling org v0.3.1
-     Running `CARGO=/home/runner/.rustup/toolchains/1.99.1-x86_64-unknown-linux-gnu/bin/cargo CARGO_CRATE_NAME=org CARGO_MANIFEST_DIR=/home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/org-0.3.1 CARGO_MAN…
-     Running `CARGO=/home/runner/.rustup/toolchains/1.99.1-x86_64-unknown-linux-gnu/bin/cargo CARGO_CFG_FEATURE=analysis,api,api-types,archives,auto-rotate,auto-rotate-types,captioning,chunking,chunking-tokenizers,class…
-[xberg-ffi 1.4.0] cargo:rerun-if-changed=src
-[xberg-ffi 1.4.0] cargo:rerun-if-changed=cbindgen.toml
-[xberg-ffi 1.4.0] cargo:rerun-if-env-changed=ALEF_EXPORT_GENERATED_HEADERS
-     Running `CARGO=/home/runner/.rustup/toolchains/1.99.1-x86_64-unknown-linux-gnu/bin/cargo CARGO_CRATE_NAME=xberg CARGO_MANIFEST_DIR=/home/runner/work/xberg/xberg/crates/xberg CARGO_MANIFEST_PATH=/home/runner/work/xb…
+   Compiling jotdown v0.10.0
+   Compiling minijinja v3.0.5
+   Compiling clap_complete v4.6.11
 ##[error]The operation was canceled.
 ```
 
@@ -87,21 +88,21 @@ FAILED tests/test_tools.py::test_metadata_tool_file_not_found - xberg.IoError: I
 
 ### CI Lint (`.github/workflows/ci-lint.yaml`)
 
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/41569252302 — dark (conclusion: `failure`), 2026-11-03 02:57 UTC
+- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/41629877330 — dark (conclusion: `failure`), 2026-11-03 11:43 UTC
 - Dark since: 2026-11-03 02:17 UTC (first run of the current streak)
-- Job / step: `Alef-generated bindings freshness` → `Verify alef-generated bindings are current`
-- Likely cause: [alef:verify] ERROR task failed
+- Job / step: `Benchmark script regressions` → `Validate Publish workflow contracts`
+- Likely cause: [release:test:contracts] ERROR task failed
 
 <details><summary>End of the job log</summary>
 
 ```
-Generated files drifted from a fresh render detected (this run's backends would emit different content than the owned bytes on disk -- rerun the owning stage, e.g. `alef generate`/`alef all`/`alef docs`, to refresh it):
-  /home/runner/work/xberg/xberg/packages/elixir/README.md
-  /home/runner/work/xberg/xberg/packages/php/README.md
-  /home/runner/work/xberg/xberg/packages/ruby/README.md
-  /home/runner/work/xberg/xberg/packages/swift/README.md
-ERROR generated bindings, versions, or snippet coverage are out of date
-[alef:verify] ERROR task failed
+    test()
+    ~~~~^^
+  File "/home/runner/work/xberg/xberg/scripts/ci/test_publish_workflow_contracts.py", line 774, in test_swift_macos_builds_pin_the_deployment_target_to_the_manifest_floor
+    assert pinned[1] == f"{floor}.0"
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+[release:test:contracts] ERROR task failed
 ##[error]Process completed with exit code 1.
 ```
 

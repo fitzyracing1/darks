@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/seedds/nxnative/issues/new
-- **Stars:** 11584 · **Generated:** 2026-11-03T06:44:54.436Z
+- **Stars:** 11697 · **Generated:** 2026-11-03T12:42:36.291Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** cancelled by a concurrency group — likely noise
 
@@ -21,7 +21,7 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### fuzz (`.github/workflows/fuzz.yml`)
 
-- Latest run on `main`: https://github.com/seedds/nxnative/actions/runs/41433168656 — dark (conclusion: `failure`), 2026-11-02 10:59 UTC
+- Latest run on `main`: https://github.com/seedds/nxnative/actions/runs/41622472781 — dark (conclusion: `failure`), 2026-11-03 10:49 UTC
 - Dark since: 2026-11-02 10:59 UTC (first run of the current streak)
 - Job / step: `Fuzz the file parsers` → `Run each harness`
 - Likely cause: shader_split: ==finding== struct.error@shader_split.py:ndsr_shaders>records_from
@@ -29,13 +29,13 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 <details><summary>End of the job log</summary>
 
 ```
-==2325== ERROR: libFuzzer: fuzz target exited
+==2594== ERROR: libFuzzer: fuzz target exited
 SUMMARY: libFuzzer: fuzz target exited
-MS: 4 InsertRepeatedBytes-CopyPart-ChangeBinInt-CMP- DE: "NDSR"-; base unit: 192e86a7b14372293cfa6cdcf5957adcaa16bb95
-0x4e,0x44,0x53,0x52,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0…
-NDSR\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\00…
-artifact_prefix='findings/shader_split/'; Test unit written to findings/shader_split/crash-36f8d28f0e4472ab5df5e8d2c3d519884d466ce4
-Base64: TkRTUgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALS0tLS0tLS0tbS0AAAAAABCUw==
+MS: 1 InsertRepeatedBytes-; base unit: e4ef11e5e8ede68b9a500ea1147ab924bdcbfef3
+0x4e,0x44,0x53,0x52,0xb9,0x53,0x42,0x8d,0x8d,0x8d,0x8d,0x8d,0x8d,0x8d,0x8d,0x8d,0x8d,0x8d,0x8d,0x8d,0x8d,0x8d,0x8d,0x8d,0x8d,0x8d,0x8d,0x8d,0x8d,0x8d,0x8d,0x8d,0x8d,0x8d,0x8d,0x8d,0x8d,0x8d,0x8d,0x8d,0x8d,0x8d,0x8d,0x8d…
+NDSR\271SB\215\215\215\215\215\215\215\215\215\215\215\215\215\215\215\215\215\215\215\215\215\215\215\215\215\215\215\215\215\215\215\215\215\215\215\215\215\215\215\215\215\215\215\215\215\215\215\215\215\215\215\215\…
+artifact_prefix='findings/shader_split/'; Test unit written to findings/shader_split/crash-71c6596118dbbfd0709f451d43b720bc3fc3ba40
+Base64: TkRTUrlTQo2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NsVM=
 ##[error]shader_split: ==finding== struct.error@shader_split.py:ndsr_shaders>records_from
 ```
 
@@ -43,9 +43,9 @@ Base64: TkRTUgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 
 ### tests (`.github/workflows/tests.yml`)
 
-- Latest run on `main`: https://github.com/seedds/nxnative/actions/runs/41587153978 — dark (conclusion: `cancelled`), 2026-11-03 06:00 UTC
+- Latest run on `main`: https://github.com/seedds/nxnative/actions/runs/41627961993 — dark (conclusion: `cancelled`), 2026-11-03 11:29 UTC
 - Dark since: 2026-11-03 00:57 UTC (first run of the current streak)
-- Job / step: `Unsigned iOS app (synthetic modules, Swift and link)`
+- Job / step: `Sanitizers (ASan, UBSan and TSan over the host and CPU texture tests)`
 - Likely cause: Canceling since a higher priority waiting request for tests-refs/heads/main exists
 
 If this is already known or expected, feel free to close. Thanks for maintaining nxnative!

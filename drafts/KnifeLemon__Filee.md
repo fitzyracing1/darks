@@ -4,9 +4,9 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/KnifeLemon/Filee/issues/new
-- **Stars:** 20888 · **Generated:** 2026-11-03T06:44:54.436Z
+- **Stars:** 21084 · **Generated:** 2026-11-03T12:42:36.291Z
 - Nothing in this file has been sent anywhere.
-- **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
+- **Note for Joshua:** cancelled by a concurrency group — likely noise
 
 ## Suggested title
 
@@ -19,9 +19,25 @@ CI: "CI" workflow getting cancelled on main since 2026-11-03
 <!-- BEGIN BODY -->
 Hi! The **CI** workflow (`.github/workflows/ci.yml`) on `main` has been getting cancelled since 2026-11-03. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/KnifeLemon/Filee/actions/runs/41590972632 — dark (conclusion: `cancelled`), 2026-11-03 06:36 UTC
+- Latest run on `main`: https://github.com/KnifeLemon/Filee/actions/runs/41635813048 — dark (conclusion: `cancelled`), 2026-11-03 12:27 UTC
 - Dark since: 2026-11-03 05:57 UTC (first run of the current streak)
-- Likely cause: run cancelled
+- Job / step: `build` → `Fonts`
+- Likely cause: Canceling since a higher priority waiting request for ci-refs/heads/main exists
+
+<details><summary>End of the job log</summary>
+
+```
+get  NotoSansDevanagari-Bold.ttf
+get  NotoSansThai-Regular.ttf
+get  NotoSansThai-Medium.ttf
+get  NotoSansThai-Bold.ttf
+get  NotoSansJP-Regular.otf
+get  NotoSansJP-Bold.otf
+get  NotoSansKR-Regular.otf
+##[error]The operation was canceled.
+```
+
+</details>
 
 If this is already known or expected, feel free to close. Thanks for maintaining Filee!
 
