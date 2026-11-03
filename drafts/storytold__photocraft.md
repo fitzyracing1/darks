@@ -4,8 +4,9 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/storytold/photocraft/issues/new
-- **Stars:** 76434 · **Generated:** 2026-11-03T12:42:36.291Z
+- **Stars:** 76536 · **Generated:** 2026-11-03T18:36:41.394Z
 - Nothing in this file has been sent anywhere.
+- **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
@@ -20,25 +21,9 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### SonarCloud (`.github/workflows/sonarcloud.yml`)
 
-- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/41624349253 — dark (conclusion: `failure`), 2026-11-03 11:03 UTC
+- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/41682847901 — dark (conclusion: `cancelled`), 2026-11-03 17:17 UTC
 - Dark since: 2026-11-01 11:33 UTC (first run of the current streak)
-- Job / step: `sonarcloud / SonarCloud Scan` → `SonarCloud Scan`
-- Likely cause: Action failed: The process '/opt/hostedtoolcache/sonar-scanner-cli/8.3.0-build.16463/linux-x64/bin/sonar-scanner' failed with exit code 1
-
-<details><summary>End of the job log</summary>
-
-```
-12:07:41.945 INFO  SonarScanner CLI 8.3.0.16463
-12:07:41.948 INFO  Linux 7.0.0-1017-azure amd64
-12:07:44.072 INFO  Communicating with SonarQube Cloud
-12:07:44.073 INFO  JRE provisioning: os[linux], arch[x86_64]
-12:07:44.484 ERROR Failed to query JRE metadata: GET https://api.sonarcloud.io/analysis/jres?os=linux&arch=x86_64 failed with HTTP 403 Forbidden. Please check the property sonar.token or the environment variable SONAR_T…
-12:07:44.485 INFO  EXECUTION FAILURE
-12:07:44.485 INFO  Total time: 2.554s
-##[error]Action failed: The process '/opt/hostedtoolcache/sonar-scanner-cli/8.3.0-build.16463/linux-x64/bin/sonar-scanner' failed with exit code 1
-```
-
-</details>
+- Likely cause: run cancelled
 
 ### Perf (nightly) (`.github/workflows/perf-nightly.yml`)
 

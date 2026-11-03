@@ -4,14 +4,14 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/seedds/nxnative/issues/new
-- **Stars:** 11697 · **Generated:** 2026-11-03T12:42:36.291Z
+- **Stars:** 11807 · **Generated:** 2026-11-03T18:36:41.394Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** cancelled by a concurrency group — likely noise
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 2 workflows dark on main ("fuzz", "tests")
+CI: 3 workflows dark on main ("fuzz", "tests", "lint-c")
 <!-- END TITLE -->
 
 ## Body
@@ -43,10 +43,17 @@ Base64: TkRTUrlTQo2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2N
 
 ### tests (`.github/workflows/tests.yml`)
 
-- Latest run on `main`: https://github.com/seedds/nxnative/actions/runs/41627961993 — dark (conclusion: `cancelled`), 2026-11-03 11:29 UTC
+- Latest run on `main`: https://github.com/seedds/nxnative/actions/runs/41681227826 — dark (conclusion: `cancelled`), 2026-11-03 17:08 UTC
 - Dark since: 2026-11-03 00:57 UTC (first run of the current streak)
-- Job / step: `Sanitizers (ASan, UBSan and TSan over the host and CPU texture tests)`
+- Job / step: `Build check (Mac host, gfx tests, iOS sources)`
 - Likely cause: Canceling since a higher priority waiting request for tests-refs/heads/main exists
+
+### lint-c (`.github/workflows/lint-c.yml`)
+
+- Latest run on `main`: https://github.com/seedds/nxnative/actions/runs/41681227630 — dark (conclusion: `cancelled`), 2026-11-03 17:08 UTC
+- Dark since: 2026-11-03 15:34 UTC (first run of the current streak)
+- Job / step: `clang-tidy (ratchet)`
+- Likely cause: Canceling since a higher priority waiting request for lint-c-refs/heads/main exists
 
 If this is already known or expected, feel free to close. Thanks for maintaining nxnative!
 

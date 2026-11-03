@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/langchain-ai/langchain/issues/new
-- **Stars:** 148939 · **Generated:** 2026-11-03T12:42:36.291Z
+- **Stars:** 148949 · **Generated:** 2026-11-03T18:36:41.394Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -18,22 +18,22 @@ CI: "⏰ Integration Tests" workflow failing on master since 2026-10-09
 <!-- BEGIN BODY -->
 Hi! The **⏰ Integration Tests** workflow (`.github/workflows/integration_tests.yml`) on `master` has been failing since 2026-10-09. Here is what I saw, in case it's useful:
 
-- Latest run on `master`: https://github.com/langchain-ai/langchain/actions/runs/41449949575 — dark (conclusion: `failure`), 2026-11-02 13:05 UTC
+- Latest run on `master`: https://github.com/langchain-ai/langchain/actions/runs/41641117201 — dark (conclusion: `failure`), 2026-11-03 13:04 UTC
 - Dark since: 2026-10-09 13:10 UTC (first run of the current streak)
-- Job / step: `🐍 Python 3.14: libs/partners/mistralai` → `🚀 Run Integration Tests`
-- Likely cause: = 2 failed, 56 passed, 11 skipped, 1 xpassed, 4 warnings, 2 retried in 201.40s (0:03:21) =
+- Job / step: `🐍 Python 3.11: libs/partners/openai` → `🔐 Configure AWS Credentials`
+- Likely cause: Credentials could not be loaded, please check your action inputs: The security token included in the request is invalid.
 
 <details><summary>End of the job log</summary>
 
 ```
-24.14s call     tests/integration_tests/test_chat_models.py::test_stop_sequence
-17.06s call     tests/integration_tests/test_standard.py::TestMistralStandard::test_tool_calling[model1]
-=========================== short test summary info ============================
-FAILED tests/integration_tests/test_chat_models.py::test_reasoning - assert 0 > 0
-FAILED tests/integration_tests/test_chat_models.py::test_reasoning_v1 - assert 0 > 0
-= 2 failed, 56 passed, 11 skipped, 1 xpassed, 4 warnings, 2 retried in 201.40s (0:03:21) =
-make: *** [Makefile:24: integration_tests] Error 1
-##[error]Process completed with exit code 2.
+Retry validateCredentials: attempt 7 of 12 failed: Credentials could not be loaded, please check your action inputs: The security token included in the request is invalid.. Retrying after 467ms.
+Retry validateCredentials: attempt 8 of 12 failed: Credentials could not be loaded, please check your action inputs: The security token included in the request is invalid.. Retrying after 4462ms.
+Retry validateCredentials: attempt 9 of 12 failed: Credentials could not be loaded, please check your action inputs: The security token included in the request is invalid.. Retrying after 12304ms.
+Retry validateCredentials: attempt 10 of 12 failed: Credentials could not be loaded, please check your action inputs: The security token included in the request is invalid.. Retrying after 8863ms.
+Retry validateCredentials: attempt 11 of 12 failed: Credentials could not be loaded, please check your action inputs: The security token included in the request is invalid.. Retrying after 41778ms.
+Retry validateCredentials: attempt 12 of 12 failed: Credentials could not be loaded, please check your action inputs: The security token included in the request is invalid.. Retrying after 91973ms.
+Retry validateCredentials: reached max retries (12); giving up.
+##[error]Credentials could not be loaded, please check your action inputs: The security token included in the request is invalid.
 ```
 
 </details>

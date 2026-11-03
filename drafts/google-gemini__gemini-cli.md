@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/google-gemini/gemini-cli/issues/new
-- **Stars:** 108699 · **Generated:** 2026-11-03T12:42:36.291Z
+- **Stars:** 108698 · **Generated:** 2026-11-03T18:36:41.394Z
 - Nothing in this file has been sent anywhere.
 
 ## Skipped: upstream already tracking
@@ -48,22 +48,22 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### 📋 Gemini Scheduled Issue Triage (`.github/workflows/gemini-scheduled-issue-triage.yml`)
 
-- Latest run on `main`: https://github.com/google-gemini/gemini-cli/actions/runs/41633445669 — dark (conclusion: `failure`), 2026-11-03 12:10 UTC
+- Latest run on `main`: https://github.com/google-gemini/gemini-cli/actions/runs/41690936926 — dark (conclusion: `failure`), 2026-11-03 18:08 UTC
 - Dark since: 2026-11-03 11:06 UTC (first run of the current streak)
-- Job / step: `triage-issues` → `Apply Triaged Labels`
-- Likely cause: Unhandled error: HttpError: Resource not accessible by integration
+- Job / step: `triage-issues` → `Run Standard Triage Analysis`
+- Likely cause: "message": "exception TypeError: fetch failed sending request",
 
 <details><summary>End of the job log</summary>
 
 ```
-    request: {
-      agent: [Agent],
-      fetch: [Function: proxyFetch],
-      hook: [Function: bound bound register]
-    }
+  "error": {
+    "type": "Error",
+    "message": "exception TypeError: fetch failed sending request",
+    "code": 1
   }
 }
-##[error]Unhandled error: HttpError: Resource not accessible by integration
+::: End Gemini CLI STDERR :::
+##[error]Process completed with exit code 1.
 ```
 
 </details>

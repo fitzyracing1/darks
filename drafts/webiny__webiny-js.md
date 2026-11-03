@@ -4,13 +4,13 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/webiny/webiny-js/issues/new
-- **Stars:** 8050 · **Generated:** 2026-11-03T12:42:36.291Z
+- **Stars:** 8049 · **Generated:** 2026-11-03T18:36:41.394Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 2 workflows dark on next ("Cloud infrastructure Cleanup", "Rebuild Global Cache ("dev" branch)")
+CI: 3 workflows dark on next ("Cloud infrastructure Cleanup", "Rebuild Global Cache ("dev" branch)", "Push")
 <!-- END TITLE -->
 
 ## Body
@@ -61,6 +61,12 @@ Waiting 18 seconds before trying again
 ```
 
 </details>
+
+### Push (`.github/workflows/push.yml`)
+
+- Latest run on `next`: https://github.com/webiny/webiny-js/actions/runs/41641360631 — dark (conclusion: `failure`), 2026-11-03 13:06 UTC
+- Dark since: 2026-11-03 13:06 UTC (first run of the current streak)
+- Likely cause: no cause found in annotations
 
 If this is already known or expected, feel free to close. Thanks for maintaining webiny-js!
 

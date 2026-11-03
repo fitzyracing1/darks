@@ -4,13 +4,13 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/activepieces/activepieces/issues/new
-- **Stars:** 25357 · **Generated:** 2026-11-03T12:42:36.291Z
+- **Stars:** 25358 · **Generated:** 2026-11-03T18:36:41.394Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 2 workflows dark on main ("Chat Evals", "Benchmark")
+CI: 3 workflows dark on main ("Chat Evals", "Benchmark", "Continuous Delivery — Staging")
 <!-- END TITLE -->
 
 ## Body
@@ -57,6 +57,28 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
   "breachCount": 2
 }
 Box signals API responded 401: {"error":"Unknown token. Send it as \"Authorization: ***"."}
+##[error]Process completed with exit code 1.
+```
+
+</details>
+
+### Continuous Delivery — Staging (`.github/workflows/continuous-delivery-stg.yml`)
+
+- Latest run on `main`: https://github.com/activepieces/activepieces/actions/runs/41685666985 — dark (conclusion: `failure`), 2026-11-03 17:35 UTC
+- Dark since: 2026-11-03 17:35 UTC (first run of the current streak)
+- Job / step: `deploy-staging-workers` → `Deploy to staging`
+- Likely cause: ERROR (SSHKit::Runner::ExecuteError): Exception while executing on worker2: Exception while executing on host 78.46.247.19: Connection reset by peer
+
+<details><summary>End of the job log</summary>
+
+```
+  INFO [16778438] Finished in 0.134 seconds with exit status 0 (successful).
+  INFO [21a5f818] Finished in 0.141 seconds with exit status 0 (successful).
+Releasing the deploy lock...
+  Finished all in 32.5 seconds
+  ERROR (SSHKit::Runner::ExecuteError): Exception while executing on worker2: Exception while executing on host 78.46.247.19: Connection reset by peer
+exit
+Connection to *** closed.
 ##[error]Process completed with exit code 1.
 ```
 
