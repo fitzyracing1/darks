@@ -4,36 +4,42 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/google-gemini/gemini-cli/issues/new
-- **Stars:** 108683 · **Generated:** 2026-11-03T00:52:20.983Z
+- **Stars:** 108690 · **Generated:** 2026-11-03T06:44:54.436Z
 - Nothing in this file has been sent anywhere.
+
+## Skipped: upstream already tracking
+
+- Memory Tests: Nightly (`.github/workflows/memory-nightly.yml`): [issue #30084](https://github.com/google-gemini/gemini-cli/issues/30084) "CI: memory-nightly failing: 4 memory regressions over 10% (idle-session-startup +54.2%: 107.6MB vs 69.8MB)"
+
+These workflows are left out of the body below.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: "📋 Gemini Scheduled Issue Triage" workflow failing on main since 2026-11-02
+CI: "Performance Tests: Nightly" workflow failing on main since 2026-11-03
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! The **📋 Gemini Scheduled Issue Triage** workflow (`.github/workflows/gemini-scheduled-issue-triage.yml`) on `main` has been failing since 2026-11-02. Here is what I saw, in case it's useful:
+Hi! The **Performance Tests: Nightly** workflow (`.github/workflows/perf-nightly.yml`) on `main` has been failing since 2026-11-03. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/google-gemini/gemini-cli/actions/runs/41551938044 — dark (conclusion: `failure`), 2026-11-03 00:18 UTC
-- Dark since: 2026-11-02 11:06 UTC (first run of the current streak)
-- Job / step: `triage-issues` → `Apply Triaged Labels`
-- Likely cause: Unhandled error: HttpError: Resource not accessible by integration
+- Latest run on `main`: https://github.com/google-gemini/gemini-cli/actions/runs/41570873661 — dark (conclusion: `failure`), 2026-11-03 03:13 UTC
+- Dark since: 2026-11-03 03:13 UTC (first run of the current streak)
+- Job / step: `Run Performance Usage Tests` → `Run Performance Tests`
+- Likely cause: 29|     throw new Error('Failed to download ripgrep binary');
 
 <details><summary>End of the job log</summary>
 
 ```
-    request: {
-      agent: [Agent],
-      fetch: [Function: proxyFetch],
-      hook: [Function: bound bound register]
-    }
-  }
-}
-##[error]Unhandled error: HttpError: Resource not accessible by integration
+ ❯ Vitest.initializeGlobalSetup ../node_modules/vitest/dist/chunks/cli-api.BkDphVBG.js:9724:35
+ ❯ ../node_modules/vitest/dist/chunks/cli-api.BkDphVBG.js:9636:5
+ ❯ Vitest.runFiles ../node_modules/vitest/dist/chunks/cli-api.BkDphVBG.js:9666:10
+ ❯ Vitest.start ../node_modules/vitest/dist/chunks/cli-api.BkDphVBG.js:9554:18
+ ❯ startVitest ../node_modules/vitest/dist/chunks/cli-api.BkDphVBG.js:10510:8
+ ❯ start ../node_modules/vitest/dist/chunks/cac.Cb-PYCCB.js:1412:15
+ ❯ CAC.run ../node_modules/vitest/dist/chunks/cac.Cb-PYCCB.js:1391:2
+##[error]Process completed with exit code 1.
 ```
 
 </details>

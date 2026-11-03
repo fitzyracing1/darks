@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/langflow-ai/langflow/issues/new
-- **Stars:** 156268 · **Generated:** 2026-11-03T00:52:20.983Z
+- **Stars:** 156277 · **Generated:** 2026-11-03T06:44:54.436Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -20,10 +20,10 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### Deploy Storybook to GitHub Pages (`.github/workflows/deploy-storybook.yml`)
 
-- Latest run on `main`: https://github.com/langflow-ai/langflow/actions/runs/39491949865 — dark (conclusion: `failure`), 2026-10-20 20:26 UTC
+- Latest run on `main`: https://github.com/langflow-ai/langflow/actions/runs/41563175743 — dark (conclusion: `failure`), 2026-11-03 01:58 UTC
 - Dark since: 2026-09-16 01:11 UTC (first run of the current streak)
 - Job / step: `Deploy Storybook` → `Deploy to GitHub Pages`
-- Likely cause: Error: Failed to create deployment (status: 400) with build version bcd1e4aaf0b396186e52b93b3625438133842122. Request ID 6401:167ECF:D4D9C:150D34:6AD7CF22 Responded with: Missing environment. Ensure your workflow's deployment job has an env
+- Likely cause: Error: Failed to create deployment (status: 400) with build version 600fcef39ee46335844607840ee8250fbc015aba. Request ID C019:10FDDF:1B2EBF0:58DAD27:6AE94090 Responded with: Missing environment. Ensure your workflow's deployment job has an 
 
 <details><summary>End of the job log</summary>
 
@@ -31,8 +31,8 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 Found 1 artifact(s)
 Creating Pages deployment with payload:
 {
-	"artifact_id": 12295243931,
-	"pages_build_version": "bcd1e4aaf0b396186e52b93b3625438133842122",
+	"artifact_id": 13197267742,
+	"pages_build_version": "600fcef39ee46335844607840ee8250fbc015aba",
 	"oidc_token": "***"
 }
 ##[error]Creating Pages deployment failed
@@ -42,21 +42,21 @@ Creating Pages deployment with payload:
 
 ### Mend (`.github/workflows/mend.yml`)
 
-- Latest run on `main`: https://github.com/langflow-ai/langflow/actions/runs/40988763171 — dark (conclusion: `failure`), 2026-10-30 01:56 UTC
+- Latest run on `main`: https://github.com/langflow-ai/langflow/actions/runs/41571288298 — dark (conclusion: `failure`), 2026-11-03 03:17 UTC
 - Dark since: 2026-10-22 20:38 UTC (first run of the current streak)
 - Job / step: `mend-scan` → `Run Mend Scan`
-- Likely cause: [ERROR] [2026-10-30 02:13:39,679 +0000] - Process finished with exit code ERROR (-1)
+- Likely cause: [ERROR] [2026-11-03 03:34:32,816 +0000] - Process finished with exit code ERROR (-1)
 
 <details><summary>End of the job log</summary>
 
 ```
 ======================================================================================================================================================
-Fetch Configuration                                  COMPLETED                  00:00:00.438               --------
+Fetch Configuration                                  COMPLETED                  00:00:00.501               --------
 ======================================================================================================================================================
-Elapsed running time:                                                           00:00:00.438
+Elapsed running time:                                                           00:00:00.501
 ======================================================================================================================================================
 Process finished with exit code ERROR (-1)
-[ERROR] [2026-10-30 02:13:39,679 +0000] - Process finished with exit code ERROR (-1)
+[ERROR] [2026-11-03 03:34:32,816 +0000] - Process finished with exit code ERROR (-1)
 ##[error]Process completed with exit code 255.
 ```
 
@@ -70,21 +70,21 @@ Process finished with exit code ERROR (-1)
 
 ### A11y / IBM Equal Access Scans (`.github/workflows/a11y-scan.yml`)
 
-- Latest run on `main`: https://github.com/langflow-ai/langflow/actions/runs/41376780498 — dark (conclusion: `failure`), 2026-11-02 02:15 UTC
+- Latest run on `main`: https://github.com/langflow-ai/langflow/actions/runs/41564891999 — dark (conclusion: `failure`), 2026-11-03 02:14 UTC
 - Dark since: 2026-11-02 02:15 UTC (first run of the current streak)
-- Job / step: `Playwright scan runner (shard 6)` → `Install Playwright Browsers`
-- Likely cause: Error: ERROR: Playwright does not support chromium on ubuntu26.04-x64
+- Job / step: `Playwright scan runner (shard 8)` → `Run IBM Equal Access Scans`
+- Likely cause: 1 failed
 
 <details><summary>End of the job log</summary>
 
 ```
-  npm audit fix --force
-Some issues need review, and may require choosing
-a different dependency.
-Run `npm audit` for details.
-Cache not found for input keys: playwright-1.60.0-chromium-Linux, playwright-1.60.0-chromium-Linux
-Failed to install browsers
-Error: ERROR: Playwright does not support chromium on ubuntu26.04-x64
+  Slow test file: [chromium] › tests/core/regression/multi-edit-conflict.spec.ts (5.3m)
+  Consider running tests from slow files in parallel. See: https://playwright.dev/docs/test-parallel
+  1 failed
+    [chromium] › tests/core/features/triggers-schedule.spec.ts:17:7 › Schedule trigger lifecycle › user can enable, test, inspect, replay, pause, resume and delete a schedule trigger @release @workspace @api
+  1 flaky
+    [chromium] › tests/a11y/triggers.a11y.spec.ts:124:7 › Triggers route accessibility › scans the empty triggers page @release @workspace
+  26 passed (10.9m)
 ##[error]Process completed with exit code 1.
 ```
 

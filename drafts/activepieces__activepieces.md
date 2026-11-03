@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/activepieces/activepieces/issues/new
-- **Stars:** 25348 · **Generated:** 2026-11-03T00:52:20.983Z
+- **Stars:** 25349 · **Generated:** 2026-11-03T06:44:54.436Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -20,29 +20,29 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### Chat Evals (`.github/workflows/agent-evals.yml`)
 
-- Latest run on `main`: https://github.com/activepieces/activepieces/actions/runs/41399154691 — dark (conclusion: `failure`), 2026-11-02 06:19 UTC
+- Latest run on `main`: https://github.com/activepieces/activepieces/actions/runs/41588653202 — dark (conclusion: `failure`), 2026-11-03 06:14 UTC
 - Dark since: 2026-10-13 06:26 UTC (first run of the current streak)
 - Job / step: `Live judge gate` → `Run live chat evals (scope=regression)`
-- Likely cause: Error: Hook timed out in 540000ms. (packages/server/worker/test/lib/agent-eval/agent-eval.test.ts:20)
+- Likely cause: AssertionError: see the eval report above for the failing checks: expected [ …(2) ] to deeply equal [] (packages/server/worker/test/lib/agent-eval/agent-eval.test.ts:58)
 
 <details><summary>End of the job log</summary>
 
 ```
-     21|         const fixtures = evalFixtures.load().filter((fixture) => SCOPE…
-     22|         const [fixtureResults, agreement] = await Promise.all([
+     59|     })
+     60| })
 ⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
  Test Files  1 failed | 12 passed (13)
-      Tests  89 passed | 1 skipped (90)
-   Start at  06:23:41
-   Duration  547.62s (transform 1.57s, setup 60ms, collect 17.24s, tests 541.32s, environment 3ms, prepare 1.15s)
-##[error]Error: Hook timed out in 540000ms.
+      Tests  1 failed | 89 passed (90)
+   Start at  06:19:14
+   Duration  450.97s (transform 1.74s, setup 79ms, collect 18.84s, tests 444.14s, environment 3ms, prepare 1.24s)
+##[error]AssertionError: see the eval report above for the failing checks: expected [ …(2) ] to deeply equal []
 ```
 
 </details>
 
 ### Benchmark (`.github/workflows/benchmark.yml`)
 
-- Latest run on `main`: https://github.com/activepieces/activepieces/actions/runs/41381183806 — dark (conclusion: `failure`), 2026-11-02 03:05 UTC
+- Latest run on `main`: https://github.com/activepieces/activepieces/actions/runs/41570071922 — dark (conclusion: `failure`), 2026-11-03 03:05 UTC
 - Dark since: 2026-10-30 03:06 UTC (first run of the current streak)
 - Job / step: `benchmark (dedicated, 1, 28, 0.5, 1G, 1, 768, true, 28)` → `Detect regression against trailing 14 runs (scheduled runs only)`
 - Likely cause: Box signals API responded 401: {"error":"Unknown token. Send it as \"Authorization: ***"."}
@@ -50,11 +50,11 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 <details><summary>End of the job log</summary>
 
 ```
-      "pct": 1.5264465743698865,
+      "pct": -11.57522123893805,
       "breach": false
     }
   ],
-  "breachCount": 1
+  "breachCount": 2
 }
 Box signals API responded 401: {"error":"Unknown token. Send it as \"Authorization: ***"."}
 ##[error]Process completed with exit code 1.

@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/storytold/photocraft/issues/new
-- **Stars:** 76222 · **Generated:** 2026-11-03T00:52:20.983Z
+- **Stars:** 76316 · **Generated:** 2026-11-03T06:44:54.436Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -20,7 +20,7 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### SonarCloud (`.github/workflows/sonarcloud.yml`)
 
-- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/41517287242 — dark (conclusion: `failure`), 2026-11-02 20:13 UTC
+- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/41578414966 — dark (conclusion: `failure`), 2026-11-03 04:29 UTC
 - Dark since: 2026-11-01 11:33 UTC (first run of the current streak)
 - Job / step: `sonarcloud / SonarCloud Scan` → `SonarCloud Scan`
 - Likely cause: Action failed: The process '/opt/hostedtoolcache/sonar-scanner-cli/8.3.0-build.16463/linux-x64/bin/sonar-scanner' failed with exit code 1
@@ -28,13 +28,13 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 <details><summary>End of the job log</summary>
 
 ```
-20:59:40.176 INFO  SonarScanner CLI 8.3.0.16463
-20:59:40.180 INFO  Linux 7.0.0-1017-azure amd64
-20:59:42.437 INFO  Communicating with SonarQube Cloud
-20:59:42.438 INFO  JRE provisioning: os[linux], arch[x86_64]
-20:59:42.836 ERROR Failed to query JRE metadata: GET https://api.sonarcloud.io/analysis/jres?os=linux&arch=x86_64 failed with HTTP 403 Forbidden. Please check the property sonar.token or the environment variable SONAR_T…
-20:59:42.837 INFO  EXECUTION FAILURE
-20:59:42.837 INFO  Total time: 2.677s
+05:26:49.954 INFO  SonarScanner CLI 8.3.0.16463
+05:26:49.959 INFO  Linux 7.0.0-1017-azure amd64
+05:26:52.805 INFO  Communicating with SonarQube Cloud
+05:26:52.806 INFO  JRE provisioning: os[linux], arch[x86_64]
+05:26:53.482 ERROR Failed to query JRE metadata: GET https://api.sonarcloud.io/analysis/jres?os=linux&arch=x86_64 failed with HTTP 403 Forbidden. Please check the property sonar.token or the environment variable SONAR_T…
+05:26:53.482 INFO  EXECUTION FAILURE
+05:26:53.483 INFO  Total time: 3.552s
 ##[error]Action failed: The process '/opt/hostedtoolcache/sonar-scanner-cli/8.3.0-build.16463/linux-x64/bin/sonar-scanner' failed with exit code 1
 ```
 
@@ -42,7 +42,7 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### Perf (nightly) (`.github/workflows/perf-nightly.yml`)
 
-- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/41383399775 — dark (conclusion: `failure`), 2026-11-02 03:29 UTC
+- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/41572384901 — dark (conclusion: `failure`), 2026-11-03 03:28 UTC
 - Dark since: 2026-11-02 03:29 UTC (first run of the current streak)
 - Job / step: `perf (macOS, Apple GPU)` → `Run benchmarks`
 - Likely cause: wrote /Users/runner/work/photocraft/photocraft/target/perf/results.json
