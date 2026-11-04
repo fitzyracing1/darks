@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/react/react/issues/new
-- **Stars:** 251917 · **Generated:** 2026-11-04T12:42:48.646Z
+- **Stars:** 251939 · **Generated:** 2026-11-04T18:40:05.885Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -42,7 +42,7 @@ The workflow run for the specified commit (76baa3b5434fad315ece9cfd4d20d7a8d6c34
 
 ### (Runtime) Release From CI (`.github/workflows/runtime_release_from_ci.yml`)
 
-- Latest run on `main`: https://github.com/react/react/actions/runs/41672357227 — dark (conclusion: `failure`), 2026-11-03 16:15 UTC
+- Latest run on `main`: https://github.com/react/react/actions/runs/41865280284 — dark (conclusion: `failure`), 2026-11-04 16:14 UTC
 - Dark since: 2026-11-02 16:16 UTC (first run of the current streak)
 - Job / step: `Publish release` → `Stage canary artifacts`
 - Likely cause: The workflow run for the specified commit (76baa3b5434fad315ece9cfd4d20d7a8d6c34a25) could not be found.
@@ -50,11 +50,11 @@ The workflow run for the specified commit (76baa3b5434fad315ece9cfd4d20d7a8d6c34
 <details><summary>End of the job log</summary>
 
 ```
+⠙ Downloading artifacts from GitHub for commit 76baa3b5434fad315ece9cfd4d20d7a8d
+6c34a25)
+⠹ Downloading artifacts from GitHub for commit 76baa3b5434fad315ece9cfd4d20d7a8d
+6c34a25)
 ⠸ Downloading artifacts from GitHub for commit 76baa3b5434fad315ece9cfd4d20d7a8d
-6c34a25)
-⠼ Downloading artifacts from GitHub for commit 76baa3b5434fad315ece9cfd4d20d7a8d
-6c34a25)
-⠴ Downloading artifacts from GitHub for commit 76baa3b5434fad315ece9cfd4d20d7a8d
 6c34a25)
 The workflow run for the specified commit (76baa3b5434fad315ece9cfd4d20d7a8d6c34a25) could not be found.
 ##[error]Process completed with exit code 1.

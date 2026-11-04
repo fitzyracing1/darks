@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/activepieces/activepieces/issues/new
-- **Stars:** 25364 · **Generated:** 2026-11-04T12:42:48.646Z
+- **Stars:** 25368 · **Generated:** 2026-11-04T18:40:05.885Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title

@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/openclaw/openclaw/issues/new
-- **Stars:** 393873 · **Generated:** 2026-11-04T12:42:48.646Z
+- **Stars:** 393902 · **Generated:** 2026-11-04T18:40:05.885Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** latest run was skipped, not failed — probably not worth filing
 
@@ -21,13 +21,13 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### Docs (`.github/workflows/docs.yml`)
 
-- Latest run on `main`: https://github.com/openclaw/openclaw/actions/runs/41829128202 — dark (conclusion: `skipped`), 2026-11-04 12:25 UTC
+- Latest run on `main`: https://github.com/openclaw/openclaw/actions/runs/41886732347 — dark (conclusion: `skipped`), 2026-11-04 18:23 UTC
 - Dark since: 2026-11-04 00:41 UTC (first run of the current streak)
 - Likely cause: run skipped
 
 ### CI (`.github/workflows/ci.yml`)
 
-- Latest run on `main`: https://github.com/openclaw/openclaw/actions/runs/41828829290 — dark (conclusion: `failure`), 2026-11-04 12:23 UTC
+- Latest run on `main`: https://github.com/openclaw/openclaw/actions/runs/41886733895 — dark (conclusion: `failure`), 2026-11-04 18:23 UTC
 - Dark since: 2026-11-04 12:23 UTC (first run of the current streak)
 - Job / step: `security-fast` → `Check main push ratchets and protocol additions`
 - Likely cause: test-lines failed (exit 1)
@@ -35,11 +35,11 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 <details><summary>End of the job log</summary>
 
 ```
-$ node --import ./scripts/tsx.mjs scripts/check-test-mock-exports.mts --base 5f3763ffe6958a1ce9e1756f16833e4b2cf986af --no-merge-base
+$ node --import ./scripts/tsx.mjs scripts/check-test-mock-exports.mts --base cfb85a1d15e89794cf7305c8fe673a76e458d686 --no-merge-base
 Mock factory ratchet OK: 6395 grandfathered factories.
 [ok] mock-exports
-$ node --import ./scripts/tsx.mjs scripts/check-test-lines-ratchet.mts --base 5f3763ffe6958a1ce9e1756f16833e4b2cf986af --no-merge-base
-Test lines: 6463259; ceiling: 6463195; over by: 64; net delta: +855.
+$ node --import ./scripts/tsx.mjs scripts/check-test-lines-ratchet.mts --base cfb85a1d15e89794cf7305c8fe673a76e458d686 --no-merge-base
+Test lines: 6469993; ceiling: 6469986; over by: 7; net delta: +68.
 Offset the added lines by deleting or consolidating tests elsewhere, or add a justified allocation in config/test-lines-allocations/<change>.txt.
 [ELIFECYCLE] Command failed with exit code 1.
 ##[error]test-lines failed (exit 1)

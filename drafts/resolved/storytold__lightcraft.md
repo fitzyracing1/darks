@@ -1,8 +1,8 @@
 <!-- dark-draft: storytold/lightcraft -->
-<!-- draft-state: ready -->
+<!-- draft-state: resolved -->
 # Upstream issue draft: storytold/lightcraft
 
-- **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
+- **Status:** resolved — lit again (2026-11-04); nothing to file
 - **Would be filed at:** https://github.com/storytold/lightcraft/issues/new
 - **Stars:** 15464 · **Generated:** 2026-11-04T12:42:48.646Z
 - Nothing in this file has been sent anywhere.

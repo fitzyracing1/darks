@@ -4,27 +4,20 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/firecrawl/firecrawl/issues/new
-- **Stars:** 198491 · **Generated:** 2026-11-04T12:42:48.646Z
+- **Stars:** 198576 · **Generated:** 2026-11-04T18:40:05.885Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 7 workflows dark on main ("Publish PHP SDK", "Publish Go SDK", "Publish Python SDK", +4 more)
+CI: 5 workflows dark on main ("Publish Go SDK", "Publish JS SDK", "Publish .NET SDK", +2 more)
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
 Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
-
-### Publish PHP SDK (`.github/workflows/publish-php-sdk.yml`)
-
-- Latest run on `main`: https://github.com/firecrawl/firecrawl/actions/runs/41525420774 — dark (conclusion: `cancelled`), 2026-11-02 21:07 UTC
-- Dark since: 2026-11-02 21:07 UTC (first run of the current streak)
-- Job / step: `Publish to Packagist`
-- Likely cause: run cancelled in job "Publish to Packagist"
 
 ### Publish Go SDK (`.github/workflows/publish-go-sdk.yml`)
 
@@ -33,19 +26,27 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 - Job / step: `Tag and index on pkg.go.dev`
 - Likely cause: run cancelled in job "Tag and index on pkg.go.dev"
 
-### Publish Python SDK (`.github/workflows/publish-python-sdk.yml`)
-
-- Latest run on `main`: https://github.com/firecrawl/firecrawl/actions/runs/41732735926 — dark (conclusion: `cancelled`), 2026-11-03 22:39 UTC
-- Dark since: 2026-11-03 20:04 UTC (first run of the current streak)
-- Job / step: `Publish to PyPI`
-- Likely cause: run cancelled in job "Publish to PyPI"
-
 ### Publish JS SDK (`.github/workflows/publish-js-sdk.yml`)
 
-- Latest run on `main`: https://github.com/firecrawl/firecrawl/actions/runs/41709160241 — dark (conclusion: `cancelled`), 2026-11-03 20:04 UTC
+- Latest run on `main`: https://github.com/firecrawl/firecrawl/actions/runs/41793074645 — dark (conclusion: `failure`), 2026-11-04 07:33 UTC
 - Dark since: 2026-11-03 20:04 UTC (first run of the current streak)
-- Job / step: `Publish`
-- Likely cause: run cancelled in job "Publish"
+- Job / step: `Publish` → `Publish`
+- Likely cause: npm error A complete log of this run can be found in: /home/runner/.npm/_logs/2026-11-04T16_59_57_950Z-debug-0.log
+
+<details><summary>End of the job log</summary>
+
+```
+npm error command git --no-replace-objects ls-remote ssh://git@github.com/dist/firecrawl-4.52.0.tgz.git
+npm error git@github.com: Permission denied (publickey).
+npm error fatal: Could not read from remote repository.
+npm error
+npm error Please make sure you have the correct access rights
+npm error and the repository exists.
+npm error A complete log of this run can be found in: /home/runner/.npm/_logs/2026-11-04T16_59_57_950Z-debug-0.log
+##[error]Process completed with exit code 128.
+```
+
+</details>
 
 ### Publish .NET SDK (`.github/workflows/publish-dotnet-sdk.yml`)
 

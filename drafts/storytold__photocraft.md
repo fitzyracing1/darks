@@ -4,26 +4,19 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/storytold/photocraft/issues/new
-- **Stars:** 76793 · **Generated:** 2026-11-04T12:42:48.646Z
+- **Stars:** 76858 · **Generated:** 2026-11-04T18:40:05.885Z
 - Nothing in this file has been sent anywhere.
-- **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 3 workflows dark on main ("SonarCloud", "Perf (nightly)", "FreeBSD")
+CI: 2 workflows dark on main ("Perf (nightly)", "FreeBSD")
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
 Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
-
-### SonarCloud (`.github/workflows/sonarcloud.yml`)
-
-- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/41822759391 — dark (conclusion: `cancelled`), 2026-11-04 11:39 UTC
-- Dark since: 2026-11-01 11:33 UTC (first run of the current streak)
-- Likely cause: run cancelled
 
 ### Perf (nightly) (`.github/workflows/perf-nightly.yml`)
 

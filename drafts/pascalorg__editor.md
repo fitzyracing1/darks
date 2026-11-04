@@ -1,25 +1,25 @@
 <!-- dark-draft: pascalorg/editor -->
-<!-- draft-state: resolved -->
+<!-- draft-state: ready -->
 # Upstream issue draft: pascalorg/editor
 
-- **Status:** resolved — lit again (2026-11-03); nothing to file
+- **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/pascalorg/editor/issues/new
-- **Stars:** 25284 · **Generated:** 2026-11-03T00:52:20.983Z
+- **Stars:** 25327 · **Generated:** 2026-11-04T18:40:05.885Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: "CI" workflow failing on main since 2026-11-02
+CI: "CI" workflow failing on main since 2026-11-04
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! The **CI** workflow (`.github/workflows/ci.yml`) on `main` has been failing since 2026-11-02. Here is what I saw, in case it's useful:
+Hi! The **CI** workflow (`.github/workflows/ci.yml`) on `main` has been failing since 2026-11-04. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/pascalorg/editor/actions/runs/41479932962 — dark (conclusion: `failure`), 2026-11-02 16:17 UTC
-- Dark since: 2026-11-02 16:17 UTC (first run of the current streak)
+- Latest run on `main`: https://github.com/pascalorg/editor/actions/runs/41830174792 — dark (conclusion: `failure`), 2026-11-04 12:32 UTC
+- Dark since: 2026-11-04 12:32 UTC (first run of the current streak)
 - Job / step: `quality` → `Test`
 - Likely cause: command (/home/runner/work/editor/editor/packages/ifc-converter) /home/runner/.bun/bin/bun run test exited (1)
 
@@ -31,7 +31,7 @@ Hi! The **CI** workflow (`.github/workflows/ci.yml`) on `main` has been failing 
                                 ^
 error: expect(received).toBeLessThan(expected)
 Expected: < 6
-Received: 6.255572155222012
+Received: 8.48810070996924
       at <anonymous> (/home/runner/work/editor/editor/packages/ifc-converter/tests/export-review.test.ts:351:27)
 ##[error]Expected: < 6
 ```

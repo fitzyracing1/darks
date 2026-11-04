@@ -4,13 +4,14 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/seedds/nxnative/issues/new
-- **Stars:** 12012 · **Generated:** 2026-11-04T12:42:48.646Z
+- **Stars:** 12098 · **Generated:** 2026-11-04T18:40:05.885Z
 - Nothing in this file has been sent anywhere.
+- **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 3 workflows dark on main ("fuzz", "lint-c", "lint-python")
+CI: 4 workflows dark on main ("fuzz", "lint-c", "lint-python", +1 more)
 <!-- END TITLE -->
 
 ## Body
@@ -42,7 +43,7 @@ artifact_prefix='findings/shader_split/'; Test unit written to findings/shader_s
 
 ### lint-c (`.github/workflows/lint-c.yml`)
 
-- Latest run on `main`: https://github.com/seedds/nxnative/actions/runs/41819072419 — dark (conclusion: `failure`), 2026-11-04 11:10 UTC
+- Latest run on `main`: https://github.com/seedds/nxnative/actions/runs/41865015633 — dark (conclusion: `failure`), 2026-11-04 16:12 UTC
 - Dark since: 2026-11-03 15:34 UTC (first run of the current streak)
 - Job / step: `clang-tidy (ratchet)` → `clang-tidy against the baseline`
 - Likely cause: Nullable pointer is passed to a callee that requires a non-null 1st parameter [clang-analyzer-nullability.NullablePassedToNonnull] (5 in this file, the baseline has 0) (dm/host/web_apple.m:375)
@@ -64,10 +65,10 @@ dm/gfx/vk/hle_vk.m: clang-analyzer-core.NullDereference: 1 findings, the baselin
 
 ### lint-python (`.github/workflows/lint-python.yml`)
 
-- Latest run on `main`: https://github.com/seedds/nxnative/actions/runs/41819072418 — dark (conclusion: `failure`), 2026-11-04 11:10 UTC
+- Latest run on `main`: https://github.com/seedds/nxnative/actions/runs/41872445298 — dark (conclusion: `failure`), 2026-11-04 16:55 UTC
 - Dark since: 2026-11-04 11:10 UTC (first run of the current streak)
 - Job / step: `ruff and pyright (ratchet)` → `ruff and pyright against the baseline`
-- Likely cause: "exec_module" is not a known attribute of "None" (dm/tools/tests/test_jit_capture.py:15)
+- Likely cause: Function definition does not bind loop variable 'n' (dm/games/settings.py:115)
 
 <details><summary>End of the job log</summary>
 
@@ -77,12 +78,18 @@ Downloading nodeenv-1.12.0-py3-none-any.whl (39 kB)
 Using cached typing_extensions-4.16.0-py3-none-any.whl (45 kB)
 Installing collected packages: typing-extensions, ruff, nodeenv, lz4, fonttools, capstone, pyright
 Successfully installed capstone-5.0.9 fonttools-4.67.0 lz4-4.4.5 nodeenv-1.12.0 pyright-1.1.414 ruff-0.17.2 typing-extensions-4.16.0
-[notice] A new release of pip is available: 26.2.1 -> 26.3
+[notice] A new release of pip is available: 26.2.2 -> 26.3
 [notice] To update, run: pip install --upgrade pip
-##[error]Function definition does not bind loop variable `part`
+##[error]Function definition does not bind loop variable `n`
 ```
 
 </details>
+
+### tests (`.github/workflows/tests.yml`)
+
+- Latest run on `main`: https://github.com/seedds/nxnative/actions/runs/41872445400 — dark (conclusion: `cancelled`), 2026-11-04 16:55 UTC
+- Dark since: 2026-11-04 14:36 UTC (first run of the current streak)
+- Likely cause: run cancelled
 
 If this is already known or expected, feel free to close. Thanks for maintaining nxnative!
 

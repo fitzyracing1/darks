@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/google-gemini/gemini-cli/issues/new
-- **Stars:** 108719 · **Generated:** 2026-11-04T12:42:48.646Z
+- **Stars:** 108723 · **Generated:** 2026-11-04T18:40:05.885Z
 - Nothing in this file has been sent anywhere.
 
 ## Skipped: upstream already tracking
@@ -48,7 +48,7 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### 📋 Gemini Scheduled Issue Triage (`.github/workflows/gemini-scheduled-issue-triage.yml`)
 
-- Latest run on `main`: https://github.com/google-gemini/gemini-cli/actions/runs/41818717813 — dark (conclusion: `failure`), 2026-11-04 11:07 UTC
+- Latest run on `main`: https://github.com/google-gemini/gemini-cli/actions/runs/41874176966 — dark (conclusion: `failure`), 2026-11-04 17:05 UTC
 - Dark since: 2026-11-04 07:07 UTC (first run of the current streak)
 - Job / step: `triage-issues` → `Apply Triaged Labels`
 - Likely cause: Unhandled error: HttpError: Resource not accessible by integration
@@ -56,13 +56,13 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 <details><summary>End of the job log</summary>
 
 ```
-      'x-ratelimit-limit': '15000',
-      'x-ratelimit-remaining': '14998',
-      'x-ratelimit-reset': '1793790719',
-      'x-ratelimit-resource': 'core',
-      'x-ratelimit-used': '2',
-      'x-xss-protection': '0'
-    },
+    request: {
+      agent: [Agent],
+      fetch: [Function: proxyFetch],
+      hook: [Function: bound bound register]
+    }
+  }
+}
 ##[error]Unhandled error: HttpError: Resource not accessible by integration
 ```
 

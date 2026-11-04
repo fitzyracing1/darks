@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/vitejs/vite/issues/new
-- **Stars:** 83716 · **Generated:** 2026-11-04T12:42:48.646Z
+- **Stars:** 83722 · **Generated:** 2026-11-04T18:40:05.885Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -18,20 +18,20 @@ CI: "CI" workflow failing on main since 2026-11-04
 <!-- BEGIN BODY -->
 Hi! The **CI** workflow (`.github/workflows/ci.yml`) on `main` has been failing since 2026-11-04. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/vitejs/vite/actions/runs/41796250931 — dark (conclusion: `failure`), 2026-11-04 08:00 UTC
+- Latest run on `main`: https://github.com/vitejs/vite/actions/runs/41830115144 — dark (conclusion: `failure`), 2026-11-04 12:32 UTC
 - Dark since: 2026-11-04 04:35 UTC (first run of the current streak)
-- Job / step: `Build&Test: node-22, ubuntu-latest` → `Test build`
-- Likely cause: Tests  1 failed | 964 passed | 314 skipped (1279)
+- Job / step: `Build&Test: node-24, windows-latest` → `Test serve`
+- Likely cause: Tests  3 failed | 1186 passed | 187 skipped (1376)
 
 <details><summary>End of the job log</summary>
 
 ```
- ❯ playground/wasm/__tests__/wasm.spec.ts:6:3
-⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
- Test Files  1 failed | 93 passed | 17 skipped (111)
-      Tests  1 failed | 964 passed | 314 skipped (1279)
-   Start at  08:03:05
-   Duration  29.76s (tests 95%, setup 3%, import 1%)
+    1054|         }
+ ❯ EventEmitter.handleMsg playground/hmr-ssr/__tests__/hmr-ssr.spec.ts:1075:22
+ ❯ HMRMockLogger.log playground/hmr-ssr/__tests__/hmr-ssr.spec.ts:1212:17
+ ❯ globalThis.log playground/hmr-ssr/__tests__/hmr-ssr.spec.ts:1155:39
+ ❯ eval playground-temp/hmr-ssr/hmrDep.js:13:5
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[3/3]⎯
 [ELIFECYCLE] Command failed with exit code 1.
 ##[error]Process completed with exit code 1.
 ```

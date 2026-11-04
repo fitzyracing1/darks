@@ -4,48 +4,40 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/storytold/pdfcraft/issues/new
-- **Stars:** 19504 · **Generated:** 2026-11-04T12:42:48.646Z
+- **Stars:** 19538 · **Generated:** 2026-11-04T18:40:05.885Z
 - Nothing in this file has been sent anywhere.
-- **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
+- **Note for Joshua:** cancelled by a concurrency group — likely noise
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 2 workflows dark on main ("SonarCloud", "FreeBSD")
+CI: "FreeBSD" workflow getting cancelled on main since 2026-11-04
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
+Hi! The **FreeBSD** workflow (`.github/workflows/freebsd.yml`) on `main` has been getting cancelled since 2026-11-04. Here is what I saw, in case it's useful:
 
-### SonarCloud (`.github/workflows/sonarcloud.yml`)
-
-- Latest run on `main`: https://github.com/storytold/pdfcraft/actions/runs/41828001147 — dark (conclusion: `failure`), 2026-11-04 12:17 UTC
-- Dark since: 2026-11-01 17:30 UTC (first run of the current streak)
-- Job / step: `sonarcloud / SonarCloud Scan` → `SonarCloud Scan`
-- Likely cause: Action failed: The process '/opt/hostedtoolcache/sonar-scanner-cli/8.3.0-build.16463/linux-x64/bin/sonar-scanner' failed with exit code 1
+- Latest run on `main`: https://github.com/storytold/pdfcraft/actions/runs/41881587788 — dark (conclusion: `cancelled`), 2026-11-04 17:54 UTC
+- Dark since: 2026-11-04 11:49 UTC (first run of the current streak)
+- Job / step: `freebsd / FreeBSD 15 aarch64 (build + test)` → `Build and test`
+- Likely cause: Canceling since a higher priority waiting request for freebsd-refs/heads/main exists
 
 <details><summary>End of the job log</summary>
 
 ```
-12:34:01.662 INFO  SonarScanner CLI 8.3.0.16463
-12:34:01.665 INFO  Linux 7.0.0-1017-azure amd64
-12:34:03.295 INFO  Communicating with SonarQube Cloud
-12:34:03.296 INFO  JRE provisioning: os[linux], arch[x86_64]
-12:34:03.808 ERROR Failed to query JRE metadata: GET https://api.sonarcloud.io/analysis/jres?os=linux&arch=x86_64 failed with HTTP 403 Forbidden. Please check the property sonar.token or the environment variable SONAR_T…
-12:34:03.808 INFO  EXECUTION FAILURE
-12:34:03.809 INFO  Total time: 2.160s
-##[error]Action failed: The process '/opt/hostedtoolcache/sonar-scanner-cli/8.3.0-build.16463/linux-x64/bin/sonar-scanner' failed with exit code 1
+   Compiling spirv v0.4.0+sdk-1.4.341.0
+   Compiling as-raw-xcb-connection v1.0.1
+   Compiling x11rb-protocol v0.13.2
+   Compiling khronos-egl v6.0.0
+   Compiling smithay-client-toolkit v0.19.2
+   Compiling atspi-common v0.13.0
+   Compiling x11rb v0.13.2
+##[error]The operation was canceled.
 ```
 
 </details>
-
-### FreeBSD (`.github/workflows/freebsd.yml`)
-
-- Latest run on `main`: https://github.com/storytold/pdfcraft/actions/runs/41830363094 — dark (conclusion: `cancelled`), 2026-11-04 12:33 UTC
-- Dark since: 2026-11-04 11:49 UTC (first run of the current streak)
-- Likely cause: run cancelled
 
 If this is already known or expected, feel free to close. Thanks for maintaining pdfcraft!
 
