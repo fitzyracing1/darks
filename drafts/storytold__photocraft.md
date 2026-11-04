@@ -4,13 +4,13 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/storytold/photocraft/issues/new
-- **Stars:** 76617 · **Generated:** 2026-11-04T00:52:58.321Z
+- **Stars:** 76696 · **Generated:** 2026-11-04T06:44:24.955Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 2 workflows dark on main ("SonarCloud", "Perf (nightly)")
+CI: 3 workflows dark on main ("SonarCloud", "Perf (nightly)", "FreeBSD")
 <!-- END TITLE -->
 
 ## Body
@@ -20,7 +20,7 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### SonarCloud (`.github/workflows/sonarcloud.yml`)
 
-- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/41714569361 — dark (conclusion: `failure`), 2026-11-03 20:39 UTC
+- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/41757350963 — dark (conclusion: `failure`), 2026-11-04 01:55 UTC
 - Dark since: 2026-11-01 11:33 UTC (first run of the current streak)
 - Job / step: `sonarcloud / SonarCloud Scan` → `SonarCloud Scan`
 - Likely cause: Action failed: The process '/opt/hostedtoolcache/sonar-scanner-cli/8.3.0-build.16463/linux-x64/bin/sonar-scanner' failed with exit code 1
@@ -28,13 +28,13 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 <details><summary>End of the job log</summary>
 
 ```
-22:52:14.877 INFO  SonarScanner CLI 8.3.0.16463
-22:52:14.881 INFO  Linux 7.0.0-1017-azure amd64
-22:52:17.128 INFO  Communicating with SonarQube Cloud
-22:52:17.128 INFO  JRE provisioning: os[linux], arch[x86_64]
-22:52:17.577 ERROR Failed to query JRE metadata: GET https://api.sonarcloud.io/analysis/jres?os=linux&arch=x86_64 failed with HTTP 403 Forbidden. Please check the property sonar.token or the environment variable SONAR_T…
-22:52:17.577 INFO  EXECUTION FAILURE
-22:52:17.578 INFO  Total time: 2.719s
+03:10:51.136 INFO  SonarScanner CLI 8.3.0.16463
+03:10:51.142 INFO  Linux 7.0.0-1017-azure amd64
+03:10:53.807 INFO  Communicating with SonarQube Cloud
+03:10:53.808 INFO  JRE provisioning: os[linux], arch[x86_64]
+03:10:54.246 ERROR Failed to query JRE metadata: GET https://api.sonarcloud.io/analysis/jres?os=linux&arch=x86_64 failed with HTTP 403 Forbidden. Please check the property sonar.token or the environment variable SONAR_T…
+03:10:54.246 INFO  EXECUTION FAILURE
+03:10:54.247 INFO  Total time: 3.130s
 ##[error]Action failed: The process '/opt/hostedtoolcache/sonar-scanner-cli/8.3.0-build.16463/linux-x64/bin/sonar-scanner' failed with exit code 1
 ```
 
@@ -42,10 +42,10 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### Perf (nightly) (`.github/workflows/perf-nightly.yml`)
 
-- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/41572384901 — dark (conclusion: `failure`), 2026-11-03 03:28 UTC
+- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/41767247924 — dark (conclusion: `failure`), 2026-11-04 03:27 UTC
 - Dark since: 2026-11-02 03:29 UTC (first run of the current streak)
 - Job / step: `perf (macOS, Apple GPU)` → `Run benchmarks`
-- Likely cause: wrote /Users/runner/work/photocraft/photocraft/target/perf/results.json
+- Likely cause: | P44 | Open .psd, 36 MP, 3 layers | track only | – | – | – | – | – | – | **missing**: bench 'interactive_bench' failed: interactive_bench --reps 5 --json /Users/runner/work/photocraft/photocraft/target/perf/interactive…
 
 <details><summary>End of the job log</summary>
 
@@ -58,6 +58,28 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 | P35 | Marquee drag on 24 MP with Alt/Shift | ≤ 17 ms p95 | Shift/Alt marquee modifiers don't exist yet (#208) and the drag preview is UI-side | [#211](https://github.com/storytold/photocraft/issues/211) |
 wrote /Users/runner/work/photocraft/photocraft/target/perf/results.json
 ##[error]Process completed with exit code 1.
+```
+
+</details>
+
+### FreeBSD (`.github/workflows/freebsd.yml`)
+
+- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/41760537417 — dark (conclusion: `failure`), 2026-11-04 02:24 UTC
+- Dark since: 2026-11-04 02:24 UTC (first run of the current streak)
+- Job / step: `freebsd / FreeBSD 15 x86_64 (build + test)` → `Build and test`
+- Likely cause: process didn't exit successfully: '/var/tmp/craft-target/debug/deps/photocraft_raster-12b17ed7c8587aab' (signal: 11, SIGSEGV: invalid memory reference)
+
+<details><summary>End of the job log</summary>
+
+```
+test scratch_file::tests::file_roundtrip_and_crc ... ok
+running 1 test
+test scratch_file::tests::parallel_positioned_reads_share_one_unlinked_file ... ok
+test scratch_file::tests::unix_files_are_private_and_reaping_preserves_live_and_unrelated_files ... ok
+error: test failed, to rerun pass `-p photocraft-raster --lib`
+Caused by:
+  process didn't exit successfully: `/var/tmp/craft-target/debug/deps/photocraft_raster-12b17ed7c8587aab` (signal: 11, SIGSEGV: invalid memory reference)
+##[error]Process completed with exit code 101.
 ```
 
 </details>

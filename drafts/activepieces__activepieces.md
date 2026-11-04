@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/activepieces/activepieces/issues/new
-- **Stars:** 25364 · **Generated:** 2026-11-04T00:52:58.321Z
+- **Stars:** 25363 · **Generated:** 2026-11-04T06:44:24.955Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
@@ -21,7 +21,7 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### Chat Evals (`.github/workflows/agent-evals.yml`)
 
-- Latest run on `main`: https://github.com/activepieces/activepieces/actions/runs/41588653202 — dark (conclusion: `failure`), 2026-11-03 06:14 UTC
+- Latest run on `main`: https://github.com/activepieces/activepieces/actions/runs/41784199448 — dark (conclusion: `failure`), 2026-11-04 06:14 UTC
 - Dark since: 2026-10-13 06:26 UTC (first run of the current streak)
 - Job / step: `Live judge gate` → `Run live chat evals (scope=regression)`
 - Likely cause: AssertionError: see the eval report above for the failing checks: expected [ …(2) ] to deeply equal [] (packages/server/worker/test/lib/agent-eval/agent-eval.test.ts:58)
@@ -34,8 +34,8 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 ⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
  Test Files  1 failed | 12 passed (13)
       Tests  1 failed | 89 passed (90)
-   Start at  06:19:14
-   Duration  450.97s (transform 1.74s, setup 79ms, collect 18.84s, tests 444.14s, environment 3ms, prepare 1.24s)
+   Start at  06:20:58
+   Duration  456.69s (tests 97%, import 2%, transform 1%)
 ##[error]AssertionError: see the eval report above for the failing checks: expected [ …(2) ] to deeply equal []
 ```
 
@@ -43,15 +43,15 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### Benchmark (`.github/workflows/benchmark.yml`)
 
-- Latest run on `main`: https://github.com/activepieces/activepieces/actions/runs/41570071922 — dark (conclusion: `failure`), 2026-11-03 03:05 UTC
+- Latest run on `main`: https://github.com/activepieces/activepieces/actions/runs/41764923955 — dark (conclusion: `failure`), 2026-11-04 03:05 UTC
 - Dark since: 2026-10-30 03:06 UTC (first run of the current streak)
-- Job / step: `benchmark (dedicated, 1, 28, 0.5, 1G, 1, 768, true, 28)` → `Detect regression against trailing 14 runs (scheduled runs only)`
+- Job / step: `benchmark (shared, 1, 28, 0.5, 1G, 1, 768, false, 28)` → `Detect regression against trailing 14 runs (scheduled runs only)`
 - Likely cause: Box signals API responded 401: {"error":"Unknown token. Send it as \"Authorization: ***"."}
 
 <details><summary>End of the job log</summary>
 
 ```
-      "pct": -11.57522123893805,
+      "pct": 9.038737446198,
       "breach": false
     }
   ],

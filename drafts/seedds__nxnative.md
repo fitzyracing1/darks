@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/seedds/nxnative/issues/new
-- **Stars:** 11880 · **Generated:** 2026-11-04T00:52:58.321Z
+- **Stars:** 11954 · **Generated:** 2026-11-04T06:44:24.955Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** cancelled by a concurrency group — likely noise
 
@@ -43,14 +43,14 @@ Base64: TkRTUrlTQo2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2N
 
 ### tests (`.github/workflows/tests.yml`)
 
-- Latest run on `main`: https://github.com/seedds/nxnative/actions/runs/41746013254 — dark (conclusion: `cancelled`), 2026-11-04 00:19 UTC
+- Latest run on `main`: https://github.com/seedds/nxnative/actions/runs/41784469629 — dark (conclusion: `cancelled`), 2026-11-04 06:16 UTC
 - Dark since: 2026-11-03 00:57 UTC (first run of the current streak)
-- Job / step: `Build check (Mac host, gfx tests, iOS sources)`
+- Job / step: `Unsigned iOS app (synthetic modules, Swift and link)`
 - Likely cause: Canceling since a higher priority waiting request for tests-refs/heads/main exists
 
 ### lint-c (`.github/workflows/lint-c.yml`)
 
-- Latest run on `main`: https://github.com/seedds/nxnative/actions/runs/41742974965 — dark (conclusion: `cancelled`), 2026-11-03 23:55 UTC
+- Latest run on `main`: https://github.com/seedds/nxnative/actions/runs/41783196469 — dark (conclusion: `cancelled`), 2026-11-04 06:05 UTC
 - Dark since: 2026-11-03 15:34 UTC (first run of the current streak)
 - Job / step: `clang-tidy (ratchet)`
 - Likely cause: Canceling since a higher priority waiting request for lint-c-refs/heads/main exists

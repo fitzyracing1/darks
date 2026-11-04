@@ -1,8 +1,8 @@
 <!-- dark-draft: nukeop/nuclear -->
-<!-- draft-state: ready -->
+<!-- draft-state: resolved -->
 # Upstream issue draft: nukeop/nuclear
 
-- **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
+- **Status:** resolved — lit again (2026-11-04); nothing to file
 - **Would be filed at:** https://github.com/nukeop/nuclear/issues/new
 - **Stars:** 18865 · **Generated:** 2026-11-04T00:52:58.321Z
 - Nothing in this file has been sent anywhere.

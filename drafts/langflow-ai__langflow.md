@@ -4,13 +4,13 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/langflow-ai/langflow/issues/new
-- **Stars:** 156303 · **Generated:** 2026-11-04T00:52:58.321Z
+- **Stars:** 156307 · **Generated:** 2026-11-04T06:44:24.955Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 4 workflows dark on main ("Deploy Storybook to GitHub Pages", "Mend", "Cross-Bundle Test", +1 more)
+CI: 3 workflows dark on main ("Deploy Storybook to GitHub Pages", "Cross-Bundle Test", "A11y / IBM Equal Access Scans")
 <!-- END TITLE -->
 
 ## Body
@@ -20,10 +20,10 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### Deploy Storybook to GitHub Pages (`.github/workflows/deploy-storybook.yml`)
 
-- Latest run on `main`: https://github.com/langflow-ai/langflow/actions/runs/41563175743 — dark (conclusion: `failure`), 2026-11-03 01:58 UTC
+- Latest run on `main`: https://github.com/langflow-ai/langflow/actions/runs/41784028310 — dark (conclusion: `failure`), 2026-11-04 06:12 UTC
 - Dark since: 2026-09-16 01:11 UTC (first run of the current streak)
 - Job / step: `Deploy Storybook` → `Deploy to GitHub Pages`
-- Likely cause: Error: Failed to create deployment (status: 400) with build version 600fcef39ee46335844607840ee8250fbc015aba. Request ID C019:10FDDF:1B2EBF0:58DAD27:6AE94090 Responded with: Missing environment. Ensure your workflow's deployment job has an 
+- Likely cause: Error: Failed to create deployment (status: 400) with build version 60999cc9a7350e44dde3ef641baae864e10861f0. Request ID 103A:7278:161008:2636BA:6AEACD99 Responded with: Missing environment. Ensure your workflow's deployment job has an envi
 
 <details><summary>End of the job log</summary>
 
@@ -31,33 +31,11 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 Found 1 artifact(s)
 Creating Pages deployment with payload:
 {
-	"artifact_id": 13197267742,
-	"pages_build_version": "600fcef39ee46335844607840ee8250fbc015aba",
+	"artifact_id": 13301065204,
+	"pages_build_version": "60999cc9a7350e44dde3ef641baae864e10861f0",
 	"oidc_token": "***"
 }
 ##[error]Creating Pages deployment failed
-```
-
-</details>
-
-### Mend (`.github/workflows/mend.yml`)
-
-- Latest run on `main`: https://github.com/langflow-ai/langflow/actions/runs/41571288298 — dark (conclusion: `failure`), 2026-11-03 03:17 UTC
-- Dark since: 2026-10-22 20:38 UTC (first run of the current streak)
-- Job / step: `mend-scan` → `Run Mend Scan`
-- Likely cause: [ERROR] [2026-11-03 03:34:32,816 +0000] - Process finished with exit code ERROR (-1)
-
-<details><summary>End of the job log</summary>
-
-```
-======================================================================================================================================================
-Fetch Configuration                                  COMPLETED                  00:00:00.501               --------
-======================================================================================================================================================
-Elapsed running time:                                                           00:00:00.501
-======================================================================================================================================================
-Process finished with exit code ERROR (-1)
-[ERROR] [2026-11-03 03:34:32,816 +0000] - Process finished with exit code ERROR (-1)
-##[error]Process completed with exit code 255.
 ```
 
 </details>
@@ -70,21 +48,21 @@ Process finished with exit code ERROR (-1)
 
 ### A11y / IBM Equal Access Scans (`.github/workflows/a11y-scan.yml`)
 
-- Latest run on `main`: https://github.com/langflow-ai/langflow/actions/runs/41564891999 — dark (conclusion: `failure`), 2026-11-03 02:14 UTC
+- Latest run on `main`: https://github.com/langflow-ai/langflow/actions/runs/41759363940 — dark (conclusion: `failure`), 2026-11-04 02:13 UTC
 - Dark since: 2026-11-02 02:15 UTC (first run of the current streak)
-- Job / step: `Playwright scan runner (shard 8)` → `Run IBM Equal Access Scans`
-- Likely cause: 1 failed
+- Job / step: `Python route scan (real backend, nightly)` → `Run Python Route Scan`
+- Likely cause: No files were found with the provided path: python-route-scan. No artifacts will be uploaded.
 
 <details><summary>End of the job log</summary>
 
 ```
-  Slow test file: [chromium] › tests/core/regression/multi-edit-conflict.spec.ts (5.3m)
-  Consider running tests from slow files in parallel. See: https://playwright.dev/docs/test-parallel
-  1 failed
-    [chromium] › tests/core/features/triggers-schedule.spec.ts:17:7 › Schedule trigger lifecycle › user can enable, test, inspect, replay, pause, resume and delete a schedule trigger @release @workspace @api
-  1 flaky
-    [chromium] › tests/a11y/triggers.a11y.spec.ts:124:7 › Triggers route accessibility › scans the empty triggers page @release @workspace
-  26 passed (10.9m)
+    )
+    ^
+  File "/home/runner/work/_temp/setup-uv-cache/archive-v0/o7R1wrdQ7XVrykc6/lib/python3.13/site-packages/playwright/_impl/_connection.py", line 563, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TimeoutError: Page.goto: Timeout 45000ms exceeded.
+Call log:
+  - navigating to "http://localhost:3000/flows", waiting until "domcontentloaded"
 ##[error]Process completed with exit code 1.
 ```
 

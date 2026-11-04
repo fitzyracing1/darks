@@ -4,14 +4,8 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/colinhacks/zod/issues/new
-- **Stars:** 44254 · **Generated:** 2026-11-04T00:52:58.321Z
+- **Stars:** 44258 · **Generated:** 2026-11-04T06:44:24.955Z
 - Nothing in this file has been sent anywhere.
-
-## Skipped: upstream already tracking
-
-- Check zod and @zod/mini lockstep on npm (`.github/workflows/lockstep.yml`): [issue #6715](https://github.com/colinhacks/zod/issues/6715) "CI: lockstep check failing: Node provisioning from .nvmrc 'latest' (27.0.0) 404s"
-
-These workflows are left out of the body below.
 
 ## Suggested title
 

@@ -4,46 +4,22 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/anomalyco/opencode/issues/new
-- **Stars:** 224357 · **Generated:** 2026-11-04T00:52:58.321Z
+- **Stars:** 224420 · **Generated:** 2026-11-04T06:44:24.955Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 2 workflows dark on dev ("nightly-beta", "release")
+CI: "release" workflow getting cancelled on dev since 2026-11-03
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! A few workflows on `dev` have been dark recently. Details below, in case they're useful:
+Hi! The **release** workflow (`.github/workflows/release.yml`) on `dev` has been getting cancelled since 2026-11-03. Here is what I saw, in case it's useful:
 
-### nightly-beta (`.github/workflows/nightly-beta.yml`)
-
-- Latest run on `dev`: https://github.com/anomalyco/opencode/actions/runs/41610411742 — dark (conclusion: `failure`), 2026-11-03 09:21 UTC
-- Dark since: 2026-11-02 09:25 UTC (first run of the current streak)
-- Job / step: `dispatch` → `Dispatch beta test runs`
-- Likely cause: could not create workflow dispatch event: HTTP 422: No ref found for: beta (https://api.github.com/repos/anomalyco/opencode/actions/workflows/396447938/dispatches)
-
-<details><summary>End of the job log</summary>
-
-```
-Metadata: read
-Secret source: Actions
-Cache mode: write
-Prepare workflow directory
-Prepare all required actions
-Complete job name: dispatch
-could not create workflow dispatch event: HTTP 422: No ref found for: beta (https://api.github.com/repos/anomalyco/opencode/actions/workflows/396447938/dispatches)
-##[error]Process completed with exit code 1.
-```
-
-</details>
-
-### release (`.github/workflows/release.yml`)
-
-- Latest run on `dev`: https://github.com/anomalyco/opencode/actions/runs/41744862574 — dark (conclusion: `cancelled`), 2026-11-04 00:10 UTC
+- Latest run on `dev`: https://github.com/anomalyco/opencode/actions/runs/41785986759 — dark (conclusion: `cancelled`), 2026-11-04 06:30 UTC
 - Dark since: 2026-11-03 16:12 UTC (first run of the current streak)
 - Likely cause: run cancelled
 
