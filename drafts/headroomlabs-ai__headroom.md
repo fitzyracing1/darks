@@ -4,14 +4,14 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/headroomlabs-ai/headroom/issues/new
-- **Stars:** 78722 · **Generated:** 2026-11-03T18:36:41.394Z
+- **Stars:** 78754 · **Generated:** 2026-11-04T00:52:58.321Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 2 workflows dark on main ("PR Governance", "Init E2E")
+CI: 2 workflows dark on main ("PR Governance", "CI")
 <!-- END TITLE -->
 
 ## Body
@@ -41,10 +41,10 @@ https://github.com/headroomlabs-ai/headroom/pull/4510
 
 </details>
 
-### Init E2E (`.github/workflows/init-e2e.yml`)
+### CI (`.github/workflows/ci.yml`)
 
-- Latest run on `main`: https://github.com/headroomlabs-ai/headroom/actions/runs/41656818573 — dark (conclusion: `cancelled`), 2026-11-03 14:45 UTC
-- Dark since: 2026-11-03 14:45 UTC (first run of the current streak)
+- Latest run on `main`: https://github.com/headroomlabs-ai/headroom/actions/runs/41746607646 — dark (conclusion: `cancelled`), 2026-11-04 00:24 UTC
+- Dark since: 2026-11-04 00:01 UTC (first run of the current streak)
 - Likely cause: run cancelled
 
 If this is already known or expected, feel free to close. Thanks for maintaining headroom!

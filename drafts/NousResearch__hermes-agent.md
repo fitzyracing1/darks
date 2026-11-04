@@ -4,38 +4,39 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/NousResearch/hermes-agent/issues/new
-- **Stars:** 260188 · **Generated:** 2026-11-03T18:36:41.394Z
+- **Stars:** 260254 · **Generated:** 2026-11-04T00:52:58.321Z
 - Nothing in this file has been sent anywhere.
-- **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
-
-## Skipped: upstream already tracking
-
-- Nix flake check (`.github/workflows/nix.yml`): [issue #141750](https://github.com/NousResearch/hermes-agent/issues/141750) "nix flake check --no-build fails: uv2nix reads the filtered Python source at eval time"
-
-These workflows are left out of the body below.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 2 workflows dark on main ("Docker Build, Test, and Publish", "CI")
+CI: "Docker Build, Test, and Publish" workflow failing on main since 2026-11-03
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
+Hi! The **Docker Build, Test, and Publish** workflow (`.github/workflows/docker.yml`) on `main` has been failing since 2026-11-03. Here is what I saw, in case it's useful:
 
-### Docker Build, Test, and Publish (`.github/workflows/docker.yml`)
-
-- Latest run on `main`: https://github.com/NousResearch/hermes-agent/actions/runs/41694752559 — dark (conclusion: `cancelled`), 2026-11-03 18:32 UTC
+- Latest run on `main`: https://github.com/NousResearch/hermes-agent/actions/runs/41739495650 — dark (conclusion: `failure`), 2026-11-03 23:29 UTC
 - Dark since: 2026-11-03 18:28 UTC (first run of the current streak)
-- Likely cause: run cancelled
+- Job / step: `Build and test image (slim/amd64)` → `Build image (slim/amd64)`
+- Likely cause: buildx failed with: /src/vendor/github.com/tonistiigi/go-actions-cache/cache.go:329
 
-### CI (`.github/workflows/ci.yaml`)
+<details><summary>End of the job log</summary>
 
-- Latest run on `main`: https://github.com/NousResearch/hermes-agent/actions/runs/41694753210 — dark (conclusion: `failure`), 2026-11-03 18:32 UTC
-- Dark since: 2026-11-03 18:32 UTC (first run of the current streak)
-- Likely cause: no cause found in annotations
+```
+github.com/moby/buildkit/solver/llbsolver.runCacheExporters.func1.1
+	/src/solver/llbsolver/export.go:136
+7 v0.34.2 /usr/bin/buildkitd --config /etc/buildkit/buildkitd.toml --allow-insecure-entitlement=network.host
+github.com/tonistiigi/go-actions-cache.(*Cache).commitV2
+	/src/vendor/github.com/tonistiigi/go-actions-cache/cache_v2.go:139
+github.com/tonistiigi/go-actions-cache.(*Cache).commit
+	/src/vendor/github.com/tonistiigi/go-actions-cache/cache.go:329
+##[error]buildx failed with: /src/vendor/github.com/tonistiigi/go-actions-cache/cache.go:329
+```
+
+</details>
 
 If this is already known or expected, feel free to close. Thanks for maintaining hermes-agent!
 

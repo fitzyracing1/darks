@@ -4,13 +4,12 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/colinhacks/zod/issues/new
-- **Stars:** 44251 · **Generated:** 2026-11-03T18:36:41.394Z
+- **Stars:** 44254 · **Generated:** 2026-11-04T00:52:58.321Z
 - Nothing in this file has been sent anywhere.
 
 ## Skipped: upstream already tracking
 
 - Check zod and @zod/mini lockstep on npm (`.github/workflows/lockstep.yml`): [issue #6715](https://github.com/colinhacks/zod/issues/6715) "CI: lockstep check failing: Node provisioning from .nvmrc 'latest' (27.0.0) 404s"
-- test (`.github/workflows/test.yml`): [issue #6716](https://github.com/colinhacks/zod/issues/6716) "CI failing: .nvmrc 'latest' resolves to Node 27.0.0 which 404s on nodejs.org (ERR_NUB_NODE_PROVISION_FAILED)"
 
 These workflows are left out of the body below.
 

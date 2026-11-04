@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/react/react/issues/new
-- **Stars:** 251892 · **Generated:** 2026-11-03T18:36:41.394Z
+- **Stars:** 251900 · **Generated:** 2026-11-04T00:52:58.321Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -20,7 +20,7 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### (DevTools) Regression Tests (`.github/workflows/devtools_regression_tests.yml`)
 
-- Latest run on `main`: https://github.com/react/react/actions/runs/41550065078 — dark (conclusion: `failure`), 2026-11-03 00:03 UTC
+- Latest run on `main`: https://github.com/react/react/actions/runs/41743924567 — dark (conclusion: `failure`), 2026-11-04 00:03 UTC
 - Dark since: 2026-10-11 00:06 UTC (first run of the current streak)
 - Job / step: `Download base build` → `Download react-devtools artifacts for base revision`
 - Likely cause: The workflow run for the specified commit (76baa3b5434fad315ece9cfd4d20d7a8d6c34a25) could not be found.
@@ -28,11 +28,11 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 <details><summary>End of the job log</summary>
 
 ```
+⠹ Downloading artifacts from GitHub for commit 76baa3b5434fad315ece9cfd4d20d7a8d
+6c34a25)
 ⠸ Downloading artifacts from GitHub for commit 76baa3b5434fad315ece9cfd4d20d7a8d
 6c34a25)
 ⠼ Downloading artifacts from GitHub for commit 76baa3b5434fad315ece9cfd4d20d7a8d
-6c34a25)
-⠴ Downloading artifacts from GitHub for commit 76baa3b5434fad315ece9cfd4d20d7a8d
 6c34a25)
 The workflow run for the specified commit (76baa3b5434fad315ece9cfd4d20d7a8d6c34a25) could not be found.
 ##[error]Process completed with exit code 1.

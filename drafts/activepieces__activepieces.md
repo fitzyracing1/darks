@@ -4,8 +4,9 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/activepieces/activepieces/issues/new
-- **Stars:** 25358 · **Generated:** 2026-11-03T18:36:41.394Z
+- **Stars:** 25364 · **Generated:** 2026-11-04T00:52:58.321Z
 - Nothing in this file has been sent anywhere.
+- **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
@@ -64,22 +65,22 @@ Box signals API responded 401: {"error":"Unknown token. Send it as \"Authorizati
 
 ### Continuous Delivery — Staging (`.github/workflows/continuous-delivery-stg.yml`)
 
-- Latest run on `main`: https://github.com/activepieces/activepieces/actions/runs/41685666985 — dark (conclusion: `failure`), 2026-11-03 17:35 UTC
+- Latest run on `main`: https://github.com/activepieces/activepieces/actions/runs/41728771001 — dark (conclusion: `cancelled`), 2026-11-03 22:12 UTC
 - Dark since: 2026-11-03 17:35 UTC (first run of the current streak)
-- Job / step: `deploy-staging-workers` → `Deploy to staging`
-- Likely cause: ERROR (SSHKit::Runner::ExecuteError): Exception while executing on worker2: Exception while executing on host 78.46.247.19: Connection reset by peer
+- Job / step: `linear-release` → `Run actions/checkout@v5`
+- Likely cause: The job has exceeded the maximum execution time of 5m0s
 
 <details><summary>End of the job log</summary>
 
 ```
-  INFO [16778438] Finished in 0.134 seconds with exit status 0 (successful).
-  INFO [21a5f818] Finished in 0.141 seconds with exit status 0 (successful).
-Releasing the deploy lock...
-  Finished all in 32.5 seconds
-  ERROR (SSHKit::Runner::ExecuteError): Exception while executing on worker2: Exception while executing on host 78.46.247.19: Connection reset by peer
-exit
-Connection to *** closed.
-##[error]Process completed with exit code 1.
+hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+hint: 'development'. The just-created branch can be renamed via this command:
+hint:
+hint: 	git branch -m <name>
+hint:
+hint: Disable this message with "git config set advice.defaultBranchName false"
+Initialized empty Git repository in /home/runner/work/activepieces/activepieces/.git/
+##[error]The operation was canceled.
 ```
 
 </details>

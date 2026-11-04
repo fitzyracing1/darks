@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/anomalyco/opencode/issues/new
-- **Stars:** 224300 · **Generated:** 2026-11-03T18:36:41.394Z
+- **Stars:** 224357 · **Generated:** 2026-11-04T00:52:58.321Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
@@ -43,7 +43,7 @@ could not create workflow dispatch event: HTTP 422: No ref found for: beta (http
 
 ### release (`.github/workflows/release.yml`)
 
-- Latest run on `dev`: https://github.com/anomalyco/opencode/actions/runs/41683836322 — dark (conclusion: `cancelled`), 2026-11-03 17:23 UTC
+- Latest run on `dev`: https://github.com/anomalyco/opencode/actions/runs/41744862574 — dark (conclusion: `cancelled`), 2026-11-04 00:10 UTC
 - Dark since: 2026-11-03 16:12 UTC (first run of the current streak)
 - Likely cause: run cancelled
 

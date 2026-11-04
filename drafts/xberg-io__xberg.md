@@ -4,14 +4,14 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/xberg-io/xberg/issues/new
-- **Stars:** 9522 · **Generated:** 2026-11-03T18:36:41.394Z
+- **Stars:** 9526 · **Generated:** 2026-11-04T00:52:58.321Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** cancelled by a concurrency group — likely noise
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 3 workflows dark on main ("CI Rust", "CI Integrations", "CI Lint")
+CI: 6 workflows dark on main ("CI Rust", "CI Integrations", "CI Lint", +3 more)
 <!-- END TITLE -->
 
 ## Body
@@ -21,69 +21,75 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### CI Rust (`.github/workflows/ci-rust.yaml`)
 
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/41641520513 — dark (conclusion: `failure`), 2026-11-03 13:07 UTC
+- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/41739545244 — dark (conclusion: `cancelled`), 2026-11-03 23:29 UTC
 - Dark since: 2026-10-25 18:30 UTC (first run of the current streak)
-- Job / step: `Rust (macos-26)` → `Run tests`
-- Likely cause: [rust:test:ci] ERROR task failed
+- Job / step: `Rust (windows-latest)` → `Post Setup Rust`
+- Likely cause: Canceling since a higher priority waiting request for ci-rust-refs/heads/main exists
 
 <details><summary>End of the job log</summary>
 
 ```
-Filesystem      Size    Used   Avail Capacity iused ifree %iused  Mounted on
-/dev/disk2s5   320Gi   269Gi    29Gi    91%    2.1M  299M    1%   /System/Volumes/Data
-Cargo environment:
-cargo 1.99.1 (5f94df478 2026-08-27)
-rustc 1.99.1 (58cf8f9c3 2026-10-13)
-Finished in 7031.28s
-[rust:test:ci] ERROR task failed
-##[error]Process completed with exit code 1.
+##[end-action id=__4c00c5ac-331e-4258-ad14-eb8a1f7d1ff0.cache-tesseract-windows;outcome=success;conclusion=success;duration_ms=185]
+##[start-action display=Set up mise;id=__5559a11b-4338-4ee1-aba6-eaec5110e56f.__xberg-io_actions]
+##[start-action display=Install mise and tools;id=__5559a11b-4338-4ee1-aba6-eaec5110e56f.__xberg-io_actions.__jdx_mise-action]
+##[end-action id=__5559a11b-4338-4ee1-aba6-eaec5110e56f.__xberg-io_actions.__jdx_mise-action;outcome=success;conclusion=success;duration_ms=287]
+##[end-action id=__5559a11b-4338-4ee1-aba6-eaec5110e56f.__xberg-io_actions;outcome=success;conclusion=success;duration_ms=311]
+##[start-action display=Cache Rust build artifacts;id=__5559a11b-4338-4ee1-aba6-eaec5110e56f.cache-rust]
+[command]"C:\Program Files\Git\usr\bin\tar.exe" --posix -cf cache.tzst --exclude cache.tzst -P -C D:/a/xberg/xberg --files-from manifest.txt --force-local --use-compress-program "zstd -T0"
+##[error]The operation was canceled.
 ```
 
 </details>
 
 ### CI Integrations (`.github/workflows/ci-integrations.yaml`)
 
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/41670252684 — dark (conclusion: `cancelled`), 2026-11-03 16:03 UTC
+- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/41739545290 — dark (conclusion: `cancelled`), 2026-11-03 23:29 UTC
 - Dark since: 2026-11-02 11:54 UTC (first run of the current streak)
-- Job / step: `Build local integration bindings` → `Build and stage Java binding`
+- Job / step: `Build local integration bindings`
 - Likely cause: Canceling since a higher priority waiting request for ci-integrations-refs/heads/main exists
+
+### CI Lint (`.github/workflows/ci-lint.yaml`)
+
+- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/41739545514 — dark (conclusion: `cancelled`), 2026-11-03 23:29 UTC
+- Dark since: 2026-11-03 02:17 UTC (first run of the current streak)
+- Job / step: `Generated e2e suites freshness`
+- Likely cause: Canceling since a higher priority waiting request for ci-lint-refs/heads/main exists
+
+### CI E2E (`.github/workflows/ci-e2e.yaml`)
+
+- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/41739545421 — dark (conclusion: `cancelled`), 2026-11-03 23:29 UTC
+- Dark since: 2026-11-03 17:32 UTC (first run of the current streak)
+- Job / step: `Build FFI (x86_64-unknown-linux-gnu)` → `Build FFI library`
+- Likely cause: Canceling since a higher priority waiting request for ci-e2e-refs/heads/main exists
 
 <details><summary>End of the job log</summary>
 
 ```
-   Compiling spin v0.9.9
-   Compiling hex v0.4.3
-   Compiling hayro-ccitt v0.4.0
-   Compiling html-escape v0.3.0
-   Compiling num-cmp v0.1.0
-   Compiling unscanny v0.1.0
-   Compiling data-encoding v2.11.1
+   Compiling org v0.3.1
+     Running `CARGO=/home/runner/.rustup/toolchains/1.99.1-x86_64-unknown-linux-gnu/bin/cargo CARGO_CRATE_NAME=org CARGO_MANIFEST_DIR=/home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/org-0.3.1 CARGO_MAN…
+     Running `CARGO=/home/runner/.rustup/toolchains/1.99.1-x86_64-unknown-linux-gnu/bin/cargo CARGO_CFG_FEATURE=analysis,api,api-types,archives,auto-rotate,auto-rotate-types,captioning,chunking,chunking-tokenizers,class…
+[xberg-ffi 1.4.0] cargo:rerun-if-changed=src
+[xberg-ffi 1.4.0] cargo:rerun-if-changed=cbindgen.toml
+[xberg-ffi 1.4.0] cargo:rerun-if-env-changed=ALEF_EXPORT_GENERATED_HEADERS
+     Running `CARGO=/home/runner/.rustup/toolchains/1.99.1-x86_64-unknown-linux-gnu/bin/cargo CARGO_CRATE_NAME=xberg CARGO_MANIFEST_DIR=/home/runner/work/xberg/xberg/crates/xberg CARGO_MANIFEST_PATH=/home/runner/work/xb…
 ##[error]The operation was canceled.
 ```
 
 </details>
 
-### CI Lint (`.github/workflows/ci-lint.yaml`)
+### CI Mobile (`.github/workflows/ci-mobile.yaml`)
 
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/41685267536 — dark (conclusion: `failure`), 2026-11-03 17:32 UTC
-- Dark since: 2026-11-03 02:17 UTC (first run of the current streak)
-- Job / step: `validate / Validate (poly)` → `Lint`
-- Likely cause: ✓ pyrefly
+- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/41739545279 — dark (conclusion: `cancelled`), 2026-11-03 23:29 UTC
+- Dark since: 2026-11-03 22:40 UTC (first run of the current streak)
+- Job / step: `iOS cargo check (aarch64-apple-ios)`
+- Likely cause: Canceling since a higher priority waiting request for ci-mobile-refs/heads/main exists
 
-<details><summary>End of the job log</summary>
+### CI Docs (`.github/workflows/ci-docs.yaml`)
 
-```
-  ⋯ still running: cargo-clippy (435.0s elapsed, killed at 1800.0s)
-whole-project checks
-  ✓ cargo-clippy
-  ✓ checkstyle
-  ✓ credo
-  ✓ golangci-lint
-  ✓ pyrefly
-##[error]Process completed with exit code 1.
-```
-
-</details>
+- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/41739545757 — dark (conclusion: `cancelled`), 2026-11-03 23:29 UTC
+- Dark since: 2026-11-03 23:13 UTC (first run of the current streak)
+- Job / step: `docs / Deploy`
+- Likely cause: Canceling since a higher priority waiting request for ci-docs-refs/heads/main exists
 
 If this is already known or expected, feel free to close. Thanks for maintaining xberg!
 
