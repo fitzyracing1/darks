@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/google-gemini/gemini-cli/issues/new
-- **Stars:** 108713 · **Generated:** 2026-11-04T06:44:24.955Z
+- **Stars:** 108719 · **Generated:** 2026-11-04T12:42:48.646Z
 - Nothing in this file has been sent anywhere.
 
 ## Skipped: upstream already tracking
@@ -16,35 +16,13 @@ These workflows are left out of the body below.
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 2 workflows dark on main ("Testing: E2E (Chained)", "Performance Tests: Nightly")
+CI: 2 workflows dark on main ("Performance Tests: Nightly", "📋 Gemini Scheduled Issue Triage")
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
 Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
-
-### Testing: E2E (Chained) (`.github/workflows/chained_e2e.yml`)
-
-- Latest run on `main`: https://github.com/google-gemini/gemini-cli/actions/runs/41732233624 — dark (conclusion: `failure`), 2026-11-03 22:36 UTC
-- Dark since: 2026-11-03 22:27 UTC (first run of the current streak)
-- Job / step: `Slow E2E - Win` → `Run E2E tests`
-- Likely cause: Tests  8 failed | 86 passed | 53 skipped (147)
-
-<details><summary>End of the job log</summary>
-
-```
- ❯ TestRig.setup ../packages/test-utils/src/test-rig.ts:394:12
- ❯ test-mcp-support.test.ts:29:15
-⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[16/24]⎯
- Test Files  7 failed | 31 passed | 10 skipped (48)
-      Tests  8 failed | 86 passed | 53 skipped (147)
-   Start at  22:44:00
-   Duration  180.16s (transform 10.36s, setup 0ms, collect 423.70s, tests 2310.93s, environment 15ms, prepare 10.32s)
-##[error]Process completed with exit code 1.
-```
-
-</details>
 
 ### Performance Tests: Nightly (`.github/workflows/perf-nightly.yml`)
 
@@ -64,6 +42,28 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
  ❯ start ../node_modules/vitest/dist/chunks/cac.Cb-PYCCB.js:1412:15
  ❯ CAC.run ../node_modules/vitest/dist/chunks/cac.Cb-PYCCB.js:1391:2
 ##[error]Process completed with exit code 1.
+```
+
+</details>
+
+### 📋 Gemini Scheduled Issue Triage (`.github/workflows/gemini-scheduled-issue-triage.yml`)
+
+- Latest run on `main`: https://github.com/google-gemini/gemini-cli/actions/runs/41818717813 — dark (conclusion: `failure`), 2026-11-04 11:07 UTC
+- Dark since: 2026-11-04 07:07 UTC (first run of the current streak)
+- Job / step: `triage-issues` → `Apply Triaged Labels`
+- Likely cause: Unhandled error: HttpError: Resource not accessible by integration
+
+<details><summary>End of the job log</summary>
+
+```
+      'x-ratelimit-limit': '15000',
+      'x-ratelimit-remaining': '14998',
+      'x-ratelimit-reset': '1793790719',
+      'x-ratelimit-resource': 'core',
+      'x-ratelimit-used': '2',
+      'x-xss-protection': '0'
+    },
+##[error]Unhandled error: HttpError: Resource not accessible by integration
 ```
 
 </details>

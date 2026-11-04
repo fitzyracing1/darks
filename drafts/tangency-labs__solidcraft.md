@@ -1,10 +1,10 @@
 <!-- dark-draft: tangency-labs/solidcraft -->
-<!-- draft-state: resolved -->
+<!-- draft-state: duplicate -->
 # Upstream issue draft: tangency-labs/solidcraft
 
-- **Status:** resolved — lit again (2026-11-03); nothing to file
+- **Status:** not for filing — upstream already has an open issue/PR about every dark workflow here
 - **Would be filed at:** https://github.com/tangency-labs/solidcraft/issues/new
-- **Stars:** 13295 · **Generated:** 2026-11-03T12:42:36.291Z
+- **Stars:** 13525 · **Generated:** 2026-11-04T12:42:48.646Z
 - Nothing in this file has been sent anywhere.
 
 ## Skipped: upstream already tracking

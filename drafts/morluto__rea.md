@@ -4,15 +4,14 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/morluto/rea/issues/new
-- **Stars:** 428057 · **Generated:** 2026-11-04T06:44:24.955Z
+- **Stars:** 429174 · **Generated:** 2026-11-04T12:42:48.646Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** latest run was skipped, not failed — probably not worth filing
-- **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 2 workflows dark on main ("CodeQL production", "Mutation sweep")
+CI: 2 workflows dark on main ("CodeQL production", "CI")
 <!-- END TITLE -->
 
 ## Body
@@ -22,28 +21,28 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### CodeQL production (`.github/workflows/codeql.yml`)
 
-- Latest run on `main`: https://github.com/morluto/rea/actions/runs/41770367039 — dark (conclusion: `skipped`), 2026-11-04 03:58 UTC
+- Latest run on `main`: https://github.com/morluto/rea/actions/runs/41825332008 — dark (conclusion: `skipped`), 2026-11-04 11:58 UTC
 - Dark since: 2026-11-01 07:24 UTC (first run of the current streak)
 - Likely cause: run skipped
 
-### Mutation sweep (`.github/workflows/mutation.yml`)
+### CI (`.github/workflows/ci.yml`)
 
-- Latest run on `main`: https://github.com/morluto/rea/actions/runs/41775611756 — dark (conclusion: `cancelled`), 2026-11-04 04:50 UTC
-- Dark since: 2026-11-04 04:50 UTC (first run of the current streak)
-- Job / step: `Mutation sweep (reverse-tools)` → `Run the complete configuration`
-- Likely cause: The job has exceeded the maximum execution time of 1h0m0s
+- Latest run on `main`: https://github.com/morluto/rea/actions/runs/41829935194 — dark (conclusion: `failure`), 2026-11-04 12:30 UTC
+- Dark since: 2026-11-04 11:22 UTC (first run of the current streak)
+- Job / step: `Deep static checks` → `Run deep static checks`
+- Likely cause: command (/home/runner/work/rea/rea/) /opt/hostedtoolcache/node/24.22.1/x64/bin/npm run compile exited (2)
 
 <details><summary>End of the job log</summary>
 
 ```
-Mutation testing 99% (elapsed: ~56m, remaining: n/a) 819/830 tested (156 survived, 2 timed out)
-Mutation testing 99% (elapsed: ~56m, remaining: n/a) 820/830 tested (156 survived, 2 timed out)
-Mutation testing 99% (elapsed: ~56m, remaining: n/a) 821/830 tested (156 survived, 2 timed out)
-Mutation testing 99% (elapsed: ~56m, remaining: n/a) 822/830 tested (156 survived, 2 timed out)
-Mutation testing 99% (elapsed: ~56m, remaining: n/a) 823/830 tested (156 survived, 2 timed out)
-Mutation testing 99% (elapsed: ~56m, remaining: n/a) 823/830 tested (156 survived, 2 timed out)
-Mutation testing 99% (elapsed: ~57m, remaining: n/a) 824/830 tested (156 survived, 2 timed out)
-##[error]The operation was canceled.
+> rea-agents@6.8.0 scan:todos
+> node scripts/scan-todos.mjs
+No tech-debt markers found.
+compile
+cache miss, executing 876426fc6fb0ae37
+> rea-agents@6.8.0 compile
+> node scripts/clean-build-output.mjs && node scripts/run-typescript.mjs -p tsconfig.build.json && node scripts/record-catalog-digests.mjs && node scripts/record-mcp-catalog.mjs && node scripts/bundle-runtime.mjs
+##[error]src/domain/javascript/electronCallPathBlockPrefixes.ts(2,10): error TS2300: Duplicate identifier 'childNodes'.
 ```
 
 </details>

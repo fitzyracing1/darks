@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/webiny/webiny-js/issues/new
-- **Stars:** 8049 · **Generated:** 2026-11-04T06:44:24.955Z
+- **Stars:** 8049 · **Generated:** 2026-11-04T12:42:48.646Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -64,9 +64,25 @@ Waiting 20 seconds before trying again
 
 ### Push (`.github/workflows/push.yml`)
 
-- Latest run on `next`: https://github.com/webiny/webiny-js/actions/runs/41641360631 — dark (conclusion: `failure`), 2026-11-03 13:06 UTC
+- Latest run on `next`: https://github.com/webiny/webiny-js/actions/runs/41795671674 — dark (conclusion: `failure`), 2026-11-04 07:55 UTC
 - Dark since: 2026-11-03 13:06 UTC (first run of the current streak)
-- Likely cause: no cause found in annotations
+- Job / step: `[DDB] webhooks` → `Run tests`
+- Likely cause: AssertionError: expected 999 to be greater than or equal to 1000 (v6/packages/webhooks/__tests__/WebhookDeliver.test.ts:93)
+
+<details><summary>End of the job log</summary>
+
+```
+     94|     });
+     95|
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+ Test Files  1 failed | 23 passed (24)
+      Tests  1 failed | 138 passed (139)
+   Start at  07:59:42
+   Duration  55.73s (setup 47%, tests 40%, transform 9%, import 4%)
+##[error]AssertionError: expected 999 to be greater than or equal to 1000
+```
+
+</details>
 
 ### Record E2E replay steps (`.github/workflows/recordReplayCache.yml`)
 

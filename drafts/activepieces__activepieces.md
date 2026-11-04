@@ -4,14 +4,13 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/activepieces/activepieces/issues/new
-- **Stars:** 25363 · **Generated:** 2026-11-04T06:44:24.955Z
+- **Stars:** 25364 · **Generated:** 2026-11-04T12:42:48.646Z
 - Nothing in this file has been sent anywhere.
-- **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 3 workflows dark on main ("Chat Evals", "Benchmark", "Continuous Delivery — Staging")
+CI: 2 workflows dark on main ("Chat Evals", "Benchmark")
 <!-- END TITLE -->
 
 ## Body
@@ -59,28 +58,6 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 }
 Box signals API responded 401: {"error":"Unknown token. Send it as \"Authorization: ***"."}
 ##[error]Process completed with exit code 1.
-```
-
-</details>
-
-### Continuous Delivery — Staging (`.github/workflows/continuous-delivery-stg.yml`)
-
-- Latest run on `main`: https://github.com/activepieces/activepieces/actions/runs/41728771001 — dark (conclusion: `cancelled`), 2026-11-03 22:12 UTC
-- Dark since: 2026-11-03 17:35 UTC (first run of the current streak)
-- Job / step: `linear-release` → `Run actions/checkout@v5`
-- Likely cause: The job has exceeded the maximum execution time of 5m0s
-
-<details><summary>End of the job log</summary>
-
-```
-hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
-hint: 'development'. The just-created branch can be renamed via this command:
-hint:
-hint: 	git branch -m <name>
-hint:
-hint: Disable this message with "git config set advice.defaultBranchName false"
-Initialized empty Git repository in /home/runner/work/activepieces/activepieces/.git/
-##[error]The operation was canceled.
 ```
 
 </details>

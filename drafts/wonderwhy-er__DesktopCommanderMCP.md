@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/wonderwhy-er/DesktopCommanderMCP/issues/new
-- **Stars:** 10208 · **Generated:** 2026-11-04T06:44:24.955Z
+- **Stars:** 10211 · **Generated:** 2026-11-04T12:42:48.646Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -18,7 +18,7 @@ CI: "Codespell" workflow failing on main since 2026-11-03
 <!-- BEGIN BODY -->
 Hi! The **Codespell** workflow (`.github/workflows/codespell.yml`) on `main` has been failing since 2026-11-03. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/wonderwhy-er/DesktopCommanderMCP/actions/runs/41727665456 — dark (conclusion: `failure`), 2026-11-03 22:05 UTC
+- Latest run on `main`: https://github.com/wonderwhy-er/DesktopCommanderMCP/actions/runs/41827582132 — dark (conclusion: `failure`), 2026-11-04 12:14 UTC
 - Dark since: 2026-11-03 22:05 UTC (first run of the current streak)
 - Job / step: `Check for spelling errors` → `Codespell`
 - Likely cause: inly ==> only (src/remote-device/mqtt/mqtt-transport.ts:301)
