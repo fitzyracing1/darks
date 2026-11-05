@@ -4,14 +4,13 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/seedds/nxnative/issues/new
-- **Stars:** 12336 · **Generated:** 2026-11-05T12:43:00.618Z
+- **Stars:** 12422 · **Generated:** 2026-11-05T18:40:12.982Z
 - Nothing in this file has been sent anywhere.
-- **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 3 workflows dark on main ("fuzz", "tests", "lint-c")
+CI: 3 workflows dark on main ("fuzz", "lint-c", "lint-python")
 <!-- END TITLE -->
 
 ## Body
@@ -41,30 +40,46 @@ Base64: TkFSQwAAjQAA
 
 </details>
 
-### tests (`.github/workflows/tests.yml`)
-
-- Latest run on `main`: https://github.com/seedds/nxnative/actions/runs/42016317861 — dark (conclusion: `cancelled`), 2026-11-05 11:07 UTC
-- Dark since: 2026-11-04 14:36 UTC (first run of the current streak)
-- Likely cause: run cancelled
-
 ### lint-c (`.github/workflows/lint-c.yml`)
 
-- Latest run on `main`: https://github.com/seedds/nxnative/actions/runs/42022858871 — dark (conclusion: `failure`), 2026-11-05 11:55 UTC
+- Latest run on `main`: https://github.com/seedds/nxnative/actions/runs/42044778761 — dark (conclusion: `failure`), 2026-11-05 14:24 UTC
 - Dark since: 2026-11-05 11:55 UTC (first run of the current streak)
-- Job / step: `clang-tidy (ratchet)` → `clang-tidy against the baseline`
-- Likely cause: Nullable pointer is passed to a callee that requires a non-null 1st parameter [clang-analyzer-nullability.NullablePassedToNonnull] (1 in this file, the baseline has 0) (dm/gfx/tests/t_int_float_view.m:29)
+- Job / step: `clang-tidy (ratchet)` → `LLVM 23.1.4 (clang-tidy)`
+- Likely cause: curl: (56) The requested URL returned error: 504
 
 <details><summary>End of the job log</summary>
 
 ```
-[231/235] dm/host/tests/t_uecvar.c: 0 findings
-[232/235] dm/host/tests/t_vorbis.c: 0 findings
-[233/235] dm/host/tests/t_watch_sample.c: 0 findings
-[234/235] dm/host/thread.c: 1 findings
-[235/235] dm/host/web_apple.m: 0 findings
-LLVM 23.1.4: 241 findings in 74 files, 135 file/check pairs
-dm/gfx/tests/t_int_float_view.m: clang-analyzer-nullability.NullablePassedToNonnull: 1 findings, the baseline has 0
-##[error]Nullable pointer is passed to a callee that requires a non-null 1st parameter [clang-analyzer-nullability.NullablePassedToNonnull] (1 in this file, the baseline has 0)
+[command]/opt/homebrew/bin/git config --local --unset includeif.gitdir:/github/workspace/.git.path \/github\/runner_temp\/git\-credentials\-0bb9a70e\-7973\-4a19\-8e4b\-0413d8ee956f\.config
+[command]/opt/homebrew/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git/worktrees/*.path
+/github/runner_temp/git-credentials-0bb9a70e-7973-4a19-8e4b-0413d8ee956f.config
+[command]/opt/homebrew/bin/git config --local --unset includeif.gitdir:/github/workspace/.git/worktrees/*.path \/github\/runner_temp\/git\-credentials\-0bb9a70e\-7973\-4a19\-8e4b\-0413d8ee956f\.config
+[command]/opt/homebrew/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+Removing credentials config '/Users/runner/work/_temp/git-credentials-0bb9a70e-7973-4a19-8e4b-0413d8ee956f.config'
+curl: (56) The requested URL returned error: 504
+##[error]Process completed with exit code 56.
+```
+
+</details>
+
+### lint-python (`.github/workflows/lint-python.yml`)
+
+- Latest run on `main`: https://github.com/seedds/nxnative/actions/runs/42062501408 — dark (conclusion: `failure`), 2026-11-05 16:15 UTC
+- Dark since: 2026-11-05 16:15 UTC (first run of the current streak)
+- Job / step: `ruff and pyright (ratchet)` → `ruff and pyright against the baseline`
+- Likely cause: "__setitem__" method not defined on type "str" (dm/tools/tests/test_nso_match.py:203)
+
+<details><summary>End of the job log</summary>
+
+```
+Using cached fonttools-4.67.0-cp314-cp314-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (5.3 MB)
+Using cached nodeenv-1.12.0-py3-none-any.whl (39 kB)
+Using cached typing_extensions-4.16.0-py3-none-any.whl (45 kB)
+Installing collected packages: typing-extensions, ruff, nodeenv, lz4, fonttools, capstone, pyright
+Successfully installed capstone-5.0.9 fonttools-4.67.0 lz4-4.4.5 nodeenv-1.12.0 pyright-1.1.414 ruff-0.17.2 typing-extensions-4.16.0
+[notice] A new release of pip is available: 26.2.2 -> 26.3
+[notice] To update, run: pip install --upgrade pip
+##[error]"__setitem__" method not defined on type "str"
 ```
 
 </details>

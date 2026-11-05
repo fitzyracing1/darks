@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/storytold/vectorcraft/issues/new
-- **Stars:** 11388 · **Generated:** 2026-11-05T12:43:00.618Z
+- **Stars:** 11395 · **Generated:** 2026-11-05T18:40:12.982Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
@@ -21,7 +21,7 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### SonarCloud (`.github/workflows/sonarcloud.yml`)
 
-- Latest run on `main`: https://github.com/storytold/vectorcraft/actions/runs/42025373645 — dark (conclusion: `cancelled`), 2026-11-05 12:13 UTC
+- Latest run on `main`: https://github.com/storytold/vectorcraft/actions/runs/42081150985 — dark (conclusion: `cancelled`), 2026-11-05 18:07 UTC
 - Dark since: 2026-11-01 09:55 UTC (first run of the current streak)
 - Likely cause: run cancelled
 

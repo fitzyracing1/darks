@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/xerj-org/xerj/issues/new
-- **Stars:** 19157 · **Generated:** 2026-11-05T12:43:00.618Z
+- **Stars:** 19038 · **Generated:** 2026-11-05T18:40:12.982Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title

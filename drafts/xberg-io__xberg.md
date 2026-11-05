@@ -4,14 +4,14 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/xberg-io/xberg/issues/new
-- **Stars:** 9540 · **Generated:** 2026-11-05T12:43:00.618Z
+- **Stars:** 9542 · **Generated:** 2026-11-05T18:40:12.982Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** cancelled by a concurrency group — likely noise
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 6 workflows dark on main ("CI Rust", "CI Integrations", "CI Lint", +3 more)
+CI: 5 workflows dark on main ("CI Rust", "CI Integrations", "CI E2E", +2 more)
 <!-- END TITLE -->
 
 ## Body
@@ -21,29 +21,29 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### CI Rust (`.github/workflows/ci-rust.yaml`)
 
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/42023309773 — dark (conclusion: `cancelled`), 2026-11-05 11:58 UTC
+- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/42073307545 — dark (conclusion: `cancelled`), 2026-11-05 17:18 UTC
 - Dark since: 2026-10-25 18:30 UTC (first run of the current streak)
-- Job / step: `Rust tract-only (no-ORT)` → `Run bash scripts/ci/rust/run-ocr-orientation-tests.sh`
+- Job / step: `Rust (windows-latest, static-embeddings link)` → `Install system dependencies`
 - Likely cause: Canceling since a higher priority waiting request for ci-rust-refs/heads/main exists
 
 <details><summary>End of the job log</summary>
 
 ```
-   4: ocr_auto_rotate::implicit_upright_pdf_ocr_preserves_text_confidence_and_geometry::{closure#0}
-   5: <ocr_auto_rotate::implicit_upright_pdf_ocr_preserves_text_confidence_and_geometry::{closure#0} as core::ops::function::FnOnce<()>>::call_once
-note: Some details are omitted, run with `RUST_BACKTRACE=full` for a verbose backtrace.
-failures:
-    implicit_upright_pdf_ocr_preserves_text_confidence_and_geometry
-test result: FAILED. 5 passed; 1 failed; 0 ignored; 0 measured; 2 filtered out; finished in 114.99s
-error: test failed, to rerun pass `-p xberg --test ocr_auto_rotate`
-##[error]Process completed with exit code 101.
+-- Extracting source C:/xberg-vcpkg-5363acb7/downloads/libjpeg-turbo-libjpeg-turbo-3.2.0.tar.gz
+-- Applying patch add-options-for-docs-headers.patch
+-- Applying patch workaround_cmake_system_processor.patch
+-- Applying patch system-dependency-fixes-pr-901.patch
+-- Using source at C:/xberg-vcpkg-5363acb7/buildtrees/libjpeg-turbo/src/3.2.0-6292819c57.clean
+-- Configuring x64-windows-static-md
+-- Building x64-windows-static-md-dbg
+##[error]The operation was canceled.
 ```
 
 </details>
 
 ### CI Integrations (`.github/workflows/ci-integrations.yaml`)
 
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/42023309771 — dark (conclusion: `cancelled`), 2026-11-05 11:58 UTC
+- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/42073307818 — dark (conclusion: `cancelled`), 2026-11-05 17:18 UTC
 - Dark since: 2026-11-02 11:54 UTC (first run of the current streak)
 - Job / step: `Build local integration bindings` → `Build abi3 Python wheel`
 - Likely cause: Canceling since a higher priority waiting request for ci-integrations-refs/heads/main exists
@@ -51,53 +51,61 @@ error: test failed, to rerun pass `-p xberg --test ocr_auto_rotate`
 <details><summary>End of the job log</summary>
 
 ```
-   Compiling strum v0.28.0
-   Compiling strum v0.27.2
-   Compiling tokenizers v0.21.4
-   Compiling gcp_auth v0.12.7
-   Compiling pyo3-macros v0.30.1
-   Compiling utoipa-gen v6.0.1
-   Compiling unparser-shared v0.12.0
+   Compiling lru v0.19.0
+   Compiling similar v3.2.1
+   Compiling minijinja v3.0.5
+   Compiling org v0.3.1
+   Compiling jotdown v0.10.0
+   Compiling pyo3-async-runtimes v0.30.0
+   Compiling xberg-py v1.4.0 (/home/runner/work/xberg/xberg/crates/xberg-py)
 ##[error]The operation was canceled.
 ```
 
 </details>
 
-### CI Lint (`.github/workflows/ci-lint.yaml`)
-
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/42023310391 — dark (conclusion: `cancelled`), 2026-11-05 11:58 UTC
-- Dark since: 2026-11-03 02:17 UTC (first run of the current streak)
-- Job / step: `Plugin bundle freshness`
-- Likely cause: Canceling since a higher priority waiting request for ci-lint-refs/heads/main exists
-
 ### CI E2E (`.github/workflows/ci-e2e.yaml`)
 
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/42023309662 — dark (conclusion: `cancelled`), 2026-11-05 11:58 UTC
+- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/42073308280 — dark (conclusion: `cancelled`), 2026-11-05 17:18 UTC
 - Dark since: 2026-11-03 17:32 UTC (first run of the current streak)
-- Job / step: `Build FFI (aarch64-unknown-linux-gnu)` → `Build FFI library`
+- Job / step: `Build FFI (x86_64-unknown-linux-gnu)` → `Build FFI library`
 - Likely cause: Canceling since a higher priority waiting request for ci-e2e-refs/heads/main exists
 
 <details><summary>End of the job log</summary>
 
 ```
-[xberg-tesseract 1.4.0] /usr/bin/g++ -DCMAKE_BUILD -DHAVE_CONFIG_H -D_SILENCE_STDEXT_HASH_DEPRECATION_WARNINGS=1 -I/home/runner/work/xberg/xberg/target/release/build/xberg-tesseract-d22eae7ca6f12981/out/third_party/tess…
-[xberg-tesseract 1.4.0] [  3%] Building CXX object CMakeFiles/libtesseract.dir/src/arch/intsimdmatrixneon.cpp.o
-[xberg-tesseract 1.4.0] /usr/bin/g++ -DCMAKE_BUILD -DHAVE_CONFIG_H -D_SILENCE_STDEXT_HASH_DEPRECATION_WARNINGS=1 -I/home/runner/work/xberg/xberg/target/release/build/xberg-tesseract-d22eae7ca6f12981/out/third_party/tess…
-[xberg-tesseract 1.4.0] [  3%] Building CXX object CMakeFiles/libtesseract.dir/src/api/altorenderer.cpp.o
-[xberg-tesseract 1.4.0] /usr/bin/g++ -DCMAKE_BUILD -DHAVE_CONFIG_H -D_SILENCE_STDEXT_HASH_DEPRECATION_WARNINGS=1 -I/home/runner/work/xberg/xberg/target/release/build/xberg-tesseract-d22eae7ca6f12981/out/third_party/tess…
-[xberg-tesseract 1.4.0] [  4%] Building CXX object CMakeFiles/libtesseract.dir/src/api/baseapi.cpp.o
-[xberg-tesseract 1.4.0] /usr/bin/g++ -DCMAKE_BUILD -DHAVE_CONFIG_H -D_SILENCE_STDEXT_HASH_DEPRECATION_WARNINGS=1 -I/home/runner/work/xberg/xberg/target/release/build/xberg-tesseract-d22eae7ca6f12981/out/third_party/tess…
+     Running `CARGO=/home/runner/.rustup/toolchains/1.99.1-x86_64-unknown-linux-gnu/bin/cargo CARGO_CRATE_NAME=icu_locale_fallback CARGO_MANIFEST_DIR=/home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/icu…
+   Compiling geo-clipper v0.9.0
+     Running `CARGO=/home/runner/.rustup/toolchains/1.99.1-x86_64-unknown-linux-gnu/bin/cargo CARGO_CRATE_NAME=geo_clipper CARGO_MANIFEST_DIR=/home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/geo-clipper…
+[xberg-tesseract 1.4.0] [ 33%] Building CXX object CMakeFiles/libtesseract.dir/src/ccstruct/params_training_featdef.cpp.o
+[xberg-tesseract 1.4.0] /usr/bin/g++ -DCMAKE_BUILD -DHAVE_AVX -DHAVE_AVX2 -DHAVE_AVX512F -DHAVE_CONFIG_H -DHAVE_FMA -DHAVE_SSE4_1 -DOPENMP_SIMD -D_SILENCE_STDEXT_HASH_DEPRECATION_WARNINGS=1 -I/home/runner/work/xberg/xbe…
+[xberg-tesseract 1.4.0] [ 34%] Building CXX object CMakeFiles/libtesseract.dir/src/ccstruct/pdblock.cpp.o
+[xberg-tesseract 1.4.0] /usr/bin/g++ -DCMAKE_BUILD -DHAVE_AVX -DHAVE_AVX2 -DHAVE_AVX512F -DHAVE_CONFIG_H -DHAVE_FMA -DHAVE_SSE4_1 -DOPENMP_SIMD -D_SILENCE_STDEXT_HASH_DEPRECATION_WARNINGS=1 -I/home/runner/work/xberg/xbe…
 ##[error]The operation was canceled.
 ```
 
 </details>
 
-### CI Mobile (`.github/workflows/ci-mobile.yaml`)
+### CI Scripts (`.github/workflows/ci-scripts.yaml`)
 
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/42023309722 — dark (conclusion: `cancelled`), 2026-11-05 11:58 UTC
+- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/42023309764 — dark (conclusion: `failure`), 2026-11-05 11:58 UTC
 - Dark since: 2026-11-05 11:58 UTC (first run of the current streak)
-- Job / step: `iOS cargo check (aarch64-apple-ios-sim)`
-- Likely cause: Canceling since a higher priority waiting request for ci-mobile-refs/heads/main exists
+- Job / step: `Bats on macos-26` → `Run the shell contract tests`
+- Likely cause: ok 679 WASM test runner should propagate the actual wasm-pack test failure
+
+<details><summary>End of the job log</summary>
+
+```
+ok 678 WASM test runner should reject a failing executed POSIX probe rather than only checking the binary exists
+ok 679 WASM test runner should propagate the actual wasm-pack test failure
+The following warnings were encountered during tests:
+BW02: Using flags on `run` requires at least BATS_VERSION=1.5.0. Use `bats_require_minimum_version 1.5.0` to fix this message.
+      (from function `bats_warn_minimum_guaranteed_version' in file /Users/runner/work/_temp/bats/bats-core-1.14.0/lib/bats-core/warnings.bash, line 32,
+       from function `run' in file /Users/runner/work/_temp/bats/bats-core-1.14.0/lib/bats-core/test_functions.bash, line 359,
+       in test file scripts/tests/bats/benchmark_liteparse.bats, line 26)
+##[error]Process completed with exit code 1.
+```
+
+</details>
 
 ### Native libheif runtime qualification (`.github/workflows/ci-native-runtime.yaml`)
 

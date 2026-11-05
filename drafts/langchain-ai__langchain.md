@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/langchain-ai/langchain/issues/new
-- **Stars:** 149073 · **Generated:** 2026-11-05T12:43:00.618Z
+- **Stars:** 149092 · **Generated:** 2026-11-05T18:40:12.982Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -18,22 +18,22 @@ CI: "⏰ Integration Tests" workflow failing on master since 2026-10-09
 <!-- BEGIN BODY -->
 Hi! The **⏰ Integration Tests** workflow (`.github/workflows/integration_tests.yml`) on `master` has been failing since 2026-10-09. Here is what I saw, in case it's useful:
 
-- Latest run on `master`: https://github.com/langchain-ai/langchain/actions/runs/41834750406 — dark (conclusion: `failure`), 2026-11-04 13:04 UTC
+- Latest run on `master`: https://github.com/langchain-ai/langchain/actions/runs/42032615960 — dark (conclusion: `failure`), 2026-11-05 13:05 UTC
 - Dark since: 2026-10-09 13:10 UTC (first run of the current streak)
-- Job / step: `🐍 Python 3.11: libs/partners/openai` → `🔐 Configure AWS Credentials`
-- Likely cause: Credentials could not be loaded, please check your action inputs: The security token included in the request is invalid.
+- Job / step: `🐍 Python 3.14: libs/partners/aws` → `🚀 Run Integration Tests`
+- Likely cause: = 283 failed, 256 passed, 231 skipped, 13 xfailed, 5 xpassed, 4 warnings in 163.76s (0:02:43) =
 
 <details><summary>End of the job log</summary>
 
 ```
-Retry validateCredentials: attempt 7 of 12 failed: Credentials could not be loaded, please check your action inputs: The security token included in the request is invalid.. Retrying after 936ms.
-Retry validateCredentials: attempt 8 of 12 failed: Credentials could not be loaded, please check your action inputs: The security token included in the request is invalid.. Retrying after 603ms.
-Retry validateCredentials: attempt 9 of 12 failed: Credentials could not be loaded, please check your action inputs: The security token included in the request is invalid.. Retrying after 6005ms.
-Retry validateCredentials: attempt 10 of 12 failed: Credentials could not be loaded, please check your action inputs: The security token included in the request is invalid.. Retrying after 6021ms.
-Retry validateCredentials: attempt 11 of 12 failed: Credentials could not be loaded, please check your action inputs: The security token included in the request is invalid.. Retrying after 4792ms.
-Retry validateCredentials: attempt 12 of 12 failed: Credentials could not be loaded, please check your action inputs: The security token included in the request is invalid.. Retrying after 50222ms.
-Retry validateCredentials: reached max retries (12); giving up.
-##[error]Credentials could not be loaded, please check your action inputs: The security token included in the request is invalid.
+FAILED tests/integration_tests/tools/test_nova.py::TestNovaStreaming::test_chunk_content_structure - botocore.exceptions.ClientError: An error occurred (501) when calling the ConverseStream operation:
+FAILED tests/integration_tests/tools/test_nova.py::TestNovaStreaming::test_with_string_tool_names - botocore.exceptions.ClientError: An error occurred (501) when calling the ConverseStream operation:
+FAILED tests/integration_tests/tools/test_nova.py::TestNovaReasoning::test_content_structure - botocore.exceptions.ClientError: An error occurred (501) when calling the Converse operation:
+FAILED tests/integration_tests/tools/test_nova.py::TestNovaStreaming::test_empty_chunks_handling - botocore.exceptions.ClientError: An error occurred (501) when calling the ConverseStream operation:
+FAILED tests/integration_tests/tools/test_nova.py::TestNovaReasoning::test_with_complex_query - botocore.exceptions.ClientError: An error occurred (501) when calling the Converse operation:
+FAILED tests/integration_tests/tools/test_nova.py::TestNovaStreaming::test_accumulating_chunks_into_full_message - botocore.exceptions.ClientError: An error occurred (501) when calling the ConverseStream operation:
+= 283 failed, 256 passed, 231 skipped, 13 xfailed, 5 xpassed, 4 warnings in 163.76s (0:02:43) =
+##[error]Process completed with exit code 2.
 ```
 
 </details>

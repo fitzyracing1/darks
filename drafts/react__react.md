@@ -4,21 +4,19 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/react/react/issues/new
-- **Stars:** 251984 · **Generated:** 2026-11-05T12:43:00.618Z
+- **Stars:** 251994 · **Generated:** 2026-11-05T18:40:12.982Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 2 workflows dark on main ("(DevTools) Regression Tests", "(Runtime) Release From CI")
+CI: "(DevTools) Regression Tests" workflow failing on main since 2026-10-11
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
-
-### (DevTools) Regression Tests (`.github/workflows/devtools_regression_tests.yml`)
+Hi! The **(DevTools) Regression Tests** workflow (`.github/workflows/devtools_regression_tests.yml`) on `main` has been failing since 2026-10-11. Here is what I saw, in case it's useful:
 
 - Latest run on `main`: https://github.com/react/react/actions/runs/41938445557 — dark (conclusion: `failure`), 2026-11-05 00:03 UTC
 - Dark since: 2026-10-11 00:06 UTC (first run of the current streak)
@@ -33,28 +31,6 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 ⠸ Downloading artifacts from GitHub for commit 76baa3b5434fad315ece9cfd4d20d7a8d
 6c34a25)
 ⠼ Downloading artifacts from GitHub for commit 76baa3b5434fad315ece9cfd4d20d7a8d
-6c34a25)
-The workflow run for the specified commit (76baa3b5434fad315ece9cfd4d20d7a8d6c34a25) could not be found.
-##[error]Process completed with exit code 1.
-```
-
-</details>
-
-### (Runtime) Release From CI (`.github/workflows/runtime_release_from_ci.yml`)
-
-- Latest run on `main`: https://github.com/react/react/actions/runs/41865280284 — dark (conclusion: `failure`), 2026-11-04 16:14 UTC
-- Dark since: 2026-11-02 16:16 UTC (first run of the current streak)
-- Job / step: `Publish release` → `Stage canary artifacts`
-- Likely cause: The workflow run for the specified commit (76baa3b5434fad315ece9cfd4d20d7a8d6c34a25) could not be found.
-
-<details><summary>End of the job log</summary>
-
-```
-⠙ Downloading artifacts from GitHub for commit 76baa3b5434fad315ece9cfd4d20d7a8d
-6c34a25)
-⠹ Downloading artifacts from GitHub for commit 76baa3b5434fad315ece9cfd4d20d7a8d
-6c34a25)
-⠸ Downloading artifacts from GitHub for commit 76baa3b5434fad315ece9cfd4d20d7a8d
 6c34a25)
 The workflow run for the specified commit (76baa3b5434fad315ece9cfd4d20d7a8d6c34a25) could not be found.
 ##[error]Process completed with exit code 1.

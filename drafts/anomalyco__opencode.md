@@ -4,35 +4,44 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/anomalyco/opencode/issues/new
-- **Stars:** 224717 · **Generated:** 2026-11-05T12:43:00.618Z
+- **Stars:** 224764 · **Generated:** 2026-11-05T18:40:12.982Z
 - Nothing in this file has been sent anywhere.
+- **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: "nightly-beta" workflow failing on dev since 2026-11-05
+CI: 2 workflows dark on dev ("release", "Process daemon")
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! The **nightly-beta** workflow (`.github/workflows/nightly-beta.yml`) on `dev` has been failing since 2026-11-05. Here is what I saw, in case it's useful:
+Hi! A few workflows on `dev` have been dark recently. Details below, in case they're useful:
 
-- Latest run on `dev`: https://github.com/anomalyco/opencode/actions/runs/42001862097 — dark (conclusion: `failure`), 2026-11-05 09:22 UTC
-- Dark since: 2026-11-05 09:22 UTC (first run of the current streak)
-- Job / step: `dispatch` → `Dispatch beta test runs`
-- Likely cause: could not create workflow dispatch event: HTTP 422: No ref found for: beta (https://api.github.com/repos/anomalyco/opencode/actions/workflows/396447938/dispatches)
+### release (`.github/workflows/release.yml`)
+
+- Latest run on `dev`: https://github.com/anomalyco/opencode/actions/runs/42081374747 — dark (conclusion: `cancelled`), 2026-11-05 18:08 UTC
+- Dark since: 2026-11-05 16:59 UTC (first run of the current streak)
+- Likely cause: run cancelled
+
+### Process daemon (`.github/workflows/check-process-daemon.yml`)
+
+- Latest run on `dev`: https://github.com/anomalyco/opencode/actions/runs/42070085454 — dark (conclusion: `failure`), 2026-11-05 16:59 UTC
+- Dark since: 2026-11-05 16:59 UTC (first run of the current streak)
+- Job / step: `Windows (arm64)` → `Check Clippy`
+- Likely cause: at /rustc/1159e78c4747b02ef996e55082b704c09b970588/library\core\src\panicking.rs:75
 
 <details><summary>End of the job log</summary>
 
 ```
-Metadata: read
-Secret source: Actions
-Cache mode: write
-Prepare workflow directory
-Prepare all required actions
-Complete job name: dispatch
-could not create workflow dispatch event: HTTP 422: No ref found for: beta (https://api.github.com/repos/anomalyco/opencode/actions/workflows/396447938/dispatches)
+     3: build_script_build::main
+               at .\build.rs:121
+     4: core::ops::function::FnOnce::call_once<void (*)(),tuple$<> >
+               at /rustc/1159e78c4747b02ef996e55082b704c09b970588\library\core\src\ops\function.rs:253
+     5: core::hint::black_box
+               at /rustc/1159e78c4747b02ef996e55082b704c09b970588\library\core\src\hint.rs:482
+  note: Some details are omitted, run with `RUST_BACKTRACE=full` for a verbose backtrace.
 ##[error]Process completed with exit code 1.
 ```
 

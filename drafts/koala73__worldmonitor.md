@@ -4,35 +4,35 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/koala73/worldmonitor/issues/new
-- **Stars:** 90183 · **Generated:** 2026-11-05T12:43:00.618Z
+- **Stars:** 90205 · **Generated:** 2026-11-05T18:40:12.982Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: "Post-merge Deploy Monitor" workflow failing on main since 2026-11-05
+CI: "Railway Native Deploy Health" workflow failing on main since 2026-11-05
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! The **Post-merge Deploy Monitor** workflow (`.github/workflows/postmerge-deploy-monitor.yml`) on `main` has been failing since 2026-11-05. Here is what I saw, in case it's useful:
+Hi! The **Railway Native Deploy Health** workflow (`.github/workflows/railway-deploy-drift.yml`) on `main` has been failing since 2026-11-05. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/koala73/worldmonitor/actions/runs/42027460338 — dark (conclusion: `failure`), 2026-11-05 12:28 UTC
-- Dark since: 2026-11-05 08:35 UTC (first run of the current streak)
-- Job / step: `monitor` → `Check post-merge deploys reached production`
-- Likely cause: - Deploy api-cors-preflight Worker [RUN_FAILED] run 41988326131 (fix(ci): retry the api-cors-preflight Worker deploy on Cloudflare rat…) concluded failure
+- Latest run on `main`: https://github.com/koala73/worldmonitor/actions/runs/42083320322 — dark (conclusion: `failure`), 2026-11-05 18:20 UTC
+- Dark since: 2026-11-05 18:20 UTC (first run of the current streak)
+- Job / step: `Railway native deployment health` → `Check Railway deployment configuration and drift`
+- Likely cause: npm warn deprecated node-domexception@1.0.0: Use your platform's native DOMException instead
 
 <details><summary>End of the job log</summary>
 
 ```
-npm: 11.19.1
-yarn: 1.22.22
-postmerge-deploy ok: Convex Deploy [DEPLOY_SKIPPED_LEGIT] run 41994939880 skipped the deploy and production already has every bundled change on main
-Post-merge deploy monitor found 1 workflow(s) that did not deploy:
-postmerge-deploy ok: Deploy Railway Reconcile Control [DEPLOYED] run 40473021839 deployed
-postmerge-deploy ERROR: Deploy api-cors-preflight Worker [RUN_FAILED] run 41988326131 (fix(ci): retry the api-cors-preflight Worker deploy on Cloudflare rat…) concluded failure
-- Deploy api-cors-preflight Worker [RUN_FAILED] run 41988326131 (fix(ci): retry the api-cors-preflight Worker deploy on Cloudflare rat…) concluded failure
+npm warn install-scripts
+npm warn install-scripts Run `npm install -g --allow-scripts=@railway/cli` to allow these scripts once, or `npm config set allow-scripts=@railway/cli --location=user` to allow them for all global installs.
+Railway operational-config audit passed: live Railway configuration matches repository policy.
+Read 92 service histories in 1 fleet page(s) (500 records), 0 direct fallback(s).
+Railway deploy-drift check found 1 service(s) with deployment or source-verification problems:
+- seed-market-breadth [BEHIND] running f979a9d45 from 2026-11-05T07:20:09.821Z, which predates 711140c8c and is missing 2 path(s) that reach it — no build and no rejection recorded
+Railway deploy-drift check: head=711140c8c source=--head vs-origin-main=exact grace=711140c8c services=92 {"CURRENT_FOR_CLOSURE":89,"CURRENT":2,"BEHIND":1}
 ##[error]Process completed with exit code 1.
 ```
 

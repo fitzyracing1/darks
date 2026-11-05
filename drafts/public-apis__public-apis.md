@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/public-apis/public-apis/issues/new
-- **Stars:** 496253 · **Generated:** 2026-11-05T12:43:00.618Z
+- **Stars:** 496352 · **Generated:** 2026-11-05T18:40:12.982Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -20,21 +20,21 @@ Hi! A few workflows on `master` have been dark recently. Details below, in case 
 
 ### Tests of push & pull (`.github/workflows/test_of_push_and_pull.yml`)
 
-- Latest run on `master`: https://github.com/public-apis/public-apis/actions/runs/41894624981 — dark (conclusion: `failure`), 2026-11-04 19:12 UTC
+- Latest run on `master`: https://github.com/public-apis/public-apis/actions/runs/42081126388 — dark (conclusion: `failure`), 2026-11-05 18:06 UTC
 - Dark since: 2026-10-02 22:11 UTC (first run of the current streak)
 - Job / step: `Validate README.md changes` → `Validate Markdown format`
-- Likely cause: (L2775) :--- is not a valid CORS option
+- Likely cause: (L2809) :--- is not a valid CORS option
 
 <details><summary>End of the job log</summary>
 
 ```
-(L2775) each segment must start and end with exactly 1 space
-(L2775) Title syntax should be "[TITLE](LINK)"
-(L2775) description should not end with -
-(L2775) auth value is not enclosed with `backticks`
-(L2775) :--- is not a valid Auth option
-(L2775) :--- is not a valid HTTPS option
-(L2775) :--- is not a valid CORS option
+(L2809) each segment must start and end with exactly 1 space
+(L2809) Title syntax should be "[TITLE](LINK)"
+(L2809) description should not end with -
+(L2809) auth value is not enclosed with `backticks`
+(L2809) :--- is not a valid Auth option
+(L2809) :--- is not a valid HTTPS option
+(L2809) :--- is not a valid CORS option
 ##[error]Process completed with exit code 1.
 ```
 

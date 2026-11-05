@@ -4,60 +4,37 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/headroomlabs-ai/headroom/issues/new
-- **Stars:** 78898 · **Generated:** 2026-11-05T12:43:00.618Z
+- **Stars:** 78920 · **Generated:** 2026-11-05T18:40:12.982Z
 - Nothing in this file has been sent anywhere.
+- **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 2 workflows dark on main ("CI", "rust")
+CI: "PR Governance" workflow getting cancelled on main since 2026-11-05
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
+Hi! The **PR Governance** workflow (`.github/workflows/pr-health.yml`) on `main` has been getting cancelled since 2026-11-05. Here is what I saw, in case it's useful:
 
-### CI (`.github/workflows/ci.yml`)
-
-- Latest run on `main`: https://github.com/headroomlabs-ai/headroom/actions/runs/41973490953 — dark (conclusion: `failure`), 2026-11-05 05:21 UTC
-- Dark since: 2026-11-05 04:53 UTC (first run of the current streak)
-- Job / step: `test (2)` → `Run test shard 2/4`
-- Likely cause: = 4 failed, 4412 passed, 374 skipped, 14323 deselected, 1217 warnings in 479.58s (0:07:59) =
+- Latest run on `main`: https://github.com/headroomlabs-ai/headroom/actions/runs/42045077364 — dark (conclusion: `cancelled`), 2026-11-05 14:26 UTC
+- Dark since: 2026-11-05 14:26 UTC (first run of the current streak)
+- Job / step: `label` → `Label open pull requests`
+- Likely cause: The job has exceeded the maximum execution time of 10m0s
 
 <details><summary>End of the job log</summary>
 
 ```
-Coverage XML written to file coverage-2.xml
-=========================== short test summary info ============================
-FAILED tests/test_gemini_memory_tail_preserved.py::test_memory_reaches_latest_user_entry_with_function_response - AttributeError: '_FakeRequest' object has no attribute 'stream'
-FAILED tests/test_gemini_memory_tail_preserved.py::test_memory_reaches_latest_user_entry_with_inline_image - AttributeError: '_FakeRequest' object has no attribute 'stream'
-FAILED tests/test_gemini_memory_tail_preserved.py::test_text_only_latest_entry_is_unchanged - AttributeError: '_FakeRequest' object has no attribute 'stream'
-FAILED tests/test_gemini_memory_tail_preserved.py::test_older_preserved_entry_is_not_rewritten_or_logged - AttributeError: '_FakeRequest' object has no attribute 'stream'
-= 4 failed, 4412 passed, 374 skipped, 14323 deselected, 1217 warnings in 479.58s (0:07:59) =
-##[error]Process completed with exit code 1.
-```
-
-</details>
-
-### rust (`.github/workflows/rust.yml`)
-
-- Latest run on `main`: https://github.com/headroomlabs-ai/headroom/actions/runs/41986470912 — dark (conclusion: `failure`), 2026-11-05 07:19 UTC
-- Dark since: 2026-11-05 07:19 UTC (first run of the current streak)
-- Job / step: `test (ubuntu)` → `cargo test`
-- Likely cause: error: test failed, to rerun pass '-p headroom-core --lib'
-
-<details><summary>End of the job log</summary>
-
-```
-  left: None
- right: Some("fresh")
-note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
-failures:
-    ccr::backends::in_memory::tests::expired_get_does_not_wipe_concurrent_refresh
-test result: FAILED. 1017 passed; 1 failed; 1 ignored; 0 measured; 0 filtered out; finished in 7.24s
-error: test failed, to rerun pass `-p headroom-core --lib`
-##[error]Process completed with exit code 101.
+https://github.com/headroomlabs-ai/headroom/pull/4230
+https://github.com/headroomlabs-ai/headroom/pull/4230
+https://github.com/headroomlabs-ai/headroom/pull/4199
+https://github.com/headroomlabs-ai/headroom/pull/4199
+https://github.com/headroomlabs-ai/headroom/pull/4199
+https://github.com/headroomlabs-ai/headroom/pull/4199
+https://github.com/headroomlabs-ai/headroom/pull/4177
+##[error]The operation was canceled.
 ```
 
 </details>

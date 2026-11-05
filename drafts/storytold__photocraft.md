@@ -4,22 +4,19 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/storytold/photocraft/issues/new
-- **Stars:** 77071 · **Generated:** 2026-11-05T12:43:00.618Z
+- **Stars:** 77158 · **Generated:** 2026-11-05T18:40:12.982Z
 - Nothing in this file has been sent anywhere.
-- **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 2 workflows dark on main ("Perf (nightly)", "SonarCloud")
+CI: "Perf (nightly)" workflow failing on main since 2026-11-02
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
-
-### Perf (nightly) (`.github/workflows/perf-nightly.yml`)
+Hi! The **Perf (nightly)** workflow (`.github/workflows/perf-nightly.yml`) on `main` has been failing since 2026-11-02. Here is what I saw, in case it's useful:
 
 - Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/41961796308 — dark (conclusion: `failure`), 2026-11-05 03:28 UTC
 - Dark since: 2026-11-02 03:29 UTC (first run of the current streak)
@@ -40,12 +37,6 @@ wrote /Users/runner/work/photocraft/photocraft/target/perf/results.json
 ```
 
 </details>
-
-### SonarCloud (`.github/workflows/sonarcloud.yml`)
-
-- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/42025769779 — dark (conclusion: `cancelled`), 2026-11-05 12:16 UTC
-- Dark since: 2026-11-05 05:04 UTC (first run of the current streak)
-- Likely cause: run cancelled
 
 If this is already known or expected, feel free to close. Thanks for maintaining photocraft!
 
