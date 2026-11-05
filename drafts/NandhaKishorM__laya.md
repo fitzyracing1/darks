@@ -4,55 +4,39 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/NandhaKishorM/laya/issues/new
-- **Stars:** 35026 · **Generated:** 2026-11-05T06:44:39.106Z
+- **Stars:** 35040 · **Generated:** 2026-11-05T12:43:00.618Z
 - Nothing in this file has been sent anywhere.
-- **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 5 workflows dark on main (".NET", "CI", "Rust", +2 more)
+CI: "Security" workflow failing on main since 2026-11-05
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
+Hi! The **Security** workflow (`.github/workflows/security.yml`) on `main` has been failing since 2026-11-05. Here is what I saw, in case it's useful:
 
-### .NET (`.github/workflows/dotnet.yml`)
+- Latest run on `main`: https://github.com/NandhaKishorM/laya/actions/runs/41992269533 — dark (conclusion: `failure`), 2026-11-05 08:09 UTC
+- Dark since: 2026-11-05 07:13 UTC (first run of the current streak)
+- Job / step: `no unsafe deserialization` → `No shell-out or dynamic exec in the shipped package`
+- Likely cause: shell-out or dynamic execution in the shipped package
 
-- Latest run on `main`: https://github.com/NandhaKishorM/laya/actions/runs/41978612785 — dark (conclusion: `cancelled`), 2026-11-05 06:10 UTC
-- Dark since: 2026-11-05 05:22 UTC (first run of the current streak)
-- Job / step: `parity (typed-decisions-split)`
-- Likely cause: The run was canceled by @NandhaKishorM.
+<details><summary>End of the job log</summary>
 
-### CI (`.github/workflows/ci.yml`)
+```
+Switched to a new branch 'main'
+branch 'main' set up to track 'origin/main'.
+5a6dc4b809659dab3b9b3062f5e3902db983818a
+OK: no unsafe deserialization in laya/ or laya-ts/scripts/
+laya/video.py:68:    proc = subprocess.run(list(args), stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+laya/video.py:106:    proc = subprocess.run([shutil.which("ffmpeg"), "-i", path], stdout=subprocess.PIPE,
+laya/video.py:107:                          stderr=subprocess.PIPE)
+##[error]shell-out or dynamic execution in the shipped package
+```
 
-- Latest run on `main`: https://github.com/NandhaKishorM/laya/actions/runs/41978612913 — dark (conclusion: `cancelled`), 2026-11-05 06:10 UTC
-- Dark since: 2026-11-05 05:22 UTC (first run of the current streak)
-- Job / step: `Chinese benchmark audit (no models or API)`
-- Likely cause: The run was canceled by @NandhaKishorM.
-
-### Rust (`.github/workflows/rust.yml`)
-
-- Latest run on `main`: https://github.com/NandhaKishorM/laya/actions/runs/41978612810 — dark (conclusion: `cancelled`), 2026-11-05 06:10 UTC
-- Dark since: 2026-11-05 05:22 UTC (first run of the current streak)
-- Job / step: `parity (typed-decisions)`
-- Likely cause: run cancelled in job "parity (typed-decisions)"
-
-### C++ (`.github/workflows/cpp.yml`)
-
-- Latest run on `main`: https://github.com/NandhaKishorM/laya/actions/runs/41978612883 — dark (conclusion: `cancelled`), 2026-11-05 06:10 UTC
-- Dark since: 2026-11-05 06:05 UTC (first run of the current streak)
-- Job / step: `cpp security scan`
-- Likely cause: The run was canceled by @NandhaKishorM.
-
-### Go (`.github/workflows/go.yml`)
-
-- Latest run on `main`: https://github.com/NandhaKishorM/laya/actions/runs/41978612836 — dark (conclusion: `cancelled`), 2026-11-05 06:10 UTC
-- Dark since: 2026-11-05 06:10 UTC (first run of the current streak)
-- Job / step: `go security scan`
-- Likely cause: The run was canceled by @NandhaKishorM.
+</details>
 
 If this is already known or expected, feel free to close. Thanks for maintaining laya!
 

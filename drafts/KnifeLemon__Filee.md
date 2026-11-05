@@ -4,37 +4,36 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/KnifeLemon/Filee/issues/new
-- **Stars:** 22174 · **Generated:** 2026-11-05T06:44:39.106Z
+- **Stars:** 22384 · **Generated:** 2026-11-05T12:43:00.618Z
 - Nothing in this file has been sent anywhere.
-- **Note for Joshua:** cancelled by a concurrency group — likely noise
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: "CI" workflow getting cancelled on main since 2026-11-03
+CI: "CI" workflow failing on main since 2026-11-03
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! The **CI** workflow (`.github/workflows/ci.yml`) on `main` has been getting cancelled since 2026-11-03. Here is what I saw, in case it's useful:
+Hi! The **CI** workflow (`.github/workflows/ci.yml`) on `main` has been failing since 2026-11-03. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/KnifeLemon/Filee/actions/runs/41978323189 — dark (conclusion: `cancelled`), 2026-11-05 06:07 UTC
+- Latest run on `main`: https://github.com/KnifeLemon/Filee/actions/runs/41987287293 — dark (conclusion: `failure`), 2026-11-05 07:26 UTC
 - Dark since: 2026-11-03 05:57 UTC (first run of the current streak)
-- Job / step: `changes`
-- Likely cause: Canceling since a higher priority waiting request for ci-refs/heads/main exists
+- Job / step: `portable / portable (macos-15, osx-arm64)` → `Build and test native projects`
+- Likely cause: Failed!  - Failed:     1, Passed:  1139, Skipped:     4, Total:  1144, Duration: 4 s - Filee.Core.Tests.dll (net10.0)
 
 <details><summary>End of the job log</summary>
 
 ```
-From https://github.com/KnifeLemon/Filee
- * [new ref]         20e9c07ddc21a9a745afd4a8d662ba8c429e94ae -> origin/main
-  origin/main
-20e9c07ddc21a9a745afd4a8d662ba8c429e94ae
-Switched to a new branch 'main'
-branch 'main' set up to track 'origin/main'.
-20e9c07ddc21a9a745afd4a8d662ba8c429e94ae
-Needs the build: src/Filee.App/Controls/DonutMenu.cs
+     at Filee.Core.Tests.MergeImagesTests.A_picture_the_joiner_cannot_read_becomes_a_plain_png_and_a_first_format_it_cannot_write_gives_png() in /Users/runner/work/Filee/Filee/tests/Filee.Core.Tests/MergeImagesTests.cs:…
+   at Filee.Core.Tests.MergeImagesTests.A_picture_the_joiner_cannot_read_becomes_a_plain_png_and_a_first_format_it_cannot_write_gives_png()
+--- End of stack trace from previous location ---
+[xUnit.net 00:00:04.70]     Filee.Core.Tests.WebDownloaderTests.Saved_files_carry_the_mark_of_the_web_with_the_address_they_came_from [SKIP]
+  Skipped Filee.Core.Tests.WebDownloaderTests.Saved_files_carry_the_mark_of_the_web_with_the_address_they_came_from [1 ms]
+Results File: /Users/runner/work/Filee/Filee/TestResults/osx-arm64/_iad20-gt1025-9d34cf0b-f738-471c-a983-19f01293e53d-5EFBD6F8DD9B_2026-11-05_07_30_41_net10.0.trx
+Failed!  - Failed:     1, Passed:  1139, Skipped:     4, Total:  1144, Duration: 4 s - Filee.Core.Tests.dll (net10.0)
+##[error]Process completed with exit code 1.
 ```
 
 </details>

@@ -4,45 +4,36 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/beenuar/AiSOC/issues/new
-- **Stars:** 7294 · **Generated:** 2026-11-05T06:44:39.106Z
+- **Stars:** 7347 · **Generated:** 2026-11-05T12:43:00.618Z
 - Nothing in this file has been sent anywhere.
-- **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 2 workflows dark on main ("Publish Images", "Grading integrity")
+CI: "Grading integrity" workflow failing on main since 2026-11-04
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
+Hi! The **Grading integrity** workflow (`.github/workflows/grading-integrity.yml`) on `main` has been failing since 2026-11-04. Here is what I saw, in case it's useful:
 
-### Publish Images (`.github/workflows/publish-images.yml`)
-
-- Latest run on `main`: https://github.com/beenuar/AiSOC/actions/runs/41978555854 — dark (conclusion: `failure`), 2026-11-05 06:09 UTC
-- Dark since: 2026-11-04 23:29 UTC (first run of the current streak)
-- Likely cause: no cause found in annotations
-
-### Grading integrity (`.github/workflows/grading-integrity.yml`)
-
-- Latest run on `main`: https://github.com/beenuar/AiSOC/actions/runs/41978555927 — dark (conclusion: `cancelled`), 2026-11-05 06:09 UTC
+- Latest run on `main`: https://github.com/beenuar/AiSOC/actions/runs/42018308468 — dark (conclusion: `failure`), 2026-11-05 11:21 UTC
 - Dark since: 2026-11-04 23:40 UTC (first run of the current streak)
-- Job / step: `No run on main passed without doing its work` → `Ask the Actions API what each required check actually executed`
-- Likely cause: The job has exceeded the maximum execution time of 15m0s
+- Job / step: `No run on main ended cancelled` → `Ask the Actions API what actually ran`
+- Likely cause: the cancellation is correct, record it in that gate's EXCEPTIONS with the
 
 <details><summary>End of the job log</summary>
 
 ```
-Web — Build                                                     80 /  80  (100.0%)   80/80
-Web — Lint & Type-check                                         80 /  80  (100.0%)   80/80
-Zero open CodeQL alerts                                         80 /  80  (100.0%)   80/80
-docker compose up — full stack                                  80 /  80  (100.0%)   80/80
-security-audit                                                  80 /  80  (100.0%)   80/80
-OK — 28 required check(s) graded over 2208 run(s) in the enforced
-     window; every one of them executed its assertions
-##[error]The operation was canceled.
+      https://github.com/beenuar/AiSOC/actions/runs/42004496102
+A cancelled run on a protected branch is a commit nothing graded, and it
+reports `cancelled` rather than `failure`, so nothing else will say so.
+Find out why it was cancelled. If a concurrency group did it,
+scripts/check_workflow_concurrency.py explains the shape and the fix. If
+the cancellation is correct, record it in that gate's EXCEPTIONS with the
+reason and what is lost.
+##[error]Process completed with exit code 1.
 ```
 
 </details>

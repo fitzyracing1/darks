@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/yetone/magpie/issues/new
-- **Stars:** 29982 · **Generated:** 2026-11-05T06:44:39.106Z
+- **Stars:** 30249 · **Generated:** 2026-11-05T12:43:00.618Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
@@ -19,7 +19,7 @@ CI: "Test" workflow getting cancelled on main since 2026-10-25
 <!-- BEGIN BODY -->
 Hi! The **Test** workflow (`.github/workflows/test.yml`) on `main` has been getting cancelled since 2026-10-25. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/yetone/magpie/actions/runs/41979621720 — dark (conclusion: `cancelled`), 2026-11-05 06:19 UTC
+- Latest run on `main`: https://github.com/yetone/magpie/actions/runs/42023143376 — dark (conclusion: `cancelled`), 2026-11-05 11:57 UTC
 - Dark since: 2026-10-25 04:42 UTC (first run of the current streak)
 - Likely cause: run cancelled
 

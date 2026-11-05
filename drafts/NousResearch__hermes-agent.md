@@ -4,36 +4,60 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/NousResearch/hermes-agent/issues/new
-- **Stars:** 260666 · **Generated:** 2026-11-05T06:44:39.106Z
+- **Stars:** 260745 · **Generated:** 2026-11-05T12:43:00.618Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: "CI" workflow failing on main since 2026-11-05
+CI: 2 workflows dark on main ("CI", "Deploy Site")
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! The **CI** workflow (`.github/workflows/ci.yaml`) on `main` has been failing since 2026-11-05. Here is what I saw, in case it's useful:
+Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
 
-- Latest run on `main`: https://github.com/NousResearch/hermes-agent/actions/runs/41977321792 — dark (conclusion: `failure`), 2026-11-05 05:58 UTC
+### CI (`.github/workflows/ci.yaml`)
+
+- Latest run on `main`: https://github.com/NousResearch/hermes-agent/actions/runs/42024259008 — dark (conclusion: `failure`), 2026-11-05 12:05 UTC
 - Dark since: 2026-11-05 05:58 UTC (first run of the current streak)
-- Job / step: `Python tests / Run tests (1/3)` → `Run tests`
-- Likely cause: tests/tools/test_approval_pipe_shell.py  (1 test failed)
+- Job / step: `Bootstrap installer / install.sh protocol + small fresh-install E2E` → `Current installer to PM worker to published command`
+- Likely cause: === 1 file where all tests passed but pytest exited non-zero (warnings-as-errors, hook failures, etc.) ===
 
 <details><summary>End of the job log</summary>
 
 ```
-FAILED tests/tools/test_approval_pipe_shell.py::TestPipeRemoteToShellPattern::test_many_fetch_pipes_scan_in_linear_time - assert (389.876592881 - 386.689013586) < 3
- +  where 389.876592881 = <built-in function perf_counter>()
- +    where <built-in function perf_counter> = time.perf_counter
-========================= 1 failed, 7 passed in 6.05s ==========================
-=== 2 files with test failures ===
-  tests/tui_gateway/test_multi_client_fanout.py  (1 test failed)
-  tests/tools/test_approval_pipe_shell.py  (1 test failed)
+    pids = _processes_with_hermes_home_under(roots)
+  File "/home/runner/_work/hermes-agent/hermes-agent/tests/conftest.py", line 1114, in _processes_with_hermes_home_under
+    import psutil
+ModuleNotFoundError: No module named 'psutil'
+3 passed in 23.94s
+=== 1 file where all tests passed but pytest exited non-zero (warnings-as-errors, hook failures, etc.) ===
+  tests/scripts/test_fresh_source_install.py  (3 passed)
 ##[error]Process completed with exit code 1.
+```
+
+</details>
+
+### Deploy Site (`.github/workflows/deploy-site.yml`)
+
+- Latest run on `main`: https://github.com/NousResearch/hermes-agent/actions/runs/42016667941 — dark (conclusion: `failure`), 2026-11-05 11:09 UTC
+- Dark since: 2026-11-05 09:18 UTC (first run of the current streak)
+- Job / step: `deploy-docs` → `Deploy to GitHub Pages`
+- Likely cause: Timeout reached, aborting!
+
+<details><summary>End of the job log</summary>
+
+```
+Current status: syncing_files
+Getting Pages deployment status...
+Current status: syncing_files
+Getting Pages deployment status...
+Current status: syncing_files
+Getting Pages deployment status...
+Current status: syncing_files
+##[error]Timeout reached, aborting!
 ```
 
 </details>

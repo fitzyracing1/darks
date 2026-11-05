@@ -4,32 +4,39 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/anomalyco/opencode/issues/new
-- **Stars:** 224651 · **Generated:** 2026-11-05T06:44:39.106Z
+- **Stars:** 224717 · **Generated:** 2026-11-05T12:43:00.618Z
 - Nothing in this file has been sent anywhere.
-- **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 2 workflows dark on dev ("release", "deploy")
+CI: "nightly-beta" workflow failing on dev since 2026-11-05
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! A few workflows on `dev` have been dark recently. Details below, in case they're useful:
+Hi! The **nightly-beta** workflow (`.github/workflows/nightly-beta.yml`) on `dev` has been failing since 2026-11-05. Here is what I saw, in case it's useful:
 
-### release (`.github/workflows/release.yml`)
+- Latest run on `dev`: https://github.com/anomalyco/opencode/actions/runs/42001862097 — dark (conclusion: `failure`), 2026-11-05 09:22 UTC
+- Dark since: 2026-11-05 09:22 UTC (first run of the current streak)
+- Job / step: `dispatch` → `Dispatch beta test runs`
+- Likely cause: could not create workflow dispatch event: HTTP 422: No ref found for: beta (https://api.github.com/repos/anomalyco/opencode/actions/workflows/396447938/dispatches)
 
-- Latest run on `dev`: https://github.com/anomalyco/opencode/actions/runs/41981327706 — dark (conclusion: `cancelled`), 2026-11-05 06:34 UTC
-- Dark since: 2026-11-04 16:24 UTC (first run of the current streak)
-- Likely cause: run cancelled
+<details><summary>End of the job log</summary>
 
-### deploy (`.github/workflows/deploy.yml`)
+```
+Metadata: read
+Secret source: Actions
+Cache mode: write
+Prepare workflow directory
+Prepare all required actions
+Complete job name: dispatch
+could not create workflow dispatch event: HTTP 422: No ref found for: beta (https://api.github.com/repos/anomalyco/opencode/actions/workflows/396447938/dispatches)
+##[error]Process completed with exit code 1.
+```
 
-- Latest run on `dev`: https://github.com/anomalyco/opencode/actions/runs/41981327620 — dark (conclusion: `cancelled`), 2026-11-05 06:34 UTC
-- Dark since: 2026-11-05 06:34 UTC (first run of the current streak)
-- Likely cause: run cancelled
+</details>
 
 If this is already known or expected, feel free to close. Thanks for maintaining opencode!
 

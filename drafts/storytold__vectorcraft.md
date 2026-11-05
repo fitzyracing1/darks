@@ -4,14 +4,14 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/storytold/vectorcraft/issues/new
-- **Stars:** 11382 · **Generated:** 2026-11-05T06:44:39.106Z
+- **Stars:** 11388 · **Generated:** 2026-11-05T12:43:00.618Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 3 workflows dark on main ("SonarCloud", "CI", "FreeBSD")
+CI: 2 workflows dark on main ("SonarCloud", "FreeBSD")
 <!-- END TITLE -->
 
 ## Body
@@ -21,31 +21,9 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### SonarCloud (`.github/workflows/sonarcloud.yml`)
 
-- Latest run on `main`: https://github.com/storytold/vectorcraft/actions/runs/41981397403 — dark (conclusion: `cancelled`), 2026-11-05 06:35 UTC
+- Latest run on `main`: https://github.com/storytold/vectorcraft/actions/runs/42025373645 — dark (conclusion: `cancelled`), 2026-11-05 12:13 UTC
 - Dark since: 2026-11-01 09:55 UTC (first run of the current streak)
 - Likely cause: run cancelled
-
-### CI (`.github/workflows/ci.yml`)
-
-- Latest run on `main`: https://github.com/storytold/vectorcraft/actions/runs/41977311293 — dark (conclusion: `failure`), 2026-11-05 05:58 UTC
-- Dark since: 2026-11-05 01:49 UTC (first run of the current streak)
-- Job / step: `gate / gate (ubuntu-24.04)` → `Gate`
-- Likely cause: FAIL  test: cargo nextest run --workspace --lib --bins --tests: exited with exit status: 100
-
-<details><summary>End of the job log</summary>
-
-```
-  skip  pdf-deps
-  skip  assets
-  skip  brands
-  skip  cursors
-  skip  i18n-report
-  skip  layers
-  skip  wasm
-##[error]Process completed with exit code 1.
-```
-
-</details>
 
 ### FreeBSD (`.github/workflows/freebsd.yml`)
 

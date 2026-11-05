@@ -4,13 +4,13 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/webiny/webiny-js/issues/new
-- **Stars:** 8048 · **Generated:** 2026-11-05T06:44:39.106Z
+- **Stars:** 8048 · **Generated:** 2026-11-05T12:43:00.618Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 4 workflows dark on next ("Cloud infrastructure Cleanup", "Rebuild Global Cache ("dev" branch)", "Push", +1 more)
+CI: 3 workflows dark on next ("Cloud infrastructure Cleanup", "Rebuild Global Cache ("dev" branch)", "Record E2E replay steps")
 <!-- END TITLE -->
 
 ## Body
@@ -61,12 +61,6 @@ Waiting 18 seconds before trying again
 ```
 
 </details>
-
-### Push (`.github/workflows/push.yml`)
-
-- Latest run on `next`: https://github.com/webiny/webiny-js/actions/runs/41855267327 — dark (conclusion: `failure`), 2026-11-04 15:12 UTC
-- Dark since: 2026-11-03 13:06 UTC (first run of the current streak)
-- Likely cause: no cause found in annotations
 
 ### Record E2E replay steps (`.github/workflows/recordReplayCache.yml`)
 

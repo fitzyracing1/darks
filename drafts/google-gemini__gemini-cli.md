@@ -1,14 +1,15 @@
 <!-- dark-draft: google-gemini/gemini-cli -->
-<!-- draft-state: resolved -->
+<!-- draft-state: ready -->
 # Upstream issue draft: google-gemini/gemini-cli
 
-- **Status:** resolved — lit again (2026-11-05); nothing to file
+- **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/google-gemini/gemini-cli/issues/new
-- **Stars:** 108723 · **Generated:** 2026-11-04T18:40:05.885Z
+- **Stars:** 108736 · **Generated:** 2026-11-05T12:43:00.618Z
 - Nothing in this file has been sent anywhere.
 
 ## Skipped: upstream already tracking
 
+- Release: Nightly (`.github/workflows/release-nightly.yml`): [issue #30149](https://github.com/google-gemini/gemini-cli/issues/30149) "Nightly Release Failed for v0.69.0-nightly.20261105.g1fe22af5f on 2026-11-05"
 - Memory Tests: Nightly (`.github/workflows/memory-nightly.yml`): [issue #30084](https://github.com/google-gemini/gemini-cli/issues/30084) "CI: memory-nightly failing: 4 memory regressions over 10% (idle-session-startup +54.2%: 107.6MB vs 69.8MB)"
 
 These workflows are left out of the body below.
@@ -26,8 +27,8 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### Performance Tests: Nightly (`.github/workflows/perf-nightly.yml`)
 
-- Latest run on `main`: https://github.com/google-gemini/gemini-cli/actions/runs/41765592789 — dark (conclusion: `failure`), 2026-11-04 03:11 UTC
-- Dark since: 2026-11-04 03:11 UTC (first run of the current streak)
+- Latest run on `main`: https://github.com/google-gemini/gemini-cli/actions/runs/41960238967 — dark (conclusion: `failure`), 2026-11-05 03:13 UTC
+- Dark since: 2026-11-05 03:13 UTC (first run of the current streak)
 - Job / step: `Run Performance Usage Tests` → `Run Performance Tests`
 - Likely cause: 29|     throw new Error('Failed to download ripgrep binary');
 
@@ -48,22 +49,22 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### 📋 Gemini Scheduled Issue Triage (`.github/workflows/gemini-scheduled-issue-triage.yml`)
 
-- Latest run on `main`: https://github.com/google-gemini/gemini-cli/actions/runs/41874176966 — dark (conclusion: `failure`), 2026-11-04 17:05 UTC
-- Dark since: 2026-11-04 07:07 UTC (first run of the current streak)
-- Job / step: `triage-issues` → `Apply Triaged Labels`
-- Likely cause: Unhandled error: HttpError: Resource not accessible by integration
+- Latest run on `main`: https://github.com/google-gemini/gemini-cli/actions/runs/42024918546 — dark (conclusion: `failure`), 2026-11-05 12:10 UTC
+- Dark since: 2026-11-05 12:10 UTC (first run of the current streak)
+- Job / step: `triage-issues` → `Run Standard Triage Analysis`
+- Likely cause: "type": "Error",
 
 <details><summary>End of the job log</summary>
 
 ```
-    request: {
-      agent: [Agent],
-      fetch: [Function: proxyFetch],
-      hook: [Function: bound bound register]
-    }
+  "error": {
+    "type": "Error",
+    "message": "This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.",
+    "code": 503
   }
 }
-##[error]Unhandled error: HttpError: Resource not accessible by integration
+::: End Gemini CLI STDERR :::
+##[error]Process completed with exit code 1.
 ```
 
 </details>
