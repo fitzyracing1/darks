@@ -4,13 +4,13 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/langflow-ai/langflow/issues/new
-- **Stars:** 156335 · **Generated:** 2026-11-05T00:53:42.006Z
+- **Stars:** 156341 · **Generated:** 2026-11-05T06:44:39.106Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 3 workflows dark on main ("Deploy Storybook to GitHub Pages", "Cross-Bundle Test", "A11y / IBM Equal Access Scans")
+CI: 2 workflows dark on main ("Deploy Storybook to GitHub Pages", "Cross-Bundle Test")
 <!-- END TITLE -->
 
 ## Body
@@ -45,28 +45,6 @@ Creating Pages deployment with payload:
 - Latest run on `main`: https://github.com/langflow-ai/langflow/actions/runs/41398915115 — dark (conclusion: `failure`), 2026-11-02 06:16 UTC
 - Dark since: 2026-10-26 06:25 UTC (first run of the current streak)
 - Likely cause: no cause found in annotations
-
-### A11y / IBM Equal Access Scans (`.github/workflows/a11y-scan.yml`)
-
-- Latest run on `main`: https://github.com/langflow-ai/langflow/actions/runs/41759363940 — dark (conclusion: `failure`), 2026-11-04 02:13 UTC
-- Dark since: 2026-11-02 02:15 UTC (first run of the current streak)
-- Job / step: `Python route scan (real backend, nightly)` → `Run Python Route Scan`
-- Likely cause: No files were found with the provided path: python-route-scan. No artifacts will be uploaded.
-
-<details><summary>End of the job log</summary>
-
-```
-    )
-    ^
-  File "/home/runner/work/_temp/setup-uv-cache/archive-v0/o7R1wrdQ7XVrykc6/lib/python3.13/site-packages/playwright/_impl/_connection.py", line 563, in wrap_api_call
-    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
-playwright._impl._errors.TimeoutError: Page.goto: Timeout 45000ms exceeded.
-Call log:
-  - navigating to "http://localhost:3000/flows", waiting until "domcontentloaded"
-##[error]Process completed with exit code 1.
-```
-
-</details>
 
 If this is already known or expected, feel free to close. Thanks for maintaining langflow!
 

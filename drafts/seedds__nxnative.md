@@ -4,14 +4,14 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/seedds/nxnative/issues/new
-- **Stars:** 12173 · **Generated:** 2026-11-05T00:53:42.006Z
+- **Stars:** 12255 · **Generated:** 2026-11-05T06:44:39.106Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 4 workflows dark on main ("fuzz", "lint-c", "lint-python", +1 more)
+CI: 3 workflows dark on main ("fuzz", "lint-python", "tests")
 <!-- END TITLE -->
 
 ## Body
@@ -41,34 +41,12 @@ artifact_prefix='findings/shader_split/'; Test unit written to findings/shader_s
 
 </details>
 
-### lint-c (`.github/workflows/lint-c.yml`)
-
-- Latest run on `main`: https://github.com/seedds/nxnative/actions/runs/41872445418 — dark (conclusion: `failure`), 2026-11-04 16:55 UTC
-- Dark since: 2026-11-03 15:34 UTC (first run of the current streak)
-- Job / step: `clang-tidy (ratchet)` → `clang-tidy against the baseline`
-- Likely cause: Nullable pointer is passed to a callee that requires a non-null 1st parameter [clang-analyzer-nullability.NullablePassedToNonnull] (5 in this file, the baseline has 0) (dm/host/web_apple.m:375)
-
-<details><summary>End of the job log</summary>
-
-```
-[229/233] dm/host/tests/t_uecvar.c: 0 findings
-[230/233] dm/host/tests/t_vorbis.c: 0 findings
-[231/233] dm/host/tests/t_watch_sample.c: 0 findings
-[232/233] dm/host/thread.c: 1 findings
-[233/233] dm/host/web_apple.m: 5 findings
-LLVM 23.1.4: 251 findings in 76 files, 138 file/check pairs
-dm/gfx/vk/hle_vk.m: clang-analyzer-core.NullDereference: 1 findings, the baseline has 0
-##[error]Access to field 'nvis' results in a dereference of a null pointer (loaded from variable 'q') [clang-analyzer-core.NullDereference] (1 in this file, the baseline has 0)
-```
-
-</details>
-
 ### lint-python (`.github/workflows/lint-python.yml`)
 
-- Latest run on `main`: https://github.com/seedds/nxnative/actions/runs/41943376457 — dark (conclusion: `failure`), 2026-11-05 00:42 UTC
+- Latest run on `main`: https://github.com/seedds/nxnative/actions/runs/41980933711 — dark (conclusion: `failure`), 2026-11-05 06:31 UTC
 - Dark since: 2026-11-04 11:10 UTC (first run of the current streak)
 - Job / step: `ruff and pyright (ratchet)` → `ruff and pyright against the baseline`
-- Likely cause: Object of type "None" cannot be used as iterable value (dm/tools/tests/test_split_linkdata.py:39)
+- Likely cause: Argument of type "float" cannot be assigned to parameter "days" of type "int" in function "pack_quiet" "float" is not assignable to "int" (dm/tools/tests/test_tree_tar.py:107)
 
 <details><summary>End of the job log</summary>
 
@@ -80,14 +58,14 @@ Installing collected packages: typing-extensions, ruff, nodeenv, lz4, fonttools,
 Successfully installed capstone-5.0.9 fonttools-4.67.0 lz4-4.4.5 nodeenv-1.12.0 pyright-1.1.414 ruff-0.17.2 typing-extensions-4.16.0
 [notice] A new release of pip is available: 26.2.2 -> 26.3
 [notice] To update, run: pip install --upgrade pip
-##[error]Function definition does not bind loop variable `n`
+##[error]Cannot assign to attribute "NSP_FOLDER" for class "ModuleType" Attribute "NSP_FOLDER" is unknown
 ```
 
 </details>
 
 ### tests (`.github/workflows/tests.yml`)
 
-- Latest run on `main`: https://github.com/seedds/nxnative/actions/runs/41933015736 — dark (conclusion: `cancelled`), 2026-11-04 23:21 UTC
+- Latest run on `main`: https://github.com/seedds/nxnative/actions/runs/41980815151 — dark (conclusion: `cancelled`), 2026-11-05 06:30 UTC
 - Dark since: 2026-11-04 14:36 UTC (first run of the current streak)
 - Likely cause: run cancelled
 

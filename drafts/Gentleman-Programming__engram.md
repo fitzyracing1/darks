@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/Gentleman-Programming/engram/issues/new
-- **Stars:** 7798 · **Generated:** 2026-11-05T00:53:42.006Z
+- **Stars:** 7806 · **Generated:** 2026-11-05T06:44:39.106Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title

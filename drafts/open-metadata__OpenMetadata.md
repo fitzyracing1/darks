@@ -4,13 +4,13 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/open-metadata/OpenMetadata/issues/new
-- **Stars:** 15675 · **Generated:** 2026-11-05T00:53:42.006Z
+- **Stars:** 15680 · **Generated:** 2026-11-05T06:44:39.106Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 6 workflows dark on main ("Maven Collate Tests", "Merge Queue Dequeue Report", "Integration Tests - PostgreSQL + OpenSearch", +3 more)
+CI: 2 workflows dark on main ("Merge Queue Dequeue Report", "SonarCloud UI Nightly")
 <!-- END TITLE -->
 
 ## Body
@@ -18,31 +18,9 @@ CI: 6 workflows dark on main ("Maven Collate Tests", "Merge Queue Dequeue Report
 <!-- BEGIN BODY -->
 Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
 
-### Maven Collate Tests (`.github/workflows/maven-build-collate.yml`)
-
-- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/41918161572 — dark (conclusion: `failure`), 2026-11-04 21:39 UTC
-- Dark since: 2026-11-03 21:06 UTC (first run of the current streak)
-- Job / step: `maven-collate-ci` → `Trigger Collate build & wait`
-- Likely cause: Collate run did not succeed: https://github.com/open-metadata/openmetadata-collate/actions/runs/41918213318
-
-<details><summary>End of the job log</summary>
-
-```
-maven-collate-om-ci: .github#14
-! This method or constructor is empty; @SneakyThrows has been ignored.
-maven-collate-om-ci: .github#35
-! This method or constructor is empty; @SneakyThrows has been ignored.
-maven-collate-om-ci: .github#35
-! Not generating isSupportsOwners(): A method with that name already exists
-maven-collate-om-ci: .github#599
-##[error]Collate run did not succeed: https://github.com/open-metadata/openmetadata-collate/actions/runs/41918213318
-```
-
-</details>
-
 ### Merge Queue Dequeue Report (`.github/workflows/merge-queue-dequeue-report.yml`)
 
-- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/41918161513 — dark (conclusion: `failure`), 2026-11-04 21:39 UTC
+- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/41979962830 — dark (conclusion: `failure`), 2026-11-05 06:22 UTC
 - Dark since: 2026-11-03 21:06 UTC (first run of the current streak)
 - Job / step: `evict-main-conflicts` → `Remove queue entries that conflict with main`
 - Likely cause: cannot iterate over: null
@@ -62,90 +40,24 @@ cannot iterate over: null
 
 </details>
 
-### Integration Tests - PostgreSQL + OpenSearch (`.github/workflows/integration-tests-postgres-opensearch.yml`)
+### SonarCloud UI Nightly (`.github/workflows/ui-sonarcloud-nightly.yml`)
 
-- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/41918161749 — dark (conclusion: `failure`), 2026-11-04 21:39 UTC
-- Dark since: 2026-11-04 11:33 UTC (first run of the current streak)
-- Job / step: `Integration Test Lane (parallel)` → `Run Integration Tests (PostgreSQL + OpenSearch)`
-- Likely cause: [ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/41959186707 — dark (conclusion: `failure`), 2026-11-05 03:03 UTC
+- Dark since: 2026-11-05 03:03 UTC (first run of the current streak)
+- Job / step: `Coverage + Sonar` → `Retry 'SonarCloud Branch Scan'`
+- Likely cause: [ERROR] Bootstrapper: An error occurred: Error: Scanner engine failed with code 1
 
 <details><summary>End of the job log</summary>
 
 ```
-[ERROR] -> [Help 1]
-[ERROR]
-[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
-[ERROR] Re-run Maven using the -X switch to enable full debug logging.
-[ERROR]
-[ERROR] For more information about the errors and possible solutions, please read the following articles:
-[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+Caused by: io.grpc.StatusRuntimeException: UNAVAILABLE: HTTP/2 error code: NO_ERROR
+Received Goaway
+	at io.grpc.Status.asRuntimeException(Status.java:532)
+	at io.grpc.stub.ClientCalls$BlockingResponseStream.hasNext(ClientCalls.java:731)
+	at org.sonar.plugins.javascript.bridge.BridgeServerImpl.analyzeProject(BridgeServerImpl.java:492)
+	... 20 common frames omitted
+[ERROR] Bootstrapper: An error occurred: Error: Scanner engine failed with code 1
 ##[error]Process completed with exit code 1.
-```
-
-</details>
-
-### Integration Tests - MySQL + Elasticsearch (`.github/workflows/integration-tests-mysql-elasticsearch.yml`)
-
-- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/41918161515 — dark (conclusion: `failure`), 2026-11-04 21:39 UTC
-- Dark since: 2026-11-04 11:39 UTC (first run of the current streak)
-- Job / step: `Integration Test Lane (parallel)` → `Run Integration Tests (MySQL + Elasticsearch)`
-- Likely cause: [ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
-
-<details><summary>End of the job log</summary>
-
-```
-[ERROR] -> [Help 1]
-[ERROR]
-[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
-[ERROR] Re-run Maven using the -X switch to enable full debug logging.
-[ERROR]
-[ERROR] For more information about the errors and possible solutions, please read the following articles:
-[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
-##[error]Process completed with exit code 1.
-```
-
-</details>
-
-### Integration Tests - PostgreSQL + Elasticsearch + Redis (`.github/workflows/integration-tests-postgres-elasticsearch-redis.yml`)
-
-- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/41918161597 — dark (conclusion: `failure`), 2026-11-04 21:39 UTC
-- Dark since: 2026-11-04 11:39 UTC (first run of the current streak)
-- Job / step: `Integration Test Lane (global-state)` → `Run Integration Tests (PostgreSQL + Elasticsearch + Redis)`
-- Likely cause: [ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
-
-<details><summary>End of the job log</summary>
-
-```
-[ERROR] -> [Help 1]
-[ERROR]
-[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
-[ERROR] Re-run Maven using the -X switch to enable full debug logging.
-[ERROR]
-[ERROR] For more information about the errors and possible solutions, please read the following articles:
-[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
-##[error]Process completed with exit code 1.
-```
-
-</details>
-
-### OpenMetadata Service Unit Tests (`.github/workflows/openmetadata-service-unit-tests.yml`)
-
-- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/41918161537 — dark (conclusion: `failure`), 2026-11-04 21:39 UTC
-- Dark since: 2026-11-04 21:39 UTC (first run of the current streak)
-- Job / step: `openmetadata-service-unit-tests` → `Run openmetadata-service unit tests`
-- Likely cause: There were 1 failed tests
-
-<details><summary>End of the job log</summary>
-
-```
-! at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100)
-! at org.junit.platform.engine.support.hierarchical.ForkJoinPoolHierarchicalTestExecutorService$ExclusiveTask.exec(ForkJoinPoolHierarchicalTestExecutorService.java:274)
-! at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:387)
-! at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1312)
-! at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1843)
-! at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1808)
-! at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188)
-##[error]Exception in thread "om-credential-read-85" java.lang.StackOverflowError: injected overflow in the decrypt of bob
 ```
 
 </details>
