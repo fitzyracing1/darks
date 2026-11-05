@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/reactive-resume/reactive-resume/issues/new
-- **Stars:** 45335 · **Generated:** 2026-11-04T18:40:05.885Z
+- **Stars:** 45336 · **Generated:** 2026-11-05T00:53:42.006Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -18,7 +18,7 @@ CI: "CI" workflow failing on main since 2026-11-04
 <!-- BEGIN BODY -->
 Hi! The **CI** workflow (`.github/workflows/ci.yml`) on `main` has been failing since 2026-11-04. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/reactive-resume/reactive-resume/actions/runs/41859665180 — dark (conclusion: `failure`), 2026-11-04 15:37 UTC
+- Latest run on `main`: https://github.com/reactive-resume/reactive-resume/actions/runs/41913999310 — dark (conclusion: `failure`), 2026-11-04 21:13 UTC
 - Dark since: 2026-11-04 15:37 UTC (first run of the current streak)
 - Job / step: `Check mobile Hermes bundle` → `Export iOS and Android Hermes bundles`
 - Likely cause: × "pnpm recursive run" failed in /home/runner/_work/reactive-resume/

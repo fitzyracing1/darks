@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/seedds/nxnative/issues/new
-- **Stars:** 12098 · **Generated:** 2026-11-04T18:40:05.885Z
+- **Stars:** 12173 · **Generated:** 2026-11-05T00:53:42.006Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
@@ -43,7 +43,7 @@ artifact_prefix='findings/shader_split/'; Test unit written to findings/shader_s
 
 ### lint-c (`.github/workflows/lint-c.yml`)
 
-- Latest run on `main`: https://github.com/seedds/nxnative/actions/runs/41865015633 — dark (conclusion: `failure`), 2026-11-04 16:12 UTC
+- Latest run on `main`: https://github.com/seedds/nxnative/actions/runs/41872445418 — dark (conclusion: `failure`), 2026-11-04 16:55 UTC
 - Dark since: 2026-11-03 15:34 UTC (first run of the current streak)
 - Job / step: `clang-tidy (ratchet)` → `clang-tidy against the baseline`
 - Likely cause: Nullable pointer is passed to a callee that requires a non-null 1st parameter [clang-analyzer-nullability.NullablePassedToNonnull] (5 in this file, the baseline has 0) (dm/host/web_apple.m:375)
@@ -65,10 +65,10 @@ dm/gfx/vk/hle_vk.m: clang-analyzer-core.NullDereference: 1 findings, the baselin
 
 ### lint-python (`.github/workflows/lint-python.yml`)
 
-- Latest run on `main`: https://github.com/seedds/nxnative/actions/runs/41872445298 — dark (conclusion: `failure`), 2026-11-04 16:55 UTC
+- Latest run on `main`: https://github.com/seedds/nxnative/actions/runs/41943376457 — dark (conclusion: `failure`), 2026-11-05 00:42 UTC
 - Dark since: 2026-11-04 11:10 UTC (first run of the current streak)
 - Job / step: `ruff and pyright (ratchet)` → `ruff and pyright against the baseline`
-- Likely cause: Function definition does not bind loop variable 'n' (dm/games/settings.py:115)
+- Likely cause: Object of type "None" cannot be used as iterable value (dm/tools/tests/test_split_linkdata.py:39)
 
 <details><summary>End of the job log</summary>
 
@@ -87,7 +87,7 @@ Successfully installed capstone-5.0.9 fonttools-4.67.0 lz4-4.4.5 nodeenv-1.12.0 
 
 ### tests (`.github/workflows/tests.yml`)
 
-- Latest run on `main`: https://github.com/seedds/nxnative/actions/runs/41872445400 — dark (conclusion: `cancelled`), 2026-11-04 16:55 UTC
+- Latest run on `main`: https://github.com/seedds/nxnative/actions/runs/41933015736 — dark (conclusion: `cancelled`), 2026-11-04 23:21 UTC
 - Dark since: 2026-11-04 14:36 UTC (first run of the current streak)
 - Likely cause: run cancelled
 

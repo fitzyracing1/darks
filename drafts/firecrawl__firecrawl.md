@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/firecrawl/firecrawl/issues/new
-- **Stars:** 198576 · **Generated:** 2026-11-04T18:40:05.885Z
+- **Stars:** 198660 · **Generated:** 2026-11-05T00:53:42.006Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
@@ -21,7 +21,7 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### Publish Go SDK (`.github/workflows/publish-go-sdk.yml`)
 
-- Latest run on `main`: https://github.com/firecrawl/firecrawl/actions/runs/41709159878 — dark (conclusion: `cancelled`), 2026-11-03 20:04 UTC
+- Latest run on `main`: https://github.com/firecrawl/firecrawl/actions/runs/41793074345 — dark (conclusion: `cancelled`), 2026-11-04 07:33 UTC
 - Dark since: 2026-11-03 20:04 UTC (first run of the current streak)
 - Job / step: `Tag and index on pkg.go.dev`
 - Likely cause: run cancelled in job "Tag and index on pkg.go.dev"
@@ -64,7 +64,7 @@ npm error A complete log of this run can be found in: /home/runner/.npm/_logs/20
 
 ### Publish Rust SDK (`.github/workflows/publish-rust-sdk.yml`)
 
-- Latest run on `main`: https://github.com/firecrawl/firecrawl/actions/runs/41709160191 — dark (conclusion: `cancelled`), 2026-11-03 20:04 UTC
+- Latest run on `main`: https://github.com/firecrawl/firecrawl/actions/runs/41793074752 — dark (conclusion: `cancelled`), 2026-11-04 07:33 UTC
 - Dark since: 2026-11-03 20:04 UTC (first run of the current streak)
 - Job / step: `Publish to crates.io`
 - Likely cause: run cancelled in job "Publish to crates.io"

@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/public-apis/public-apis/issues/new
-- **Stars:** 496067 · **Generated:** 2026-11-04T18:40:05.885Z
+- **Stars:** 496127 · **Generated:** 2026-11-05T00:53:42.006Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -20,21 +20,21 @@ Hi! A few workflows on `master` have been dark recently. Details below, in case 
 
 ### Tests of push & pull (`.github/workflows/test_of_push_and_pull.yml`)
 
-- Latest run on `master`: https://github.com/public-apis/public-apis/actions/runs/41336262389 — dark (conclusion: `failure`), 2026-11-01 18:22 UTC
+- Latest run on `master`: https://github.com/public-apis/public-apis/actions/runs/41894624981 — dark (conclusion: `failure`), 2026-11-04 19:12 UTC
 - Dark since: 2026-10-02 22:11 UTC (first run of the current streak)
 - Job / step: `Validate README.md changes` → `Validate Markdown format`
-- Likely cause: (L2744) :--- is not a valid CORS option
+- Likely cause: (L2775) :--- is not a valid CORS option
 
 <details><summary>End of the job log</summary>
 
 ```
-(L2744) each segment must start and end with exactly 1 space
-(L2744) Title syntax should be "[TITLE](LINK)"
-(L2744) description should not end with -
-(L2744) auth value is not enclosed with `backticks`
-(L2744) :--- is not a valid Auth option
-(L2744) :--- is not a valid HTTPS option
-(L2744) :--- is not a valid CORS option
+(L2775) each segment must start and end with exactly 1 space
+(L2775) Title syntax should be "[TITLE](LINK)"
+(L2775) description should not end with -
+(L2775) auth value is not enclosed with `backticks`
+(L2775) :--- is not a valid Auth option
+(L2775) :--- is not a valid HTTPS option
+(L2775) :--- is not a valid CORS option
 ##[error]Process completed with exit code 1.
 ```
 
@@ -42,10 +42,10 @@ Hi! A few workflows on `master` have been dark recently. Details below, in case 
 
 ### Validate links (`.github/workflows/validate_links.yml`)
 
-- Latest run on `master`: https://github.com/public-apis/public-apis/actions/runs/41745705621 — dark (conclusion: `failure`), 2026-11-04 00:17 UTC
+- Latest run on `master`: https://github.com/public-apis/public-apis/actions/runs/41940340385 — dark (conclusion: `failure`), 2026-11-05 00:18 UTC
 - Dark since: 2026-10-03 00:29 UTC (first run of the current streak)
 - Job / step: `Check all links are working` → `Validate all links from README.md`
-- Likely cause: (node:2414) [DEP0169] DeprecationWarning: 'url.parse()' behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for 'url.parse()' vulnerabili…
+- Likely cause: (node:2110) [DEP0169] DeprecationWarning: 'url.parse()' behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for 'url.parse()' vulnerabili…
 
 <details><summary>End of the job log</summary>
 

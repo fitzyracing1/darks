@@ -1,38 +1,38 @@
 <!-- dark-draft: tailwindlabs/tailwindcss -->
-<!-- draft-state: resolved -->
+<!-- draft-state: ready -->
 # Upstream issue draft: tailwindlabs/tailwindcss
 
-- **Status:** resolved — lit again (2026-10-22); nothing to file
+- **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/tailwindlabs/tailwindcss/issues/new
-- **Stars:** 97962 · **Generated:** 2026-10-22T01:10:56.398Z
+- **Stars:** 98065 · **Generated:** 2026-11-05T00:53:42.006Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: "Integration Tests" workflow failing on main since 2026-10-19
+CI: "Integration Tests" workflow failing on main since 2026-11-04
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! The **Integration Tests** workflow (`.github/workflows/integration-tests.yml`) on `main` has been failing since 2026-10-19. Here is what I saw, in case it's useful:
+Hi! The **Integration Tests** workflow (`.github/workflows/integration-tests.yml`) on `main` has been failing since 2026-11-04. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/tailwindlabs/tailwindcss/actions/runs/39281027860 — dark (conclusion: `failure`), 2026-10-19 15:50 UTC
-- Dark since: 2026-10-19 15:50 UTC (first run of the current streak)
+- Latest run on `main`: https://github.com/tailwindlabs/tailwindcss/actions/runs/41912985986 — dark (conclusion: `failure`), 2026-11-04 21:06 UTC
+- Dark since: 2026-11-04 18:27 UTC (first run of the current streak)
 - Job / step: `Linux /  upgrade` → `Test upgrade`
-- Likely cause: Error: Test timed out in 60000ms. (integrations/utils.ts:114)
+- Likely cause: Error: Test timed out in 60000ms. (integrations/utils.ts:118)
 
 <details><summary>End of the job log</summary>
 
 ```
-    116|     {
+    120|     {
  ❯ upgrade/upgrade-errors.test.ts:78:1
 ⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
  Test Files  1 failed | 2 passed (3)
       Tests  1 failed | 66 passed (67)
-   Start at  15:57:24
-   Duration  206.01s (transform 247ms, setup 0ms, import 517ms, tests 431.96s, environment 0ms)
+   Start at  21:10:08
+   Duration  202.65s (transform 180ms, setup 0ms, import 449ms, tests 426.22s, environment 0ms)
 ##[error]Error: Test timed out in 60000ms.
 ```
 
