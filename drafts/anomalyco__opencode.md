@@ -4,28 +4,19 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/anomalyco/opencode/issues/new
-- **Stars:** 224764 · **Generated:** 2026-11-05T18:40:12.982Z
+- **Stars:** 224806 · **Generated:** 2026-11-06T00:51:57.865Z
 - Nothing in this file has been sent anywhere.
-- **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 2 workflows dark on dev ("release", "Process daemon")
+CI: "Process daemon" workflow failing on dev since 2026-11-05
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! A few workflows on `dev` have been dark recently. Details below, in case they're useful:
-
-### release (`.github/workflows/release.yml`)
-
-- Latest run on `dev`: https://github.com/anomalyco/opencode/actions/runs/42081374747 — dark (conclusion: `cancelled`), 2026-11-05 18:08 UTC
-- Dark since: 2026-11-05 16:59 UTC (first run of the current streak)
-- Likely cause: run cancelled
-
-### Process daemon (`.github/workflows/check-process-daemon.yml`)
+Hi! The **Process daemon** workflow (`.github/workflows/check-process-daemon.yml`) on `dev` has been failing since 2026-11-05. Here is what I saw, in case it's useful:
 
 - Latest run on `dev`: https://github.com/anomalyco/opencode/actions/runs/42070085454 — dark (conclusion: `failure`), 2026-11-05 16:59 UTC
 - Dark since: 2026-11-05 16:59 UTC (first run of the current streak)

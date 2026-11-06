@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/yetone/magpie/issues/new
-- **Stars:** 30410 · **Generated:** 2026-11-05T18:40:12.982Z
+- **Stars:** 30459 · **Generated:** 2026-11-06T00:51:57.865Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -18,22 +18,22 @@ CI: "Test" workflow failing on main since 2026-10-25
 <!-- BEGIN BODY -->
 Hi! The **Test** workflow (`.github/workflows/test.yml`) on `main` has been failing since 2026-10-25. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/yetone/magpie/actions/runs/42073642802 — dark (conclusion: `failure`), 2026-11-05 17:20 UTC
+- Latest run on `main`: https://github.com/yetone/magpie/actions/runs/42133890209 — dark (conclusion: `failure`), 2026-11-06 00:02 UTC
 - Dark since: 2026-10-25 04:42 UTC (first run of the current streak)
-- Job / step: `test (ubuntu-latest)` → `Test`
-- Likely cause: FAIL
+- Job / step: `test (macos-latest)` → `Test`
+- Likely cause: warning: implicit conversion from enumeration type 'enum CGImageAlphaInfo' to different enumeration type 'CGBitmapInfo' (aka 'enum CGBitmapInfo') [-Wimplicit-enum-enum-cast] (internal/gui/trayimage_darwin.go:131)
 
 <details><summary>End of the job log</summary>
 
 ```
-?   	github.com/yetone/magpie/plugins/routing	[no test files]
-ok  	github.com/yetone/magpie/plugins/search	0.016s
-?   	github.com/yetone/magpie/plugins/sessions	[no test files]
-ok  	github.com/yetone/magpie/plugins/tools	0.010s
-?   	github.com/yetone/magpie/plugins/usage	[no test files]
-?   	github.com/yetone/magpie/plugins/warmups	[no test files]
-FAIL
-##[error]Process completed with exit code 1.
+GOTOOLCHAIN='auto'
+GOTOOLDIR='/Users/runner/hostedtoolcache/go/1.26.8/arm64/pkg/tool/darwin_arm64'
+GOVCS=''
+GOVERSION='go1.26.8'
+GOWORK=''
+PKG_CONFIG='pkg-config'
+# github.com/yetone/magpie/internal/proc
+##[error]internal/proc/disclaim_darwin.go:35:19: warning: 'posix_spawn_file_actions_addchdir_np' is deprecated: first deprecated in macOS 26.0 - posix_spawn_file_actions_addchdir(3) has replaced posix_spawn_file_actions…
 ```
 
 </details>

@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/open-metadata/OpenMetadata/issues/new
-- **Stars:** 15689 · **Generated:** 2026-11-05T18:40:12.982Z
+- **Stars:** 15691 · **Generated:** 2026-11-06T00:51:57.865Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -20,7 +20,7 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### Merge Queue Dequeue Report (`.github/workflows/merge-queue-dequeue-report.yml`)
 
-- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/42076451267 — dark (conclusion: `failure`), 2026-11-05 17:37 UTC
+- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/42106885632 — dark (conclusion: `failure`), 2026-11-05 20:49 UTC
 - Dark since: 2026-11-03 21:06 UTC (first run of the current streak)
 - Job / step: `evict-main-conflicts` → `Remove queue entries that conflict with main`
 - Likely cause: cannot iterate over: null
@@ -42,7 +42,7 @@ cannot iterate over: null
 
 ### Integration Tests - MySQL + Elasticsearch (`.github/workflows/integration-tests-mysql-elasticsearch.yml`)
 
-- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/42064233407 — dark (conclusion: `failure`), 2026-11-05 16:25 UTC
+- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/42103592161 — dark (conclusion: `failure`), 2026-11-05 20:27 UTC
 - Dark since: 2026-11-05 11:11 UTC (first run of the current streak)
 - Job / step: `Integration Test Lane (parallel)` → `Run Integration Tests (MySQL + Elasticsearch)`
 - Likely cause: [ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
@@ -64,9 +64,9 @@ cannot iterate over: null
 
 ### Integration Tests - PostgreSQL + OpenSearch (`.github/workflows/integration-tests-postgres-opensearch.yml`)
 
-- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/42064233517 — dark (conclusion: `failure`), 2026-11-05 16:25 UTC
+- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/42103591929 — dark (conclusion: `failure`), 2026-11-05 20:27 UTC
 - Dark since: 2026-11-05 11:11 UTC (first run of the current streak)
-- Job / step: `Integration Test Lane (parallel)` → `Run Integration Tests (PostgreSQL + OpenSearch)`
+- Job / step: `Integration Test Lane (global-state)` → `Run Integration Tests (PostgreSQL + OpenSearch)`
 - Likely cause: [ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
 
 <details><summary>End of the job log</summary>
@@ -86,7 +86,7 @@ cannot iterate over: null
 
 ### Integration Tests - PostgreSQL + Elasticsearch + Redis (`.github/workflows/integration-tests-postgres-elasticsearch-redis.yml`)
 
-- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/42064233539 — dark (conclusion: `failure`), 2026-11-05 16:25 UTC
+- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/42103591912 — dark (conclusion: `failure`), 2026-11-05 20:27 UTC
 - Dark since: 2026-11-05 11:11 UTC (first run of the current streak)
 - Job / step: `Integration Test Lane (parallel)` → `Run Integration Tests (PostgreSQL + Elasticsearch + Redis)`
 - Likely cause: [ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
@@ -108,22 +108,22 @@ cannot iterate over: null
 
 ### Maven Collate Tests (`.github/workflows/maven-build-collate.yml`)
 
-- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/42076451588 — dark (conclusion: `failure`), 2026-11-05 17:37 UTC
+- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/42103592067 — dark (conclusion: `failure`), 2026-11-05 20:27 UTC
 - Dark since: 2026-11-05 16:25 UTC (first run of the current streak)
 - Job / step: `maven-collate-ci` → `Trigger Collate build & wait`
-- Likely cause: Collate run did not succeed: https://github.com/open-metadata/openmetadata-collate/actions/runs/42076525037
+- Likely cause: Collate run did not succeed: https://github.com/open-metadata/openmetadata-collate/actions/runs/42103655180
 
 <details><summary>End of the job log</summary>
 
 ```
-maven-collate-om-ci: .github#14
-! This method or constructor is empty; @SneakyThrows has been ignored.
 maven-collate-om-ci: .github#35
+! This method or constructor is empty; @SneakyThrows has been ignored.
+maven-collate-om-ci: .github#14
 ! This method or constructor is empty; @SneakyThrows has been ignored.
 maven-collate-om-ci: .github#14
 ! Not generating isSupportsOwners(): A method with that name already exists
 maven-collate-om-ci: .github#600
-##[error]Collate run did not succeed: https://github.com/open-metadata/openmetadata-collate/actions/runs/42076525037
+##[error]Collate run did not succeed: https://github.com/open-metadata/openmetadata-collate/actions/runs/42103655180
 ```
 
 </details>

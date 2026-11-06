@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/NandhaKishorM/laya/issues/new
-- **Stars:** 35054 · **Generated:** 2026-11-05T18:40:12.982Z
+- **Stars:** 35066 · **Generated:** 2026-11-06T00:51:57.865Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -18,7 +18,7 @@ CI: "Security" workflow failing on main since 2026-11-05
 <!-- BEGIN BODY -->
 Hi! The **Security** workflow (`.github/workflows/security.yml`) on `main` has been failing since 2026-11-05. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/NandhaKishorM/laya/actions/runs/41992269533 — dark (conclusion: `failure`), 2026-11-05 08:09 UTC
+- Latest run on `main`: https://github.com/NandhaKishorM/laya/actions/runs/42102872839 — dark (conclusion: `failure`), 2026-11-05 20:23 UTC
 - Dark since: 2026-11-05 07:13 UTC (first run of the current streak)
 - Job / step: `no unsafe deserialization` → `No shell-out or dynamic exec in the shipped package`
 - Likely cause: shell-out or dynamic execution in the shipped package
@@ -28,7 +28,7 @@ Hi! The **Security** workflow (`.github/workflows/security.yml`) on `main` has b
 ```
 Switched to a new branch 'main'
 branch 'main' set up to track 'origin/main'.
-5a6dc4b809659dab3b9b3062f5e3902db983818a
+3293116c89425c3d04b22aa4d9464fef82e2c858
 OK: no unsafe deserialization in laya/ or laya-ts/scripts/
 laya/video.py:68:    proc = subprocess.run(list(args), stdout=subprocess.PIPE, stderr=subprocess.PIPE)
 laya/video.py:106:    proc = subprocess.run([shutil.which("ffmpeg"), "-i", path], stdout=subprocess.PIPE,
