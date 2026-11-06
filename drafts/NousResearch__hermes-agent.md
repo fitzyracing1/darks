@@ -4,24 +4,48 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/NousResearch/hermes-agent/issues/new
-- **Stars:** 261043 · **Generated:** 2026-11-06T12:41:11.038Z
+- **Stars:** 261138 · **Generated:** 2026-11-06T18:37:41.328Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: "Docker Build, Test, and Publish" workflow getting cancelled on main since 2026-11-05
+CI: 2 workflows dark on main ("Docker Build, Test, and Publish", "Deploy Site")
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! The **Docker Build, Test, and Publish** workflow (`.github/workflows/docker.yml`) on `main` has been getting cancelled since 2026-11-05. Here is what I saw, in case it's useful:
+Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
 
-- Latest run on `main`: https://github.com/NousResearch/hermes-agent/actions/runs/42177206635 — dark (conclusion: `cancelled`), 2026-11-06 06:52 UTC
+### Docker Build, Test, and Publish (`.github/workflows/docker.yml`)
+
+- Latest run on `main`: https://github.com/NousResearch/hermes-agent/actions/runs/42266982557 — dark (conclusion: `cancelled`), 2026-11-06 18:01 UTC
 - Dark since: 2026-11-05 20:45 UTC (first run of the current streak)
 - Likely cause: run cancelled
+
+### Deploy Site (`.github/workflows/deploy-site.yml`)
+
+- Latest run on `main`: https://github.com/NousResearch/hermes-agent/actions/runs/42266344592 — dark (conclusion: `failure`), 2026-11-06 17:57 UTC
+- Dark since: 2026-11-06 17:57 UTC (first run of the current streak)
+- Job / step: `deploy-docs` → `Deploy to GitHub Pages`
+- Likely cause: Deployment failed, try again later.
+
+<details><summary>End of the job log</summary>
+
+```
+Getting Pages deployment status...
+Current status: deployment_queued
+Getting Pages deployment status...
+Current status: deployment_queued
+Getting Pages deployment status...
+Current status: deployment_queued
+Getting Pages deployment status...
+##[error]Deployment failed, try again later.
+```
+
+</details>
 
 If this is already known or expected, feel free to close. Thanks for maintaining hermes-agent!
 

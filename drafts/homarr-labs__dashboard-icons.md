@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/homarr-labs/dashboard-icons/issues/new
-- **Stars:** 9015 · **Generated:** 2026-11-06T12:41:11.038Z
+- **Stars:** 9018 · **Generated:** 2026-11-06T18:37:41.328Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title

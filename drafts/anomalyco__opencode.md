@@ -4,19 +4,23 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/anomalyco/opencode/issues/new
-- **Stars:** 224941 · **Generated:** 2026-11-06T12:41:11.038Z
+- **Stars:** 225003 · **Generated:** 2026-11-06T18:37:41.328Z
 - Nothing in this file has been sent anywhere.
+- **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
+- **Note for Joshua:** latest run was skipped, not failed — probably not worth filing
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: "nightly-beta" workflow failing on dev since 2026-11-06
+CI: 3 workflows dark on dev ("nightly-beta", "release", "bot-docs-locale")
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! The **nightly-beta** workflow (`.github/workflows/nightly-beta.yml`) on `dev` has been failing since 2026-11-06. Here is what I saw, in case it's useful:
+Hi! A few workflows on `dev` have been dark recently. Details below, in case they're useful:
+
+### nightly-beta (`.github/workflows/nightly-beta.yml`)
 
 - Latest run on `dev`: https://github.com/anomalyco/opencode/actions/runs/42194472543 — dark (conclusion: `failure`), 2026-11-06 09:21 UTC
 - Dark since: 2026-11-06 09:21 UTC (first run of the current streak)
@@ -37,6 +41,18 @@ could not create workflow dispatch event: HTTP 422: No ref found for: beta (http
 ```
 
 </details>
+
+### release (`.github/workflows/release.yml`)
+
+- Latest run on `dev`: https://github.com/anomalyco/opencode/actions/runs/42267782744 — dark (conclusion: `cancelled`), 2026-11-06 18:07 UTC
+- Dark since: 2026-11-06 16:30 UTC (first run of the current streak)
+- Likely cause: run cancelled
+
+### bot-docs-locale (`.github/workflows/bot-docs-locale.yml`)
+
+- Latest run on `dev`: https://github.com/anomalyco/opencode/actions/runs/42266284628 — dark (conclusion: `skipped`), 2026-11-06 17:57 UTC
+- Dark since: 2026-11-06 17:57 UTC (first run of the current streak)
+- Likely cause: run skipped
 
 If this is already known or expected, feel free to close. Thanks for maintaining opencode!
 

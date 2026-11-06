@@ -4,9 +4,9 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/KnifeLemon/Filee/issues/new
-- **Stars:** 22880 · **Generated:** 2026-11-06T12:41:11.038Z
+- **Stars:** 23006 · **Generated:** 2026-11-06T18:37:41.328Z
 - Nothing in this file has been sent anywhere.
-- **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
+- **Note for Joshua:** cancelled by a concurrency group — likely noise
 
 ## Suggested title
 
@@ -19,9 +19,25 @@ CI: "CI" workflow getting cancelled on main since 2026-11-05
 <!-- BEGIN BODY -->
 Hi! The **CI** workflow (`.github/workflows/ci.yml`) on `main` has been getting cancelled since 2026-11-05. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/KnifeLemon/Filee/actions/runs/42201208704 — dark (conclusion: `cancelled`), 2026-11-06 10:15 UTC
+- Latest run on `main`: https://github.com/KnifeLemon/Filee/actions/runs/42263996587 — dark (conclusion: `cancelled`), 2026-11-06 17:41 UTC
 - Dark since: 2026-11-05 18:42 UTC (first run of the current streak)
-- Likely cause: run cancelled
+- Job / step: `changes` → `Run everything() { echo "code=true" >> "$GITHUB_OUTPUT"; echo "macos=true" >> "$GITHUB_OUTPUT"; echo "$1"; exit 0; }`
+- Likely cause: Canceling since a higher priority waiting request for ci-refs/heads/main exists
+
+<details><summary>End of the job log</summary>
+
+```
+From https://github.com/KnifeLemon/Filee
+ * [new ref]         44274bc23550749c2c69e9afe39e12d4672df0fe -> origin/main
+  origin/main
+44274bc23550749c2c69e9afe39e12d4672df0fe
+Switched to a new branch 'main'
+branch 'main' set up to track 'origin/main'.
+44274bc23550749c2c69e9afe39e12d4672df0fe
+##[error]The operation was canceled.
+```
+
+</details>
 
 If this is already known or expected, feel free to close. Thanks for maintaining Filee!
 

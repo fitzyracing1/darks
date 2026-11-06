@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/Gentleman-Programming/gentle-ai/issues/new
-- **Stars:** 8458 · **Generated:** 2026-11-06T12:41:11.038Z
+- **Stars:** 8492 · **Generated:** 2026-11-06T18:37:41.328Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -18,7 +18,7 @@ CI: "Windows Full Suite" workflow failing on main since 2026-11-06
 <!-- BEGIN BODY -->
 Hi! The **Windows Full Suite** workflow (`.github/workflows/windows-full-suite.yml`) on `main` has been failing since 2026-11-06. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/Gentleman-Programming/gentle-ai/actions/runs/42214514055 — dark (conclusion: `failure`), 2026-11-06 12:01 UTC
+- Latest run on `main`: https://github.com/Gentleman-Programming/gentle-ai/actions/runs/42264401055 — dark (conclusion: `failure`), 2026-11-06 17:44 UTC
 - Dark since: 2026-11-06 12:01 UTC (first run of the current streak)
 - Job / step: `Windows Full Suite (cli-r-other)` → `Run shard`
 - Likely cause: FAIL
@@ -31,7 +31,7 @@ Missing 0 required dependency(ies): none
 Install hints:
 Gentle AI sends anonymous usage metrics (version, OS, agents, counters) and may send anonymous runtime usage from supported Pi/OpenCode/Codex integrations (public model, effort, agent class, available token usage, timin…
 FAIL
-FAIL	github.com/gentleman-programming/gentle-ai/v4/internal/cli	278.195s
+FAIL	github.com/gentleman-programming/gentle-ai/v4/internal/cli	277.062s
 FAIL
 ##[error]Process completed with exit code 1.
 ```

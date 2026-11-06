@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/seedds/nxnative/issues/new
-- **Stars:** 12755 · **Generated:** 2026-11-06T12:41:11.038Z
+- **Stars:** 12867 · **Generated:** 2026-11-06T18:37:41.328Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
@@ -43,29 +43,13 @@ artifact_prefix='findings/shader_split/'; Test unit written to findings/shader_s
 
 ### lint-c (`.github/workflows/lint-c.yml`)
 
-- Latest run on `main`: https://github.com/seedds/nxnative/actions/runs/42190268452 — dark (conclusion: `failure`), 2026-11-06 08:47 UTC
+- Latest run on `main`: https://github.com/seedds/nxnative/actions/runs/42257941680 — dark (conclusion: `cancelled`), 2026-11-06 17:02 UTC
 - Dark since: 2026-11-05 11:55 UTC (first run of the current streak)
-- Job / step: `clang-tidy (ratchet)` → `clang-tidy against the baseline`
-- Likely cause: Potential leak of an object of type 'id<MTLTexture> _Nullable' [clang-analyzer-osx.cocoa.RetainCount] (2 in this file, the baseline has 0) (dm/gfx/tests/t_feedback.m:424)
-
-<details><summary>End of the job log</summary>
-
-```
-[233/237] dm/host/tests/t_uecvar.c: 0 findings
-[234/237] dm/host/tests/t_vorbis.c: 0 findings
-[235/237] dm/host/tests/t_watch_sample.c: 0 findings
-[236/237] dm/host/thread.c: 1 findings
-[237/237] dm/host/web_apple.m: 0 findings
-LLVM 23.1.4: 248 findings in 77 files, 140 file/check pairs
-dm/gfx/nvn/nvn_mtl.m: clang-analyzer-core.BitwiseShift: 1 findings, the baseline has 0
-##[error]Right operand is negative in left shift [clang-analyzer-core.BitwiseShift] (1 in this file, the baseline has 0)
-```
-
-</details>
+- Likely cause: run cancelled
 
 ### tests (`.github/workflows/tests.yml`)
 
-- Latest run on `main`: https://github.com/seedds/nxnative/actions/runs/42190170251 — dark (conclusion: `cancelled`), 2026-11-06 08:47 UTC
+- Latest run on `main`: https://github.com/seedds/nxnative/actions/runs/42264409944 — dark (conclusion: `cancelled`), 2026-11-06 17:44 UTC
 - Dark since: 2026-11-06 01:42 UTC (first run of the current streak)
 - Likely cause: run cancelled
 

@@ -4,14 +4,15 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/n8n-io/n8n/issues/new
-- **Stars:** 209682 · **Generated:** 2026-11-06T12:41:11.038Z
+- **Stars:** 209704 · **Generated:** 2026-11-06T18:37:41.328Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** latest run was skipped, not failed — probably not worth filing
+- **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 2 workflows dark on master ("Security: Sync from Public", "Test: E2E Coverage Nightly")
+CI: 2 workflows dark on master ("Security: Sync from Public", "CI: Master (Build, Test, Lint)")
 <!-- END TITLE -->
 
 ## Body
@@ -21,31 +22,16 @@ Hi! A few workflows on `master` have been dark recently. Details below, in case 
 
 ### Security: Sync from Public (`.github/workflows/sec-sync-public-to-private.yml`)
 
-- Latest run on `master`: https://github.com/n8n-io/n8n/actions/runs/42216371890 — dark (conclusion: `skipped`), 2026-11-06 12:16 UTC
+- Latest run on `master`: https://github.com/n8n-io/n8n/actions/runs/42268878950 — dark (conclusion: `skipped`), 2026-11-06 18:14 UTC
 - Dark since: 2026-10-13 15:19 UTC (first run of the current streak)
 - Likely cause: run skipped
 
-### Test: E2E Coverage Nightly (`.github/workflows/test-e2e-coverage-nightly.yml`)
+### CI: Master (Build, Test, Lint) (`.github/workflows/ci-master.yml`)
 
-- Latest run on `master`: https://github.com/n8n-io/n8n/actions/runs/42147989527 — dark (conclusion: `failure`), 2026-11-06 02:04 UTC
-- Dark since: 2026-11-06 02:04 UTC (first run of the current streak)
-- Job / step: `E2E (coverage) / Shard 14` → `Run Tests`
-- Likely cause: Safe-chain: error connecting to cy.currents.dev:443 - This socket has been ended by the other party
-
-<details><summary>End of the job log</summary>
-
-```
-Safe-chain: error connecting to cy.currents.dev:443 - This socket has been ended by the other party
-Safe-chain: error connecting to cy.currents.dev:443 - This socket has been ended by the other party
-Safe-chain: error connecting to cy.currents.dev:443 - This socket has been ended by the other party
-Safe-chain: error connecting to cy.currents.dev:443 - This socket has been ended by the other party
-Safe-chain: error connecting to cy.currents.dev:443 - This socket has been ended by the other party
-Safe-chain: error connecting to cy.currents.dev:443 - This socket has been ended by the other party
-Safe-chain: error connecting to cy.currents.dev:443 - This socket has been ended by the other party
-##[error]Process completed with exit code 1.
-```
-
-</details>
+- Latest run on `master`: https://github.com/n8n-io/n8n/actions/runs/42225455849 — dark (conclusion: `failure`), 2026-11-06 13:26 UTC
+- Dark since: 2026-11-06 13:26 UTC (first run of the current streak)
+- Job / step: `Unit tests (26.12.1) / CLI Integration Tests (2/2)`
+- Likely cause: The self-hosted runner lost communication with the server. Verify the machine is running and has a healthy network connection. Anything in your workflow that terminates the runner process, starves it for CPU/Memory, or blocks its network ac
 
 If this is already known or expected, feel free to close. Thanks for maintaining n8n!
 
