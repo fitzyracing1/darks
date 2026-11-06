@@ -4,14 +4,14 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/xberg-io/xberg/issues/new
-- **Stars:** 9548 · **Generated:** 2026-11-06T06:44:53.221Z
+- **Stars:** 9550 · **Generated:** 2026-11-06T12:41:11.038Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** cancelled by a concurrency group — likely noise
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 7 workflows dark on main ("CI Rust", "CI Integrations", "CI E2E", +4 more)
+CI: 3 workflows dark on main ("CI Rust", "CI Integrations", "CI E2E")
 <!-- END TITLE -->
 
 ## Body
@@ -21,21 +21,21 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### CI Rust (`.github/workflows/ci-rust.yaml`)
 
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/42173101669 — dark (conclusion: `cancelled`), 2026-11-06 06:13 UTC
+- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/42192812188 — dark (conclusion: `cancelled`), 2026-11-06 09:08 UTC
 - Dark since: 2026-10-25 18:30 UTC (first run of the current streak)
-- Job / step: `Rust tract-only (no-ORT)` → `Install system dependencies`
+- Job / step: `Rust (macos-26)` → `Run tests`
 - Likely cause: Canceling since a higher priority waiting request for ci-rust-refs/heads/main exists
 
 <details><summary>End of the job log</summary>
 
 ```
-[ 60%] Building CXX object CMakeFiles/libtesseract.dir/src/lstm/input.cpp.o
-[ 61%] Building CXX object CMakeFiles/libtesseract.dir/src/lstm/lstm.cpp.o
-[ 61%] Building CXX object CMakeFiles/libtesseract.dir/src/lstm/lstmrecognizer.cpp.o
-[ 61%] Building CXX object CMakeFiles/libtesseract.dir/src/lstm/maxpool.cpp.o
-[ 62%] Building CXX object CMakeFiles/libtesseract.dir/src/lstm/network.cpp.o
-[ 62%] Building CXX object CMakeFiles/libtesseract.dir/src/lstm/networkio.cpp.o
-[ 63%] Building CXX object CMakeFiles/libtesseract.dir/src/lstm/parallel.cpp.o
+     Running `sccache rustc --crate-name dotenvy --edition=2018 /Users/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/dotenvy-0.15.7/src/lib.rs --error-format=json --json=diagnostic-rendered-ansi,artifacts,…
+   Compiling jpeg-encoder v0.7.1
+     Running `sccache rustc --crate-name jpeg_encoder --edition=2024 /Users/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/jpeg-encoder-0.7.1/src/lib.rs --error-format=json --json=diagnostic-rendered-ansi,a…
+     Running `/Users/runner/work/xberg/xberg/target/debug/build/xberg-76bd95f53dcdb4be/build-script-build`
+     Running `sccache rustc --crate-name xberg_libwpd --edition=2024 crates/xberg-libwpd/src/lib.rs --error-format=json --json=diagnostic-rendered-ansi,artifacts,future-incompat --crate-type lib --emit=dep-info,metadata…
+     Running `sccache rustc --crate-name xberg --edition=2024 crates/xberg/src/lib.rs --error-format=json --json=diagnostic-rendered-ansi,artifacts,future-incompat --crate-type rlib --emit=dep-info,metadata,link -C opt-…
+     Running `sccache rustc --crate-name xberg --edition=2024 crates/xberg/src/lib.rs --error-format=json --json=diagnostic-rendered-ansi,artifacts,future-incompat --emit=dep-info,link -C opt-level=1 -C embed-bitcode=no…
 ##[error]The operation was canceled.
 ```
 
@@ -43,60 +43,47 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### CI Integrations (`.github/workflows/ci-integrations.yaml`)
 
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/42173101666 — dark (conclusion: `cancelled`), 2026-11-06 06:13 UTC
+- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/42192812051 — dark (conclusion: `cancelled`), 2026-11-06 09:08 UTC
 - Dark since: 2026-11-02 11:54 UTC (first run of the current streak)
-- Job / step: `Build local integration bindings`
+- Job / step: `Build local integration bindings` → `Build and stage Java binding`
 - Likely cause: Canceling since a higher priority waiting request for ci-integrations-refs/heads/main exists
-
-### CI E2E (`.github/workflows/ci-e2e.yaml`)
-
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/42173101611 — dark (conclusion: `cancelled`), 2026-11-06 06:13 UTC
-- Dark since: 2026-11-03 17:32 UTC (first run of the current streak)
-- Job / step: `Build FFI (aarch64-unknown-linux-gnu)`
-- Likely cause: Canceling since a higher priority waiting request for ci-e2e-refs/heads/main exists
-
-### CI Lint (`.github/workflows/ci-lint.yaml`)
-
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/42173101977 — dark (conclusion: `cancelled`), 2026-11-06 06:13 UTC
-- Dark since: 2026-11-05 18:52 UTC (first run of the current streak)
-- Job / step: `Submodule gitlinks reachable`
-- Likely cause: Canceling since a higher priority waiting request for ci-lint-refs/heads/main exists
-
-### CI Mobile (`.github/workflows/ci-mobile.yaml`)
-
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/42173101706 — dark (conclusion: `cancelled`), 2026-11-06 06:13 UTC
-- Dark since: 2026-11-06 04:19 UTC (first run of the current streak)
-- Job / step: `iOS cargo check (aarch64-apple-ios-sim)`
-- Likely cause: Canceling since a higher priority waiting request for ci-mobile-refs/heads/main exists
-
-### CI Scripts (`.github/workflows/ci-scripts.yaml`)
-
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/42162679714 — dark (conclusion: `cancelled`), 2026-11-06 04:28 UTC
-- Dark since: 2026-11-06 04:28 UTC (first run of the current streak)
-- Job / step: `Bats on macos-26` → `Run the shell contract tests`
-- Likely cause: Canceling since a higher priority waiting request for ci-scripts-refs/heads/main exists
 
 <details><summary>End of the job log</summary>
 
 ```
-ok 395 local native staging should preserve Intel macOS artifacts in both package layouts
-ok 396 local native staging should normalize both macOS ARM architecture names
-ok 397 local native staging should use the unprefixed Windows DLL for every supported shell
-ok 398 local native staging should reject unsupported systems before creating package directories
-ok 399 local native staging should reject missing built libraries before creating package directories
-ok 400 local native staging should propagate failed artifact copies in both package layouts
-ok 401 macOS Elixir archive contracts run the complete portable unittest suite
+   Compiling lru v0.19.0
+   Compiling fs2 v0.4.3
+   Compiling memmap2 v0.9.12
+   Compiling similar v3.2.1
+   Compiling minijinja v3.0.5
+   Compiling jotdown v0.10.0
+   Compiling org v0.3.1
 ##[error]The operation was canceled.
 ```
 
 </details>
 
-### CI Docs (`.github/workflows/ci-docs.yaml`)
+### CI E2E (`.github/workflows/ci-e2e.yaml`)
 
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/42171675982 — dark (conclusion: `cancelled`), 2026-11-06 05:59 UTC
-- Dark since: 2026-11-06 05:54 UTC (first run of the current streak)
-- Job / step: `docs / Deploy`
-- Likely cause: Canceling since a higher priority waiting request for ci-docs-refs/heads/main exists
+- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/42192812213 — dark (conclusion: `cancelled`), 2026-11-06 09:08 UTC
+- Dark since: 2026-11-03 17:32 UTC (first run of the current streak)
+- Job / step: `E2E (node)` → `Run e2e tests`
+- Likely cause: Canceling since a higher priority waiting request for ci-e2e-refs/heads/main exists
+
+<details><summary>End of the job log</summary>
+
+```
+   Compiling rake v0.3.6
+   Compiling lru v0.19.0
+   Compiling org v0.3.1
+   Compiling minijinja v3.0.5
+   Compiling jotdown v0.10.0
+   Compiling nohash-hasher v0.2.0
+   Compiling similar v3.2.1
+##[error]The operation was canceled.
+```
+
+</details>
 
 If this is already known or expected, feel free to close. Thanks for maintaining xberg!
 

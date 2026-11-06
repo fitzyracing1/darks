@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/google-gemini/gemini-cli/issues/new
-- **Stars:** 108748 · **Generated:** 2026-11-06T06:44:53.221Z
+- **Stars:** 108748 · **Generated:** 2026-11-06T12:41:11.038Z
 - Nothing in this file has been sent anywhere.
 
 ## Skipped: upstream already tracking
@@ -48,22 +48,22 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### 📋 Gemini Scheduled Issue Triage (`.github/workflows/gemini-scheduled-issue-triage.yml`)
 
-- Latest run on `main`: https://github.com/google-gemini/gemini-cli/actions/runs/42173052817 — dark (conclusion: `failure`), 2026-11-06 06:13 UTC
+- Latest run on `main`: https://github.com/google-gemini/gemini-cli/actions/runs/42215618633 — dark (conclusion: `failure`), 2026-11-06 12:10 UTC
 - Dark since: 2026-11-06 06:13 UTC (first run of the current streak)
 - Job / step: `triage-issues` → `Apply Triaged Labels`
-- Likely cause: Unhandled error: TypeError: results is not iterable
+- Likely cause: Unhandled error: HttpError: Resource not accessible by integration
 
 <details><summary>End of the job log</summary>
 
 ```
-    at callAsyncFunction (/home/runner/work/_actions/actions/github-script/60a0d83039c74a4aee543508d2ffcb1c3799cdea/dist/index.js:35425:12)
-    at main (/home/runner/work/_actions/actions/github-script/60a0d83039c74a4aee543508d2ffcb1c3799cdea/dist/index.js:35522:26)
-    at /home/runner/work/_actions/actions/github-script/60a0d83039c74a4aee543508d2ffcb1c3799cdea/dist/index.js:35497:1
-    at /home/runner/work/_actions/actions/github-script/60a0d83039c74a4aee543508d2ffcb1c3799cdea/dist/index.js:35553:3
-    at Object.<anonymous> (/home/runner/work/_actions/actions/github-script/60a0d83039c74a4aee543508d2ffcb1c3799cdea/dist/index.js:35556:12)
-    at Module._compile (node:internal/modules/cjs/loader:1929:14)
-    at Object..js (node:internal/modules/cjs/loader:2060:10)
-##[error]Unhandled error: TypeError: results is not iterable
+##[start-action display=Upload Telemetry to Google Cloud;id=gemini_standard_issue_analysis.__run_3]
+No telemetry log found, skipping upload.
+##[end-action id=gemini_standard_issue_analysis.__run_3;outcome=success;conclusion=success;duration_ms=27]
+Direct JSON parsing failed. Trying to extract from a markdown block.
+Aggregated triage results for 1 issues.
+RequestError [HttpError]: Resource not accessible by integration
+    at /home/runner/work/_actions/actions/github-script/60a0d83039c74a4aee543508d2ffcb1c3799cdea/dist/index.js:9537:21
+##[error]Unhandled error: HttpError: Resource not accessible by integration
 ```
 
 </details>
