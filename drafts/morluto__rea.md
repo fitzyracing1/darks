@@ -4,24 +4,39 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/morluto/rea/issues/new
-- **Stars:** 434334 · **Generated:** 2026-11-06T00:51:57.865Z
+- **Stars:** 435338 · **Generated:** 2026-11-06T06:44:53.221Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** latest run was skipped, not failed — probably not worth filing
+- **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: "CodeQL production" workflow not completing (runs skipped) on main since 2026-11-01
+CI: 3 workflows dark on main ("CodeQL production", "CI", "Release")
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! The **CodeQL production** workflow (`.github/workflows/codeql.yml`) on `main` has been not completing (runs skipped) since 2026-11-01. Here is what I saw, in case it's useful:
+Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
 
-- Latest run on `main`: https://github.com/morluto/rea/actions/runs/42133240439 — dark (conclusion: `skipped`), 2026-11-05 23:57 UTC
+### CodeQL production (`.github/workflows/codeql.yml`)
+
+- Latest run on `main`: https://github.com/morluto/rea/actions/runs/42175622616 — dark (conclusion: `skipped`), 2026-11-06 06:37 UTC
 - Dark since: 2026-11-01 07:24 UTC (first run of the current streak)
 - Likely cause: run skipped
+
+### CI (`.github/workflows/ci.yml`)
+
+- Latest run on `main`: https://github.com/morluto/rea/actions/runs/42175599409 — dark (conclusion: `cancelled`), 2026-11-06 06:37 UTC
+- Dark since: 2026-11-06 06:25 UTC (first run of the current streak)
+- Likely cause: run cancelled
+
+### Release (`.github/workflows/release.yml`)
+
+- Latest run on `main`: https://github.com/morluto/rea/actions/runs/42175599524 — dark (conclusion: `cancelled`), 2026-11-06 06:37 UTC
+- Dark since: 2026-11-06 06:33 UTC (first run of the current streak)
+- Likely cause: run cancelled
 
 If this is already known or expected, feel free to close. Thanks for maintaining rea!
 

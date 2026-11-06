@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/mksglu/context-mode/issues/new
-- **Stars:** 33560 · **Generated:** 2026-11-06T00:51:57.865Z
+- **Stars:** 33567 · **Generated:** 2026-11-06T06:44:53.221Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -18,7 +18,7 @@ CI: "readme-stats" workflow failing on main since 2026-11-05
 <!-- BEGIN BODY -->
 Hi! The **readme-stats** workflow (`.github/workflows/readme-stats.yml`) on `main` has been failing since 2026-11-05. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/mksglu/context-mode/actions/runs/41961322458 — dark (conclusion: `failure`), 2026-11-05 03:23 UTC
+- Latest run on `main`: https://github.com/mksglu/context-mode/actions/runs/42156236638 — dark (conclusion: `failure`), 2026-11-06 03:23 UTC
 - Dark since: 2026-11-05 03:23 UTC (first run of the current streak)
 - Job / step: `readme-stats` → `commit only if a file changed`
 - Likely cause: error: failed to push some refs to 'https://github.com/mksglu/context-mode'

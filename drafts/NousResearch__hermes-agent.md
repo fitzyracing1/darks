@@ -4,46 +4,22 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/NousResearch/hermes-agent/issues/new
-- **Stars:** 260876 · **Generated:** 2026-11-06T00:51:57.865Z
+- **Stars:** 260965 · **Generated:** 2026-11-06T06:44:53.221Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 2 workflows dark on main ("Deploy Site", "Docker Build, Test, and Publish")
+CI: "Docker Build, Test, and Publish" workflow getting cancelled on main since 2026-11-05
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
+Hi! The **Docker Build, Test, and Publish** workflow (`.github/workflows/docker.yml`) on `main` has been getting cancelled since 2026-11-05. Here is what I saw, in case it's useful:
 
-### Deploy Site (`.github/workflows/deploy-site.yml`)
-
-- Latest run on `main`: https://github.com/NousResearch/hermes-agent/actions/runs/42132029005 — dark (conclusion: `failure`), 2026-11-05 23:47 UTC
-- Dark since: 2026-11-05 09:18 UTC (first run of the current streak)
-- Job / step: `deploy-docs` → `Deploy to GitHub Pages`
-- Likely cause: Timeout reached, aborting!
-
-<details><summary>End of the job log</summary>
-
-```
-Current status: syncing_files
-Getting Pages deployment status...
-Current status: syncing_files
-Getting Pages deployment status...
-Current status: syncing_files
-Getting Pages deployment status...
-Current status:
-##[error]Timeout reached, aborting!
-```
-
-</details>
-
-### Docker Build, Test, and Publish (`.github/workflows/docker.yml`)
-
-- Latest run on `main`: https://github.com/NousResearch/hermes-agent/actions/runs/42133438434 — dark (conclusion: `cancelled`), 2026-11-05 23:59 UTC
+- Latest run on `main`: https://github.com/NousResearch/hermes-agent/actions/runs/42159978892 — dark (conclusion: `cancelled`), 2026-11-06 04:01 UTC
 - Dark since: 2026-11-05 20:45 UTC (first run of the current streak)
 - Likely cause: run cancelled
 

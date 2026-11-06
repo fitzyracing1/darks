@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/public-apis/public-apis/issues/new
-- **Stars:** 496419 · **Generated:** 2026-11-06T00:51:57.865Z
+- **Stars:** 496486 · **Generated:** 2026-11-06T06:44:53.221Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title

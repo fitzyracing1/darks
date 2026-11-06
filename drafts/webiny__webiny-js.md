@@ -4,13 +4,13 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/webiny/webiny-js/issues/new
-- **Stars:** 8048 · **Generated:** 2026-11-06T00:51:57.865Z
+- **Stars:** 8048 · **Generated:** 2026-11-06T06:44:53.221Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 4 workflows dark on next ("Cloud infrastructure Cleanup", "Rebuild Global Cache ("dev" branch)", "Record E2E replay steps", +1 more)
+CI: 3 workflows dark on next ("Cloud infrastructure Cleanup", "Rebuild Global Cache ("dev" branch)", "Record E2E replay steps")
 <!-- END TITLE -->
 
 ## Body
@@ -42,7 +42,7 @@ time="2026-11-06T00:32:34Z" level=fatal msg=failed
 
 ### Rebuild Global Cache ("dev" branch) (`.github/workflows/rebuildGlobalCacheDev.yml`)
 
-- Latest run on `next`: https://github.com/webiny/webiny-js/actions/runs/41965279341 — dark (conclusion: `failure`), 2026-11-05 04:02 UTC
+- Latest run on `next`: https://github.com/webiny/webiny-js/actions/runs/42160073285 — dark (conclusion: `failure`), 2026-11-06 04:02 UTC
 - Dark since: 2026-10-10 04:04 UTC (first run of the current streak)
 - Job / step: `Cache dependencies and packages` → `Run actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09`
 - Likely cause: The process '/usr/bin/git' failed with exit code 1
@@ -54,9 +54,9 @@ hint:
 hint: Disable this message with "git config set advice.defaultBranchName false"
 Initialized empty Git repository in /home/runner/work/webiny-js/webiny-js/dev/.git/
 The process '/usr/bin/git' failed with exit code 1
-Waiting 18 seconds before trying again
+Waiting 19 seconds before trying again
 The process '/usr/bin/git' failed with exit code 1
-Waiting 18 seconds before trying again
+Waiting 12 seconds before trying again
 ##[error]The process '/usr/bin/git' failed with exit code 1
 ```
 
@@ -64,7 +64,7 @@ Waiting 18 seconds before trying again
 
 ### Record E2E replay steps (`.github/workflows/recordReplayCache.yml`)
 
-- Latest run on `next`: https://github.com/webiny/webiny-js/actions/runs/41952438304 — dark (conclusion: `failure`), 2026-11-05 02:01 UTC
+- Latest run on `next`: https://github.com/webiny/webiny-js/actions/runs/42147674400 — dark (conclusion: `failure`), 2026-11-06 02:01 UTC
 - Dark since: 2026-11-04 02:01 UTC (first run of the current streak)
 - Job / step: `Open the replay recordings PR` → `Commit recordings and open the PR`
 - Likely cause: GraphQL: Your token has not been granted the required scopes to execute this query. The 'login' field requires one of the following scopes: ['read:org'], but your token has only been granted the: ['repo'] scopes. Please…
@@ -77,30 +77,8 @@ From https://github.com/webiny/webiny-js
   origin/next
 Switched to a new branch 'next'
 branch 'next' set up to track 'origin/next'.
-dbf87a87228c18347da3c2d634e3f52699231c96
+b73f920f0d4a2d1d67750267ea7e4740013c3dd7
 GraphQL: Your token has not been granted the required scopes to execute this query. The 'login' field requires one of the following scopes: ['read:org'], but your token has only been granted the: ['repo'] scopes. Please…
-##[error]Process completed with exit code 1.
-```
-
-</details>
-
-### Push (`.github/workflows/push.yml`)
-
-- Latest run on `next`: https://github.com/webiny/webiny-js/actions/runs/42046234357 — dark (conclusion: `failure`), 2026-11-05 14:34 UTC
-- Dark since: 2026-11-05 14:34 UTC (first run of the current streak)
-- Job / step: `E2E (DDB+OS) - Project setup` → `E2E - run tests`
-- Likely cause: Tests  1 failed | 2 passed | 1 skipped (4)
-
-<details><summary>End of the job log</summary>
-
-```
- Test Files  1 failed | 2 passed (3)
-      Tests  1 failed | 2 passed | 1 skipped (4)
-   Start at  14:49:31
-   Duration  77.68s (1m 18s)
-     Traces  .e2e/results/ (2 pages, trace.md in each test's directory)
-      JUnit  .e2e/junit.xml
-   Markdown  .e2e/summary.md
 ##[error]Process completed with exit code 1.
 ```
 

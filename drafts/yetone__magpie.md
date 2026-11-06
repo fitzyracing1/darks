@@ -4,39 +4,24 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/yetone/magpie/issues/new
-- **Stars:** 30459 · **Generated:** 2026-11-06T00:51:57.865Z
+- **Stars:** 30730 · **Generated:** 2026-11-06T06:44:53.221Z
 - Nothing in this file has been sent anywhere.
+- **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: "Test" workflow failing on main since 2026-10-25
+CI: "Test" workflow getting cancelled on main since 2026-10-25
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! The **Test** workflow (`.github/workflows/test.yml`) on `main` has been failing since 2026-10-25. Here is what I saw, in case it's useful:
+Hi! The **Test** workflow (`.github/workflows/test.yml`) on `main` has been getting cancelled since 2026-10-25. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/yetone/magpie/actions/runs/42133890209 — dark (conclusion: `failure`), 2026-11-06 00:02 UTC
+- Latest run on `main`: https://github.com/yetone/magpie/actions/runs/42174020339 — dark (conclusion: `cancelled`), 2026-11-06 06:22 UTC
 - Dark since: 2026-10-25 04:42 UTC (first run of the current streak)
-- Job / step: `test (macos-latest)` → `Test`
-- Likely cause: warning: implicit conversion from enumeration type 'enum CGImageAlphaInfo' to different enumeration type 'CGBitmapInfo' (aka 'enum CGBitmapInfo') [-Wimplicit-enum-enum-cast] (internal/gui/trayimage_darwin.go:131)
-
-<details><summary>End of the job log</summary>
-
-```
-GOTOOLCHAIN='auto'
-GOTOOLDIR='/Users/runner/hostedtoolcache/go/1.26.8/arm64/pkg/tool/darwin_arm64'
-GOVCS=''
-GOVERSION='go1.26.8'
-GOWORK=''
-PKG_CONFIG='pkg-config'
-# github.com/yetone/magpie/internal/proc
-##[error]internal/proc/disclaim_darwin.go:35:19: warning: 'posix_spawn_file_actions_addchdir_np' is deprecated: first deprecated in macOS 26.0 - posix_spawn_file_actions_addchdir(3) has replaced posix_spawn_file_actions…
-```
-
-</details>
+- Likely cause: run cancelled
 
 If this is already known or expected, feel free to close. Thanks for maintaining magpie!
 
