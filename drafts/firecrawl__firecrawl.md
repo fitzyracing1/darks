@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/firecrawl/firecrawl/issues/new
-- **Stars:** 199385 · **Generated:** 2026-11-07T12:37:41.487Z
+- **Stars:** 199468 · **Generated:** 2026-11-07T18:36:17.303Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 

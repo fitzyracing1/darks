@@ -4,19 +4,21 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/mksglu/context-mode/issues/new
-- **Stars:** 33635 · **Generated:** 2026-11-07T12:37:41.487Z
+- **Stars:** 33645 · **Generated:** 2026-11-07T18:36:17.303Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: "readme-stats" workflow failing on main since 2026-11-05
+CI: 2 workflows dark on main ("readme-stats", "ci")
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! The **readme-stats** workflow (`.github/workflows/readme-stats.yml`) on `main` has been failing since 2026-11-05. Here is what I saw, in case it's useful:
+Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
+
+### readme-stats (`.github/workflows/readme-stats.yml`)
 
 - Latest run on `main`: https://github.com/mksglu/context-mode/actions/runs/42333701769 — dark (conclusion: `failure`), 2026-11-07 03:22 UTC
 - Dark since: 2026-11-05 03:23 UTC (first run of the current streak)
@@ -33,6 +35,28 @@ hint: have locally. This is usually caused by another repository pushing to
 hint: the same ref. If you want to integrate the remote changes, use
 hint: 'git pull' before pushing again.
 hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+##[error]Process completed with exit code 1.
+```
+
+</details>
+
+### ci (`.github/workflows/ci.yml`)
+
+- Latest run on `main`: https://github.com/mksglu/context-mode/actions/runs/42398651817 — dark (conclusion: `failure`), 2026-11-07 17:55 UTC
+- Dark since: 2026-11-07 17:55 UTC (first run of the current streak)
+- Job / step: `ci (windows-latest, node 24.15.0)` → `v2 unit tests (TECH-SPEC 6.2a, DEVIATIONS D-M1-13, same as gate layer v2-unit)`
+- Likely cause: expected: 0,
+
+<details><summary>End of the job log</summary>
+
+```
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 2,
+    expected: 0,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
 ##[error]Process completed with exit code 1.
 ```
 

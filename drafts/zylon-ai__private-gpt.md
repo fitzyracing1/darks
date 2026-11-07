@@ -4,7 +4,7 @@
 
 - **Status:** not for filing — upstream already has an open issue/PR about every dark workflow here
 - **Would be filed at:** https://github.com/zylon-ai/private-gpt/issues/new
-- **Stars:** 57631 · **Generated:** 2026-11-07T12:37:41.487Z
+- **Stars:** 57631 · **Generated:** 2026-11-07T18:36:17.303Z
 - Nothing in this file has been sent anywhere.
 
 ## Skipped: upstream already tracking

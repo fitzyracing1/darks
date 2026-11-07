@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/modelcontextprotocol/modelcontextprotocol/issues/new
-- **Stars:** 9633 · **Generated:** 2026-11-07T12:37:41.487Z
+- **Stars:** 9637 · **Generated:** 2026-11-07T18:36:17.303Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** latest run was skipped, not failed — probably not worth filing
 
