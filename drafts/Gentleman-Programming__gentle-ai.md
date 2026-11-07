@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/Gentleman-Programming/gentle-ai/issues/new
-- **Stars:** 8527 · **Generated:** 2026-11-07T00:51:57.642Z
+- **Stars:** 8542 · **Generated:** 2026-11-07T06:41:09.321Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -18,7 +18,7 @@ CI: "Windows Full Suite" workflow failing on main since 2026-11-06
 <!-- BEGIN BODY -->
 Hi! The **Windows Full Suite** workflow (`.github/workflows/windows-full-suite.yml`) on `main` has been failing since 2026-11-06. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/Gentleman-Programming/gentle-ai/actions/runs/42301831311 — dark (conclusion: `failure`), 2026-11-06 22:04 UTC
+- Latest run on `main`: https://github.com/Gentleman-Programming/gentle-ai/actions/runs/42333854697 — dark (conclusion: `failure`), 2026-11-07 03:24 UTC
 - Dark since: 2026-11-06 12:01 UTC (first run of the current streak)
 - Job / step: `Windows Full Suite (rest)` → `Run shard`
 - Likely cause: FAIL
@@ -26,11 +26,11 @@ Hi! The **Windows Full Suite** workflow (`.github/workflows/windows-full-suite.y
 <details><summary>End of the job log</summary>
 
 ```
-ok  	github.com/gentleman-programming/gentle-ai/v4/internal/update/upgrade	6.593s
-ok  	github.com/gentleman-programming/gentle-ai/v4/internal/verify	0.037s
-ok  	github.com/gentleman-programming/gentle-ai/v4/internal/versions	0.028s
+ok  	github.com/gentleman-programming/gentle-ai/v4/internal/update/upgrade	10.874s
+ok  	github.com/gentleman-programming/gentle-ai/v4/internal/verify	0.069s
+ok  	github.com/gentleman-programming/gentle-ai/v4/internal/versions	0.056s
 ?   	github.com/gentleman-programming/gentle-ai/v4/scripts	[no test files]
-ok  	github.com/gentleman-programming/gentle-ai/v4/scripts/crosslane	2.269s
+ok  	github.com/gentleman-programming/gentle-ai/v4/scripts/crosslane	3.220s
 ?   	github.com/gentleman-programming/gentle-ai/v4/scripts/gen-sdd-agent-digests	[no test files]
 FAIL
 ##[error]Process completed with exit code 1.

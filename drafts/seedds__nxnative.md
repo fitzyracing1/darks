@@ -4,14 +4,14 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/seedds/nxnative/issues/new
-- **Stars:** 12949 · **Generated:** 2026-11-07T00:51:57.642Z
+- **Stars:** 13061 · **Generated:** 2026-11-07T06:41:09.321Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 3 workflows dark on main ("fuzz", "lint-c", "tests")
+CI: 4 workflows dark on main ("fuzz", "lint-c", "tests", +1 more)
 <!-- END TITLE -->
 
 ## Body
@@ -43,31 +43,37 @@ artifact_prefix='findings/shader_split/'; Test unit written to findings/shader_s
 
 ### lint-c (`.github/workflows/lint-c.yml`)
 
-- Latest run on `main`: https://github.com/seedds/nxnative/actions/runs/42264410010 — dark (conclusion: `failure`), 2026-11-06 17:44 UTC
+- Latest run on `main`: https://github.com/seedds/nxnative/actions/runs/42345858953 — dark (conclusion: `cancelled`), 2026-11-07 06:11 UTC
 - Dark since: 2026-11-05 11:55 UTC (first run of the current streak)
-- Job / step: `clang-tidy (ratchet)` → `clang-tidy against the baseline`
-- Likely cause: Nullable pointer is passed to a callee that requires a non-null 1st parameter [clang-analyzer-nullability.NullablePassedToNonnull] (2 in this file, the baseline has 1) (dm/gfx/tests/t_pso_stall.m:44)
+- Likely cause: run cancelled
+
+### tests (`.github/workflows/tests.yml`)
+
+- Latest run on `main`: https://github.com/seedds/nxnative/actions/runs/42346980118 — dark (conclusion: `cancelled`), 2026-11-07 06:25 UTC
+- Dark since: 2026-11-06 01:42 UTC (first run of the current streak)
+- Likely cause: run cancelled
+
+### lint-python (`.github/workflows/lint-python.yml`)
+
+- Latest run on `main`: https://github.com/seedds/nxnative/actions/runs/42347228274 — dark (conclusion: `failure`), 2026-11-07 06:29 UTC
+- Dark since: 2026-11-07 04:16 UTC (first run of the current streak)
+- Job / step: `ruff and pyright (ratchet)` → `ruff and pyright against the baseline`
+- Likely cause: "group" is not a known attribute of "None" (dm/gfx/tools/dmsh_build.py:1425)
 
 <details><summary>End of the job log</summary>
 
 ```
-[239/243] dm/host/tests/t_vi_history.c: 0 findings
-[240/243] dm/host/tests/t_vorbis.c: 0 findings
-[241/243] dm/host/tests/t_watch_sample.c: 0 findings
-[242/243] dm/host/thread.c: 1 findings
-[243/243] dm/host/web_apple.m: 0 findings
-LLVM 23.1.4: 233 findings in 75 files, 128 file/check pairs
-dm/gfx/nvn/nvn_mtl.m: clang-analyzer-core.BitwiseShift: 1 findings, the baseline has 0
-##[error]Right operand is negative in left shift [clang-analyzer-core.BitwiseShift] (1 in this file, the baseline has 0)
+Using cached fonttools-4.67.0-cp314-cp314-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (5.3 MB)
+Using cached nodeenv-1.12.0-py3-none-any.whl (39 kB)
+Using cached typing_extensions-4.16.0-py3-none-any.whl (45 kB)
+Installing collected packages: typing-extensions, ruff, nodeenv, lz4, fonttools, capstone, pyright
+Successfully installed capstone-5.0.9 fonttools-4.67.0 lz4-4.4.5 nodeenv-1.12.0 pyright-1.1.414 ruff-0.17.2 typing-extensions-4.16.0
+[notice] A new release of pip is available: 26.2.2 -> 26.3
+[notice] To update, run: pip install --upgrade pip
+##[error]"group" is not a known attribute of "None"
 ```
 
 </details>
-
-### tests (`.github/workflows/tests.yml`)
-
-- Latest run on `main`: https://github.com/seedds/nxnative/actions/runs/42264409944 — dark (conclusion: `cancelled`), 2026-11-06 17:44 UTC
-- Dark since: 2026-11-06 01:42 UTC (first run of the current streak)
-- Likely cause: run cancelled
 
 If this is already known or expected, feel free to close. Thanks for maintaining nxnative!
 

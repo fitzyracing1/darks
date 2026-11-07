@@ -4,31 +4,22 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/anomalyco/opencode/issues/new
-- **Stars:** 225068 · **Generated:** 2026-11-07T00:51:57.642Z
+- **Stars:** 225114 · **Generated:** 2026-11-07T06:41:09.321Z
 - Nothing in this file has been sent anywhere.
-- **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 - **Note for Joshua:** latest run was skipped, not failed — probably not worth filing
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 2 workflows dark on dev ("release", "bot-docs-locale")
+CI: "bot-docs-locale" workflow not completing (runs skipped) on dev since 2026-11-06
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! A few workflows on `dev` have been dark recently. Details below, in case they're useful:
+Hi! The **bot-docs-locale** workflow (`.github/workflows/bot-docs-locale.yml`) on `dev` has been not completing (runs skipped) since 2026-11-06. Here is what I saw, in case it's useful:
 
-### release (`.github/workflows/release.yml`)
-
-- Latest run on `dev`: https://github.com/anomalyco/opencode/actions/runs/42316055115 — dark (conclusion: `cancelled`), 2026-11-07 00:05 UTC
-- Dark since: 2026-11-06 16:30 UTC (first run of the current streak)
-- Likely cause: run cancelled
-
-### bot-docs-locale (`.github/workflows/bot-docs-locale.yml`)
-
-- Latest run on `dev`: https://github.com/anomalyco/opencode/actions/runs/42266284628 — dark (conclusion: `skipped`), 2026-11-06 17:57 UTC
+- Latest run on `dev`: https://github.com/anomalyco/opencode/actions/runs/42333230453 — dark (conclusion: `skipped`), 2026-11-07 03:16 UTC
 - Dark since: 2026-11-06 17:57 UTC (first run of the current streak)
 - Likely cause: run skipped
 

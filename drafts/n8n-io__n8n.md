@@ -4,34 +4,24 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/n8n-io/n8n/issues/new
-- **Stars:** 209715 · **Generated:** 2026-11-07T00:51:57.642Z
+- **Stars:** 209726 · **Generated:** 2026-11-07T06:41:09.321Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** latest run was skipped, not failed — probably not worth filing
-- **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 2 workflows dark on master ("Security: Sync from Public", "CI: Master (Build, Test, Lint)")
+CI: "Security: Sync from Public" workflow not completing (runs skipped) on master since 2026-10-13
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! A few workflows on `master` have been dark recently. Details below, in case they're useful:
+Hi! The **Security: Sync from Public** workflow (`.github/workflows/sec-sync-public-to-private.yml`) on `master` has been not completing (runs skipped) since 2026-10-13. Here is what I saw, in case it's useful:
 
-### Security: Sync from Public (`.github/workflows/sec-sync-public-to-private.yml`)
-
-- Latest run on `master`: https://github.com/n8n-io/n8n/actions/runs/42318389519 — dark (conclusion: `skipped`), 2026-11-07 00:28 UTC
+- Latest run on `master`: https://github.com/n8n-io/n8n/actions/runs/42346303419 — dark (conclusion: `skipped`), 2026-11-07 06:17 UTC
 - Dark since: 2026-10-13 15:19 UTC (first run of the current streak)
 - Likely cause: run skipped
-
-### CI: Master (Build, Test, Lint) (`.github/workflows/ci-master.yml`)
-
-- Latest run on `master`: https://github.com/n8n-io/n8n/actions/runs/42225455849 — dark (conclusion: `failure`), 2026-11-06 13:26 UTC
-- Dark since: 2026-11-06 13:26 UTC (first run of the current streak)
-- Job / step: `Unit tests (26.12.1) / CLI Integration Tests (2/2)`
-- Likely cause: The self-hosted runner lost communication with the server. Verify the machine is running and has a healthy network connection. Anything in your workflow that terminates the runner process, starves it for CPU/Memory, or blocks its network ac
 
 If this is already known or expected, feel free to close. Thanks for maintaining n8n!
 

@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/xerj-org/xerj/issues/new
-- **Stars:** 18481 · **Generated:** 2026-11-07T00:51:57.642Z
+- **Stars:** 18497 · **Generated:** 2026-11-07T06:41:09.321Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
@@ -19,9 +19,9 @@ CI: "Release" workflow getting cancelled on main since 2026-11-06
 <!-- BEGIN BODY -->
 Hi! The **Release** workflow (`.github/workflows/release.yml`) on `main` has been getting cancelled since 2026-11-06. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/xerj-org/xerj/actions/runs/42156654351 — dark (conclusion: `cancelled`), 2026-11-06 03:27 UTC
+- Latest run on `main`: https://github.com/xerj-org/xerj/actions/runs/42333988641 — dark (conclusion: `cancelled`), 2026-11-07 03:26 UTC
 - Dark since: 2026-11-06 03:27 UTC (first run of the current streak)
-- Job / step: `Build x86_64-apple-darwin`
+- Job / step: `Build aarch64-apple-darwin`
 - Likely cause: The configuration 'macos-14-arm64-us-default' is not supported
 
 If this is already known or expected, feel free to close. Thanks for maintaining xerj!

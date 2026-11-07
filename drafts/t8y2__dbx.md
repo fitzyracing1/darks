@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/t8y2/dbx/issues/new
-- **Stars:** 29376 · **Generated:** 2026-11-07T00:51:57.642Z
+- **Stars:** 29397 · **Generated:** 2026-11-07T06:41:09.321Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
