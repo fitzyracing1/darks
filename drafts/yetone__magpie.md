@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/yetone/magpie/issues/new
-- **Stars:** 31198 · **Generated:** 2026-11-06T18:37:41.328Z
+- **Stars:** 31247 · **Generated:** 2026-11-07T00:51:57.642Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -18,7 +18,7 @@ CI: "Test" workflow failing on main since 2026-10-25
 <!-- BEGIN BODY -->
 Hi! The **Test** workflow (`.github/workflows/test.yml`) on `main` has been failing since 2026-10-25. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/yetone/magpie/actions/runs/42261423324 — dark (conclusion: `failure`), 2026-11-06 17:24 UTC
+- Latest run on `main`: https://github.com/yetone/magpie/actions/runs/42310695818 — dark (conclusion: `failure`), 2026-11-06 23:15 UTC
 - Dark since: 2026-10-25 04:42 UTC (first run of the current streak)
 - Job / step: `test (macos-latest)` → `Test`
 - Likely cause: internal/proc/disclaim_darwin.go:35:19: warning: 'posix_spawn_file_actions_addchdir_np' is deprecated: first deprecated in macOS 26.0 - posix_spawn_file_actions_addchdir(3) has replaced posix_spawn_file_actions_addchdir…

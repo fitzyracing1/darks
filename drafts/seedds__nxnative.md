@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/seedds/nxnative/issues/new
-- **Stars:** 12867 · **Generated:** 2026-11-06T18:37:41.328Z
+- **Stars:** 12949 · **Generated:** 2026-11-07T00:51:57.642Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
@@ -43,9 +43,25 @@ artifact_prefix='findings/shader_split/'; Test unit written to findings/shader_s
 
 ### lint-c (`.github/workflows/lint-c.yml`)
 
-- Latest run on `main`: https://github.com/seedds/nxnative/actions/runs/42257941680 — dark (conclusion: `cancelled`), 2026-11-06 17:02 UTC
+- Latest run on `main`: https://github.com/seedds/nxnative/actions/runs/42264410010 — dark (conclusion: `failure`), 2026-11-06 17:44 UTC
 - Dark since: 2026-11-05 11:55 UTC (first run of the current streak)
-- Likely cause: run cancelled
+- Job / step: `clang-tidy (ratchet)` → `clang-tidy against the baseline`
+- Likely cause: Nullable pointer is passed to a callee that requires a non-null 1st parameter [clang-analyzer-nullability.NullablePassedToNonnull] (2 in this file, the baseline has 1) (dm/gfx/tests/t_pso_stall.m:44)
+
+<details><summary>End of the job log</summary>
+
+```
+[239/243] dm/host/tests/t_vi_history.c: 0 findings
+[240/243] dm/host/tests/t_vorbis.c: 0 findings
+[241/243] dm/host/tests/t_watch_sample.c: 0 findings
+[242/243] dm/host/thread.c: 1 findings
+[243/243] dm/host/web_apple.m: 0 findings
+LLVM 23.1.4: 233 findings in 75 files, 128 file/check pairs
+dm/gfx/nvn/nvn_mtl.m: clang-analyzer-core.BitwiseShift: 1 findings, the baseline has 0
+##[error]Right operand is negative in left shift [clang-analyzer-core.BitwiseShift] (1 in this file, the baseline has 0)
+```
+
+</details>
 
 ### tests (`.github/workflows/tests.yml`)
 

@@ -4,53 +4,36 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/openclaw/openclaw/issues/new
-- **Stars:** 394046 · **Generated:** 2026-11-06T18:37:41.328Z
+- **Stars:** 394071 · **Generated:** 2026-11-07T00:51:57.642Z
 - Nothing in this file has been sent anywhere.
-- **Note for Joshua:** latest run was skipped, not failed — probably not worth filing
-- **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
-- **Note for Joshua:** cancelled by a concurrency group — likely noise
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 3 workflows dark on main ("Docs", "CI", "ClawSweeper Dispatch")
+CI: "CI" workflow failing on main since 2026-11-06
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
+Hi! The **CI** workflow (`.github/workflows/ci.yml`) on `main` has been failing since 2026-11-06. Here is what I saw, in case it's useful:
 
-### Docs (`.github/workflows/docs.yml`)
-
-- Latest run on `main`: https://github.com/openclaw/openclaw/actions/runs/42270484035 — dark (conclusion: `skipped`), 2026-11-06 18:24 UTC
+- Latest run on `main`: https://github.com/openclaw/openclaw/actions/runs/42319135354 — dark (conclusion: `failure`), 2026-11-07 00:35 UTC
 - Dark since: 2026-11-06 18:24 UTC (first run of the current streak)
-- Likely cause: run skipped
-
-### CI (`.github/workflows/ci.yml`)
-
-- Latest run on `main`: https://github.com/openclaw/openclaw/actions/runs/42271052874 — dark (conclusion: `cancelled`), 2026-11-06 18:28 UTC
-- Dark since: 2026-11-06 18:24 UTC (first run of the current streak)
-- Likely cause: run cancelled
-
-### ClawSweeper Dispatch (`.github/workflows/clawsweeper-dispatch.yml`)
-
-- Latest run on `main`: https://github.com/openclaw/openclaw/actions/runs/42271515501 — dark (conclusion: `cancelled`), 2026-11-06 18:31 UTC
-- Dark since: 2026-11-06 18:31 UTC (first run of the current streak)
-- Job / step: `dispatch` → `Debounce main push dispatch`
-- Likely cause: Canceling since a higher priority waiting request for clawsweeper-dispatch-openclaw/openclaw-refs/heads/main exists
+- Job / step: `security-fast` → `Check main push ratchets and protocol additions`
+- Likely cause: test-lines failed (exit 1)
 
 <details><summary>End of the job log</summary>
 
 ```
-Cache mode: write
-Prepare workflow directory
-Prepare all required actions
-Getting action download info
-Download action repository 'actions/create-github-app-token@64ab729a6294000f5aa4a4bc0b73d1f32bc45510' (SHA:64ab729a6294000f5aa4a4bc0b73d1f32bc45510)
-Download action repository 'actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1' (SHA:949feb2413d6458794dcd2491c4babbbce0c15c1)
-Complete job name: dispatch
-##[error]The operation was canceled.
+$ node --import ./scripts/tsx.mjs scripts/check-test-mock-exports.mts --base d1be6e243ccd850329d93567cb3ffd71e0ff837d --no-merge-base
+Mock factory ratchet OK: 6365 grandfathered factories.
+[ok] mock-exports
+$ node --import ./scripts/tsx.mjs scripts/check-test-lines-ratchet.mts --base d1be6e243ccd850329d93567cb3ffd71e0ff837d --no-merge-base
+Test lines: 6556043; ceiling: 6556042; over by: 1; net delta: +20.
+Offset the added lines by deleting or consolidating tests elsewhere, or add a justified allocation in config/test-lines-allocations/<change>.txt.
+[ELIFECYCLE] Command failed with exit code 1.
+##[error]test-lines failed (exit 1)
 ```
 
 </details>

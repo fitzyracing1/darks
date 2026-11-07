@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/storytold/photocraft/issues/new
-- **Stars:** 77433 · **Generated:** 2026-11-06T18:37:41.328Z
+- **Stars:** 77486 · **Generated:** 2026-11-07T00:51:57.642Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
@@ -43,7 +43,7 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### SonarCloud (`.github/workflows/sonarcloud.yml`)
 
-- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/42263666804 — dark (conclusion: `cancelled`), 2026-11-06 17:39 UTC
+- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/42316826925 — dark (conclusion: `cancelled`), 2026-11-07 00:12 UTC
 - Dark since: 2026-11-06 16:23 UTC (first run of the current streak)
 - Likely cause: run cancelled
 
