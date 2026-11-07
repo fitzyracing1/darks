@@ -4,13 +4,13 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/webiny/webiny-js/issues/new
-- **Stars:** 8049 · **Generated:** 2026-11-07T06:41:09.321Z
+- **Stars:** 8049 · **Generated:** 2026-11-07T12:37:41.487Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 3 workflows dark on next ("Cloud infrastructure Cleanup", "Rebuild Global Cache ("dev" branch)", "Record E2E replay steps")
+CI: 4 workflows dark on next ("Cloud infrastructure Cleanup", "Rebuild Global Cache ("dev" branch)", "Record E2E replay steps", +1 more)
 <!-- END TITLE -->
 
 ## Body
@@ -79,6 +79,28 @@ Switched to a new branch 'next'
 branch 'next' set up to track 'origin/next'.
 b73f920f0d4a2d1d67750267ea7e4740013c3dd7
 GraphQL: Your token has not been granted the required scopes to execute this query. The 'login' field requires one of the following scopes: ['read:org'], but your token has only been granted the: ['repo'] scopes. Please…
+##[error]Process completed with exit code 1.
+```
+
+</details>
+
+### Push (`.github/workflows/push.yml`)
+
+- Latest run on `next`: https://github.com/webiny/webiny-js/actions/runs/42365978600 — dark (conclusion: `failure`), 2026-11-07 10:55 UTC
+- Dark since: 2026-11-07 10:55 UTC (first run of the current streak)
+- Job / step: `E2E (DDB+OS) - Project setup` → `Deploy Core`
+- Likely cause: 1 errored
+
+<details><summary>End of the job log</summary>
+
+```
+        at processTicksAndRejections (node:internal/process/task_queues:85:11) {
+      promise: Promise { <rejected> [Circular *1] }
+    }
+Resources:
+    + 24 created
+    1 errored
+Duration: 38s
 ##[error]Process completed with exit code 1.
 ```
 

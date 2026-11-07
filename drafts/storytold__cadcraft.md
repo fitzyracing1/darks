@@ -4,7 +4,7 @@
 
 - **Status:** not for filing — upstream already has an open issue/PR about every dark workflow here
 - **Would be filed at:** https://github.com/storytold/cadcraft/issues/new
-- **Stars:** 7759 · **Generated:** 2026-11-07T06:41:09.321Z
+- **Stars:** 7767 · **Generated:** 2026-11-07T12:37:41.487Z
 - Nothing in this file has been sent anywhere.
 
 ## Skipped: upstream already tracking

@@ -4,8 +4,9 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/open-metadata/OpenMetadata/issues/new
-- **Stars:** 15703 · **Generated:** 2026-11-07T06:41:09.321Z
+- **Stars:** 15706 · **Generated:** 2026-11-07T12:37:41.487Z
 - Nothing in this file has been sent anywhere.
+- **Note for Joshua:** cancelled by a concurrency group — likely noise
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
@@ -21,7 +22,7 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### Merge Queue Dequeue Report (`.github/workflows/merge-queue-dequeue-report.yml`)
 
-- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/42338500324 — dark (conclusion: `failure`), 2026-11-07 04:26 UTC
+- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/42370872115 — dark (conclusion: `failure`), 2026-11-07 12:04 UTC
 - Dark since: 2026-11-03 21:06 UTC (first run of the current streak)
 - Job / step: `evict-main-conflicts` → `Remove queue entries that conflict with main`
 - Likely cause: cannot iterate over: null
@@ -43,7 +44,7 @@ cannot iterate over: null
 
 ### Integration Tests - MySQL + Elasticsearch (`.github/workflows/integration-tests-mysql-elasticsearch.yml`)
 
-- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/42298202457 — dark (conclusion: `failure`), 2026-11-06 21:37 UTC
+- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/42359512495 — dark (conclusion: `failure`), 2026-11-07 09:23 UTC
 - Dark since: 2026-11-05 11:11 UTC (first run of the current streak)
 - Job / step: `Integration Test Lane (global-state)` → `Run Integration Tests (MySQL + Elasticsearch)`
 - Likely cause: [ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
@@ -65,7 +66,7 @@ cannot iterate over: null
 
 ### Integration Tests - PostgreSQL + OpenSearch (`.github/workflows/integration-tests-postgres-opensearch.yml`)
 
-- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/42298202774 — dark (conclusion: `failure`), 2026-11-06 21:37 UTC
+- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/42359512474 — dark (conclusion: `failure`), 2026-11-07 09:23 UTC
 - Dark since: 2026-11-05 11:11 UTC (first run of the current streak)
 - Job / step: `Integration Test Lane (global-state)` → `Run Integration Tests (PostgreSQL + OpenSearch)`
 - Likely cause: [ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
@@ -87,7 +88,7 @@ cannot iterate over: null
 
 ### Integration Tests - PostgreSQL + Elasticsearch + Redis (`.github/workflows/integration-tests-postgres-elasticsearch-redis.yml`)
 
-- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/42298202660 — dark (conclusion: `failure`), 2026-11-06 21:37 UTC
+- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/42359512486 — dark (conclusion: `failure`), 2026-11-07 09:23 UTC
 - Dark since: 2026-11-06 10:36 UTC (first run of the current streak)
 - Job / step: `Integration Test Lane (parallel)` → `Run Integration Tests (PostgreSQL + Elasticsearch + Redis)`
 - Likely cause: [ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
@@ -109,7 +110,7 @@ cannot iterate over: null
 
 ### monitor-slack-link (`.github/workflows/monitor-slack-link.yml`)
 
-- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/42346158254 — dark (conclusion: `failure`), 2026-11-07 06:15 UTC
+- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/42371513948 — dark (conclusion: `failure`), 2026-11-07 12:13 UTC
 - Dark since: 2026-11-06 22:08 UTC (first run of the current streak)
 - Job / step: `monitor-slack-link` → `Set up Python 3.9`
 - Likely cause: The version '3.9' with architecture 'x64' was not found for Ubuntu 26.04.
@@ -117,12 +118,12 @@ cannot iterate over: null
 <details><summary>End of the job log</summary>
 
 ```
-Updating files:  99% (26998/27270)
-Updating files: 100% (27270/27270)
-Updating files: 100% (27270/27270), done.
+Updating files:  99% (26984/27256)
+Updating files: 100% (27256/27256)
+Updating files: 100% (27256/27256), done.
 Switched to a new branch 'main'
 branch 'main' set up to track 'origin/main'.
-3ae2bf85de11e668c26a291a1dabd344c8979d72
+8118302f227a30674e8111b06bc25d14cc40988c
 Version 3.9 was not found in the local cache
 ##[error]The version '3.9' with architecture 'x64' was not found for Ubuntu 26.04.
 ```
@@ -131,25 +132,10 @@ Version 3.9 was not found in the local cache
 
 ### Populate Playwright CI caches (`.github/workflows/populate-playwright-caches.yml`)
 
-- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/42345297449 — dark (conclusion: `failure`), 2026-11-07 06:03 UTC
+- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/42370811803 — dark (conclusion: `cancelled`), 2026-11-07 12:03 UTC
 - Dark since: 2026-11-07 00:05 UTC (first run of the current streak)
-- Job / step: `populate` → `Report warm failures`
-- Likely cause: cache warmers failed: browser — downstream runs stay on the previous main-scoped copies (or the resilient miss path) until the next populate
-
-<details><summary>End of the job log</summary>
-
-```
-Received 432 of 432 (100.0%), 0.0 MBs/sec
-Cache Size: ~0 MB (432 B)
-[command]/usr/bin/tar -xf /home/runner/work/_temp/3f1333af-f0c5-4025-962a-9b0af3d849fa/cache.tzst -P -C /home/runner/work/OpenMetadata/OpenMetadata --use-compress-program unzstd
-Cache restored successfully
-Cache restored from key: Linux-playwright-f610a2dca1c82dfa7e9b43390b7cb2f6aac1388645c9d65f21d0f27da55923d4
-Failed to install browsers
-Error: ERROR: Playwright does not support chromium on ubuntu26.04-x64
-##[error]Process completed with exit code 1.
-```
-
-</details>
+- Job / step: `warm-venv (3.10)`
+- Likely cause: Canceling since a higher priority waiting request for populate-playwright-caches-venv-3.10 exists
 
 ### security-scan (`.github/workflows/security-scan.yml`)
 

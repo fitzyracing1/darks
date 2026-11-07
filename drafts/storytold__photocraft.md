@@ -4,13 +4,14 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/storytold/photocraft/issues/new
-- **Stars:** 77538 · **Generated:** 2026-11-07T06:41:09.321Z
+- **Stars:** 77605 · **Generated:** 2026-11-07T12:37:41.487Z
 - Nothing in this file has been sent anywhere.
+- **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 2 workflows dark on main ("Perf (nightly)", "FreeBSD")
+CI: 4 workflows dark on main ("Perf (nightly)", "FreeBSD", "CI", +1 more)
 <!-- END TITLE -->
 
 ## Body
@@ -61,6 +62,34 @@ Caused by:
 ```
 
 </details>
+
+### CI (`.github/workflows/ci.yml`)
+
+- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/42367473515 — dark (conclusion: `failure`), 2026-11-07 11:16 UTC
+- Dark since: 2026-11-07 10:56 UTC (first run of the current streak)
+- Job / step: `gate / gate (ubuntu-24.04)` → `Gate`
+- Likely cause: skip  panic_hunt
+
+<details><summary>End of the job log</summary>
+
+```
+  ok    layers
+  FAIL  scorecard: docs/scorecard.md is stale: run `cargo xtask scorecard` and commit the result
+  skip  test
+  skip  panic_hunt
+  skip  doctest
+  skip  wasm
+  skip  i18n
+##[error]Process completed with exit code 1.
+```
+
+</details>
+
+### SonarCloud (`.github/workflows/sonarcloud.yml`)
+
+- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/42367168675 — dark (conclusion: `cancelled`), 2026-11-07 11:12 UTC
+- Dark since: 2026-11-07 10:57 UTC (first run of the current streak)
+- Likely cause: run cancelled
 
 If this is already known or expected, feel free to close. Thanks for maintaining photocraft!
 

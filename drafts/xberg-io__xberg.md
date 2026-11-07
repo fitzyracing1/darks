@@ -4,13 +4,15 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/xberg-io/xberg/issues/new
-- **Stars:** 9558 · **Generated:** 2026-11-07T06:41:09.321Z
+- **Stars:** 9562 · **Generated:** 2026-11-07T12:37:41.487Z
 - Nothing in this file has been sent anywhere.
+- **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
+- **Note for Joshua:** cancelled by a concurrency group — likely noise
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 2 workflows dark on main ("CI Rust", "CI E2E")
+CI: 3 workflows dark on main ("CI Rust", "CI E2E", "CI Integrations")
 <!-- END TITLE -->
 
 ## Body
@@ -20,47 +22,37 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### CI Rust (`.github/workflows/ci-rust.yaml`)
 
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/42332044318 — dark (conclusion: `failure`), 2026-11-07 03:01 UTC
+- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/42368991545 — dark (conclusion: `cancelled`), 2026-11-07 11:37 UTC
 - Dark since: 2026-10-25 18:30 UTC (first run of the current streak)
-- Job / step: `Rust (macos-26)` → `Run tests`
-- Likely cause: [rust:test:ci] ERROR task failed
-
-<details><summary>End of the job log</summary>
-
-```
-Filesystem      Size    Used   Avail Capacity iused ifree %iused  Mounted on
-/dev/disk2s5   320Gi   282Gi    16Gi    95%    2.1M  168M    1%   /System/Volumes/Data
-Cargo environment:
-cargo 1.99.1 (5f94df478 2026-08-27)
-rustc 1.99.1 (58cf8f9c3 2026-10-13)
-Finished in 6372.77s
-[rust:test:ci] ERROR task failed
-##[error]Process completed with exit code 1.
-```
-
-</details>
+- Likely cause: run cancelled
 
 ### CI E2E (`.github/workflows/ci-e2e.yaml`)
 
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/42332044292 — dark (conclusion: `failure`), 2026-11-07 03:01 UTC
+- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/42368991536 — dark (conclusion: `cancelled`), 2026-11-07 11:37 UTC
 - Dark since: 2026-11-03 17:32 UTC (first run of the current streak)
-- Job / step: `E2E (swift)` → `Run e2e tests (swift, instrumented)`
-- Likely cause: Compiling swift-bridge v0.1.59
+- Job / step: `Build FFI (x86_64-unknown-linux-gnu)` → `Set up job`
+- Likely cause: Canceling since a higher priority waiting request for ci-e2e-refs/heads/main exists
 
 <details><summary>End of the job log</summary>
 
 ```
-   Compiling org v0.3.1
-   Compiling jotdown v0.10.0
-   Compiling similar v3.2.1
-   Compiling minijinja v3.0.5
-   Compiling xberg-swift v1.4.0 (/home/runner/work/xberg/xberg/packages/swift/rust)
-   Compiling swift-bridge-macro v0.1.59
-   Compiling swift-bridge v0.1.59
-##[error]Process completed with exit code 143.
+Getting action download info
+Download action repository 'actions/checkout@v7' (SHA:3d3c42e5aac5ba805825da76410c181273ba90b1)
+Download action repository 'actions/cache@v6' (SHA:55cc8345863c7cc4c66a329aec7e433d2d1c52a9)
+Download action repository 'xberg-io/actions@v1' (SHA:5038579d377ef72d097769c0fddc7ca6dc08c487)
+Download action repository 'actions/upload-artifact@v7' (SHA:cf430e030ddbb5b0abf93d22962f4752f3646cd9)
+Getting action download info
+Download action repository 'actions-rust-lang/setup-rust-toolchain@v2' (SHA:a188e68d0fd2bd36ad51dccb2b07ba6e75105f30)
+##[error]A task was canceled.
 ```
 
 </details>
+
+### CI Integrations (`.github/workflows/ci-integrations.yaml`)
+
+- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/42368991534 — dark (conclusion: `cancelled`), 2026-11-07 11:37 UTC
+- Dark since: 2026-11-07 11:34 UTC (first run of the current streak)
+- Likely cause: run cancelled
 
 If this is already known or expected, feel free to close. Thanks for maintaining xberg!
 

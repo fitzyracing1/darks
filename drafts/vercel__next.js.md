@@ -4,41 +4,19 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/vercel/next.js/issues/new
-- **Stars:** 143371 · **Generated:** 2026-11-07T06:41:09.321Z
+- **Stars:** 143379 · **Generated:** 2026-11-07T12:37:41.487Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 4 workflows dark on canary ("build-and-test", "Update Font Data", "Rspack Next.js production integration tests", +1 more)
+CI: 3 workflows dark on canary ("Update Font Data", "Rspack Next.js production integration tests", "Rspack Next.js development integration tests")
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
 Hi! A few workflows on `canary` have been dark recently. Details below, in case they're useful:
-
-### build-and-test (`.github/workflows/build_and_test.yml`)
-
-- Latest run on `canary`: https://github.com/vercel/next.js/actions/runs/42310892362 — dark (conclusion: `failure`), 2026-11-06 23:17 UTC
-- Dark since: 2026-11-06 23:17 UTC (first run of the current streak)
-- Job / step: `test rspack dev (4/5, 18.3.1) / build` → `Run export NEXT_EXTERNAL_TESTS_FILTERS="$(pwd)/test/rspack-dev-tests-manifest.json"`
-- Likely cause: Some tests failed
-
-<details><summary>End of the job log</summary>
-
-```
-test/e2e/prerender-fallback-encoding/prerender-fallback-encoding.test.ts finished on retry 0/2 in 73.238s
-test/e2e/trailing-slashes/without-trailing-slash.test.ts finished on retry 0/2 in 24.328s
-test/e2e/vary-header/test/index.test.ts finished on retry 0/2 in 7.473s
-test/e2e/worker-react-refresh/worker-react-refresh.test.tsx finished on retry 0/2 in 9.789s
-Some tests failed
-Successfully updated test timings in KV store
-exiting with code 1
-##[error]Process completed with exit code 1.
-```
-
-</details>
 
 ### Update Font Data (`.github/workflows/update_fonts_data.yml`)
 

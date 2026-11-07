@@ -4,13 +4,14 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/huggingface/transformers/issues/new
-- **Stars:** 168612 · **Generated:** 2026-11-07T06:41:09.321Z
+- **Stars:** 168621 · **Generated:** 2026-11-07T12:37:41.487Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** workflow failed to start (config/permissions on their side)
 - **Note for Joshua:** self-hosted runner problem — maintainers usually know
 
 ## Skipped: upstream already tracking
 
+- Build docker images (scheduled) (`.github/workflows/build-docker-images.yml`): [issue #50220](https://github.com/huggingface/transformers/issues/50220) "CI: build-docker-images Doc builder failing: pyarrow requires NumPy>=2.0 but image has 1.26.4"
 - Check Tiny Models (`.github/workflows/check_tiny_models.yml`): [issue #50221](https://github.com/huggingface/transformers/issues/50221) "CI: check_tiny_models failing: `from datasets import load_dataset` ImportError — pyarrow needs NumPy>=2.0 (found 1.26.4)"
 
 These workflows are left out of the body below.
@@ -18,7 +19,7 @@ These workflows are left out of the body below.
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 7 workflows dark on main ("PR CI", "Self-hosted runner (nightly-past-ci-caller)", "Self-hosted runner (Intel Gaudi3 scheduled CI caller)", +4 more)
+CI: 8 workflows dark on main ("PR CI", "Self-hosted runner (nightly-past-ci-caller)", "Self-hosted runner (Intel Gaudi3 scheduled CI caller)", +5 more)
 <!-- END TITLE -->
 
 ## Body
@@ -69,6 +70,28 @@ drwxr-xr-x.  1 root root    55 Nov  7 00:39 src
 drwxr-xr-x.  1 root root   111 Nov  7 04:14 tests
 drwxr-xr-x.  1 root root    25 Nov  7 00:39 utils
 ##[error]Error: failed to run script step: command terminated with non-zero exit code: error executing command [sh -e /__w/_temp/af32a210-da61-11f1-9e90-15f22c7babb9.sh], exit code 1
+```
+
+</details>
+
+### Nvidia CI (`.github/workflows/self-scheduled-caller.yml`)
+
+- Latest run on `main`: https://github.com/huggingface/transformers/actions/runs/42328939060 — dark (conclusion: `failure`), 2026-11-07 02:22 UTC
+- Dark since: 2026-11-07 02:22 UTC (first run of the current streak)
+- Job / step: `Kernels CI / Kernel tests (aws-g5-4xlarge-cache)` → `Run kernel tests on GPU`
+- Likely cause: Executing the custom container implementation failed. Please contact your self hosted runner administrator.
+
+<details><summary>End of the job log</summary>
+
+```
+ERROR tests/kernels/test_kernels.py::TestHubKernels::test_kernels_mapping_explicit_version - ImportError: cannot import name 'BaseHTTPResponse' from 'urllib3' (/opt/venv/lib/python3.11/site-packages/urllib3/__init__.py)
+ERROR tests/kernels/test_kernels.py::TestHubKernels::test_kernels_mapping_functions_registration - ImportError: cannot import name 'BaseHTTPResponse' from 'urllib3' (/opt/venv/lib/python3.11/site-packages/urllib3/__init…
+ERROR tests/kernels/test_kernels.py::TestHubKernels::test_kernels_mapping_no_inherit - ImportError: cannot import name 'BaseHTTPResponse' from 'urllib3' (/opt/venv/lib/python3.11/site-packages/urllib3/__init__.py)
+ERROR tests/kernels/test_kernels.py::TestHubKernels::test_rocm_rotary_kernel_forward_matches_baseline - ImportError: cannot import name 'BaseHTTPResponse' from 'urllib3' (/opt/venv/lib/python3.11/site-packages/urllib3/_…
+ERROR tests/kernels/test_kernels.py::TestHubKernels::test_setter_use_kernels - ImportError: cannot import name 'BaseHTTPResponse' from 'urllib3' (/opt/venv/lib/python3.11/site-packages/urllib3/__init__.py)
+ERROR tests/kernels/test_kernels.py::TestHubKernels::test_unkernelize - ImportError: cannot import name 'BaseHTTPResponse' from 'urllib3' (/opt/venv/lib/python3.11/site-packages/urllib3/__init__.py)
+=================== 1 failed, 20 passed, 16 errors in 23.20s ===================
+##[error]Error: failed to run script step: command terminated with non-zero exit code: error executing command [sh -e /__w/_temp/94d47100-da52-11f1-9d1f-839cea5f7a67.sh], exit code 1
 ```
 
 </details>
