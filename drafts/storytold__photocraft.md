@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/storytold/photocraft/issues/new
-- **Stars:** 77688 · **Generated:** 2026-11-07T18:36:17.303Z
+- **Stars:** 77738 · **Generated:** 2026-11-08T00:55:40.555Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
@@ -65,7 +65,7 @@ Caused by:
 
 ### SonarCloud (`.github/workflows/sonarcloud.yml`)
 
-- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/42400418345 — dark (conclusion: `cancelled`), 2026-11-07 18:16 UTC
+- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/42430848945 — dark (conclusion: `cancelled`), 2026-11-08 00:40 UTC
 - Dark since: 2026-11-07 10:57 UTC (first run of the current streak)
 - Likely cause: run cancelled
 

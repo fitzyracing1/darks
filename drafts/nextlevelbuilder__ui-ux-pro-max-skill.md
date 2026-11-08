@@ -4,13 +4,13 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/issues/new
-- **Stars:** 146483 · **Generated:** 2026-11-07T18:36:17.303Z
+- **Stars:** 146549 · **Generated:** 2026-11-08T00:55:40.555Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 2 workflows dark on main ("Release", "Refresh upstream catalogs")
+CI: 3 workflows dark on main ("Release", "Refresh upstream catalogs", "Check asset sync")
 <!-- END TITLE -->
 
 ## Body
@@ -20,7 +20,7 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### Release (`.github/workflows/release.yml`)
 
-- Latest run on `main`: https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/actions/runs/42389417383 — dark (conclusion: `failure`), 2026-11-07 16:04 UTC
+- Latest run on `main`: https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/actions/runs/42404475408 — dark (conclusion: `failure`), 2026-11-07 19:05 UTC
 - Dark since: 2026-10-03 16:05 UTC (first run of the current streak)
 - Job / step: `Semantic release` → `Run semantic-release`
 - Likely cause: at default (file:///home/runner/.npm/_npx/63271f8df082dd7b/node_modules/@semantic-release/npm/lib/get-error.js:7:10)
@@ -58,6 +58,28 @@ Artifact catalog-refresh-review-41382860750 has been successfully uploaded! Fina
 Artifact download URL: https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/actions/runs/41382860750/artifacts/13113584892
 A catalog candidate failed validation; inspect the uploaded review artifact.
 ##[error]Process completed with exit code 1.
+```
+
+</details>
+
+### Check asset sync (`.github/workflows/check-asset-sync.yml`)
+
+- Latest run on `main`: https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/actions/runs/42404475367 — dark (conclusion: `failure`), 2026-11-07 19:05 UTC
+- Dark since: 2026-11-07 19:05 UTC (first run of the current streak)
+- Job / step: `cli/assets and .claude/skills/ui-ux-pro-max must match src/ui-ux-pro-max` → `Path contract - no install-specific skill paths`
+- Likely cause: project- or variable-rooted skill paths (.claude/skills/<skill>, $HOME/..., ${CLAUDE_PLUGIN_ROOT}/... outside the core skill) only resolve for one install layout - use skill-relative paths (see #474); grep rc=0
+
+<details><summary>End of the job log</summary>
+
+```
+node: v20.20.2
+npm: 10.8.2
+yarn: 1.22.22
+> ui-ux-pro-max-cli@2.5.0 check:assets
+> node scripts/sync-assets.mjs --check
+Assets are in sync.
+.claude/skills/ui-ux-pro-max/scripts/tests/test_ime_composition.py:25:                         ".claude/skills/ui-ux-pro-max/references/quick-reference.md"):
+##[error]project- or variable-rooted skill paths (.claude/skills/<skill>, $HOME/..., ${CLAUDE_PLUGIN_ROOT}/... outside the core skill) only resolve for one install layout - use skill-relative paths (see #474); grep rc=0
 ```
 
 </details>

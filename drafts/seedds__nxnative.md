@@ -4,9 +4,8 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/seedds/nxnative/issues/new
-- **Stars:** 13289 · **Generated:** 2026-11-07T18:36:17.303Z
+- **Stars:** 13365 · **Generated:** 2026-11-08T00:55:40.555Z
 - Nothing in this file has been sent anywhere.
-- **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
@@ -43,15 +42,47 @@ artifact_prefix='findings/shader_split/'; Test unit written to findings/shader_s
 
 ### lint-c (`.github/workflows/lint-c.yml`)
 
-- Latest run on `main`: https://github.com/seedds/nxnative/actions/runs/42396749017 — dark (conclusion: `cancelled`), 2026-11-07 17:31 UTC
+- Latest run on `main`: https://github.com/seedds/nxnative/actions/runs/42397724011 — dark (conclusion: `failure`), 2026-11-07 17:43 UTC
 - Dark since: 2026-11-05 11:55 UTC (first run of the current streak)
-- Likely cause: run cancelled
+- Job / step: `clang-tidy (ratchet)` → `clang-tidy against the baseline`
+- Likely cause: Dereference of null pointer [clang-analyzer-core.NullDereference] (10 in this file, the baseline has 9) (dm/gfx/nvn/nvn_mtl.m:13095)
+
+<details><summary>End of the job log</summary>
+
+```
+[249/253] dm/host/tests/t_vi_history.c: 0 findings
+[250/253] dm/host/tests/t_vorbis.c: 0 findings
+[251/253] dm/host/tests/t_watch_sample.c: 0 findings
+[252/253] dm/host/thread.c: 1 findings
+[253/253] dm/host/web_apple.m: 0 findings
+LLVM 23.1.4: 239 findings in 78 files, 133 file/check pairs
+dm/gfx/nvn/nvn_mtl.m: clang-analyzer-core.BitwiseShift: 1 findings, the baseline has 0
+##[error]Right operand is negative in left shift [clang-analyzer-core.BitwiseShift] (1 in this file, the baseline has 0)
+```
+
+</details>
 
 ### tests (`.github/workflows/tests.yml`)
 
-- Latest run on `main`: https://github.com/seedds/nxnative/actions/runs/42396748927 — dark (conclusion: `cancelled`), 2026-11-07 17:31 UTC
+- Latest run on `main`: https://github.com/seedds/nxnative/actions/runs/42397724075 — dark (conclusion: `failure`), 2026-11-07 17:43 UTC
 - Dark since: 2026-11-06 01:42 UTC (first run of the current streak)
-- Likely cause: run cancelled
+- Job / step: `Tool tests` → `Run the test files`
+- Likely cause: dm/ios/tests/test_xcode_workflow.py failed
+
+<details><summary>End of the job log</summary>
+
+```
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 1 != 0 : quoted in the docs but read nowhere (check that each mention says it was removed): DM_NVN_CUT_FIRST DM_NVN_RT_RECLAIM DM_NVN_VC_WAYS
+docs/env_switches.tsv does not list the switches the code reads: run dm/tools/env_switches.py, then write the new rows' meanings
+switches without a meaning or a class (one of player, path, switch, diagnostic, test): DM_NVN_BC_ALIAS
+----------------------------------------------------------------------
+Ran 1 test in 1.604s
+FAILED (failures=1)
+##[error]dm/tools/tests/test_env_switches.py failed
+```
+
+</details>
 
 If this is already known or expected, feel free to close. Thanks for maintaining nxnative!
 

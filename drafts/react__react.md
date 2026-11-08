@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/react/react/issues/new
-- **Stars:** 252360 · **Generated:** 2026-11-07T18:36:17.303Z
+- **Stars:** 252365 · **Generated:** 2026-11-08T00:55:40.555Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -18,9 +18,9 @@ CI: "(DevTools) Regression Tests" workflow failing on main since 2026-10-11
 <!-- BEGIN BODY -->
 Hi! The **(DevTools) Regression Tests** workflow (`.github/workflows/devtools_regression_tests.yml`) on `main` has been failing since 2026-10-11. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/react/react/actions/runs/42315786798 — dark (conclusion: `failure`), 2026-11-07 00:02 UTC
+- Latest run on `main`: https://github.com/react/react/actions/runs/42428008159 — dark (conclusion: `failure`), 2026-11-08 00:03 UTC
 - Dark since: 2026-10-11 00:06 UTC (first run of the current streak)
-- Job / step: `Run DevTools tests for versions (18.2)` → `Run node ./scripts/jest/jest-cli.js --build --project devtools --release-channel=experimental --reactVersion 18.2 --ci`
+- Job / step: `Run DevTools tests for versions (18.0)` → `Run node ./scripts/jest/jest-cli.js --build --project devtools --release-channel=experimental --reactVersion 18.0 --ci`
 - Likely cause: Snapshots:   27 failed, 260 passed, 287 total
 
 <details><summary>End of the job log</summary>
@@ -28,10 +28,10 @@ Hi! The **(DevTools) Regression Tests** workflow (`.github/workflows/devtools_re
 ```
 Snapshot Summary
  › 27 snapshots failed from 2 test suites. Inspect your code changes or re-run jest with `-u` to update them.
-Test Suites: 2 failed, 20 skipped, 20 passed, 22 of 42 total
-Tests:       4 failed, 440 skipped, 182 passed, 626 total
+Test Suites: 2 failed, 21 skipped, 19 passed, 21 of 42 total
+Tests:       4 failed, 442 skipped, 180 passed, 626 total
 Snapshots:   27 failed, 260 passed, 287 total
-Time:        16.389 s
+Time:        16.78 s
 Ran all test suites.
 ##[error]Process completed with exit code 1.
 ```

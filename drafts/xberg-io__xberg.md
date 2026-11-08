@@ -4,14 +4,14 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/xberg-io/xberg/issues/new
-- **Stars:** 9562 · **Generated:** 2026-11-07T18:36:17.303Z
+- **Stars:** 9564 · **Generated:** 2026-11-08T00:55:40.555Z
 - Nothing in this file has been sent anywhere.
-- **Note for Joshua:** cancelled by a concurrency group — likely noise
+- **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 3 workflows dark on main ("CI Rust", "CI E2E", "CI Integrations")
+CI: 2 workflows dark on main ("CI Rust", "CI E2E")
 <!-- END TITLE -->
 
 ## Body
@@ -21,66 +21,44 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### CI Rust (`.github/workflows/ci-rust.yaml`)
 
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/42398179157 — dark (conclusion: `cancelled`), 2026-11-07 17:49 UTC
+- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/42421238077 — dark (conclusion: `failure`), 2026-11-07 22:34 UTC
 - Dark since: 2026-10-25 18:30 UTC (first run of the current streak)
-- Job / step: `Rust tract-only (no-ORT)` → `Run ./.github/actions/qualify-ocr-orientation`
-- Likely cause: Canceling since a higher priority waiting request for ci-rust-refs/heads/main exists
+- Job / step: `Narrow feature leg (wasm-target, wasm32)` → `cargo check -p xberg --no-default-features --features wasm-target --target wasm32-unknown-unknown`
+- Likely cause: cannot find value 'tall_source_candidate' in this scope (crates/xberg/src/extractors/pdf/ocr/pipeline.rs:1726)
 
 <details><summary>End of the job log</summary>
 
 ```
-     Running tests/ocr_explicit_sideways_2496.rs (target/debug/deps/ocr_explicit_sideways_2496-c3fd148be316053a)
-running 15 tests
-test cached_context_changed_during_extraction_is_not_written ... ok
-test cached_engine_bytes_recover_when_osd_is_installed_without_changing_the_configuration ... ok
-test cached_file_recovers_when_osd_is_installed_without_changing_the_configuration ... ok
-test caller_psm1_word_elements_on_an_upside_down_page_carry_no_internal_marker ... ok
-test explicit_language_block_recovers_the_counterclockwise_source_grid ... ok
-##[error]The operation was canceled.
+warning: xberg-tesseract@1.4.0: Patch command failed, will apply programmatic fixups.
+warning: xberg-tesseract@1.4.0: wasm32-wasi-clang: warning: argument '--target=wasm32-wasi' is deprecated, use --target=wasm32-wasip1 instead [-Wdeprecated]
+warning: xberg-tesseract@1.4.0: wasm32-wasi-clang: warning: argument '--target=wasm32-wasi' is deprecated, use --target=wasm32-wasip1 instead [-Wdeprecated]
+warning: xberg-tesseract@1.4.0: wasm32-wasi-clang: warning: argument '--target=wasm32-wasi' is deprecated, use --target=wasm32-wasip1 instead [-Wdeprecated]
+warning: xberg-tesseract@1.4.0: wasm32-wasi-clang: warning: argument '--target=wasm32-wasi' is deprecated, use --target=wasm32-wasip1 instead [-Wdeprecated]
+warning: ignoring -C extra-filename flag due to -o flag
+error[E0433]: cannot find `tall_source` in `super`
+##[error]    --> crates/xberg/src/extractors/pdf/ocr/pipeline.rs:1724:29
 ```
 
 </details>
 
 ### CI E2E (`.github/workflows/ci-e2e.yaml`)
 
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/42398179156 — dark (conclusion: `cancelled`), 2026-11-07 17:49 UTC
+- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/42421238073 — dark (conclusion: `cancelled`), 2026-11-07 22:34 UTC
 - Dark since: 2026-11-03 17:32 UTC (first run of the current streak)
-- Job / step: `Build FFI (x86_64-unknown-linux-gnu)` → `Build FFI library`
-- Likely cause: Canceling since a higher priority waiting request for ci-e2e-refs/heads/main exists
+- Job / step: `E2E (wasm)` → `Run e2e tests`
+- Likely cause: cannot find value 'tall_source_candidate' in this scope (crates/xberg/src/extractors/pdf/ocr/pipeline.rs:1726)
 
 <details><summary>End of the job log</summary>
 
 ```
-   Compiling minijinja v3.0.5
-     Running `CARGO=/home/runner/.rustup/toolchains/1.99.1-x86_64-unknown-linux-gnu/bin/cargo CARGO_CRATE_NAME=minijinja CARGO_MANIFEST_DIR=/home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/minijinja-3.0…
-     Running `CARGO=/home/runner/.rustup/toolchains/1.99.1-x86_64-unknown-linux-gnu/bin/cargo CARGO_CFG_FEATURE=analysis,api,api-types,archives,auto-rotate,auto-rotate-types,captioning,chunking,chunking-tokenizers,class…
-[xberg-ffi 1.4.0] cargo:rerun-if-changed=src
-[xberg-ffi 1.4.0] cargo:rerun-if-changed=cbindgen.toml
-[xberg-ffi 1.4.0] cargo:rerun-if-env-changed=ALEF_EXPORT_GENERATED_HEADERS
-     Running `CARGO=/home/runner/.rustup/toolchains/1.99.1-x86_64-unknown-linux-gnu/bin/cargo CARGO_CRATE_NAME=xberg CARGO_MANIFEST_DIR=/home/runner/work/xberg/xberg/crates/xberg CARGO_MANIFEST_PATH=/home/runner/work/xb…
-##[error]The operation was canceled.
-```
-
-</details>
-
-### CI Integrations (`.github/workflows/ci-integrations.yaml`)
-
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/42398179220 — dark (conclusion: `cancelled`), 2026-11-07 17:49 UTC
-- Dark since: 2026-11-07 11:34 UTC (first run of the current streak)
-- Job / step: `Build local integration bindings` → `Build abi3 Python wheel`
-- Likely cause: Canceling since a higher priority waiting request for ci-integrations-refs/heads/main exists
-
-<details><summary>End of the job log</summary>
-
-```
-   Compiling rake v0.3.6
-   Compiling lru v0.19.0
-   Compiling org v0.3.1
-   Compiling jotdown v0.10.0
-   Compiling similar v3.2.1
-   Compiling minijinja v3.0.5
-   Compiling pyo3-async-runtimes v0.30.0
-##[error]The operation was canceled.
+warning: xberg-tesseract@1.4.0: Patch command failed, will apply programmatic fixups.
+warning: xberg-tesseract@1.4.0: wasm32-wasi-clang: warning: argument '--target=wasm32-wasi' is deprecated, use --target=wasm32-wasip1 instead [-Wdeprecated]
+warning: xberg-tesseract@1.4.0: wasm32-wasi-clang: warning: argument '--target=wasm32-wasi' is deprecated, use --target=wasm32-wasip1 instead [-Wdeprecated]
+warning: xberg-tesseract@1.4.0: wasm32-wasi-clang: warning: argument '--target=wasm32-wasi' is deprecated, use --target=wasm32-wasip1 instead [-Wdeprecated]
+warning: xberg-tesseract@1.4.0: wasm32-wasi-clang: warning: argument '--target=wasm32-wasi' is deprecated, use --target=wasm32-wasip1 instead [-Wdeprecated]
+warning: ignoring -C extra-filename flag due to -o flag
+error[E0433]: cannot find `tall_source` in `super`
+##[error]    --> crates/xberg/src/extractors/pdf/ocr/pipeline.rs:1724:29
 ```
 
 </details>

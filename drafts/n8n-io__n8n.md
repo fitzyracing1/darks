@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/n8n-io/n8n/issues/new
-- **Stars:** 209762 · **Generated:** 2026-11-07T18:36:17.303Z
+- **Stars:** 209775 · **Generated:** 2026-11-08T00:55:40.555Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** latest run was skipped, not failed — probably not worth filing
 
@@ -19,7 +19,7 @@ CI: "Security: Sync from Public" workflow not completing (runs skipped) on maste
 <!-- BEGIN BODY -->
 Hi! The **Security: Sync from Public** workflow (`.github/workflows/sec-sync-public-to-private.yml`) on `master` has been not completing (runs skipped) since 2026-10-13. Here is what I saw, in case it's useful:
 
-- Latest run on `master`: https://github.com/n8n-io/n8n/actions/runs/42400008890 — dark (conclusion: `skipped`), 2026-11-07 18:11 UTC
+- Latest run on `master`: https://github.com/n8n-io/n8n/actions/runs/42430268016 — dark (conclusion: `skipped`), 2026-11-08 00:33 UTC
 - Dark since: 2026-10-13 15:19 UTC (first run of the current streak)
 - Likely cause: run skipped
 
