@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/huggingface/transformers/issues/new
-- **Stars:** 168639 · **Generated:** 2026-11-08T06:41:39.628Z
+- **Stars:** 168653 · **Generated:** 2026-11-08T12:38:31.910Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** workflow failed to start (config/permissions on their side)
 - **Note for Joshua:** self-hosted runner problem — maintainers usually know
@@ -70,7 +70,7 @@ drwxr-xr-x.  1 root root    33 Nov  8 00:43 utils
 
 ### Nvidia CI (`.github/workflows/self-scheduled-caller.yml`)
 
-- Latest run on `main`: https://github.com/huggingface/transformers/actions/runs/42328939060 — dark (conclusion: `failure`), 2026-11-07 02:22 UTC
+- Latest run on `main`: https://github.com/huggingface/transformers/actions/runs/42438362392 — dark (conclusion: `failure`), 2026-11-08 02:23 UTC
 - Dark since: 2026-11-07 02:22 UTC (first run of the current streak)
 - Job / step: `Kernels CI / Kernel tests (aws-g5-4xlarge-cache)` → `Run kernel tests on GPU`
 - Likely cause: Executing the custom container implementation failed. Please contact your self hosted runner administrator.
@@ -84,8 +84,8 @@ ERROR tests/kernels/test_kernels.py::TestHubKernels::test_kernels_mapping_no_inh
 ERROR tests/kernels/test_kernels.py::TestHubKernels::test_rocm_rotary_kernel_forward_matches_baseline - ImportError: cannot import name 'BaseHTTPResponse' from 'urllib3' (/opt/venv/lib/python3.11/site-packages/urllib3/_…
 ERROR tests/kernels/test_kernels.py::TestHubKernels::test_setter_use_kernels - ImportError: cannot import name 'BaseHTTPResponse' from 'urllib3' (/opt/venv/lib/python3.11/site-packages/urllib3/__init__.py)
 ERROR tests/kernels/test_kernels.py::TestHubKernels::test_unkernelize - ImportError: cannot import name 'BaseHTTPResponse' from 'urllib3' (/opt/venv/lib/python3.11/site-packages/urllib3/__init__.py)
-=================== 1 failed, 20 passed, 16 errors in 23.20s ===================
-##[error]Error: failed to run script step: command terminated with non-zero exit code: error executing command [sh -e /__w/_temp/94d47100-da52-11f1-9d1f-839cea5f7a67.sh], exit code 1
+============= 1 failed, 20 passed, 1 warning, 16 errors in 30.53s ==============
+##[error]Error: failed to run script step: command terminated with non-zero exit code: error executing command [sh -e /__w/_temp/4664e2a0-db1c-11f1-b586-5938b367fafc.sh], exit code 1
 ```
 
 </details>

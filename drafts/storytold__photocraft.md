@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/storytold/photocraft/issues/new
-- **Stars:** 77794 · **Generated:** 2026-11-08T06:41:39.628Z
+- **Stars:** 77866 · **Generated:** 2026-11-08T12:38:31.910Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
@@ -43,10 +43,9 @@ wrote /Users/runner/work/photocraft/photocraft/target/perf/results.json
 
 ### SonarCloud (`.github/workflows/sonarcloud.yml`)
 
-- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/42445117699 — dark (conclusion: `failure`), 2026-11-08 04:01 UTC
+- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/42475316752 — dark (conclusion: `cancelled`), 2026-11-08 11:20 UTC
 - Dark since: 2026-11-07 10:57 UTC (first run of the current streak)
-- Job / step: `sonarcloud / SonarCloud Scan`
-- Likely cause: System.IO.IOException: No space left on device : '/home/runner/actions-runner/cached/2.338.2/_diag/Worker_20261108-043742-utc.log'
+- Likely cause: run cancelled
 
 If this is already known or expected, feel free to close. Thanks for maintaining photocraft!
 

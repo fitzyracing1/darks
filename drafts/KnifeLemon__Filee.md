@@ -4,37 +4,36 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/KnifeLemon/Filee/issues/new
-- **Stars:** 23807 · **Generated:** 2026-11-08T06:41:39.628Z
+- **Stars:** 23965 · **Generated:** 2026-11-08T12:38:31.910Z
 - Nothing in this file has been sent anywhere.
-- **Note for Joshua:** cancelled by a concurrency group — likely noise
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: "CI" workflow getting cancelled on main since 2026-11-08
+CI: "CI" workflow failing on main since 2026-11-08
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! The **CI** workflow (`.github/workflows/ci.yml`) on `main` has been getting cancelled since 2026-11-08. Here is what I saw, in case it's useful:
+Hi! The **CI** workflow (`.github/workflows/ci.yml`) on `main` has been failing since 2026-11-08. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/KnifeLemon/Filee/actions/runs/42454741271 — dark (conclusion: `cancelled`), 2026-11-08 06:26 UTC
+- Latest run on `main`: https://github.com/KnifeLemon/Filee/actions/runs/42462475768 — dark (conclusion: `failure`), 2026-11-08 08:19 UTC
 - Dark since: 2026-11-08 06:26 UTC (first run of the current streak)
-- Job / step: `changes` → `Run actions/checkout@v7`
-- Likely cause: Canceling since a higher priority waiting request for ci-refs/heads/main exists
+- Job / step: `portable / portable (macos-15-intel, osx-x64)` → `Build and test native projects`
+- Likely cause: Failed: 1
 
 <details><summary>End of the job log</summary>
 
 ```
-hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
-hint: 'development'. The just-created branch can be renamed via this command:
-hint:
-hint: 	git branch -m <name>
-hint:
-hint: Disable this message with "git config set advice.defaultBranchName false"
-Initialized empty Git repository in /home/runner/work/Filee/Filee/.git/
-##[error]The operation was canceled.
+Results File: /Users/runner/work/Filee/Filee/TestResults/osx-x64/_iad01-dz252-9550d021-d496-4327-b074-6e838cc5a326-3A9C8FDD67BE_2026-11-08_08_45_48_net10.0.trx
+Test Run Failed.
+Total tests: 2182
+     Passed: 2170
+     Failed: 1
+    Skipped: 11
+ Total time: 1.0998 Hours
+##[error]Process completed with exit code 1.
 ```
 
 </details>

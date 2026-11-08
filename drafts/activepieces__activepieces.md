@@ -4,8 +4,14 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/activepieces/activepieces/issues/new
-- **Stars:** 25422 · **Generated:** 2026-11-08T06:41:39.628Z
+- **Stars:** 25426 · **Generated:** 2026-11-08T12:38:31.910Z
 - Nothing in this file has been sent anywhere.
+
+## Skipped: upstream already tracking
+
+- Release Pieces (`.github/workflows/release-pieces.yml`): [issue #16721](https://github.com/activepieces/activepieces/issues/16721) "Release Pieces: wait for the npm tarball before inserting piece metadata"
+
+These workflows are left out of the body below.
 
 ## Suggested title
 
@@ -20,9 +26,9 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### Chat Evals (`.github/workflows/agent-evals.yml`)
 
-- Latest run on `main`: https://github.com/activepieces/activepieces/actions/runs/42453794253 — dark (conclusion: `failure`), 2026-11-08 06:12 UTC
+- Latest run on `main`: https://github.com/activepieces/activepieces/actions/runs/42457678062 — dark (conclusion: `failure`), 2026-11-08 07:10 UTC
 - Dark since: 2026-10-13 06:26 UTC (first run of the current streak)
-- Job / step: `Live judge gate` → `Run live chat evals (scope=regression)`
+- Job / step: `Live judge gate` → `Run live chat evals (scope=all)`
 - Likely cause: Error: Hook timed out in 540000ms. (packages/server/worker/test/lib/agent-eval/agent-eval.test.ts:20)
 
 <details><summary>End of the job log</summary>
@@ -33,8 +39,8 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 ⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
  Test Files  1 failed | 12 passed (13)
       Tests  89 passed | 1 skipped (90)
-   Start at  06:16:49
-   Duration  546.04s (tests 97%, import 2%, transform 1%)
+   Start at  07:16:09
+   Duration  549.01s (tests 96%, import 3%, transform 1%)
 ##[error]Error: Hook timed out in 540000ms.
 ```
 

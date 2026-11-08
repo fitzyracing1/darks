@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/horizon-rust/horizon/issues/new
-- **Stars:** 7914 · **Generated:** 2026-11-08T06:41:39.628Z
+- **Stars:** 7988 · **Generated:** 2026-11-08T12:38:31.910Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
@@ -19,7 +19,7 @@ CI: "parity-main" workflow getting cancelled on main since 2026-11-08
 <!-- BEGIN BODY -->
 Hi! The **parity-main** workflow (`.github/workflows/parity-main.yml`) on `main` has been getting cancelled since 2026-11-08. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/horizon-rust/horizon/actions/runs/42453841880 — dark (conclusion: `cancelled`), 2026-11-08 06:13 UTC
+- Latest run on `main`: https://github.com/horizon-rust/horizon/actions/runs/42480286822 — dark (conclusion: `cancelled`), 2026-11-08 12:26 UTC
 - Dark since: 2026-11-08 04:57 UTC (first run of the current streak)
 - Likely cause: run cancelled
 
