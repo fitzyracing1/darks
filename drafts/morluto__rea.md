@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/morluto/rea/issues/new
-- **Stars:** 442340 · **Generated:** 2026-11-08T12:38:31.910Z
+- **Stars:** 443132 · **Generated:** 2026-11-08T18:35:29.654Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** latest run was skipped, not failed — probably not worth filing
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
@@ -12,7 +12,7 @@
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 2 workflows dark on main ("CodeQL production", "Mutation sweep")
+CI: 3 workflows dark on main ("CodeQL production", "Mutation sweep", "CI")
 <!-- END TITLE -->
 
 ## Body
@@ -22,7 +22,7 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### CodeQL production (`.github/workflows/codeql.yml`)
 
-- Latest run on `main`: https://github.com/morluto/rea/actions/runs/42457951958 — dark (conclusion: `skipped`), 2026-11-08 07:14 UTC
+- Latest run on `main`: https://github.com/morluto/rea/actions/runs/42503729561 — dark (conclusion: `skipped`), 2026-11-08 17:11 UTC
 - Dark since: 2026-11-01 07:24 UTC (first run of the current streak)
 - Likely cause: run skipped
 
@@ -47,6 +47,12 @@ Mutation testing 97% (elapsed: ~56m, remaining: ~1m) 789/843 tested (154 survive
 ```
 
 </details>
+
+### CI (`.github/workflows/ci.yml`)
+
+- Latest run on `main`: https://github.com/morluto/rea/actions/runs/42505057644 — dark (conclusion: `cancelled`), 2026-11-08 17:27 UTC
+- Dark since: 2026-11-08 16:39 UTC (first run of the current streak)
+- Likely cause: run cancelled
 
 If this is already known or expected, feel free to close. Thanks for maintaining rea!
 

@@ -4,14 +4,8 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/activepieces/activepieces/issues/new
-- **Stars:** 25426 · **Generated:** 2026-11-08T12:38:31.910Z
+- **Stars:** 25433 · **Generated:** 2026-11-08T18:35:29.654Z
 - Nothing in this file has been sent anywhere.
-
-## Skipped: upstream already tracking
-
-- Release Pieces (`.github/workflows/release-pieces.yml`): [issue #16721](https://github.com/activepieces/activepieces/issues/16721) "Release Pieces: wait for the npm tarball before inserting piece metadata"
-
-These workflows are left out of the body below.
 
 ## Suggested title
 

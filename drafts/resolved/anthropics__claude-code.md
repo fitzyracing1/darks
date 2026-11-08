@@ -1,8 +1,8 @@
 <!-- dark-draft: anthropics/claude-code -->
-<!-- draft-state: duplicate -->
+<!-- draft-state: resolved -->
 # Upstream issue draft: anthropics/claude-code
 
-- **Status:** not for filing — upstream already has an open issue/PR about every dark workflow here
+- **Status:** resolved — lit again (2026-11-08); nothing to file
 - **Would be filed at:** https://github.com/anthropics/claude-code/issues/new
 - **Stars:** 154950 · **Generated:** 2026-11-08T12:38:31.910Z
 - Nothing in this file has been sent anywhere.

@@ -4,14 +4,14 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/open-metadata/OpenMetadata/issues/new
-- **Stars:** 15714 · **Generated:** 2026-11-08T12:38:31.910Z
+- **Stars:** 15715 · **Generated:** 2026-11-08T18:35:29.654Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 11 workflows dark on main ("Merge Queue Dequeue Report", "Integration Tests - MySQL + Elasticsearch", "Integration Tests - PostgreSQL + OpenSearch", +8 more)
+CI: 10 workflows dark on main ("Merge Queue Dequeue Report", "Integration Tests - MySQL + Elasticsearch", "Integration Tests - PostgreSQL + OpenSearch", +7 more)
 <!-- END TITLE -->
 
 ## Body
@@ -21,7 +21,7 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### Merge Queue Dequeue Report (`.github/workflows/merge-queue-dequeue-report.yml`)
 
-- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/42464491717 — dark (conclusion: `failure`), 2026-11-08 08:48 UTC
+- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/42488214946 — dark (conclusion: `failure`), 2026-11-08 14:07 UTC
 - Dark since: 2026-11-03 21:06 UTC (first run of the current streak)
 - Job / step: `evict-main-conflicts` → `Remove queue entries that conflict with main`
 - Likely cause: cannot iterate over: null
@@ -109,7 +109,7 @@ Waiting 11 seconds before trying again
 
 ### monitor-slack-link (`.github/workflows/monitor-slack-link.yml`)
 
-- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/42479183161 — dark (conclusion: `failure`), 2026-11-08 12:12 UTC
+- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/42508658636 — dark (conclusion: `failure`), 2026-11-08 18:10 UTC
 - Dark since: 2026-11-06 22:08 UTC (first run of the current streak)
 - Job / step: `monitor-slack-link` → `Set up Python 3.9`
 - Likely cause: The version '3.9' with architecture 'x64' was not found for Ubuntu 26.04.
@@ -122,7 +122,7 @@ Updating files: 100% (27269/27269)
 Updating files: 100% (27269/27269), done.
 Switched to a new branch 'main'
 branch 'main' set up to track 'origin/main'.
-8a6ecf5d1525c9d6c502e67b0d5652e2df768215
+3e7f290262558e2c1de12a0f67248feea766021e
 Version 3.9 was not found in the local cache
 ##[error]The version '3.9' with architecture 'x64' was not found for Ubuntu 26.04.
 ```
@@ -131,7 +131,7 @@ Version 3.9 was not found in the local cache
 
 ### Populate Playwright CI caches (`.github/workflows/populate-playwright-caches.yml`)
 
-- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/42478430052 — dark (conclusion: `failure`), 2026-11-08 12:03 UTC
+- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/42507960871 — dark (conclusion: `failure`), 2026-11-08 18:02 UTC
 - Dark since: 2026-11-07 00:05 UTC (first run of the current streak)
 - Job / step: `populate` → `Report warm failures`
 - Likely cause: cache warmers failed: browser — downstream runs stay on the previous main-scoped copies (or the resilient miss path) until the next populate
@@ -141,34 +141,12 @@ Version 3.9 was not found in the local cache
 ```
 Received 434 of 434 (100.0%), 0.0 MBs/sec
 Cache Size: ~0 MB (434 B)
-[command]/usr/bin/tar -xf /home/runner/work/_temp/dd80c6d0-00bb-4ece-9e90-3af8e3fdb121/cache.tzst -P -C /home/runner/work/OpenMetadata/OpenMetadata --use-compress-program unzstd
+[command]/usr/bin/tar -xf /home/runner/work/_temp/2476461b-c910-407a-bff1-346273044651/cache.tzst -P -C /home/runner/work/OpenMetadata/OpenMetadata --use-compress-program unzstd
 Cache restored successfully
 Cache restored from key: Linux-playwright-66168dfd1632ada5ad220ce3a6895756fffe473058832476a5baa78c015dda96
 Failed to install browsers
 Error: ERROR: Playwright does not support chromium on ubuntu26.04-x64
 ##[error]Process completed with exit code 1.
-```
-
-</details>
-
-### OpenMetadata Service Unit Tests (`.github/workflows/openmetadata-service-unit-tests.yml`)
-
-- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/42464491722 — dark (conclusion: `failure`), 2026-11-08 08:48 UTC
-- Dark since: 2026-11-08 01:26 UTC (first run of the current streak)
-- Job / step: `openmetadata-service-unit-tests` → `Run openmetadata-service unit tests`
-- Likely cause: There were 1 failed tests
-
-<details><summary>End of the job log</summary>
-
-```
-! at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100)
-! at org.junit.platform.engine.support.hierarchical.ForkJoinPoolHierarchicalTestExecutorService$ExclusiveTask.exec(ForkJoinPoolHierarchicalTestExecutorService.java:274)
-! at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:387)
-! at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1312)
-! at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1843)
-! at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1808)
-! at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188)
-##[error]Exception in thread "om-credential-read-90" java.lang.StackOverflowError: injected overflow in the decrypt of bob
 ```
 
 </details>

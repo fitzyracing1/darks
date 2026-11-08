@@ -1,8 +1,8 @@
 <!-- dark-draft: liketrek/TREK -->
-<!-- draft-state: ready -->
+<!-- draft-state: resolved -->
 # Upstream issue draft: liketrek/TREK
 
-- **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
+- **Status:** resolved — lit again (2026-11-08); nothing to file
 - **Would be filed at:** https://github.com/liketrek/TREK/issues/new
 - **Stars:** 15434 · **Generated:** 2026-11-08T12:38:31.910Z
 - Nothing in this file has been sent anywhere.

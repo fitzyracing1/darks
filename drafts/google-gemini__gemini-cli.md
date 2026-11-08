@@ -4,12 +4,11 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/google-gemini/gemini-cli/issues/new
-- **Stars:** 108776 · **Generated:** 2026-11-08T12:38:31.910Z
+- **Stars:** 108780 · **Generated:** 2026-11-08T18:35:29.654Z
 - Nothing in this file has been sent anywhere.
 
 ## Skipped: upstream already tracking
 
-- Release: Nightly (`.github/workflows/release-nightly.yml`): [issue #30202](https://github.com/google-gemini/gemini-cli/issues/30202) "Nightly Release Failed for v0.69.0-nightly.20261108.g62bab5b23 on 2026-11-08"
 - Memory Tests: Nightly (`.github/workflows/memory-nightly.yml`): [issue #30084](https://github.com/google-gemini/gemini-cli/issues/30084) "CI: memory-nightly failing: 4 memory regressions over 10% (idle-session-startup +54.2%: 107.6MB vs 69.8MB)"
 
 These workflows are left out of the body below.
@@ -17,37 +16,13 @@ These workflows are left out of the body below.
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 2 workflows dark on main ("📋 Gemini Scheduled Issue Triage", "Performance Tests: Nightly")
+CI: "Performance Tests: Nightly" workflow failing on main since 2026-11-08
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
-
-### 📋 Gemini Scheduled Issue Triage (`.github/workflows/gemini-scheduled-issue-triage.yml`)
-
-- Latest run on `main`: https://github.com/google-gemini/gemini-cli/actions/runs/42478889821 — dark (conclusion: `failure`), 2026-11-08 12:09 UTC
-- Dark since: 2026-11-07 23:05 UTC (first run of the current streak)
-- Job / step: `triage-issues` → `Apply Triaged Labels`
-- Likely cause: Unhandled error: HttpError: Resource not accessible by integration
-
-<details><summary>End of the job log</summary>
-
-```
-    request: {
-      agent: [Agent],
-      fetch: [Function: proxyFetch],
-      hook: [Function: bound bound register]
-    }
-  }
-}
-##[error]Unhandled error: HttpError: Resource not accessible by integration
-```
-
-</details>
-
-### Performance Tests: Nightly (`.github/workflows/perf-nightly.yml`)
+Hi! The **Performance Tests: Nightly** workflow (`.github/workflows/perf-nightly.yml`) on `main` has been failing since 2026-11-08. Here is what I saw, in case it's useful:
 
 - Latest run on `main`: https://github.com/google-gemini/gemini-cli/actions/runs/42441819125 — dark (conclusion: `failure`), 2026-11-08 03:13 UTC
 - Dark since: 2026-11-08 03:13 UTC (first run of the current streak)

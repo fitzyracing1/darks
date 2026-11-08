@@ -4,9 +4,9 @@
 
 - **Status:** not for filing — upstream already has an open issue/PR about every dark workflow here
 - **Would be filed at:** https://github.com/storytold/cadcraft/issues/new
-- **Stars:** 7810 · **Generated:** 2026-11-08T12:38:31.910Z
+- **Stars:** 7819 · **Generated:** 2026-11-08T18:35:29.654Z
 - Nothing in this file has been sent anywhere.
 
 ## Skipped: upstream already tracking
 
-- FreeBSD (`.github/workflows/freebsd.yml`): [issue #2526](https://github.com/storytold/cadcraft/issues/2526) "DWG is off on FreeBSD aarch64: acadrust 0.6.6 doesn't compile there, and 0.6.7/0.6.8 read some damaged DWGs as empty", [issue #1768](https://github.com/storytold/cadcraft/issues/1768) "Release 0.10.0 not published: FreeBSD aarch64 job stalled in the release run"
+- FreeBSD (`.github/workflows/freebsd.yml`): [issue #1768](https://github.com/storytold/cadcraft/issues/1768) "Release 0.10.0 not published: FreeBSD aarch64 job stalled in the release run"

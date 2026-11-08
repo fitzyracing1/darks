@@ -4,36 +4,37 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/KnifeLemon/Filee/issues/new
-- **Stars:** 23965 · **Generated:** 2026-11-08T12:38:31.910Z
+- **Stars:** 24140 · **Generated:** 2026-11-08T18:35:29.654Z
 - Nothing in this file has been sent anywhere.
+- **Note for Joshua:** cancelled by a concurrency group — likely noise
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: "CI" workflow failing on main since 2026-11-08
+CI: "CI" workflow getting cancelled on main since 2026-11-08
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! The **CI** workflow (`.github/workflows/ci.yml`) on `main` has been failing since 2026-11-08. Here is what I saw, in case it's useful:
+Hi! The **CI** workflow (`.github/workflows/ci.yml`) on `main` has been getting cancelled since 2026-11-08. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/KnifeLemon/Filee/actions/runs/42462475768 — dark (conclusion: `failure`), 2026-11-08 08:19 UTC
+- Latest run on `main`: https://github.com/KnifeLemon/Filee/actions/runs/42509233617 — dark (conclusion: `cancelled`), 2026-11-08 18:17 UTC
 - Dark since: 2026-11-08 06:26 UTC (first run of the current streak)
-- Job / step: `portable / portable (macos-15-intel, osx-x64)` → `Build and test native projects`
-- Likely cause: Failed: 1
+- Job / step: `build (win-arm64)` → `Build Explorer menu extension`
+- Likely cause: Canceling since a higher priority waiting request for ci-refs/heads/main exists
 
 <details><summary>End of the job log</summary>
 
 ```
-Results File: /Users/runner/work/Filee/Filee/TestResults/osx-x64/_iad01-dz252-9550d021-d496-4327-b074-6e838cc5a326-3A9C8FDD67BE_2026-11-08_08_45_48_net10.0.trx
-Test Run Failed.
-Total tests: 2182
-     Passed: 2170
-     Failed: 1
-    Skipped: 11
- Total time: 1.0998 Hours
-##[error]Process completed with exit code 1.
+Received 41943040 of 83785201 (50.1%), 38.2 MBs/sec
+Received 83785201 of 83785201 (100.0%), 32.8 MBs/sec
+Cache Size: ~80 MB (83785201 B)
+[command]"C:\Program Files\Git\usr\bin\tar.exe" -xf C:/a/_temp/f280c5ca-0aeb-43ce-9579-da43db9b7c76/cache.tzst -P -C C:/a/Filee/Filee --force-local --use-compress-program "zstd -d"
+Cache restored successfully
+Cache restored from key: zig-0.16.0-x86_64-windows
+build FileeExplorerMenu.dll 2.4.0 (arm64)
+##[error]The operation was canceled.
 ```
 
 </details>
