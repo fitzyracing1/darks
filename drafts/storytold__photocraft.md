@@ -4,14 +4,14 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/storytold/photocraft/issues/new
-- **Stars:** 77738 · **Generated:** 2026-11-08T00:55:40.555Z
+- **Stars:** 77794 · **Generated:** 2026-11-08T06:41:39.628Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 3 workflows dark on main ("Perf (nightly)", "FreeBSD", "SonarCloud")
+CI: 2 workflows dark on main ("Perf (nightly)", "SonarCloud")
 <!-- END TITLE -->
 
 ## Body
@@ -21,7 +21,7 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### Perf (nightly) (`.github/workflows/perf-nightly.yml`)
 
-- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/42334079491 — dark (conclusion: `failure`), 2026-11-07 03:27 UTC
+- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/42442842198 — dark (conclusion: `failure`), 2026-11-08 03:28 UTC
 - Dark since: 2026-11-02 03:29 UTC (first run of the current streak)
 - Job / step: `perf (macOS, Apple GPU)` → `Run benchmarks`
 - Likely cause: | P44 | Open .psd, 36 MP, 3 layers | track only | – | – | – | – | – | – | **missing**: bench 'interactive_bench' failed: interactive_bench --reps 5 --json /Users/runner/work/photocraft/photocraft/target/perf/interactive…
@@ -41,33 +41,12 @@ wrote /Users/runner/work/photocraft/photocraft/target/perf/results.json
 
 </details>
 
-### FreeBSD (`.github/workflows/freebsd.yml`)
-
-- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/42329033259 — dark (conclusion: `failure`), 2026-11-07 02:23 UTC
-- Dark since: 2026-11-07 02:23 UTC (first run of the current streak)
-- Job / step: `freebsd / FreeBSD 15 x86_64 (build + test)` → `Build and test`
-- Likely cause: process didn't exit successfully: '/var/tmp/craft-target/debug/deps/photocraft_raster-9ff21ff40819534a' (signal: 11, SIGSEGV: invalid memory reference)
-
-<details><summary>End of the job log</summary>
-
-```
-test scratch_file::tests::parallel_positioned_reads_share_one_unlinked_file ... ok
-test scratch_file::tests::unix_files_are_private_and_reaping_preserves_live_and_unrelated_files ... ok
-test scratch_file::tests::abrupt_exit_does_not_leave_permanent_scratch_files ... ok
-test spill::tests::a_volume_with_no_total_is_unknown ... ok
-error: test failed, to rerun pass `-p photocraft-raster --lib`
-Caused by:
-  process didn't exit successfully: `/var/tmp/craft-target/debug/deps/photocraft_raster-9ff21ff40819534a` (signal: 11, SIGSEGV: invalid memory reference)
-##[error]Process completed with exit code 101.
-```
-
-</details>
-
 ### SonarCloud (`.github/workflows/sonarcloud.yml`)
 
-- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/42430848945 — dark (conclusion: `cancelled`), 2026-11-08 00:40 UTC
+- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/42445117699 — dark (conclusion: `failure`), 2026-11-08 04:01 UTC
 - Dark since: 2026-11-07 10:57 UTC (first run of the current streak)
-- Likely cause: run cancelled
+- Job / step: `sonarcloud / SonarCloud Scan`
+- Likely cause: System.IO.IOException: No space left on device : '/home/runner/actions-runner/cached/2.338.2/_diag/Worker_20261108-043742-utc.log'
 
 If this is already known or expected, feel free to close. Thanks for maintaining photocraft!
 

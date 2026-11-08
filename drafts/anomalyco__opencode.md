@@ -4,27 +4,20 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/anomalyco/opencode/issues/new
-- **Stars:** 225303 · **Generated:** 2026-11-08T00:55:40.555Z
+- **Stars:** 225337 · **Generated:** 2026-11-08T06:41:39.628Z
 - Nothing in this file has been sent anywhere.
-- **Note for Joshua:** latest run was skipped, not failed — probably not worth filing
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 3 workflows dark on dev ("bot-docs-locale", "nightly-beta", "release")
+CI: 2 workflows dark on dev ("nightly-beta", "release")
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
 Hi! A few workflows on `dev` have been dark recently. Details below, in case they're useful:
-
-### bot-docs-locale (`.github/workflows/bot-docs-locale.yml`)
-
-- Latest run on `dev`: https://github.com/anomalyco/opencode/actions/runs/42333230453 — dark (conclusion: `skipped`), 2026-11-07 03:16 UTC
-- Dark since: 2026-11-06 17:57 UTC (first run of the current streak)
-- Likely cause: run skipped
 
 ### nightly-beta (`.github/workflows/nightly-beta.yml`)
 
@@ -50,7 +43,7 @@ could not create workflow dispatch event: HTTP 422: No ref found for: beta (http
 
 ### release (`.github/workflows/release.yml`)
 
-- Latest run on `dev`: https://github.com/anomalyco/opencode/actions/runs/42430079731 — dark (conclusion: `cancelled`), 2026-11-08 00:30 UTC
+- Latest run on `dev`: https://github.com/anomalyco/opencode/actions/runs/42454011682 — dark (conclusion: `cancelled`), 2026-11-08 06:15 UTC
 - Dark since: 2026-11-07 11:31 UTC (first run of the current streak)
 - Likely cause: run cancelled
 

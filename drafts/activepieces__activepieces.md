@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/activepieces/activepieces/issues/new
-- **Stars:** 25420 · **Generated:** 2026-11-08T00:55:40.555Z
+- **Stars:** 25422 · **Generated:** 2026-11-08T06:41:39.628Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -20,43 +20,43 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### Chat Evals (`.github/workflows/agent-evals.yml`)
 
-- Latest run on `main`: https://github.com/activepieces/activepieces/actions/runs/42345938468 — dark (conclusion: `failure`), 2026-11-07 06:12 UTC
+- Latest run on `main`: https://github.com/activepieces/activepieces/actions/runs/42453794253 — dark (conclusion: `failure`), 2026-11-08 06:12 UTC
 - Dark since: 2026-10-13 06:26 UTC (first run of the current streak)
 - Job / step: `Live judge gate` → `Run live chat evals (scope=regression)`
-- Likely cause: AssertionError: see the eval report above for the failing checks: expected [ 'guard-duplicate-flow-not-agent' ] to deeply equal [] (packages/server/worker/test/lib/agent-eval/agent-eval.test.ts:58)
+- Likely cause: Error: Hook timed out in 540000ms. (packages/server/worker/test/lib/agent-eval/agent-eval.test.ts:20)
 
 <details><summary>End of the job log</summary>
 
 ```
-     59|     })
-     60| })
+     21|         const fixtures = evalFixtures.load().filter((fixture) => SCOPE…
+     22|         const [fixtureResults, agreement] = await Promise.all([
 ⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
  Test Files  1 failed | 12 passed (13)
-      Tests  1 failed | 89 passed (90)
-   Start at  06:16:39
-   Duration  443.17s (tests 97%, import 3%, transform 1%)
-##[error]AssertionError: see the eval report above for the failing checks: expected [ 'guard-duplicate-flow-not-agent' ] to deeply equal []
+      Tests  89 passed | 1 skipped (90)
+   Start at  06:16:49
+   Duration  546.04s (tests 97%, import 2%, transform 1%)
+##[error]Error: Hook timed out in 540000ms.
 ```
 
 </details>
 
 ### Benchmark (`.github/workflows/benchmark.yml`)
 
-- Latest run on `main`: https://github.com/activepieces/activepieces/actions/runs/42332343616 — dark (conclusion: `failure`), 2026-11-07 03:05 UTC
+- Latest run on `main`: https://github.com/activepieces/activepieces/actions/runs/42441233724 — dark (conclusion: `failure`), 2026-11-08 03:05 UTC
 - Dark since: 2026-10-30 03:06 UTC (first run of the current streak)
 - Job / step: `benchmark (dedicated, 1, 28, 0.5, 1G, 1, 768, true, 28)` → `Detect regression against trailing 14 runs (scheduled runs only)`
-- Likely cause: Box signals API responded 401: {"error":"Unknown token. Send it as \"Authorization: ***"."}
+- Likely cause: Box signals API responded 401: {"error":{"type":"invalid_request_error","message":"Unknown token. Send it as \"Authorization: ***"."}}
 
 <details><summary>End of the job log</summary>
 
 ```
-      "pct": 6.123893805309736,
-      "breach": ***
+      "pct": 3.935347856640903,
+      "breach": false
     }
   ],
-  "breachCount": 7
+  "breachCount": 6
 }
-Box signals API responded 401: {"error":"Unknown token. Send it as \"Authorization: ***"."}
+Box signals API responded 401: {"error":{"type":"invalid_request_error","message":"Unknown token. Send it as \"Authorization: ***"."}}
 ##[error]Process completed with exit code 1.
 ```
 

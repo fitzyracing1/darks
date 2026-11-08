@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/colinhacks/zod/issues/new
-- **Stars:** 44281 · **Generated:** 2026-11-08T00:55:40.555Z
+- **Stars:** 44282 · **Generated:** 2026-11-08T06:41:39.628Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title

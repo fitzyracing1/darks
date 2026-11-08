@@ -1,26 +1,26 @@
 <!-- dark-draft: yetone/magpie -->
-<!-- draft-state: resolved -->
+<!-- draft-state: ready -->
 # Upstream issue draft: yetone/magpie
 
-- **Status:** resolved — lit again (2026-11-08); nothing to file
+- **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/yetone/magpie/issues/new
-- **Stars:** 31769 · **Generated:** 2026-11-07T18:36:17.303Z
+- **Stars:** 31940 · **Generated:** 2026-11-08T06:41:39.628Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: "Test" workflow getting cancelled on main since 2026-10-25
+CI: "Test" workflow getting cancelled on main since 2026-11-08
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! The **Test** workflow (`.github/workflows/test.yml`) on `main` has been getting cancelled since 2026-10-25. Here is what I saw, in case it's useful:
+Hi! The **Test** workflow (`.github/workflows/test.yml`) on `main` has been getting cancelled since 2026-11-08. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/yetone/magpie/actions/runs/42400184555 — dark (conclusion: `cancelled`), 2026-11-07 18:13 UTC
-- Dark since: 2026-10-25 04:42 UTC (first run of the current streak)
+- Latest run on `main`: https://github.com/yetone/magpie/actions/runs/42453715366 — dark (conclusion: `cancelled`), 2026-11-08 06:11 UTC
+- Dark since: 2026-11-08 03:29 UTC (first run of the current streak)
 - Likely cause: run cancelled
 
 If this is already known or expected, feel free to close. Thanks for maintaining magpie!

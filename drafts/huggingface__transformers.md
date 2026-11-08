@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/huggingface/transformers/issues/new
-- **Stars:** 168636 · **Generated:** 2026-11-08T00:55:40.555Z
+- **Stars:** 168639 · **Generated:** 2026-11-08T06:41:39.628Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** workflow failed to start (config/permissions on their side)
 - **Note for Joshua:** self-hosted runner problem — maintainers usually know
@@ -29,41 +29,41 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### Self-hosted runner (nightly-past-ci-caller) (`.github/workflows/self-nightly-past-ci-caller.yml`)
 
-- Latest run on `main`: https://github.com/huggingface/transformers/actions/runs/42380886428 — dark (conclusion: `startup_failure`), 2026-11-07 14:17 UTC
+- Latest run on `main`: https://github.com/huggingface/transformers/actions/runs/42438163982 — dark (conclusion: `startup_failure`), 2026-11-08 02:21 UTC
 - Dark since: 2026-11-07 02:20 UTC (first run of the current streak)
 - Likely cause: run startup_failure
 
 ### Self-hosted runner (Intel Gaudi3 scheduled CI caller) (`.github/workflows/self-scheduled-intel-gaudi3-caller.yml`)
 
-- Latest run on `main`: https://github.com/huggingface/transformers/actions/runs/42328738495 — dark (conclusion: `failure`), 2026-11-07 02:20 UTC
+- Latest run on `main`: https://github.com/huggingface/transformers/actions/runs/42438181270 — dark (conclusion: `failure`), 2026-11-08 02:21 UTC
 - Dark since: 2026-11-07 02:20 UTC (first run of the current streak)
 - Job / step: `Pipeline CI / Pipelines (1gaudi)`
 - Likely cause: Required runner group 'itac-bm-emr-gaudi3-dell-1gaudi' not found
 
 ### Doctests (`.github/workflows/doctests.yml`)
 
-- Latest run on `main`: https://github.com/huggingface/transformers/actions/runs/42328811868 — dark (conclusion: `failure`), 2026-11-07 02:21 UTC
+- Latest run on `main`: https://github.com/huggingface/transformers/actions/runs/42438285481 — dark (conclusion: `failure`), 2026-11-08 02:22 UTC
 - Dark since: 2026-11-07 02:21 UTC (first run of the current streak)
 - Likely cause: no cause found in annotations
 
 ### Nvidia CI - Flash Attn (`.github/workflows/self-scheduled-flash-attn-caller.yml`)
 
-- Latest run on `main`: https://github.com/huggingface/transformers/actions/runs/42328911987 — dark (conclusion: `failure`), 2026-11-07 02:22 UTC
+- Latest run on `main`: https://github.com/huggingface/transformers/actions/runs/42438326937 — dark (conclusion: `failure`), 2026-11-08 02:23 UTC
 - Dark since: 2026-11-07 02:22 UTC (first run of the current streak)
-- Job / step: `Model CI / run_models_gpu (aws-g5-12xlarge-cache, 0) / run_models_gpu (models/axk1)` → `Run all tests on GPU`
+- Job / step: `Model CI / run_models_gpu (aws-g5-4xlarge-cache, 0) / run_models_gpu (models/axk1)` → `Run all tests on GPU`
 - Likely cause: Executing the custom container implementation failed. Please contact your self hosted runner administrator.
 
 <details><summary>End of the job log</summary>
 
 ```
-drwxr-xr-x.  3 root root    71 Nov  7 04:14 reports
-drwxr-xr-x.  3 root root    84 Nov  7 00:39 scripts
--rw-r--r--.  1 root root 12447 Nov  7 00:39 setup.py
-drwxr-xr-x.  1 root root    55 Nov  7 00:39 src
--rw-r--r--.  1 root root 25620 Nov  7 04:14 test_outputs.txt
-drwxr-xr-x.  1 root root   111 Nov  7 04:14 tests
-drwxr-xr-x.  1 root root    25 Nov  7 00:39 utils
-##[error]Error: failed to run script step: command terminated with non-zero exit code: error executing command [sh -e /__w/_temp/af32a210-da61-11f1-9e90-15f22c7babb9.sh], exit code 1
+drwxr-xr-x.  3 root root    72 Nov  8 02:39 reports
+drwxr-xr-x.  3 root root    84 Nov  8 00:43 scripts
+-rw-r--r--.  1 root root 12447 Nov  8 00:43 setup.py
+drwxr-xr-x.  1 root root    67 Nov  8 00:43 src
+-rw-r--r--.  1 root root 28663 Nov  8 02:39 test_outputs.txt
+drwxr-xr-x.  1 root root   111 Nov  8 02:39 tests
+drwxr-xr-x.  1 root root    33 Nov  8 00:43 utils
+##[error]Error: failed to run script step: command terminated with non-zero exit code: error executing command [sh -e /__w/_temp/8e7f7bd0-db1d-11f1-ac10-0b91b460cf0c.sh], exit code 1
 ```
 
 </details>
@@ -92,7 +92,7 @@ ERROR tests/kernels/test_kernels.py::TestHubKernels::test_unkernelize - ImportEr
 
 ### vLLM Integration Tests (`.github/workflows/vllm-ci-caller.yml`)
 
-- Latest run on `main`: https://github.com/huggingface/transformers/actions/runs/42332645646 — dark (conclusion: `failure`), 2026-11-07 03:09 UTC
+- Latest run on `main`: https://github.com/huggingface/transformers/actions/runs/42441578493 — dark (conclusion: `failure`), 2026-11-08 03:10 UTC
 - Dark since: 2026-11-07 03:09 UTC (first run of the current streak)
 - Job / step: `Test vLLM transformers backend (shard 0 / 4)` → `Test: test_transformers (shard 0 / 4)`
 - Likely cause: Executing the custom container implementation failed. Please contact your self hosted runner administrator.
@@ -106,15 +106,15 @@ ERROR tests/kernels/test_kernels.py::TestHubKernels::test_unkernelize - ImportEr
 -- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
 =========================== short test summary info ============================
 FAILED tests/models/transformers/test_backend.py::test_mtp_draft_loads_mtp_weights[glm4_moe] - RuntimeError: Cannot access accelerator device when none is available.
-== 1 failed, 51 passed, 2 skipped, 2 xfailed, 2 warnings in 253.89s (0:04:13) ==
-##[error]Error: failed to run script step: command terminated with non-zero exit code: error executing command [sh -e /__w/_temp/566ffb80-da59-11f1-a76f-f3c0313f3962.sh], exit code 1
+== 1 failed, 51 passed, 2 skipped, 2 xfailed, 2 warnings in 260.13s (0:04:20) ==
+##[error]Error: failed to run script step: command terminated with non-zero exit code: error executing command [sh -e /__w/_temp/9e075e10-db22-11f1-901f-3533a78a6067.sh], exit code 1
 ```
 
 </details>
 
 ### SGLang Integration Tests (`.github/workflows/sglang-ci-caller.yml`)
 
-- Latest run on `main`: https://github.com/huggingface/transformers/actions/runs/42332863174 — dark (conclusion: `failure`), 2026-11-07 03:11 UTC
+- Latest run on `main`: https://github.com/huggingface/transformers/actions/runs/42441768097 — dark (conclusion: `failure`), 2026-11-08 03:12 UTC
 - Dark since: 2026-11-07 03:11 UTC (first run of the current streak)
 - Job / step: `SGLang integration (transformers-backend)` → `Run canonical SGLang integration tests`
 - Likely cause: Executing the custom container implementation failed. Please contact your self hosted runner administrator.
@@ -127,9 +127,9 @@ plugins: asyncio-1.4.1.post1, anyio-4.15.0
 asyncio: mode=Mode.AUTO, debug=False, asyncio_default_fixture_loop_scope=None, asyncio_default_test_loop_scope=function
 collecting ... collected 2 items
 test/registered/e2e/models/test_transformers_backend_eval.py::TestTransformersBackendEval::test_gsm8k ERROR [ 50%]
-/__w/_temp/5a5a0c66-08a0-4d48-809b-c77a8708fe60.sh: line 3:  3291 Killed                  python3 -m pytest -v "${targets[@]}" --junitxml="${REPORT_DIR}/results.xml"
-test/registered/e2e/models/test_transformers_models.py::TestTransformersFallbackEngine::test_ci_models ::debug::{"message":"command terminated with non-zero exit code: error executing command [sh -e /__w/_temp/66f4ff40-…
-##[error]Error: failed to run script step: command terminated with non-zero exit code: error executing command [sh -e /__w/_temp/66f4ff40-da5a-11f1-876c-7d5f94b65b6c.sh], exit code 137
+/__w/_temp/63672f94-4191-4cb5-99e2-04759ef01efb.sh: line 3:  3290 Killed                  python3 -m pytest -v "${targets[@]}" --junitxml="${REPORT_DIR}/results.xml"
+test/registered/e2e/models/test_transformers_models.py::TestTransformersFallbackEngine::test_ci_models ::debug::{"message":"command terminated with non-zero exit code: error executing command [sh -e /__w/_temp/135b9270-…
+##[error]Error: failed to run script step: command terminated with non-zero exit code: error executing command [sh -e /__w/_temp/135b9270-db24-11f1-a95b-a9ff957ae22f.sh], exit code 137
 ```
 
 </details>

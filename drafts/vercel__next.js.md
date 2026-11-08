@@ -4,19 +4,21 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/vercel/next.js/issues/new
-- **Stars:** 143384 · **Generated:** 2026-11-08T00:55:40.555Z
+- **Stars:** 143405 · **Generated:** 2026-11-08T06:41:39.628Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: "Update Font Data" workflow failing on canary since 2026-11-08
+CI: 3 workflows dark on canary ("Update Font Data", "Rspack Next.js production integration tests", "Rspack Next.js development integration tests")
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! The **Update Font Data** workflow (`.github/workflows/update_fonts_data.yml`) on `canary` has been failing since 2026-11-08. Here is what I saw, in case it's useful:
+Hi! A few workflows on `canary` have been dark recently. Details below, in case they're useful:
+
+### Update Font Data (`.github/workflows/update_fonts_data.yml`)
 
 - Latest run on `canary`: https://github.com/vercel/next.js/actions/runs/42428801029 — dark (conclusion: `failure`), 2026-11-08 00:13 UTC
 - Dark since: 2026-11-08 00:13 UTC (first run of the current streak)
@@ -34,6 +36,50 @@ Hi! The **Update Font Data** workflow (`.github/workflows/update_fonts_data.yml`
     'husky - pre-commit script failed (code 1)\n'
 }
 ##[error]Process completed with exit code 1.
+```
+
+</details>
+
+### Rspack Next.js production integration tests (`.github/workflows/rspack-nextjs-build-integration-tests.yml`)
+
+- Latest run on `canary`: https://github.com/vercel/next.js/actions/runs/42449186741 — dark (conclusion: `failure`), 2026-11-08 05:02 UTC
+- Dark since: 2026-11-08 05:02 UTC (first run of the current streak)
+- Job / step: `Rspack integration tests / Next.js integration test (E2E and production) (11/12) / build` → `Run # e2e and production tests with `node run-tests.js``
+- Likely cause: Unable to download artifact(s): Artifact not found for name: next-swc-aarch64-unknown-linux-gnu
+
+<details><summary>End of the job log</summary>
+
+```
+/etc/profile.d/apps-bin-path.sh: line 10: XDG_DATA_DIRS: unbound variable
+/etc/profile.d/apps-bin-path.sh: line 10: XDG_DATA_DIRS: unbound variable
+/etc/profile.d/apps-bin-path.sh: line 10: XDG_DATA_DIRS: unbound variable
+Waiting for background step(s) to complete: install-rust
+Finished waiting for background step(s).
+/etc/profile.d/apps-bin-path.sh: line 10: XDG_DATA_DIRS: unbound variable
+Downloading single artifact
+##[error]Unable to download artifact(s): Artifact not found for name: next-swc-aarch64-unknown-linux-gnu
+```
+
+</details>
+
+### Rspack Next.js development integration tests (`.github/workflows/rspack-nextjs-dev-integration-tests.yml`)
+
+- Latest run on `canary`: https://github.com/vercel/next.js/actions/runs/42449389398 — dark (conclusion: `failure`), 2026-11-08 05:05 UTC
+- Dark since: 2026-11-08 05:05 UTC (first run of the current streak)
+- Job / step: `Rspack integration tests / Next.js integration test (E2E and development) (4/16) / build` → `Run # e2e and development tests with `node run-tests.js``
+- Likely cause: Unable to download artifact(s): Artifact not found for name: next-swc-aarch64-unknown-linux-gnu
+
+<details><summary>End of the job log</summary>
+
+```
+/etc/profile.d/apps-bin-path.sh: line 10: XDG_DATA_DIRS: unbound variable
+/etc/profile.d/apps-bin-path.sh: line 10: XDG_DATA_DIRS: unbound variable
+/etc/profile.d/apps-bin-path.sh: line 10: XDG_DATA_DIRS: unbound variable
+Waiting for background step(s) to complete: install-rust
+Finished waiting for background step(s).
+/etc/profile.d/apps-bin-path.sh: line 10: XDG_DATA_DIRS: unbound variable
+Downloading single artifact
+##[error]Unable to download artifact(s): Artifact not found for name: next-swc-aarch64-unknown-linux-gnu
 ```
 
 </details>

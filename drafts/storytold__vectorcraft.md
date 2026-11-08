@@ -1,26 +1,26 @@
 <!-- dark-draft: storytold/vectorcraft -->
-<!-- draft-state: resolved -->
+<!-- draft-state: ready -->
 # Upstream issue draft: storytold/vectorcraft
 
-- **Status:** resolved — lit again (2026-11-06); nothing to file
+- **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/storytold/vectorcraft/issues/new
-- **Stars:** 11415 · **Generated:** 2026-11-06T06:44:53.221Z
+- **Stars:** 11481 · **Generated:** 2026-11-08T06:41:39.628Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: "SonarCloud" workflow getting cancelled on main since 2026-11-01
+CI: "SonarCloud" workflow getting cancelled on main since 2026-11-08
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! The **SonarCloud** workflow (`.github/workflows/sonarcloud.yml`) on `main` has been getting cancelled since 2026-11-01. Here is what I saw, in case it's useful:
+Hi! The **SonarCloud** workflow (`.github/workflows/sonarcloud.yml`) on `main` has been getting cancelled since 2026-11-08. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/storytold/vectorcraft/actions/runs/42171320503 — dark (conclusion: `cancelled`), 2026-11-06 05:56 UTC
-- Dark since: 2026-11-01 09:55 UTC (first run of the current streak)
+- Latest run on `main`: https://github.com/storytold/vectorcraft/actions/runs/42454010897 — dark (conclusion: `cancelled`), 2026-11-08 06:15 UTC
+- Dark since: 2026-11-08 06:11 UTC (first run of the current streak)
 - Likely cause: run cancelled
 
 If this is already known or expected, feel free to close. Thanks for maintaining vectorcraft!

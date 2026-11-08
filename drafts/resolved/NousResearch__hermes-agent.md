@@ -1,8 +1,8 @@
 <!-- dark-draft: NousResearch/hermes-agent -->
-<!-- draft-state: ready -->
+<!-- draft-state: resolved -->
 # Upstream issue draft: NousResearch/hermes-agent
 
-- **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
+- **Status:** resolved — lit again (2026-11-08); nothing to file
 - **Would be filed at:** https://github.com/NousResearch/hermes-agent/issues/new
 - **Stars:** 261513 · **Generated:** 2026-11-08T00:55:40.555Z
 - Nothing in this file has been sent anywhere.

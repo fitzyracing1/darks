@@ -4,9 +4,15 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/tangency-labs/solidcraft/issues/new
-- **Stars:** 14798 · **Generated:** 2026-11-08T00:55:40.555Z
+- **Stars:** 14845 · **Generated:** 2026-11-08T06:41:39.628Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** cancelled by a concurrency group — likely noise
+
+## Skipped: upstream already tracking
+
+- Pages (`.github/workflows/pages.yml`): [issue #12942](https://github.com/tangency-labs/solidcraft/issues/12942) "Preferences: a shared window with kit pages and host pages", [issue #9863](https://github.com/tangency-labs/solidcraft/issues/9863) "Preferences redesign: 12 pages in four headings, profile switcher, new controls and illustrations"
+
+These workflows are left out of the body below.
 
 ## Suggested title
 
@@ -19,21 +25,21 @@ CI: "Docker" workflow getting cancelled on main since 2026-11-07
 <!-- BEGIN BODY -->
 Hi! The **Docker** workflow (`.github/workflows/docker.yml`) on `main` has been getting cancelled since 2026-11-07. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/tangency-labs/solidcraft/actions/runs/42430178760 — dark (conclusion: `cancelled`), 2026-11-08 00:32 UTC
+- Latest run on `main`: https://github.com/tangency-labs/solidcraft/actions/runs/42453070562 — dark (conclusion: `cancelled`), 2026-11-08 06:02 UTC
 - Dark since: 2026-11-07 17:21 UTC (first run of the current streak)
-- Job / step: `image` → `Run Swatinem/rust-cache@6323deb102c322ba6fcbdcafc7e3dddab59af2b6`
+- Job / step: `image` → `Build the web app`
 - Likely cause: Canceling since a higher priority waiting request for docker-refs/heads/main exists
 
 <details><summary>End of the job log</summary>
 
 ```
-Received 54525952 of 1065972586 (5.1%), 52.0 MBs/sec
-Received 130023424 of 1065972586 (12.2%), 62.0 MBs/sec
-Received 130023424 of 1065972586 (12.2%), 41.3 MBs/sec
-Received 130023424 of 1065972586 (12.2%), 31.0 MBs/sec
-Received 264241152 of 1065972586 (24.8%), 50.4 MBs/sec
-Received 264241152 of 1065972586 (24.8%), 42.0 MBs/sec
-Received 385875968 of 1065972586 (36.2%), 52.5 MBs/sec
+    |               ^^^^^^^^^^^^^^^^^
+warning: `solidcraft-ui-egui` (lib) generated 12 warnings (run `cargo fix --lib -p solidcraft-ui-egui` to apply 3 suggestions)
+    Finished `release` profile [optimized + debuginfo] target(s) in 11m 02s
+2026-11-08T06:14:04.132306Z  INFO downloading wasm-bindgen version="0.2.129"
+2026-11-08T06:14:04.571552Z  INFO installing wasm-bindgen
+2026-11-08T06:14:38.224758Z  INFO downloading wasm-opt version="version_123"
+2026-11-08T06:14:38.798620Z  INFO installing wasm-opt
 ##[error]The operation was canceled.
 ```
 
