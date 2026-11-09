@@ -4,14 +4,14 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/open-metadata/OpenMetadata/issues/new
-- **Stars:** 15715 · **Generated:** 2026-11-08T18:35:29.654Z
+- **Stars:** 15715 · **Generated:** 2026-11-09T00:55:42.695Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 10 workflows dark on main ("Merge Queue Dequeue Report", "Integration Tests - MySQL + Elasticsearch", "Integration Tests - PostgreSQL + OpenSearch", +7 more)
+CI: 11 workflows dark on main ("Merge Queue Dequeue Report", "Integration Tests - MySQL + Elasticsearch", "Integration Tests - PostgreSQL + OpenSearch", +8 more)
 <!-- END TITLE -->
 
 ## Body
@@ -21,7 +21,7 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### Merge Queue Dequeue Report (`.github/workflows/merge-queue-dequeue-report.yml`)
 
-- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/42488214946 — dark (conclusion: `failure`), 2026-11-08 14:07 UTC
+- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/42515726927 — dark (conclusion: `failure`), 2026-11-08 19:34 UTC
 - Dark since: 2026-11-03 21:06 UTC (first run of the current streak)
 - Job / step: `evict-main-conflicts` → `Remove queue entries that conflict with main`
 - Likely cause: cannot iterate over: null
@@ -43,7 +43,7 @@ cannot iterate over: null
 
 ### Integration Tests - MySQL + Elasticsearch (`.github/workflows/integration-tests-mysql-elasticsearch.yml`)
 
-- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/42464491657 — dark (conclusion: `failure`), 2026-11-08 08:48 UTC
+- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/42515726367 — dark (conclusion: `failure`), 2026-11-08 19:34 UTC
 - Dark since: 2026-11-05 11:11 UTC (first run of the current streak)
 - Job / step: `Integration Test Lane (parallel)` → `Run Integration Tests (MySQL + Elasticsearch)`
 - Likely cause: [ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
@@ -65,31 +65,9 @@ cannot iterate over: null
 
 ### Integration Tests - PostgreSQL + OpenSearch (`.github/workflows/integration-tests-postgres-opensearch.yml`)
 
-- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/42464491686 — dark (conclusion: `failure`), 2026-11-08 08:48 UTC
+- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/42515727001 — dark (conclusion: `failure`), 2026-11-08 19:34 UTC
 - Dark since: 2026-11-05 11:11 UTC (first run of the current streak)
-- Job / step: `Integration Test Lane (parallel)` → `Set up JDK 21`
-- Likely cause: Unexpected HTTP response: 504
-
-<details><summary>End of the job log</summary>
-
-```
-Resolved latest version as 21.0.13+9.0.LTS
-Trying to download...
-Downloading Java 21.0.13+9.0.LTS (Temurin-Hotspot) from https://github.com/adoptium/temurin21-binaries/releases/download/jdk-21.0.13%2B9/OpenJDK21U-jdk_x64_linux_hotspot_21.0.13_9.tar.gz ...
-Unexpected HTTP response: 504
-Waiting 14 seconds before trying again
-Unexpected HTTP response: 504
-Waiting 11 seconds before trying again
-##[error]HTTP 504: Unexpected HTTP response: 504
-```
-
-</details>
-
-### Integration Tests - PostgreSQL + Elasticsearch + Redis (`.github/workflows/integration-tests-postgres-elasticsearch-redis.yml`)
-
-- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/42464491639 — dark (conclusion: `failure`), 2026-11-08 08:48 UTC
-- Dark since: 2026-11-06 10:36 UTC (first run of the current streak)
-- Job / step: `Integration Test Lane (global-state)` → `Run Integration Tests (PostgreSQL + Elasticsearch + Redis)`
+- Job / step: `Integration Test Lane (parallel)` → `Run Integration Tests (PostgreSQL + OpenSearch)`
 - Likely cause: [ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
 
 <details><summary>End of the job log</summary>
@@ -107,9 +85,31 @@ Waiting 11 seconds before trying again
 
 </details>
 
+### Integration Tests - PostgreSQL + Elasticsearch + Redis (`.github/workflows/integration-tests-postgres-elasticsearch-redis.yml`)
+
+- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/42515727016 — dark (conclusion: `failure`), 2026-11-08 19:34 UTC
+- Dark since: 2026-11-06 10:36 UTC (first run of the current streak)
+- Job / step: `Integration Test Lane (parallel)` → `Run Integration Tests (PostgreSQL + Elasticsearch + Redis)`
+- Likely cause: [ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+
+<details><summary>End of the job log</summary>
+
+```
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-failsafe-plugin:3.1.2:verify (verify) on project openmetadata-integration-tests: There was a timeout in the fork -> [Help 1]
+[ERROR]
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR]
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+##[error]Process completed with exit code 1.
+```
+
+</details>
+
 ### monitor-slack-link (`.github/workflows/monitor-slack-link.yml`)
 
-- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/42508658636 — dark (conclusion: `failure`), 2026-11-08 18:10 UTC
+- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/42540548912 — dark (conclusion: `failure`), 2026-11-09 00:30 UTC
 - Dark since: 2026-11-06 22:08 UTC (first run of the current streak)
 - Job / step: `monitor-slack-link` → `Set up Python 3.9`
 - Likely cause: The version '3.9' with architecture 'x64' was not found for Ubuntu 26.04.
@@ -117,12 +117,12 @@ Waiting 11 seconds before trying again
 <details><summary>End of the job log</summary>
 
 ```
-Updating files:  99% (26997/27269)
-Updating files: 100% (27269/27269)
-Updating files: 100% (27269/27269), done.
+Updating files:  99% (27014/27286)
+Updating files: 100% (27286/27286)
+Updating files: 100% (27286/27286), done.
 Switched to a new branch 'main'
 branch 'main' set up to track 'origin/main'.
-3e7f290262558e2c1de12a0f67248feea766021e
+6cb5db420800aff21223dd1708ef665a1ebcb462
 Version 3.9 was not found in the local cache
 ##[error]The version '3.9' with architecture 'x64' was not found for Ubuntu 26.04.
 ```
@@ -131,7 +131,7 @@ Version 3.9 was not found in the local cache
 
 ### Populate Playwright CI caches (`.github/workflows/populate-playwright-caches.yml`)
 
-- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/42507960871 — dark (conclusion: `failure`), 2026-11-08 18:02 UTC
+- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/42538348646 — dark (conclusion: `failure`), 2026-11-09 00:06 UTC
 - Dark since: 2026-11-07 00:05 UTC (first run of the current streak)
 - Job / step: `populate` → `Report warm failures`
 - Likely cause: cache warmers failed: browser — downstream runs stay on the previous main-scoped copies (or the resilient miss path) until the next populate
@@ -141,7 +141,7 @@ Version 3.9 was not found in the local cache
 ```
 Received 434 of 434 (100.0%), 0.0 MBs/sec
 Cache Size: ~0 MB (434 B)
-[command]/usr/bin/tar -xf /home/runner/work/_temp/2476461b-c910-407a-bff1-346273044651/cache.tzst -P -C /home/runner/work/OpenMetadata/OpenMetadata --use-compress-program unzstd
+[command]/usr/bin/tar -xf /home/runner/work/_temp/8245159b-8ea6-4cf5-83e2-9efeb37c7b41/cache.tzst -P -C /home/runner/work/OpenMetadata/OpenMetadata --use-compress-program unzstd
 Cache restored successfully
 Cache restored from key: Linux-playwright-66168dfd1632ada5ad220ce3a6895756fffe473058832476a5baa78c015dda96
 Failed to install browsers
@@ -235,6 +235,28 @@ Received Goaway
 	... 20 common frames omitted
 [ERROR] Bootstrapper: An error occurred: Error: Scanner engine failed with code 1
 ##[error]Process completed with exit code 1.
+```
+
+</details>
+
+### security-scan (`.github/workflows/security-scan.yml`)
+
+- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/42540190579 — dark (conclusion: `failure`), 2026-11-09 00:26 UTC
+- Dark since: 2026-11-09 00:26 UTC (first run of the current streak)
+- Job / step: `security-scan` → `Install Ubuntu dependencies`
+- Likely cause: E: Package 'wkhtmltopdf' has no installation candidate
+
+<details><summary>End of the job log</summary>
+
+```
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Package wkhtmltopdf is not available, but is referred to by another package.
+This may mean that the package is missing, has been obsoleted, or
+is only available from another source
+E: Package 'wkhtmltopdf' has no installation candidate
+##[error]Process completed with exit code 100.
 ```
 
 </details>

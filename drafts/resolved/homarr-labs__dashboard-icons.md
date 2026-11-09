@@ -1,8 +1,8 @@
 <!-- dark-draft: homarr-labs/dashboard-icons -->
-<!-- draft-state: ready -->
+<!-- draft-state: resolved -->
 # Upstream issue draft: homarr-labs/dashboard-icons
 
-- **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
+- **Status:** resolved — lit again (2026-11-09); nothing to file
 - **Would be filed at:** https://github.com/homarr-labs/dashboard-icons/issues/new
 - **Stars:** 9034 · **Generated:** 2026-11-08T18:35:29.654Z
 - Nothing in this file has been sent anywhere.

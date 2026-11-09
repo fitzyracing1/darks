@@ -4,36 +4,60 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/reactive-resume/reactive-resume/issues/new
-- **Stars:** 45485 · **Generated:** 2026-11-08T18:35:29.654Z
+- **Stars:** 45494 · **Generated:** 2026-11-09T00:55:42.695Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: "Docker publish and deploy" workflow failing on main since 2026-11-08
+CI: 2 workflows dark on main ("CI", "autofix.ci")
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! The **Docker publish and deploy** workflow (`.github/workflows/docker-publish.yml`) on `main` has been failing since 2026-11-08. Here is what I saw, in case it's useful:
+Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
 
-- Latest run on `main`: https://github.com/reactive-resume/reactive-resume/actions/runs/42471687376 — dark (conclusion: `failure`), 2026-11-08 10:30 UTC
-- Dark since: 2026-11-08 10:30 UTC (first run of the current streak)
-- Job / step: `Publish images and deploy` → `Install Cosign`
-- Likely cause: curl: (22) The requested URL returned error: 504
+### CI (`.github/workflows/ci.yml`)
+
+- Latest run on `main`: https://github.com/reactive-resume/reactive-resume/actions/runs/42521586544 — dark (conclusion: `failure`), 2026-11-08 20:43 UTC
+- Dark since: 2026-11-08 19:20 UTC (first run of the current streak)
+- Job / step: `Run unit tests` → `Check package boundaries`
+- Likely cause: x cannot import package 'pdfjs-dist' because it is not a dependency
 
 <details><summary>End of the job log</summary>
 
 ```
-##[start-action display=Run #!/bin/bash;id=__sigstore_cosign-installer.__run]
-INFO: Downloading bootstrap version 'v3.0.6' of cosign to verify version to be installed...
-      https://github.com/sigstore/cosign/releases/download/v3.0.6/cosign-linux-amd64
-curl: (22) The requested URL returned error: 504
-curl: (22) The requested URL returned error: 504
-curl: (22) The requested URL returned error: 504
-curl: (56) Connection died, tried 5 times before giving up
-##[error]Process completed with exit code 56.
+  x cannot import package `pdfjs-dist` because it is not a dependency
+   ,-[/home/runner/_work/reactive-resume/reactive-resume/tooling/android/local-import/reader.mjs:1:55]
+ 1 | import { GlobalWorkerOptions, getDocument, OPS } from "pdfjs-dist/legacy/build/pdf.mjs";
+   :                                                       ^^^^^^^^^^^^^^^^|^^^^^^^^^^^^^^^^
+   :                                                                       `-- package imported here
+ 2 | import { parseJSONResume } from "@reactive-resume/import/json-resume";
+   `----
+##[error]Process completed with exit code 1.
+```
+
+</details>
+
+### autofix.ci (`.github/workflows/autofix.yml`)
+
+- Latest run on `main`: https://github.com/reactive-resume/reactive-resume/actions/runs/42521586542 — dark (conclusion: `failure`), 2026-11-08 20:43 UTC
+- Dark since: 2026-11-08 19:20 UTC (first run of the current streak)
+- Job / step: `Apply autofixes` → `Apply Knip fixes`
+- Likely cause: [ELIFECYCLE] Command failed with exit code 1.
+
+<details><summary>End of the job log</summary>
+
+```
+$ knip --fix
+Unlisted dependencies (1)
+pdfjs-dist/legacy/build/pdf.mjs  tooling/android/local-import/reader.mjs:1:55
+Configuration hints (2)
+lingui.config.ts  apps/mobile  knip.json  Remove redundant entry pattern
+lingui.config.ts  apps/web     knip.json  Remove redundant entry pattern
+[ELIFECYCLE] Command failed with exit code 1.
+##[error]Process completed with exit code 1.
 ```
 
 </details>

@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/horizon-rust/horizon/issues/new
-- **Stars:** 8081 · **Generated:** 2026-11-08T18:35:29.654Z
+- **Stars:** 8157 · **Generated:** 2026-11-09T00:55:42.695Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
@@ -21,27 +21,27 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### parity-main (`.github/workflows/parity-main.yml`)
 
-- Latest run on `main`: https://github.com/horizon-rust/horizon/actions/runs/42509277236 — dark (conclusion: `cancelled`), 2026-11-08 18:17 UTC
+- Latest run on `main`: https://github.com/horizon-rust/horizon/actions/runs/42542273830 — dark (conclusion: `cancelled`), 2026-11-09 00:49 UTC
 - Dark since: 2026-11-08 04:57 UTC (first run of the current streak)
 - Likely cause: run cancelled
 
 ### checks (`.github/workflows/ci.yml`)
 
-- Latest run on `main`: https://github.com/horizon-rust/horizon/actions/runs/42509277206 — dark (conclusion: `failure`), 2026-11-08 18:17 UTC
+- Latest run on `main`: https://github.com/horizon-rust/horizon/actions/runs/42537911007 — dark (conclusion: `failure`), 2026-11-09 00:00 UTC
 - Dark since: 2026-11-08 18:17 UTC (first run of the current streak)
 - Job / step: `verify` → `Test Rust core and voxel kernel correctness`
-- Likely cause: error: test failed, to rerun pass '-p horizon-client-lib --lib'
+- Likely cause: error: test failed, to rerun pass '-p horizon-client --lib'
 
 <details><summary>End of the job log</summary>
 
 ```
----- save::tests::older_worlds_are_upgraded_on_opening stdout ----
-thread 'save::tests::older_worlds_are_upgraded_on_opening' (15925) panicked at crates/horizon-world/src/datafix/tables.rs:218:13:
-/home/runner/work/horizon/horizon/crates/horizon-world/../../.local/horizon-client/26.3/datafix-tables.json: No such file or directory (os error 2) (/home/runner/work/horizon/horizon/crates/horizon-world/../../.local/ho…
+assertion `left == right` failed
+  left: {"add_server_reload_listeners", "analog_output", "anvil_craft_post", "anvil_craft_pre", "anvil_damaged", "anvil_update", "apply_effect_tick", "armor_stand_manipulate", "arrow_loose", "arrow_nock", "attack_entity…
+ right: {"add_server_reload_listeners", "analog_output", "anvil_craft_post", "anvil_craft_pre", "anvil_damaged", "anvil_update", "apply_effect_tick", "armor_stand_manipulate", "arrow_loose", "arrow_nock", "attack_entity…
 failures:
-    save::tests::older_worlds_are_upgraded_on_opening
-test result: FAILED. 2342 passed; 1 failed; 90 ignored; 0 measured; 0 filtered out; finished in 10.95s
-error: test failed, to rerun pass `-p horizon-client-lib --lib`
+    game::native_hooks::tests::catalog_matches_hook_points
+test result: FAILED. 1216 passed; 1 failed; 372 ignored; 0 measured; 0 filtered out; finished in 2.89s
+error: test failed, to rerun pass `-p horizon-client --lib`
 ##[error]Process completed with exit code 101.
 ```
 

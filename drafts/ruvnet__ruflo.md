@@ -4,13 +4,13 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/ruvnet/ruflo/issues/new
-- **Stars:** 81244 · **Generated:** 2026-11-08T18:35:29.654Z
+- **Stars:** 81276 · **Generated:** 2026-11-09T00:55:42.695Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 3 workflows dark on main ("Clone Tracker (14-day rolling)", "no-metaharness-smoke", "all-plugins-smoke")
+CI: 5 workflows dark on main ("Clone Tracker (14-day rolling)", "no-metaharness-smoke", "all-plugins-smoke", +2 more)
 <!-- END TITLE -->
 
 ## Body
@@ -42,7 +42,7 @@ clone tracker: 5/5 repo(s) failed (ruvnet/ruflo, ruvnet/agentdb, ruvnet/agentic-
 
 ### no-metaharness-smoke (`.github/workflows/no-metaharness-smoke.yml`)
 
-- Latest run on `main`: https://github.com/ruvnet/ruflo/actions/runs/42297689454 — dark (conclusion: `failure`), 2026-11-06 21:33 UTC
+- Latest run on `main`: https://github.com/ruvnet/ruflo/actions/runs/42541426516 — dark (conclusion: `failure`), 2026-11-09 00:40 UTC
 - Dark since: 2026-11-06 21:00 UTC (first run of the current streak)
 - Job / step: `smoke-without-metaharness` → `Run meta-smoke (should pass with current optional deps in place)`
 - Likely cause: ⚠ 1 plugin(s) failed their smoke contract — see failing steps above.
@@ -51,11 +51,11 @@ clone tracker: 5/5 repo(s) failed (ruvnet/ruflo, ruvnet/agentdb, ruvnet/agentic-
 
 ```
 | `agentic-qe-fleet (external)` | ✓ | — | 5.3s |  |
-| `agentdb (external)` | ✓ | — | 2.2s |  |
-| `agentic-flow (external)` | ✓ | — | 4.4s |  |
+| `agentdb (external)` | ✓ | — | 1.9s |  |
+| `agentic-flow (external)` | ✓ | — | 3.9s |  |
 | `changelog contract` | ✓ | 4/4 | 0.0s |  |
-| `guard-probe (fast)` | ✓ | 2817/2817 | 109.0s |  |
-**Summary**: 51/52 plugins OK · 3580/3581 steps passed · 400.5s wall (parallel: true)
+| `guard-probe (fast)` | ✓ | 2817/2817 | 108.0s |  |
+**Summary**: 51/52 plugins OK · 3580/3581 steps passed · 390.8s wall (parallel: true)
 ⚠ 1 plugin(s) failed their smoke contract — see failing steps above.
 ##[error]Process completed with exit code 1.
 ```
@@ -79,6 +79,50 @@ clone tracker: 5/5 repo(s) failed (ruvnet/ruflo, ruvnet/agentdb, ruvnet/agentic-
   },
   "generatedAt": "2026-11-06T21:30:20.800Z"
 }
+##[error]Process completed with exit code 1.
+```
+
+</details>
+
+### CI/CD Pipeline (`.github/workflows/ci.yml`)
+
+- Latest run on `main`: https://github.com/ruvnet/ruflo/actions/runs/42532342607 — dark (conclusion: `failure`), 2026-11-08 22:51 UTC
+- Dark since: 2026-11-08 22:51 UTC (first run of the current streak)
+- Job / step: `Test Suite (ubuntu-latest)` → `Run all tests`
+- Likely cause: AssertionError: expected 'pass' to be 'fail' // Object.is equality
+
+<details><summary>End of the job log</summary>
+
+```
+  duration_ms: 2.505103
+  ...
+JSON report written to /home/runner/work/ruflo/ruflo/.test-results/vitest.json
+CI test ratchet: FAILED — 1 unexpected failing file(s)
+  + v3/@claude-flow/cli/__tests__/doctor-memory-driver-3321.test.ts
+      ✗ doctor Memory Persistence Driver (#3321) does not let a large sql.js table count mask a native open failure
+        AssertionError: expected 'pass' to be 'fail' // Object.is equality
+##[error]Process completed with exit code 1.
+```
+
+</details>
+
+### metaharness-ci (`.github/workflows/metaharness-ci.yml`)
+
+- Latest run on `main`: https://github.com/ruvnet/ruflo/actions/runs/42532342588 — dark (conclusion: `failure`), 2026-11-08 22:51 UTC
+- Dark since: 2026-11-08 22:51 UTC (first run of the current streak)
+- Job / step: `score` → `Plugin structural smoke`
+- Likely cause: 127 passed, 1 failed
+
+<details><summary>End of the job log</summary>
+
+```
+→ 17c. oia-audit composite worker (Phase 2 — iter 7) ... PASS
+→ 17b. harness type in plugin registry (Phase 2 — iter 6) ... PASS
+→ 17. eject command — Phase 2 differentiator (iter 4) ... PASS
+→ M1. mod: hooks.json names register.ts, every hook file is present and under 500 lines ... PASS
+→ M2. mod: guard defaults on (userConfig), the command name is metaharness-mod ... PASS
+→ M3. mod: hooks never touch the network or spawn a process ... PASS
+127 passed, 1 failed
 ##[error]Process completed with exit code 1.
 ```
 

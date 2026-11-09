@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/xberg-io/xberg/issues/new
-- **Stars:** 9565 · **Generated:** 2026-11-08T18:35:29.654Z
+- **Stars:** 9565 · **Generated:** 2026-11-09T00:55:42.695Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** cancelled by a concurrency group — likely noise
 
@@ -21,21 +21,21 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### CI Rust (`.github/workflows/ci-rust.yaml`)
 
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/42502021529 — dark (conclusion: `cancelled`), 2026-11-08 16:51 UTC
+- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/42533696290 — dark (conclusion: `cancelled`), 2026-11-08 23:08 UTC
 - Dark since: 2026-10-25 18:30 UTC (first run of the current streak)
-- Job / step: `Rust (ubuntu-24.04-arm)` → `Run tests`
+- Job / step: `xberg-cli feature leg (pdf-ocr)` → `Install system dependencies`
 - Likely cause: Canceling since a higher priority waiting request for ci-rust-refs/heads/main exists
 
 <details><summary>End of the job log</summary>
 
 ```
-test test_structured_extraction_custom_prompt ... ok
-test test_structured_extraction_openai ... ok
-test test_vlm_fallback_on_low_quality ... ok
-test test_vlm_ocr_anthropic ... ok
-test test_vlm_fallback_always_routes_to_vlm ... ok
-test test_vlm_ocr_gemini ... ok
-test test_vlm_ocr_openai ... ok
+[  8%] Building C object src/CMakeFiles/leptonica.dir/bmpio.c.o
+[  8%] Building C object src/CMakeFiles/leptonica.dir/bmpiostub.c.o
+[  9%] Building C object src/CMakeFiles/leptonica.dir/bootnumgen1.c.o
+[  9%] Building C object src/CMakeFiles/leptonica.dir/bootnumgen2.c.o
+[ 10%] Building C object src/CMakeFiles/leptonica.dir/bootnumgen3.c.o
+[ 10%] Building C object src/CMakeFiles/leptonica.dir/bootnumgen4.c.o
+[ 11%] Building C object src/CMakeFiles/leptonica.dir/boxbasic.c.o
 ##[error]The operation was canceled.
 ```
 
@@ -43,21 +43,21 @@ test test_vlm_ocr_openai ... ok
 
 ### CI E2E (`.github/workflows/ci-e2e.yaml`)
 
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/42502021585 — dark (conclusion: `cancelled`), 2026-11-08 16:51 UTC
+- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/42533696372 — dark (conclusion: `cancelled`), 2026-11-08 23:08 UTC
 - Dark since: 2026-11-03 17:32 UTC (first run of the current streak)
-- Job / step: `E2E (java)` → `Run e2e tests`
+- Job / step: `Build FFI (aarch64-unknown-linux-gnu)` → `Install system dependencies`
 - Likely cause: Canceling since a higher priority waiting request for ci-e2e-refs/heads/main exists
 
 <details><summary>End of the job log</summary>
 
 ```
-   Compiling lru v0.19.0
-   Compiling fs2 v0.4.3
-   Compiling memmap2 v0.9.12
-   Compiling minijinja v3.0.5
-   Compiling similar v3.2.1
-   Compiling jotdown v0.10.0
-   Compiling org v0.3.1
+[ 19%] Building C object src/CMakeFiles/leptonica.dir/colormap.c.o
+[ 19%] Building C object src/CMakeFiles/leptonica.dir/colormorph.c.o
+[ 20%] Building C object src/CMakeFiles/leptonica.dir/colorquant1.c.o
+[ 20%] Building C object src/CMakeFiles/leptonica.dir/colorquant2.c.o
+[ 21%] Building C object src/CMakeFiles/leptonica.dir/colorseg.c.o
+[ 21%] Building C object src/CMakeFiles/leptonica.dir/colorspace.c.o
+[ 22%] Building C object src/CMakeFiles/leptonica.dir/compare.c.o
 ##[error]The operation was canceled.
 ```
 
@@ -65,21 +65,21 @@ test test_vlm_ocr_openai ... ok
 
 ### CI Integrations (`.github/workflows/ci-integrations.yaml`)
 
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/42502021528 — dark (conclusion: `cancelled`), 2026-11-08 16:51 UTC
+- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/42533696318 — dark (conclusion: `cancelled`), 2026-11-08 23:08 UTC
 - Dark since: 2026-11-08 00:41 UTC (first run of the current streak)
-- Job / step: `Build local integration bindings` → `Build and stage Java binding`
+- Job / step: `Build local integration bindings` → `Install system dependencies`
 - Likely cause: Canceling since a higher priority waiting request for ci-integrations-refs/heads/main exists
 
 <details><summary>End of the job log</summary>
 
 ```
-   Compiling lru v0.19.0
-   Compiling memmap2 v0.9.12
-   Compiling fs2 v0.4.3
-   Compiling org v0.3.1
-   Compiling minijinja v3.0.5
-   Compiling similar v3.2.1
-   Compiling jotdown v0.10.0
+[ 18%] Building C object src/CMakeFiles/leptonica.dir/coloring.c.o
+[ 19%] Building C object src/CMakeFiles/leptonica.dir/colormap.c.o
+[ 19%] Building C object src/CMakeFiles/leptonica.dir/colormorph.c.o
+[ 20%] Building C object src/CMakeFiles/leptonica.dir/colorquant1.c.o
+[ 20%] Building C object src/CMakeFiles/leptonica.dir/colorquant2.c.o
+[ 21%] Building C object src/CMakeFiles/leptonica.dir/colorseg.c.o
+[ 21%] Building C object src/CMakeFiles/leptonica.dir/colorspace.c.o
 ##[error]The operation was canceled.
 ```
 

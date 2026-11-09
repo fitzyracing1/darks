@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/xerj-org/xerj/issues/new
-- **Stars:** 18622 · **Generated:** 2026-11-08T18:35:29.654Z
+- **Stars:** 18605 · **Generated:** 2026-11-09T00:55:42.695Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
@@ -28,7 +28,7 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### CI (`.github/workflows/ci.yml`)
 
-- Latest run on `main`: https://github.com/xerj-org/xerj/actions/runs/42350943745 — dark (conclusion: `failure`), 2026-11-07 07:21 UTC
+- Latest run on `main`: https://github.com/xerj-org/xerj/actions/runs/42529567939 — dark (conclusion: `failure`), 2026-11-08 22:18 UTC
 - Dark since: 2026-11-07 06:22 UTC (first run of the current streak)
 - Job / step: `Build + Test` → `Unit + integration tests`
 - Likely cause: error: test failed, to rerun pass '-p xerj-autoindex --test field_report_surfaces'
@@ -36,7 +36,7 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 <details><summary>End of the job log</summary>
 
 ```
-thread 'homepage_prompt_defers_the_field_report_to_llms_txt' (35736) panicked at crates/xerj-autoindex/tests/field_report_surfaces.rs:145:5:
+thread 'homepage_prompt_defers_the_field_report_to_llms_txt' (68229) panicked at crates/xerj-autoindex/tests/field_report_surfaces.rs:145:5:
 the homepage prompt a person reads must be the short llms.txt prompt
 note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
 failures:
