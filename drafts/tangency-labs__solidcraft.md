@@ -4,9 +4,8 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/tangency-labs/solidcraft/issues/new
-- **Stars:** 15030 · **Generated:** 2026-11-09T00:55:42.695Z
+- **Stars:** 15088 · **Generated:** 2026-11-09T06:54:36.072Z
 - Nothing in this file has been sent anywhere.
-- **Note for Joshua:** cancelled by a concurrency group — likely noise
 
 ## Skipped: upstream already tracking
 
@@ -17,30 +16,30 @@ These workflows are left out of the body below.
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: "Docker" workflow getting cancelled on main since 2026-11-08
+CI: "Packaging lint" workflow failing on main since 2026-11-09
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! The **Docker** workflow (`.github/workflows/docker.yml`) on `main` has been getting cancelled since 2026-11-08. Here is what I saw, in case it's useful:
+Hi! The **Packaging lint** workflow (`.github/workflows/packaging-lint.yml`) on `main` has been failing since 2026-11-09. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/tangency-labs/solidcraft/actions/runs/42541473974 — dark (conclusion: `cancelled`), 2026-11-09 00:40 UTC
-- Dark since: 2026-11-08 23:06 UTC (first run of the current streak)
-- Job / step: `image` → `Build the web app`
-- Likely cause: Canceling since a higher priority waiting request for docker-refs/heads/main exists
+- Latest run on `main`: https://github.com/tangency-labs/solidcraft/actions/runs/42569521533 — dark (conclusion: `failure`), 2026-11-09 05:49 UTC
+- Dark since: 2026-11-09 05:49 UTC (first run of the current streak)
+- Job / step: `lint` → `Install tools`
+- Likely cause: tar: Error is not recoverable: exiting now
 
 <details><summary>End of the job log</summary>
 
 ```
-   Compiling solidcraft-theme v0.40.0-rc.3 (/home/runner/work/solidcraft/solidcraft/crates/theme)
-   Compiling solidcraft-ui-registry v0.40.0-rc.3 (/home/runner/work/solidcraft/solidcraft/crates/ui-registry)
-   Compiling solidcraft-space-mouse v0.40.0-rc.3 (/home/runner/work/solidcraft/solidcraft/crates/space-mouse)
-   Compiling solidcraft-web v0.40.0-rc.3 (/home/runner/work/solidcraft/solidcraft/apps/solidcraft-web)
-   Compiling eframe v0.37.0
-   Compiling solidcraft-smlib v0.40.0-rc.3 (/home/runner/work/solidcraft/solidcraft/crates/smlib)
-   Compiling solidcraft-kernel v0.40.0-rc.3 (/home/runner/work/solidcraft/solidcraft/crates/kernel)
-##[error]The operation was canceled.
+No containers need to be restarted.
+No user sessions are running outdated binaries.
+No VM guests are running outdated hypervisor (qemu) binaries on this host.
+curl: (22) The requested URL returned error: 504
+gzip: stdin: unexpected end of file
+tar: Child returned status 1
+tar: Error is not recoverable: exiting now
+##[error]Process completed with exit code 2.
 ```
 
 </details>

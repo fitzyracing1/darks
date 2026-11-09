@@ -4,14 +4,14 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/open-metadata/OpenMetadata/issues/new
-- **Stars:** 15715 · **Generated:** 2026-11-09T00:55:42.695Z
+- **Stars:** 15720 · **Generated:** 2026-11-09T06:54:36.072Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 11 workflows dark on main ("Merge Queue Dequeue Report", "Integration Tests - MySQL + Elasticsearch", "Integration Tests - PostgreSQL + OpenSearch", +8 more)
+CI: 12 workflows dark on main ("Merge Queue Dequeue Report", "Integration Tests - MySQL + Elasticsearch", "Integration Tests - PostgreSQL + OpenSearch", +9 more)
 <!-- END TITLE -->
 
 ## Body
@@ -21,7 +21,7 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### Merge Queue Dequeue Report (`.github/workflows/merge-queue-dequeue-report.yml`)
 
-- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/42515726927 — dark (conclusion: `failure`), 2026-11-08 19:34 UTC
+- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/42574350806 — dark (conclusion: `failure`), 2026-11-09 06:39 UTC
 - Dark since: 2026-11-03 21:06 UTC (first run of the current streak)
 - Job / step: `evict-main-conflicts` → `Remove queue entries that conflict with main`
 - Likely cause: cannot iterate over: null
@@ -43,9 +43,9 @@ cannot iterate over: null
 
 ### Integration Tests - MySQL + Elasticsearch (`.github/workflows/integration-tests-mysql-elasticsearch.yml`)
 
-- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/42515726367 — dark (conclusion: `failure`), 2026-11-08 19:34 UTC
+- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/42553974651 — dark (conclusion: `failure`), 2026-11-09 03:00 UTC
 - Dark since: 2026-11-05 11:11 UTC (first run of the current streak)
-- Job / step: `Integration Test Lane (parallel)` → `Run Integration Tests (MySQL + Elasticsearch)`
+- Job / step: `Integration Test Lane (global-state)` → `Run Integration Tests (MySQL + Elasticsearch)`
 - Likely cause: [ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
 
 <details><summary>End of the job log</summary>
@@ -65,9 +65,9 @@ cannot iterate over: null
 
 ### Integration Tests - PostgreSQL + OpenSearch (`.github/workflows/integration-tests-postgres-opensearch.yml`)
 
-- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/42515727001 — dark (conclusion: `failure`), 2026-11-08 19:34 UTC
+- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/42553974698 — dark (conclusion: `failure`), 2026-11-09 03:00 UTC
 - Dark since: 2026-11-05 11:11 UTC (first run of the current streak)
-- Job / step: `Integration Test Lane (parallel)` → `Run Integration Tests (PostgreSQL + OpenSearch)`
+- Job / step: `Integration Test Lane (global-state)` → `Run Integration Tests (PostgreSQL + OpenSearch)`
 - Likely cause: [ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
 
 <details><summary>End of the job log</summary>
@@ -87,15 +87,15 @@ cannot iterate over: null
 
 ### Integration Tests - PostgreSQL + Elasticsearch + Redis (`.github/workflows/integration-tests-postgres-elasticsearch-redis.yml`)
 
-- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/42515727016 — dark (conclusion: `failure`), 2026-11-08 19:34 UTC
+- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/42553974619 — dark (conclusion: `failure`), 2026-11-09 03:00 UTC
 - Dark since: 2026-11-06 10:36 UTC (first run of the current streak)
-- Job / step: `Integration Test Lane (parallel)` → `Run Integration Tests (PostgreSQL + Elasticsearch + Redis)`
+- Job / step: `Integration Test Lane (global-state)` → `Run Integration Tests (PostgreSQL + Elasticsearch + Redis)`
 - Likely cause: [ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
 
 <details><summary>End of the job log</summary>
 
 ```
-[ERROR] Failed to execute goal org.apache.maven.plugins:maven-failsafe-plugin:3.1.2:verify (verify) on project openmetadata-integration-tests: There was a timeout in the fork -> [Help 1]
+[ERROR] -> [Help 1]
 [ERROR]
 [ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
 [ERROR] Re-run Maven using the -X switch to enable full debug logging.
@@ -109,7 +109,7 @@ cannot iterate over: null
 
 ### monitor-slack-link (`.github/workflows/monitor-slack-link.yml`)
 
-- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/42540548912 — dark (conclusion: `failure`), 2026-11-09 00:30 UTC
+- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/42572822908 — dark (conclusion: `failure`), 2026-11-09 06:24 UTC
 - Dark since: 2026-11-06 22:08 UTC (first run of the current streak)
 - Job / step: `monitor-slack-link` → `Set up Python 3.9`
 - Likely cause: The version '3.9' with architecture 'x64' was not found for Ubuntu 26.04.
@@ -117,12 +117,12 @@ cannot iterate over: null
 <details><summary>End of the job log</summary>
 
 ```
-Updating files:  99% (27014/27286)
-Updating files: 100% (27286/27286)
-Updating files: 100% (27286/27286), done.
+Updating files:  99% (27017/27289)
+Updating files: 100% (27289/27289)
+Updating files: 100% (27289/27289), done.
 Switched to a new branch 'main'
 branch 'main' set up to track 'origin/main'.
-6cb5db420800aff21223dd1708ef665a1ebcb462
+74286f9b618735e4bef09ad2ef55bb6dd96720e5
 Version 3.9 was not found in the local cache
 ##[error]The version '3.9' with architecture 'x64' was not found for Ubuntu 26.04.
 ```
@@ -131,7 +131,7 @@ Version 3.9 was not found in the local cache
 
 ### Populate Playwright CI caches (`.github/workflows/populate-playwright-caches.yml`)
 
-- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/42538348646 — dark (conclusion: `failure`), 2026-11-09 00:06 UTC
+- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/42572141613 — dark (conclusion: `failure`), 2026-11-09 06:17 UTC
 - Dark since: 2026-11-07 00:05 UTC (first run of the current streak)
 - Job / step: `populate` → `Report warm failures`
 - Likely cause: cache warmers failed: browser — downstream runs stay on the previous main-scoped copies (or the resilient miss path) until the next populate
@@ -141,7 +141,7 @@ Version 3.9 was not found in the local cache
 ```
 Received 434 of 434 (100.0%), 0.0 MBs/sec
 Cache Size: ~0 MB (434 B)
-[command]/usr/bin/tar -xf /home/runner/work/_temp/8245159b-8ea6-4cf5-83e2-9efeb37c7b41/cache.tzst -P -C /home/runner/work/OpenMetadata/OpenMetadata --use-compress-program unzstd
+[command]/usr/bin/tar -xf /home/runner/work/_temp/4f02b952-791c-49b4-8b96-4c0cacbc6e20/cache.tzst -P -C /home/runner/work/OpenMetadata/OpenMetadata --use-compress-program unzstd
 Cache restored successfully
 Cache restored from key: Linux-playwright-66168dfd1632ada5ad220ce3a6895756fffe473058832476a5baa78c015dda96
 Failed to install browsers
@@ -153,7 +153,7 @@ Error: ERROR: Playwright does not support chromium on ubuntu26.04-x64
 
 ### SonarCloud Ingestion Nightly (`.github/workflows/py-sonarcloud-nightly.yml`)
 
-- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/42437218649 — dark (conclusion: `failure`), 2026-11-08 02:08 UTC
+- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/42549288034 — dark (conclusion: `failure`), 2026-11-09 02:08 UTC
 - Dark since: 2026-11-08 02:08 UTC (first run of the current streak)
 - Job / step: `Unit Tests` → `Run Unit Tests`
 - Likely cause: The operation was canceled.
@@ -175,7 +175,7 @@ Error: ERROR: Playwright does not support chromium on ubuntu26.04-x64
 
 ### Postgresql PR Playwright E2E Tests (`.github/workflows/playwright-postgresql-e2e.yml`)
 
-- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/42439183611 — dark (conclusion: `failure`), 2026-11-08 02:35 UTC
+- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/42551740021 — dark (conclusion: `failure`), 2026-11-09 02:35 UTC
 - Dark since: 2026-11-08 02:35 UTC (first run of the current streak)
 - Job / step: `playwright / prepare-playwright-fixture` → `Install fixture-state browser`
 - Likely cause: Error: ERROR: Playwright does not support chromium on ubuntu26.04-x64
@@ -197,9 +197,9 @@ Error: ERROR: Playwright does not support chromium on ubuntu26.04-x64
 
 ### SSO Login Nightly (`.github/workflows/playwright-sso-login-nightly.yml`)
 
-- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/42440955448 — dark (conclusion: `failure`), 2026-11-08 03:01 UTC
+- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/42554153744 — dark (conclusion: `failure`), 2026-11-09 03:02 UTC
 - Dark since: 2026-11-08 03:01 UTC (first run of the current streak)
-- Job / step: `sso-login (keycloak-oidc-public, KEYCLOAK_OIDC, --grep @keycloak-oidc-public, keycloak)` → `Install Playwright Browsers`
+- Job / step: `sso-login (basic, BASIC, --grep @basic)` → `Install Playwright Browsers`
 - Likely cause: Error: ERROR: Playwright does not support chromium on ubuntu26.04-x64
 
 <details><summary>End of the job log</summary>
@@ -219,7 +219,7 @@ Error: ERROR: Playwright does not support chromium on ubuntu26.04-x64
 
 ### SonarCloud UI Nightly (`.github/workflows/ui-sonarcloud-nightly.yml`)
 
-- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/42441114938 — dark (conclusion: `failure`), 2026-11-08 03:03 UTC
+- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/42554320218 — dark (conclusion: `failure`), 2026-11-09 03:04 UTC
 - Dark since: 2026-11-08 03:03 UTC (first run of the current streak)
 - Job / step: `Coverage + Sonar` → `Retry 'SonarCloud Branch Scan'`
 - Likely cause: [ERROR] Bootstrapper: An error occurred: Error: Scanner engine failed with code 1
@@ -234,6 +234,28 @@ Received Goaway
 	at org.sonar.plugins.javascript.bridge.BridgeServerImpl.analyzeProject(BridgeServerImpl.java:492)
 	... 20 common frames omitted
 [ERROR] Bootstrapper: An error occurred: Error: Scanner engine failed with code 1
+##[error]Process completed with exit code 1.
+```
+
+</details>
+
+### py-cli-e2e-tests (`.github/workflows/py-cli-e2e-tests.yml`)
+
+- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/42538186825 — dark (conclusion: `failure`), 2026-11-09 00:04 UTC
+- Dark since: 2026-11-09 00:04 UTC (first run of the current streak)
+- Job / step: `py-cli-e2e-tests (bigquery_multiple_project)` → `Run CLI E2E Python Tests & record coverage`
+- Likely cause: ======= 1 failed, 11 passed, 1 skipped, 10 warnings in 970.58s (0:16:10) =======
+
+<details><summary>End of the job log</summary>
+
+```
+  /home/runner/work/***/***/env/lib/python3.10/site-packages/google/cloud/bigquery/client.py:681: UserWarning: Cannot create BigQuery Storage client, the dependency google-cloud-bigquery-storage is not installed.
+    warnings.warn(
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+- generated xml file: /home/runner/work/***/***/ingestion/junit/test-results-bigquery_multiple_project.xml -
+=========================== short test summary info ============================
+FAILED ingestion/tests/cli_e2e/test_cli_bigquery_multiple_project.py::BigqueryCliTest::test_vanilla_ingestion - AssertionError: False is not true
+======= 1 failed, 11 passed, 1 skipped, 10 warnings in 970.58s (0:16:10) =======
 ##[error]Process completed with exit code 1.
 ```
 

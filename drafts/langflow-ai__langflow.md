@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/langflow-ai/langflow/issues/new
-- **Stars:** 156449 · **Generated:** 2026-11-09T00:55:42.695Z
+- **Stars:** 156455 · **Generated:** 2026-11-09T06:54:36.072Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -42,7 +42,7 @@ Creating Pages deployment with payload:
 
 ### Cross-Bundle Test (`.github/workflows/cross-bundle-test.yml`)
 
-- Latest run on `main`: https://github.com/langflow-ai/langflow/actions/runs/41398915115 — dark (conclusion: `failure`), 2026-11-02 06:16 UTC
+- Latest run on `main`: https://github.com/langflow-ai/langflow/actions/runs/42572056954 — dark (conclusion: `failure`), 2026-11-09 06:16 UTC
 - Dark since: 2026-10-26 06:25 UTC (first run of the current streak)
 - Likely cause: no cause found in annotations
 

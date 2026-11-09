@@ -1,8 +1,8 @@
 <!-- dark-draft: colinhacks/zod -->
-<!-- draft-state: ready -->
+<!-- draft-state: resolved -->
 # Upstream issue draft: colinhacks/zod
 
-- **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
+- **Status:** resolved — lit again (2026-11-09); nothing to file
 - **Would be filed at:** https://github.com/colinhacks/zod/issues/new
 - **Stars:** 44293 · **Generated:** 2026-11-09T00:55:42.695Z
 - Nothing in this file has been sent anywhere.

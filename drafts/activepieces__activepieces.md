@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/activepieces/activepieces/issues/new
-- **Stars:** 25437 · **Generated:** 2026-11-09T00:55:42.695Z
+- **Stars:** 25442 · **Generated:** 2026-11-09T06:54:36.072Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -20,43 +20,43 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### Chat Evals (`.github/workflows/agent-evals.yml`)
 
-- Latest run on `main`: https://github.com/activepieces/activepieces/actions/runs/42457678062 — dark (conclusion: `failure`), 2026-11-08 07:10 UTC
+- Latest run on `main`: https://github.com/activepieces/activepieces/actions/runs/42572300776 — dark (conclusion: `failure`), 2026-11-09 06:19 UTC
 - Dark since: 2026-10-13 06:26 UTC (first run of the current streak)
-- Job / step: `Live judge gate` → `Run live chat evals (scope=all)`
-- Likely cause: Error: Hook timed out in 540000ms. (packages/server/worker/test/lib/agent-eval/agent-eval.test.ts:20)
+- Job / step: `Live judge gate` → `Run live chat evals (scope=regression)`
+- Likely cause: AssertionError: see the eval report above for the failing checks: expected [ …(2) ] to deeply equal [] (packages/server/worker/test/lib/agent-eval/agent-eval.test.ts:58)
 
 <details><summary>End of the job log</summary>
 
 ```
-     21|         const fixtures = evalFixtures.load().filter((fixture) => SCOPE…
-     22|         const [fixtureResults, agreement] = await Promise.all([
+     59|     })
+     60| })
 ⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
  Test Files  1 failed | 12 passed (13)
-      Tests  89 passed | 1 skipped (90)
-   Start at  07:16:09
-   Duration  549.01s (tests 96%, import 3%, transform 1%)
-##[error]Error: Hook timed out in 540000ms.
+      Tests  1 failed | 89 passed (90)
+   Start at  06:24:12
+   Duration  451.33s (tests 97%, import 2%, transform 1%)
+##[error]AssertionError: see the eval report above for the failing checks: expected [ …(2) ] to deeply equal []
 ```
 
 </details>
 
 ### Benchmark (`.github/workflows/benchmark.yml`)
 
-- Latest run on `main`: https://github.com/activepieces/activepieces/actions/runs/42441233724 — dark (conclusion: `failure`), 2026-11-08 03:05 UTC
+- Latest run on `main`: https://github.com/activepieces/activepieces/actions/runs/42554451565 — dark (conclusion: `failure`), 2026-11-09 03:05 UTC
 - Dark since: 2026-10-30 03:06 UTC (first run of the current streak)
 - Job / step: `benchmark (dedicated, 1, 28, 0.5, 1G, 1, 768, true, 28)` → `Detect regression against trailing 14 runs (scheduled runs only)`
-- Likely cause: Box signals API responded 401: {"error":{"type":"invalid_request_error","message":"Unknown token. Send it as \"Authorization: ***"."}}
+- Likely cause: </div><!-- /.error-footer -->
 
 <details><summary>End of the job log</summary>
 
 ```
-      "pct": 3.935347856640903,
-      "breach": false
-    }
-  ],
-  "breachCount": 6
-}
-Box signals API responded 401: {"error":{"type":"invalid_request_error","message":"Unknown token. Send it as \"Authorization: ***"."}}
+    </p>
+    <script>(function(){function d(){var b=a.getElementById("cf-footer-item-ip"),c=a.getElementById("cf-footer-ip-reveal");b&&"classList"in b&&(b.classList.remove("hidden"),c.addEventListener("click",function(){c.classL…
+  </div><!-- /.error-footer -->
+    </div>
+</div>
+</body>
+</html>
 ##[error]Process completed with exit code 1.
 ```
 

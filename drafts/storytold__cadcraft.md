@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/storytold/cadcraft/issues/new
-- **Stars:** 7828 · **Generated:** 2026-11-09T00:55:42.695Z
+- **Stars:** 7838 · **Generated:** 2026-11-09T06:54:36.072Z
 - Nothing in this file has been sent anywhere.
 
 ## Skipped: upstream already tracking
@@ -24,7 +24,7 @@ CI: "CI" workflow failing on main since 2026-11-08
 <!-- BEGIN BODY -->
 Hi! The **CI** workflow (`.github/workflows/ci.yml`) on `main` has been failing since 2026-11-08. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/storytold/cadcraft/actions/runs/42533661517 — dark (conclusion: `failure`), 2026-11-08 23:07 UTC
+- Latest run on `main`: https://github.com/storytold/cadcraft/actions/runs/42559535176 — dark (conclusion: `failure`), 2026-11-09 04:02 UTC
 - Dark since: 2026-11-08 23:07 UTC (first run of the current streak)
 - Job / step: `gate / gate (ubuntu-24.04)` → `Gate`
 - Likely cause: FAIL  test: cargo nextest run --workspace --lib --bins --tests: exited with exit status: 100

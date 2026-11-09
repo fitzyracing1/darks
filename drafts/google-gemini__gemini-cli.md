@@ -4,29 +4,28 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/google-gemini/gemini-cli/issues/new
-- **Stars:** 108787 · **Generated:** 2026-11-09T00:55:42.695Z
+- **Stars:** 108794 · **Generated:** 2026-11-09T06:54:36.072Z
 - Nothing in this file has been sent anywhere.
 
 ## Skipped: upstream already tracking
 
 - Memory Tests: Nightly (`.github/workflows/memory-nightly.yml`): [issue #30084](https://github.com/google-gemini/gemini-cli/issues/30084) "CI: memory-nightly failing: 4 memory regressions over 10% (idle-session-startup +54.2%: 107.6MB vs 69.8MB)"
+- Release: Nightly (`.github/workflows/release-nightly.yml`): [issue #30203](https://github.com/google-gemini/gemini-cli/issues/30203) "Nightly Release Failed for v0.69.0-nightly.20261109.g62bab5b23 on 2026-11-09"
 
 These workflows are left out of the body below.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 2 workflows dark on main ("Performance Tests: Nightly", "📋 Gemini Scheduled Issue Triage")
+CI: "Performance Tests: Nightly" workflow failing on main since 2026-11-08
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
+Hi! The **Performance Tests: Nightly** workflow (`.github/workflows/perf-nightly.yml`) on `main` has been failing since 2026-11-08. Here is what I saw, in case it's useful:
 
-### Performance Tests: Nightly (`.github/workflows/perf-nightly.yml`)
-
-- Latest run on `main`: https://github.com/google-gemini/gemini-cli/actions/runs/42441819125 — dark (conclusion: `failure`), 2026-11-08 03:13 UTC
+- Latest run on `main`: https://github.com/google-gemini/gemini-cli/actions/runs/42555359846 — dark (conclusion: `failure`), 2026-11-09 03:15 UTC
 - Dark since: 2026-11-08 03:13 UTC (first run of the current streak)
 - Job / step: `Run Performance Usage Tests` → `Run Performance Tests`
 - Likely cause: 29|     throw new Error('Failed to download ripgrep binary');
@@ -42,28 +41,6 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
  ❯ start ../node_modules/vitest/dist/chunks/cac.Cb-PYCCB.js:1412:15
  ❯ CAC.run ../node_modules/vitest/dist/chunks/cac.Cb-PYCCB.js:1391:2
 ##[error]Process completed with exit code 1.
-```
-
-</details>
-
-### 📋 Gemini Scheduled Issue Triage (`.github/workflows/gemini-scheduled-issue-triage.yml`)
-
-- Latest run on `main`: https://github.com/google-gemini/gemini-cli/actions/runs/42539702001 — dark (conclusion: `failure`), 2026-11-09 00:20 UTC
-- Dark since: 2026-11-08 19:04 UTC (first run of the current streak)
-- Job / step: `triage-issues` → `Apply Triaged Labels`
-- Likely cause: Unhandled error: HttpError: Resource not accessible by integration
-
-<details><summary>End of the job log</summary>
-
-```
-    request: {
-      agent: [Agent],
-      fetch: [Function: proxyFetch],
-      hook: [Function: bound bound register]
-    }
-  }
-}
-##[error]Unhandled error: HttpError: Resource not accessible by integration
 ```
 
 </details>

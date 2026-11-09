@@ -4,14 +4,14 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/seedds/nxnative/issues/new
-- **Stars:** 13735 · **Generated:** 2026-11-09T00:55:42.695Z
+- **Stars:** 13833 · **Generated:** 2026-11-09T06:54:36.072Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 4 workflows dark on main ("fuzz", "lint-c", "tests", +1 more)
+CI: 3 workflows dark on main ("fuzz", "lint-c", "tests")
 <!-- END TITLE -->
 
 ## Body
@@ -43,37 +43,15 @@ Base64: TkFSQ8c=
 
 ### lint-c (`.github/workflows/lint-c.yml`)
 
-- Latest run on `main`: https://github.com/seedds/nxnative/actions/runs/42534685661 — dark (conclusion: `cancelled`), 2026-11-08 23:20 UTC
+- Latest run on `main`: https://github.com/seedds/nxnative/actions/runs/42572424581 — dark (conclusion: `cancelled`), 2026-11-09 06:20 UTC
 - Dark since: 2026-11-05 11:55 UTC (first run of the current streak)
 - Likely cause: run cancelled
 
 ### tests (`.github/workflows/tests.yml`)
 
-- Latest run on `main`: https://github.com/seedds/nxnative/actions/runs/42540625943 — dark (conclusion: `cancelled`), 2026-11-09 00:31 UTC
+- Latest run on `main`: https://github.com/seedds/nxnative/actions/runs/42573648538 — dark (conclusion: `cancelled`), 2026-11-09 06:32 UTC
 - Dark since: 2026-11-06 01:42 UTC (first run of the current streak)
 - Likely cause: run cancelled
-
-### lint-python (`.github/workflows/lint-python.yml`)
-
-- Latest run on `main`: https://github.com/seedds/nxnative/actions/runs/42541234322 — dark (conclusion: `failure`), 2026-11-09 00:37 UTC
-- Dark since: 2026-11-08 18:11 UTC (first run of the current streak)
-- Job / step: `ruff and pyright (ratchet)` → `ruff and pyright against the baseline`
-- Likely cause: Object of type "None" is not subscriptable (dm/tools/unity_bucket.py:43)
-
-<details><summary>End of the job log</summary>
-
-```
-Using cached fonttools-4.67.0-cp314-cp314-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (5.3 MB)
-Using cached nodeenv-1.12.0-py3-none-any.whl (39 kB)
-Using cached typing_extensions-4.16.0-py3-none-any.whl (45 kB)
-Installing collected packages: typing-extensions, ruff, nodeenv, lz4, fonttools, capstone, pyright
-Successfully installed capstone-5.0.9 fonttools-4.67.0 lz4-4.4.5 nodeenv-1.12.0 pyright-1.1.414 ruff-0.17.2 typing-extensions-4.16.0
-[notice] A new release of pip is available: 26.2.2 -> 26.3
-[notice] To update, run: pip install --upgrade pip
-##[error]Object of type "None" is not subscriptable
-```
-
-</details>
 
 If this is already known or expected, feel free to close. Thanks for maintaining nxnative!
 
