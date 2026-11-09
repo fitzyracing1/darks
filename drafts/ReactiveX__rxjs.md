@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/ReactiveX/rxjs/issues/new
-- **Stars:** 31712 · **Generated:** 2026-11-09T06:54:36.072Z
+- **Stars:** 31712 · **Generated:** 2026-11-09T12:43:14.164Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -20,7 +20,7 @@ Hi! A few workflows on `master` have been dark recently. Details below, in case 
 
 ### OSV vulnerability policy (`.github/workflows/osv.yml`)
 
-- Latest run on `master`: https://github.com/ReactiveX/rxjs/actions/runs/41407933342 — dark (conclusion: `failure`), 2026-11-02 07:41 UTC
+- Latest run on `master`: https://github.com/ReactiveX/rxjs/actions/runs/42580957179 — dark (conclusion: `failure`), 2026-11-09 07:41 UTC
 - Dark since: 2026-09-14 07:50 UTC (first run of the current streak)
 - Job / step: `No unreviewed release-reachable vulnerabilities` → `Reject expired, unowned, untracked, or overlong exceptions`
 - Likely cause: expected: [],

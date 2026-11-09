@@ -4,60 +4,36 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/koala73/worldmonitor/issues/new
-- **Stars:** 90389 · **Generated:** 2026-11-09T06:54:36.072Z
+- **Stars:** 90405 · **Generated:** 2026-11-09T12:43:14.164Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 2 workflows dark on main ("Desktop Canary (Linux)", "Publish MCP Registry")
+CI: "Railway Native Deploy Health" workflow failing on main since 2026-11-09
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
+Hi! The **Railway Native Deploy Health** workflow (`.github/workflows/railway-deploy-drift.yml`) on `main` has been failing since 2026-11-09. Here is what I saw, in case it's useful:
 
-### Desktop Canary (Linux) (`.github/workflows/test-linux-app.yml`)
-
-- Latest run on `main`: https://github.com/koala73/worldmonitor/actions/runs/42567226797 — dark (conclusion: `failure`), 2026-11-09 05:25 UTC
-- Dark since: 2026-11-09 05:25 UTC (first run of the current streak)
-- Job / step: `test-linux-app` → `Build Tauri app`
-- Likely cause: Command "npm ["run","tauri","build"]" failed with exit code 1
+- Latest run on `main`: https://github.com/koala73/worldmonitor/actions/runs/42616761272 — dark (conclusion: `failure`), 2026-11-09 12:24 UTC
+- Dark since: 2026-11-09 12:24 UTC (first run of the current streak)
+- Job / step: `Railway native deployment health` → `Check Railway deployment configuration and drift`
+- Likely cause: - seed-gdelt-intel [BEHIND] running bce1caeca from 2026-11-09T07:00:16.046Z, which predates fefc3e7bc and is missing 1 path(s) that reach it — no build and no rejection recorded
 
 <details><summary>End of the job log</summary>
 
 ```
-warning: `world-monitor` (bin "world-monitor") generated 1 warning (run `cargo fix --bin "world-monitor" -p world-monitor` to apply 1 suggestion)
-    Finished `release` profile [optimized] target(s) in 1m 00s
-       Built application at: /home/runner/work/worldmonitor/worldmonitor/src-tauri/target/release/world-monitor
-        Info Patching /home/runner/work/worldmonitor/worldmonitor/src-tauri/target/release/world-monitor with bundle type information: appimage
- Downloading https://github.com/tauri-apps/binary-releases/releases/download/apprun-old/AppRun-x86_64
-failed to bundle project `http status: 504`
-       Error failed to bundle project `http status: 504`
-##[error]Command "npm ["run","tauri","build"]" failed with exit code 1
-```
-
-</details>
-
-### Publish MCP Registry (`.github/workflows/publish-mcp-registry.yml`)
-
-- Latest run on `main`: https://github.com/koala73/worldmonitor/actions/runs/42568863963 — dark (conclusion: `failure`), 2026-11-09 05:42 UTC
-- Dark since: 2026-11-09 05:42 UTC (first run of the current streak)
-- Job / step: `publish` → `Install mcp-publisher`
-- Likely cause: curl: (22) The requested URL returned error: 504
-
-<details><summary>End of the job log</summary>
-
-```
-node: v24.22.2
 npm: 11.19.1
 yarn: 1.22.22
-curl: (22) The requested URL returned error: 504
-curl: (22) The requested URL returned error: 504
-curl: (22) The requested URL returned error: 504
-curl: (22) The requested URL returned error: 504
-##[error]Process completed with exit code 22.
+Railway operational-config audit passed: live Railway configuration matches repository policy.
+Read 92 service histories in 1 fleet page(s) (500 records), 0 direct fallback(s).
+Railway deploy-drift check found 1 service(s) with deployment or source-verification problems:
+Railway deploy-drift check: head=fefc3e7bc source=--head vs-origin-main=exact grace=fefc3e7bc services=92 {"CURRENT_FOR_CLOSURE":89,"CURRENT":2,"BEHIND":1}
+- seed-gdelt-intel [BEHIND] running bce1caeca from 2026-11-09T07:00:16.046Z, which predates fefc3e7bc and is missing 1 path(s) that reach it — no build and no rejection recorded
+##[error]Process completed with exit code 1.
 ```
 
 </details>

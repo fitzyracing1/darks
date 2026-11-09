@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/seedds/nxnative/issues/new
-- **Stars:** 13833 · **Generated:** 2026-11-09T06:54:36.072Z
+- **Stars:** 13946 · **Generated:** 2026-11-09T12:43:14.164Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
@@ -21,7 +21,7 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### fuzz (`.github/workflows/fuzz.yml`)
 
-- Latest run on `main`: https://github.com/seedds/nxnative/actions/runs/42470778238 — dark (conclusion: `failure`), 2026-11-08 10:17 UTC
+- Latest run on `main`: https://github.com/seedds/nxnative/actions/runs/42609173666 — dark (conclusion: `failure`), 2026-11-09 11:27 UTC
 - Dark since: 2026-11-02 10:59 UTC (first run of the current streak)
 - Job / step: `Fuzz the file parsers` → `Run each harness`
 - Likely cause: shader_split: ==finding== struct.error@cra.py:narc_members
@@ -29,13 +29,13 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 <details><summary>End of the job log</summary>
 
 ```
-==2487== ERROR: libFuzzer: fuzz target exited
+==2633== ERROR: libFuzzer: fuzz target exited
 SUMMARY: libFuzzer: fuzz target exited
-MS: 5 ChangeBit-ChangeBinInt-EraseBytes-CrossOver-CMP- DE: "NARC"-; base unit: ab64bd12b0f167a0435ff755b2125e02dc1ab6eb
-0x4e,0x41,0x52,0x43,0xc7,
-NARC\307
-artifact_prefix='findings/shader_split/'; Test unit written to findings/shader_split/crash-b898503eb8d1f4212855f1b6a9ca4825aff09026
-Base64: TkFSQ8c=
+MS: 3 ChangeByte-ChangeBit-CMP- DE: "NARC"-; base unit: 9ec647b540cbabcf9f4f9b8f7a30e7e1ab8e6d8e
+0x4e,0x41,0x52,0x43,0x4e,0x44,0x53,0x52,0xfe,0xff,0x1d,
+NARCNDSR\376\377\035
+artifact_prefix='findings/shader_split/'; Test unit written to findings/shader_split/crash-728420c951c362a4d18af2ba7e46b5b4879cc9e5
+Base64: TkFSQ05EU1L+/x0=
 ##[error]shader_split: ==finding== struct.error@cra.py:narc_members
 ```
 
@@ -43,13 +43,13 @@ Base64: TkFSQ8c=
 
 ### lint-c (`.github/workflows/lint-c.yml`)
 
-- Latest run on `main`: https://github.com/seedds/nxnative/actions/runs/42572424581 — dark (conclusion: `cancelled`), 2026-11-09 06:20 UTC
+- Latest run on `main`: https://github.com/seedds/nxnative/actions/runs/42610506480 — dark (conclusion: `cancelled`), 2026-11-09 11:37 UTC
 - Dark since: 2026-11-05 11:55 UTC (first run of the current streak)
 - Likely cause: run cancelled
 
 ### tests (`.github/workflows/tests.yml`)
 
-- Latest run on `main`: https://github.com/seedds/nxnative/actions/runs/42573648538 — dark (conclusion: `cancelled`), 2026-11-09 06:32 UTC
+- Latest run on `main`: https://github.com/seedds/nxnative/actions/runs/42610506462 — dark (conclusion: `cancelled`), 2026-11-09 11:37 UTC
 - Dark since: 2026-11-06 01:42 UTC (first run of the current streak)
 - Likely cause: run cancelled
 

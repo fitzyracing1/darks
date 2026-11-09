@@ -4,14 +4,14 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/xberg-io/xberg/issues/new
-- **Stars:** 9566 · **Generated:** 2026-11-09T06:54:36.072Z
+- **Stars:** 9566 · **Generated:** 2026-11-09T12:43:14.164Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** cancelled by a concurrency group — likely noise
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 5 workflows dark on main ("CI Rust", "CI E2E", "CI Integrations", +2 more)
+CI: 3 workflows dark on main ("CI Rust", "CI E2E", "CI Integrations")
 <!-- END TITLE -->
 
 ## Body
@@ -21,21 +21,21 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### CI Rust (`.github/workflows/ci-rust.yaml`)
 
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/42573755029 — dark (conclusion: `cancelled`), 2026-11-09 06:33 UTC
+- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/42601479796 — dark (conclusion: `cancelled`), 2026-11-09 10:31 UTC
 - Dark since: 2026-10-25 18:30 UTC (first run of the current streak)
-- Job / step: `Live HF preset tests` → `Run live HF retrieval preset tests`
+- Job / step: `Rust (ubuntu-latest)` → `Run tests`
 - Likely cause: Canceling since a higher priority waiting request for ci-rust-refs/heads/main exists
 
 <details><summary>End of the job log</summary>
 
 ```
-   Compiling oorandom v11.1.5
-   Compiling hex v0.4.3
-   Compiling anes v0.1.6
-   Compiling data-encoding v2.11.1
-   Compiling criterion v0.8.2
-   Compiling zip v9.2.0
-   Compiling tar v0.4.46
+test retained_table_keeps_noisy_budget_clamped_page_quiet ... ok
+test result: ok. 10 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 8.22s
+     Running `/home/runner/work/xberg/xberg/target/debug/deps/pdf_ocr_caption_2530-7aa0ab9866483b19`
+running 3 tests
+test helpers::tests::test_get_test_documents_dir ... ok
+test helpers::tests::test_test_documents_available ... ok
+test preserves_the_full_docling_caption_as_prose_on_page_nine_and_in_structure has been running for over 60 seconds
 ##[error]The operation was canceled.
 ```
 
@@ -43,21 +43,21 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### CI E2E (`.github/workflows/ci-e2e.yaml`)
 
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/42573754982 — dark (conclusion: `cancelled`), 2026-11-09 06:33 UTC
+- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/42601479784 — dark (conclusion: `cancelled`), 2026-11-09 10:31 UTC
 - Dark since: 2026-11-03 17:32 UTC (first run of the current streak)
-- Job / step: `Build FFI (x86_64-unknown-linux-gnu)` → `Build FFI library`
+- Job / step: `E2E (node)` → `Run e2e tests`
 - Likely cause: Canceling since a higher priority waiting request for ci-e2e-refs/heads/main exists
 
 <details><summary>End of the job log</summary>
 
 ```
-[xberg-tesseract 1.4.0] /usr/bin/g++ -DCMAKE_BUILD -DHAVE_AVX -DHAVE_AVX2 -DHAVE_AVX512F -DHAVE_CONFIG_H -DHAVE_FMA -DHAVE_SSE4_1 -DOPENMP_SIMD -D_SILENCE_STDEXT_HASH_DEPRECATION_WARNINGS=1 -I/home/runner/work/xberg/xbe…
-[xberg-tesseract 1.4.0] [  6%] Building CXX object CMakeFiles/libtesseract.dir/src/api/capi.cpp.o
-[xberg-tesseract 1.4.0] /usr/bin/g++ -DCMAKE_BUILD -DHAVE_AVX -DHAVE_AVX2 -DHAVE_AVX512F -DHAVE_CONFIG_H -DHAVE_FMA -DHAVE_SSE4_1 -DOPENMP_SIMD -D_SILENCE_STDEXT_HASH_DEPRECATION_WARNINGS=1 -I/home/runner/work/xberg/xbe…
-[xberg-tesseract 1.4.0] [  7%] Building CXX object CMakeFiles/libtesseract.dir/src/api/hocrrenderer.cpp.o
-[xberg-tesseract 1.4.0] /usr/bin/g++ -DCMAKE_BUILD -DHAVE_AVX -DHAVE_AVX2 -DHAVE_AVX512F -DHAVE_CONFIG_H -DHAVE_FMA -DHAVE_SSE4_1 -DOPENMP_SIMD -D_SILENCE_STDEXT_HASH_DEPRECATION_WARNINGS=1 -I/home/runner/work/xberg/xbe…
-[xberg-tesseract 1.4.0] [  7%] Building CXX object CMakeFiles/libtesseract.dir/src/api/lstmboxrenderer.cpp.o
-[xberg-tesseract 1.4.0] /usr/bin/g++ -DCMAKE_BUILD -DHAVE_AVX -DHAVE_AVX2 -DHAVE_AVX512F -DHAVE_CONFIG_H -DHAVE_FMA -DHAVE_SSE4_1 -DOPENMP_SIMD -D_SILENCE_STDEXT_HASH_DEPRECATION_WARNINGS=1 -I/home/runner/work/xberg/xbe…
+   Compiling dbase v0.8.0
+   Compiling moka v0.12.16
+   Compiling crawlberg v1.12.4
+   Compiling calamine v0.38.0
+   Compiling serde_toon_format v0.2.0
+   Compiling scrypt v0.12.0
+   Compiling xberg-native-pdf v1.4.0 (/home/runner/work/xberg/xberg/crates/xberg-native-pdf)
 ##[error]The operation was canceled.
 ```
 
@@ -65,65 +65,21 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### CI Integrations (`.github/workflows/ci-integrations.yaml`)
 
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/42573755023 — dark (conclusion: `cancelled`), 2026-11-09 06:33 UTC
+- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/42601479827 — dark (conclusion: `cancelled`), 2026-11-09 10:31 UTC
 - Dark since: 2026-11-08 00:41 UTC (first run of the current streak)
-- Job / step: `Build local integration bindings` → `Build abi3 Python wheel`
+- Job / step: `Build local integration bindings` → `Build and stage Java binding`
 - Likely cause: Canceling since a higher priority waiting request for ci-integrations-refs/heads/main exists
 
 <details><summary>End of the job log</summary>
 
 ```
+   Compiling thread_local v1.1.10
+   Compiling typewit v1.15.2
+   Compiling fax v0.2.7
+   Compiling outref v0.5.2
+   Compiling vsimd v0.8.0
    Compiling nu-ansi-term v0.50.3
-   Compiling dyn-stack-macros v0.1.3
-   Compiling minimal-lexical v0.2.1
-   Compiling dyn-stack v0.13.2
-   Compiling nom v7.1.3
-   Compiling tracing-subscriber v0.3.23
-   Compiling rustls-webpki v0.103.16
-##[error]The operation was canceled.
-```
-
-</details>
-
-### CI Lint (`.github/workflows/ci-lint.yaml`)
-
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/42573755276 — dark (conclusion: `cancelled`), 2026-11-09 06:33 UTC
-- Dark since: 2026-11-09 05:49 UTC (first run of the current streak)
-- Job / step: `Generated e2e suites freshness` → `Verify generated e2e suites are current`
-- Likely cause: Canceling since a higher priority waiting request for ci-lint-refs/heads/main exists
-
-<details><summary>End of the job log</summary>
-
-```
- WARN wasm e2e: entire fixture category excluded for wasm — emitting placeholder skip suite instead of silently omitting it category=code excluded_count=1
- INFO   [wasm] generated 25 file(s)
- INFO   [zig] generated 21 file(s)
- INFO   [dart] generated 22 file(s)
- INFO   [swift] generated 21 file(s)
- INFO   [homebrew] generated 1 file(s)
- INFO 10 file(s) were not written because `[workspace.ownership] user_owned` in alef.toml declares them owned by this repository: alef does not overwrite, stamp, or verify them. Remove the matching pattern to hand a pat…
-##[error]The operation was canceled.
-```
-
-</details>
-
-### CI Mobile (`.github/workflows/ci-mobile.yaml`)
-
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/42573754988 — dark (conclusion: `cancelled`), 2026-11-09 06:33 UTC
-- Dark since: 2026-11-09 05:49 UTC (first run of the current streak)
-- Job / step: `iOS cargo check (aarch64-apple-ios)` → `cargo check xberg-dart`
-- Likely cause: Canceling since a higher priority waiting request for ci-mobile-refs/heads/main exists
-
-<details><summary>End of the job log</summary>
-
-```
-   Compiling delegate-attr v0.3.1
-    Checking similar v3.2.1
-    Checking org v0.3.1
-    Checking jotdown v0.10.0
-    Checking minijinja v3.0.5
-   Compiling xberg-dart v1.4.0 (/Users/runner/work/xberg/xberg/packages/dart/rust)
-warning: xberg-dart@1.4.0: flutter_rust_bridge_codegen regeneration skipped by default -- using the committed generated bridge. Run `alef generate` to regenerate it (with alef's full post-processing). Set ALEF_FRB_REGEN…
+   Compiling pxfm v0.1.30
 ##[error]The operation was canceled.
 ```
 

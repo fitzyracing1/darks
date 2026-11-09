@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/1Panel-dev/MaxKB/issues/new
-- **Stars:** 23127 · **Generated:** 2026-11-09T06:54:36.072Z
+- **Stars:** 23130 · **Generated:** 2026-11-09T12:43:14.164Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -18,7 +18,7 @@ CI: "sync2gitee" workflow failing on v2 since 2026-09-14
 <!-- BEGIN BODY -->
 Hi! The **sync2gitee** workflow (`.github/workflows/sync2gitee.yml`) on `v2` has been failing since 2026-09-14. Here is what I saw, in case it's useful:
 
-- Latest run on `v2`: https://github.com/1Panel-dev/MaxKB/actions/runs/42551264673 — dark (conclusion: `failure`), 2026-11-09 02:29 UTC
+- Latest run on `v2`: https://github.com/1Panel-dev/MaxKB/actions/runs/42581258619 — dark (conclusion: `failure`), 2026-11-09 07:44 UTC
 - Dark since: 2026-09-14 06:06 UTC (first run of the current streak)
 - Job / step: `repo-sync` → `Mirror the Github organization repos to Gitee.`
 - Likely cause: INFO:hubmirror:Failed: ['MaxKB']

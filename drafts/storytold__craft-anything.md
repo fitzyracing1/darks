@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/storytold/craft-anything/issues/new
-- **Stars:** 23254 · **Generated:** 2026-11-09T06:54:36.072Z
+- **Stars:** 23758 · **Generated:** 2026-11-09T12:43:14.164Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
@@ -43,7 +43,7 @@ error: test failed, to rerun pass `-p craft-anything-engine --lib`
 
 ### SonarCloud (`.github/workflows/sonarcloud.yml`)
 
-- Latest run on `main`: https://github.com/storytold/craft-anything/actions/runs/42573044609 — dark (conclusion: `cancelled`), 2026-11-09 06:26 UTC
+- Latest run on `main`: https://github.com/storytold/craft-anything/actions/runs/42615869097 — dark (conclusion: `cancelled`), 2026-11-09 12:18 UTC
 - Dark since: 2026-11-09 06:26 UTC (first run of the current streak)
 - Likely cause: run cancelled
 

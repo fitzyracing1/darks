@@ -4,13 +4,14 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/storytold/photocraft/issues/new
-- **Stars:** 78036 · **Generated:** 2026-11-09T06:54:36.072Z
+- **Stars:** 78100 · **Generated:** 2026-11-09T12:43:14.164Z
 - Nothing in this file has been sent anywhere.
+- **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 2 workflows dark on main ("Perf (nightly)", "FreeBSD")
+CI: 3 workflows dark on main ("Perf (nightly)", "FreeBSD", "SonarCloud")
 <!-- END TITLE -->
 
 ## Body
@@ -61,6 +62,12 @@ error: test failed, to rerun pass `-p photocraft-raster --lib`
 ```
 
 </details>
+
+### SonarCloud (`.github/workflows/sonarcloud.yml`)
+
+- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/42615946812 — dark (conclusion: `cancelled`), 2026-11-09 12:18 UTC
+- Dark since: 2026-11-09 10:41 UTC (first run of the current streak)
+- Likely cause: run cancelled
 
 If this is already known or expected, feel free to close. Thanks for maintaining photocraft!
 

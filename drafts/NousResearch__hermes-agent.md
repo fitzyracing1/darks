@@ -4,14 +4,14 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/NousResearch/hermes-agent/issues/new
-- **Stars:** 261839 · **Generated:** 2026-11-09T06:54:36.072Z
+- **Stars:** 261933 · **Generated:** 2026-11-09T12:43:14.164Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 2 workflows dark on main ("Docker Build, Test, and Publish", "CI")
+CI: 2 workflows dark on main ("Docker Build, Test, and Publish", "Deploy Site")
 <!-- END TITLE -->
 
 ## Body
@@ -21,28 +21,28 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### Docker Build, Test, and Publish (`.github/workflows/docker.yml`)
 
-- Latest run on `main`: https://github.com/NousResearch/hermes-agent/actions/runs/42571209972 — dark (conclusion: `cancelled`), 2026-11-09 06:08 UTC
+- Latest run on `main`: https://github.com/NousResearch/hermes-agent/actions/runs/42611707855 — dark (conclusion: `cancelled`), 2026-11-09 11:46 UTC
 - Dark since: 2026-11-08 17:58 UTC (first run of the current streak)
 - Likely cause: run cancelled
 
-### CI (`.github/workflows/ci.yaml`)
+### Deploy Site (`.github/workflows/deploy-site.yml`)
 
-- Latest run on `main`: https://github.com/NousResearch/hermes-agent/actions/runs/42572482317 — dark (conclusion: `failure`), 2026-11-09 06:20 UTC
-- Dark since: 2026-11-09 05:34 UTC (first run of the current streak)
-- Job / step: `JS & TS checks / JS & TS checks` → `Run all workspace checks`
-- Likely cause: 2 of 10 checks failed
+- Latest run on `main`: https://github.com/NousResearch/hermes-agent/actions/runs/42611889313 — dark (conclusion: `failure`), 2026-11-09 11:48 UTC
+- Dark since: 2026-11-09 11:48 UTC (first run of the current streak)
+- Job / step: `deploy-docs` → `Deploy to GitHub Pages`
+- Likely cause: Timeout reached, aborting!
 
 <details><summary>End of the job log</summary>
 
 ```
-$ pnpm run test:ui
-$ vitest run --project ui
- RUN  v4.1.12 /home/runner/_work/hermes-agent/hermes-agent/apps/desktop
-(node:8389) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
-(Use `node --trace-warnings ...` to show where the warning was created)
-(node:8512) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
-(Use `node --trace-warnings ...` to show where the warning was created)
-##[error]apps/desktop :: check:test:desktop:all failed
+Current status: syncing_files
+Getting Pages deployment status...
+Current status: syncing_files
+Getting Pages deployment status...
+Current status: syncing_files
+Getting Pages deployment status...
+Current status:
+##[error]Timeout reached, aborting!
 ```
 
 </details>

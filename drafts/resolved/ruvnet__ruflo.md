@@ -1,8 +1,8 @@
 <!-- dark-draft: ruvnet/ruflo -->
-<!-- draft-state: ready -->
+<!-- draft-state: resolved -->
 # Upstream issue draft: ruvnet/ruflo
 
-- **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
+- **Status:** resolved — lit again (2026-11-09); nothing to file
 - **Would be filed at:** https://github.com/ruvnet/ruflo/issues/new
 - **Stars:** 81303 · **Generated:** 2026-11-09T06:54:36.072Z
 - Nothing in this file has been sent anywhere.
