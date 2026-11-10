@@ -4,37 +4,110 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/huggingface/transformers/issues/new
-- **Stars:** 168710 · **Generated:** 2026-11-10T00:51:51.652Z
+- **Stars:** 168722 · **Generated:** 2026-11-10T06:45:56.660Z
 - Nothing in this file has been sent anywhere.
+- **Note for Joshua:** workflow failed to start (config/permissions on their side)
 - **Note for Joshua:** self-hosted runner problem — maintainers usually know
+
+## Skipped: upstream already tracking
+
+- Build docker images (scheduled) (`.github/workflows/build-docker-images.yml`): [issue #50220](https://github.com/huggingface/transformers/issues/50220) "CI: build-docker-images Doc builder failing: pyarrow requires NumPy>=2.0 but image has 1.26.4"
+- Check Tiny Models (`.github/workflows/check_tiny_models.yml`): [issue #50221](https://github.com/huggingface/transformers/issues/50221) "CI: check_tiny_models failing: `from datasets import load_dataset` ImportError — pyarrow needs NumPy>=2.0 (found 1.26.4)"
+
+These workflows are left out of the body below.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: "PR CI" workflow failing on main since 2026-11-09
+CI: 6 workflows dark on main ("Self-hosted runner (nightly-past-ci-caller)", "Self-hosted runner (Intel Gaudi3 scheduled CI caller)", "Doctests", +3 more)
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! The **PR CI** workflow (`.github/workflows/pr-ci-caller.yml`) on `main` has been failing since 2026-11-09. Here is what I saw, in case it's useful:
+Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
 
-- Latest run on `main`: https://github.com/huggingface/transformers/actions/runs/42707947750 — dark (conclusion: `failure`), 2026-11-09 22:01 UTC
-- Dark since: 2026-11-09 22:01 UTC (first run of the current streak)
-- Job / step: `pr-ci / tests_generate / tests_generate [shard 2/8]` → `Run tests`
+### Self-hosted runner (nightly-past-ci-caller) (`.github/workflows/self-nightly-past-ci-caller.yml`)
+
+- Latest run on `main`: https://github.com/huggingface/transformers/actions/runs/42742131964 — dark (conclusion: `startup_failure`), 2026-11-10 02:20 UTC
+- Dark since: 2026-11-10 02:20 UTC (first run of the current streak)
+- Likely cause: run startup_failure
+
+### Self-hosted runner (Intel Gaudi3 scheduled CI caller) (`.github/workflows/self-scheduled-intel-gaudi3-caller.yml`)
+
+- Latest run on `main`: https://github.com/huggingface/transformers/actions/runs/42742159379 — dark (conclusion: `failure`), 2026-11-10 02:21 UTC
+- Dark since: 2026-11-10 02:21 UTC (first run of the current streak)
+- Job / step: `DeepSpeed CI / Intel Gaudi deepspeed tests (2gaudi)`
+- Likely cause: Required runner group 'itac-bm-emr-gaudi3-dell-2gaudi' not found
+
+### Doctests (`.github/workflows/doctests.yml`)
+
+- Latest run on `main`: https://github.com/huggingface/transformers/actions/runs/42742321416 — dark (conclusion: `failure`), 2026-11-10 02:22 UTC
+- Dark since: 2026-11-10 02:22 UTC (first run of the current streak)
+- Likely cause: no cause found in annotations
+
+### Nvidia CI - Flash Attn (`.github/workflows/self-scheduled-flash-attn-caller.yml`)
+
+- Latest run on `main`: https://github.com/huggingface/transformers/actions/runs/42742393621 — dark (conclusion: `failure`), 2026-11-10 02:23 UTC
+- Dark since: 2026-11-10 02:23 UTC (first run of the current streak)
+- Job / step: `Model CI / run_models_gpu (aws-g5-4xlarge-cache, 1) / run_models_gpu (models/higgs_audio_v2_tokenizer)` → `Run all tests on GPU`
 - Likely cause: Executing the custom container implementation failed. Please contact your self hosted runner administrator.
 
 <details><summary>End of the job log</summary>
 
 ```
-FAILED tests/models/gemma4_unified/test_modeling_gemma4_unified.py::Gemma4UnifiedAudio2TextModelTest::test_generate_with_static_cache - AssertionError: Generate outputs are not similar enough (atol=1e-05, rtol=1e-05).
-  Sequence mismatch: 20/70 tokens differ (first at position 50).
-  Batch index: 1
-  Token at mismatch — output_1: 15, output_2: 73
-  Score diff at first mismatch — max: 9.770179e-05, mean: 2.416918e-05
-===== 1 failed, 1612 passed, 472 skipped, 70 warnings in 301.54s (0:05:01) =====
-OTEL TRACE END trace_id=8bff7e2245ded992697dfe441f4adb7c service=pytest-observability job=tests_generate exporter_version=0.1.0+g4cfc192 exit_code=1
-##[error]Error: failed to run script step: command terminated with non-zero exit code: error executing command [sh -e /__w/_temp/ea6a47a0-dc89-11f1-924e-4b4078cf9323.sh], exit code 1
+drwxr-xr-x.  3 root root    92 Nov 10 02:37 reports
+drwxr-xr-x.  3 root root    84 Nov 10 00:39 scripts
+-rw-r--r--.  1 root root 12447 Nov 10 00:39 setup.py
+drwxr-xr-x.  1 root root    67 Nov 10 00:39 src
+-rw-r--r--.  1 root root 19108 Nov 10 02:37 test_outputs.txt
+drwxr-xr-x.  1 root root   143 Nov 10 02:37 tests
+drwxr-xr-x.  1 root root    33 Nov 10 00:39 utils
+##[error]Error: failed to run script step: command terminated with non-zero exit code: error executing command [sh -e /__w/_temp/aafed150-dcaf-11f1-8e8b-89c30e35b896.sh], exit code 1
+```
+
+</details>
+
+### vLLM Integration Tests (`.github/workflows/vllm-ci-caller.yml`)
+
+- Latest run on `main`: https://github.com/huggingface/transformers/actions/runs/42747627071 — dark (conclusion: `failure`), 2026-11-10 03:09 UTC
+- Dark since: 2026-11-10 03:09 UTC (first run of the current streak)
+- Job / step: `Test vLLM transformers backend (shard 1 / 4)` → `Find latest vLLM commit with built CPU wheel`
+- Likely cause: Executing the custom container implementation failed. Please contact your self hosted runner administrator.
+
+<details><summary>End of the job log</summary>
+
+```
+Removing credentials config '/__w/_temp/git-credentials-7917f71f-591a-4646-9eaa-afc4749d11b2.config'
+(node:557) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+(node:557) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilit…
+Traceback (most recent call last):
+  File "<string>", line 4, in <module>
+StopIteration
+##[error]Error: failed to run script step: command terminated with non-zero exit code: error executing command [sh -e /__w/_temp/8ab07480-dcb4-11f1-b9bb-97d84529720d.sh], exit code 1
+```
+
+</details>
+
+### SGLang Integration Tests (`.github/workflows/sglang-ci-caller.yml`)
+
+- Latest run on `main`: https://github.com/huggingface/transformers/actions/runs/42747894495 — dark (conclusion: `failure`), 2026-11-10 03:12 UTC
+- Dark since: 2026-11-10 03:12 UTC (first run of the current streak)
+- Job / step: `SGLang integration (vision-language)` → `Run canonical SGLang integration tests`
+- Likely cause: Executing the custom container implementation failed. Please contact your self hosted runner administrator.
+
+<details><summary>End of the job log</summary>
+
+```
+../transformers/src/transformers/models/qwen2_5_vl/modeling_qwen2_5_vl.py:133: ValueError
+---- generated xml file: /__w/transformers/transformers/reports/results.xml ----
+=========================== short test summary info ============================
+ERROR test/registered/vlm/test_vlm_input_format.py::TestQwenVLUnderstandsImage::test_accepts_image - ValueError: Qwen2_5_VLVisionRotaryEmbedding supports only axial rope, but requested default
+ERROR test/registered/vlm/test_vlm_input_format.py::TestQwenVLUnderstandsImage::test_accepts_precomputed_embeddings - ValueError: Qwen2_5_VLVisionRotaryEmbedding supports only axial rope, but requested default
+ERROR test/registered/vlm/test_vlm_input_format.py::TestQwenVLUnderstandsImage::test_accepts_processor_output - ValueError: Qwen2_5_VLVisionRotaryEmbedding supports only axial rope, but requested default
+============================== 3 errors in 1.17s ===============================
+##[error]Error: failed to run script step: command terminated with non-zero exit code: error executing command [sh -e /__w/_temp/2ad59df0-dcb5-11f1-b461-17ca2f50151f.sh], exit code 1
 ```
 
 </details>

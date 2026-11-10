@@ -4,14 +4,14 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/xberg-io/xberg/issues/new
-- **Stars:** 9568 · **Generated:** 2026-11-10T00:51:51.652Z
+- **Stars:** 9568 · **Generated:** 2026-11-10T06:45:56.660Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** cancelled by a concurrency group — likely noise
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 3 workflows dark on main ("CI Rust", "CI E2E", "CI Integrations")
+CI: 6 workflows dark on main ("CI Rust", "CI E2E", "CI Integrations", +3 more)
 <!-- END TITLE -->
 
 ## Body
@@ -21,43 +21,28 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### CI Rust (`.github/workflows/ci-rust.yaml`)
 
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/42720793332 — dark (conclusion: `cancelled`), 2026-11-09 23:28 UTC
+- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/42768552193 — dark (conclusion: `cancelled`), 2026-11-10 06:26 UTC
 - Dark since: 2026-10-25 18:30 UTC (first run of the current streak)
-- Job / step: `Rust (ubuntu-latest)` → `Run tests`
+- Job / step: `Rust (windows-latest)`
 - Likely cause: Canceling since a higher priority waiting request for ci-rust-refs/heads/main exists
-
-<details><summary>End of the job log</summary>
-
-```
-     Running `/home/runner/work/xberg/xberg/target/debug/build/xberg-4b8daa1e978b88a6/build-script-build`
-     Running `sccache /home/runner/.rustup/toolchains/1.99.1-x86_64-unknown-linux-gnu/bin/rustc --crate-name xberg_tesseract --edition=2024 crates/xberg-tesseract/src/lib.rs --error-format=json --json=diagnostic-rendere…
-     Running `sccache /home/runner/.rustup/toolchains/1.99.1-x86_64-unknown-linux-gnu/bin/rustc --crate-name xberg --edition=2024 crates/xberg/src/lib.rs --error-format=json --json=diagnostic-rendered-ansi,artifacts,fut…
-     Running `sccache /home/runner/.rustup/toolchains/1.99.1-x86_64-unknown-linux-gnu/bin/rustc --crate-name xberg --edition=2024 crates/xberg/src/lib.rs --error-format=json --json=diagnostic-rendered-ansi,artifacts,fut…
-     Running `sccache /home/runner/.rustup/toolchains/1.99.1-x86_64-unknown-linux-gnu/bin/rustc --crate-name text_quality --edition=2024 crates/xberg/benches/text_quality.rs --error-format=json --json=diagnostic-rendere…
-     Running `sccache /home/runner/.rustup/toolchains/1.99.1-x86_64-unknown-linux-gnu/bin/rustc --crate-name batch_config_resolution --edition=2024 crates/xberg/benches/batch_config_resolution.rs --error-format=json --j…
-     Running `sccache /home/runner/.rustup/toolchains/1.99.1-x86_64-unknown-linux-gnu/bin/rustc --crate-name concurrency_scaling --edition=2024 crates/xberg/benches/concurrency_scaling.rs --error-format=json --json=diag…
-##[error]The operation was canceled.
-```
-
-</details>
 
 ### CI E2E (`.github/workflows/ci-e2e.yaml`)
 
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/42720793764 — dark (conclusion: `cancelled`), 2026-11-09 23:28 UTC
+- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/42768552406 — dark (conclusion: `cancelled`), 2026-11-10 06:26 UTC
 - Dark since: 2026-11-03 17:32 UTC (first run of the current streak)
-- Job / step: `Build FFI (x86_64-unknown-linux-gnu)` → `Build CLI`
+- Job / step: `Build FFI (aarch64-unknown-linux-gnu)` → `Install system dependencies`
 - Likely cause: Canceling since a higher priority waiting request for ci-e2e-refs/heads/main exists
 
 <details><summary>End of the job log</summary>
 
 ```
-   Compiling lru v0.19.0
-   Compiling jotdown v0.10.0
-   Compiling minijinja v3.0.5
-   Compiling xberg-cli v1.4.0 (/home/runner/work/xberg/xberg/crates/xberg-cli)
-   Compiling similar v3.2.1
-   Compiling org v0.3.1
-   Compiling clap_complete v4.6.11
+[  4%] Building CXX object CMakeFiles/libtesseract.dir/src/api/renderer.cpp.o
+[  4%] Building CXX object CMakeFiles/libtesseract.dir/src/api/wordstrboxrenderer.cpp.o
+[  5%] Building CXX object CMakeFiles/libtesseract.dir/src/ccmain/adaptions.cpp.o
+[  5%] Building CXX object CMakeFiles/libtesseract.dir/src/ccmain/applybox.cpp.o
+[  6%] Building CXX object CMakeFiles/libtesseract.dir/src/ccmain/control.cpp.o
+[  6%] Building CXX object CMakeFiles/libtesseract.dir/src/ccmain/docqual.cpp.o
+[  7%] Building CXX object CMakeFiles/libtesseract.dir/src/ccmain/equationdetect.cpp.o
 ##[error]The operation was canceled.
 ```
 
@@ -65,21 +50,87 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### CI Integrations (`.github/workflows/ci-integrations.yaml`)
 
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/42720793349 — dark (conclusion: `cancelled`), 2026-11-09 23:28 UTC
+- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/42768552458 — dark (conclusion: `cancelled`), 2026-11-10 06:26 UTC
 - Dark since: 2026-11-08 00:41 UTC (first run of the current streak)
-- Job / step: `Build local integration bindings` → `Build abi3 Python wheel`
+- Job / step: `Build local integration bindings` → `Setup Rust`
 - Likely cause: Canceling since a higher priority waiting request for ci-integrations-refs/heads/main exists
 
 <details><summary>End of the job log</summary>
 
 ```
-   Compiling lru v0.19.0
-   Compiling similar v3.2.1
-   Compiling minijinja v3.0.5
-   Compiling org v0.3.1
-   Compiling jotdown v0.10.0
-   Compiling pyo3-async-runtimes v0.30.0
-   Compiling xberg-py v1.4.0 (/home/runner/work/xberg/xberg/crates/xberg-py)
+Need to get 3048 kB of archives.
+After this operation, 17.8 MB of additional disk space will be used.
+Get:1 file:/etc/apt/apt-mirrors.txt Mirrorlist [144 B]
+Ign:2 http://azure.archive.ubuntu.com/ubuntu noble-updates/main amd64 libprotobuf32t64 amd64 3.21.12-8.2ubuntu0.4
+Ign:3 http://azure.archive.ubuntu.com/ubuntu noble-updates/main amd64 libprotoc32t64 amd64 3.21.12-8.2ubuntu0.4
+Get:4 http://azure.archive.ubuntu.com/ubuntu noble-updates/main amd64 libprotobuf-dev amd64 3.21.12-8.2ubuntu0.4 [1413 kB]
+Ign:5 http://azure.archive.ubuntu.com/ubuntu noble-updates/universe amd64 protobuf-compiler amd64 3.21.12-8.2ubuntu0.4
+##[error]The operation was canceled.
+```
+
+</details>
+
+### CI Lint (`.github/workflows/ci-lint.yaml`)
+
+- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/42768552919 — dark (conclusion: `cancelled`), 2026-11-10 06:26 UTC
+- Dark since: 2026-11-10 05:02 UTC (first run of the current streak)
+- Job / step: `Benchmark script regressions` → `Test the PP-DocLayoutV3 cross-runtime comparison`
+- Likely cause: Canceling since a higher priority waiting request for ci-lint-refs/heads/main exists
+
+<details><summary>End of the job log</summary>
+
+```
+Installed 19 packages in 15ms
+.......                                                                  [100%]
+7 passed in 1.59s
+[test:classic-ocr-cache:harness] $ uv run --frozen --only-dev python -m pytest -q scripts/test_classic_ocr_cache_acceptance.py
+.............                                                            [100%]
+13 passed in 0.14s
+[test:v3-cross-runtime] $ bash scripts/ci/test-v3-cross-runtime.sh
+##[error]The operation was canceled.
+```
+
+</details>
+
+### CI Mobile (`.github/workflows/ci-mobile.yaml`)
+
+- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/42768552186 — dark (conclusion: `cancelled`), 2026-11-10 06:26 UTC
+- Dark since: 2026-11-10 06:26 UTC (first run of the current streak)
+- Job / step: `Android cargo check (x86_64)` → `cargo ndk check xberg-dart`
+- Likely cause: Canceling since a higher priority waiting request for ci-mobile-refs/heads/main exists
+
+<details><summary>End of the job log</summary>
+
+```
+    Checking nu-ansi-term v0.50.3
+    Checking byteorder-lite v0.1.0
+    Checking fax v0.2.7
+    Checking bit-vec v0.10.1
+    Checking outref v0.5.2
+    Checking bit-set v0.11.1
+    Checking tiff v0.11.3
+##[error]The operation was canceled.
+```
+
+</details>
+
+### CI Docs (`.github/workflows/ci-docs.yaml`)
+
+- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/42768552616 — dark (conclusion: `cancelled`), 2026-11-10 06:26 UTC
+- Dark since: 2026-11-10 06:26 UTC (first run of the current streak)
+- Job / step: `docs / Build` → `Build site`
+- Likely cause: Canceling since a higher priority waiting request for ci-docs-refs/heads/main exists
+
+<details><summary>End of the job log</summary>
+
+```
+06:28:15   ├─ /404.html06:28:15 [WARN] [content] Entry docs → 404 was not found.
+ (+15ms)
+06:28:15   ├─ /cli/index.html (+1ms)
+06:28:15   ├─ /concepts/index.html (+1ms)
+06:28:15   ├─ /getting-started/index.html (+1ms)
+06:28:15   ├─ /guides/index.html (+1ms)
+06:28:15   ├─ /llms-full.txt (+40.96s)
 ##[error]The operation was canceled.
 ```
 

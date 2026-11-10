@@ -4,9 +4,10 @@
 
 - **Status:** not for filing — upstream already has an open issue/PR about every dark workflow here
 - **Would be filed at:** https://github.com/tangency-labs/solidcraft/issues/new
-- **Stars:** 15291 · **Generated:** 2026-11-10T00:51:51.652Z
+- **Stars:** 15339 · **Generated:** 2026-11-10T06:45:56.660Z
 - Nothing in this file has been sent anywhere.
 
 ## Skipped: upstream already tracking
 
 - Pages (`.github/workflows/pages.yml`): [issue #9863](https://github.com/tangency-labs/solidcraft/issues/9863) "Preferences redesign: 12 pages in four headings, profile switcher, new controls and illustrations"
+- Docker (`.github/workflows/docker.yml`): [issue #14063](https://github.com/tangency-labs/solidcraft/issues/14063) "Native server-side project storage for Docker / self-hosted installations"

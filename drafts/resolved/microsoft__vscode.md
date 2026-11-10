@@ -1,8 +1,8 @@
 <!-- dark-draft: microsoft/vscode -->
-<!-- draft-state: ready -->
+<!-- draft-state: resolved -->
 # Upstream issue draft: microsoft/vscode
 
-- **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
+- **Status:** resolved — lit again (2026-11-10); nothing to file
 - **Would be filed at:** https://github.com/microsoft/vscode/issues/new
 - **Stars:** 195245 · **Generated:** 2026-11-10T00:51:51.652Z
 - Nothing in this file has been sent anywhere.

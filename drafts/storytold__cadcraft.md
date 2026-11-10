@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/storytold/cadcraft/issues/new
-- **Stars:** 7872 · **Generated:** 2026-11-10T00:51:51.652Z
+- **Stars:** 7877 · **Generated:** 2026-11-10T06:45:56.660Z
 - Nothing in this file has been sent anywhere.
 
 ## Skipped: upstream already tracking
