@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/Gentleman-Programming/engram/issues/new
-- **Stars:** 7885 · **Generated:** 2026-11-10T06:45:56.660Z
+- **Stars:** 7890 · **Generated:** 2026-11-10T12:42:46.990Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -20,20 +20,20 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### CI (`.github/workflows/ci.yml`)
 
-- Latest run on `main`: https://github.com/Gentleman-Programming/engram/actions/runs/42573048789 — dark (conclusion: `failure`), 2026-11-09 06:26 UTC
+- Latest run on `main`: https://github.com/Gentleman-Programming/engram/actions/runs/42790710743 — dark (conclusion: `failure`), 2026-11-10 09:26 UTC
 - Dark since: 2026-11-09 06:26 UTC (first run of the current streak)
 - Job / step: `Windows Full Suite (Observational)` → `Run full default-tags module suite`
-- Likely cause: {"Time":"2026-11-09T06:36:49.291401Z","Action":"fail","Package":"github.com/Gentleman-Programming/engram/v3/plugin","Elapsed":411.727}
+- Likely cause: {"Time":"2026-11-10T09:37:12.1092204Z","Action":"fail","Package":"github.com/Gentleman-Programming/engram/v3/plugin","Elapsed":414.358}
 
 <details><summary>End of the job log</summary>
 
 ```
-{"Time":"2026-11-09T06:36:49.2807627Z","Action":"output","Package":"github.com/Gentleman-Programming/engram/v3/plugin","Test":"TestHooksJSONPluginRootIsQuoted","Output":"    hooks_quoting_test.go:87: checked 6 hook comm…
-{"Time":"2026-11-09T06:36:49.2807627Z","Action":"output","Package":"github.com/Gentleman-Programming/engram/v3/plugin","Test":"TestHooksJSONPluginRootIsQuoted","Output":"--- PASS: TestHooksJSONPluginRootIsQuoted (0.00s)…
-{"Time":"2026-11-09T06:36:49.2807627Z","Action":"pass","Package":"github.com/Gentleman-Programming/engram/v3/plugin","Test":"TestHooksJSONPluginRootIsQuoted","Elapsed":0}
-{"Time":"2026-11-09T06:36:49.2807627Z","Action":"output","Package":"github.com/Gentleman-Programming/engram/v3/plugin","Output":"FAIL\n"}
-{"Time":"2026-11-09T06:36:49.291401Z","Action":"output","Package":"github.com/Gentleman-Programming/engram/v3/plugin","Output":"FAIL\tgithub.com/Gentleman-Programming/engram/v3/plugin\t411.727s\n"}
-{"Time":"2026-11-09T06:36:49.291401Z","Action":"fail","Package":"github.com/Gentleman-Programming/engram/v3/plugin","Elapsed":411.727}
+{"Time":"2026-11-10T09:37:12.0984929Z","Action":"output","Package":"github.com/Gentleman-Programming/engram/v3/plugin","Test":"TestHooksJSONPluginRootIsQuoted","Output":"    hooks_quoting_test.go:87: checked 6 hook comm…
+{"Time":"2026-11-10T09:37:12.0984929Z","Action":"output","Package":"github.com/Gentleman-Programming/engram/v3/plugin","Test":"TestHooksJSONPluginRootIsQuoted","Output":"--- PASS: TestHooksJSONPluginRootIsQuoted (0.00s)…
+{"Time":"2026-11-10T09:37:12.0984929Z","Action":"pass","Package":"github.com/Gentleman-Programming/engram/v3/plugin","Test":"TestHooksJSONPluginRootIsQuoted","Elapsed":0}
+{"Time":"2026-11-10T09:37:12.0984929Z","Action":"output","Package":"github.com/Gentleman-Programming/engram/v3/plugin","Output":"FAIL\n"}
+{"Time":"2026-11-10T09:37:12.1092204Z","Action":"output","Package":"github.com/Gentleman-Programming/engram/v3/plugin","Output":"FAIL\tgithub.com/Gentleman-Programming/engram/v3/plugin\t414.358s\n"}
+{"Time":"2026-11-10T09:37:12.1092204Z","Action":"fail","Package":"github.com/Gentleman-Programming/engram/v3/plugin","Elapsed":414.358}
 go: downloading golang.org/x/net v0.57.0
 ##[error]Process completed with exit code 1.
 ```

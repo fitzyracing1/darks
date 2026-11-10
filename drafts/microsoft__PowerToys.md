@@ -4,7 +4,7 @@
 
 - **Status:** not for filing — upstream already has an open issue/PR about every dark workflow here
 - **Would be filed at:** https://github.com/microsoft/PowerToys/issues/new
-- **Stars:** 140797 · **Generated:** 2026-11-10T06:45:56.660Z
+- **Stars:** 140812 · **Generated:** 2026-11-10T12:42:46.990Z
 - Nothing in this file has been sent anywhere.
 
 ## Skipped: upstream already tracking

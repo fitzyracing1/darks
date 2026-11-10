@@ -4,13 +4,13 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/storytold/photocraft/issues/new
-- **Stars:** 78318 · **Generated:** 2026-11-10T06:45:56.660Z
+- **Stars:** 78390 · **Generated:** 2026-11-10T12:42:46.990Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 4 workflows dark on main ("Perf (nightly)", "FreeBSD", "Documentation", +1 more)
+CI: 3 workflows dark on main ("Perf (nightly)", "FreeBSD", "Documentation")
 <!-- END TITLE -->
 
 ## Body
@@ -67,28 +67,6 @@ error: test failed, to rerun pass `-p photocraft-engine --lib`
 - Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/42674268037 — dark (conclusion: `failure`), 2026-11-09 18:28 UTC
 - Dark since: 2026-11-09 18:28 UTC (first run of the current streak)
 - Likely cause: no cause found in annotations
-
-### CI (`.github/workflows/ci.yml`)
-
-- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/42740217776 — dark (conclusion: `failure`), 2026-11-10 02:04 UTC
-- Dark since: 2026-11-10 02:04 UTC (first run of the current streak)
-- Job / step: `corpus tests` → `Corpus tests`
-- Likely cause: error: cargo test --release --features corpus,heif (photocraft-psd, photocraft-codecs, photocraft-io, photocraft-engine): exited with exit status: 101
-
-<details><summary>End of the job log</summary>
-
-```
-note: Some details are omitted, run with `RUST_BACKTRACE=full` for a verbose backtrace.
-failures:
-    cmd::artboard_cmds::tests::a_board_past_the_origin_moves_the_color_samplers_and_symmetry_with_the_document
-    cmd::artboard_cmds::tests::duplicating_a_board_beside_one_past_the_origin_moves_the_color_samplers_with_the_document
-test result: FAILED. 3367 passed; 2 failed; 15 ignored; 0 measured; 0 filtered out; finished in 79.92s
-error: test failed, to rerun pass `-p photocraft-engine --lib`
-error: cargo test --release --features corpus,heif (photocraft-psd, photocraft-codecs, photocraft-io, photocraft-engine): exited with exit status: 101
-##[error]Process completed with exit code 1.
-```
-
-</details>
 
 If this is already known or expected, feel free to close. Thanks for maintaining photocraft!
 

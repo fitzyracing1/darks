@@ -4,43 +4,19 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/storytold/lightcraft/issues/new
-- **Stars:** 15784 · **Generated:** 2026-11-10T06:45:56.660Z
+- **Stars:** 15798 · **Generated:** 2026-11-10T12:42:46.990Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 2 workflows dark on main ("SonarCloud", "FreeBSD")
+CI: "FreeBSD" workflow failing on main since 2026-11-10
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
-
-### SonarCloud (`.github/workflows/sonarcloud.yml`)
-
-- Latest run on `main`: https://github.com/storytold/lightcraft/actions/runs/42711822015 — dark (conclusion: `failure`), 2026-11-09 22:25 UTC
-- Dark since: 2026-11-09 22:25 UTC (first run of the current streak)
-- Job / step: `sonarcloud / SonarCloud Scan` → `Combine shard coverage`
-- Likely cause: error: no profile can be merged
-
-<details><summary>End of the job log</summary>
-
-```
-info: downloading 4 components
-  1.99.1-x86_64-unknown-linux-gnu installed - rustc 1.99.1 (58cf8f9c3 2026-10-13)
-Filesystem      Size  Used Avail Use% Mounted on
-/dev/root       145G   52G   93G  36% /
-/dev/root       145G   52G   93G  36% /
-warning: profraw/shard-8-12406-6616866415804224847_0.profraw: invalid instrumentation profile data (file header is corrupt)
-error: no profile can be merged
-##[error]Process completed with exit code 1.
-```
-
-</details>
-
-### FreeBSD (`.github/workflows/freebsd.yml`)
+Hi! The **FreeBSD** workflow (`.github/workflows/freebsd.yml`) on `main` has been failing since 2026-11-10. Here is what I saw, in case it's useful:
 
 - Latest run on `main`: https://github.com/storytold/lightcraft/actions/runs/42754746989 — dark (conclusion: `failure`), 2026-11-10 04:15 UTC
 - Dark since: 2026-11-10 04:15 UTC (first run of the current streak)

@@ -1,8 +1,8 @@
 <!-- dark-draft: t8y2/dbx -->
-<!-- draft-state: ready -->
+<!-- draft-state: resolved -->
 # Upstream issue draft: t8y2/dbx
 
-- **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
+- **Status:** resolved — lit again (2026-11-10); nothing to file
 - **Would be filed at:** https://github.com/t8y2/dbx/issues/new
 - **Stars:** 29810 · **Generated:** 2026-11-10T06:45:56.660Z
 - Nothing in this file has been sent anywhere.

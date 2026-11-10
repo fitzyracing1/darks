@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/morluto/rea/issues/new
-- **Stars:** 447731 · **Generated:** 2026-11-10T06:45:56.660Z
+- **Stars:** 448648 · **Generated:** 2026-11-10T12:42:46.990Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** latest run was skipped, not failed — probably not worth filing
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
@@ -22,27 +22,27 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### CodeQL production (`.github/workflows/codeql.yml`)
 
-- Latest run on `main`: https://github.com/morluto/rea/actions/runs/42763337108 — dark (conclusion: `skipped`), 2026-11-10 05:37 UTC
+- Latest run on `main`: https://github.com/morluto/rea/actions/runs/42816051909 — dark (conclusion: `skipped`), 2026-11-10 12:28 UTC
 - Dark since: 2026-11-01 07:24 UTC (first run of the current streak)
 - Likely cause: run skipped
 
 ### CI (`.github/workflows/ci.yml`)
 
-- Latest run on `main`: https://github.com/morluto/rea/actions/runs/42763336970 — dark (conclusion: `failure`), 2026-11-10 05:37 UTC
+- Latest run on `main`: https://github.com/morluto/rea/actions/runs/42801673495 — dark (conclusion: `failure`), 2026-11-10 10:44 UTC
 - Dark since: 2026-11-08 16:39 UTC (first run of the current streak)
-- Job / step: `Real Apple artifact CLI/MCP E2E` → `Verify Apple artifact formats and metadata`
-- Likely cause: preparationFailure: undefined
+- Job / step: `Source tests` → `Run source tests without waiting for build`
+- Likely cause: Tests  1 failed | 26576 passed | 18 skipped (26595)
 
 <details><summary>End of the job log</summary>
 
 ```
-    processError: undefined,
-    cleanupResult: undefined,
-    collectionFailure: false,
-    preparationFailure: undefined
-  }
-}
-Node.js v24.22.1
+    458|         alias: "settings",
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+ Test Files  1 failed | 1426 passed | 1 skipped (1428)
+      Tests  1 failed | 26576 passed | 18 skipped (26595)
+   Start at  11:38:34
+   Duration  437.38s (tests 74%, import 21%, transform 4%, worker 1%)
+blob report written to /home/runner/work/rea/rea/.vitest/blob/blob-source.json
 ##[error]Process completed with exit code 1.
 ```
 

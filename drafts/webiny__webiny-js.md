@@ -4,13 +4,13 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/webiny/webiny-js/issues/new
-- **Stars:** 8049 · **Generated:** 2026-11-10T06:45:56.660Z
+- **Stars:** 8049 · **Generated:** 2026-11-10T12:42:46.990Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 3 workflows dark on next ("Cloud infrastructure Cleanup", "Rebuild Global Cache ("dev" branch)", "Record E2E replay steps")
+CI: 4 workflows dark on next ("Cloud infrastructure Cleanup", "Rebuild Global Cache ("dev" branch)", "Record E2E replay steps", +1 more)
 <!-- END TITLE -->
 
 ## Body
@@ -79,6 +79,28 @@ Switched to a new branch 'next'
 branch 'next' set up to track 'origin/next'.
 60e6f1eda5bfa9c2615f57a4e0cd85c7551c97c1
 GraphQL: Your token has not been granted the required scopes to execute this query. The 'login' field requires one of the following scopes: ['read:org'], but your token has only been granted the: ['repo'] scopes. Please…
+##[error]Process completed with exit code 1.
+```
+
+</details>
+
+### Push (`.github/workflows/push.yml`)
+
+- Latest run on `next`: https://github.com/webiny/webiny-js/actions/runs/42809622482 — dark (conclusion: `failure`), 2026-11-10 11:42 UTC
+- Dark since: 2026-11-10 11:42 UTC (first run of the current streak)
+- Job / step: `E2E (DDB+OS) - Project setup` → `E2E - run tests`
+- Likely cause: Tests  1 failed | 2 passed | 1 skipped (4)
+
+<details><summary>End of the job log</summary>
+
+```
+ Test Files  1 failed | 2 passed (3)
+      Tests  1 failed | 2 passed | 1 skipped (4)
+   Start at  11:57:53
+   Duration  83.19s (1m 23s)
+     Traces  .e2e/results/ (2 pages, trace.md in each test's directory)
+      JUnit  .e2e/junit.xml
+   Markdown  .e2e/summary.md
 ##[error]Process completed with exit code 1.
 ```
 

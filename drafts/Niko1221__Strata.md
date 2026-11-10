@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/Niko1221/Strata/issues/new
-- **Stars:** 42619 · **Generated:** 2026-11-10T06:45:56.660Z
+- **Stars:** 42729 · **Generated:** 2026-11-10T12:42:46.990Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -18,21 +18,21 @@ CI: "Checks" workflow failing on main since 2026-11-09
 <!-- BEGIN BODY -->
 Hi! The **Checks** workflow (`.github/workflows/check.yml`) on `main` has been failing since 2026-11-09. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/Niko1221/Strata/actions/runs/42667784802 — dark (conclusion: `failure`), 2026-11-09 17:45 UTC
+- Latest run on `main`: https://github.com/Niko1221/Strata/actions/runs/42771970599 — dark (conclusion: `failure`), 2026-11-10 06:57 UTC
 - Dark since: 2026-11-09 10:12 UTC (first run of the current streak)
-- Job / step: `macOS / host typecheck + test + build` → `tools/check`
-- Likely cause: check: 2 passed, 1 failed, 0 not run (of 3 steps)
+- Job / step: `Windows / Python tools/` → `tools/check`
+- Likely cause: check: 0 passed, 1 failed, 0 not run (of 1 steps)
 
 <details><summary>End of the job log</summary>
 
 ```
-  host-test          2  drive-letter paths: Windows only
-  host-test          1  starts a real browser: set STRATA_TEST_BROWSER=1
-  host-test          1  PowerShell is checked on Windows
-  host-test          1  needs Windows PowerShell to parse the script (Windows only)
-  host-test          1  STRATA_TEST_PI_AI_DIR is not set (the Harness AI package folder)
-  host-test          1  needs Windows PowerShell (Windows only)
-check: 2 passed, 1 failed, 0 not run (of 3 steps)
+  py-tools           1  set STRATA_LIVE_HF=1 to read real headers from Hugging Face
+  py-tools           1  reads the Linux sysfs paths
+  py-tools           1  the lspci probe is Linux only (needs lspci and the sysfs layout)
+  py-tools           1  POSIX paths
+  py-tools           1  llama.cpp's ggml-vocab-qwen35.gguf test vectors are not here
+check: 0 passed, 1 failed, 0 not run (of 1 steps)
+scratch kept: D:\a\_temp\check
 ##[error]Process completed with exit code 1.
 ```
 

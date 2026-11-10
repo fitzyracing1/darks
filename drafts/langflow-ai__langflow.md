@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/langflow-ai/langflow/issues/new
-- **Stars:** 156495 · **Generated:** 2026-11-10T06:45:56.660Z
+- **Stars:** 156502 · **Generated:** 2026-11-10T12:42:46.990Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -50,7 +50,7 @@ Creating Pages deployment with payload:
 
 - Latest run on `main`: https://github.com/langflow-ai/langflow/actions/runs/42727628649 — dark (conclusion: `failure`), 2026-11-10 00:21 UTC
 - Dark since: 2026-11-10 00:21 UTC (first run of the current streak)
-- Likely cause: cause not readable (GET /repos/langflow-ai/langflow/actions/runs/42727628649/jobs?filter=latest&per_)
+- Likely cause: no cause found in annotations
 
 If this is already known or expected, feel free to close. Thanks for maintaining langflow!
 

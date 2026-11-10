@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/mobile-next/mobile-mcp/issues/new
-- **Stars:** 10454 · **Generated:** 2026-11-10T06:45:56.660Z
+- **Stars:** 10469 · **Generated:** 2026-11-10T12:42:46.990Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title

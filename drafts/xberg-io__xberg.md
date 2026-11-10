@@ -4,14 +4,14 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/xberg-io/xberg/issues/new
-- **Stars:** 9568 · **Generated:** 2026-11-10T06:45:56.660Z
+- **Stars:** 9570 · **Generated:** 2026-11-10T12:42:46.990Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** cancelled by a concurrency group — likely noise
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 6 workflows dark on main ("CI Rust", "CI E2E", "CI Integrations", +3 more)
+CI: 3 workflows dark on main ("CI Rust", "CI E2E", "CI Integrations")
 <!-- END TITLE -->
 
 ## Body
@@ -21,28 +21,43 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### CI Rust (`.github/workflows/ci-rust.yaml`)
 
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/42768552193 — dark (conclusion: `cancelled`), 2026-11-10 06:26 UTC
+- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/42809212912 — dark (conclusion: `cancelled`), 2026-11-10 11:39 UTC
 - Dark since: 2026-10-25 18:30 UTC (first run of the current streak)
-- Job / step: `Rust (windows-latest)`
+- Job / step: `Rust (windows-latest)` → `Install system dependencies`
 - Likely cause: Canceling since a higher priority waiting request for ci-rust-refs/heads/main exists
+
+<details><summary>End of the job log</summary>
+
+```
+Downloading https://github.com/StrawberryPerl/Perl-Dist-Strawberry/releases/download/SP_54221_64bit/strawberry-perl-5.42.2.1-64bit-portable.zip -> strawberry-perl-5.42.2.1-64bit-portable.zip
+Successfully downloaded strawberry-perl-5.42.2.1-64bit-portable.zip
+Downloading nasm-3.01-win64.zip, trying https://www.nasm.us/pub/nasm/releasebuilds/3.01/win64/nasm-3.01-win64.zip
+Successfully downloaded nasm-3.01-win64.zip
+-- Configuring x64-windows-static-md
+-- Building x64-windows-static-md-dbg
+-- Building x64-windows-static-md-rel
+##[error]The operation was canceled.
+```
+
+</details>
 
 ### CI E2E (`.github/workflows/ci-e2e.yaml`)
 
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/42768552406 — dark (conclusion: `cancelled`), 2026-11-10 06:26 UTC
+- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/42809213038 — dark (conclusion: `cancelled`), 2026-11-10 11:39 UTC
 - Dark since: 2026-11-03 17:32 UTC (first run of the current streak)
-- Job / step: `Build FFI (aarch64-unknown-linux-gnu)` → `Install system dependencies`
+- Job / step: `Build FFI (x86_64-unknown-linux-gnu)` → `Build FFI library`
 - Likely cause: Canceling since a higher priority waiting request for ci-e2e-refs/heads/main exists
 
 <details><summary>End of the job log</summary>
 
 ```
-[  4%] Building CXX object CMakeFiles/libtesseract.dir/src/api/renderer.cpp.o
-[  4%] Building CXX object CMakeFiles/libtesseract.dir/src/api/wordstrboxrenderer.cpp.o
-[  5%] Building CXX object CMakeFiles/libtesseract.dir/src/ccmain/adaptions.cpp.o
-[  5%] Building CXX object CMakeFiles/libtesseract.dir/src/ccmain/applybox.cpp.o
-[  6%] Building CXX object CMakeFiles/libtesseract.dir/src/ccmain/control.cpp.o
-[  6%] Building CXX object CMakeFiles/libtesseract.dir/src/ccmain/docqual.cpp.o
-[  7%] Building CXX object CMakeFiles/libtesseract.dir/src/ccmain/equationdetect.cpp.o
+[xberg-tesseract 1.4.0] /usr/bin/g++ -DCMAKE_BUILD -DHAVE_AVX -DHAVE_AVX2 -DHAVE_AVX512F -DHAVE_CONFIG_H -DHAVE_FMA -DHAVE_SSE4_1 -DOPENMP_SIMD -D_SILENCE_STDEXT_HASH_DEPRECATION_WARNINGS=1 -I/home/runner/work/xberg/xbe…
+[xberg-tesseract 1.4.0] [ 18%] Building CXX object CMakeFiles/libtesseract.dir/src/ccmain/recogtraining.cpp.o
+[xberg-tesseract 1.4.0] /usr/bin/g++ -DCMAKE_BUILD -DHAVE_AVX -DHAVE_AVX2 -DHAVE_AVX512F -DHAVE_CONFIG_H -DHAVE_FMA -DHAVE_SSE4_1 -DOPENMP_SIMD -D_SILENCE_STDEXT_HASH_DEPRECATION_WARNINGS=1 -I/home/runner/work/xberg/xbe…
+[xberg-tesseract 1.4.0] [ 19%] Building CXX object CMakeFiles/libtesseract.dir/src/ccmain/reject.cpp.o
+[xberg-tesseract 1.4.0] /usr/bin/g++ -DCMAKE_BUILD -DHAVE_AVX -DHAVE_AVX2 -DHAVE_AVX512F -DHAVE_CONFIG_H -DHAVE_FMA -DHAVE_SSE4_1 -DOPENMP_SIMD -D_SILENCE_STDEXT_HASH_DEPRECATION_WARNINGS=1 -I/home/runner/work/xberg/xbe…
+   Compiling notify v8.2.1
+     Running `CARGO=/home/runner/.rustup/toolchains/1.99.1-x86_64-unknown-linux-gnu/bin/cargo CARGO_CRATE_NAME=notify CARGO_MANIFEST_DIR=/home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/notify-8.2.1 CAR…
 ##[error]The operation was canceled.
 ```
 
@@ -50,87 +65,21 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### CI Integrations (`.github/workflows/ci-integrations.yaml`)
 
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/42768552458 — dark (conclusion: `cancelled`), 2026-11-10 06:26 UTC
+- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/42809213127 — dark (conclusion: `cancelled`), 2026-11-10 11:39 UTC
 - Dark since: 2026-11-08 00:41 UTC (first run of the current streak)
-- Job / step: `Build local integration bindings` → `Setup Rust`
+- Job / step: `Build local integration bindings` → `Build abi3 Python wheel`
 - Likely cause: Canceling since a higher priority waiting request for ci-integrations-refs/heads/main exists
 
 <details><summary>End of the job log</summary>
 
 ```
-Need to get 3048 kB of archives.
-After this operation, 17.8 MB of additional disk space will be used.
-Get:1 file:/etc/apt/apt-mirrors.txt Mirrorlist [144 B]
-Ign:2 http://azure.archive.ubuntu.com/ubuntu noble-updates/main amd64 libprotobuf32t64 amd64 3.21.12-8.2ubuntu0.4
-Ign:3 http://azure.archive.ubuntu.com/ubuntu noble-updates/main amd64 libprotoc32t64 amd64 3.21.12-8.2ubuntu0.4
-Get:4 http://azure.archive.ubuntu.com/ubuntu noble-updates/main amd64 libprotobuf-dev amd64 3.21.12-8.2ubuntu0.4 [1413 kB]
-Ign:5 http://azure.archive.ubuntu.com/ubuntu noble-updates/universe amd64 protobuf-compiler amd64 3.21.12-8.2ubuntu0.4
-##[error]The operation was canceled.
-```
-
-</details>
-
-### CI Lint (`.github/workflows/ci-lint.yaml`)
-
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/42768552919 — dark (conclusion: `cancelled`), 2026-11-10 06:26 UTC
-- Dark since: 2026-11-10 05:02 UTC (first run of the current streak)
-- Job / step: `Benchmark script regressions` → `Test the PP-DocLayoutV3 cross-runtime comparison`
-- Likely cause: Canceling since a higher priority waiting request for ci-lint-refs/heads/main exists
-
-<details><summary>End of the job log</summary>
-
-```
-Installed 19 packages in 15ms
-.......                                                                  [100%]
-7 passed in 1.59s
-[test:classic-ocr-cache:harness] $ uv run --frozen --only-dev python -m pytest -q scripts/test_classic_ocr_cache_acceptance.py
-.............                                                            [100%]
-13 passed in 0.14s
-[test:v3-cross-runtime] $ bash scripts/ci/test-v3-cross-runtime.sh
-##[error]The operation was canceled.
-```
-
-</details>
-
-### CI Mobile (`.github/workflows/ci-mobile.yaml`)
-
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/42768552186 — dark (conclusion: `cancelled`), 2026-11-10 06:26 UTC
-- Dark since: 2026-11-10 06:26 UTC (first run of the current streak)
-- Job / step: `Android cargo check (x86_64)` → `cargo ndk check xberg-dart`
-- Likely cause: Canceling since a higher priority waiting request for ci-mobile-refs/heads/main exists
-
-<details><summary>End of the job log</summary>
-
-```
-    Checking nu-ansi-term v0.50.3
-    Checking byteorder-lite v0.1.0
-    Checking fax v0.2.7
-    Checking bit-vec v0.10.1
-    Checking outref v0.5.2
-    Checking bit-set v0.11.1
-    Checking tiff v0.11.3
-##[error]The operation was canceled.
-```
-
-</details>
-
-### CI Docs (`.github/workflows/ci-docs.yaml`)
-
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/42768552616 — dark (conclusion: `cancelled`), 2026-11-10 06:26 UTC
-- Dark since: 2026-11-10 06:26 UTC (first run of the current streak)
-- Job / step: `docs / Build` → `Build site`
-- Likely cause: Canceling since a higher priority waiting request for ci-docs-refs/heads/main exists
-
-<details><summary>End of the job log</summary>
-
-```
-06:28:15   ├─ /404.html06:28:15 [WARN] [content] Entry docs → 404 was not found.
- (+15ms)
-06:28:15   ├─ /cli/index.html (+1ms)
-06:28:15   ├─ /concepts/index.html (+1ms)
-06:28:15   ├─ /getting-started/index.html (+1ms)
-06:28:15   ├─ /guides/index.html (+1ms)
-06:28:15   ├─ /llms-full.txt (+40.96s)
+   Compiling atoi_simd v0.18.1
+   Compiling g2p v1.2.2
+   Compiling jsonwebtoken v11.1.0
+   Compiling symphonia-format-riff v0.6.1
+   Compiling memchr-n v0.1.10
+   Compiling notify v8.2.1
+   Compiling image v0.24.9
 ##[error]The operation was canceled.
 ```
 

@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/google-gemini/gemini-cli/issues/new
-- **Stars:** 108748 · **Generated:** 2026-11-10T06:45:56.660Z
+- **Stars:** 108754 · **Generated:** 2026-11-10T12:42:46.990Z
 - Nothing in this file has been sent anywhere.
 
 ## Skipped: upstream already tracking
@@ -17,37 +17,13 @@ These workflows are left out of the body below.
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 2 workflows dark on main ("📋 Gemini Scheduled Issue Triage", "Performance Tests: Nightly")
+CI: "Performance Tests: Nightly" workflow failing on main since 2026-11-10
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
-
-### 📋 Gemini Scheduled Issue Triage (`.github/workflows/gemini-scheduled-issue-triage.yml`)
-
-- Latest run on `main`: https://github.com/google-gemini/gemini-cli/actions/runs/42766878619 — dark (conclusion: `failure`), 2026-11-10 06:11 UTC
-- Dark since: 2026-11-09 11:06 UTC (first run of the current streak)
-- Job / step: `triage-issues` → `Apply Triaged Labels`
-- Likely cause: Unhandled error: HttpError: Resource not accessible by integration
-
-<details><summary>End of the job log</summary>
-
-```
-##[end-action id=gemini_standard_issue_analysis.__run_3;outcome=success;conclusion=success;duration_ms=16]
-Direct JSON parsing failed. Trying to extract from a markdown block.
-Aggregated triage results for 1 issues.
-RequestError [HttpError]: Resource not accessible by integration
-    at /home/runner/work/_actions/actions/github-script/60a0d83039c74a4aee543508d2ffcb1c3799cdea/dist/index.js:9537:21
-    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
-    at async module.exports (/home/runner/work/gemini-cli/gemini-cli/.github/scripts/apply-issue-labels.cjs:221:7)
-##[error]Unhandled error: HttpError: Resource not accessible by integration
-```
-
-</details>
-
-### Performance Tests: Nightly (`.github/workflows/perf-nightly.yml`)
+Hi! The **Performance Tests: Nightly** workflow (`.github/workflows/perf-nightly.yml`) on `main` has been failing since 2026-11-10. Here is what I saw, in case it's useful:
 
 - Latest run on `main`: https://github.com/google-gemini/gemini-cli/actions/runs/42747958950 — dark (conclusion: `failure`), 2026-11-10 03:13 UTC
 - Dark since: 2026-11-10 03:13 UTC (first run of the current streak)
