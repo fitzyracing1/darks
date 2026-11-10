@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/freeCodeCamp/freeCodeCamp/issues/new
-- **Stars:** 458796 · **Generated:** 2026-11-09T12:43:14.164Z
+- **Stars:** 458825 · **Generated:** 2026-11-10T00:51:51.652Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -18,7 +18,7 @@ CI: "i18n - Build Validation" workflow failing on main since 2026-11-06
 <!-- BEGIN BODY -->
 Hi! The **i18n - Build Validation** workflow (`.github/workflows/i18n-validate-builds.yml`) on `main` has been failing since 2026-11-06. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/freeCodeCamp/freeCodeCamp/actions/runs/42602506605 — dark (conclusion: `failure`), 2026-11-09 10:39 UTC
+- Latest run on `main`: https://github.com/freeCodeCamp/freeCodeCamp/actions/runs/42721957269 — dark (conclusion: `failure`), 2026-11-09 23:37 UTC
 - Dark since: 2026-11-06 18:01 UTC (first run of the current streak)
 - Job / step: `Validate i18n Builds (24)` → `Validate Challenge Files`
 - Likely cause: [ELIFECYCLE] Command failed with exit code 1.

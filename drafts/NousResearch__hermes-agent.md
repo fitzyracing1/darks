@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/NousResearch/hermes-agent/issues/new
-- **Stars:** 261933 · **Generated:** 2026-11-09T12:43:14.164Z
+- **Stars:** 262072 · **Generated:** 2026-11-10T00:51:51.652Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
@@ -21,13 +21,13 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### Docker Build, Test, and Publish (`.github/workflows/docker.yml`)
 
-- Latest run on `main`: https://github.com/NousResearch/hermes-agent/actions/runs/42611707855 — dark (conclusion: `cancelled`), 2026-11-09 11:46 UTC
+- Latest run on `main`: https://github.com/NousResearch/hermes-agent/actions/runs/42722807108 — dark (conclusion: `cancelled`), 2026-11-09 23:43 UTC
 - Dark since: 2026-11-08 17:58 UTC (first run of the current streak)
 - Likely cause: run cancelled
 
 ### Deploy Site (`.github/workflows/deploy-site.yml`)
 
-- Latest run on `main`: https://github.com/NousResearch/hermes-agent/actions/runs/42611889313 — dark (conclusion: `failure`), 2026-11-09 11:48 UTC
+- Latest run on `main`: https://github.com/NousResearch/hermes-agent/actions/runs/42722806834 — dark (conclusion: `failure`), 2026-11-09 23:43 UTC
 - Dark since: 2026-11-09 11:48 UTC (first run of the current streak)
 - Job / step: `deploy-docs` → `Deploy to GitHub Pages`
 - Likely cause: Timeout reached, aborting!

@@ -4,13 +4,13 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/activepieces/activepieces/issues/new
-- **Stars:** 25443 · **Generated:** 2026-11-09T12:43:14.164Z
+- **Stars:** 25452 · **Generated:** 2026-11-10T00:51:51.652Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 2 workflows dark on main ("Chat Evals", "Benchmark")
+CI: 3 workflows dark on main ("Chat Evals", "Benchmark", "Continuous Delivery — Staging")
 <!-- END TITLE -->
 
 ## Body
@@ -57,6 +57,28 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 </div>
 </body>
 </html>
+##[error]Process completed with exit code 1.
+```
+
+</details>
+
+### Continuous Delivery — Staging (`.github/workflows/continuous-delivery-stg.yml`)
+
+- Latest run on `main`: https://github.com/activepieces/activepieces/actions/runs/42715087697 — dark (conclusion: `failure`), 2026-11-09 22:48 UTC
+- Dark since: 2026-11-09 14:53 UTC (first run of the current streak)
+- Job / step: `deploy-staging-app` → `Deploy to staging`
+- Likely cause: ERROR (RuntimeError): Exception while executing on host 46.224.204.156: Could not find secret AP_OPENROUTER_PROVISION_KEY
+
+<details><summary>End of the job log</summary>
+
+```
+Agent pid 3038375
+Identity added: /***/.ssh/id_rsa (***@vmi1434038)
+Pull app image...
+  Finished all in 0.0 seconds
+  ERROR (RuntimeError): Exception while executing on host 46.224.204.156: Could not find secret AP_OPENROUTER_PROVISION_KEY
+exit
+Connection to *** closed.
 ##[error]Process completed with exit code 1.
 ```
 

@@ -4,37 +4,37 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/huggingface/transformers/issues/new
-- **Stars:** 168685 · **Generated:** 2026-11-09T12:43:14.164Z
+- **Stars:** 168710 · **Generated:** 2026-11-10T00:51:51.652Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** self-hosted runner problem — maintainers usually know
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: "Slow tests on important models (on Push - A10)" workflow failing on main since 2026-11-09
+CI: "PR CI" workflow failing on main since 2026-11-09
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! The **Slow tests on important models (on Push - A10)** workflow (`.github/workflows/push-important-models.yml`) on `main` has been failing since 2026-11-09. Here is what I saw, in case it's useful:
+Hi! The **PR CI** workflow (`.github/workflows/pr-ci-caller.yml`) on `main` has been failing since 2026-11-09. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/huggingface/transformers/actions/runs/42608387536 — dark (conclusion: `failure`), 2026-11-09 11:21 UTC
-- Dark since: 2026-11-09 02:49 UTC (first run of the current streak)
-- Job / step: `Model CI / run_models_gpu (aws-g5-12xlarge-cache, 2) / run_models_gpu (models/qwen2_5_vl)` → `Run all tests on GPU`
+- Latest run on `main`: https://github.com/huggingface/transformers/actions/runs/42707947750 — dark (conclusion: `failure`), 2026-11-09 22:01 UTC
+- Dark since: 2026-11-09 22:01 UTC (first run of the current streak)
+- Job / step: `pr-ci / tests_generate / tests_generate [shard 2/8]` → `Run tests`
 - Likely cause: Executing the custom container implementation failed. Please contact your self hosted runner administrator.
 
 <details><summary>End of the job log</summary>
 
 ```
-drwxr-xr-x.  3 root root     77 Nov  9 11:25 reports
-drwxr-xr-x.  3 root root     84 Nov  9 00:43 scripts
--rw-r--r--.  1 root root  12447 Nov  9 00:43 setup.py
-drwxr-xr-x.  1 root root     67 Nov  9 00:43 src
--rw-r--r--.  1 root root 142975 Nov  9 11:29 test_outputs.txt
-drwxr-xr-x.  1 root root    130 Nov  9 11:25 tests
-drwxr-xr-x.  1 root root     56 Nov  9 11:25 utils
-##[error]Error: failed to run script step: command terminated with non-zero exit code: error executing command [sh -e /__w/_temp/35663e30-dc30-11f1-9acc-5d34e7a5dce2.sh], exit code 1
+FAILED tests/models/gemma4_unified/test_modeling_gemma4_unified.py::Gemma4UnifiedAudio2TextModelTest::test_generate_with_static_cache - AssertionError: Generate outputs are not similar enough (atol=1e-05, rtol=1e-05).
+  Sequence mismatch: 20/70 tokens differ (first at position 50).
+  Batch index: 1
+  Token at mismatch — output_1: 15, output_2: 73
+  Score diff at first mismatch — max: 9.770179e-05, mean: 2.416918e-05
+===== 1 failed, 1612 passed, 472 skipped, 70 warnings in 301.54s (0:05:01) =====
+OTEL TRACE END trace_id=8bff7e2245ded992697dfe441f4adb7c service=pytest-observability job=tests_generate exporter_version=0.1.0+g4cfc192 exit_code=1
+##[error]Error: failed to run script step: command terminated with non-zero exit code: error executing command [sh -e /__w/_temp/ea6a47a0-dc89-11f1-924e-4b4078cf9323.sh], exit code 1
 ```
 
 </details>

@@ -4,19 +4,22 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/headroomlabs-ai/headroom/issues/new
-- **Stars:** 79204 · **Generated:** 2026-11-09T12:43:14.164Z
+- **Stars:** 79250 · **Generated:** 2026-11-10T00:51:51.652Z
 - Nothing in this file has been sent anywhere.
+- **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: "tools-hash-refresh" workflow failing on main since 2026-11-09
+CI: 2 workflows dark on main ("tools-hash-refresh", "PR Governance")
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! The **tools-hash-refresh** workflow (`.github/workflows/tools-hash-refresh.yml`) on `main` has been failing since 2026-11-09. Here is what I saw, in case it's useful:
+Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
+
+### tools-hash-refresh (`.github/workflows/tools-hash-refresh.yml`)
 
 - Latest run on `main`: https://github.com/headroomlabs-ai/headroom/actions/runs/42572893895 — dark (conclusion: `failure`), 2026-11-09 06:25 UTC
 - Dark since: 2026-11-09 06:25 UTC (first run of the current streak)
@@ -34,6 +37,28 @@ Hi! The **tools-hash-refresh** workflow (`.github/workflows/tools-hash-refresh.y
     raise HTTPError(req.full_url, code, msg, hdrs, fp)
 urllib.error.HTTPError: HTTP Error 504: Gateway Time-out
 ##[error]Process completed with exit code 1.
+```
+
+</details>
+
+### PR Governance (`.github/workflows/pr-health.yml`)
+
+- Latest run on `main`: https://github.com/headroomlabs-ai/headroom/actions/runs/42634775392 — dark (conclusion: `cancelled`), 2026-11-09 14:26 UTC
+- Dark since: 2026-11-09 14:26 UTC (first run of the current streak)
+- Job / step: `label` → `Label open pull requests`
+- Likely cause: The job has exceeded the maximum execution time of 10m0s
+
+<details><summary>End of the job log</summary>
+
+```
+https://github.com/headroomlabs-ai/headroom/pull/3639
+https://github.com/headroomlabs-ai/headroom/pull/3637
+https://github.com/headroomlabs-ai/headroom/pull/3637
+https://github.com/headroomlabs-ai/headroom/pull/3637
+https://github.com/headroomlabs-ai/headroom/pull/3610
+https://github.com/headroomlabs-ai/headroom/pull/3610
+https://github.com/headroomlabs-ai/headroom/pull/3610
+##[error]The operation was canceled.
 ```
 
 </details>

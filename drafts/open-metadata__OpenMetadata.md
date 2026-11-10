@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/open-metadata/OpenMetadata/issues/new
-- **Stars:** 15721 · **Generated:** 2026-11-09T12:43:14.164Z
+- **Stars:** 15722 · **Generated:** 2026-11-10T00:51:51.652Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -20,7 +20,7 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### Merge Queue Dequeue Report (`.github/workflows/merge-queue-dequeue-report.yml`)
 
-- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/42607371402 — dark (conclusion: `failure`), 2026-11-09 11:14 UTC
+- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/42723790140 — dark (conclusion: `failure`), 2026-11-09 23:51 UTC
 - Dark since: 2026-11-03 21:06 UTC (first run of the current streak)
 - Job / step: `evict-main-conflicts` → `Remove queue entries that conflict with main`
 - Likely cause: cannot iterate over: null
@@ -42,9 +42,9 @@ cannot iterate over: null
 
 ### Integration Tests - MySQL + Elasticsearch (`.github/workflows/integration-tests-mysql-elasticsearch.yml`)
 
-- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/42600638499 — dark (conclusion: `failure`), 2026-11-09 10:24 UTC
+- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/42701111917 — dark (conclusion: `failure`), 2026-11-09 21:17 UTC
 - Dark since: 2026-11-05 11:11 UTC (first run of the current streak)
-- Job / step: `Integration Test Lane (global-state)` → `Run Integration Tests (MySQL + Elasticsearch)`
+- Job / step: `Integration Test Lane (parallel)` → `Run Integration Tests (MySQL + Elasticsearch)`
 - Likely cause: [ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
 
 <details><summary>End of the job log</summary>
@@ -64,7 +64,7 @@ cannot iterate over: null
 
 ### Integration Tests - PostgreSQL + OpenSearch (`.github/workflows/integration-tests-postgres-opensearch.yml`)
 
-- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/42600638631 — dark (conclusion: `failure`), 2026-11-09 10:24 UTC
+- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/42701111819 — dark (conclusion: `failure`), 2026-11-09 21:17 UTC
 - Dark since: 2026-11-05 11:11 UTC (first run of the current streak)
 - Job / step: `Integration Test Lane (global-state)` → `Run Integration Tests (PostgreSQL + OpenSearch)`
 - Likely cause: [ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
@@ -86,7 +86,7 @@ cannot iterate over: null
 
 ### Integration Tests - PostgreSQL + Elasticsearch + Redis (`.github/workflows/integration-tests-postgres-elasticsearch-redis.yml`)
 
-- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/42600638690 — dark (conclusion: `failure`), 2026-11-09 10:24 UTC
+- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/42701111836 — dark (conclusion: `failure`), 2026-11-09 21:17 UTC
 - Dark since: 2026-11-06 10:36 UTC (first run of the current streak)
 - Job / step: `Integration Test Lane (parallel)` → `Run Integration Tests (PostgreSQL + Elasticsearch + Redis)`
 - Likely cause: [ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
@@ -108,7 +108,7 @@ cannot iterate over: null
 
 ### monitor-slack-link (`.github/workflows/monitor-slack-link.yml`)
 
-- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/42615536399 — dark (conclusion: `failure`), 2026-11-09 12:15 UTC
+- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/42728293504 — dark (conclusion: `failure`), 2026-11-10 00:26 UTC
 - Dark since: 2026-11-06 22:08 UTC (first run of the current streak)
 - Job / step: `monitor-slack-link` → `Set up Python 3.9`
 - Likely cause: The version '3.9' with architecture 'x64' was not found for Ubuntu 26.04.
@@ -116,12 +116,12 @@ cannot iterate over: null
 <details><summary>End of the job log</summary>
 
 ```
-Updating files:  99% (27027/27299)
-Updating files: 100% (27299/27299)
-Updating files: 100% (27299/27299), done.
+Updating files:  99% (27098/27371)
+Updating files: 100% (27371/27371)
+Updating files: 100% (27371/27371), done.
 Switched to a new branch 'main'
 branch 'main' set up to track 'origin/main'.
-f8b44568daac8cad77e03a915d7c25035f1e9e81
+2975344bc3d5b04b65bb2572c275ca0193b038af
 Version 3.9 was not found in the local cache
 ##[error]The version '3.9' with architecture 'x64' was not found for Ubuntu 26.04.
 ```

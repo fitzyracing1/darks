@@ -4,33 +4,24 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/horizon-rust/horizon/issues/new
-- **Stars:** 8257 · **Generated:** 2026-11-09T12:43:14.164Z
+- **Stars:** 8377 · **Generated:** 2026-11-10T00:51:51.652Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 2 workflows dark on main ("parity-main", "nightly audit")
+CI: "parity-main" workflow getting cancelled on main since 2026-11-08
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
+Hi! The **parity-main** workflow (`.github/workflows/parity-main.yml`) on `main` has been getting cancelled since 2026-11-08. Here is what I saw, in case it's useful:
 
-### parity-main (`.github/workflows/parity-main.yml`)
-
-- Latest run on `main`: https://github.com/horizon-rust/horizon/actions/runs/42613289234 — dark (conclusion: `cancelled`), 2026-11-09 11:59 UTC
+- Latest run on `main`: https://github.com/horizon-rust/horizon/actions/runs/42717498075 — dark (conclusion: `cancelled`), 2026-11-09 23:05 UTC
 - Dark since: 2026-11-08 04:57 UTC (first run of the current streak)
 - Likely cause: run cancelled
-
-### nightly audit (`.github/workflows/nightly.yml`)
-
-- Latest run on `main`: https://github.com/horizon-rust/horizon/actions/runs/42595172130 — dark (conclusion: `failure`), 2026-11-09 09:40 UTC
-- Dark since: 2026-11-09 09:40 UTC (first run of the current streak)
-- Job / step: `audit` → `Every harness`
-- Likely cause: System.IO.IOException: No space left on device : '/Users/ludovicmarie/.actions-runners/horizon/_diag/pages/a328fcf3-eda5-875a-a04f-04ce4339d00e_6c3f61f8-05da-4858-a228-4c4a3b1ebd80_2.log'
 
 If this is already known or expected, feel free to close. Thanks for maintaining horizon!
 

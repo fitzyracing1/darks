@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/xberg-io/xberg/issues/new
-- **Stars:** 9566 · **Generated:** 2026-11-09T12:43:14.164Z
+- **Stars:** 9568 · **Generated:** 2026-11-10T00:51:51.652Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** cancelled by a concurrency group — likely noise
 
@@ -21,7 +21,7 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### CI Rust (`.github/workflows/ci-rust.yaml`)
 
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/42601479796 — dark (conclusion: `cancelled`), 2026-11-09 10:31 UTC
+- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/42720793332 — dark (conclusion: `cancelled`), 2026-11-09 23:28 UTC
 - Dark since: 2026-10-25 18:30 UTC (first run of the current streak)
 - Job / step: `Rust (ubuntu-latest)` → `Run tests`
 - Likely cause: Canceling since a higher priority waiting request for ci-rust-refs/heads/main exists
@@ -29,13 +29,13 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 <details><summary>End of the job log</summary>
 
 ```
-test retained_table_keeps_noisy_budget_clamped_page_quiet ... ok
-test result: ok. 10 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 8.22s
-     Running `/home/runner/work/xberg/xberg/target/debug/deps/pdf_ocr_caption_2530-7aa0ab9866483b19`
-running 3 tests
-test helpers::tests::test_get_test_documents_dir ... ok
-test helpers::tests::test_test_documents_available ... ok
-test preserves_the_full_docling_caption_as_prose_on_page_nine_and_in_structure has been running for over 60 seconds
+     Running `/home/runner/work/xberg/xberg/target/debug/build/xberg-4b8daa1e978b88a6/build-script-build`
+     Running `sccache /home/runner/.rustup/toolchains/1.99.1-x86_64-unknown-linux-gnu/bin/rustc --crate-name xberg_tesseract --edition=2024 crates/xberg-tesseract/src/lib.rs --error-format=json --json=diagnostic-rendere…
+     Running `sccache /home/runner/.rustup/toolchains/1.99.1-x86_64-unknown-linux-gnu/bin/rustc --crate-name xberg --edition=2024 crates/xberg/src/lib.rs --error-format=json --json=diagnostic-rendered-ansi,artifacts,fut…
+     Running `sccache /home/runner/.rustup/toolchains/1.99.1-x86_64-unknown-linux-gnu/bin/rustc --crate-name xberg --edition=2024 crates/xberg/src/lib.rs --error-format=json --json=diagnostic-rendered-ansi,artifacts,fut…
+     Running `sccache /home/runner/.rustup/toolchains/1.99.1-x86_64-unknown-linux-gnu/bin/rustc --crate-name text_quality --edition=2024 crates/xberg/benches/text_quality.rs --error-format=json --json=diagnostic-rendere…
+     Running `sccache /home/runner/.rustup/toolchains/1.99.1-x86_64-unknown-linux-gnu/bin/rustc --crate-name batch_config_resolution --edition=2024 crates/xberg/benches/batch_config_resolution.rs --error-format=json --j…
+     Running `sccache /home/runner/.rustup/toolchains/1.99.1-x86_64-unknown-linux-gnu/bin/rustc --crate-name concurrency_scaling --edition=2024 crates/xberg/benches/concurrency_scaling.rs --error-format=json --json=diag…
 ##[error]The operation was canceled.
 ```
 
@@ -43,21 +43,21 @@ test preserves_the_full_docling_caption_as_prose_on_page_nine_and_in_structure h
 
 ### CI E2E (`.github/workflows/ci-e2e.yaml`)
 
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/42601479784 — dark (conclusion: `cancelled`), 2026-11-09 10:31 UTC
+- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/42720793764 — dark (conclusion: `cancelled`), 2026-11-09 23:28 UTC
 - Dark since: 2026-11-03 17:32 UTC (first run of the current streak)
-- Job / step: `E2E (node)` → `Run e2e tests`
+- Job / step: `Build FFI (x86_64-unknown-linux-gnu)` → `Build CLI`
 - Likely cause: Canceling since a higher priority waiting request for ci-e2e-refs/heads/main exists
 
 <details><summary>End of the job log</summary>
 
 ```
-   Compiling dbase v0.8.0
-   Compiling moka v0.12.16
-   Compiling crawlberg v1.12.4
-   Compiling calamine v0.38.0
-   Compiling serde_toon_format v0.2.0
-   Compiling scrypt v0.12.0
-   Compiling xberg-native-pdf v1.4.0 (/home/runner/work/xberg/xberg/crates/xberg-native-pdf)
+   Compiling lru v0.19.0
+   Compiling jotdown v0.10.0
+   Compiling minijinja v3.0.5
+   Compiling xberg-cli v1.4.0 (/home/runner/work/xberg/xberg/crates/xberg-cli)
+   Compiling similar v3.2.1
+   Compiling org v0.3.1
+   Compiling clap_complete v4.6.11
 ##[error]The operation was canceled.
 ```
 
@@ -65,21 +65,21 @@ test preserves_the_full_docling_caption_as_prose_on_page_nine_and_in_structure h
 
 ### CI Integrations (`.github/workflows/ci-integrations.yaml`)
 
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/42601479827 — dark (conclusion: `cancelled`), 2026-11-09 10:31 UTC
+- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/42720793349 — dark (conclusion: `cancelled`), 2026-11-09 23:28 UTC
 - Dark since: 2026-11-08 00:41 UTC (first run of the current streak)
-- Job / step: `Build local integration bindings` → `Build and stage Java binding`
+- Job / step: `Build local integration bindings` → `Build abi3 Python wheel`
 - Likely cause: Canceling since a higher priority waiting request for ci-integrations-refs/heads/main exists
 
 <details><summary>End of the job log</summary>
 
 ```
-   Compiling thread_local v1.1.10
-   Compiling typewit v1.15.2
-   Compiling fax v0.2.7
-   Compiling outref v0.5.2
-   Compiling vsimd v0.8.0
-   Compiling nu-ansi-term v0.50.3
-   Compiling pxfm v0.1.30
+   Compiling lru v0.19.0
+   Compiling similar v3.2.1
+   Compiling minijinja v3.0.5
+   Compiling org v0.3.1
+   Compiling jotdown v0.10.0
+   Compiling pyo3-async-runtimes v0.30.0
+   Compiling xberg-py v1.4.0 (/home/runner/work/xberg/xberg/crates/xberg-py)
 ##[error]The operation was canceled.
 ```
 

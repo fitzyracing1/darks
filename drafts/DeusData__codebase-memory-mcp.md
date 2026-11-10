@@ -4,20 +4,23 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/DeusData/codebase-memory-mcp/issues/new
-- **Stars:** 48392 · **Generated:** 2026-11-09T12:43:14.164Z
+- **Stars:** 48418 · **Generated:** 2026-11-10T00:51:51.652Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
+- **Note for Joshua:** cancelled by a concurrency group — likely noise
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: "Nightly Soak" workflow getting cancelled on main since 2026-11-01
+CI: 2 workflows dark on main ("Nightly Soak", "CodeQL SAST")
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! The **Nightly Soak** workflow (`.github/workflows/nightly-soak.yml`) on `main` has been getting cancelled since 2026-11-01. Here is what I saw, in case it's useful:
+Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
+
+### Nightly Soak (`.github/workflows/nightly-soak.yml`)
 
 - Latest run on `main`: https://github.com/DeusData/codebase-memory-mcp/actions/runs/42436967517 — dark (conclusion: `cancelled`), 2026-11-08 02:04 UTC
 - Dark since: 2026-11-01 02:04 UTC (first run of the current streak)
@@ -35,6 +38,28 @@ Max query latency: 58ms (index: 506ms)
 Total queries: 13704
 === soak-test: FAILED ===
 ##[error]Process completed with exit code 1.
+```
+
+</details>
+
+### CodeQL SAST (`.github/workflows/codeql.yml`)
+
+- Latest run on `main`: https://github.com/DeusData/codebase-memory-mcp/actions/runs/42728021377 — dark (conclusion: `cancelled`), 2026-11-10 00:24 UTC
+- Dark since: 2026-11-10 00:24 UTC (first run of the current streak)
+- Job / step: `analyze (c-cpp, manual, codeql-cpp)` → `Perform CodeQL Analysis`
+- Likely cause: Canceling since a higher priority waiting request for codeql-c-cpp-refs/heads/main exists
+
+<details><summary>End of the job log</summary>
+
+```
+Running command in /home/runner/work/codebase-memory-mcp/codebase-memory-mcp: [/opt/hostedtoolcache/CodeQL/2.27.4/x64/codeql/cpp/tools/pre-finalize.sh]
+Pre-finalize script /opt/hostedtoolcache/CodeQL/2.27.4/x64/codeql/cpp/tools/pre-finalize.sh completed in 613 ms.
+Running TRAP import for CodeQL database at /home/runner/work/_temp/codeql_databases/cpp...
+Grouping TRAP files by link target
+Grouping unlinked TRAP files together
+Scanning TRAP files
+Importing TRAP files
+##[error]The operation was canceled.
 ```
 
 </details>
