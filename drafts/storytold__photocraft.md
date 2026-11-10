@@ -4,13 +4,13 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/storytold/photocraft/issues/new
-- **Stars:** 78390 · **Generated:** 2026-11-10T12:42:46.990Z
+- **Stars:** 78451 · **Generated:** 2026-11-10T18:39:11.864Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 3 workflows dark on main ("Perf (nightly)", "FreeBSD", "Documentation")
+CI: 2 workflows dark on main ("Perf (nightly)", "FreeBSD")
 <!-- END TITLE -->
 
 ## Body
@@ -61,12 +61,6 @@ error: test failed, to rerun pass `-p photocraft-engine --lib`
 ```
 
 </details>
-
-### Documentation (`.github/workflows/docs.yml`)
-
-- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/42674268037 — dark (conclusion: `failure`), 2026-11-09 18:28 UTC
-- Dark since: 2026-11-09 18:28 UTC (first run of the current streak)
-- Likely cause: no cause found in annotations
 
 If this is already known or expected, feel free to close. Thanks for maintaining photocraft!
 

@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/webiny/webiny-js/issues/new
-- **Stars:** 8049 · **Generated:** 2026-11-10T12:42:46.990Z
+- **Stars:** 8050 · **Generated:** 2026-11-10T18:39:11.864Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -86,21 +86,21 @@ GraphQL: Your token has not been granted the required scopes to execute this que
 
 ### Push (`.github/workflows/push.yml`)
 
-- Latest run on `next`: https://github.com/webiny/webiny-js/actions/runs/42809622482 — dark (conclusion: `failure`), 2026-11-10 11:42 UTC
+- Latest run on `next`: https://github.com/webiny/webiny-js/actions/runs/42852349027 — dark (conclusion: `failure`), 2026-11-10 16:13 UTC
 - Dark since: 2026-11-10 11:42 UTC (first run of the current streak)
-- Job / step: `E2E (DDB+OS) - Project setup` → `E2E - run tests`
-- Likely cause: Tests  1 failed | 2 passed | 1 skipped (4)
+- Job / step: `[DDB-OS,DDB] api-audit-logs` → `Install dependencies`
+- Likely cause: ➤ YN0000: · Failed with errors in 37s 273ms
 
 <details><summary>End of the job log</summary>
 
 ```
- Test Files  1 failed | 2 passed (3)
-      Tests  1 failed | 2 passed | 1 skipped (4)
-   Start at  11:57:53
-   Duration  83.19s (1m 23s)
-     Traces  .e2e/results/ (2 pages, trace.md in each test's directory)
-      JUnit  .e2e/junit.xml
-   Markdown  .e2e/summary.md
+gyp ERR! node -v v24.22.2
+gyp ERR! node-gyp -v v13.1.0
+gyp ERR! $npm_package_name better-sqlite3
+gyp ERR! $npm_package_version 13.0.3
+gyp ERR! not ok
+➤ YN0000: └ Completed in 35s 218ms
+➤ YN0000: · Failed with errors in 37s 273ms
 ##[error]Process completed with exit code 1.
 ```
 

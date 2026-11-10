@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/horizon-rust/horizon/issues/new
-- **Stars:** 8452 · **Generated:** 2026-11-10T12:42:46.990Z
+- **Stars:** 8512 · **Generated:** 2026-11-10T18:39:11.864Z
 - Nothing in this file has been sent anywhere.
 
 ## Skipped: upstream already tracking
@@ -24,21 +24,21 @@ CI: "mojang republish" workflow failing on main since 2026-11-10
 <!-- BEGIN BODY -->
 Hi! The **mojang republish** workflow (`.github/workflows/mojang-republish.yml`) on `main` has been failing since 2026-11-10. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/horizon-rust/horizon/actions/runs/42795074179 — dark (conclusion: `failure`), 2026-11-10 09:57 UTC
+- Latest run on `main`: https://github.com/horizon-rust/horizon/actions/runs/42869809351 — dark (conclusion: `failure`), 2026-11-10 17:55 UTC
 - Dark since: 2026-11-10 02:12 UTC (first run of the current streak)
 - Job / step: `check` → `Check the manifest`
-- Likely cause: python3: can't open file '/home/ludovic/.actions-runners/horizon-light-4/_work/horizon/horizon/tools/ci/mojang_republish.py': [Errno 2] No such file or directory
+- Likely cause: python3: can't open file '/home/ludovic/.actions-runners/horizon-light-6/_work/horizon/horizon/tools/ci/mojang_republish.py': [Errno 2] No such file or directory
 
 <details><summary>End of the job log</summary>
 
 ```
-HEAD is now at 1453e0e61 Merge pull request #13606 from martipops/controller/dial-4-editor
+HEAD is now at 1405044d0996 Merge pull request #14569 from Ragbie/fix/discord-socket-test-cfg
   origin/main
-1453e0e614af4b2d04dd0d228a94162b5d459910
+1405044d0996d37f850f5ab0dec02bab43d4945f
 Switched to a new branch 'main'
 branch 'main' set up to track 'origin/main'.
-1453e0e614af4b2d04dd0d228a94162b5d459910
-python3: can't open file '/home/ludovic/.actions-runners/horizon-light-4/_work/horizon/horizon/tools/ci/mojang_republish.py': [Errno 2] No such file or directory
+1405044d0996d37f850f5ab0dec02bab43d4945f
+python3: can't open file '/home/ludovic/.actions-runners/horizon-light-6/_work/horizon/horizon/tools/ci/mojang_republish.py': [Errno 2] No such file or directory
 ##[error]Process completed with exit code 2.
 ```
 

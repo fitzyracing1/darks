@@ -4,46 +4,22 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/headroomlabs-ai/headroom/issues/new
-- **Stars:** 79287 · **Generated:** 2026-11-10T12:42:46.990Z
+- **Stars:** 79303 · **Generated:** 2026-11-10T18:39:11.864Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 2 workflows dark on main ("tools-hash-refresh", "PR Governance")
+CI: "PR Governance" workflow getting cancelled on main since 2026-11-09
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
+Hi! The **PR Governance** workflow (`.github/workflows/pr-health.yml`) on `main` has been getting cancelled since 2026-11-09. Here is what I saw, in case it's useful:
 
-### tools-hash-refresh (`.github/workflows/tools-hash-refresh.yml`)
-
-- Latest run on `main`: https://github.com/headroomlabs-ai/headroom/actions/runs/42572893895 — dark (conclusion: `failure`), 2026-11-09 06:25 UTC
-- Dark since: 2026-11-09 06:25 UTC (first run of the current streak)
-- Job / step: `verify-pins` → `Verify tool SHA-256 pins`
-- Likely cause: urllib.error.HTTPError: HTTP Error 504: Gateway Time-out
-
-<details><summary>End of the job log</summary>
-
-```
-           ^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/urllib/request.py", line 492, in _call_chain
-    result = func(*args)
-             ^^^^^^^^^^^
-  File "/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/urllib/request.py", line 639, in http_error_default
-    raise HTTPError(req.full_url, code, msg, hdrs, fp)
-urllib.error.HTTPError: HTTP Error 504: Gateway Time-out
-##[error]Process completed with exit code 1.
-```
-
-</details>
-
-### PR Governance (`.github/workflows/pr-health.yml`)
-
-- Latest run on `main`: https://github.com/headroomlabs-ai/headroom/actions/runs/42634775392 — dark (conclusion: `cancelled`), 2026-11-09 14:26 UTC
+- Latest run on `main`: https://github.com/headroomlabs-ai/headroom/actions/runs/42834172103 — dark (conclusion: `cancelled`), 2026-11-10 14:26 UTC
 - Dark since: 2026-11-09 14:26 UTC (first run of the current streak)
 - Job / step: `label` → `Label open pull requests`
 - Likely cause: The job has exceeded the maximum execution time of 10m0s
@@ -51,13 +27,13 @@ urllib.error.HTTPError: HTTP Error 504: Gateway Time-out
 <details><summary>End of the job log</summary>
 
 ```
-https://github.com/headroomlabs-ai/headroom/pull/3639
-https://github.com/headroomlabs-ai/headroom/pull/3637
-https://github.com/headroomlabs-ai/headroom/pull/3637
-https://github.com/headroomlabs-ai/headroom/pull/3637
-https://github.com/headroomlabs-ai/headroom/pull/3610
-https://github.com/headroomlabs-ai/headroom/pull/3610
-https://github.com/headroomlabs-ai/headroom/pull/3610
+https://github.com/headroomlabs-ai/headroom/pull/3559
+https://github.com/headroomlabs-ai/headroom/pull/3559
+https://github.com/headroomlabs-ai/headroom/pull/3559
+https://github.com/headroomlabs-ai/headroom/pull/3514
+https://github.com/headroomlabs-ai/headroom/pull/3514
+https://github.com/headroomlabs-ai/headroom/pull/3514
+https://github.com/headroomlabs-ai/headroom/pull/3514
 ##[error]The operation was canceled.
 ```
 

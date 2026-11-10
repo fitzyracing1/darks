@@ -4,12 +4,11 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/google-gemini/gemini-cli/issues/new
-- **Stars:** 108754 · **Generated:** 2026-11-10T12:42:46.990Z
+- **Stars:** 108762 · **Generated:** 2026-11-10T18:39:11.864Z
 - Nothing in this file has been sent anywhere.
 
 ## Skipped: upstream already tracking
 
-- Release: Nightly (`.github/workflows/release-nightly.yml`): [issue #30215](https://github.com/google-gemini/gemini-cli/issues/30215) "Nightly Release Failed for v0.69.0-nightly.20261110.g1930f2539 on 2026-11-10"
 - Memory Tests: Nightly (`.github/workflows/memory-nightly.yml`): [issue #30084](https://github.com/google-gemini/gemini-cli/issues/30084) "CI: memory-nightly failing: 4 memory regressions over 10% (idle-session-startup +54.2%: 107.6MB vs 69.8MB)"
 
 These workflows are left out of the body below.
