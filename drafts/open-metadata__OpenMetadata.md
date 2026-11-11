@@ -4,14 +4,13 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/open-metadata/OpenMetadata/issues/new
-- **Stars:** 15736 · **Generated:** 2026-11-11T06:45:44.706Z
+- **Stars:** 15742 · **Generated:** 2026-11-11T12:41:41.842Z
 - Nothing in this file has been sent anywhere.
-- **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 6 workflows dark on main ("Merge Queue Dequeue Report", "monitor-slack-link", "Populate Playwright CI caches", +3 more)
+CI: 5 workflows dark on main ("Merge Queue Dequeue Report", "monitor-slack-link", "Populate Playwright CI caches", +2 more)
 <!-- END TITLE -->
 
 ## Body
@@ -21,7 +20,7 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### Merge Queue Dequeue Report (`.github/workflows/merge-queue-dequeue-report.yml`)
 
-- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/42973297280 — dark (conclusion: `failure`), 2026-11-11 06:33 UTC
+- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/43020003479 — dark (conclusion: `failure`), 2026-11-11 12:24 UTC
 - Dark since: 2026-11-03 21:06 UTC (first run of the current streak)
 - Job / step: `evict-main-conflicts` → `Remove queue entries that conflict with main`
 - Likely cause: cannot iterate over: null
@@ -43,7 +42,7 @@ cannot iterate over: null
 
 ### monitor-slack-link (`.github/workflows/monitor-slack-link.yml`)
 
-- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/42971404434 — dark (conclusion: `failure`), 2026-11-11 06:17 UTC
+- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/43018776715 — dark (conclusion: `failure`), 2026-11-11 12:15 UTC
 - Dark since: 2026-11-06 22:08 UTC (first run of the current streak)
 - Job / step: `monitor-slack-link` → `Set up Python 3.9`
 - Likely cause: The version '3.9' with architecture 'x64' was not found for Ubuntu 26.04.
@@ -51,12 +50,12 @@ cannot iterate over: null
 <details><summary>End of the job log</summary>
 
 ```
-Updating files:  99% (27188/27462)
-Updating files: 100% (27462/27462)
-Updating files: 100% (27462/27462), done.
+Updating files:  99% (27206/27480)
+Updating files: 100% (27480/27480)
+Updating files: 100% (27480/27480), done.
 Switched to a new branch 'main'
 branch 'main' set up to track 'origin/main'.
-8443859a584301ea299085f091d538c20125c2f2
+91e80ff84e5802dd5b307de780bf9a544c51db75
 Version 3.9 was not found in the local cache
 ##[error]The version '3.9' with architecture 'x64' was not found for Ubuntu 26.04.
 ```
@@ -65,38 +64,9 @@ Version 3.9 was not found in the local cache
 
 ### Populate Playwright CI caches (`.github/workflows/populate-playwright-caches.yml`)
 
-- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/42972411869 — dark (conclusion: `cancelled`), 2026-11-11 06:26 UTC
+- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/43020003718 — dark (conclusion: `failure`), 2026-11-11 12:24 UTC
 - Dark since: 2026-11-10 17:14 UTC (first run of the current streak)
-- Job / step: `warm-fixture / gate`
-- Likely cause: run cancelled in job "warm-fixture / gate"
-
-### security-scan (`.github/workflows/security-scan.yml`)
-
-- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/42931056543 — dark (conclusion: `failure`), 2026-11-11 00:24 UTC
-- Dark since: 2026-11-11 00:24 UTC (first run of the current streak)
-- Job / step: `security-scan` → `Install Ubuntu dependencies`
-- Likely cause: E: Package 'wkhtmltopdf' has no installation candidate
-
-<details><summary>End of the job log</summary>
-
-```
-Reading package lists...
-Building dependency tree...
-Reading state information...
-Package wkhtmltopdf is not available, but is referred to by another package.
-This may mean that the package is missing, has been obsoleted, or
-is only available from another source
-E: Package 'wkhtmltopdf' has no installation candidate
-##[error]Process completed with exit code 100.
-```
-
-</details>
-
-### Postgresql PR Playwright E2E Tests (`.github/workflows/playwright-postgresql-e2e.yml`)
-
-- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/42947131052 — dark (conclusion: `failure`), 2026-11-11 02:36 UTC
-- Dark since: 2026-11-11 02:36 UTC (first run of the current streak)
-- Job / step: `playwright / plan-playwright` → `Verify browser helper behavior`
+- Job / step: `warm-fixture / plan-playwright` → `Verify browser helper behavior`
 - Likely cause: 1 failed
 
 <details><summary>End of the job log</summary>
@@ -108,29 +78,51 @@ E: Package 'wkhtmltopdf' has no installation candidate
     ────────────────────────────────────────────────────────────────────────────────────────────────
   1 failed
     playwright/browser-tests/visualData.spec.ts:258:5 › ontology library and publication APIs use their non-entity response shapes
-  178 passed (40.2s)
+  178 passed (40.6s)
 ##[error]Process completed with exit code 1.
 ```
 
 </details>
 
-### SonarCloud UI Nightly (`.github/workflows/ui-sonarcloud-nightly.yml`)
+### Integration Tests - MySQL + Elasticsearch (`.github/workflows/integration-tests-mysql-elasticsearch.yml`)
 
-- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/42950167028 — dark (conclusion: `failure`), 2026-11-11 03:03 UTC
-- Dark since: 2026-11-11 03:03 UTC (first run of the current streak)
-- Job / step: `Coverage + Sonar` → `Retry 'SonarCloud Branch Scan'`
-- Likely cause: [ERROR] Bootstrapper: An error occurred: Error: Scanner engine failed with code 1
+- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/43008406112 — dark (conclusion: `failure`), 2026-11-11 11:01 UTC
+- Dark since: 2026-11-11 11:01 UTC (first run of the current streak)
+- Job / step: `Integration Test Lane (global-state)` → `Run Integration Tests (MySQL + Elasticsearch)`
+- Likely cause: [ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
 
 <details><summary>End of the job log</summary>
 
 ```
-Caused by: io.grpc.StatusRuntimeException: UNAVAILABLE: HTTP/2 error code: NO_ERROR
-Received Goaway
-	at io.grpc.Status.asRuntimeException(Status.java:532)
-	at io.grpc.stub.ClientCalls$BlockingResponseStream.hasNext(ClientCalls.java:731)
-	at org.sonar.plugins.javascript.bridge.BridgeServerImpl.analyzeProject(BridgeServerImpl.java:492)
-	... 20 common frames omitted
-[ERROR] Bootstrapper: An error occurred: Error: Scanner engine failed with code 1
+[ERROR] -> [Help 1]
+[ERROR]
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR]
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+##[error]Process completed with exit code 1.
+```
+
+</details>
+
+### Integration Tests - PostgreSQL + Elasticsearch + Redis (`.github/workflows/integration-tests-postgres-elasticsearch-redis.yml`)
+
+- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/43008406167 — dark (conclusion: `failure`), 2026-11-11 11:01 UTC
+- Dark since: 2026-11-11 11:01 UTC (first run of the current streak)
+- Job / step: `Integration Test Lane (parallel)` → `Run Integration Tests (PostgreSQL + Elasticsearch + Redis)`
+- Likely cause: [ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+
+<details><summary>End of the job log</summary>
+
+```
+[ERROR] -> [Help 1]
+[ERROR]
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR]
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
 ##[error]Process completed with exit code 1.
 ```
 

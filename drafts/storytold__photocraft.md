@@ -4,14 +4,14 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/storytold/photocraft/issues/new
-- **Stars:** 78564 · **Generated:** 2026-11-11T06:45:44.706Z
+- **Stars:** 78634 · **Generated:** 2026-11-11T12:41:41.842Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 3 workflows dark on main ("Perf (nightly)", "FreeBSD", "SonarCloud")
+CI: 4 workflows dark on main ("Perf (nightly)", "FreeBSD", "SonarCloud", +1 more)
 <!-- END TITLE -->
 
 ## Body
@@ -65,9 +65,31 @@ error: test failed, to rerun pass `-p photocraft-ui-egui --lib`
 
 ### SonarCloud (`.github/workflows/sonarcloud.yml`)
 
-- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/42973532320 — dark (conclusion: `cancelled`), 2026-11-11 06:35 UTC
+- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/43019578668 — dark (conclusion: `cancelled`), 2026-11-11 12:21 UTC
 - Dark since: 2026-11-10 23:50 UTC (first run of the current streak)
 - Likely cause: run cancelled
+
+### CI (`.github/workflows/ci.yml`)
+
+- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/42980261150 — dark (conclusion: `failure`), 2026-11-11 07:32 UTC
+- Dark since: 2026-11-11 07:07 UTC (first run of the current streak)
+- Job / step: `gate / gate (ubuntu-24.04)` → `Gate`
+- Likely cause: skip  panic_hunt
+
+<details><summary>End of the job log</summary>
+
+```
+  skip  panel-commands
+  skip  scorecard
+  skip  test
+  skip  panic_hunt
+  skip  doctest
+  skip  wasm
+  skip  i18n
+##[error]Process completed with exit code 1.
+```
+
+</details>
 
 If this is already known or expected, feel free to close. Thanks for maintaining photocraft!
 

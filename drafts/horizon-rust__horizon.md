@@ -4,39 +4,24 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/horizon-rust/horizon/issues/new
-- **Stars:** 8649 · **Generated:** 2026-11-11T06:45:44.706Z
+- **Stars:** 8717 · **Generated:** 2026-11-11T12:41:41.842Z
 - Nothing in this file has been sent anywhere.
+- **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: "mojang republish" workflow failing on main since 2026-11-10
+CI: "parity-main" workflow getting cancelled on main since 2026-11-11
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! The **mojang republish** workflow (`.github/workflows/mojang-republish.yml`) on `main` has been failing since 2026-11-10. Here is what I saw, in case it's useful:
+Hi! The **parity-main** workflow (`.github/workflows/parity-main.yml`) on `main` has been getting cancelled since 2026-11-11. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/horizon-rust/horizon/actions/runs/42973707318 — dark (conclusion: `failure`), 2026-11-11 06:37 UTC
-- Dark since: 2026-11-10 02:12 UTC (first run of the current streak)
-- Job / step: `check` → `Check the manifest`
-- Likely cause: python3: can't open file '/home/ludovic/.actions-runners/horizon-light-6/_work/horizon/horizon/tools/ci/mojang_republish.py': [Errno 2] No such file or directory
-
-<details><summary>End of the job log</summary>
-
-```
-HEAD is now at 04a26210e31f Merge pull request #15038 from horizon-rust/fix/main-ci-after-bulk-merge
-  origin/main
-04a26210e31fedf763175dcb05c0b0bdf2fefd21
-Switched to a new branch 'main'
-branch 'main' set up to track 'origin/main'.
-04a26210e31fedf763175dcb05c0b0bdf2fefd21
-python3: can't open file '/home/ludovic/.actions-runners/horizon-light-6/_work/horizon/horizon/tools/ci/mojang_republish.py': [Errno 2] No such file or directory
-##[error]Process completed with exit code 2.
-```
-
-</details>
+- Latest run on `main`: https://github.com/horizon-rust/horizon/actions/runs/42997050349 — dark (conclusion: `cancelled`), 2026-11-11 09:39 UTC
+- Dark since: 2026-11-11 09:39 UTC (first run of the current streak)
+- Likely cause: run cancelled
 
 If this is already known or expected, feel free to close. Thanks for maintaining horizon!
 

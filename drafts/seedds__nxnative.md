@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/seedds/nxnative/issues/new
-- **Stars:** 14610 · **Generated:** 2026-11-11T06:45:44.706Z
+- **Stars:** 14694 · **Generated:** 2026-11-11T12:41:41.842Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
@@ -21,7 +21,7 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### fuzz (`.github/workflows/fuzz.yml`)
 
-- Latest run on `main`: https://github.com/seedds/nxnative/actions/runs/42804939212 — dark (conclusion: `failure`), 2026-11-10 11:08 UTC
+- Latest run on `main`: https://github.com/seedds/nxnative/actions/runs/43007415941 — dark (conclusion: `failure`), 2026-11-11 10:53 UTC
 - Dark since: 2026-11-02 10:59 UTC (first run of the current streak)
 - Job / step: `Fuzz the file parsers` → `Run each harness`
 - Likely cause: shader_split: ==finding== cra.Error@cra.py:narc_members
@@ -32,10 +32,10 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 Traceback (most recent call last):
   File "/opt/hostedtoolcache/Python/3.14.10/x64/lib/python3.14/logging/__init__.py", line 891, in _removeHandlerRef
 TypeError: 'NoneType' object is not callable
-==2632== ERROR: libFuzzer: fuzz target exited
+==2343== ERROR: libFuzzer: fuzz target exited
 SUMMARY: libFuzzer: fuzz target exited
-MS: 5 ChangeBit-ShuffleBytes-ChangeByte-ChangeASCIIInt-CMP- DE: "NARC"-; base unit: db403ffad316bfdb99ef5a608013985ae2cc2a7a
-artifact_prefix='findings/shader_split/'; Test unit written to findings/shader_split/crash-9c3c563257f62c241a111a89260dda777d9a8199
+MS: 3 ChangeBit-ShuffleBytes-CMP- DE: "NARC"-; base unit: 61765518dffbce681bc2614f0e6eef7276e53e26
+artifact_prefix='findings/shader_split/'; Test unit written to findings/shader_split/crash-6031ffad53218a46e838b253f9fedda437d937f7
 ##[error]shader_split: ==finding== cra.Error@cra.py:narc_members
 ```
 
@@ -43,19 +43,19 @@ artifact_prefix='findings/shader_split/'; Test unit written to findings/shader_s
 
 ### lint-c (`.github/workflows/lint-c.yml`)
 
-- Latest run on `main`: https://github.com/seedds/nxnative/actions/runs/42970470785 — dark (conclusion: `cancelled`), 2026-11-11 06:09 UTC
+- Latest run on `main`: https://github.com/seedds/nxnative/actions/runs/43013823065 — dark (conclusion: `cancelled`), 2026-11-11 11:40 UTC
 - Dark since: 2026-11-05 11:55 UTC (first run of the current streak)
 - Likely cause: run cancelled
 
 ### tests (`.github/workflows/tests.yml`)
 
-- Latest run on `main`: https://github.com/seedds/nxnative/actions/runs/42970470869 — dark (conclusion: `cancelled`), 2026-11-11 06:09 UTC
+- Latest run on `main`: https://github.com/seedds/nxnative/actions/runs/43013823082 — dark (conclusion: `cancelled`), 2026-11-11 11:40 UTC
 - Dark since: 2026-11-06 01:42 UTC (first run of the current streak)
 - Likely cause: run cancelled
 
 ### lint-python (`.github/workflows/lint-python.yml`)
 
-- Latest run on `main`: https://github.com/seedds/nxnative/actions/runs/42970008208 — dark (conclusion: `failure`), 2026-11-11 06:05 UTC
+- Latest run on `main`: https://github.com/seedds/nxnative/actions/runs/43020887937 — dark (conclusion: `failure`), 2026-11-11 12:30 UTC
 - Dark since: 2026-11-10 13:51 UTC (first run of the current streak)
 - Job / step: `ruff and pyright (ratchet)` → `ruff and pyright against the baseline`
 - Likely cause: 'dmsh_fetch' imported but unused (dm/gfx/tools/dmsh_entry.py:7)

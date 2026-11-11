@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/NousResearch/hermes-agent/issues/new
-- **Stars:** 262527 · **Generated:** 2026-11-11T06:45:44.706Z
+- **Stars:** 262608 · **Generated:** 2026-11-11T12:41:41.842Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
@@ -19,7 +19,7 @@ CI: "Docker Build, Test, and Publish" workflow getting cancelled on main since 2
 <!-- BEGIN BODY -->
 Hi! The **Docker Build, Test, and Publish** workflow (`.github/workflows/docker.yml`) on `main` has been getting cancelled since 2026-11-08. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/NousResearch/hermes-agent/actions/runs/42972724684 — dark (conclusion: `cancelled`), 2026-11-11 06:28 UTC
+- Latest run on `main`: https://github.com/NousResearch/hermes-agent/actions/runs/43013551810 — dark (conclusion: `cancelled`), 2026-11-11 11:38 UTC
 - Dark since: 2026-11-08 17:58 UTC (first run of the current streak)
 - Likely cause: run cancelled
 

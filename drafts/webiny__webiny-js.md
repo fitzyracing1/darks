@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/webiny/webiny-js/issues/new
-- **Stars:** 8051 · **Generated:** 2026-11-11T06:45:44.706Z
+- **Stars:** 8052 · **Generated:** 2026-11-11T12:41:41.842Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -86,25 +86,9 @@ error: Rspack build failed.
 
 ### Push (`.github/workflows/push.yml`)
 
-- Latest run on `next`: https://github.com/webiny/webiny-js/actions/runs/42852349027 — dark (conclusion: `failure`), 2026-11-10 16:13 UTC
+- Latest run on `next`: https://github.com/webiny/webiny-js/actions/runs/43015055752 — dark (conclusion: `failure`), 2026-11-11 11:49 UTC
 - Dark since: 2026-11-10 11:42 UTC (first run of the current streak)
-- Job / step: `[DDB-OS,DDB] api-audit-logs` → `Install dependencies`
-- Likely cause: ➤ YN0000: · Failed with errors in 37s 273ms
-
-<details><summary>End of the job log</summary>
-
-```
-gyp ERR! node -v v24.22.2
-gyp ERR! node-gyp -v v13.1.0
-gyp ERR! $npm_package_name better-sqlite3
-gyp ERR! $npm_package_version 13.0.3
-gyp ERR! not ok
-➤ YN0000: └ Completed in 35s 218ms
-➤ YN0000: · Failed with errors in 37s 273ms
-##[error]Process completed with exit code 1.
-```
-
-</details>
+- Likely cause: no cause found in annotations
 
 If this is already known or expected, feel free to close. Thanks for maintaining webiny-js!
 

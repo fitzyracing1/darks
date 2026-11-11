@@ -4,39 +4,49 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/storytold/effectcraft/issues/new
-- **Stars:** 8634 · **Generated:** 2026-11-11T06:45:44.706Z
+- **Stars:** 8641 · **Generated:** 2026-11-11T12:41:41.842Z
 - Nothing in this file has been sent anywhere.
+- **Note for Joshua:** cancelled by a concurrency group — likely noise
+- **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: "CI (macOS)" workflow failing on main since 2026-11-10
+CI: 2 workflows dark on main ("CI (macOS)", "SonarCloud")
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! The **CI (macOS)** workflow (`.github/workflows/ci-macos.yml`) on `main` has been failing since 2026-11-10. Here is what I saw, in case it's useful:
+Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
 
-- Latest run on `main`: https://github.com/storytold/effectcraft/actions/runs/42964024852 — dark (conclusion: `failure`), 2026-11-11 05:10 UTC
+### CI (macOS) (`.github/workflows/ci-macos.yml`)
+
+- Latest run on `main`: https://github.com/storytold/effectcraft/actions/runs/43018270816 — dark (conclusion: `cancelled`), 2026-11-11 12:12 UTC
 - Dark since: 2026-11-10 22:55 UTC (first run of the current streak)
 - Job / step: `gate / gate (macos-15)` → `Gate`
-- Likely cause: ci failed: tests
+- Likely cause: Canceling since a higher priority waiting request for ci-macos-refs/heads/main exists
 
 <details><summary>End of the job log</summary>
 
 ```
-   = note: `State` has a derived impl for the trait `Clone`, but this is intentionally ignored during dead code analysis
-   = note: `#[warn(dead_code)]` (part of `#[warn(unused)]`) on by default
-warning: `effectcraft-ui-egui` (lib) generated 2 warnings (run `cargo fix --lib -p effectcraft-ui-egui` to apply 1 suggestion)
-    Checking effectcraft-web v0.23.1 (/Users/runner/work/effectcraft/effectcraft/apps/effectcraft-web)
-    Finished `dev` profile [optimized + debuginfo] target(s) in 36.57s
-wasm: ok (35 crates)
-ci failed: tests
-##[error]Process completed with exit code 1.
+   Compiling sysinfo v0.37.2
+   Compiling rfd v0.17.2
+   Compiling fmv-macos-events v0.1.0
+   Compiling egui_kittest v0.37.0 (https://github.com/storytold/egui.git?rev=6d518fc799681571963842f95b55a6b68431b15a#6d518fc7)
+   Compiling effectcraft-web v0.23.1 (/Users/runner/work/effectcraft/effectcraft/apps/effectcraft-web)
+   Compiling xtask v0.23.1 (/Users/runner/work/effectcraft/effectcraft/xtask)
+   Compiling effectcraft-cli v0.23.1 (/Users/runner/work/effectcraft/effectcraft/apps/effectcraft-cli)
+##[error]The operation was canceled.
 ```
 
 </details>
+
+### SonarCloud (`.github/workflows/sonarcloud.yml`)
+
+- Latest run on `main`: https://github.com/storytold/effectcraft/actions/runs/43018270646 — dark (conclusion: `cancelled`), 2026-11-11 12:12 UTC
+- Dark since: 2026-11-11 11:45 UTC (first run of the current streak)
+- Likely cause: run cancelled
 
 If this is already known or expected, feel free to close. Thanks for maintaining effectcraft!
 

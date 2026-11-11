@@ -4,29 +4,19 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/firecrawl/firecrawl/issues/new
-- **Stars:** 200637 · **Generated:** 2026-11-11T06:45:44.706Z
+- **Stars:** 200738 · **Generated:** 2026-11-11T12:41:41.842Z
 - Nothing in this file has been sent anywhere.
-- **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 2 workflows dark on main ("Publish JS SDK", "Deploy Images to GHCR")
+CI: "Deploy Images to GHCR" workflow failing on main since 2026-11-11
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
-
-### Publish JS SDK (`.github/workflows/publish-js-sdk.yml`)
-
-- Latest run on `main`: https://github.com/firecrawl/firecrawl/actions/runs/42295179005 — dark (conclusion: `cancelled`), 2026-11-06 21:15 UTC
-- Dark since: 2026-11-06 21:15 UTC (first run of the current streak)
-- Job / step: `Publish`
-- Likely cause: run cancelled in job "Publish"
-
-### Deploy Images to GHCR (`.github/workflows/deploy-image.yml`)
+Hi! The **Deploy Images to GHCR** workflow (`.github/workflows/deploy-image.yml`) on `main` has been failing since 2026-11-11. Here is what I saw, in case it's useful:
 
 - Latest run on `main`: https://github.com/firecrawl/firecrawl/actions/runs/42952188142 — dark (conclusion: `failure`), 2026-11-11 03:21 UTC
 - Dark since: 2026-11-11 03:21 UTC (first run of the current streak)
