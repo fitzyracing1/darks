@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/storytold/effectcraft/issues/new
-- **Stars:** 8629 · **Generated:** 2026-11-11T00:55:00.458Z
+- **Stars:** 8634 · **Generated:** 2026-11-11T06:45:44.706Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -18,7 +18,7 @@ CI: "CI (macOS)" workflow failing on main since 2026-11-10
 <!-- BEGIN BODY -->
 Hi! The **CI (macOS)** workflow (`.github/workflows/ci-macos.yml`) on `main` has been failing since 2026-11-10. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/storytold/effectcraft/actions/runs/42928458729 — dark (conclusion: `failure`), 2026-11-11 00:04 UTC
+- Latest run on `main`: https://github.com/storytold/effectcraft/actions/runs/42964024852 — dark (conclusion: `failure`), 2026-11-11 05:10 UTC
 - Dark since: 2026-11-10 22:55 UTC (first run of the current streak)
 - Job / step: `gate / gate (macos-15)` → `Gate`
 - Likely cause: ci failed: tests
@@ -30,7 +30,7 @@ Hi! The **CI (macOS)** workflow (`.github/workflows/ci-macos.yml`) on `main` has
    = note: `#[warn(dead_code)]` (part of `#[warn(unused)]`) on by default
 warning: `effectcraft-ui-egui` (lib) generated 2 warnings (run `cargo fix --lib -p effectcraft-ui-egui` to apply 1 suggestion)
     Checking effectcraft-web v0.23.1 (/Users/runner/work/effectcraft/effectcraft/apps/effectcraft-web)
-    Finished `dev` profile [optimized + debuginfo] target(s) in 33.22s
+    Finished `dev` profile [optimized + debuginfo] target(s) in 36.57s
 wasm: ok (35 crates)
 ci failed: tests
 ##[error]Process completed with exit code 1.

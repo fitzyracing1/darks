@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/mksglu/context-mode/issues/new
-- **Stars:** 33817 · **Generated:** 2026-11-11T00:55:00.458Z
+- **Stars:** 33835 · **Generated:** 2026-11-11T06:45:44.706Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -20,7 +20,7 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### readme-stats (`.github/workflows/readme-stats.yml`)
 
-- Latest run on `main`: https://github.com/mksglu/context-mode/actions/runs/42749081256 — dark (conclusion: `failure`), 2026-11-10 03:23 UTC
+- Latest run on `main`: https://github.com/mksglu/context-mode/actions/runs/42952460197 — dark (conclusion: `failure`), 2026-11-11 03:23 UTC
 - Dark since: 2026-11-05 03:23 UTC (first run of the current streak)
 - Job / step: `readme-stats` → `commit only if a file changed`
 - Likely cause: error: failed to push some refs to 'https://github.com/mksglu/context-mode'

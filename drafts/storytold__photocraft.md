@@ -4,14 +4,14 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/storytold/photocraft/issues/new
-- **Stars:** 78505 · **Generated:** 2026-11-11T00:55:00.458Z
+- **Stars:** 78564 · **Generated:** 2026-11-11T06:45:44.706Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 4 workflows dark on main ("Perf (nightly)", "FreeBSD", "SonarCloud", +1 more)
+CI: 3 workflows dark on main ("Perf (nightly)", "FreeBSD", "SonarCloud")
 <!-- END TITLE -->
 
 ## Body
@@ -21,10 +21,10 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### Perf (nightly) (`.github/workflows/perf-nightly.yml`)
 
-- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/42749578800 — dark (conclusion: `failure`), 2026-11-10 03:27 UTC
+- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/42952965150 — dark (conclusion: `failure`), 2026-11-11 03:28 UTC
 - Dark since: 2026-11-02 03:29 UTC (first run of the current streak)
 - Job / step: `perf (macOS, Apple GPU)` → `Run benchmarks`
-- Likely cause: | P44 | Open .psd, 36 MP, 3 layers | track only | – | – | – | – | – | – | **missing**: bench 'interactive_bench' failed: interactive_bench --reps 5 --json /Users/runner/work/photocraft/photocraft/target/perf/interactive…
+- Likely cause: P44 Open .psd, 36 MP, 3 layers: **missing**: bench 'interactive_bench' failed: interactive_bench --reps 5 --json /Users/runner/work/photocraft/photocraft/target/perf/interactive_bench.json: exited with exit status: 101
 
 <details><summary>End of the job log</summary>
 
@@ -43,21 +43,21 @@ wrote /Users/runner/work/photocraft/photocraft/target/perf/results.json
 
 ### FreeBSD (`.github/workflows/freebsd.yml`)
 
-- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/42742638249 — dark (conclusion: `failure`), 2026-11-10 02:25 UTC
+- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/42945698932 — dark (conclusion: `failure`), 2026-11-11 02:23 UTC
 - Dark since: 2026-11-09 02:25 UTC (first run of the current streak)
 - Job / step: `freebsd / FreeBSD 15 x86_64 (build + test)` → `Build and test`
-- Likely cause: error: test failed, to rerun pass '-p photocraft-engine --lib'
+- Likely cause: error: test failed, to rerun pass '-p photocraft-ui-egui --lib'
 
 <details><summary>End of the job log</summary>
 
 ```
-  left: [[105.5, 15.5]]
- right: [[105.0, 15.0]]
+thread 'canvas::background_redraw::tests::a_redraw_across_a_text_gamma_change_and_back_is_not_kept' (998937) panicked at crates/ui-egui/src/canvas/background_redraw/tests.rs:352:5:
+the redraw finished before the change back
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
 failures:
-    cmd::artboard_cmds::tests::a_board_past_the_origin_moves_the_color_samplers_and_symmetry_with_the_document
-    cmd::artboard_cmds::tests::duplicating_a_board_beside_one_past_the_origin_moves_the_color_samplers_with_the_document
-test result: FAILED. 3366 passed; 2 failed; 15 ignored; 0 measured; 0 filtered out; finished in 123.98s
-error: test failed, to rerun pass `-p photocraft-engine --lib`
+    canvas::background_redraw::tests::a_redraw_across_a_text_gamma_change_and_back_is_not_kept
+test result: FAILED. 6561 passed; 1 failed; 24 ignored; 0 measured; 0 filtered out; finished in 279.16s
+error: test failed, to rerun pass `-p photocraft-ui-egui --lib`
 ##[error]Process completed with exit code 101.
 ```
 
@@ -65,31 +65,9 @@ error: test failed, to rerun pass `-p photocraft-engine --lib`
 
 ### SonarCloud (`.github/workflows/sonarcloud.yml`)
 
-- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/42931462258 — dark (conclusion: `cancelled`), 2026-11-11 00:27 UTC
+- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/42973532320 — dark (conclusion: `cancelled`), 2026-11-11 06:35 UTC
 - Dark since: 2026-11-10 23:50 UTC (first run of the current streak)
 - Likely cause: run cancelled
-
-### CI (`.github/workflows/ci.yml`)
-
-- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/42928960456 — dark (conclusion: `failure`), 2026-11-11 00:08 UTC
-- Dark since: 2026-11-10 23:51 UTC (first run of the current streak)
-- Job / step: `gate / gate (ubuntu-24.04)` → `Gate`
-- Likely cause: skip  panic_hunt
-
-<details><summary>End of the job log</summary>
-
-```
-  skip  panel-commands
-  skip  scorecard
-  skip  test
-  skip  panic_hunt
-  skip  doctest
-  skip  wasm
-  skip  i18n
-##[error]Process completed with exit code 1.
-```
-
-</details>
 
 If this is already known or expected, feel free to close. Thanks for maintaining photocraft!
 

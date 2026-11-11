@@ -1,8 +1,8 @@
 <!-- dark-draft: storytold/cadcraft -->
-<!-- draft-state: duplicate -->
+<!-- draft-state: resolved -->
 # Upstream issue draft: storytold/cadcraft
 
-- **Status:** not for filing — upstream already has an open issue/PR about every dark workflow here
+- **Status:** resolved — lit again (2026-11-11); nothing to file
 - **Would be filed at:** https://github.com/storytold/cadcraft/issues/new
 - **Stars:** 7911 · **Generated:** 2026-11-11T00:55:00.458Z
 - Nothing in this file has been sent anywhere.
