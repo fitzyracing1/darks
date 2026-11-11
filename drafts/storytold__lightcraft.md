@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/storytold/lightcraft/issues/new
-- **Stars:** 15808 · **Generated:** 2026-11-10T18:39:11.864Z
+- **Stars:** 15821 · **Generated:** 2026-11-11T00:55:00.458Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
@@ -43,10 +43,9 @@ Caused by:
 
 ### SonarCloud (`.github/workflows/sonarcloud.yml`)
 
-- Latest run on `main`: https://github.com/storytold/lightcraft/actions/runs/42860485301 — dark (conclusion: `failure`), 2026-11-10 17:00 UTC
+- Latest run on `main`: https://github.com/storytold/lightcraft/actions/runs/42920612181 — dark (conclusion: `cancelled`), 2026-11-10 23:07 UTC
 - Dark since: 2026-11-10 17:00 UTC (first run of the current streak)
-- Job / step: `sonarcloud / Tests 8/8`
-- Likely cause: The hosted runner lost communication with the server. Anything in your workflow that terminates the runner process, starves it for CPU/Memory, or blocks its network access can cause this error.
+- Likely cause: run cancelled
 
 If this is already known or expected, feel free to close. Thanks for maintaining lightcraft!
 

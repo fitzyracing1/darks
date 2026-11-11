@@ -4,9 +4,15 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/headroomlabs-ai/headroom/issues/new
-- **Stars:** 79303 · **Generated:** 2026-11-10T18:39:11.864Z
+- **Stars:** 79318 · **Generated:** 2026-11-11T00:55:00.458Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
+
+## Skipped: upstream already tracking
+
+- Security (`.github/workflows/security.yml`): [issue #4433](https://github.com/headroomlabs-ai/headroom/issues/4433) "BUG security-model.mdx says an unsafe x-headroom-base-url override is "ignored", but the proxy routes answer 400", [issue #4761](https://github.com/headroomlabs-ai/headroom/issues/4761) "CI: npm audit (plugins/opencode) fails on effect GHSA-chp3-j5qr-2vfr"
+
+These workflows are left out of the body below.
 
 ## Suggested title
 

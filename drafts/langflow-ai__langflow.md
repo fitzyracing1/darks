@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/langflow-ai/langflow/issues/new
-- **Stars:** 156509 · **Generated:** 2026-11-10T18:39:11.864Z
+- **Stars:** 156515 · **Generated:** 2026-11-11T00:55:00.458Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -20,10 +20,10 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### Deploy Storybook to GitHub Pages (`.github/workflows/deploy-storybook.yml`)
 
-- Latest run on `main`: https://github.com/langflow-ai/langflow/actions/runs/41784028310 — dark (conclusion: `failure`), 2026-11-04 06:12 UTC
+- Latest run on `main`: https://github.com/langflow-ai/langflow/actions/runs/42892406169 — dark (conclusion: `failure`), 2026-11-10 20:09 UTC
 - Dark since: 2026-09-16 01:11 UTC (first run of the current streak)
 - Job / step: `Deploy Storybook` → `Deploy to GitHub Pages`
-- Likely cause: Error: Failed to create deployment (status: 400) with build version 60999cc9a7350e44dde3ef641baae864e10861f0. Request ID 103A:7278:161008:2636BA:6AEACD99 Responded with: Missing environment. Ensure your workflow's deployment job has an envi
+- Likely cause: Error: Failed to create deployment (status: 400) with build version 5abad254f9cd8589e1f95b57e207dfb7840b5d61. Request ID 4889:114872:B7835:13E48A:6AF37A6E Responded with: Missing environment. Ensure your workflow's deployment job has an env
 
 <details><summary>End of the job log</summary>
 
@@ -31,8 +31,8 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 Found 1 artifact(s)
 Creating Pages deployment with payload:
 {
-	"artifact_id": 13301065204,
-	"pages_build_version": "60999cc9a7350e44dde3ef641baae864e10861f0",
+	"artifact_id": 13797624935,
+	"pages_build_version": "5abad254f9cd8589e1f95b57e207dfb7840b5d61",
 	"oidc_token": "***"
 }
 ##[error]Creating Pages deployment failed
@@ -50,7 +50,7 @@ Creating Pages deployment with payload:
 
 - Latest run on `main`: https://github.com/langflow-ai/langflow/actions/runs/42727628649 — dark (conclusion: `failure`), 2026-11-10 00:21 UTC
 - Dark since: 2026-11-10 00:21 UTC (first run of the current streak)
-- Likely cause: cause not readable (Cannot read properties of null (reading 'jobs'))
+- Likely cause: cause not readable (GET /repos/langflow-ai/langflow/actions/runs/42727628649/jobs?filter=latest&per_)
 
 If this is already known or expected, feel free to close. Thanks for maintaining langflow!
 

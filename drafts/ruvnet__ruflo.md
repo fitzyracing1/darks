@@ -4,24 +4,39 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/ruvnet/ruflo/issues/new
-- **Stars:** 81420 · **Generated:** 2026-11-10T18:39:11.864Z
+- **Stars:** 81436 · **Generated:** 2026-11-11T00:55:00.458Z
 - Nothing in this file has been sent anywhere.
-- **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: "CVE Audit Gate" workflow getting cancelled on main since 2026-11-10
+CI: "metaharness-ci" workflow failing on main since 2026-11-10
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! The **CVE Audit Gate** workflow (`.github/workflows/cve-audit.yml`) on `main` has been getting cancelled since 2026-11-10. Here is what I saw, in case it's useful:
+Hi! The **metaharness-ci** workflow (`.github/workflows/metaharness-ci.yml`) on `main` has been failing since 2026-11-10. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/ruvnet/ruflo/actions/runs/42871116925 — dark (conclusion: `cancelled`), 2026-11-10 18:02 UTC
-- Dark since: 2026-11-10 18:02 UTC (first run of the current streak)
-- Likely cause: run cancelled
+- Latest run on `main`: https://github.com/ruvnet/ruflo/actions/runs/42913003390 — dark (conclusion: `failure`), 2026-11-10 22:16 UTC
+- Dark since: 2026-11-10 22:14 UTC (first run of the current streak)
+- Job / step: `clean-install` → `Pin declaration contract (fails on undeclared / peer-only / stale)`
+- Likely cause: bump MH_DARWIN_PIN if darwin moved, and the *_PIN_VERSION constants in plugins/ruflo-metaharness/scripts/), then re-run.
+
+<details><summary>End of the job log</summary>
+
+```
+| MH_DARWIN_PIN (distill-oracle.ts) | =0.13.0 (vs ~0.13.0) | — | — | in-range |
+| METAHARNESS_PIN_VERSION (plugins/ruflo-metaharness/scripts/_harness.mjs) | ~0.4.20 (vs ^0.4.20) | plugin | — | covers |
+| DARWIN_PIN_VERSION (plugins/ruflo-metaharness/scripts/_darwin.mjs) | ~0.13.0 (vs ~0.13.0) | plugin | — | covers |
+| REDBLUE_PIN_VERSION (plugins/ruflo-metaharness/scripts/_redblue.mjs) | ~0.1.4 | plugin | 0.1.7 | current |
+⚠ **Pin drift detected.** A metaharness pin is stale, undeclared, declared peer-only, or a plugin helper pin no longer covers it (or is not a `~X.Y.Z` range).
+Fix the declaration in v3/@claude-flow/cli/package.json (installable pins belong in optionalDependencies;
+bump MH_DARWIN_PIN if darwin moved, and the *_PIN_VERSION constants in plugins/ruflo-metaharness/scripts/), then re-run.
+##[error]Process completed with exit code 1.
+```
+
+</details>
 
 If this is already known or expected, feel free to close. Thanks for maintaining ruflo!
 

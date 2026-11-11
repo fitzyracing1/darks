@@ -4,42 +4,67 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/horizon-rust/horizon/issues/new
-- **Stars:** 8512 · **Generated:** 2026-11-10T18:39:11.864Z
+- **Stars:** 8599 · **Generated:** 2026-11-11T00:55:00.458Z
 - Nothing in this file has been sent anywhere.
-
-## Skipped: upstream already tracking
-
-- launcher (`.github/workflows/launcher.yml`): [issue #14565](https://github.com/horizon-rust/horizon/issues/14565) "Launcher: uninstall's "Also delete the launcher's data" deletes nothing after the data folder was moved", [issue #14286](https://github.com/horizon-rust/horizon/issues/14286) "Launcher stuck with error: Minecraft 26.3 was not found", [issue #13855](https://github.com/horizon-rust/horizon/issues/13855) "Launcher: discuss a per-character skin library and contribution plan", [issue #4537](https://github.com/horizon-rust/horizon/issues/4537) "Launcher is not readable by screen readers. Accesibility issue", [issue #14789](https://github.com/horizon-rust/horizon/issues/14789) "Launcher: hidden_processes test does not compile on Windows (horizon_prepare path)"
-
-These workflows are left out of the body below.
+- **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: "mojang republish" workflow failing on main since 2026-11-10
+CI: 3 workflows dark on main ("mojang republish", "parity-main", "checks")
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! The **mojang republish** workflow (`.github/workflows/mojang-republish.yml`) on `main` has been failing since 2026-11-10. Here is what I saw, in case it's useful:
+Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
 
-- Latest run on `main`: https://github.com/horizon-rust/horizon/actions/runs/42869809351 — dark (conclusion: `failure`), 2026-11-10 17:55 UTC
+### mojang republish (`.github/workflows/mojang-republish.yml`)
+
+- Latest run on `main`: https://github.com/horizon-rust/horizon/actions/runs/42923573213 — dark (conclusion: `failure`), 2026-11-10 23:27 UTC
 - Dark since: 2026-11-10 02:12 UTC (first run of the current streak)
 - Job / step: `check` → `Check the manifest`
-- Likely cause: python3: can't open file '/home/ludovic/.actions-runners/horizon-light-6/_work/horizon/horizon/tools/ci/mojang_republish.py': [Errno 2] No such file or directory
+- Likely cause: python3: can't open file '/home/ludovic/.actions-runners/horizon-light-5/_work/horizon/horizon/tools/ci/mojang_republish.py': [Errno 2] No such file or directory
 
 <details><summary>End of the job log</summary>
 
 ```
-HEAD is now at 1405044d0996 Merge pull request #14569 from Ragbie/fix/discord-socket-test-cfg
-  origin/main
-1405044d0996d37f850f5ab0dec02bab43d4945f
+If you want to keep them by creating a new branch, this may be a good time
+to do so with:
+ git branch <new-branch-name> 214469a4bf5e
 Switched to a new branch 'main'
 branch 'main' set up to track 'origin/main'.
-1405044d0996d37f850f5ab0dec02bab43d4945f
-python3: can't open file '/home/ludovic/.actions-runners/horizon-light-6/_work/horizon/horizon/tools/ci/mojang_republish.py': [Errno 2] No such file or directory
+1b27a37702116f54150048008d8b466021307e53
+python3: can't open file '/home/ludovic/.actions-runners/horizon-light-5/_work/horizon/horizon/tools/ci/mojang_republish.py': [Errno 2] No such file or directory
 ##[error]Process completed with exit code 2.
+```
+
+</details>
+
+### parity-main (`.github/workflows/parity-main.yml`)
+
+- Latest run on `main`: https://github.com/horizon-rust/horizon/actions/runs/42924065914 — dark (conclusion: `cancelled`), 2026-11-10 23:31 UTC
+- Dark since: 2026-11-10 23:20 UTC (first run of the current streak)
+- Likely cause: run cancelled
+
+### checks (`.github/workflows/ci.yml`)
+
+- Latest run on `main`: https://github.com/horizon-rust/horizon/actions/runs/42924076122 — dark (conclusion: `failure`), 2026-11-10 23:31 UTC
+- Dark since: 2026-11-10 23:25 UTC (first run of the current streak)
+- Job / step: `verify` → `Check formatting and lint`
+- Likely cause: error: could not compile 'horizon-client-lib' (lib test) due to 1 previous error
+
+<details><summary>End of the job log</summary>
+
+```
+164 -                 own.insert(key.clone(), (name, path));
+164 +                 own.insert(/* usize */, key.clone());
+    |
+For more information about this error, try `rustc --explain E0308`.
+error: could not compile `horizon-client-lib` (lib) due to 1 previous error
+warning: build failed, waiting for other jobs to finish...
+error: could not compile `horizon-client-lib` (lib test) due to 1 previous error
+##[error]Process completed with exit code 101.
 ```
 
 </details>

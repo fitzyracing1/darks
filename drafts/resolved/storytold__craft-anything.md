@@ -1,8 +1,8 @@
 <!-- dark-draft: storytold/craft-anything -->
-<!-- draft-state: ready -->
+<!-- draft-state: resolved -->
 # Upstream issue draft: storytold/craft-anything
 
-- **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
+- **Status:** resolved — lit again (2026-11-11); nothing to file
 - **Would be filed at:** https://github.com/storytold/craft-anything/issues/new
 - **Stars:** 25928 · **Generated:** 2026-11-10T18:39:11.864Z
 - Nothing in this file has been sent anywhere.

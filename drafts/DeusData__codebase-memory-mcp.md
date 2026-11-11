@@ -4,20 +4,22 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/DeusData/codebase-memory-mcp/issues/new
-- **Stars:** 48458 · **Generated:** 2026-11-10T18:39:11.864Z
+- **Stars:** 48458 · **Generated:** 2026-11-11T00:55:00.458Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: "Nightly Soak" workflow getting cancelled on main since 2026-11-01
+CI: 2 workflows dark on main ("Nightly Soak", "test-impact-artifact")
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! The **Nightly Soak** workflow (`.github/workflows/nightly-soak.yml`) on `main` has been getting cancelled since 2026-11-01. Here is what I saw, in case it's useful:
+Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
+
+### Nightly Soak (`.github/workflows/nightly-soak.yml`)
 
 - Latest run on `main`: https://github.com/DeusData/codebase-memory-mcp/actions/runs/42436967517 — dark (conclusion: `cancelled`), 2026-11-08 02:04 UTC
 - Dark since: 2026-11-01 02:04 UTC (first run of the current streak)
@@ -38,6 +40,12 @@ Total queries: 13704
 ```
 
 </details>
+
+### test-impact-artifact (`.github/workflows/test-impact-artifact.yml`)
+
+- Latest run on `main`: https://github.com/DeusData/codebase-memory-mcp/actions/runs/42923399150 — dark (conclusion: `cancelled`), 2026-11-10 23:26 UTC
+- Dark since: 2026-11-10 23:26 UTC (first run of the current streak)
+- Likely cause: run cancelled
 
 If this is already known or expected, feel free to close. Thanks for maintaining codebase-memory-mcp!
 

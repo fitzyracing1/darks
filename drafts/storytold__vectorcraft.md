@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/storytold/vectorcraft/issues/new
-- **Stars:** 11593 · **Generated:** 2026-11-10T18:39:11.864Z
+- **Stars:** 11602 · **Generated:** 2026-11-11T00:55:00.458Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** cancelled by a concurrency group — likely noise
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
@@ -44,7 +44,7 @@ error: test failed, to rerun pass `-p vectorcraft-ui-egui --lib`
 
 ### Affinity 3 corpus (`.github/workflows/affinity-corpus.yml`)
 
-- Latest run on `main`: https://github.com/storytold/vectorcraft/actions/runs/42873716606 — dark (conclusion: `cancelled`), 2026-11-10 18:17 UTC
+- Latest run on `main`: https://github.com/storytold/vectorcraft/actions/runs/42932524246 — dark (conclusion: `cancelled`), 2026-11-11 00:35 UTC
 - Dark since: 2026-11-10 18:11 UTC (first run of the current streak)
 - Job / step: `affinity3` → `Check every artboard, native save, SVG, PDF and PSD exports`
 - Likely cause: Canceling since a higher priority waiting request for affinity-corpus-refs/heads/main exists
@@ -52,13 +52,13 @@ error: test failed, to rerun pass `-p vectorcraft-ui-egui --lib`
 <details><summary>End of the job log</summary>
 
 ```
-   Compiling spin v0.9.9
-   Compiling alloc-no-stdlib v2.0.4
    Compiling vectorcraft-text v0.21.0 (/home/runner/work/vectorcraft/vectorcraft/crates/text)
-   Compiling imagesize v0.15.0
+   Compiling pico-args v0.5.0
    Compiling wasmi_collections v2.0.0
+   Compiling imagesize v0.15.0
+   Compiling data-url v0.3.2
+   Compiling spin v0.9.9
    Compiling usvg v0.48.1
-   Compiling harfrust v0.13.3
 ##[error]The operation was canceled.
 ```
 
@@ -66,7 +66,7 @@ error: test failed, to rerun pass `-p vectorcraft-ui-egui --lib`
 
 ### SonarCloud (`.github/workflows/sonarcloud.yml`)
 
-- Latest run on `main`: https://github.com/storytold/vectorcraft/actions/runs/42873716944 — dark (conclusion: `cancelled`), 2026-11-10 18:17 UTC
+- Latest run on `main`: https://github.com/storytold/vectorcraft/actions/runs/42932525006 — dark (conclusion: `cancelled`), 2026-11-11 00:35 UTC
 - Dark since: 2026-11-10 18:11 UTC (first run of the current streak)
 - Likely cause: run cancelled
 

@@ -1,8 +1,8 @@
 <!-- dark-draft: google-gemini/gemini-cli -->
-<!-- draft-state: ready -->
+<!-- draft-state: resolved -->
 # Upstream issue draft: google-gemini/gemini-cli
 
-- **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
+- **Status:** resolved — lit again (2026-11-11); nothing to file
 - **Would be filed at:** https://github.com/google-gemini/gemini-cli/issues/new
 - **Stars:** 108762 · **Generated:** 2026-11-10T18:39:11.864Z
 - Nothing in this file has been sent anywhere.
