@@ -4,9 +4,8 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/langchain-ai/langchain/issues/new
-- **Stars:** 149347 · **Generated:** 2026-11-11T12:41:41.842Z
+- **Stars:** 149362 · **Generated:** 2026-11-11T18:38:34.380Z
 - Nothing in this file has been sent anywhere.
-- **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
@@ -19,22 +18,22 @@ CI: "⏰ Integration Tests" workflow failing on master since 2026-10-09
 <!-- BEGIN BODY -->
 Hi! The **⏰ Integration Tests** workflow (`.github/workflows/integration_tests.yml`) on `master` has been failing since 2026-10-09. Here is what I saw, in case it's useful:
 
-- Latest run on `master`: https://github.com/langchain-ai/langchain/actions/runs/42821180525 — dark (conclusion: `failure`), 2026-11-10 13:04 UTC
+- Latest run on `master`: https://github.com/langchain-ai/langchain/actions/runs/43025829545 — dark (conclusion: `failure`), 2026-11-11 13:04 UTC
 - Dark since: 2026-10-09 13:10 UTC (first run of the current streak)
-- Job / step: `🐍 Python 3.14: libs/partners/google-genai` → `🚀 Run Integration Tests`
-- Likely cause: The job has exceeded the maximum execution time of 30m0s
+- Job / step: `🐍 Python 3.14: libs/partners/mistralai` → `🚀 Run Integration Tests`
+- Likely cause: = 2 failed, 56 passed, 11 skipped, 1 xpassed, 4 warnings, 2 retried in 204.47s (0:03:24) =
 
 <details><summary>End of the job log</summary>
 
 ```
-plugins: syrupy-5.4.0, retry-1.7.0, codspeed-4.3.0, mock-3.16.0, socket-0.8.1, langsmith-0.14.17, benchmark-5.2.3, recording-0.13.4, xdist-3.8.0, asyncio-1.4.0, anyio-4.14.2, timeout-2.4.0
-asyncio: mode=Mode.AUTO, debug=False, asyncio_default_fixture_loop_scope=None, asyncio_default_test_loop_scope=function
-created: 4/4 workers
-4 workers [234 items]
-X............ss.....................................................sss. [ 30%]
-....................x.s....R..................ssss...................ss. [ 61%]
-....s................x......ssss....................s....s.............. [ 92%]
-##[error]The operation was canceled.
+24.19s call     tests/integration_tests/test_chat_models.py::test_stop_sequence
+17.66s call     tests/integration_tests/test_standard.py::TestMistralStandard::test_batch
+=========================== short test summary info ============================
+FAILED tests/integration_tests/test_chat_models.py::test_reasoning - assert 0 > 0
+FAILED tests/integration_tests/test_chat_models.py::test_reasoning_v1 - assert 0 > 0
+= 2 failed, 56 passed, 11 skipped, 1 xpassed, 4 warnings, 2 retried in 204.47s (0:03:24) =
+make: *** [Makefile:24: integration_tests] Error 1
+##[error]Process completed with exit code 2.
 ```
 
 </details>

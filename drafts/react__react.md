@@ -4,19 +4,21 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/react/react/issues/new
-- **Stars:** 252562 · **Generated:** 2026-11-11T12:41:41.842Z
+- **Stars:** 252474 · **Generated:** 2026-11-11T18:38:34.380Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: "(DevTools) Regression Tests" workflow failing on main since 2026-10-11
+CI: 2 workflows dark on main ("(DevTools) Regression Tests", "(Runtime) Build and Test")
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! The **(DevTools) Regression Tests** workflow (`.github/workflows/devtools_regression_tests.yml`) on `main` has been failing since 2026-10-11. Here is what I saw, in case it's useful:
+Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
+
+### (DevTools) Regression Tests (`.github/workflows/devtools_regression_tests.yml`)
 
 - Latest run on `main`: https://github.com/react/react/actions/runs/42928288117 — dark (conclusion: `failure`), 2026-11-11 00:03 UTC
 - Dark since: 2026-10-11 00:06 UTC (first run of the current streak)
@@ -37,6 +39,12 @@ Ran all test suites.
 ```
 
 </details>
+
+### (Runtime) Build and Test (`.github/workflows/runtime_build_and_test.yml`)
+
+- Latest run on `main`: https://github.com/react/react/actions/runs/43068956506 — dark (conclusion: `failure`), 2026-11-11 17:31 UTC
+- Dark since: 2026-11-11 17:31 UTC (first run of the current streak)
+- Likely cause: no cause found in annotations
 
 If this is already known or expected, feel free to close. Thanks for maintaining react!
 

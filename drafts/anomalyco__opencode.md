@@ -4,8 +4,9 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/anomalyco/opencode/issues/new
-- **Stars:** 226041 · **Generated:** 2026-11-11T12:41:41.842Z
+- **Stars:** 226115 · **Generated:** 2026-11-11T18:38:34.380Z
 - Nothing in this file has been sent anywhere.
+- **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
@@ -20,25 +21,9 @@ Hi! A few workflows on `dev` have been dark recently. Details below, in case the
 
 ### release (`.github/workflows/release.yml`)
 
-- Latest run on `dev`: https://github.com/anomalyco/opencode/actions/runs/43010476312 — dark (conclusion: `failure`), 2026-11-11 11:15 UTC
+- Latest run on `dev`: https://github.com/anomalyco/opencode/actions/runs/43075034248 — dark (conclusion: `cancelled`), 2026-11-11 18:09 UTC
 - Dark since: 2026-11-10 16:09 UTC (first run of the current streak)
-- Job / step: `publish-attestations` → `Download`
-- Likely cause: Missing digest for build-archives
-
-<details><summary>End of the job log</summary>
-
-```
-Artifact download completed successfully.
-SHA256 digest of downloaded artifact is c8c3e70eb7c2ab0917e3ee40c58941fc19b9d1c8ef8e81933517d2f1793067f8
-Artifact download completed successfully.
-Total of 2 artifact(s) downloaded
-Download artifact has finished successfully
-##[end-action id=__self.__actions_download-artifact;outcome=success;conclusion=success;duration_ms=108871]
-##[start-action display=Run bash "${GITHUB_ACTION_PATH//\\//}/../verify-artifacts.sh" "$RUNNER_TEMP/in";id=__self.__run]
-##[error]Missing digest for build-archives
-```
-
-</details>
+- Likely cause: run cancelled
 
 ### nightly-beta (`.github/workflows/nightly-beta.yml`)
 

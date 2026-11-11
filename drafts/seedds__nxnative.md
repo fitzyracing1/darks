@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/seedds/nxnative/issues/new
-- **Stars:** 14694 · **Generated:** 2026-11-11T12:41:41.842Z
+- **Stars:** 14766 · **Generated:** 2026-11-11T18:38:34.380Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
@@ -43,19 +43,19 @@ artifact_prefix='findings/shader_split/'; Test unit written to findings/shader_s
 
 ### lint-c (`.github/workflows/lint-c.yml`)
 
-- Latest run on `main`: https://github.com/seedds/nxnative/actions/runs/43013823065 — dark (conclusion: `cancelled`), 2026-11-11 11:40 UTC
+- Latest run on `main`: https://github.com/seedds/nxnative/actions/runs/43063927142 — dark (conclusion: `cancelled`), 2026-11-11 17:00 UTC
 - Dark since: 2026-11-05 11:55 UTC (first run of the current streak)
 - Likely cause: run cancelled
 
 ### tests (`.github/workflows/tests.yml`)
 
-- Latest run on `main`: https://github.com/seedds/nxnative/actions/runs/43013823082 — dark (conclusion: `cancelled`), 2026-11-11 11:40 UTC
+- Latest run on `main`: https://github.com/seedds/nxnative/actions/runs/43063926887 — dark (conclusion: `cancelled`), 2026-11-11 17:00 UTC
 - Dark since: 2026-11-06 01:42 UTC (first run of the current streak)
 - Likely cause: run cancelled
 
 ### lint-python (`.github/workflows/lint-python.yml`)
 
-- Latest run on `main`: https://github.com/seedds/nxnative/actions/runs/43020887937 — dark (conclusion: `failure`), 2026-11-11 12:30 UTC
+- Latest run on `main`: https://github.com/seedds/nxnative/actions/runs/43058475062 — dark (conclusion: `failure`), 2026-11-11 16:27 UTC
 - Dark since: 2026-11-10 13:51 UTC (first run of the current streak)
 - Job / step: `ruff and pyright (ratchet)` → `ruff and pyright against the baseline`
 - Likely cause: 'dmsh_fetch' imported but unused (dm/gfx/tools/dmsh_entry.py:7)

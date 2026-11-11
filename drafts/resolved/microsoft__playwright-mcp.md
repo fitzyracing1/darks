@@ -1,8 +1,8 @@
 <!-- dark-draft: microsoft/playwright-mcp -->
-<!-- draft-state: ready -->
+<!-- draft-state: resolved -->
 # Upstream issue draft: microsoft/playwright-mcp
 
-- **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
+- **Status:** resolved — lit again (2026-11-11); nothing to file
 - **Would be filed at:** https://github.com/microsoft/playwright-mcp/issues/new
 - **Stars:** 39495 · **Generated:** 2026-11-11T12:41:41.842Z
 - Nothing in this file has been sent anywhere.

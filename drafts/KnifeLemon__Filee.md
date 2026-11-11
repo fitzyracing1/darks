@@ -4,36 +4,37 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/KnifeLemon/Filee/issues/new
-- **Stars:** 25761 · **Generated:** 2026-11-11T12:41:41.842Z
+- **Stars:** 25899 · **Generated:** 2026-11-11T18:38:34.380Z
 - Nothing in this file has been sent anywhere.
+- **Note for Joshua:** cancelled by a concurrency group — likely noise
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: "CI" workflow failing on main since 2026-11-10
+CI: "CI" workflow getting cancelled on main since 2026-11-10
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! The **CI** workflow (`.github/workflows/ci.yml`) on `main` has been failing since 2026-11-10. Here is what I saw, in case it's useful:
+Hi! The **CI** workflow (`.github/workflows/ci.yml`) on `main` has been getting cancelled since 2026-11-10. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/KnifeLemon/Filee/actions/runs/42915480883 — dark (conclusion: `failure`), 2026-11-10 22:32 UTC
+- Latest run on `main`: https://github.com/KnifeLemon/Filee/actions/runs/43071803358 — dark (conclusion: `cancelled`), 2026-11-11 17:49 UTC
 - Dark since: 2026-11-10 18:31 UTC (first run of the current streak)
-- Job / step: `build (win-arm64)` → `Test UI on its own`
-- Likely cause: Failed: 3
+- Job / step: `build` → `Build`
+- Likely cause: Canceling since a higher priority waiting request for ci-refs/heads/main exists
 
 <details><summary>End of the job log</summary>
 
 ```
-Data collector 'Blame' message: All tests finished running, Sequence file will not be generated.
-Test Run Failed.
-Total tests: 2313
-     Passed: 2299
-     Failed: 3
-    Skipped: 11
- Total time: 46.7686 Minutes
-##[error]Process completed with exit code 1.
+get  NotoSansSC-Bold.otf
+Fonts ready in D:\a\Filee\Filee\build\..\src\Filee.App\Assets\Fonts
+Attempting to cancel the build...
+Build FAILED.
+    0 Warning(s)
+    0 Error(s)
+Time Elapsed 00:00:05.88
+##[error]The operation was canceled.
 ```
 
 </details>

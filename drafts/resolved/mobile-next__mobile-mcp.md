@@ -1,8 +1,8 @@
 <!-- dark-draft: mobile-next/mobile-mcp -->
-<!-- draft-state: ready -->
+<!-- draft-state: resolved -->
 # Upstream issue draft: mobile-next/mobile-mcp
 
-- **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
+- **Status:** resolved — lit again (2026-11-11); nothing to file
 - **Would be filed at:** https://github.com/mobile-next/mobile-mcp/issues/new
 - **Stars:** 10493 · **Generated:** 2026-11-11T12:41:41.842Z
 - Nothing in this file has been sent anywhere.

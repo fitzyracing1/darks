@@ -1,8 +1,8 @@
 <!-- dark-draft: reactive-resume/reactive-resume -->
-<!-- draft-state: ready -->
+<!-- draft-state: resolved -->
 # Upstream issue draft: reactive-resume/reactive-resume
 
-- **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
+- **Status:** resolved — lit again (2026-11-11); nothing to file
 - **Would be filed at:** https://github.com/reactive-resume/reactive-resume/issues/new
 - **Stars:** 45626 · **Generated:** 2026-11-11T12:41:41.842Z
 - Nothing in this file has been sent anywhere.

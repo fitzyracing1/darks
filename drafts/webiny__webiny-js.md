@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/webiny/webiny-js/issues/new
-- **Stars:** 8052 · **Generated:** 2026-11-11T12:41:41.842Z
+- **Stars:** 8052 · **Generated:** 2026-11-11T18:38:34.380Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -86,9 +86,25 @@ error: Rspack build failed.
 
 ### Push (`.github/workflows/push.yml`)
 
-- Latest run on `next`: https://github.com/webiny/webiny-js/actions/runs/43015055752 — dark (conclusion: `failure`), 2026-11-11 11:49 UTC
+- Latest run on `next`: https://github.com/webiny/webiny-js/actions/runs/43055964149 — dark (conclusion: `failure`), 2026-11-11 16:12 UTC
 - Dark since: 2026-11-10 11:42 UTC (first run of the current streak)
-- Likely cause: no cause found in annotations
+- Job / step: `[DDB-OS,DDB] webhooks` → `Run tests`
+- Likely cause: AssertionError: expected 399 to be greater than or equal to 400 (v6/packages/webhooks/__tests__/WebhookDeliver.test.ts:163)
+
+<details><summary>End of the job log</summary>
+
+```
+    164|         expect(result.responseTime).toBeLessThan(2000);
+    165|     });
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+ Test Files  1 failed | 23 passed (24)
+      Tests  1 failed | 138 passed (139)
+   Start at  16:19:53
+   Duration  101.85s (setup 49%, tests 39%, transform 9%, import 3%)
+##[error]AssertionError: expected 399 to be greater than or equal to 400
+```
+
+</details>
 
 If this is already known or expected, feel free to close. Thanks for maintaining webiny-js!
 
