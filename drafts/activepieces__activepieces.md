@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/activepieces/activepieces/issues/new
-- **Stars:** 25483 · **Generated:** 2026-11-12T00:55:01.455Z
+- **Stars:** 25487 · **Generated:** 2026-11-12T06:44:18.567Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -20,7 +20,7 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### Chat Evals (`.github/workflows/agent-evals.yml`)
 
-- Latest run on `main`: https://github.com/activepieces/activepieces/actions/runs/42970999756 — dark (conclusion: `failure`), 2026-11-11 06:14 UTC
+- Latest run on `main`: https://github.com/activepieces/activepieces/actions/runs/43166753020 — dark (conclusion: `failure`), 2026-11-12 06:14 UTC
 - Dark since: 2026-10-13 06:26 UTC (first run of the current streak)
 - Job / step: `Live judge gate` → `Run live chat evals (scope=regression)`
 - Likely cause: Error: Hook timed out in 540000ms. (packages/server/worker/test/lib/agent-eval/agent-eval.test.ts:20)
@@ -33,8 +33,8 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 ⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
  Test Files  1 failed | 12 passed (13)
       Tests  89 passed | 1 skipped (90)
-   Start at  06:18:36
-   Duration  545.56s (tests 98%, import 2%, transform 1%)
+   Start at  06:19:35
+   Duration  547.37s (tests 97%, import 2%, transform 1%)
 ##[error]Error: Hook timed out in 540000ms.
 ```
 
@@ -42,7 +42,7 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### Benchmark (`.github/workflows/benchmark.yml`)
 
-- Latest run on `main`: https://github.com/activepieces/activepieces/actions/runs/42950379884 — dark (conclusion: `failure`), 2026-11-11 03:05 UTC
+- Latest run on `main`: https://github.com/activepieces/activepieces/actions/runs/43145811554 — dark (conclusion: `failure`), 2026-11-12 03:05 UTC
 - Dark since: 2026-10-30 03:06 UTC (first run of the current streak)
 - Job / step: `benchmark (dedicated, 1, 28, 0.5, 1G, 1, 768, true, 28)` → `Detect regression against trailing 14 runs (scheduled runs only)`
 - Likely cause: </div><!-- /.error-footer -->

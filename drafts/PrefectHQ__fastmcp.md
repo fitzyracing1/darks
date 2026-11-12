@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/PrefectHQ/fastmcp/issues/new
-- **Stars:** 28393 · **Generated:** 2026-11-12T00:55:01.455Z
+- **Stars:** 28395 · **Generated:** 2026-11-12T06:44:18.567Z
 - Nothing in this file has been sent anywhere.
 
 ## Skipped: upstream already tracking
@@ -16,13 +16,15 @@ These workflows are left out of the body below.
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: "Tests" workflow failing on main since 2026-11-11
+CI: 2 workflows dark on main ("Tests", "Downstream smoke")
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! The **Tests** workflow (`.github/workflows/run-tests.yml`) on `main` has been failing since 2026-11-11. Here is what I saw, in case it's useful:
+Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
+
+### Tests (`.github/workflows/run-tests.yml`)
 
 - Latest run on `main`: https://github.com/PrefectHQ/fastmcp/actions/runs/43120814336 — dark (conclusion: `failure`), 2026-11-11 23:34 UTC
 - Dark since: 2026-11-11 23:34 UTC (first run of the current streak)
@@ -39,6 +41,28 @@ Hi! The **Tests** workflow (`.github/workflows/run-tests.yml`) on `main` has bee
 =========================== short test summary info ===========================
 FAILED tests/cli/test_client_commands.py::TestBuildClient::test_encrypted_oauth_reused_by_fresh_client[sse-oauth] - assert not [<WarningMessage {message : ResourceWarning("unclosed <socket.socket fd=1612, family=2, type…
 = 1 failed, 11319 passed, 70 skipped, 3 xfailed, 132 warnings in 213.02s (0:03:33) =
+##[error]Process completed with exit code 1.
+```
+
+</details>
+
+### Downstream smoke (`.github/workflows/run-downstream-smoke.yml`)
+
+- Latest run on `main`: https://github.com/PrefectHQ/fastmcp/actions/runs/43142005831 — dark (conclusion: `failure`), 2026-11-12 02:31 UTC
+- Dark since: 2026-11-12 02:31 UTC (first run of the current streak)
+- Job / step: `pydantic-ai smoke` → `Resolve pydantic-ai environment`
+- Likely cause: error: No solution found when resolving '--with' dependencies
+
+<details><summary>End of the job log</summary>
+
+```
+(Use `node --trace-deprecation ...` to show where the warning was created)
+SHA256 digest of downloaded artifact is 7947c8c5dcbda8b14c4e05300f4da99ab589919183d6fa7fb020a4f7fea43585
+Artifact download completed successfully.
+Total of 1 artifact(s) downloaded
+Download artifact has finished successfully
+error: No solution found when resolving `--with` dependencies
+  cause: Because there is no version of pydantic-ai-slim[mcp]==2.68.0 and you require pydantic-ai-slim[mcp]==2.68.0, we can conclude that your requirements are unsatisfiable.
 ##[error]Process completed with exit code 1.
 ```
 

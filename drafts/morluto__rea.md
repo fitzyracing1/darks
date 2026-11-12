@@ -4,44 +4,36 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/morluto/rea/issues/new
-- **Stars:** 452750 · **Generated:** 2026-11-12T00:55:01.455Z
+- **Stars:** 453396 · **Generated:** 2026-11-12T06:44:18.567Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 2 workflows dark on main ("CodeQL production", "CI")
+CI: "Mutation sweep" workflow getting cancelled on main since 2026-11-12
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
+Hi! The **Mutation sweep** workflow (`.github/workflows/mutation.yml`) on `main` has been getting cancelled since 2026-11-12. Here is what I saw, in case it's useful:
 
-### CodeQL production (`.github/workflows/codeql.yml`)
-
-- Latest run on `main`: https://github.com/morluto/rea/actions/runs/43121966476 — dark (conclusion: `cancelled`), 2026-11-11 23:43 UTC
-- Dark since: 2026-11-01 07:24 UTC (first run of the current streak)
-- Likely cause: run cancelled
-
-### CI (`.github/workflows/ci.yml`)
-
-- Latest run on `main`: https://github.com/morluto/rea/actions/runs/43121975275 — dark (conclusion: `cancelled`), 2026-11-11 23:43 UTC
-- Dark since: 2026-11-10 21:26 UTC (first run of the current streak)
-- Job / step: `Real Apple artifact CLI/MCP E2E` → `Run native Apple and process boundary regressions`
-- Likely cause: The job has exceeded the maximum execution time of 15m0s
+- Latest run on `main`: https://github.com/morluto/rea/actions/runs/43157532408 — dark (conclusion: `cancelled`), 2026-11-12 04:51 UTC
+- Dark since: 2026-11-12 04:51 UTC (first run of the current streak)
+- Job / step: `Mutation sweep (reverse-tools)` → `Run the complete configuration`
+- Likely cause: The job has exceeded the maximum execution time of 1h0m0s
 
 <details><summary>End of the job log</summary>
 
 ```
-   × advertises binary names and partially decoded command fields through SDK schemas 35335ms
-   ✓ pages ambiguous imports and exact exports under the advertised MCP schema 4477ms
-   ✓ Mach-O summary delivery through MCP (1)
-     ✓ retains complete inspect_macho Evidence and pages its exact rows 9559ms
-   ✓ refuses summary delivery before analysis when the server retains no Evidence 239ms
- ✓  process-global  tests/process-global/dmgCancellationReason.test.ts (2 tests) 177ms
- ✓  process-global  tests/process-global/filesystemSnapshotFallbackCancellation.test.ts (3 tests) 52ms
+Mutation testing 84% (elapsed: ~55m, remaining: ~10m) 843/1090 tested (125 survived, 5 timed out)
+Mutation testing 84% (elapsed: ~56m, remaining: ~10m) 845/1090 tested (126 survived, 5 timed out)
+Mutation testing 84% (elapsed: ~56m, remaining: ~10m) 847/1090 tested (127 survived, 5 timed out)
+Mutation testing 84% (elapsed: ~56m, remaining: ~10m) 849/1090 tested (127 survived, 5 timed out)
+Mutation testing 84% (elapsed: ~56m, remaining: ~10m) 851/1090 tested (128 survived, 5 timed out)
+Mutation testing 84% (elapsed: ~56m, remaining: ~10m) 853/1090 tested (128 survived, 5 timed out)
+Mutation testing 84% (elapsed: ~56m, remaining: ~10m) 855/1090 tested (128 survived, 5 timed out)
 ##[error]The operation was canceled.
 ```
 

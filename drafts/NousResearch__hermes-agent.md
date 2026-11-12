@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/NousResearch/hermes-agent/issues/new
-- **Stars:** 262739 · **Generated:** 2026-11-12T00:55:01.455Z
+- **Stars:** 262798 · **Generated:** 2026-11-12T06:44:18.567Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
@@ -18,7 +18,7 @@ These workflows are left out of the body below.
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 3 workflows dark on main ("Docker Build, Test, and Publish", "Deploy Site", "Docs Search Monitor")
+CI: 2 workflows dark on main ("Docker Build, Test, and Publish", "Deploy Site")
 <!-- END TITLE -->
 
 ## Body
@@ -28,20 +28,14 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### Docker Build, Test, and Publish (`.github/workflows/docker.yml`)
 
-- Latest run on `main`: https://github.com/NousResearch/hermes-agent/actions/runs/43129456490 — dark (conclusion: `cancelled`), 2026-11-12 00:44 UTC
+- Latest run on `main`: https://github.com/NousResearch/hermes-agent/actions/runs/43168813417 — dark (conclusion: `cancelled`), 2026-11-12 06:32 UTC
 - Dark since: 2026-11-08 17:58 UTC (first run of the current streak)
 - Likely cause: run cancelled
 
 ### Deploy Site (`.github/workflows/deploy-site.yml`)
 
-- Latest run on `main`: https://github.com/NousResearch/hermes-agent/actions/runs/43129456564 — dark (conclusion: `cancelled`), 2026-11-12 00:44 UTC
+- Latest run on `main`: https://github.com/NousResearch/hermes-agent/actions/runs/43168721861 — dark (conclusion: `cancelled`), 2026-11-12 06:31 UTC
 - Dark since: 2026-11-12 00:35 UTC (first run of the current streak)
-- Likely cause: run cancelled
-
-### Docs Search Monitor (`.github/workflows/docs-search-monitor.yml`)
-
-- Latest run on `main`: https://github.com/NousResearch/hermes-agent/actions/runs/43128829154 — dark (conclusion: `cancelled`), 2026-11-12 00:39 UTC
-- Dark since: 2026-11-12 00:39 UTC (first run of the current streak)
 - Likely cause: run cancelled
 
 If this is already known or expected, feel free to close. Thanks for maintaining hermes-agent!

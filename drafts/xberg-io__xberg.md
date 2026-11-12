@@ -4,15 +4,14 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/xberg-io/xberg/issues/new
-- **Stars:** 9578 · **Generated:** 2026-11-12T00:55:01.455Z
+- **Stars:** 9582 · **Generated:** 2026-11-12T06:44:18.567Z
 - Nothing in this file has been sent anywhere.
-- **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 - **Note for Joshua:** cancelled by a concurrency group — likely noise
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 2 workflows dark on main ("CI Rust", "CI E2E")
+CI: 4 workflows dark on main ("CI Rust", "CI E2E", "CI Integrations", +1 more)
 <!-- END TITLE -->
 
 ## Body
@@ -22,44 +21,88 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### CI Rust (`.github/workflows/ci-rust.yaml`)
 
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/43090390018 — dark (conclusion: `cancelled`), 2026-11-11 19:47 UTC
+- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/43163075275 — dark (conclusion: `cancelled`), 2026-11-12 05:41 UTC
 - Dark since: 2026-10-25 18:30 UTC (first run of the current streak)
-- Job / step: `Rust (ubuntu-latest)` → `Run tests`
-- Likely cause: run cancelled in job "Rust (ubuntu-latest)"
+- Job / step: `Rust (windows-latest, static-embeddings link)` → `Install system dependencies`
+- Likely cause: Canceling since a higher priority waiting request for ci-rust-refs/heads/main exists
 
 <details><summary>End of the job log</summary>
 
 ```
-Filesystem      Size  Used Avail Use% Mounted on
-/dev/root       145G   56G   90G  39% /
-Cargo environment:
-cargo 1.99.1 (5f94df478 2026-08-27)
-rustc 1.99.1 (58cf8f9c3 2026-10-13)
-Finished in 5630.13s
-[rust:test:ci] ERROR task failed
-##[error]Process completed with exit code 1.
+  edgblob.cpp
+  edgloop.cpp
+  equationdetectbase.cpp
+  fpchop.cpp
+  gap_map.cpp
+  imagefind.cpp
+  Generating Code...
+##[error]The operation was canceled.
 ```
 
 </details>
 
 ### CI E2E (`.github/workflows/ci-e2e.yaml`)
 
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/43090390105 — dark (conclusion: `cancelled`), 2026-11-11 19:47 UTC
+- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/43163075359 — dark (conclusion: `cancelled`), 2026-11-12 05:41 UTC
 - Dark since: 2026-11-03 17:32 UTC (first run of the current streak)
-- Job / step: `E2E (node)` → `Run e2e tests`
+- Job / step: `Build FFI (aarch64-unknown-linux-gnu)` → `Build CLI`
 - Likely cause: Canceling since a higher priority waiting request for ci-e2e-refs/heads/main exists
 
 <details><summary>End of the job log</summary>
 
 ```
-   Compiling aws-sigv4 v1.6.5
-   Compiling memchr-n v0.1.10
-   Compiling candle-transformers v0.11.1
-   Compiling image v0.24.9
-   Compiling notify v8.2.2
-   Compiling tokenizers v0.21.4
-   Compiling gcp_auth v0.12.7
+   Compiling xet-data v1.8.1
+   Compiling hf-xet v1.8.1
+   Compiling xberg-gliner v1.4.0 (/home/runner/work/xberg/xberg/crates/xberg-gliner)
+   Compiling hf-hub v1.0.0
+   Compiling xberg-candle-ocr v1.4.0 (/home/runner/work/xberg/xberg/crates/xberg-candle-ocr)
+   Compiling sceptre v0.10.1
+   Compiling xberg-cli v1.4.0 (/home/runner/work/xberg/xberg/crates/xberg-cli)
 ##[error]The operation was canceled.
+```
+
+</details>
+
+### CI Integrations (`.github/workflows/ci-integrations.yaml`)
+
+- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/43167125068 — dark (conclusion: `failure`), 2026-11-12 06:17 UTC
+- Dark since: 2026-11-12 03:46 UTC (first run of the current streak)
+- Job / step: `Build local integration bindings` → `Install system dependencies`
+- Likely cause: -- Configuring incomplete, errors occurred!
+
+<details><summary>End of the job log</summary>
+
+```
+     "/usr/lib/x86_64-linux-gnu/cmake/AOM/AOMTargets.cmake"
+  but not all the files it references.
+Call Stack (most recent call first):
+  /usr/lib/x86_64-linux-gnu/cmake/AOM/AOMConfig.cmake:43 (include)
+  cmake/modules/FindAOM.cmake:1 (find_package)
+  CMakeLists.txt:239 (find_package)
+-- Configuring incomplete, errors occurred!
+##[error]Process completed with exit code 1.
+```
+
+</details>
+
+### CI Lint (`.github/workflows/ci-lint.yaml`)
+
+- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/43167125454 — dark (conclusion: `failure`), 2026-11-12 06:17 UTC
+- Dark since: 2026-11-12 05:22 UTC (first run of the current streak)
+- Job / step: `validate / Validate (poly)` → `Install system dependencies (libheif for cargo-clippy)`
+- Likely cause: -- Configuring incomplete, errors occurred!
+
+<details><summary>End of the job log</summary>
+
+```
+     "/usr/lib/x86_64-linux-gnu/cmake/AOM/AOMTargets.cmake"
+  but not all the files it references.
+Call Stack (most recent call first):
+  /usr/lib/x86_64-linux-gnu/cmake/AOM/AOMConfig.cmake:43 (include)
+  cmake/modules/FindAOM.cmake:1 (find_package)
+  CMakeLists.txt:239 (find_package)
+-- Configuring incomplete, errors occurred!
+##[error]Process completed with exit code 1.
 ```
 
 </details>

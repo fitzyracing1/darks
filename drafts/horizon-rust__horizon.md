@@ -4,9 +4,8 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/horizon-rust/horizon/issues/new
-- **Stars:** 8821 · **Generated:** 2026-11-12T00:55:01.455Z
+- **Stars:** 8845 · **Generated:** 2026-11-12T06:44:18.567Z
 - Nothing in this file has been sent anywhere.
-- **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Skipped: upstream already tracking
 
@@ -17,17 +16,33 @@ These workflows are left out of the body below.
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: "checks" workflow getting cancelled on main since 2026-11-11
+CI: "checks" workflow failing on main since 2026-11-11
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! The **checks** workflow (`.github/workflows/ci.yml`) on `main` has been getting cancelled since 2026-11-11. Here is what I saw, in case it's useful:
+Hi! The **checks** workflow (`.github/workflows/ci.yml`) on `main` has been failing since 2026-11-11. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/horizon-rust/horizon/actions/runs/43129945131 — dark (conclusion: `cancelled`), 2026-11-12 00:48 UTC
+- Latest run on `main`: https://github.com/horizon-rust/horizon/actions/runs/43163920620 — dark (conclusion: `failure`), 2026-11-12 05:49 UTC
 - Dark since: 2026-11-11 18:17 UTC (first run of the current streak)
-- Likely cause: run cancelled
+- Job / step: `verify` → `Test Rust core and voxel kernel correctness`
+- Likely cause: error: test failed, to rerun pass '-p horizon-threads --lib'
+
+<details><summary>End of the job log</summary>
+
+```
+             at /rustc/58cf8f9c35b355199727627d07ae34a4e2846d67/library/std/src/sys/thread/unix.rs:123:17
+  27: <unknown>
+  28: <unknown>
+failures:
+    stack_dump::tests::reads_the_stack_of_a_busy_thread_from_another
+test result: FAILED. 23 passed; 1 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.48s
+error: test failed, to rerun pass `-p horizon-threads --lib`
+##[error]Process completed with exit code 101.
+```
+
+</details>
 
 If this is already known or expected, feel free to close. Thanks for maintaining horizon!
 

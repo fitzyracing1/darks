@@ -4,40 +4,34 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/l0ng-ai/openidea/issues/new
-- **Stars:** 8581 · **Generated:** 2026-11-12T00:55:01.455Z
+- **Stars:** 8638 · **Generated:** 2026-11-12T06:44:18.567Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** cancelled by a concurrency group — likely noise
+- **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: "CI" workflow getting cancelled on main since 2026-11-10
+CI: 2 workflows dark on main ("CI", "Language smoke")
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! The **CI** workflow (`.github/workflows/ci.yml`) on `main` has been getting cancelled since 2026-11-10. Here is what I saw, in case it's useful:
+Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
 
-- Latest run on `main`: https://github.com/l0ng-ai/openidea/actions/runs/43129807826 — dark (conclusion: `cancelled`), 2026-11-12 00:46 UTC
+### CI (`.github/workflows/ci.yml`)
+
+- Latest run on `main`: https://github.com/l0ng-ai/openidea/actions/runs/43162704537 — dark (conclusion: `cancelled`), 2026-11-12 05:38 UTC
 - Dark since: 2026-11-10 13:06 UTC (first run of the current streak)
-- Job / step: `E2E` → `Run pnpm e2e`
+- Job / step: `Changes`
 - Likely cause: Canceling since a higher priority waiting request for ci-refs/heads/main exists
 
-<details><summary>End of the job log</summary>
+### Language smoke (`.github/workflows/language-smoke.yml`)
 
-```
-+ vite 8.3.4
-+ vitest 5.0.5
-Done in 3.3s using pnpm v11.28.11
-WARNING: Error loading config file: open /root/.docker/config.json: permission denied
-$ playwright test
-Running 364 tests using 2 workers
-context canceled
-##[error]The operation was canceled.
-```
-
-</details>
+- Latest run on `main`: https://github.com/l0ng-ai/openidea/actions/runs/43162704529 — dark (conclusion: `cancelled`), 2026-11-12 05:38 UTC
+- Dark since: 2026-11-12 04:40 UTC (first run of the current streak)
+- Likely cause: run cancelled
 
 If this is already known or expected, feel free to close. Thanks for maintaining openidea!
 

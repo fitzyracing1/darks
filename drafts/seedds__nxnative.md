@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/seedds/nxnative/issues/new
-- **Stars:** 14824 · **Generated:** 2026-11-12T00:55:01.455Z
+- **Stars:** 14885 · **Generated:** 2026-11-12T06:44:18.567Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
@@ -43,13 +43,13 @@ artifact_prefix='findings/shader_split/'; Test unit written to findings/shader_s
 
 ### lint-c (`.github/workflows/lint-c.yml`)
 
-- Latest run on `main`: https://github.com/seedds/nxnative/actions/runs/43127389851 — dark (conclusion: `cancelled`), 2026-11-12 00:27 UTC
+- Latest run on `main`: https://github.com/seedds/nxnative/actions/runs/43156481903 — dark (conclusion: `cancelled`), 2026-11-12 04:41 UTC
 - Dark since: 2026-11-05 11:55 UTC (first run of the current streak)
 - Likely cause: run cancelled
 
 ### tests (`.github/workflows/tests.yml`)
 
-- Latest run on `main`: https://github.com/seedds/nxnative/actions/runs/43127883454 — dark (conclusion: `cancelled`), 2026-11-12 00:31 UTC
+- Latest run on `main`: https://github.com/seedds/nxnative/actions/runs/43156481965 — dark (conclusion: `cancelled`), 2026-11-12 04:41 UTC
 - Dark since: 2026-11-06 01:42 UTC (first run of the current streak)
 - Likely cause: run cancelled
 
