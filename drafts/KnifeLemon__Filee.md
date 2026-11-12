@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/KnifeLemon/Filee/issues/new
-- **Stars:** 25899 · **Generated:** 2026-11-11T18:38:34.380Z
+- **Stars:** 25975 · **Generated:** 2026-11-12T00:55:01.455Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** cancelled by a concurrency group — likely noise
 
@@ -19,25 +19,10 @@ CI: "CI" workflow getting cancelled on main since 2026-11-10
 <!-- BEGIN BODY -->
 Hi! The **CI** workflow (`.github/workflows/ci.yml`) on `main` has been getting cancelled since 2026-11-10. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/KnifeLemon/Filee/actions/runs/43071803358 — dark (conclusion: `cancelled`), 2026-11-11 17:49 UTC
+- Latest run on `main`: https://github.com/KnifeLemon/Filee/actions/runs/43122968194 — dark (conclusion: `cancelled`), 2026-11-11 23:51 UTC
 - Dark since: 2026-11-10 18:31 UTC (first run of the current streak)
-- Job / step: `build` → `Build`
+- Job / step: `build`
 - Likely cause: Canceling since a higher priority waiting request for ci-refs/heads/main exists
-
-<details><summary>End of the job log</summary>
-
-```
-get  NotoSansSC-Bold.otf
-Fonts ready in D:\a\Filee\Filee\build\..\src\Filee.App\Assets\Fonts
-Attempting to cancel the build...
-Build FAILED.
-    0 Warning(s)
-    0 Error(s)
-Time Elapsed 00:00:05.88
-##[error]The operation was canceled.
-```
-
-</details>
 
 If this is already known or expected, feel free to close. Thanks for maintaining Filee!
 

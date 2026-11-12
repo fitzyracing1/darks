@@ -1,8 +1,8 @@
 <!-- dark-draft: Comfy-Org/ComfyUI -->
-<!-- draft-state: ready -->
+<!-- draft-state: resolved -->
 # Upstream issue draft: Comfy-Org/ComfyUI
 
-- **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
+- **Status:** resolved — lit again (2026-11-12); nothing to file
 - **Would be filed at:** https://github.com/Comfy-Org/ComfyUI/issues/new
 - **Stars:** 146346 · **Generated:** 2026-11-11T18:38:34.380Z
 - Nothing in this file has been sent anywhere.

@@ -4,9 +4,9 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/morluto/rea/issues/new
-- **Stars:** 452210 · **Generated:** 2026-11-11T18:38:34.380Z
+- **Stars:** 452750 · **Generated:** 2026-11-12T00:55:01.455Z
 - Nothing in this file has been sent anywhere.
-- **Note for Joshua:** latest run was skipped, not failed — probably not worth filing
+- **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
@@ -21,28 +21,28 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### CodeQL production (`.github/workflows/codeql.yml`)
 
-- Latest run on `main`: https://github.com/morluto/rea/actions/runs/43052196009 — dark (conclusion: `skipped`), 2026-11-11 15:49 UTC
+- Latest run on `main`: https://github.com/morluto/rea/actions/runs/43121966476 — dark (conclusion: `cancelled`), 2026-11-11 23:43 UTC
 - Dark since: 2026-11-01 07:24 UTC (first run of the current streak)
-- Likely cause: run skipped
+- Likely cause: run cancelled
 
 ### CI (`.github/workflows/ci.yml`)
 
-- Latest run on `main`: https://github.com/morluto/rea/actions/runs/43058547153 — dark (conclusion: `failure`), 2026-11-11 16:27 UTC
+- Latest run on `main`: https://github.com/morluto/rea/actions/runs/43121975275 — dark (conclusion: `cancelled`), 2026-11-11 23:43 UTC
 - Dark since: 2026-11-10 21:26 UTC (first run of the current streak)
-- Job / step: `Deep static checks` → `Run deep static checks`
-- Likely cause: command (/home/runner/work/rea/rea/) /opt/hostedtoolcache/node/24.22.1/x64/bin/npm run knip exited (1)
+- Job / step: `Real Apple artifact CLI/MCP E2E` → `Run native Apple and process boundary regressions`
+- Likely cause: The job has exceeded the maximum execution time of 15m0s
 
 <details><summary>End of the job log</summary>
 
 ```
-knip
-cache miss, executing 5057dfcfc0f5aac3
-> rea-agents@6.8.0 knip
-> knip --cache
-Unused exported types (2)
-AdbDeviceState             type  src/domain/adb/adbDeviceAnalysis.ts:54:13
-AuditReleaseExposureInput  type  src/domain/releaseExposure.ts:317:13
-##[error]command (/home/runner/work/rea/rea/) /opt/hostedtoolcache/node/24.22.1/x64/bin/npm run knip exited (1)
+   × advertises binary names and partially decoded command fields through SDK schemas 35335ms
+   ✓ pages ambiguous imports and exact exports under the advertised MCP schema 4477ms
+   ✓ Mach-O summary delivery through MCP (1)
+     ✓ retains complete inspect_macho Evidence and pages its exact rows 9559ms
+   ✓ refuses summary delivery before analysis when the server retains no Evidence 239ms
+ ✓  process-global  tests/process-global/dmgCancellationReason.test.ts (2 tests) 177ms
+ ✓  process-global  tests/process-global/filesystemSnapshotFallbackCancellation.test.ts (3 tests) 52ms
+##[error]The operation was canceled.
 ```
 
 </details>

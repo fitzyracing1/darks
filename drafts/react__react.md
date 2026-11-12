@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/react/react/issues/new
-- **Stars:** 252474 · **Generated:** 2026-11-11T18:38:34.380Z
+- **Stars:** 252524 · **Generated:** 2026-11-12T00:55:01.455Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -20,21 +20,21 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### (DevTools) Regression Tests (`.github/workflows/devtools_regression_tests.yml`)
 
-- Latest run on `main`: https://github.com/react/react/actions/runs/42928288117 — dark (conclusion: `failure`), 2026-11-11 00:03 UTC
+- Latest run on `main`: https://github.com/react/react/actions/runs/43124415601 — dark (conclusion: `failure`), 2026-11-12 00:03 UTC
 - Dark since: 2026-10-11 00:06 UTC (first run of the current streak)
-- Job / step: `Run DevTools tests for versions (17.0)` → `Run node ./scripts/jest/jest-cli.js --build --project devtools --release-channel=experimental --reactVersion 17.0 --ci`
-- Likely cause: Snapshots:   5 failed, 92 passed, 97 total
+- Job / step: `Download base build` → `Download react-devtools artifacts for base revision`
+- Likely cause: Could not download build as its conclusion was: failure
 
 <details><summary>End of the job log</summary>
 
 ```
-Snapshot Summary
- › 5 snapshots failed from 1 test suite. Inspect your code changes or re-run jest with `-u` to update them.
-Test Suites: 1 failed, 27 skipped, 14 passed, 15 of 42 total
-Tests:       3 failed, 524 skipped, 100 passed, 627 total
-Snapshots:   5 failed, 92 passed, 97 total
-Time:        10.218 s
-Ran all test suites.
+⠙ Downloading artifacts from GitHub for commit cb7c59ecdb7b620ed3d6ce0bf669d7502
+daedf13)
+⠹ Downloading artifacts from GitHub for commit cb7c59ecdb7b620ed3d6ce0bf669d7502
+daedf13)
+⠸ Downloading artifacts from GitHub for commit cb7c59ecdb7b620ed3d6ce0bf669d7502
+daedf13)
+Could not download build as its conclusion was: failure
 ##[error]Process completed with exit code 1.
 ```
 

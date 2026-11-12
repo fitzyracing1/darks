@@ -1,8 +1,8 @@
 <!-- dark-draft: storytold/filmcraft -->
-<!-- draft-state: ready -->
+<!-- draft-state: resolved -->
 # Upstream issue draft: storytold/filmcraft
 
-- **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
+- **Status:** resolved — lit again (2026-11-12); nothing to file
 - **Would be filed at:** https://github.com/storytold/filmcraft/issues/new
 - **Stars:** 18061 · **Generated:** 2026-11-11T18:38:34.380Z
 - Nothing in this file has been sent anywhere.

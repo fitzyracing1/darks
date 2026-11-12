@@ -4,34 +4,40 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/l0ng-ai/openidea/issues/new
-- **Stars:** 8558 · **Generated:** 2026-11-11T18:38:34.380Z
+- **Stars:** 8581 · **Generated:** 2026-11-12T00:55:01.455Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** cancelled by a concurrency group — likely noise
-- **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 2 workflows dark on main ("CI", "Language smoke")
+CI: "CI" workflow getting cancelled on main since 2026-11-10
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
+Hi! The **CI** workflow (`.github/workflows/ci.yml`) on `main` has been getting cancelled since 2026-11-10. Here is what I saw, in case it's useful:
 
-### CI (`.github/workflows/ci.yml`)
-
-- Latest run on `main`: https://github.com/l0ng-ai/openidea/actions/runs/43076379168 — dark (conclusion: `cancelled`), 2026-11-11 18:17 UTC
+- Latest run on `main`: https://github.com/l0ng-ai/openidea/actions/runs/43129807826 — dark (conclusion: `cancelled`), 2026-11-12 00:46 UTC
 - Dark since: 2026-11-10 13:06 UTC (first run of the current streak)
-- Job / step: `Changes`
+- Job / step: `E2E` → `Run pnpm e2e`
 - Likely cause: Canceling since a higher priority waiting request for ci-refs/heads/main exists
 
-### Language smoke (`.github/workflows/language-smoke.yml`)
+<details><summary>End of the job log</summary>
 
-- Latest run on `main`: https://github.com/l0ng-ai/openidea/actions/runs/43075869999 — dark (conclusion: `cancelled`), 2026-11-11 18:14 UTC
-- Dark since: 2026-11-11 11:25 UTC (first run of the current streak)
-- Likely cause: run cancelled
+```
++ vite 8.3.4
++ vitest 5.0.5
+Done in 3.3s using pnpm v11.28.11
+WARNING: Error loading config file: open /root/.docker/config.json: permission denied
+$ playwright test
+Running 364 tests using 2 workers
+context canceled
+##[error]The operation was canceled.
+```
+
+</details>
 
 If this is already known or expected, feel free to close. Thanks for maintaining openidea!
 

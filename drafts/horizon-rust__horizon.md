@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/horizon-rust/horizon/issues/new
-- **Stars:** 8774 · **Generated:** 2026-11-11T18:38:34.380Z
+- **Stars:** 8821 · **Generated:** 2026-11-12T00:55:01.455Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
@@ -25,7 +25,7 @@ CI: "checks" workflow getting cancelled on main since 2026-11-11
 <!-- BEGIN BODY -->
 Hi! The **checks** workflow (`.github/workflows/ci.yml`) on `main` has been getting cancelled since 2026-11-11. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/horizon-rust/horizon/actions/runs/43076811526 — dark (conclusion: `cancelled`), 2026-11-11 18:20 UTC
+- Latest run on `main`: https://github.com/horizon-rust/horizon/actions/runs/43129945131 — dark (conclusion: `cancelled`), 2026-11-12 00:48 UTC
 - Dark since: 2026-11-11 18:17 UTC (first run of the current streak)
 - Likely cause: run cancelled
 

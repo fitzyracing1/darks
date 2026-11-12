@@ -1,8 +1,8 @@
 <!-- dark-draft: storytold/wordcraft -->
-<!-- draft-state: duplicate -->
+<!-- draft-state: resolved -->
 # Upstream issue draft: storytold/wordcraft
 
-- **Status:** not for filing — upstream already has an open issue/PR about every dark workflow here
+- **Status:** resolved — lit again (2026-11-12); nothing to file
 - **Would be filed at:** https://github.com/storytold/wordcraft/issues/new
 - **Stars:** 17813 · **Generated:** 2026-11-11T18:38:34.380Z
 - Nothing in this file has been sent anywhere.
