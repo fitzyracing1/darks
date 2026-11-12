@@ -4,13 +4,14 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/storytold/photocraft/issues/new
-- **Stars:** 78811 · **Generated:** 2026-11-12T06:44:18.567Z
+- **Stars:** 78879 · **Generated:** 2026-11-12T12:44:21.228Z
 - Nothing in this file has been sent anywhere.
+- **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 2 workflows dark on main ("FreeBSD", "Perf (nightly)")
+CI: 3 workflows dark on main ("FreeBSD", "Perf (nightly)", "SonarCloud")
 <!-- END TITLE -->
 
 ## Body
@@ -61,6 +62,12 @@ wrote /Users/runner/work/photocraft/photocraft/target/perf/results.json
 ```
 
 </details>
+
+### SonarCloud (`.github/workflows/sonarcloud.yml`)
+
+- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/43218132722 — dark (conclusion: `cancelled`), 2026-11-12 12:28 UTC
+- Dark since: 2026-11-12 12:27 UTC (first run of the current streak)
+- Likely cause: run cancelled
 
 If this is already known or expected, feel free to close. Thanks for maintaining photocraft!
 

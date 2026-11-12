@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/KnifeLemon/Filee/issues/new
-- **Stars:** 26097 · **Generated:** 2026-11-12T06:44:18.567Z
+- **Stars:** 26221 · **Generated:** 2026-11-12T12:44:21.228Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** cancelled by a concurrency group — likely noise
 
@@ -19,21 +19,21 @@ CI: "CI" workflow getting cancelled on main since 2026-11-10
 <!-- BEGIN BODY -->
 Hi! The **CI** workflow (`.github/workflows/ci.yml`) on `main` has been getting cancelled since 2026-11-10. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/KnifeLemon/Filee/actions/runs/43161747730 — dark (conclusion: `cancelled`), 2026-11-12 05:29 UTC
+- Latest run on `main`: https://github.com/KnifeLemon/Filee/actions/runs/43215655201 — dark (conclusion: `cancelled`), 2026-11-12 12:11 UTC
 - Dark since: 2026-11-10 18:31 UTC (first run of the current streak)
-- Job / step: `build (win-arm64)` → `Run actions/setup-dotnet@v6`
+- Job / step: `build (win-arm64)` → `Build Explorer menu extension`
 - Likely cause: Canceling since a higher priority waiting request for ci-refs/heads/main exists
 
 <details><summary>End of the job log</summary>
 
 ```
-dotnet-install: To check the list of supported versions, go to https://learn.microsoft.com/dotnet/core/install/windows#supported-versions
-dotnet-install: Installed version is 10.0.15
-dotnet-install: Installation finished
-[command]"C:\Program Files\PowerShell\7\pwsh.exe" -NoLogo -Sta -NoProfile -NonInteractive -ExecutionPolicy Unrestricted -Command & 'C:\a\_actions\actions\setup-dotnet\v6\externals\install-dotnet.ps1' -SkipNonVersionedFi…
-dotnet-install: Downloaded file https://builds.dotnet.microsoft.com/dotnet/Sdk/10.0.404/dotnet-sdk-10.0.404-win-arm64.zip size is 293827291 bytes.
-dotnet-install: Either downloaded or local package size can not be measured. One of them may be corrupted.
-dotnet-install: Extracting the archive.
+Received 37748736 of 83785201 (45.1%), 34.8 MBs/sec
+Received 83785201 of 83785201 (100.0%), 33.2 MBs/sec
+Cache Size: ~80 MB (83785201 B)
+[command]"C:\Program Files\Git\usr\bin\tar.exe" -xf C:/a/_temp/c20017f3-36ed-4525-8d84-4642297fd556/cache.tzst -P -C C:/a/Filee/Filee --force-local --use-compress-program "zstd -d"
+Cache restored successfully
+Cache restored from key: zig-0.16.0-x86_64-windows
+build FileeExplorerMenu.dll 2.4.0 (arm64)
 ##[error]The operation was canceled.
 ```
 

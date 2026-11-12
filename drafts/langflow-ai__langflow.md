@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/langflow-ai/langflow/issues/new
-- **Stars:** 156553 · **Generated:** 2026-11-12T06:44:18.567Z
+- **Stars:** 156563 · **Generated:** 2026-11-12T12:44:21.228Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -44,7 +44,7 @@ Creating Pages deployment with payload:
 
 - Latest run on `main`: https://github.com/langflow-ai/langflow/actions/runs/42572056954 — dark (conclusion: `failure`), 2026-11-09 06:16 UTC
 - Dark since: 2026-10-26 06:25 UTC (first run of the current streak)
-- Likely cause: no cause found in annotations
+- Likely cause: cause not readable (GET /repos/langflow-ai/langflow/actions/runs/42572056954/jobs?filter=latest&per_)
 
 ### A11y / IBM Equal Access Scans (`.github/workflows/a11y-scan.yml`)
 

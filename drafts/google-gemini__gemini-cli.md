@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/google-gemini/gemini-cli/issues/new
-- **Stars:** 108786 · **Generated:** 2026-11-12T06:44:18.567Z
+- **Stars:** 108793 · **Generated:** 2026-11-12T12:44:21.228Z
 - Nothing in this file has been sent anywhere.
 
 ## Skipped: upstream already tracking
@@ -17,7 +17,7 @@ These workflows are left out of the body below.
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 3 workflows dark on main ("📋 Gemini Scheduled Issue Triage", "Testing: E2E (Chained)", "Performance Tests: Nightly")
+CI: 2 workflows dark on main ("📋 Gemini Scheduled Issue Triage", "Performance Tests: Nightly")
 <!-- END TITLE -->
 
 ## Body
@@ -27,7 +27,7 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### 📋 Gemini Scheduled Issue Triage (`.github/workflows/gemini-scheduled-issue-triage.yml`)
 
-- Latest run on `main`: https://github.com/google-gemini/gemini-cli/actions/runs/43159231797 — dark (conclusion: `failure`), 2026-11-12 05:07 UTC
+- Latest run on `main`: https://github.com/google-gemini/gemini-cli/actions/runs/43215538080 — dark (conclusion: `failure`), 2026-11-12 12:10 UTC
 - Dark since: 2026-11-11 14:07 UTC (first run of the current streak)
 - Job / step: `triage-issues` → `Apply Triaged Labels`
 - Likely cause: Unhandled error: HttpError: Resource not accessible by integration
@@ -43,28 +43,6 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
   }
 }
 ##[error]Unhandled error: HttpError: Resource not accessible by integration
-```
-
-</details>
-
-### Testing: E2E (Chained) (`.github/workflows/chained_e2e.yml`)
-
-- Latest run on `main`: https://github.com/google-gemini/gemini-cli/actions/runs/43103836936 — dark (conclusion: `failure`), 2026-11-11 21:31 UTC
-- Dark since: 2026-11-11 17:36 UTC (first run of the current streak)
-- Job / step: `E2E Test (macOS)` → `Run E2E tests (non-Windows)`
-- Likely cause: Tests  2 failed | 90 passed | 55 skipped (147)
-
-<details><summary>End of the job log</summary>
-
-```
-       |   ^
-     25|     // We use a fake responses file to make the test deterministic and…
-     26|     rig.setup('shell-background-workflow', {
-⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[3/6]⎯
-      Tests  2 failed | 90 passed | 55 skipped (147)
-   Start at  21:38:39
-   Duration  368.93s (transform 30.03s, setup 0ms, collect 1092.01s, tests 2668.65s, environment 64ms, prepare 36.97s)
-##[error]Process completed with exit code 1.
 ```
 
 </details>
