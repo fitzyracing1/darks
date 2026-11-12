@@ -1,33 +1,33 @@
 <!-- dark-draft: webpack/webpack -->
-<!-- draft-state: resolved -->
+<!-- draft-state: ready -->
 # Upstream issue draft: webpack/webpack
 
-- **Status:** resolved — lit again (2026-11-10); nothing to file
+- **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/webpack/webpack/issues/new
-- **Stars:** 65996 · **Generated:** 2026-11-09T12:43:14.164Z
+- **Stars:** 66000 · **Generated:** 2026-11-12T18:39:27.411Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: "Github Actions" workflow failing on main since 2026-11-09
+CI: "Github Actions" workflow failing on main since 2026-11-12
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! The **Github Actions** workflow (`.github/workflows/test.yml`) on `main` has been failing since 2026-11-09. Here is what I saw, in case it's useful:
+Hi! The **Github Actions** workflow (`.github/workflows/test.yml`) on `main` has been failing since 2026-11-12. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/webpack/webpack/actions/runs/42591810290 — dark (conclusion: `failure`), 2026-11-09 09:14 UTC
-- Dark since: 2026-11-09 09:14 UTC (first run of the current streak)
-- Job / step: `integration (ubuntu-latest, 12.x, a)` → `Run yarn test:integration:a --ci --cacheDirectory .jest-cache`
-- Likely cause: Tests:       1 failed, 727 skipped, 61456 passed, 62184 total
+- Latest run on `main`: https://github.com/webpack/webpack/actions/runs/43232533354 — dark (conclusion: `failure`), 2026-11-12 13:59 UTC
+- Dark since: 2026-11-12 13:59 UTC (first run of the current streak)
+- Job / step: `runtimes (bun)` → `Run yarn test:bun --ci`
+- Likely cause: Tests:       2 failed, 401 skipped, 168786 passed, 169189 total
 
 <details><summary>End of the job log</summary>
 
 ```
-Snapshots:   2709 passed, 2709 total
-Time:        504.141 s, estimated 566 s
+Snapshots:   59837 passed, 59837 total
+Time:        815.304 s
 Ran all test suites.
 error Command failed with exit code 1.
 info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.

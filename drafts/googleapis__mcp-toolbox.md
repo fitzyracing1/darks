@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/googleapis/mcp-toolbox/issues/new
-- **Stars:** 16847 · **Generated:** 2026-11-12T12:44:21.228Z
+- **Stars:** 16851 · **Generated:** 2026-11-12T18:39:27.411Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -18,7 +18,7 @@ CI: "CF: Deploy Dev Docs" workflow failing on main since 2026-09-28
 <!-- BEGIN BODY -->
 Hi! The **CF: Deploy Dev Docs** workflow (`.github/workflows/deploy_dev_docs_to_cf.yaml`) on `main` has been failing since 2026-09-28. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/googleapis/mcp-toolbox/actions/runs/43073216748 — dark (conclusion: `failure`), 2026-11-11 17:58 UTC
+- Latest run on `main`: https://github.com/googleapis/mcp-toolbox/actions/runs/43279028079 — dark (conclusion: `failure`), 2026-11-12 18:21 UTC
 - Dark since: 2026-09-28 21:08 UTC (first run of the current streak)
 - Job / step: `deploy` → `Push to Cloudflare Branch`
 - Likely cause: fatal: could not read Username for 'https://github.com': No such device or address
@@ -26,9 +26,9 @@ Hi! The **CF: Deploy Dev Docs** workflow (`.github/workflows/deploy_dev_docs_to_
 <details><summary>End of the job log</summary>
 
 ```
- delete mode 100644 dev/pagefind/index/en_f597e03.pf_index
+ create mode 100644 dev/pagefind/index/en_fba6d1a.pf_index
+ create mode 100644 dev/pagefind/pagefind.en_19238b6da0.pf_meta
  delete mode 100644 dev/pagefind/pagefind.en_596b0cd2a3.pf_meta
- create mode 100644 dev/pagefind/pagefind.en_e8a84bf823.pf_meta
  create mode 100644 dev/resources/tools/conversational-analytics-create-data-agent/index.html
  create mode 100644 dev/resources/tools/conversational-analytics-delete-data-agent/index.html
  create mode 100644 dev/resources/tools/conversational-analytics-update-data-agent/index.html

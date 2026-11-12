@@ -4,34 +4,39 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/l0ng-ai/openidea/issues/new
-- **Stars:** 8706 · **Generated:** 2026-11-12T12:44:21.228Z
+- **Stars:** 8736 · **Generated:** 2026-11-12T18:39:27.411Z
 - Nothing in this file has been sent anywhere.
-- **Note for Joshua:** cancelled by a concurrency group — likely noise
-- **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 2 workflows dark on main ("CI", "Language smoke")
+CI: "CI" workflow failing on main since 2026-11-10
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
+Hi! The **CI** workflow (`.github/workflows/ci.yml`) on `main` has been failing since 2026-11-10. Here is what I saw, in case it's useful:
 
-### CI (`.github/workflows/ci.yml`)
-
-- Latest run on `main`: https://github.com/l0ng-ai/openidea/actions/runs/43218760816 — dark (conclusion: `cancelled`), 2026-11-12 12:32 UTC
+- Latest run on `main`: https://github.com/l0ng-ai/openidea/actions/runs/43249814127 — dark (conclusion: `failure`), 2026-11-12 15:37 UTC
 - Dark since: 2026-11-10 13:06 UTC (first run of the current streak)
-- Job / step: `Changes`
-- Likely cause: Canceling since a higher priority waiting request for ci-refs/heads/main exists
+- Job / step: `Frontend` → `Run pnpm format:check`
+- Likely cause: Found 10 warnings and 0 errors.
 
-### Language smoke (`.github/workflows/language-smoke.yml`)
+<details><summary>End of the job log</summary>
 
-- Latest run on `main`: https://github.com/l0ng-ai/openidea/actions/runs/43216664635 — dark (conclusion: `cancelled`), 2026-11-12 12:18 UTC
-- Dark since: 2026-11-12 04:40 UTC (first run of the current streak)
-- Likely cause: run cancelled
+```
+Finished in 1.2s on 2219 files with 97 rules using 4 threads.
+$ oxfmt --check
+Checking formatting...
+src/features/plugins/__tests__/settings.test.tsx (1ms)
+Format issues found in above 1 files. Run without `--check` to fix.
+Finished in 5289ms on 2778 files using 4 threads.
+[ELIFECYCLE] Command failed with exit code 1.
+##[error]Process completed with exit code 1.
+```
+
+</details>
 
 If this is already known or expected, feel free to close. Thanks for maintaining openidea!
 

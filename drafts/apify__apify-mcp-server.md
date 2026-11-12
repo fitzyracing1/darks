@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/apify/apify-mcp-server/issues/new
-- **Stars:** 15898 · **Generated:** 2026-11-12T12:44:21.228Z
+- **Stars:** 15958 · **Generated:** 2026-11-12T18:39:27.411Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title

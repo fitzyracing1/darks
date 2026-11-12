@@ -1,8 +1,8 @@
 <!-- dark-draft: flutter/flutter -->
-<!-- draft-state: duplicate -->
+<!-- draft-state: resolved -->
 # Upstream issue draft: flutter/flutter
 
-- **Status:** not for filing — upstream already has an open issue/PR about every dark workflow here
+- **Status:** resolved — lit again (2026-11-12); nothing to file
 - **Would be filed at:** https://github.com/flutter/flutter/issues/new
 - **Stars:** 181244 · **Generated:** 2026-11-12T12:44:21.228Z
 - Nothing in this file has been sent anywhere.
