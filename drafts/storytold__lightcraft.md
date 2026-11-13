@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/storytold/lightcraft/issues/new
-- **Stars:** 15892 · **Generated:** 2026-11-13T00:54:20.399Z
+- **Stars:** 15904 · **Generated:** 2026-11-13T06:46:32.203Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -18,22 +18,22 @@ CI: "SonarCloud" workflow failing on main since 2026-11-12
 <!-- BEGIN BODY -->
 Hi! The **SonarCloud** workflow (`.github/workflows/sonarcloud.yml`) on `main` has been failing since 2026-11-12. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/storytold/lightcraft/actions/runs/43209547314 — dark (conclusion: `failure`), 2026-11-12 11:29 UTC
+- Latest run on `main`: https://github.com/storytold/lightcraft/actions/runs/43360786720 — dark (conclusion: `failure`), 2026-11-13 03:42 UTC
 - Dark since: 2026-11-12 11:28 UTC (first run of the current streak)
-- Job / step: `sonarcloud / Tests 1/8` → `Merge this shard's profiles`
-- Likely cause: llvm-profdata could not merge shard 1's profiles (exit 1)
+- Job / step: `sonarcloud / SonarCloud Scan` → `Fail on Rust shard test failures`
+- Likely cause: Coverage shard 6 tests failed (exit 100); analysis was still uploaded
 
 <details><summary>End of the job log</summary>
 
 ```
-info: downloading 4 components
-  1.99.1-x86_64-unknown-linux-gnu installed - rustc 1.99.1 (58cf8f9c3 2026-10-13)
-Raw profiles: 1.6G in 973 files
-Filesystem      Size  Used Avail Use% Mounted on
-/dev/root       145G   61G   84G  42% /
-warning: profraw/shard-1-15173-3831191675021996432_0.profraw: invalid instrumentation profile data (file header is corrupt)
-error: no profile can be merged
-##[error]shard 1 wrote a truncated or corrupt coverage profile: profraw/shard-1-15173-3831191675021996432_0.profraw: invalid instrumentation profile data (file header is corrupt)
+04:50:31.393 INFO  ------------- Upload SCA dependency files
+04:50:32.861 INFO  Successfully sent architecture data
+04:50:34.650 INFO  Sensor cache published successfully
+04:50:36.411 INFO  Analysis total time: 2:15.876 min
+04:50:36.412 INFO  SonarScanner Engine completed successfully
+04:50:36.847 INFO  EXECUTION SUCCESS
+04:50:36.848 INFO  Total time: 2:21.891s
+##[error]Coverage shard 4 tests failed (exit 100); analysis was still uploaded
 ```
 
 </details>

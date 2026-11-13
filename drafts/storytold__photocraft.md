@@ -4,14 +4,13 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/storytold/photocraft/issues/new
-- **Stars:** 78987 · **Generated:** 2026-11-13T00:54:20.399Z
+- **Stars:** 79041 · **Generated:** 2026-11-13T06:46:32.203Z
 - Nothing in this file has been sent anywhere.
-- **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 3 workflows dark on main ("FreeBSD", "Perf (nightly)", "SonarCloud")
+CI: 4 workflows dark on main ("FreeBSD", "Perf (nightly)", "SonarCloud", +1 more)
 <!-- END TITLE -->
 
 ## Body
@@ -21,21 +20,21 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### FreeBSD (`.github/workflows/freebsd.yml`)
 
-- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/43141345142 — dark (conclusion: `failure`), 2026-11-12 02:25 UTC
+- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/43351801650 — dark (conclusion: `failure`), 2026-11-13 02:23 UTC
 - Dark since: 2026-11-12 02:25 UTC (first run of the current streak)
 - Job / step: `freebsd / FreeBSD 15 x86_64 (build + test)` → `Build and test`
-- Likely cause: error: test failed, to rerun pass '-p photocraft-ui-egui --lib'
+- Likely cause: error: test failed, to rerun pass '-p xtask --lib'
 
 <details><summary>End of the job log</summary>
 
 ```
-thread 'canvas::background_redraw::tests::a_redraw_across_a_text_gamma_change_and_back_is_not_kept' (1008761) panicked at crates/ui-egui/src/canvas/background_redraw/tests.rs:352:5:
-the redraw finished before the change back
+thread 'psd_write_oracle::tests::export_batch_checks_reopened_result_and_propagates_command_failure' (550475) panicked at xtask/src/psd_write_oracle.rs:520:96:
+called `Result::unwrap()` on an `Err` value: "start CLI: Text file busy (os error 26)"
 note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
 failures:
-    canvas::background_redraw::tests::a_redraw_across_a_text_gamma_change_and_back_is_not_kept
-test result: FAILED. 7008 passed; 1 failed; 24 ignored; 0 measured; 0 filtered out; finished in 285.52s
-error: test failed, to rerun pass `-p photocraft-ui-egui --lib`
+    psd_write_oracle::tests::export_batch_checks_reopened_result_and_propagates_command_failure
+test result: FAILED. 12 passed; 1 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.17s
+error: test failed, to rerun pass `-p xtask --lib`
 ##[error]Process completed with exit code 101.
 ```
 
@@ -43,21 +42,21 @@ error: test failed, to rerun pass `-p photocraft-ui-egui --lib`
 
 ### Perf (nightly) (`.github/workflows/perf-nightly.yml`)
 
-- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/43148400379 — dark (conclusion: `failure`), 2026-11-12 03:28 UTC
+- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/43359229965 — dark (conclusion: `failure`), 2026-11-13 03:28 UTC
 - Dark since: 2026-11-12 03:28 UTC (first run of the current streak)
 - Job / step: `perf (macOS, Apple GPU)` → `Run benchmarks`
-- Likely cause: | P44 | Open .psd, 36 MP, 3 layers | track only | – | – | – | – | – | – | **missing**: bench 'interactive_bench' failed: interactive_bench --reps 5 --json /Users/runner/work/photocraft/photocraft/target/perf/interactive…
+- Likely cause: P44 Open .psd, 36 MP, 3 layers: **missing**: bench 'interactive_bench' failed: interactive_bench --reps 5 --json /Users/runner/work/photocraft/photocraft/target/perf/interactive_bench.json: exited with exit status: 101
 
 <details><summary>End of the job log</summary>
 
 ```
-| Id | Scenario | Target | Why | Issue |
-|---|---|---|---|---|
-| P15 | Zoom / pan frame time on a 15000×10000 16-bit document | ≤ 16 ms per frame | no headless canvas frame harness yet (zoom and pan sample the GPU texture in the egui paint callback) | [#209](https://github.com/stor…
-| P23 | Warp / Puppet / Perspective preview at 4K | ≤ 16 ms per frame, commit in the background | the previews run inside the UI tools; no headless frame harness, no background commit | [#210](https://github.com/storyto…
-| P34 | Brush preview memory, small dab on an 8K viewport | ≤ 2 MiB | the live brush preview buffers are UI-side; no headless counter yet | [#211](https://github.com/storytold/photocraft/issues/211) |
-| P35 | Marquee drag on 24 MP with Alt/Shift | ≤ 17 ms p95 | Shift/Alt marquee modifiers don't exist yet (#208) and the drag preview is UI-side | [#211](https://github.com/storytold/photocraft/issues/211) |
-wrote /Users/runner/work/photocraft/photocraft/target/perf/results.json
+  P40 Brush dab 60 px on 36 MP: **missing**: bench `interactive_bench` failed: interactive_bench --reps 5 --json /Users/runner/work/photocraft/photocraft/target/perf/interactive_bench.json: exited with exit status: 101
+  P41 Gaussian Blur r 40 on 36 MP: **missing**: bench `interactive_bench` failed: interactive_bench --reps 5 --json /Users/runner/work/photocraft/photocraft/target/perf/interactive_bench.json: exited with exit status: 1…
+  P42 Curves dialog change, layer preview, 36 MP: **missing**: bench `interactive_bench` failed: interactive_bench --reps 5 --json /Users/runner/work/photocraft/photocraft/target/perf/interactive_bench.json: exited with…
+  P43 Save .psd, 36 MP, 3 layers: **missing**: bench `interactive_bench` failed: interactive_bench --reps 5 --json /Users/runner/work/photocraft/photocraft/target/perf/interactive_bench.json: exited with exit status: 101
+  P44 Open .psd, 36 MP, 3 layers: **missing**: bench `interactive_bench` failed: interactive_bench --reps 5 --json /Users/runner/work/photocraft/photocraft/target/perf/interactive_bench.json: exited with exit status: 101
+  bench interactive_bench: interactive_bench --reps 5 --json /Users/runner/work/photocraft/photocraft/target/perf/interactive_bench.json: exited with exit status: 101
+  bench large_file_bench: large_file_bench --reps 3 --json /Users/runner/work/photocraft/photocraft/target/perf/large_file_bench.json: exited with exit status: 1
 ##[error]Process completed with exit code 1.
 ```
 
@@ -65,9 +64,47 @@ wrote /Users/runner/work/photocraft/photocraft/target/perf/results.json
 
 ### SonarCloud (`.github/workflows/sonarcloud.yml`)
 
-- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/43335805563 — dark (conclusion: `cancelled`), 2026-11-13 00:16 UTC
+- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/43344649373 — dark (conclusion: `failure`), 2026-11-13 01:24 UTC
 - Dark since: 2026-11-12 12:27 UTC (first run of the current streak)
-- Likely cause: run cancelled
+- Job / step: `sonarcloud / SonarCloud Scan` → `Fail on Rust shard test failures`
+- Likely cause: Coverage shard 3 tests failed (exit 100); analysis was still uploaded
+
+<details><summary>End of the job log</summary>
+
+```
+02:58:35.305 INFO  ------------- Upload SCA dependency files
+02:58:36.764 INFO  Successfully sent architecture data
+02:58:38.115 INFO  Sensor cache published successfully
+02:58:41.401 INFO  Analysis total time: 4:03.791 min
+02:58:41.402 INFO  SonarScanner Engine completed successfully
+02:58:41.565 INFO  EXECUTION SUCCESS
+02:58:41.566 INFO  Total time: 4:09.702s
+##[error]Coverage shard 2 tests failed (exit 100); analysis was still uploaded
+```
+
+</details>
+
+### Release (`.github/workflows/release.yml`)
+
+- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/43352909287 — dark (conclusion: `failure`), 2026-11-13 02:32 UTC
+- Dark since: 2026-11-13 02:32 UTC (first run of the current streak)
+- Job / step: `credits / refresh` → `Refresh contributor credits for this release commit`
+- Likely cause: Contributor refresh failed: gh failed: gh: HTTP 502
+
+<details><summary>End of the job log</summary>
+
+```
+/home/runner/work/_temp/git-credentials-f8177b35-5147-453b-8fe2-e4d2ac904df9.config
+/home/runner/work/_temp/git-credentials-f8177b35-5147-453b-8fe2-e4d2ac904df9.config
+/github/runner_temp/git-credentials-f8177b35-5147-453b-8fe2-e4d2ac904df9.config
+/github/runner_temp/git-credentials-f8177b35-5147-453b-8fe2-e4d2ac904df9.config
+Removing credentials config '/home/runner/work/_temp/git-credentials-f8177b35-5147-453b-8fe2-e4d2ac904df9.config'
+##[start-action display=Generate and validate contributor credits;id=__self.__run]
+Contributor refresh failed: gh failed: gh: HTTP 502
+##[error]Process completed with exit code 1.
+```
+
+</details>
 
 If this is already known or expected, feel free to close. Thanks for maintaining photocraft!
 

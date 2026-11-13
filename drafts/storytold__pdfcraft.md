@@ -4,8 +4,14 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/storytold/pdfcraft/issues/new
-- **Stars:** 20519 · **Generated:** 2026-11-13T00:54:20.399Z
+- **Stars:** 20537 · **Generated:** 2026-11-13T06:46:32.203Z
 - Nothing in this file has been sent anywhere.
+
+## Skipped: upstream already tracking
+
+- SonarCloud (`.github/workflows/sonarcloud.yml`): [issue #7175](https://github.com/storytold/pdfcraft/issues/7175) "CI: investigate three recurring coverage-test failures on main"
+
+These workflows are left out of the body below.
 
 ## Suggested title
 
@@ -20,18 +26,18 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### Nightly macOS (`.github/workflows/nightly-macos.yml`)
 
-- Latest run on `main`: https://github.com/storytold/pdfcraft/actions/runs/43143235183 — dark (conclusion: `failure`), 2026-11-12 02:42 UTC
+- Latest run on `main`: https://github.com/storytold/pdfcraft/actions/runs/43354042554 — dark (conclusion: `failure`), 2026-11-13 02:42 UTC
 - Dark since: 2026-11-12 02:42 UTC (first run of the current streak)
 - Job / step: `gate / gate (macos-latest)` → `Gate`
-- Likely cause: test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+- Likely cause: error: 4 targets failed:
 
 <details><summary>End of the job log</summary>
 
 ```
 running 0 tests
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
 error: 4 targets failed:
     `-p pdfcraft-automation --test it`
-test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
     `-p pdfcraft-platform --lib`
     `-p pdfcraft-ui-egui --lib`
     `-p pdfcraft-ui-egui --test it`
@@ -42,7 +48,7 @@ test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; fini
 
 ### CI (`.github/workflows/ci.yml`)
 
-- Latest run on `main`: https://github.com/storytold/pdfcraft/actions/runs/43290876066 — dark (conclusion: `failure`), 2026-11-12 19:30 UTC
+- Latest run on `main`: https://github.com/storytold/pdfcraft/actions/runs/43346926538 — dark (conclusion: `failure`), 2026-11-13 01:42 UTC
 - Dark since: 2026-11-12 19:30 UTC (first run of the current streak)
 - Job / step: `gate / gate (windows-latest)` → `Gate`
 - Likely cause: Error: Path Validation Error: Path(s) specified in the action for caching do(es) not exist, hence no cache is being saved.

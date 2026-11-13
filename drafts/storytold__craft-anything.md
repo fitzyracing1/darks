@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/storytold/craft-anything/issues/new
-- **Stars:** 29848 · **Generated:** 2026-11-13T00:54:20.399Z
+- **Stars:** 30406 · **Generated:** 2026-11-13T06:46:32.203Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -20,7 +20,7 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### FreeBSD (`.github/workflows/freebsd.yml`)
 
-- Latest run on `main`: https://github.com/storytold/craft-anything/actions/runs/43141378622 — dark (conclusion: `failure`), 2026-11-12 02:26 UTC
+- Latest run on `main`: https://github.com/storytold/craft-anything/actions/runs/43351826331 — dark (conclusion: `failure`), 2026-11-13 02:23 UTC
 - Dark since: 2026-11-12 02:26 UTC (first run of the current streak)
 - Job / step: `freebsd / FreeBSD 15 x86_64 (build + test)` → `Build and test`
 - Likely cause: error: test failed, to rerun pass '-p craft-anything-ai --lib'
@@ -28,12 +28,12 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 <details><summary>End of the job log</summary>
 
 ```
-  left: 0
- right: 3
 failures:
     rebuild::kinds::runs::tests::a_relative_project_runs_a_console_check
     rebuild::tests::console_study_keeps_two_real_observations_for_each_input
-test result: FAILED. 613 passed; 2 failed; 3 ignored; 0 measured; 0 filtered out; finished in 9.98s
+    rebuild::tests::picking_up_a_build::a_failed_turn_leaves_just_ask_questions_to_tell_with_the_next_message
+    rebuild::tests::picking_up_a_build::a_skipped_scan_does_not_hide_the_builders_own_failure
+test result: FAILED. 634 passed; 4 failed; 3 ignored; 0 measured; 0 filtered out; finished in 10.17s
 error: test failed, to rerun pass `-p craft-anything-ai --lib`
 ##[error]Process completed with exit code 101.
 ```

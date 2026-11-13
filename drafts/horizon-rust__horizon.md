@@ -4,8 +4,9 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/horizon-rust/horizon/issues/new
-- **Stars:** 9119 · **Generated:** 2026-11-13T00:54:20.399Z
+- **Stars:** 9180 · **Generated:** 2026-11-13T06:46:32.203Z
 - Nothing in this file has been sent anywhere.
+- **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Skipped: upstream already tracking
 
@@ -16,30 +17,54 @@ These workflows are left out of the body below.
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: "mojang republish" workflow failing on main since 2026-11-12
+CI: 2 workflows dark on main ("mojang republish", "release")
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! The **mojang republish** workflow (`.github/workflows/mojang-republish.yml`) on `main` has been failing since 2026-11-12. Here is what I saw, in case it's useful:
+Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
 
-- Latest run on `main`: https://github.com/horizon-rust/horizon/actions/runs/43339259371 — dark (conclusion: `failure`), 2026-11-13 00:42 UTC
+### mojang republish (`.github/workflows/mojang-republish.yml`)
+
+- Latest run on `main`: https://github.com/horizon-rust/horizon/actions/runs/43379482071 — dark (conclusion: `failure`), 2026-11-13 06:33 UTC
 - Dark since: 2026-11-12 20:01 UTC (first run of the current streak)
-- Job / step: `check` → `Check the manifest`
-- Likely cause: python3: can't open file '/home/ludovic/.actions-runners/horizon-light-2/_work/horizon/horizon/tools/ci/mojang_republish.py': [Errno 2] No such file or directory
+- Job / step: `check` → `Set up job`
+- Likely cause: No space left on device
 
 <details><summary>End of the job log</summary>
 
 ```
-HEAD is now at 36eb98b6f6e Merge pull request #15815 from rdbtCVS/t3/fix-nightly-parity-regressions
+Metadata: read
+Secret source: Actions
+Cache mode: write
+Prepare workflow directory
+Prepare all required actions
+Getting action download info
+Download action repository 'actions/checkout@v7' (SHA:3d3c42e5aac5ba805825da76410c181273ba90b1)
+##[error]No space left on device
+```
+
+</details>
+
+### release (`.github/workflows/release.yml`)
+
+- Latest run on `main`: https://github.com/horizon-rust/horizon/actions/runs/43377082908 — dark (conclusion: `cancelled`), 2026-11-13 06:12 UTC
+- Dark since: 2026-11-13 06:12 UTC (first run of the current streak)
+- Job / step: `decide` → `Run python3 tools/release_train.py decide --kind game ${HEAD_SHA:+--head "$HEAD_SHA"} ${FORCE:+--force} | tee decision.json`
+- Likely cause: The job has exceeded the maximum execution time of 10m0s
+
+<details><summary>End of the job log</summary>
+
+```
+ * [new tag]               v2026.10.22.16          -> v2026.10.22.16
+ * [new tag]               v2026.10.23             -> v2026.10.23
   origin/main
-36eb98b6f6ec4f22649cbe65bbfd32bc0dc2083f
+a30ed9e44d35877d01f1ce5ceccb4346e9994c2d
 Switched to a new branch 'main'
 branch 'main' set up to track 'origin/main'.
-36eb98b6f6ec4f22649cbe65bbfd32bc0dc2083f
-python3: can't open file '/home/ludovic/.actions-runners/horizon-light-2/_work/horizon/horizon/tools/ci/mojang_republish.py': [Errno 2] No such file or directory
-##[error]Process completed with exit code 2.
+a30ed9e44d35877d01f1ce5ceccb4346e9994c2d
+##[error]The operation was canceled.
 ```
 
 </details>

@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/xberg-io/xberg/issues/new
-- **Stars:** 9580 · **Generated:** 2026-11-13T00:54:20.399Z
+- **Stars:** 9581 · **Generated:** 2026-11-13T06:46:32.203Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** cancelled by a concurrency group — likely noise
 
@@ -21,21 +21,21 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### CI Rust (`.github/workflows/ci-rust.yaml`)
 
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/43332942796 — dark (conclusion: `cancelled`), 2026-11-12 23:56 UTC
+- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/43375096155 — dark (conclusion: `cancelled`), 2026-11-13 05:54 UTC
 - Dark since: 2026-10-25 18:30 UTC (first run of the current streak)
-- Job / step: `Rust (ubuntu-24.04-arm)` → `Run tests`
+- Job / step: `Rust tract-only (no-ORT)` → `Run no-ORT tract tests`
 - Likely cause: Canceling since a higher priority waiting request for ci-rust-refs/heads/main exists
 
 <details><summary>End of the job log</summary>
 
 ```
-     Running `sccache /home/runner/.rustup/toolchains/1.99.1-aarch64-unknown-linux-gnu/bin/rustc --crate-name qrcode --edition=2021 /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/qrcode-0.14.1/src/lib…
-       Fresh dotenvy v0.15.7
-       Fresh jpeg-encoder v0.7.1
-     Running `/home/runner/work/xberg/xberg/target/debug/build/xberg-a054ddfffdc12d1a/build-script-build`
-     Running `sccache /home/runner/.rustup/toolchains/1.99.1-aarch64-unknown-linux-gnu/bin/rustc --crate-name xberg_tesseract --edition=2024 crates/xberg-tesseract/src/lib.rs --error-format=json --json=diagnostic-render…
-     Running `sccache /home/runner/.rustup/toolchains/1.99.1-aarch64-unknown-linux-gnu/bin/rustc --crate-name xberg --edition=2024 crates/xberg/src/lib.rs --error-format=json --json=diagnostic-rendered-ansi,artifacts,fu…
-     Running `sccache /home/runner/.rustup/toolchains/1.99.1-aarch64-unknown-linux-gnu/bin/rustc --crate-name xberg --edition=2024 crates/xberg/src/lib.rs --error-format=json --json=diagnostic-rendered-ansi,artifacts,fu…
+   Compiling dirs v7.0.0
+   Compiling codepage v0.1.3
+   Compiling fs2 v0.4.3
+   Compiling jpeg-encoder v0.7.1
+   Compiling hex v0.4.3
+   Compiling dotenvy v0.15.7
+   Compiling jotdown v0.10.0
 ##[error]The operation was canceled.
 ```
 
@@ -43,21 +43,21 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### CI E2E (`.github/workflows/ci-e2e.yaml`)
 
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/43332942795 — dark (conclusion: `cancelled`), 2026-11-12 23:56 UTC
+- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/43375096123 — dark (conclusion: `cancelled`), 2026-11-13 05:54 UTC
 - Dark since: 2026-11-03 17:32 UTC (first run of the current streak)
-- Job / step: `Build FFI (x86_64-unknown-linux-gnu)` → `Build FFI library`
+- Job / step: `Build FFI (aarch64-unknown-linux-gnu)` → `Build FFI library`
 - Likely cause: Canceling since a higher priority waiting request for ci-e2e-refs/heads/main exists
 
 <details><summary>End of the job log</summary>
 
 ```
-     Running `CARGO=/home/runner/.rustup/toolchains/1.99.1-x86_64-unknown-linux-gnu/bin/cargo CARGO_CRATE_NAME=nom_exif CARGO_MANIFEST_DIR=/home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/nom-exif-3.8.0…
-   Compiling utoipa v6.0.0
-     Running `CARGO=/home/runner/.rustup/toolchains/1.99.1-x86_64-unknown-linux-gnu/bin/cargo CARGO_CRATE_NAME=utoipa CARGO_MANIFEST_DIR=/home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/utoipa-6.0.0 CAR…
-   Compiling xberg-paddle-ocr v1.4.0 (/home/runner/work/xberg/xberg/crates/xberg-paddle-ocr)
-     Running `CARGO=/home/runner/.rustup/toolchains/1.99.1-x86_64-unknown-linux-gnu/bin/cargo CARGO_CRATE_NAME=xberg_paddle_ocr CARGO_MANIFEST_DIR=/home/runner/work/xberg/xberg/crates/xberg-paddle-ocr CARGO_MANIFEST_PAT…
-   Compiling xberg-ffi v1.4.0 (/home/runner/work/xberg/xberg/crates/xberg-ffi)
-     Running `CARGO=/home/runner/.rustup/toolchains/1.99.1-x86_64-unknown-linux-gnu/bin/cargo CARGO_CRATE_NAME=build_script_build CARGO_MANIFEST_DIR=/home/runner/work/xberg/xberg/crates/xberg-ffi CARGO_MANIFEST_PATH=/ho…
+[xberg-libwpd 1.4.0] cargo:warning=/home/runner/work/xberg/xberg/target/release/build/xberg-libwpd-7186226230dcd48e/out/boost/boost/proto/transform/impl.hpp:255:9:   required from 'typename boost::proto::detail::apply_t…
+[xberg-libwpd 1.4.0] cargo:warning=/home/runner/work/xberg/xberg/target/release/build/xberg-libwpd-7186226230dcd48e/out/boost/boost/spirit/home/support/make_component.hpp:248:51:   [ skipping 6 instantiation contexts, u…
+[xberg-libwpd 1.4.0] cargo:warning=/home/runner/work/xberg/xberg/target/release/build/xberg-libwpd-7186226230dcd48e/out/boost/boost/proto/transform/impl.hpp:255:9:   required from 'typename boost::proto::detail::apply_t…
+[xberg-libwpd 1.4.0] cargo:warning=/home/runner/work/xberg/xberg/target/release/build/xberg-libwpd-7186226230dcd48e/out/boost/boost/spirit/home/support/meta_compiler.hpp:243:32:   required from 'static typename boost::s…
+[xberg-libwpd 1.4.0] cargo:warning=/home/runner/work/xberg/xberg/target/release/build/xberg-libwpd-7186226230dcd48e/out/boost/boost/spirit/home/support/meta_compiler.hpp:264:49:   required from 'typename boost::spirit::…
+[xberg-libwpd 1.4.0] cargo:warning=/home/runner/work/xberg/xberg/target/release/build/xberg-libwpd-7186226230dcd48e/out/boost/boost/spirit/home/qi/parse_attr.hpp:117:33:   required from 'bool boost::spirit::qi::phrase_p…
+[xberg-libwpd 1.4.0] cargo:warning=/home/runner/work/xberg/xberg/target/release/build/xberg-libwpd-7186226230dcd48e/out/boost/boost/spirit/home/qi/parse_attr.hpp:153:32:   required from 'bool boost::spirit::qi::phrase_p…
 ##[error]The operation was canceled.
 ```
 
@@ -65,7 +65,7 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### CI Integrations (`.github/workflows/ci-integrations.yaml`)
 
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/43332942844 — dark (conclusion: `cancelled`), 2026-11-12 23:56 UTC
+- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/43375096217 — dark (conclusion: `cancelled`), 2026-11-13 05:54 UTC
 - Dark since: 2026-11-12 03:46 UTC (first run of the current streak)
 - Job / step: `Build local integration bindings` → `Build abi3 Python wheel`
 - Likely cause: Canceling since a higher priority waiting request for ci-integrations-refs/heads/main exists
@@ -73,13 +73,13 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 <details><summary>End of the job log</summary>
 
 ```
-   Compiling lru v0.19.0
-   Compiling minijinja v3.1.0
-   Compiling jotdown v0.10.0
-   Compiling org v0.3.1
-   Compiling similar v3.2.1
-   Compiling pyo3-async-runtimes v0.30.0
-   Compiling xberg-py v1.4.0 (/home/runner/work/xberg/xberg/crates/xberg-py)
+   Compiling thin-vec v0.2.21
+   Compiling html-escape v0.3.1
+   Compiling micromap v0.3.0
+   Compiling bytecount v0.6.9
+   Compiling streaming-iterator v0.1.9
+   Compiling semver v1.0.28
+   Compiling tap v1.0.1
 ##[error]The operation was canceled.
 ```
 
@@ -87,22 +87,22 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### CI Lint (`.github/workflows/ci-lint.yaml`)
 
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/43332943289 — dark (conclusion: `cancelled`), 2026-11-12 23:56 UTC
+- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/43376475463 — dark (conclusion: `failure`), 2026-11-13 06:07 UTC
 - Dark since: 2026-11-12 05:22 UTC (first run of the current streak)
-- Job / step: `Docs snippets gate` → `Run docs snippets gate`
-- Likely cause: Canceling since a higher priority waiting request for ci-lint-refs/heads/main exists
+- Job / step: `validate / Validate (poly)` → `Lint`
+- Likely cause: warning: build failed, waiting for other jobs to finish...
 
 <details><summary>End of the job log</summary>
 
 ```
-url_gzip_encoded_document.md                                 rust/rust    PASS       compile 356042ms
-url_html_page_extract.md                                     rust/rust    PASS       compile 356042ms
-url_recursive_document_urls.md                               rust/rust    PASS       compile 356042ms
-url_remote_text_document.md                                  rust/rust    PASS       compile 356042ms
-----------------------------------------------------------------------------------------------------
-Checked at requested level: 856/1219 (70.2%) -- capability-capped 363, declared-capped 0, unavailable 0, downgraded 0, failed 0, skipped 0, errors 0 did not fully verify
-Total: 1219  Passed: 1219  Downgraded: 0  Failed: 0  Skipped: 0  Errors: 0  Unavailable: 0
-##[error]The operation was canceled.
+         = help: to override `-D warnings` add `#[allow(clippy::chunks_exact_to_as_chunks)]`
+      error: could not compile `xberg-native-pdf` (test "overprint_separation_black") due to 1 previous error
+      warning: build failed, waiting for other jobs to finish...
+  ✓ checkstyle
+  ✓ credo
+  ✓ golangci-lint
+  ✓ pyrefly
+##[error]Process completed with exit code 1.
 ```
 
 </details>
