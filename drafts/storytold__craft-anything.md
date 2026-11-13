@@ -4,19 +4,21 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/storytold/craft-anything/issues/new
-- **Stars:** 29654 · **Generated:** 2026-11-12T18:39:27.411Z
+- **Stars:** 29848 · **Generated:** 2026-11-13T00:54:20.399Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: "FreeBSD" workflow failing on main since 2026-11-12
+CI: 2 workflows dark on main ("FreeBSD", "CI")
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! The **FreeBSD** workflow (`.github/workflows/freebsd.yml`) on `main` has been failing since 2026-11-12. Here is what I saw, in case it's useful:
+Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
+
+### FreeBSD (`.github/workflows/freebsd.yml`)
 
 - Latest run on `main`: https://github.com/storytold/craft-anything/actions/runs/43141378622 — dark (conclusion: `failure`), 2026-11-12 02:26 UTC
 - Dark since: 2026-11-12 02:26 UTC (first run of the current streak)
@@ -34,6 +36,28 @@ failures:
 test result: FAILED. 613 passed; 2 failed; 3 ignored; 0 measured; 0 filtered out; finished in 9.98s
 error: test failed, to rerun pass `-p craft-anything-ai --lib`
 ##[error]Process completed with exit code 101.
+```
+
+</details>
+
+### CI (`.github/workflows/ci.yml`)
+
+- Latest run on `main`: https://github.com/storytold/craft-anything/actions/runs/43277180754 — dark (conclusion: `failure`), 2026-11-12 18:11 UTC
+- Dark since: 2026-11-12 18:11 UTC (first run of the current streak)
+- Job / step: `gate / gate (ubuntu-24.04)` → `Gate`
+- Likely cause: error: test failed, to rerun pass '-p craft-anything-ai --lib'
+
+<details><summary>End of the job log</summary>
+
+```
+             at /rustc/0ef1bc386059596dada8fb65b50425aab2ea637a/library/core/src/ops/function.rs:250:5
+note: Some details are omitted, run with `RUST_BACKTRACE=full` for a verbose backtrace.
+failures:
+    rebuild::tests::picking_up_a_build::a_failed_turn_leaves_just_ask_questions_to_tell_with_the_next_message
+    rebuild::tests::picking_up_a_build::a_skipped_scan_does_not_hide_the_builders_own_failure
+test result: FAILED. 637 passed; 2 failed; 3 ignored; 0 measured; 0 filtered out; finished in 10.54s
+error: test failed, to rerun pass `-p craft-anything-ai --lib`
+##[error]Process completed with exit code 1.
 ```
 
 </details>

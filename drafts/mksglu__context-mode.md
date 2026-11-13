@@ -4,13 +4,13 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/mksglu/context-mode/issues/new
-- **Stars:** 33976 · **Generated:** 2026-11-12T18:39:27.411Z
+- **Stars:** 33992 · **Generated:** 2026-11-13T00:54:20.399Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 3 workflows dark on main ("readme-stats", "weekly", "ci")
+CI: 2 workflows dark on main ("readme-stats", "weekly")
 <!-- END TITLE -->
 
 ## Body
@@ -57,28 +57,6 @@ hint: See the 'Note about fast-forwards' in 'git push --help' for details.
   code: 'ERR_MODULE_NOT_FOUND'
 }
 Node.js v24.22.2
-##[error]Process completed with exit code 1.
-```
-
-</details>
-
-### ci (`.github/workflows/ci.yml`)
-
-- Latest run on `main`: https://github.com/mksglu/context-mode/actions/runs/43267375799 — dark (conclusion: `failure`), 2026-11-12 17:14 UTC
-- Dark since: 2026-11-12 17:14 UTC (first run of the current streak)
-- Job / step: `ci (windows-latest, node 24.15.0)` → `D3 hook overhead p95 <= 15 ms (perf check; cold first call is info)`
-- Likely cause: {"ok":false,"budgetMs":15,"samples":40,"platform":"win32","node":"v24.15.0","cold":{"claude-code":{"firstWallMs":64,"bareMs":48,"firstOverheadMs":16},"codex":{"firstWallMs":65,"bareMs":49,"firstOverheadMs":16}},"agents"…
-
-<details><summary>End of the job log</summary>
-
-```
-gate milestone M6
-{"ok":true,"runs":10,"alive":0,"noPid":0,"graceMs":1000,"results":[{"run":1,"gpid":2032,"alive":false},{"run":2,"gpid":3232,"alive":false},{"run":3,"gpid":8872,"alive":false},{"run":4,"gpid":7992,"alive":false},{"run":5…
-{"ok":true,"runs":30,"taskkillMs":{"p50":71,"max":79},"goneAfterMs":{"p50":118,"max":128},"rows":[{"taskkillMs":71,"goneAfterMs":118},{"taskkillMs":74,"goneAfterMs":121},{"taskkillMs":71,"goneAfterMs":118},{"taskkillMs"…
-{"ok":true,"os":"win32","node":"v24.15.0","budgetMs":250,"trace":true,"crash":null,"rows":[{"call":"ctx_index","ms":190},{"call":"ctx_stats","ms":12.9},{"call":"ctx_stats","ms":8.7},{"call":"ctx_search","ms":15},{"call"…
-{"ok":true,"os":"win32","node":"v24.15.0","budgetMs":250,"trace":false,"crash":null,"rows":[{"call":"ctx_index","ms":133.5},{"call":"ctx_stats","ms":13.9},{"call":"ctx_stats","ms":8.2},{"call":"ctx_search","ms":15.6},{"…
-{"ok":true,"os":"win32","node":"v24.15.0","budgetMs":250,"trace":false,"crash":{"found":true},"rows":[{"call":"ctx_index","ms":149.1}],"over":0,"found":true}
-{"ok":false,"budgetMs":15,"samples":40,"platform":"win32","node":"v24.15.0","cold":{"claude-code":{"firstWallMs":64,"bareMs":48,"firstOverheadMs":16},"codex":{"firstWallMs":65,"bareMs":49,"firstOverheadMs":16}},"agents"…
 ##[error]Process completed with exit code 1.
 ```
 

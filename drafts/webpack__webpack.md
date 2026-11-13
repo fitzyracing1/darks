@@ -4,36 +4,36 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/webpack/webpack/issues/new
-- **Stars:** 66000 · **Generated:** 2026-11-12T18:39:27.411Z
+- **Stars:** 66000 · **Generated:** 2026-11-13T00:54:20.399Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: "Github Actions" workflow failing on main since 2026-11-12
+CI: "Benchmarks" workflow failing on main since 2026-11-12
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! The **Github Actions** workflow (`.github/workflows/test.yml`) on `main` has been failing since 2026-11-12. Here is what I saw, in case it's useful:
+Hi! The **Benchmarks** workflow (`.github/workflows/benchmarks.yml`) on `main` has been failing since 2026-11-12. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/webpack/webpack/actions/runs/43232533354 — dark (conclusion: `failure`), 2026-11-12 13:59 UTC
-- Dark since: 2026-11-12 13:59 UTC (first run of the current streak)
-- Job / step: `runtimes (bun)` → `Run yarn test:bun --ci`
-- Likely cause: Tests:       2 failed, 401 skipped, 168786 passed, 169189 total
+- Latest run on `main`: https://github.com/webpack/webpack/actions/runs/43324082087 — dark (conclusion: `failure`), 2026-11-12 22:53 UTC
+- Dark since: 2026-11-12 22:53 UTC (first run of the current streak)
+- Job / step: `benchmark (4/8)` → `Run memory benchmarks`
+- Likely cause: Installation of CodSpeed CLI with version 5.6.3 failed.
 
 <details><summary>End of the job log</summary>
 
 ```
-Snapshots:   59837 passed, 59837 total
-Time:        815.304 s
-Ran all test suites.
-error Command failed with exit code 1.
-info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
-error Command failed with exit code 1.
-info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
-##[error]Process completed with exit code 1.
+[command]/usr/bin/tar -xf /home/runner/work/_temp/73d4a700-b1aa-4be2-ba73-dedcffc6b705/cache.tzst -P -C /home/runner/work/webpack/webpack --use-compress-program unzstd
+Cache restored successfully
+Cache restored from key: codspeed-instruments-memory-ubuntu-26.04-X64-7.0.0-1019-azure-5.6.3
+##[end-action id=__CodSpeedHQ_action.__actions_cache;outcome=success;conclusion=success;duration_ms=1120]
+##[start-action display=Lookup installer hash;id=__CodSpeedHQ_action.installer-hash]
+##[end-action id=__CodSpeedHQ_action.installer-hash;outcome=success;conclusion=success;duration_ms=69]
+##[start-action display=Install CodSpeed runner;id=__CodSpeedHQ_action.__run]
+##[error]Installation of CodSpeed CLI with version 5.6.3 failed.
 ```
 
 </details>

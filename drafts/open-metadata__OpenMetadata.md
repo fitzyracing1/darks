@@ -4,13 +4,13 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/open-metadata/OpenMetadata/issues/new
-- **Stars:** 15753 · **Generated:** 2026-11-12T18:39:27.411Z
+- **Stars:** 15756 · **Generated:** 2026-11-13T00:54:20.399Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 2 workflows dark on main ("Merge Queue Dequeue Report", "monitor-slack-link")
+CI: 3 workflows dark on main ("Merge Queue Dequeue Report", "monitor-slack-link", "security-scan")
 <!-- END TITLE -->
 
 ## Body
@@ -20,7 +20,7 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### Merge Queue Dequeue Report (`.github/workflows/merge-queue-dequeue-report.yml`)
 
-- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/43246639080 — dark (conclusion: `failure`), 2026-11-12 15:20 UTC
+- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/43297087364 — dark (conclusion: `failure`), 2026-11-12 20:07 UTC
 - Dark since: 2026-11-03 21:06 UTC (first run of the current streak)
 - Job / step: `evict-main-conflicts` → `Remove queue entries that conflict with main`
 - Likely cause: cannot iterate over: null
@@ -42,7 +42,7 @@ cannot iterate over: null
 
 ### monitor-slack-link (`.github/workflows/monitor-slack-link.yml`)
 
-- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/43277344102 — dark (conclusion: `failure`), 2026-11-12 18:12 UTC
+- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/43337196743 — dark (conclusion: `failure`), 2026-11-13 00:27 UTC
 - Dark since: 2026-11-06 22:08 UTC (first run of the current streak)
 - Job / step: `monitor-slack-link` → `Set up Python 3.9`
 - Likely cause: The version '3.9' with architecture 'x64' was not found for Ubuntu 26.04.
@@ -55,9 +55,31 @@ Updating files: 100% (27590/27590)
 Updating files: 100% (27590/27590), done.
 Switched to a new branch 'main'
 branch 'main' set up to track 'origin/main'.
-11bb2d85e8f82a47610b57f4cf9752950902a732
+dad5249791630d8d7f1b4b727a930dde6f0051e5
 Version 3.9 was not found in the local cache
 ##[error]The version '3.9' with architecture 'x64' was not found for Ubuntu 26.04.
+```
+
+</details>
+
+### security-scan (`.github/workflows/security-scan.yml`)
+
+- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/43336798788 — dark (conclusion: `failure`), 2026-11-13 00:24 UTC
+- Dark since: 2026-11-13 00:24 UTC (first run of the current streak)
+- Job / step: `security-scan` → `Install Ubuntu dependencies`
+- Likely cause: E: Package 'wkhtmltopdf' has no installation candidate
+
+<details><summary>End of the job log</summary>
+
+```
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Package wkhtmltopdf is not available, but is referred to by another package.
+This may mean that the package is missing, has been obsoleted, or
+is only available from another source
+E: Package 'wkhtmltopdf' has no installation candidate
+##[error]Process completed with exit code 100.
 ```
 
 </details>

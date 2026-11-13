@@ -4,13 +4,13 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/webiny/webiny-js/issues/new
-- **Stars:** 8052 · **Generated:** 2026-11-12T18:39:27.411Z
+- **Stars:** 8052 · **Generated:** 2026-11-13T00:54:20.399Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 3 workflows dark on next ("Cloud infrastructure Cleanup", "Rebuild Global Cache ("dev" branch)", "Record E2E replay steps")
+CI: 4 workflows dark on next ("Cloud infrastructure Cleanup", "Rebuild Global Cache ("dev" branch)", "Record E2E replay steps", +1 more)
 <!-- END TITLE -->
 
 ## Body
@@ -20,21 +20,21 @@ Hi! A few workflows on `next` have been dark recently. Details below, in case th
 
 ### Cloud infrastructure Cleanup (`.github/workflows/cleanup.yml`)
 
-- Latest run on `next`: https://github.com/webiny/webiny-js/actions/runs/43125650856 — dark (conclusion: `failure`), 2026-11-12 00:13 UTC
+- Latest run on `next`: https://github.com/webiny/webiny-js/actions/runs/43335224976 — dark (conclusion: `failure`), 2026-11-13 00:12 UTC
 - Dark since: 2026-10-10 00:23 UTC (first run of the current streak)
 - Job / step: `aws-nuke` → `Run AWS Nuke`
-- Likely cause: time="2026-11-12T00:33:30Z" level=fatal msg=failed
+- Likely cause: time="2026-11-13T00:38:23Z" level=fatal msg=failed
 
 <details><summary>End of the job log</summary>
 
 ```
 global - IAMPolicy - arn:aws:iam::726952677045:policy/DeployWebinyProjectExtra - [ARN: "arn:aws:iam::726952677045:policy/DeployWebinyProjectExtra", CreateDate: "2024-11-08T04:19:21Z", Name: "DeployWebinyProjectExtra", P…
 DeleteConflict: Cannot delete a policy attached to entities.
-	status code: 409, request id: 65028afb-828c-419f-8412-027eb2bc775f
+	status code: 409, request id: 59944ad3-5000-472e-84d6-fb783165eaa2
 global - IAMPolicy - arn:aws:iam::726952677045:policy/DeployWebinyProjectGroup3 - [ARN: "arn:aws:iam::726952677045:policy/DeployWebinyProjectGroup3", CreateDate: "2024-11-28T06:06:51Z", Name: "DeployWebinyProjectGroup3"…
 DeleteConflict: Cannot delete a policy attached to entities.
-	status code: 409, request id: 1083a11f-68b3-4ba5-ba5c-2a702dab6303
-time="2026-11-12T00:33:30Z" level=fatal msg=failed
+	status code: 409, request id: ccc747d7-d7bd-481d-9f06-ddbce35a8ffc
+time="2026-11-13T00:38:23Z" level=fatal msg=failed
 ##[error]Process completed with exit code 1.
 ```
 
@@ -79,6 +79,28 @@ Waiting 13 seconds before trying again
      Traces  .e2e/results/ (4 pages, trace.md in each test's directory)
       JUnit  .e2e/junit.xml
    Markdown  .e2e/summary.md
+##[error]Process completed with exit code 1.
+```
+
+</details>
+
+### Push (`.github/workflows/push.yml`)
+
+- Latest run on `next`: https://github.com/webiny/webiny-js/actions/runs/43307022581 — dark (conclusion: `failure`), 2026-11-12 21:07 UTC
+- Dark since: 2026-11-12 21:06 UTC (first run of the current streak)
+- Job / step: `E2E (DDB) - Project setup` → `Deploy API`
+- Likely cause: error: Rspack build failed.
+
+<details><summary>End of the job log</summary>
+
+```
+1.mjs                                                  153.0 kB
+3h.mjs                                                 200.5 kB
+8.mjs                                                  221.8 kB
+f.mjs                                                 1030.0 kB
+handler.mjs                                           4935.4 kB
+Total:                                                6804.9 kB
+error: Rspack build failed.
 ##[error]Process completed with exit code 1.
 ```
 

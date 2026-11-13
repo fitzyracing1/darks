@@ -4,9 +4,8 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/horizon-rust/horizon/issues/new
-- **Stars:** 9009 · **Generated:** 2026-11-12T18:39:27.411Z
+- **Stars:** 9119 · **Generated:** 2026-11-13T00:54:20.399Z
 - Nothing in this file has been sent anywhere.
-- **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Skipped: upstream already tracking
 
@@ -17,17 +16,33 @@ These workflows are left out of the body below.
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: "checks" workflow getting cancelled on main since 2026-11-12
+CI: "mojang republish" workflow failing on main since 2026-11-12
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! The **checks** workflow (`.github/workflows/ci.yml`) on `main` has been getting cancelled since 2026-11-12. Here is what I saw, in case it's useful:
+Hi! The **mojang republish** workflow (`.github/workflows/mojang-republish.yml`) on `main` has been failing since 2026-11-12. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/horizon-rust/horizon/actions/runs/43279373466 — dark (conclusion: `cancelled`), 2026-11-12 18:23 UTC
-- Dark since: 2026-11-12 17:44 UTC (first run of the current streak)
-- Likely cause: run cancelled
+- Latest run on `main`: https://github.com/horizon-rust/horizon/actions/runs/43339259371 — dark (conclusion: `failure`), 2026-11-13 00:42 UTC
+- Dark since: 2026-11-12 20:01 UTC (first run of the current streak)
+- Job / step: `check` → `Check the manifest`
+- Likely cause: python3: can't open file '/home/ludovic/.actions-runners/horizon-light-2/_work/horizon/horizon/tools/ci/mojang_republish.py': [Errno 2] No such file or directory
+
+<details><summary>End of the job log</summary>
+
+```
+HEAD is now at 36eb98b6f6e Merge pull request #15815 from rdbtCVS/t3/fix-nightly-parity-regressions
+  origin/main
+36eb98b6f6ec4f22649cbe65bbfd32bc0dc2083f
+Switched to a new branch 'main'
+branch 'main' set up to track 'origin/main'.
+36eb98b6f6ec4f22649cbe65bbfd32bc0dc2083f
+python3: can't open file '/home/ludovic/.actions-runners/horizon-light-2/_work/horizon/horizon/tools/ci/mojang_republish.py': [Errno 2] No such file or directory
+##[error]Process completed with exit code 2.
+```
+
+</details>
 
 If this is already known or expected, feel free to close. Thanks for maintaining horizon!
 

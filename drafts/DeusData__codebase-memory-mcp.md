@@ -4,15 +4,14 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/DeusData/codebase-memory-mcp/issues/new
-- **Stars:** 48565 · **Generated:** 2026-11-12T18:39:27.411Z
+- **Stars:** 48575 · **Generated:** 2026-11-13T00:54:20.399Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
-- **Note for Joshua:** cancelled by a concurrency group — likely noise
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 2 workflows dark on main ("Nightly Soak", "CodeQL SAST")
+CI: 2 workflows dark on main ("Nightly Soak", "test-impact-artifact")
 <!-- END TITLE -->
 
 ## Body
@@ -42,24 +41,24 @@ Total queries: 13704
 
 </details>
 
-### CodeQL SAST (`.github/workflows/codeql.yml`)
+### test-impact-artifact (`.github/workflows/test-impact-artifact.yml`)
 
-- Latest run on `main`: https://github.com/DeusData/codebase-memory-mcp/actions/runs/43276308616 — dark (conclusion: `cancelled`), 2026-11-12 18:06 UTC
-- Dark since: 2026-11-12 18:06 UTC (first run of the current streak)
-- Job / step: `analyze (c-cpp, manual, codeql-cpp)` → `Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1`
-- Likely cause: Canceling since a higher priority waiting request for codeql-c-cpp-refs/heads/main exists
+- Latest run on `main`: https://github.com/DeusData/codebase-memory-mcp/actions/runs/43315369517 — dark (conclusion: `failure`), 2026-11-12 21:57 UTC
+- Dark since: 2026-11-12 21:16 UTC (first run of the current streak)
+- Job / step: `publish` → `Publish the bundle`
+- Likely cause: test-impact publish: status 1: the graph of HEAD could not be built: frozen status 11, evidence 25, 190 file error(s): graph-ui/src/architecture/architecture-scenes.test.tsx 9-9
 
 <details><summary>End of the job log</summary>
 
 ```
-hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
-hint: 'development'. The just-created branch can be renamed via this command:
-hint:
-hint: 	git branch -m <name>
-hint:
-hint: Disable this message with "git config set advice.defaultBranchName false"
-Initialized empty Git repository in /home/runner/work/codebase-memory-mcp/codebase-memory-mcp/.git/
-##[error]The operation was canceled.
+grammar_probe_c: 42 tests, 0 incomplete, exit 0, 0.8 s
+grammar_probe_d: 75 tests, 0 incomplete, exit 0, 3.2 s
+grammar_probe_e: 56 tests, 0 incomplete, exit 0, 2.1 s
+grammar_probe_f: 184 tests, 0 incomplete, exit 0, 11.3 s
+grammar_probe_g: 45 tests, 0 incomplete, exit 0, 1.7 s
+map: 10311 tests, 319 incomplete, 27556 functions -> /tmp/tmp.5vu1WIH3wy/coverage
+test-impact publish: status 1: the graph of HEAD could not be built: frozen status 11, evidence 25, 190 file error(s): graph-ui/src/architecture/architecture-scenes.test.tsx 9-9
+##[error]Process completed with exit code 1.
 ```
 
 </details>

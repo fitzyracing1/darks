@@ -1,8 +1,8 @@
 <!-- dark-draft: apify/apify-mcp-server -->
-<!-- draft-state: ready -->
+<!-- draft-state: resolved -->
 # Upstream issue draft: apify/apify-mcp-server
 
-- **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
+- **Status:** resolved — lit again (2026-11-13); nothing to file
 - **Would be filed at:** https://github.com/apify/apify-mcp-server/issues/new
 - **Stars:** 15958 · **Generated:** 2026-11-12T18:39:27.411Z
 - Nothing in this file has been sent anywhere.

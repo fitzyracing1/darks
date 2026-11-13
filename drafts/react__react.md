@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/react/react/issues/new
-- **Stars:** 252541 · **Generated:** 2026-11-12T18:39:27.411Z
+- **Stars:** 252556 · **Generated:** 2026-11-13T00:54:20.399Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -20,21 +20,21 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### (DevTools) Regression Tests (`.github/workflows/devtools_regression_tests.yml`)
 
-- Latest run on `main`: https://github.com/react/react/actions/runs/43124415601 — dark (conclusion: `failure`), 2026-11-12 00:03 UTC
+- Latest run on `main`: https://github.com/react/react/actions/runs/43333933496 — dark (conclusion: `failure`), 2026-11-13 00:03 UTC
 - Dark since: 2026-10-11 00:06 UTC (first run of the current streak)
-- Job / step: `Download base build` → `Download react-devtools artifacts for base revision`
-- Likely cause: Could not download build as its conclusion was: failure
+- Job / step: `Run DevTools e2e tests for versions (16.5)` → `Run ./scripts/ci/download_devtools_regression_build.js 16.5`
+- Likely cause: Error: Cannot find module 'child-process-promise'
 
 <details><summary>End of the job log</summary>
 
 ```
-⠙ Downloading artifacts from GitHub for commit cb7c59ecdb7b620ed3d6ce0bf669d7502
-daedf13)
-⠹ Downloading artifacts from GitHub for commit cb7c59ecdb7b620ed3d6ce0bf669d7502
-daedf13)
-⠸ Downloading artifacts from GitHub for commit cb7c59ecdb7b620ed3d6ce0bf669d7502
-daedf13)
-Could not download build as its conclusion was: failure
+    at Module._compile (node:internal/modules/cjs/loader:1929:14) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/home/runner/work/react/react/scripts/ci/download_devtools_regression_build.js'
+  ]
+}
+Node.js v24.22.1
 ##[error]Process completed with exit code 1.
 ```
 

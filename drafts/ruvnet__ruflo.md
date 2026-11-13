@@ -4,35 +4,81 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/ruvnet/ruflo/issues/new
-- **Stars:** 81553 · **Generated:** 2026-11-12T18:39:27.411Z
+- **Stars:** 81576 · **Generated:** 2026-11-13T00:54:20.399Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: "CI/CD Pipeline" workflow failing on main since 2026-11-12
+CI: 3 workflows dark on main ("CI/CD Pipeline", "no-metaharness-smoke", "all-plugins-smoke")
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! The **CI/CD Pipeline** workflow (`.github/workflows/ci.yml`) on `main` has been failing since 2026-11-12. Here is what I saw, in case it's useful:
+Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
 
-- Latest run on `main`: https://github.com/ruvnet/ruflo/actions/runs/43139362232 — dark (conclusion: `failure`), 2026-11-12 02:08 UTC
+### CI/CD Pipeline (`.github/workflows/ci.yml`)
+
+- Latest run on `main`: https://github.com/ruvnet/ruflo/actions/runs/43314293568 — dark (conclusion: `failure`), 2026-11-12 21:51 UTC
 - Dark since: 2026-11-12 02:08 UTC (first run of the current streak)
 - Job / step: `Test Suite (ubuntu-latest)` → `Run all tests`
-- Likely cause: AssertionError: expected [] to deeply equal [ 'k1' ]
+- Likely cause: AssertionError: expected [ …(1261) ] to have a length of 2400 but got 1261
 
 <details><summary>End of the job log</summary>
 
 ```
-  duration_ms: 2.50865
+  duration_ms: 2.205007
   ...
 JSON report written to /home/runner/work/ruflo/ruflo/.test-results/vitest.json
 CI test ratchet: FAILED — 1 unexpected failing file(s)
-  + v3/@claude-flow/aidefence/__tests__/agentdb-vector-store.test.ts
-      ✗ AgentDB vector store (real agentdb import) keeps namespaces apart and supports get/delete/overwrite
-        AssertionError: expected [] to deeply equal [ 'k1' ]
+  + plugins/ruflo-console/tests/write-argv.spec.ts
+      ✗ the POSIX scripts on a real disk (sh and dd as this machine has them) eight writers of 55 kB batches through the POSIX append tear no line here (one dd block per batch)
+        AssertionError: expected [ …(1261) ] to have a length of 2400 but got 1261
+##[error]Process completed with exit code 1.
+```
+
+</details>
+
+### no-metaharness-smoke (`.github/workflows/no-metaharness-smoke.yml`)
+
+- Latest run on `main`: https://github.com/ruvnet/ruflo/actions/runs/43314293940 — dark (conclusion: `failure`), 2026-11-12 21:51 UTC
+- Dark since: 2026-11-12 20:34 UTC (first run of the current streak)
+- Job / step: `smoke-without-metaharness` → `Run meta-smoke (should pass with current optional deps in place)`
+- Likely cause: ⚠ 1 plugin(s) failed their smoke contract — see failing steps above.
+
+<details><summary>End of the job log</summary>
+
+```
+| `agentic-qe-fleet (external)` | ✓ | — | 5.6s |  |
+| `agentdb (external)` | ✓ | — | 1.7s |  |
+| `agentic-flow (external)` | ✓ | — | 4.2s |  |
+| `changelog contract` | ✓ | 4/4 | 0.0s |  |
+| `guard-probe (fast)` | ✓ | 2817/2817 | 149.5s |  |
+**Summary**: 51/52 plugins OK · 3581/3582 steps passed · 573.4s wall (parallel: true)
+⚠ 1 plugin(s) failed their smoke contract — see failing steps above.
+##[error]Process completed with exit code 1.
+```
+
+</details>
+
+### all-plugins-smoke (`.github/workflows/all-plugins-smoke.yml`)
+
+- Latest run on `main`: https://github.com/ruvnet/ruflo/actions/runs/43314293871 — dark (conclusion: `failure`), 2026-11-12 21:51 UTC
+- Dark since: 2026-11-12 20:56 UTC (first run of the current streak)
+- Job / step: `smoke-all` → `Discover and run every plugin smoke contract (parallel)`
+- Likely cause: "stepsFailed": 1,
+
+<details><summary>End of the job log</summary>
+
+```
+    "stepsPassed": 3581,
+    "stepsFailed": 1,
+    "stepsTotal": 3582,
+    "wallTimeMs": 695030
+  },
+  "generatedAt": "2026-11-12T21:58:13.364Z"
+}
 ##[error]Process completed with exit code 1.
 ```
 

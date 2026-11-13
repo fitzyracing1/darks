@@ -4,39 +4,49 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/l0ng-ai/openidea/issues/new
-- **Stars:** 8736 · **Generated:** 2026-11-12T18:39:27.411Z
+- **Stars:** 8756 · **Generated:** 2026-11-13T00:54:20.399Z
 - Nothing in this file has been sent anywhere.
+- **Note for Joshua:** cancelled by a concurrency group — likely noise
+- **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: "CI" workflow failing on main since 2026-11-10
+CI: 2 workflows dark on main ("CI", "Language smoke")
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! The **CI** workflow (`.github/workflows/ci.yml`) on `main` has been failing since 2026-11-10. Here is what I saw, in case it's useful:
+Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
 
-- Latest run on `main`: https://github.com/l0ng-ai/openidea/actions/runs/43249814127 — dark (conclusion: `failure`), 2026-11-12 15:37 UTC
+### CI (`.github/workflows/ci.yml`)
+
+- Latest run on `main`: https://github.com/l0ng-ai/openidea/actions/runs/43338702922 — dark (conclusion: `cancelled`), 2026-11-13 00:38 UTC
 - Dark since: 2026-11-10 13:06 UTC (first run of the current streak)
-- Job / step: `Frontend` → `Run pnpm format:check`
-- Likely cause: Found 10 warnings and 0 errors.
+- Job / step: `Frontend` → `Run pnpm test`
+- Likely cause: Canceling since a higher priority waiting request for ci-refs/heads/main exists
 
 <details><summary>End of the job log</summary>
 
 ```
-Finished in 1.2s on 2219 files with 97 rules using 4 threads.
-$ oxfmt --check
-Checking formatting...
-src/features/plugins/__tests__/settings.test.tsx (1ms)
-Format issues found in above 1 files. Run without `--check` to fix.
-Finished in 5289ms on 2778 files using 4 threads.
-[ELIFECYCLE] Command failed with exit code 1.
-##[error]Process completed with exit code 1.
+ ✓ src/features/http-client/spring/spring.test.ts (17 tests) 32ms
+ ✓ src/features/run/gradleRun.test.ts (19 tests) 22ms
+ ✓ src/features/github/list/list.test.tsx (15 tests) 701ms
+ ✓ scripts/theme/theme.test.ts (16 tests) 23ms
+ ✓ src/features/run/session.test.tsx (22 tests) 547ms
+ ✓ src/features/settings/__tests__/ssh.test.tsx (19 tests) 1562ms
+ ✓ src/editor/core/file-open-order.test.ts (17 tests) 99ms
+##[error]The operation was canceled.
 ```
 
 </details>
+
+### Language smoke (`.github/workflows/language-smoke.yml`)
+
+- Latest run on `main`: https://github.com/l0ng-ai/openidea/actions/runs/43338702940 — dark (conclusion: `cancelled`), 2026-11-13 00:38 UTC
+- Dark since: 2026-11-13 00:14 UTC (first run of the current streak)
+- Likely cause: run cancelled
 
 If this is already known or expected, feel free to close. Thanks for maintaining openidea!
 
