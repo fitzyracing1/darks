@@ -4,19 +4,13 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/storytold/pdfcraft/issues/new
-- **Stars:** 20537 · **Generated:** 2026-11-13T06:46:32.203Z
+- **Stars:** 20571 · **Generated:** 2026-11-13T12:41:39.120Z
 - Nothing in this file has been sent anywhere.
-
-## Skipped: upstream already tracking
-
-- SonarCloud (`.github/workflows/sonarcloud.yml`): [issue #7175](https://github.com/storytold/pdfcraft/issues/7175) "CI: investigate three recurring coverage-test failures on main"
-
-These workflows are left out of the body below.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 2 workflows dark on main ("Nightly macOS", "CI")
+CI: 3 workflows dark on main ("Nightly macOS", "CI", "SonarCloud")
 <!-- END TITLE -->
 
 ## Body
@@ -48,22 +42,44 @@ error: 4 targets failed:
 
 ### CI (`.github/workflows/ci.yml`)
 
-- Latest run on `main`: https://github.com/storytold/pdfcraft/actions/runs/43346926538 — dark (conclusion: `failure`), 2026-11-13 01:42 UTC
+- Latest run on `main`: https://github.com/storytold/pdfcraft/actions/runs/43416758147 — dark (conclusion: `failure`), 2026-11-13 11:24 UTC
 - Dark since: 2026-11-12 19:30 UTC (first run of the current streak)
-- Job / step: `gate / gate (windows-latest)` → `Gate`
-- Likely cause: Error: Path Validation Error: Path(s) specified in the action for caching do(es) not exist, hence no cache is being saved.
+- Job / step: `gate / gate (ubuntu-24.04)` → `Gate`
+- Likely cause: xtask ci: error: ci failed at 'test'
 
 <details><summary>End of the job log</summary>
 
 ```
-    | |_____^ help: you can reduce it to: `!(!program.is_absolute() || !program.is_file())`
-    |
-    = help: for further information visit https://rust-lang.github.io/rust-clippy/rust-1.100.0/index.html#needless_bool
-    = note: `-D clippy::needless-bool` implied by `-D warnings`
-    = help: to override `-D warnings` add `#[allow(clippy::needless_bool)]`
-error: could not compile `pdfcraft-ocr` (lib) due to 1 previous error
-warning: build failed, waiting for other jobs to finish...
-##[error]Process completed with exit code 101.
+        PASS [   1.369s] (10107/10107) pdfcraft-xfdf tests_format::the_export_loop_writes_no_more_appearance_than_import_reads
+────────────
+     Summary [ 206.647s] 10107 tests run: 10106 passed, 1 failed, 22 skipped
+        FAIL [   0.217s] ( 9296/10107) pdfcraft-ui-egui::it ui::home_recent_context_menu_reveals_the_target_without_opening_or_removing_it
+error: test run failed
+CI: 3 passed, FAILED at `test`: cargo nextest run --no-fail-fast --workspace --lib --bins --tests: exited with exit status: 100
+xtask ci: error: ci failed at `test`
+##[error]Process completed with exit code 1.
+```
+
+</details>
+
+### SonarCloud (`.github/workflows/sonarcloud.yml`)
+
+- Latest run on `main`: https://github.com/storytold/pdfcraft/actions/runs/43416758199 — dark (conclusion: `failure`), 2026-11-13 11:24 UTC
+- Dark since: 2026-11-13 01:19 UTC (first run of the current streak)
+- Job / step: `sonarcloud / SonarCloud Scan` → `Fail on Rust shard test failures`
+- Likely cause: Coverage shard 4 tests failed (exit 100); analysis was still uploaded
+
+<details><summary>End of the job log</summary>
+
+```
+12:10:39.785 INFO  ------------- Upload SCA dependency files
+12:10:40.765 INFO  Successfully sent architecture data
+12:10:41.974 INFO  Sensor cache published successfully
+12:10:43.308 INFO  Analysis total time: 2:57.785 min
+12:10:43.310 INFO  SonarScanner Engine completed successfully
+12:10:43.491 INFO  EXECUTION SUCCESS
+12:10:43.492 INFO  Total time: 3:04.681s
+##[error]Coverage shard 1 tests failed (exit 100); analysis was still uploaded
 ```
 
 </details>

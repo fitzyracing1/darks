@@ -4,28 +4,19 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/storytold/vectorcraft/issues/new
-- **Stars:** 11683 · **Generated:** 2026-11-13T06:46:32.203Z
+- **Stars:** 11693 · **Generated:** 2026-11-13T12:41:39.120Z
 - Nothing in this file has been sent anywhere.
-- **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 2 workflows dark on main ("SonarCloud", "FreeBSD")
+CI: "FreeBSD" workflow failing on main since 2026-11-13
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
-
-### SonarCloud (`.github/workflows/sonarcloud.yml`)
-
-- Latest run on `main`: https://github.com/storytold/vectorcraft/actions/runs/43377837990 — dark (conclusion: `cancelled`), 2026-11-13 06:18 UTC
-- Dark since: 2026-11-10 18:11 UTC (first run of the current streak)
-- Likely cause: run cancelled
-
-### FreeBSD (`.github/workflows/freebsd.yml`)
+Hi! The **FreeBSD** workflow (`.github/workflows/freebsd.yml`) on `main` has been failing since 2026-11-13. Here is what I saw, in case it's useful:
 
 - Latest run on `main`: https://github.com/storytold/vectorcraft/actions/runs/43365066215 — dark (conclusion: `failure`), 2026-11-13 04:22 UTC
 - Dark since: 2026-11-13 04:22 UTC (first run of the current streak)

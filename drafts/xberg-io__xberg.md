@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/xberg-io/xberg/issues/new
-- **Stars:** 9581 · **Generated:** 2026-11-13T06:46:32.203Z
+- **Stars:** 9582 · **Generated:** 2026-11-13T12:41:39.120Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** cancelled by a concurrency group — likely noise
 
@@ -21,7 +21,7 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### CI Rust (`.github/workflows/ci-rust.yaml`)
 
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/43375096155 — dark (conclusion: `cancelled`), 2026-11-13 05:54 UTC
+- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/43416274113 — dark (conclusion: `cancelled`), 2026-11-13 11:20 UTC
 - Dark since: 2026-10-25 18:30 UTC (first run of the current streak)
 - Job / step: `Rust tract-only (no-ORT)` → `Run no-ORT tract tests`
 - Likely cause: Canceling since a higher priority waiting request for ci-rust-refs/heads/main exists
@@ -43,21 +43,21 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### CI E2E (`.github/workflows/ci-e2e.yaml`)
 
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/43375096123 — dark (conclusion: `cancelled`), 2026-11-13 05:54 UTC
+- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/43416274271 — dark (conclusion: `cancelled`), 2026-11-13 11:20 UTC
 - Dark since: 2026-11-03 17:32 UTC (first run of the current streak)
-- Job / step: `Build FFI (aarch64-unknown-linux-gnu)` → `Build FFI library`
+- Job / step: `Build FFI (x86_64-unknown-linux-gnu)` → `Build FFI library`
 - Likely cause: Canceling since a higher priority waiting request for ci-e2e-refs/heads/main exists
 
 <details><summary>End of the job log</summary>
 
 ```
-[xberg-libwpd 1.4.0] cargo:warning=/home/runner/work/xberg/xberg/target/release/build/xberg-libwpd-7186226230dcd48e/out/boost/boost/proto/transform/impl.hpp:255:9:   required from 'typename boost::proto::detail::apply_t…
-[xberg-libwpd 1.4.0] cargo:warning=/home/runner/work/xberg/xberg/target/release/build/xberg-libwpd-7186226230dcd48e/out/boost/boost/spirit/home/support/make_component.hpp:248:51:   [ skipping 6 instantiation contexts, u…
-[xberg-libwpd 1.4.0] cargo:warning=/home/runner/work/xberg/xberg/target/release/build/xberg-libwpd-7186226230dcd48e/out/boost/boost/proto/transform/impl.hpp:255:9:   required from 'typename boost::proto::detail::apply_t…
-[xberg-libwpd 1.4.0] cargo:warning=/home/runner/work/xberg/xberg/target/release/build/xberg-libwpd-7186226230dcd48e/out/boost/boost/spirit/home/support/meta_compiler.hpp:243:32:   required from 'static typename boost::s…
-[xberg-libwpd 1.4.0] cargo:warning=/home/runner/work/xberg/xberg/target/release/build/xberg-libwpd-7186226230dcd48e/out/boost/boost/spirit/home/support/meta_compiler.hpp:264:49:   required from 'typename boost::spirit::…
-[xberg-libwpd 1.4.0] cargo:warning=/home/runner/work/xberg/xberg/target/release/build/xberg-libwpd-7186226230dcd48e/out/boost/boost/spirit/home/qi/parse_attr.hpp:117:33:   required from 'bool boost::spirit::qi::phrase_p…
-[xberg-libwpd 1.4.0] cargo:warning=/home/runner/work/xberg/xberg/target/release/build/xberg-libwpd-7186226230dcd48e/out/boost/boost/spirit/home/qi/parse_attr.hpp:153:32:   required from 'bool boost::spirit::qi::phrase_p…
+[xberg-tesseract 1.4.0] cd /home/runner/work/xberg/xberg/target/release/build/xberg-tesseract-3d3026f485d0683d/out/build/src && /usr/bin/cc -DHAVE_CONFIG_H -I/home/runner/work/xberg/xberg/target/release/build/xberg-tess…
+[xberg-tesseract 1.4.0] [ 69%] Building C object src/CMakeFiles/leptonica.dir/psio1.c.o
+[xberg-tesseract 1.4.0] cd /home/runner/work/xberg/xberg/target/release/build/xberg-tesseract-3d3026f485d0683d/out/build/src && /usr/bin/cc -DHAVE_CONFIG_H -I/home/runner/work/xberg/xberg/target/release/build/xberg-tess…
+[xberg-tesseract 1.4.0] [ 69%] Building C object src/CMakeFiles/leptonica.dir/psio1stub.c.o
+[xberg-tesseract 1.4.0] cd /home/runner/work/xberg/xberg/target/release/build/xberg-tesseract-3d3026f485d0683d/out/build/src && /usr/bin/cc -DHAVE_CONFIG_H -I/home/runner/work/xberg/xberg/target/release/build/xberg-tess…
+[xberg-tesseract 1.4.0] [ 70%] Building C object src/CMakeFiles/leptonica.dir/psio2.c.o
+[xberg-tesseract 1.4.0] cd /home/runner/work/xberg/xberg/target/release/build/xberg-tesseract-3d3026f485d0683d/out/build/src && /usr/bin/cc -DHAVE_CONFIG_H -I/home/runner/work/xberg/xberg/target/release/build/xberg-tess…
 ##[error]The operation was canceled.
 ```
 
@@ -65,7 +65,7 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### CI Integrations (`.github/workflows/ci-integrations.yaml`)
 
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/43375096217 — dark (conclusion: `cancelled`), 2026-11-13 05:54 UTC
+- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/43416274202 — dark (conclusion: `cancelled`), 2026-11-13 11:20 UTC
 - Dark since: 2026-11-12 03:46 UTC (first run of the current streak)
 - Job / step: `Build local integration bindings` → `Build abi3 Python wheel`
 - Likely cause: Canceling since a higher priority waiting request for ci-integrations-refs/heads/main exists
@@ -73,13 +73,13 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 <details><summary>End of the job log</summary>
 
 ```
-   Compiling thin-vec v0.2.21
-   Compiling html-escape v0.3.1
-   Compiling micromap v0.3.0
-   Compiling bytecount v0.6.9
-   Compiling streaming-iterator v0.1.9
-   Compiling semver v1.0.28
-   Compiling tap v1.0.1
+   Compiling serde_urlencoded v0.7.1
+   Compiling pulp v0.22.3
+   Compiling async-trait v0.1.92
+   Compiling rustls-platform-verifier v0.7.1
+   Compiling option-ext v0.2.0
+   Compiling dirs-sys v0.5.0
+   Compiling cookie_store v0.22.1
 ##[error]The operation was canceled.
 ```
 
@@ -87,17 +87,17 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### CI Lint (`.github/workflows/ci-lint.yaml`)
 
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/43376475463 — dark (conclusion: `failure`), 2026-11-13 06:07 UTC
+- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/43417659236 — dark (conclusion: `failure`), 2026-11-13 11:30 UTC
 - Dark since: 2026-11-12 05:22 UTC (first run of the current streak)
 - Job / step: `validate / Validate (poly)` → `Lint`
-- Likely cause: warning: build failed, waiting for other jobs to finish...
+- Likely cause: error: could not compile 'xberg' (lib test) due to 1 previous error
 
 <details><summary>End of the job log</summary>
 
 ```
-         = help: to override `-D warnings` add `#[allow(clippy::chunks_exact_to_as_chunks)]`
-      error: could not compile `xberg-native-pdf` (test "overprint_separation_black") due to 1 previous error
+      error: could not compile `xberg` (lib) due to 1 previous error
       warning: build failed, waiting for other jobs to finish...
+      error: could not compile `xberg` (lib test) due to 1 previous error
   ✓ checkstyle
   ✓ credo
   ✓ golangci-lint

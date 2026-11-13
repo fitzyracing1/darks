@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/googleapis/mcp-toolbox/issues/new
-- **Stars:** 16855 · **Generated:** 2026-11-13T06:46:32.203Z
+- **Stars:** 16858 · **Generated:** 2026-11-13T12:41:39.120Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -18,7 +18,7 @@ CI: "CF: Deploy Dev Docs" workflow failing on main since 2026-09-28
 <!-- BEGIN BODY -->
 Hi! The **CF: Deploy Dev Docs** workflow (`.github/workflows/deploy_dev_docs_to_cf.yaml`) on `main` has been failing since 2026-09-28. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/googleapis/mcp-toolbox/actions/runs/43375341760 — dark (conclusion: `failure`), 2026-11-13 05:57 UTC
+- Latest run on `main`: https://github.com/googleapis/mcp-toolbox/actions/runs/43380615491 — dark (conclusion: `failure`), 2026-11-13 06:42 UTC
 - Dark since: 2026-09-28 21:08 UTC (first run of the current streak)
 - Job / step: `deploy` → `Push to Cloudflare Branch`
 - Likely cause: fatal: could not read Username for 'https://github.com': No such device or address
@@ -26,11 +26,11 @@ Hi! The **CF: Deploy Dev Docs** workflow (`.github/workflows/deploy_dev_docs_to_
 <details><summary>End of the job log</summary>
 
 ```
- create mode 100644 dev/pagefind/pagefind.en_cba2a17ee8.pf_meta
+ create mode 100644 dev/pagefind/pagefind.en_c967fca87e.pf_meta
  create mode 100644 dev/resources/tools/conversational-analytics-create-data-agent/index.html
  create mode 100644 dev/resources/tools/conversational-analytics-delete-data-agent/index.html
  create mode 100644 dev/resources/tools/conversational-analytics-update-data-agent/index.html
- create mode 100644 dev/scss/main.min.82209bd8c564874bd262153f369ee4a7cb5eab90244e6d37f33b90c8c808a948.css
+ create mode 100644 dev/scss/main.min.662b8b48da5514edc92d94bd220d65849d056322cdc267c386d56fe149645163.css
  delete mode 100644 dev/scss/main.min.eb8cf679e9cf9944d7e6607d514632ee128cdbe2f0dd2dd89559a2cdb995bce6.css
 fatal: could not read Username for 'https://github.com': No such device or address
 ##[error]Process completed with exit code 128.

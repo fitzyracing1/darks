@@ -4,22 +4,20 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/DeusData/codebase-memory-mcp/issues/new
-- **Stars:** 48585 · **Generated:** 2026-11-13T06:46:32.203Z
+- **Stars:** 48598 · **Generated:** 2026-11-13T12:41:39.120Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 2 workflows dark on main ("Nightly Soak", "test-impact-artifact")
+CI: "Nightly Soak" workflow getting cancelled on main since 2026-11-01
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
-
-### Nightly Soak (`.github/workflows/nightly-soak.yml`)
+Hi! The **Nightly Soak** workflow (`.github/workflows/nightly-soak.yml`) on `main` has been getting cancelled since 2026-11-01. Here is what I saw, in case it's useful:
 
 - Latest run on `main`: https://github.com/DeusData/codebase-memory-mcp/actions/runs/42436967517 — dark (conclusion: `cancelled`), 2026-11-08 02:04 UTC
 - Dark since: 2026-11-01 02:04 UTC (first run of the current streak)
@@ -36,28 +34,6 @@ Idle daemon CPU: 0.9%
 Max query latency: 58ms (index: 506ms)
 Total queries: 13704
 === soak-test: FAILED ===
-##[error]Process completed with exit code 1.
-```
-
-</details>
-
-### test-impact-artifact (`.github/workflows/test-impact-artifact.yml`)
-
-- Latest run on `main`: https://github.com/DeusData/codebase-memory-mcp/actions/runs/43315369517 — dark (conclusion: `failure`), 2026-11-12 21:57 UTC
-- Dark since: 2026-11-12 21:16 UTC (first run of the current streak)
-- Job / step: `publish` → `Publish the bundle`
-- Likely cause: test-impact publish: status 1: the graph of HEAD could not be built: frozen status 11, evidence 25, 190 file error(s): graph-ui/src/architecture/architecture-scenes.test.tsx 9-9
-
-<details><summary>End of the job log</summary>
-
-```
-grammar_probe_c: 42 tests, 0 incomplete, exit 0, 0.8 s
-grammar_probe_d: 75 tests, 0 incomplete, exit 0, 3.2 s
-grammar_probe_e: 56 tests, 0 incomplete, exit 0, 2.1 s
-grammar_probe_f: 184 tests, 0 incomplete, exit 0, 11.3 s
-grammar_probe_g: 45 tests, 0 incomplete, exit 0, 1.7 s
-map: 10311 tests, 319 incomplete, 27556 functions -> /tmp/tmp.5vu1WIH3wy/coverage
-test-impact publish: status 1: the graph of HEAD could not be built: frozen status 11, evidence 25, 190 file error(s): graph-ui/src/architecture/architecture-scenes.test.tsx 9-9
 ##[error]Process completed with exit code 1.
 ```
 

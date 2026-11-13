@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/seedds/nxnative/issues/new
-- **Stars:** 15145 · **Generated:** 2026-11-13T06:46:32.203Z
+- **Stars:** 15217 · **Generated:** 2026-11-13T12:41:39.120Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
@@ -21,7 +21,7 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### fuzz (`.github/workflows/fuzz.yml`)
 
-- Latest run on `main`: https://github.com/seedds/nxnative/actions/runs/43205539633 — dark (conclusion: `failure`), 2026-11-12 11:01 UTC
+- Latest run on `main`: https://github.com/seedds/nxnative/actions/runs/43412904268 — dark (conclusion: `failure`), 2026-11-13 10:55 UTC
 - Dark since: 2026-11-02 10:59 UTC (first run of the current streak)
 - Job / step: `Fuzz the file parsers` → `Run each harness`
 - Likely cause: shader_split: ==finding== cra.Error@cra.py:narc_members
@@ -32,10 +32,10 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 Traceback (most recent call last):
   File "/opt/hostedtoolcache/Python/3.14.10/x64/lib/python3.14/logging/__init__.py", line 891, in _removeHandlerRef
 TypeError: 'NoneType' object is not callable
-==2361== ERROR: libFuzzer: fuzz target exited
+==2568== ERROR: libFuzzer: fuzz target exited
 SUMMARY: libFuzzer: fuzz target exited
-MS: 4 CopyPart-CrossOver-ShuffleBytes-CMP- DE: "NARC"-; base unit: b6ffa6155747e847c273f4252fb82465f8ea8157
-artifact_prefix='findings/shader_split/'; Test unit written to findings/shader_split/crash-e38fef45c566e71616ad22529269681b62ba1d23
+MS: 4 InsertByte-ChangeByte-InsertByte-CMP- DE: "NARC"-; base unit: bcacbc7c91bc4c8158d2b1f85dabd700ca5c1f73
+artifact_prefix='findings/shader_split/'; Test unit written to findings/shader_split/crash-553e4c69957461388ae0e64aa2e97d92a7044299
 ##[error]shader_split: ==finding== cra.Error@cra.py:narc_members
 ```
 
@@ -43,13 +43,13 @@ artifact_prefix='findings/shader_split/'; Test unit written to findings/shader_s
 
 ### lint-c (`.github/workflows/lint-c.yml`)
 
-- Latest run on `main`: https://github.com/seedds/nxnative/actions/runs/43375527367 — dark (conclusion: `cancelled`), 2026-11-13 05:58 UTC
+- Latest run on `main`: https://github.com/seedds/nxnative/actions/runs/43409927341 — dark (conclusion: `cancelled`), 2026-11-13 10:33 UTC
 - Dark since: 2026-11-05 11:55 UTC (first run of the current streak)
 - Likely cause: run cancelled
 
 ### tests (`.github/workflows/tests.yml`)
 
-- Latest run on `main`: https://github.com/seedds/nxnative/actions/runs/43376311724 — dark (conclusion: `cancelled`), 2026-11-13 06:05 UTC
+- Latest run on `main`: https://github.com/seedds/nxnative/actions/runs/43409927370 — dark (conclusion: `cancelled`), 2026-11-13 10:33 UTC
 - Dark since: 2026-11-06 01:42 UTC (first run of the current streak)
 - Likely cause: run cancelled
 

@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/morluto/rea/issues/new
-- **Stars:** 455897 · **Generated:** 2026-11-13T06:46:32.203Z
+- **Stars:** 456531 · **Generated:** 2026-11-13T12:41:39.120Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 

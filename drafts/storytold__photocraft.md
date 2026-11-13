@@ -4,13 +4,14 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/storytold/photocraft/issues/new
-- **Stars:** 79041 · **Generated:** 2026-11-13T06:46:32.203Z
+- **Stars:** 79113 · **Generated:** 2026-11-13T12:41:39.120Z
 - Nothing in this file has been sent anywhere.
+- **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 4 workflows dark on main ("FreeBSD", "Perf (nightly)", "SonarCloud", +1 more)
+CI: 5 workflows dark on main ("FreeBSD", "Perf (nightly)", "SonarCloud", +2 more)
 <!-- END TITLE -->
 
 ## Body
@@ -64,25 +65,9 @@ error: test failed, to rerun pass `-p xtask --lib`
 
 ### SonarCloud (`.github/workflows/sonarcloud.yml`)
 
-- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/43344649373 — dark (conclusion: `failure`), 2026-11-13 01:24 UTC
+- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/43425989591 — dark (conclusion: `cancelled`), 2026-11-13 12:32 UTC
 - Dark since: 2026-11-12 12:27 UTC (first run of the current streak)
-- Job / step: `sonarcloud / SonarCloud Scan` → `Fail on Rust shard test failures`
-- Likely cause: Coverage shard 3 tests failed (exit 100); analysis was still uploaded
-
-<details><summary>End of the job log</summary>
-
-```
-02:58:35.305 INFO  ------------- Upload SCA dependency files
-02:58:36.764 INFO  Successfully sent architecture data
-02:58:38.115 INFO  Sensor cache published successfully
-02:58:41.401 INFO  Analysis total time: 4:03.791 min
-02:58:41.402 INFO  SonarScanner Engine completed successfully
-02:58:41.565 INFO  EXECUTION SUCCESS
-02:58:41.566 INFO  Total time: 4:09.702s
-##[error]Coverage shard 2 tests failed (exit 100); analysis was still uploaded
-```
-
-</details>
+- Likely cause: run cancelled
 
 ### Release (`.github/workflows/release.yml`)
 
@@ -102,6 +87,28 @@ Removing credentials config '/home/runner/work/_temp/git-credentials-f8177b35-51
 ##[start-action display=Generate and validate contributor credits;id=__self.__run]
 Contributor refresh failed: gh failed: gh: HTTP 502
 ##[error]Process completed with exit code 1.
+```
+
+</details>
+
+### CI (`.github/workflows/ci.yml`)
+
+- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/43402283101 — dark (conclusion: `failure`), 2026-11-13 09:33 UTC
+- Dark since: 2026-11-13 09:33 UTC (first run of the current streak)
+- Job / step: `select platforms` → `Git dependencies come from storytold`
+- Likely cause: SSL error: unknown error; class=Ssl (16)
+
+<details><summary>End of the job log</summary>
+
+```
+  revision 09dcbc225b95232998498a40ca56e24716571d53 not found
+Caused by:
+  network failure seems to have happened
+  if a proxy or similar is necessary `net.git-fetch-with-cli` may help here
+  https://doc.rust-lang.org/cargo/reference/config.html#netgit-fetch-with-cli
+Caused by:
+  SSL error: unknown error; class=Ssl (16)
+##[error]Process completed with exit code 101.
 ```
 
 </details>

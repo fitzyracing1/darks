@@ -1,8 +1,8 @@
 <!-- dark-draft: langgenius/dify -->
-<!-- draft-state: ready -->
+<!-- draft-state: resolved -->
 # Upstream issue draft: langgenius/dify
 
-- **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
+- **Status:** resolved — lit again (2026-11-13); nothing to file
 - **Would be filed at:** https://github.com/langgenius/dify/issues/new
 - **Stars:** 161075 · **Generated:** 2026-11-13T06:46:32.203Z
 - Nothing in this file has been sent anywhere.
