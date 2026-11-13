@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/open-metadata/OpenMetadata/issues/new
-- **Stars:** 15765 · **Generated:** 2026-11-13T12:41:39.120Z
+- **Stars:** 15769 · **Generated:** 2026-11-13T18:39:18.847Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -20,7 +20,7 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### Merge Queue Dequeue Report (`.github/workflows/merge-queue-dequeue-report.yml`)
 
-- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/43423922749 — dark (conclusion: `failure`), 2026-11-13 12:17 UTC
+- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/43482646892 — dark (conclusion: `failure`), 2026-11-13 18:26 UTC
 - Dark since: 2026-11-03 21:06 UTC (first run of the current streak)
 - Job / step: `evict-main-conflicts` → `Remove queue entries that conflict with main`
 - Likely cause: cannot iterate over: null
@@ -42,7 +42,7 @@ cannot iterate over: null
 
 ### monitor-slack-link (`.github/workflows/monitor-slack-link.yml`)
 
-- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/43423553041 — dark (conclusion: `failure`), 2026-11-13 12:14 UTC
+- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/43480062347 — dark (conclusion: `failure`), 2026-11-13 18:10 UTC
 - Dark since: 2026-11-06 22:08 UTC (first run of the current streak)
 - Job / step: `monitor-slack-link` → `Set up Python 3.9`
 - Likely cause: The version '3.9' with architecture 'x64' was not found for Ubuntu 26.04.
@@ -50,12 +50,12 @@ cannot iterate over: null
 <details><summary>End of the job log</summary>
 
 ```
-Updating files:  99% (27350/27626)
-Updating files: 100% (27626/27626)
-Updating files: 100% (27626/27626), done.
+Updating files:  99% (27367/27643)
+Updating files: 100% (27643/27643)
+Updating files: 100% (27643/27643), done.
 Switched to a new branch 'main'
 branch 'main' set up to track 'origin/main'.
-b0b1dbe4dbc21b304777518e8b0900d670743599
+3d0cf224cc54fa7bcdb249a0ea3e97dcde30b652
 Version 3.9 was not found in the local cache
 ##[error]The version '3.9' with architecture 'x64' was not found for Ubuntu 26.04.
 ```
@@ -64,7 +64,7 @@ Version 3.9 was not found in the local cache
 
 ### Integration Tests - MySQL + Elasticsearch (`.github/workflows/integration-tests-mysql-elasticsearch.yml`)
 
-- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/43416309499 — dark (conclusion: `failure`), 2026-11-13 11:20 UTC
+- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/43458870479 — dark (conclusion: `failure`), 2026-11-13 16:03 UTC
 - Dark since: 2026-11-13 04:11 UTC (first run of the current streak)
 - Job / step: `Integration Test Lane (global-state)` → `Run Integration Tests (MySQL + Elasticsearch)`
 - Likely cause: [ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
@@ -86,15 +86,15 @@ Version 3.9 was not found in the local cache
 
 ### Integration Tests - PostgreSQL + OpenSearch (`.github/workflows/integration-tests-postgres-opensearch.yml`)
 
-- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/43416309402 — dark (conclusion: `failure`), 2026-11-13 11:20 UTC
+- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/43458870573 — dark (conclusion: `failure`), 2026-11-13 16:03 UTC
 - Dark since: 2026-11-13 04:11 UTC (first run of the current streak)
-- Job / step: `Integration Test Lane (parallel)` → `Run Integration Tests (PostgreSQL + OpenSearch)`
+- Job / step: `Integration Test Lane (global-state)` → `Run Integration Tests (PostgreSQL + OpenSearch)`
 - Likely cause: [ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
 
 <details><summary>End of the job log</summary>
 
 ```
-[ERROR] Failed to execute goal org.apache.maven.plugins:maven-failsafe-plugin:3.1.2:verify (verify) on project openmetadata-integration-tests: There was a timeout in the fork -> [Help 1]
+[ERROR] -> [Help 1]
 [ERROR]
 [ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
 [ERROR] Re-run Maven using the -X switch to enable full debug logging.
@@ -108,9 +108,9 @@ Version 3.9 was not found in the local cache
 
 ### Integration Tests - PostgreSQL + Elasticsearch + Redis (`.github/workflows/integration-tests-postgres-elasticsearch-redis.yml`)
 
-- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/43416098498 — dark (conclusion: `failure`), 2026-11-13 11:19 UTC
+- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/43458871057 — dark (conclusion: `failure`), 2026-11-13 16:03 UTC
 - Dark since: 2026-11-13 04:11 UTC (first run of the current streak)
-- Job / step: `Integration Test Lane (global-state)` → `Run Integration Tests (PostgreSQL + Elasticsearch + Redis)`
+- Job / step: `Integration Test Lane (parallel)` → `Run Integration Tests (PostgreSQL + Elasticsearch + Redis)`
 - Likely cause: [ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
 
 <details><summary>End of the job log</summary>
@@ -130,10 +130,10 @@ Version 3.9 was not found in the local cache
 
 ### Maven Collate Tests (`.github/workflows/maven-build-collate.yml`)
 
-- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/43422085647 — dark (conclusion: `failure`), 2026-11-13 12:04 UTC
+- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/43482646653 — dark (conclusion: `failure`), 2026-11-13 18:26 UTC
 - Dark since: 2026-11-13 12:04 UTC (first run of the current streak)
 - Job / step: `maven-collate-ci` → `Trigger Collate build & wait`
-- Likely cause: Collate run did not succeed: https://github.com/open-metadata/openmetadata-collate/actions/runs/43422095307
+- Likely cause: Collate run did not succeed: https://github.com/open-metadata/openmetadata-collate/actions/runs/43482665609
 
 <details><summary>End of the job log</summary>
 
@@ -143,9 +143,9 @@ Cache mode: write
 Prepare workflow directory
 Prepare all required actions
 Complete job name: maven-collate-ci
-Collate run: https://github.com/open-metadata/openmetadata-collate/actions/runs/43422095307
-failed to get run: HTTP 404: Not Found (https://api.github.com/repos/open-metadata/openmetadata-collate/actions/runs/43422095307?exclude_pull_requests=true)
-##[error]Collate run did not succeed: https://github.com/open-metadata/openmetadata-collate/actions/runs/43422095307
+Collate run: https://github.com/open-metadata/openmetadata-collate/actions/runs/43482665609
+failed to get run: HTTP 404: Not Found (https://api.github.com/repos/open-metadata/openmetadata-collate/actions/runs/43482665609?exclude_pull_requests=true)
+##[error]Collate run did not succeed: https://github.com/open-metadata/openmetadata-collate/actions/runs/43482665609
 ```
 
 </details>

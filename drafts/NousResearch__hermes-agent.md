@@ -1,30 +1,13 @@
 <!-- dark-draft: NousResearch/hermes-agent -->
-<!-- draft-state: ready -->
+<!-- draft-state: duplicate -->
 # Upstream issue draft: NousResearch/hermes-agent
 
-- **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
+- **Status:** not for filing — upstream already has an open issue/PR about every dark workflow here
 - **Would be filed at:** https://github.com/NousResearch/hermes-agent/issues/new
-- **Stars:** 263099 · **Generated:** 2026-11-13T12:41:39.120Z
+- **Stars:** 263179 · **Generated:** 2026-11-13T18:39:18.847Z
 - Nothing in this file has been sent anywhere.
-- **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
-## Suggested title
+## Skipped: upstream already tracking
 
-<!-- BEGIN TITLE -->
-CI: "Docker Build, Test, and Publish" workflow getting cancelled on main since 2026-11-08
-<!-- END TITLE -->
-
-## Body
-
-<!-- BEGIN BODY -->
-Hi! The **Docker Build, Test, and Publish** workflow (`.github/workflows/docker.yml`) on `main` has been getting cancelled since 2026-11-08. Here is what I saw, in case it's useful:
-
-- Latest run on `main`: https://github.com/NousResearch/hermes-agent/actions/runs/43423197779 — dark (conclusion: `cancelled`), 2026-11-13 12:12 UTC
-- Dark since: 2026-11-08 17:58 UTC (first run of the current streak)
-- Likely cause: run cancelled
-
-If this is already known or expected, feel free to close. Thanks for maintaining hermes-agent!
-
----
-<sub>Found by the [dark crawler](https://github.com/fitzyracing1/darks), which checks the latest default-branch run of each workflow in popular repos. Reviewed and filed by hand.</sub>
-<!-- END BODY -->
+- Docker Build, Test, and Publish (`.github/workflows/docker.yml`): [issue #155129](https://github.com/NousResearch/hermes-agent/issues/155129) "Docker Build, Test, and Publish on main stuck since Nov 5 — run 42066863849 holds the concurrency group (publish jobs waiting on never-evaluated container-publish deployments)"
+- CI (`.github/workflows/ci.yaml`): [issue #152690](https://github.com/NousResearch/hermes-agent/issues/152690) "CI: a growing share of ci.yaml runs end at creation with zero jobs ("workflow file issue"), including pushes to main"

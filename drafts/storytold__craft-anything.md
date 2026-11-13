@@ -4,13 +4,13 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/storytold/craft-anything/issues/new
-- **Stars:** 30921 · **Generated:** 2026-11-13T12:41:39.120Z
+- **Stars:** 31267 · **Generated:** 2026-11-13T18:39:18.847Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 2 workflows dark on main ("FreeBSD", "CI")
+CI: 2 workflows dark on main ("FreeBSD", "SonarCloud")
 <!-- END TITLE -->
 
 ## Body
@@ -40,24 +40,24 @@ error: test failed, to rerun pass `-p craft-anything-ai --lib`
 
 </details>
 
-### CI (`.github/workflows/ci.yml`)
+### SonarCloud (`.github/workflows/sonarcloud.yml`)
 
-- Latest run on `main`: https://github.com/storytold/craft-anything/actions/runs/43277180754 — dark (conclusion: `failure`), 2026-11-12 18:11 UTC
-- Dark since: 2026-11-12 18:11 UTC (first run of the current streak)
-- Job / step: `gate / gate (ubuntu-24.04)` → `Gate`
-- Likely cause: error: test failed, to rerun pass '-p craft-anything-ai --lib'
+- Latest run on `main`: https://github.com/storytold/craft-anything/actions/runs/43477273772 — dark (conclusion: `failure`), 2026-11-13 17:53 UTC
+- Dark since: 2026-11-13 15:28 UTC (first run of the current streak)
+- Job / step: `sonarcloud / SonarCloud Scan` → `Fail on Rust shard test failures`
+- Likely cause: Coverage shard 4 tests failed (exit 100); analysis was still uploaded
 
 <details><summary>End of the job log</summary>
 
 ```
-             at /rustc/0ef1bc386059596dada8fb65b50425aab2ea637a/library/core/src/ops/function.rs:250:5
-note: Some details are omitted, run with `RUST_BACKTRACE=full` for a verbose backtrace.
-failures:
-    rebuild::tests::picking_up_a_build::a_failed_turn_leaves_just_ask_questions_to_tell_with_the_next_message
-    rebuild::tests::picking_up_a_build::a_skipped_scan_does_not_hide_the_builders_own_failure
-test result: FAILED. 637 passed; 2 failed; 3 ignored; 0 measured; 0 filtered out; finished in 10.54s
-error: test failed, to rerun pass `-p craft-anything-ai --lib`
-##[error]Process completed with exit code 1.
+18:11:07.364 INFO  ------------- Upload SCA dependency files
+18:11:08.950 INFO  Successfully sent architecture data
+18:11:10.363 INFO  Sensor cache published successfully
+18:11:11.660 INFO  Analysis total time: 1:15.412 min
+18:11:11.662 INFO  SonarScanner Engine completed successfully
+18:11:11.797 INFO  EXECUTION SUCCESS
+18:11:11.797 INFO  Total time: 1:19.812s
+##[error]Coverage shard 1 tests failed (exit 100); analysis was still uploaded
 ```
 
 </details>

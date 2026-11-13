@@ -4,9 +4,8 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/storytold/photocraft/issues/new
-- **Stars:** 79113 · **Generated:** 2026-11-13T12:41:39.120Z
+- **Stars:** 79162 · **Generated:** 2026-11-13T18:39:18.847Z
 - Nothing in this file has been sent anywhere.
-- **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
@@ -65,9 +64,25 @@ error: test failed, to rerun pass `-p xtask --lib`
 
 ### SonarCloud (`.github/workflows/sonarcloud.yml`)
 
-- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/43425989591 — dark (conclusion: `cancelled`), 2026-11-13 12:32 UTC
+- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/43465248367 — dark (conclusion: `failure`), 2026-11-13 16:41 UTC
 - Dark since: 2026-11-12 12:27 UTC (first run of the current streak)
-- Likely cause: run cancelled
+- Job / step: `sonarcloud / SonarCloud Scan` → `Fail on Rust shard test failures`
+- Likely cause: Coverage shard 2 tests failed (exit 100); analysis was still uploaded
+
+<details><summary>End of the job log</summary>
+
+```
+18:04:48.726 INFO  ------------- Upload SCA dependency files
+18:04:50.053 INFO  Successfully sent architecture data
+18:04:51.618 INFO  Sensor cache published successfully
+18:04:54.401 INFO  Analysis total time: 4:54.667 min
+18:04:54.402 INFO  SonarScanner Engine completed successfully
+18:04:54.594 INFO  EXECUTION SUCCESS
+18:04:54.595 INFO  Total time: 5:01.997s
+##[error]Coverage shard 2 tests failed (exit 100); analysis was still uploaded
+```
+
+</details>
 
 ### Release (`.github/workflows/release.yml`)
 
@@ -93,22 +108,22 @@ Contributor refresh failed: gh failed: gh: HTTP 502
 
 ### CI (`.github/workflows/ci.yml`)
 
-- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/43402283101 — dark (conclusion: `failure`), 2026-11-13 09:33 UTC
+- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/43465249022 — dark (conclusion: `failure`), 2026-11-13 16:41 UTC
 - Dark since: 2026-11-13 09:33 UTC (first run of the current streak)
-- Job / step: `select platforms` → `Git dependencies come from storytold`
-- Likely cause: SSL error: unknown error; class=Ssl (16)
+- Job / step: `gate / gate (ubuntu-24.04)` → `Gate`
+- Likely cause: error: ci failed at 'test'
 
 <details><summary>End of the job log</summary>
 
 ```
-  revision 09dcbc225b95232998498a40ca56e24716571d53 not found
-Caused by:
-  network failure seems to have happened
-  if a proxy or similar is necessary `net.git-fetch-with-cli` may help here
-  https://doc.rust-lang.org/cargo/reference/config.html#netgit-fetch-with-cli
-Caused by:
-  SSL error: unknown error; class=Ssl (16)
-##[error]Process completed with exit code 101.
+  ok    scorecard
+  FAIL  test: cargo nextest run --profile ci --workspace --locked --features heif --lib --bins --tests: exited with exit status: 100
+  skip  panic_hunt
+  skip  doctest
+  skip  wasm
+  skip  i18n
+error: ci failed at `test`
+##[error]Process completed with exit code 1.
 ```
 
 </details>

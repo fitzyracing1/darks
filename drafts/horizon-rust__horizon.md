@@ -4,23 +4,37 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/horizon-rust/horizon/issues/new
-- **Stars:** 9246 · **Generated:** 2026-11-13T12:41:39.120Z
+- **Stars:** 9326 · **Generated:** 2026-11-13T18:39:18.847Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
+
+## Skipped: upstream already tracking
+
+- parity-main (`.github/workflows/parity-main.yml`): [issue #15316](https://github.com/horizon-rust/horizon/issues/15316) "parity-main has not passed since 2026-11-07: no Nightly, and its bisect never finishes"
+
+These workflows are left out of the body below.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: "mojang republish" workflow getting cancelled on main since 2026-11-12
+CI: 2 workflows dark on main ("mojang republish", "checks")
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! The **mojang republish** workflow (`.github/workflows/mojang-republish.yml`) on `main` has been getting cancelled since 2026-11-12. Here is what I saw, in case it's useful:
+Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
 
-- Latest run on `main`: https://github.com/horizon-rust/horizon/actions/runs/43416805821 — dark (conclusion: `cancelled`), 2026-11-13 11:24 UTC
+### mojang republish (`.github/workflows/mojang-republish.yml`)
+
+- Latest run on `main`: https://github.com/horizon-rust/horizon/actions/runs/43472500205 — dark (conclusion: `cancelled`), 2026-11-13 17:24 UTC
 - Dark since: 2026-11-12 20:01 UTC (first run of the current streak)
+- Likely cause: run cancelled
+
+### checks (`.github/workflows/ci.yml`)
+
+- Latest run on `main`: https://github.com/horizon-rust/horizon/actions/runs/43480031240 — dark (conclusion: `cancelled`), 2026-11-13 18:10 UTC
+- Dark since: 2026-11-13 18:05 UTC (first run of the current streak)
 - Likely cause: run cancelled
 
 If this is already known or expected, feel free to close. Thanks for maintaining horizon!

@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/webiny/webiny-js/issues/new
-- **Stars:** 8052 · **Generated:** 2026-11-13T12:41:39.120Z
+- **Stars:** 8052 · **Generated:** 2026-11-13T18:39:18.847Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -86,7 +86,7 @@ GraphQL: Your token has not been granted the required scopes to execute this que
 
 ### Push (`.github/workflows/push.yml`)
 
-- Latest run on `next`: https://github.com/webiny/webiny-js/actions/runs/43424102695 — dark (conclusion: `failure`), 2026-11-13 12:18 UTC
+- Latest run on `next`: https://github.com/webiny/webiny-js/actions/runs/43433625297 — dark (conclusion: `failure`), 2026-11-13 13:26 UTC
 - Dark since: 2026-11-12 21:06 UTC (first run of the current streak)
 - Job / step: `Build` → `Build packages`
 - Likely cause: Property 'response' does not exist on type 'Interface<SendPasswordResetCodeInput, ITaskOutput>'.
@@ -94,11 +94,11 @@ GraphQL: Your token has not been granted the required scopes to execute this que
 <details><summary>End of the job log</summary>
 
 ```
-↓ [11/13] Batch #11 (5 packages) [SKIPPED: [11/13] Batch #11 (5 packages)]
-❯ [12/13] Batch #12 (2 packages)
-↓ [12/13] Batch #12 (2 packages) [SKIPPED: [12/13] Batch #12 (2 packages)]
-❯ [13/13] Batch #13 (5 packages)
-↓ [13/13] Batch #13 (5 packages) [SKIPPED: [13/13] Batch #13 (5 packages)]
+↓ [12/14] Batch #12 (5 packages) [SKIPPED: [12/14] Batch #12 (5 packages)]
+❯ [13/14] Batch #13 (2 packages)
+↓ [13/14] Batch #13 (2 packages) [SKIPPED: [13/14] Batch #13 (2 packages)]
+❯ [14/14] Batch #14 (5 packages)
+↓ [14/14] Batch #14 (5 packages) [SKIPPED: [14/14] Batch #14 (5 packages)]
 Error building 1 package(s). Check the logs below.
 ✖ @webiny/self-hosted-auth
 ##[error]src/api/features/SendPasswordResetCode/SendPasswordResetCodeTask.ts(26,31): error TS2339: Property 'response' does not exist on type 'Interface<SendPasswordResetCodeInput, ITaskOutput>'.
