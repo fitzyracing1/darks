@@ -4,9 +4,8 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/storytold/lightcraft/issues/new
-- **Stars:** 15966 · **Generated:** 2026-11-14T12:39:18.791Z
+- **Stars:** 15983 · **Generated:** 2026-11-14T18:37:03.336Z
 - Nothing in this file has been sent anywhere.
-- **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
@@ -21,9 +20,25 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### SonarCloud (`.github/workflows/sonarcloud.yml`)
 
-- Latest run on `main`: https://github.com/storytold/lightcraft/actions/runs/43589239183 — dark (conclusion: `cancelled`), 2026-11-14 11:16 UTC
+- Latest run on `main`: https://github.com/storytold/lightcraft/actions/runs/43609844946 — dark (conclusion: `failure`), 2026-11-14 15:22 UTC
 - Dark since: 2026-11-12 11:28 UTC (first run of the current streak)
-- Likely cause: run cancelled
+- Job / step: `sonarcloud / SonarCloud Scan` → `Fail on Rust shard test failures`
+- Likely cause: Coverage shard 7 tests failed (exit 100); analysis was still uploaded
+
+<details><summary>End of the job log</summary>
+
+```
+16:51:26.823 INFO  ------------- Upload SCA dependency files
+16:51:28.094 INFO  Successfully sent architecture data
+16:51:29.665 INFO  Sensor cache published successfully
+16:51:31.170 INFO  Analysis total time: 1:24.099 min
+16:51:31.171 INFO  SonarScanner Engine completed successfully
+16:51:31.642 INFO  EXECUTION SUCCESS
+16:51:31.642 INFO  Total time: 1:28.951s
+##[error]Coverage shard 2 tests failed (exit 100); analysis was still uploaded
+```
+
+</details>
 
 ### FreeBSD (`.github/workflows/freebsd.yml`)
 

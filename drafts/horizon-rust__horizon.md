@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/horizon-rust/horizon/issues/new
-- **Stars:** 9482 · **Generated:** 2026-11-14T12:39:18.791Z
+- **Stars:** 9658 · **Generated:** 2026-11-14T18:37:03.336Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
@@ -27,13 +27,13 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### mojang republish (`.github/workflows/mojang-republish.yml`)
 
-- Latest run on `main`: https://github.com/horizon-rust/horizon/actions/runs/43589879831 — dark (conclusion: `cancelled`), 2026-11-14 11:24 UTC
+- Latest run on `main`: https://github.com/horizon-rust/horizon/actions/runs/43615388910 — dark (conclusion: `cancelled`), 2026-11-14 16:23 UTC
 - Dark since: 2026-11-12 20:01 UTC (first run of the current streak)
 - Likely cause: run cancelled
 
 ### checks (`.github/workflows/ci.yml`)
 
-- Latest run on `main`: https://github.com/horizon-rust/horizon/actions/runs/43594284387 — dark (conclusion: `cancelled`), 2026-11-14 12:19 UTC
+- Latest run on `main`: https://github.com/horizon-rust/horizon/actions/runs/43626455521 — dark (conclusion: `cancelled`), 2026-11-14 18:24 UTC
 - Dark since: 2026-11-14 12:02 UTC (first run of the current streak)
 - Likely cause: run cancelled
 

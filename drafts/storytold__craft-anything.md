@@ -4,21 +4,19 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/storytold/craft-anything/issues/new
-- **Stars:** 32107 · **Generated:** 2026-11-14T12:39:18.791Z
+- **Stars:** 32600 · **Generated:** 2026-11-14T18:37:03.336Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 2 workflows dark on main ("FreeBSD", "SonarCloud")
+CI: "FreeBSD" workflow failing on main since 2026-11-12
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
-
-### FreeBSD (`.github/workflows/freebsd.yml`)
+Hi! The **FreeBSD** workflow (`.github/workflows/freebsd.yml`) on `main` has been failing since 2026-11-12. Here is what I saw, in case it's useful:
 
 - Latest run on `main`: https://github.com/storytold/craft-anything/actions/runs/43546216837 — dark (conclusion: `failure`), 2026-11-14 02:25 UTC
 - Dark since: 2026-11-12 02:26 UTC (first run of the current streak)
@@ -36,28 +34,6 @@ failures:
 test result: FAILED. 642 passed; 2 failed; 3 ignored; 0 measured; 0 filtered out; finished in 10.48s
 error: test failed, to rerun pass `-p craft-anything-ai --lib`
 ##[error]Process completed with exit code 101.
-```
-
-</details>
-
-### SonarCloud (`.github/workflows/sonarcloud.yml`)
-
-- Latest run on `main`: https://github.com/storytold/craft-anything/actions/runs/43586574907 — dark (conclusion: `failure`), 2026-11-14 10:42 UTC
-- Dark since: 2026-11-14 10:42 UTC (first run of the current streak)
-- Job / step: `sonarcloud / SonarCloud Scan` → `Fail on Rust shard test failures`
-- Likely cause: Coverage shard 3 tests failed (exit 100); analysis was still uploaded
-
-<details><summary>End of the job log</summary>
-
-```
-10:55:00.451 INFO  ------------- Upload SCA dependency files
-10:55:01.679 INFO  Successfully sent architecture data
-10:55:03.484 INFO  Sensor cache published successfully
-10:55:04.805 INFO  Analysis total time: 1:08.611 min
-10:55:04.807 INFO  SonarScanner Engine completed successfully
-10:55:04.974 INFO  EXECUTION SUCCESS
-10:55:04.975 INFO  Total time: 1:13.454s
-##[error]Coverage shard 3 tests failed (exit 100); analysis was still uploaded
 ```
 
 </details>

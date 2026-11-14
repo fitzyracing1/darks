@@ -4,85 +4,24 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/storytold/vectorcraft/issues/new
-- **Stars:** 11723 · **Generated:** 2026-11-14T12:39:18.791Z
+- **Stars:** 11731 · **Generated:** 2026-11-14T18:37:03.336Z
 - Nothing in this file has been sent anywhere.
+- **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 3 workflows dark on main ("CI", "FreeBSD", "SonarCloud")
+CI: "SonarCloud" workflow getting cancelled on main since 2026-11-14
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
+Hi! The **SonarCloud** workflow (`.github/workflows/sonarcloud.yml`) on `main` has been getting cancelled since 2026-11-14. Here is what I saw, in case it's useful:
 
-### CI (`.github/workflows/ci.yml`)
-
-- Latest run on `main`: https://github.com/storytold/vectorcraft/actions/runs/43582750246 — dark (conclusion: `failure`), 2026-11-14 09:54 UTC
-- Dark since: 2026-11-14 03:14 UTC (first run of the current streak)
-- Job / step: `gate / gate (ubuntu-24.04)` → `Gate`
-- Likely cause: FAIL  test: cargo nextest run --workspace --lib --bins --tests: exited with exit status: 100
-
-<details><summary>End of the job log</summary>
-
-```
-  skip  assets
-  skip  brands
-  skip  cursors
-  skip  i18n-report
-  skip  ui-commands
-  skip  layers
-  skip  wasm
-##[error]Process completed with exit code 1.
-```
-
-</details>
-
-### FreeBSD (`.github/workflows/freebsd.yml`)
-
-- Latest run on `main`: https://github.com/storytold/vectorcraft/actions/runs/43556241171 — dark (conclusion: `failure`), 2026-11-14 04:21 UTC
-- Dark since: 2026-11-14 04:21 UTC (first run of the current streak)
-- Job / step: `freebsd / FreeBSD 15 x86_64 (build + test)` → `Build and test`
-- Likely cause: Killed
-
-<details><summary>End of the job log</summary>
-
-```
-   Compiling eframe v0.37.0 (https://github.com/storytold/egui.git?rev=6d518fc799681571963842f95b55a6b68431b15a#6d518fc7)
-   Compiling webbrowser v1.2.5
-   Compiling craft-window v0.1.0 (https://github.com/storytold/craft-libs?rev=9be9a63782298ab59cd9b7a42ee9cba4f42a5ccb#9be9a637)
-   Compiling craft-web-api v0.1.0 (https://github.com/storytold/craft-libs?rev=fd5e2feff6ea25bed371a99cc732b3968d621505#fd5e2fef)
-   Compiling vectorcraft-cli v0.24.1 (/home/runner/work/vectorcraft/vectorcraft/apps/vectorcraft-cli)
-   Compiling vectorcraft-web v0.24.1 (/home/runner/work/vectorcraft/vectorcraft/apps/vectorcraft-web)
-Killed
-##[error]Process completed with exit code 137.
-```
-
-</details>
-
-### SonarCloud (`.github/workflows/sonarcloud.yml`)
-
-- Latest run on `main`: https://github.com/storytold/vectorcraft/actions/runs/43582750277 — dark (conclusion: `failure`), 2026-11-14 09:54 UTC
+- Latest run on `main`: https://github.com/storytold/vectorcraft/actions/runs/43622545459 — dark (conclusion: `cancelled`), 2026-11-14 17:42 UTC
 - Dark since: 2026-11-14 09:49 UTC (first run of the current streak)
-- Job / step: `sonarcloud / SonarCloud Scan` → `Fail on Rust shard test failures`
-- Likely cause: Coverage shard 1 tests failed (exit 100); analysis was still uploaded
-
-<details><summary>End of the job log</summary>
-
-```
-11:20:37.517 INFO  ------------- Upload SCA dependency files
-11:20:38.716 INFO  Successfully sent architecture data
-11:20:40.011 INFO  Sensor cache published successfully
-11:20:42.989 INFO  Analysis total time: 3:36.099 min
-11:20:42.990 INFO  SonarScanner Engine completed successfully
-11:20:43.143 INFO  EXECUTION SUCCESS
-11:20:43.143 INFO  Total time: 3:40.421s
-##[error]Coverage shard 1 tests failed (exit 100); analysis was still uploaded
-```
-
-</details>
+- Likely cause: run cancelled
 
 If this is already known or expected, feel free to close. Thanks for maintaining vectorcraft!
 

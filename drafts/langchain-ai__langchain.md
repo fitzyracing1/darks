@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/langchain-ai/langchain/issues/new
-- **Stars:** 149491 · **Generated:** 2026-11-14T12:39:18.791Z
+- **Stars:** 149501 · **Generated:** 2026-11-14T18:37:03.336Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -18,21 +18,21 @@ CI: "⏰ Integration Tests" workflow failing on master since 2026-10-09
 <!-- BEGIN BODY -->
 Hi! The **⏰ Integration Tests** workflow (`.github/workflows/integration_tests.yml`) on `master` has been failing since 2026-10-09. Here is what I saw, in case it's useful:
 
-- Latest run on `master`: https://github.com/langchain-ai/langchain/actions/runs/43430472452 — dark (conclusion: `failure`), 2026-11-13 13:04 UTC
+- Latest run on `master`: https://github.com/langchain-ai/langchain/actions/runs/43597798931 — dark (conclusion: `failure`), 2026-11-14 13:03 UTC
 - Dark since: 2026-10-09 13:10 UTC (first run of the current streak)
-- Job / step: `🐍 Python 3.11: libs/partners/aws` → `🚀 Run Integration Tests`
-- Likely cause: = 248 failed, 232 passed, 237 skipped, 12 xfailed, 5 xpassed, 4 warnings in 170.87s (0:02:50) =
+- Job / step: `🐍 Python 3.14: libs/partners/groq` → `🚀 Run Integration Tests`
+- Likely cause: = 71 failed, 2 passed, 11 skipped, 5 xfailed, 4 warnings, 71 retried in 296.31s (0:04:56) =
 
 <details><summary>End of the job log</summary>
 
 ```
-FAILED tests/integration_tests/tools/test_nova.py::TestNovaStreaming::test_accumulating_chunks_into_full_message - botocore.exceptions.ClientError: An error occurred (501) when calling the ConverseStream operation:
-FAILED tests/integration_tests/tools/test_nova.py::TestNovaStreaming::test_reasoning_with_different_effort_levels - botocore.exceptions.ClientError: An error occurred (501) when calling the ConverseStream operation:
-FAILED tests/integration_tests/tools/test_nova.py::TestNovaStreaming::test_chunk_content_structure - botocore.exceptions.ClientError: An error occurred (501) when calling the ConverseStream operation:
-FAILED tests/integration_tests/tools/test_nova.py::TestNovaStreaming::test_with_string_tool_names - botocore.exceptions.ClientError: An error occurred (501) when calling the ConverseStream operation:
-FAILED tests/integration_tests/tools/test_nova.py::TestNovaStreaming::test_empty_chunks_handling - botocore.exceptions.ClientError: An error occurred (501) when calling the ConverseStream operation:
-FAILED tests/integration_tests/tools/test_nova.py::TestNovaStreaming::test_with_both_system_tools - botocore.exceptions.ClientError: An error occurred (501) when calling the ConverseStream operation:
-= 248 failed, 232 passed, 237 skipped, 12 xfailed, 5 xpassed, 4 warnings in 170.87s (0:02:50) =
+FAILED tests/integration_tests/test_standard.py::TestGroq::test_unicode_tool_call_integration - groq.InternalServerError: Error code: 501 - ***'error': 'path not allow-listed by gateway', 'provider': 'groq', 'path': '/g…
+FAILED tests/integration_tests/test_standard.py::TestGroq::test_agent_loop[model0] - groq.InternalServerError: Error code: 501 - ***'error': 'path not allow-listed by gateway', 'provider': 'groq', 'path': '/groq/openai/…
+FAILED tests/integration_tests/test_standard.py::test_json_schema[pydantic] - groq.InternalServerError: Error code: 501 - ***'error': 'path not allow-listed by gateway', 'provider': 'groq', 'path': '/groq/openai/v1/chat…
+FAILED tests/integration_tests/test_standard.py::test_json_schema[json_schema] - groq.InternalServerError: Error code: 501 - ***'error': 'path not allow-listed by gateway', 'provider': 'groq', 'path': '/groq/openai/v1/c…
+FAILED tests/integration_tests/test_standard.py::test_json_schema[typeddict] - groq.InternalServerError: Error code: 501 - ***'error': 'path not allow-listed by gateway', 'provider': 'groq', 'path': '/groq/openai/v1/cha…
+= 71 failed, 2 passed, 11 skipped, 5 xfailed, 4 warnings, 71 retried in 296.31s (0:04:56) =
+make: *** [Makefile:19: integration_tests] Error 1
 ##[error]Process completed with exit code 2.
 ```
 
