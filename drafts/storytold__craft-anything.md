@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/storytold/craft-anything/issues/new
-- **Stars:** 31267 · **Generated:** 2026-11-13T18:39:18.847Z
+- **Stars:** 31418 · **Generated:** 2026-11-14T00:53:00.635Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -42,7 +42,7 @@ error: test failed, to rerun pass `-p craft-anything-ai --lib`
 
 ### SonarCloud (`.github/workflows/sonarcloud.yml`)
 
-- Latest run on `main`: https://github.com/storytold/craft-anything/actions/runs/43477273772 — dark (conclusion: `failure`), 2026-11-13 17:53 UTC
+- Latest run on `main`: https://github.com/storytold/craft-anything/actions/runs/43495689167 — dark (conclusion: `failure`), 2026-11-13 19:48 UTC
 - Dark since: 2026-11-13 15:28 UTC (first run of the current streak)
 - Job / step: `sonarcloud / SonarCloud Scan` → `Fail on Rust shard test failures`
 - Likely cause: Coverage shard 4 tests failed (exit 100); analysis was still uploaded
@@ -50,13 +50,13 @@ error: test failed, to rerun pass `-p craft-anything-ai --lib`
 <details><summary>End of the job log</summary>
 
 ```
-18:11:07.364 INFO  ------------- Upload SCA dependency files
-18:11:08.950 INFO  Successfully sent architecture data
-18:11:10.363 INFO  Sensor cache published successfully
-18:11:11.660 INFO  Analysis total time: 1:15.412 min
-18:11:11.662 INFO  SonarScanner Engine completed successfully
-18:11:11.797 INFO  EXECUTION SUCCESS
-18:11:11.797 INFO  Total time: 1:19.812s
+20:22:00.611 INFO  ------------- Upload SCA dependency files
+20:22:01.652 INFO  Successfully sent architecture data
+20:22:02.775 INFO  Sensor cache published successfully
+20:22:03.904 INFO  Analysis total time: 1:38.555 min
+20:22:03.905 INFO  SonarScanner Engine completed successfully
+20:22:04.072 INFO  EXECUTION SUCCESS
+20:22:04.073 INFO  Total time: 1:45.010s
 ##[error]Coverage shard 1 tests failed (exit 100); analysis was still uploaded
 ```
 

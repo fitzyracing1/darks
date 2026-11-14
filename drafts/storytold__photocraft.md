@@ -4,13 +4,14 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/storytold/photocraft/issues/new
-- **Stars:** 79162 · **Generated:** 2026-11-13T18:39:18.847Z
+- **Stars:** 79195 · **Generated:** 2026-11-14T00:53:00.635Z
 - Nothing in this file has been sent anywhere.
+- **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 5 workflows dark on main ("FreeBSD", "Perf (nightly)", "SonarCloud", +2 more)
+CI: 4 workflows dark on main ("FreeBSD", "Perf (nightly)", "SonarCloud", +1 more)
 <!-- END TITLE -->
 
 ## Body
@@ -64,25 +65,9 @@ error: test failed, to rerun pass `-p xtask --lib`
 
 ### SonarCloud (`.github/workflows/sonarcloud.yml`)
 
-- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/43465248367 — dark (conclusion: `failure`), 2026-11-13 16:41 UTC
+- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/43535635459 — dark (conclusion: `cancelled`), 2026-11-14 00:39 UTC
 - Dark since: 2026-11-12 12:27 UTC (first run of the current streak)
-- Job / step: `sonarcloud / SonarCloud Scan` → `Fail on Rust shard test failures`
-- Likely cause: Coverage shard 2 tests failed (exit 100); analysis was still uploaded
-
-<details><summary>End of the job log</summary>
-
-```
-18:04:48.726 INFO  ------------- Upload SCA dependency files
-18:04:50.053 INFO  Successfully sent architecture data
-18:04:51.618 INFO  Sensor cache published successfully
-18:04:54.401 INFO  Analysis total time: 4:54.667 min
-18:04:54.402 INFO  SonarScanner Engine completed successfully
-18:04:54.594 INFO  EXECUTION SUCCESS
-18:04:54.595 INFO  Total time: 5:01.997s
-##[error]Coverage shard 2 tests failed (exit 100); analysis was still uploaded
-```
-
-</details>
+- Likely cause: run cancelled
 
 ### Release (`.github/workflows/release.yml`)
 
@@ -101,28 +86,6 @@ error: test failed, to rerun pass `-p xtask --lib`
 Removing credentials config '/home/runner/work/_temp/git-credentials-f8177b35-5147-453b-8fe2-e4d2ac904df9.config'
 ##[start-action display=Generate and validate contributor credits;id=__self.__run]
 Contributor refresh failed: gh failed: gh: HTTP 502
-##[error]Process completed with exit code 1.
-```
-
-</details>
-
-### CI (`.github/workflows/ci.yml`)
-
-- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/43465249022 — dark (conclusion: `failure`), 2026-11-13 16:41 UTC
-- Dark since: 2026-11-13 09:33 UTC (first run of the current streak)
-- Job / step: `gate / gate (ubuntu-24.04)` → `Gate`
-- Likely cause: error: ci failed at 'test'
-
-<details><summary>End of the job log</summary>
-
-```
-  ok    scorecard
-  FAIL  test: cargo nextest run --profile ci --workspace --locked --features heif --lib --bins --tests: exited with exit status: 100
-  skip  panic_hunt
-  skip  doctest
-  skip  wasm
-  skip  i18n
-error: ci failed at `test`
 ##[error]Process completed with exit code 1.
 ```
 

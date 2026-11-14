@@ -4,9 +4,8 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/horizon-rust/horizon/issues/new
-- **Stars:** 9326 · **Generated:** 2026-11-13T18:39:18.847Z
+- **Stars:** 9367 · **Generated:** 2026-11-14T00:53:00.635Z
 - Nothing in this file has been sent anywhere.
-- **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Skipped: upstream already tracking
 
@@ -17,25 +16,33 @@ These workflows are left out of the body below.
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 2 workflows dark on main ("mojang republish", "checks")
+CI: "mojang republish" workflow failing on main since 2026-11-12
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
+Hi! The **mojang republish** workflow (`.github/workflows/mojang-republish.yml`) on `main` has been failing since 2026-11-12. Here is what I saw, in case it's useful:
 
-### mojang republish (`.github/workflows/mojang-republish.yml`)
-
-- Latest run on `main`: https://github.com/horizon-rust/horizon/actions/runs/43472500205 — dark (conclusion: `cancelled`), 2026-11-13 17:24 UTC
+- Latest run on `main`: https://github.com/horizon-rust/horizon/actions/runs/43535765164 — dark (conclusion: `failure`), 2026-11-14 00:40 UTC
 - Dark since: 2026-11-12 20:01 UTC (first run of the current streak)
-- Likely cause: run cancelled
+- Job / step: `check` → `Check the manifest`
+- Likely cause: python3: can't open file '/home/ludovic/.actions-runners/horizon-light-8/_work/horizon/horizon/tools/ci/mojang_republish.py': [Errno 2] No such file or directory
 
-### checks (`.github/workflows/ci.yml`)
+<details><summary>End of the job log</summary>
 
-- Latest run on `main`: https://github.com/horizon-rust/horizon/actions/runs/43480031240 — dark (conclusion: `cancelled`), 2026-11-13 18:10 UTC
-- Dark since: 2026-11-13 18:05 UTC (first run of the current streak)
-- Likely cause: run cancelled
+```
+HEAD is now at f4d8d62c31e Merge pull request #15015 from Mik00000/perf/async-chunk-save
+  origin/main
+f4d8d62c31ec2b08046faded7bef1b476783f319
+Switched to a new branch 'main'
+branch 'main' set up to track 'origin/main'.
+f4d8d62c31ec2b08046faded7bef1b476783f319
+python3: can't open file '/home/ludovic/.actions-runners/horizon-light-8/_work/horizon/horizon/tools/ci/mojang_republish.py': [Errno 2] No such file or directory
+##[error]Process completed with exit code 2.
+```
+
+</details>
 
 If this is already known or expected, feel free to close. Thanks for maintaining horizon!
 

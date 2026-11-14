@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/react/react/issues/new
-- **Stars:** 252582 · **Generated:** 2026-11-13T18:39:18.847Z
+- **Stars:** 252590 · **Generated:** 2026-11-14T00:53:00.635Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -20,9 +20,9 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### (DevTools) Regression Tests (`.github/workflows/devtools_regression_tests.yml`)
 
-- Latest run on `main`: https://github.com/react/react/actions/runs/43333933496 — dark (conclusion: `failure`), 2026-11-13 00:03 UTC
+- Latest run on `main`: https://github.com/react/react/actions/runs/43531504269 — dark (conclusion: `failure`), 2026-11-14 00:03 UTC
 - Dark since: 2026-10-11 00:06 UTC (first run of the current streak)
-- Job / step: `Run DevTools e2e tests for versions (16.5)` → `Run ./scripts/ci/download_devtools_regression_build.js 16.5`
+- Job / step: `Run DevTools e2e tests for versions (16.8)` → `Run ./scripts/ci/download_devtools_regression_build.js 16.8`
 - Likely cause: Error: Cannot find module 'child-process-promise'
 
 <details><summary>End of the job log</summary>

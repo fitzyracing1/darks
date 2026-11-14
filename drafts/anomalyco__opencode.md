@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/anomalyco/opencode/issues/new
-- **Stars:** 226627 · **Generated:** 2026-11-13T18:39:18.847Z
+- **Stars:** 226675 · **Generated:** 2026-11-14T00:53:00.635Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -42,22 +42,22 @@ could not create workflow dispatch event: HTTP 422: No ref found for: beta (http
 
 ### check-test (`.github/workflows/check-test.yml`)
 
-- Latest run on `dev`: https://github.com/anomalyco/opencode/actions/runs/43482088029 — dark (conclusion: `failure`), 2026-11-13 18:22 UTC
+- Latest run on `dev`: https://github.com/anomalyco/opencode/actions/runs/43498147768 — dark (conclusion: `failure`), 2026-11-13 20:04 UTC
 - Dark since: 2026-11-13 18:10 UTC (first run of the current streak)
-- Job / step: `unit (windows)` → `Run unit tests`
-- Likely cause: @opencode/tui#test: command (C:\runner\_work\opencode\opencode\packages\tui) C:\Users\runneradmin\.bun\bin\bun.exe run test exited (1)
+- Job / step: `e2e (windows, app-2)` → `Run app e2e tests against production build`
+- Likely cause: 1 failed
 
 <details><summary>End of the job log</summary>
 
 ```
-  ignores: 0,
-}
-[18:24:47.268] INFO (#30059): watcher subscribe {
-  path: "C:\\Users\\runneradmin\\AppData\\Local\\Temp\\oc-0bEKjp\\AGENTS.md",
-  type: "file",
-  ignores: 0,
-}
-##[error]@opencode/tui#test: command (C:\runner\_work\opencode\opencode\packages\tui) C:\Users\runneradmin\.bun\bin\bun.exe run test exited (1)
+  Consider running tests from slow files in parallel. See: https://playwright.dev/docs/test-parallel
+  1 failed
+    [chromium] › e2e\regression\tabs.spec.ts:1896:1 › the Windows titlebar menu keeps a submenu open while the pointer crosses other parent items to reach it
+  1 flaky
+    [chromium] › e2e\regression\timeline-stream.spec.ts:1451:3 › background work › shows a running subagent's working indicator beside its title
+  373 passed (7.4m)
+error: script "test:e2e:built" exited with code 1
+##[error]Process completed with exit code 1.
 ```
 
 </details>

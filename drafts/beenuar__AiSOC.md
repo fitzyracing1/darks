@@ -4,14 +4,13 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/beenuar/AiSOC/issues/new
-- **Stars:** 7264 · **Generated:** 2026-11-13T18:39:18.847Z
+- **Stars:** 7359 · **Generated:** 2026-11-14T00:53:00.635Z
 - Nothing in this file has been sent anywhere.
-- **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 3 workflows dark on main ("Deploy Docs to GitHub Pages", "Security Audit", "Publish Images")
+CI: 2 workflows dark on main ("Deploy Docs to GitHub Pages", "Security Audit")
 <!-- END TITLE -->
 
 ## Body
@@ -21,7 +20,7 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### Deploy Docs to GitHub Pages (`.github/workflows/deploy-docs.yml`)
 
-- Latest run on `main`: https://github.com/beenuar/AiSOC/actions/runs/43481653058 — dark (conclusion: `failure`), 2026-11-13 18:20 UTC
+- Latest run on `main`: https://github.com/beenuar/AiSOC/actions/runs/43511873096 — dark (conclusion: `failure`), 2026-11-13 21:34 UTC
 - Dark since: 2026-11-13 03:33 UTC (first run of the current streak)
 - Job / step: `Build Docusaurus` → `Build docs`
 - Likely cause: ERR_PNPM_RECURSIVE_RUN_FIRST_FAIL  @aisoc/docs@0.0.1 build: 'docusaurus build'
@@ -43,7 +42,7 @@ Exit status 1
 
 ### Security Audit (`.github/workflows/security-audit.yml`)
 
-- Latest run on `main`: https://github.com/beenuar/AiSOC/actions/runs/43481654198 — dark (conclusion: `failure`), 2026-11-13 18:20 UTC
+- Latest run on `main`: https://github.com/beenuar/AiSOC/actions/runs/43511872554 — dark (conclusion: `failure`), 2026-11-13 21:34 UTC
 - Dark since: 2026-11-13 18:20 UTC (first run of the current streak)
 - Job / step: `security-audit` → `Enforce staged policy`
 - Likely cause: High/critical dependency vulnerabilities found — see annotations above
@@ -54,20 +53,14 @@ Exit status 1
 + tsx 4.23.15
 + turbo 2.11.10
 + typescript 6.0.3
-Done in 6.6s
+Done in 5.8s
 ##[notice]pnpm low: GHSA-gcqx-w48m-w2h4 in deepmerge
 ##[notice]pnpm low: GHSA-gcqx-w48m-w2h4 in deepmerge
 pnpm: 2 findings (0 high/critical, 0 moderate, 2 low/info), 0 ignored
-##[error]python high: CVE-2026-126360 in opentelemetry-api==1.45.1
+##[error]python high: CVE-2026-128089 in dnspython==2.9.0
 ```
 
 </details>
-
-### Publish Images (`.github/workflows/publish-images.yml`)
-
-- Latest run on `main`: https://github.com/beenuar/AiSOC/actions/runs/43482000083 — dark (conclusion: `cancelled`), 2026-11-13 18:22 UTC
-- Dark since: 2026-11-13 18:22 UTC (first run of the current streak)
-- Likely cause: run cancelled
 
 If this is already known or expected, feel free to close. Thanks for maintaining AiSOC!
 

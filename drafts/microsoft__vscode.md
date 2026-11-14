@@ -4,22 +4,19 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/microsoft/vscode/issues/new
-- **Stars:** 195345 · **Generated:** 2026-11-13T18:39:18.847Z
+- **Stars:** 195350 · **Generated:** 2026-11-14T00:53:00.635Z
 - Nothing in this file has been sent anywhere.
-- **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 2 workflows dark on main ("Rulesets", "CodeQL")
+CI: "Rulesets" workflow failing on main since 2026-11-13
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
-
-### Rulesets (`.github/workflows/rulesets.yml`)
+Hi! The **Rulesets** workflow (`.github/workflows/rulesets.yml`) on `main` has been failing since 2026-11-13. Here is what I saw, in case it's useful:
 
 - Latest run on `main`: https://github.com/microsoft/vscode/actions/runs/43415708162 — dark (conclusion: `failure`), 2026-11-13 11:16 UTC
 - Dark since: 2026-11-13 11:16 UTC (first run of the current streak)
@@ -40,12 +37,6 @@ yarn: 1.22.22
 ```
 
 </details>
-
-### CodeQL (`.github/workflows/codeql.yml`)
-
-- Latest run on `main`: https://github.com/microsoft/vscode/actions/runs/43482641565 — dark (conclusion: `cancelled`), 2026-11-13 18:26 UTC
-- Dark since: 2026-11-13 18:25 UTC (first run of the current streak)
-- Likely cause: run cancelled
 
 If this is already known or expected, feel free to close. Thanks for maintaining vscode!
 

@@ -4,13 +4,13 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/open-metadata/OpenMetadata/issues/new
-- **Stars:** 15769 · **Generated:** 2026-11-13T18:39:18.847Z
+- **Stars:** 15772 · **Generated:** 2026-11-14T00:53:00.635Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 6 workflows dark on main ("Merge Queue Dequeue Report", "monitor-slack-link", "Integration Tests - MySQL + Elasticsearch", +3 more)
+CI: 5 workflows dark on main ("Merge Queue Dequeue Report", "monitor-slack-link", "Integration Tests - MySQL + Elasticsearch", +2 more)
 <!-- END TITLE -->
 
 ## Body
@@ -20,7 +20,7 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### Merge Queue Dequeue Report (`.github/workflows/merge-queue-dequeue-report.yml`)
 
-- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/43482646892 — dark (conclusion: `failure`), 2026-11-13 18:26 UTC
+- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/43519081643 — dark (conclusion: `failure`), 2026-11-13 22:24 UTC
 - Dark since: 2026-11-03 21:06 UTC (first run of the current streak)
 - Job / step: `evict-main-conflicts` → `Remove queue entries that conflict with main`
 - Likely cause: cannot iterate over: null
@@ -42,7 +42,7 @@ cannot iterate over: null
 
 ### monitor-slack-link (`.github/workflows/monitor-slack-link.yml`)
 
-- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/43480062347 — dark (conclusion: `failure`), 2026-11-13 18:10 UTC
+- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/43534233555 — dark (conclusion: `failure`), 2026-11-14 00:26 UTC
 - Dark since: 2026-11-06 22:08 UTC (first run of the current streak)
 - Job / step: `monitor-slack-link` → `Set up Python 3.9`
 - Likely cause: The version '3.9' with architecture 'x64' was not found for Ubuntu 26.04.
@@ -50,12 +50,12 @@ cannot iterate over: null
 <details><summary>End of the job log</summary>
 
 ```
-Updating files:  99% (27367/27643)
-Updating files: 100% (27643/27643)
-Updating files: 100% (27643/27643), done.
+Updating files:  99% (27368/27644)
+Updating files: 100% (27644/27644)
+Updating files: 100% (27644/27644), done.
 Switched to a new branch 'main'
 branch 'main' set up to track 'origin/main'.
-3d0cf224cc54fa7bcdb249a0ea3e97dcde30b652
+d47d0c5f208bdb9ff6f8d73603b6747169b0e4ee
 Version 3.9 was not found in the local cache
 ##[error]The version '3.9' with architecture 'x64' was not found for Ubuntu 26.04.
 ```
@@ -64,31 +64,31 @@ Version 3.9 was not found in the local cache
 
 ### Integration Tests - MySQL + Elasticsearch (`.github/workflows/integration-tests-mysql-elasticsearch.yml`)
 
-- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/43458870479 — dark (conclusion: `failure`), 2026-11-13 16:03 UTC
+- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/43519081681 — dark (conclusion: `failure`), 2026-11-13 22:24 UTC
 - Dark since: 2026-11-13 04:11 UTC (first run of the current streak)
-- Job / step: `Integration Test Lane (global-state)` → `Run Integration Tests (MySQL + Elasticsearch)`
-- Likely cause: [ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+- Job / step: `Integration Test Lane (parallel)` → `Run Integration Tests (MySQL + Elasticsearch)`
+- Likely cause: INFO  [2026-11-13 23:36:08,348] org.openmetadata.service.search.elasticsearch.ElasticSearchEntityManager: Successfully deleted entity from ElasticSearch for index: openmetadata_glossary_term_search_index, docId: 8dd9435…
 
 <details><summary>End of the job log</summary>
 
 ```
-[ERROR] -> [Help 1]
-[ERROR]
-[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
-[ERROR] Re-run Maven using the -X switch to enable full debug logging.
-[ERROR]
-[ERROR] For more information about the errors and possible solutions, please read the following articles:
-[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
-##[error]Process completed with exit code 1.
+127.0.0.1 - - [13/Nov/2026:23:36:08 +0000] "GET /api/v1/rdf/glossary/graph?limit=500&glossaryId=fdaac8dc-dbb9-463e-9ff9-d06773b802a0 HTTP/1.1" 200 1302 "-" "Java-http-client/21.0.13" 23
+[0:0:0:0:0:0:0:1] - - [13/Nov/2026:23:36:08 +0000] "DELETE /api/v1/glossaries/async/fdaac8dc-dbb9-463e-9ff9-d06773b802a0?hardDelete=true&recursive=true HTTP/1.1" 202 369 "-" "okhttp/5.5.0" 1
+[0:0:0:0:0:0:0:1] - - [13/Nov/2026:23:36:08 +0000] "GET /api/v1/glossaries/fdaac8dc-dbb9-463e-9ff9-d06773b802a0?include=all HTTP/1.1" 200 330 "-" "okhttp/5.5.0" 1
+INFO  [2026-11-13 23:36:08,252] org.openmetadata.service.jdbi3.EntityRepository: Found 2 children for glossary fdaac8dc-dbb9-463e-9ff9-d06773b802a0 (recursive=true, hardDelete=true)
+INFO  [2026-11-13 23:36:08,314] org.openmetadata.service.search.elasticsearch.ElasticSearchEntityManager: Successfully deleted entity from ElasticSearch for index: openmetadata_glossary_term_search_index, docId: 1c5276b…
+INFO  [2026-11-13 23:36:08,315] org.openmetadata.service.search.elasticsearch.ElasticSearchEntityManager: Successfully submitted child update in ElasticSearch for index: all
+INFO  [2026-11-13 23:36:08,348] org.openmetadata.service.search.elasticsearch.ElasticSearchEntityManager: Successfully deleted entity from ElasticSearch for index: openmetadata_glossary_term_search_index, docId: 8dd9435…
+##[error]Process completed with exit code 124.
 ```
 
 </details>
 
 ### Integration Tests - PostgreSQL + OpenSearch (`.github/workflows/integration-tests-postgres-opensearch.yml`)
 
-- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/43458870573 — dark (conclusion: `failure`), 2026-11-13 16:03 UTC
+- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/43519081928 — dark (conclusion: `failure`), 2026-11-13 22:24 UTC
 - Dark since: 2026-11-13 04:11 UTC (first run of the current streak)
-- Job / step: `Integration Test Lane (global-state)` → `Run Integration Tests (PostgreSQL + OpenSearch)`
+- Job / step: `Integration Test Lane (parallel)` → `Run Integration Tests (PostgreSQL + OpenSearch)`
 - Likely cause: [ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
 
 <details><summary>End of the job log</summary>
@@ -108,9 +108,9 @@ Version 3.9 was not found in the local cache
 
 ### Integration Tests - PostgreSQL + Elasticsearch + Redis (`.github/workflows/integration-tests-postgres-elasticsearch-redis.yml`)
 
-- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/43458871057 — dark (conclusion: `failure`), 2026-11-13 16:03 UTC
+- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/43519081588 — dark (conclusion: `failure`), 2026-11-13 22:24 UTC
 - Dark since: 2026-11-13 04:11 UTC (first run of the current streak)
-- Job / step: `Integration Test Lane (parallel)` → `Run Integration Tests (PostgreSQL + Elasticsearch + Redis)`
+- Job / step: `Integration Test Lane (global-state)` → `Run Integration Tests (PostgreSQL + Elasticsearch + Redis)`
 - Likely cause: [ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
 
 <details><summary>End of the job log</summary>
@@ -124,28 +124,6 @@ Version 3.9 was not found in the local cache
 [ERROR] For more information about the errors and possible solutions, please read the following articles:
 [ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
 ##[error]Process completed with exit code 1.
-```
-
-</details>
-
-### Maven Collate Tests (`.github/workflows/maven-build-collate.yml`)
-
-- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/43482646653 — dark (conclusion: `failure`), 2026-11-13 18:26 UTC
-- Dark since: 2026-11-13 12:04 UTC (first run of the current streak)
-- Job / step: `maven-collate-ci` → `Trigger Collate build & wait`
-- Likely cause: Collate run did not succeed: https://github.com/open-metadata/openmetadata-collate/actions/runs/43482665609
-
-<details><summary>End of the job log</summary>
-
-```
-Secret source: Actions
-Cache mode: write
-Prepare workflow directory
-Prepare all required actions
-Complete job name: maven-collate-ci
-Collate run: https://github.com/open-metadata/openmetadata-collate/actions/runs/43482665609
-failed to get run: HTTP 404: Not Found (https://api.github.com/repos/open-metadata/openmetadata-collate/actions/runs/43482665609?exclude_pull_requests=true)
-##[error]Collate run did not succeed: https://github.com/open-metadata/openmetadata-collate/actions/runs/43482665609
 ```
 
 </details>

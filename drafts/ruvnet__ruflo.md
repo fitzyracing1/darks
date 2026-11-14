@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/ruvnet/ruflo/issues/new
-- **Stars:** 81624 · **Generated:** 2026-11-13T18:39:18.847Z
+- **Stars:** 81646 · **Generated:** 2026-11-14T00:53:00.635Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -20,21 +20,21 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### CI/CD Pipeline (`.github/workflows/ci.yml`)
 
-- Latest run on `main`: https://github.com/ruvnet/ruflo/actions/runs/43349990238 — dark (conclusion: `failure`), 2026-11-13 02:08 UTC
+- Latest run on `main`: https://github.com/ruvnet/ruflo/actions/runs/43505546162 — dark (conclusion: `failure`), 2026-11-13 20:52 UTC
 - Dark since: 2026-11-12 02:08 UTC (first run of the current streak)
 - Job / step: `Test Suite (ubuntu-latest)` → `Run all tests`
-- Likely cause: AssertionError: expected [ …(1020) ] to have a length of 2400 but got 1020
+- Likely cause: Error: STACK_TRACE_ERROR
 
 <details><summary>End of the job log</summary>
 
 ```
-  duration_ms: 1.963351
-  ...
-JSON report written to /home/runner/work/ruflo/ruflo/.test-results/vitest.json
-CI test ratchet: FAILED — 1 unexpected failing file(s)
+CI test ratchet: FAILED — 2 unexpected failing file(s)
   + plugins/ruflo-console/tests/write-argv.spec.ts
       ✗ the POSIX scripts on a real disk (sh and dd as this machine has them) eight writers of 55 kB batches through the POSIX append tear no line here (one dd block per batch)
-        AssertionError: expected [ …(1020) ] to have a length of 2400 but got 1020
+        AssertionError: expected [ …(1561) ] to have a length of 2400 but got 1561
+  + v3/@claude-flow/cli/__tests__/cross-encoder-rerank.test.ts
+      ✗ crossEncoderRerank — graceful degradation contract handles empty doc list
+        Error: STACK_TRACE_ERROR
 ##[error]Process completed with exit code 1.
 ```
 
@@ -42,7 +42,7 @@ CI test ratchet: FAILED — 1 unexpected failing file(s)
 
 ### no-metaharness-smoke (`.github/workflows/no-metaharness-smoke.yml`)
 
-- Latest run on `main`: https://github.com/ruvnet/ruflo/actions/runs/43314293940 — dark (conclusion: `failure`), 2026-11-12 21:51 UTC
+- Latest run on `main`: https://github.com/ruvnet/ruflo/actions/runs/43505546146 — dark (conclusion: `failure`), 2026-11-13 20:52 UTC
 - Dark since: 2026-11-12 20:34 UTC (first run of the current streak)
 - Job / step: `smoke-without-metaharness` → `Run meta-smoke (should pass with current optional deps in place)`
 - Likely cause: ⚠ 1 plugin(s) failed their smoke contract — see failing steps above.
@@ -50,12 +50,12 @@ CI test ratchet: FAILED — 1 unexpected failing file(s)
 <details><summary>End of the job log</summary>
 
 ```
-| `agentic-qe-fleet (external)` | ✓ | — | 5.6s |  |
-| `agentdb (external)` | ✓ | — | 1.7s |  |
-| `agentic-flow (external)` | ✓ | — | 4.2s |  |
+| `agentic-qe-fleet (external)` | ✓ | — | 5.3s |  |
+| `agentdb (external)` | ✓ | — | 1.8s |  |
+| `agentic-flow (external)` | ✓ | — | 4.1s |  |
 | `changelog contract` | ✓ | 4/4 | 0.0s |  |
-| `guard-probe (fast)` | ✓ | 2817/2817 | 149.5s |  |
-**Summary**: 51/52 plugins OK · 3581/3582 steps passed · 573.4s wall (parallel: true)
+| `guard-probe (fast)` | ✓ | 2817/2817 | 148.5s |  |
+**Summary**: 51/52 plugins OK · 3581/3582 steps passed · 570.4s wall (parallel: true)
 ⚠ 1 plugin(s) failed their smoke contract — see failing steps above.
 ##[error]Process completed with exit code 1.
 ```
