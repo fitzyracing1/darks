@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/seedds/nxnative/issues/new
-- **Stars:** 15360 · **Generated:** 2026-11-14T06:41:55.262Z
+- **Stars:** 15414 · **Generated:** 2026-11-14T12:39:18.791Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
@@ -21,7 +21,7 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### fuzz (`.github/workflows/fuzz.yml`)
 
-- Latest run on `main`: https://github.com/seedds/nxnative/actions/runs/43412904268 — dark (conclusion: `failure`), 2026-11-13 10:55 UTC
+- Latest run on `main`: https://github.com/seedds/nxnative/actions/runs/43584958990 — dark (conclusion: `failure`), 2026-11-14 10:22 UTC
 - Dark since: 2026-11-02 10:59 UTC (first run of the current streak)
 - Job / step: `Fuzz the file parsers` → `Run each harness`
 - Likely cause: shader_split: ==finding== cra.Error@cra.py:narc_members
@@ -32,10 +32,10 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 Traceback (most recent call last):
   File "/opt/hostedtoolcache/Python/3.14.10/x64/lib/python3.14/logging/__init__.py", line 891, in _removeHandlerRef
 TypeError: 'NoneType' object is not callable
-==2568== ERROR: libFuzzer: fuzz target exited
+==2569== ERROR: libFuzzer: fuzz target exited
 SUMMARY: libFuzzer: fuzz target exited
-MS: 4 InsertByte-ChangeByte-InsertByte-CMP- DE: "NARC"-; base unit: bcacbc7c91bc4c8158d2b1f85dabd700ca5c1f73
-artifact_prefix='findings/shader_split/'; Test unit written to findings/shader_split/crash-553e4c69957461388ae0e64aa2e97d92a7044299
+MS: 5 PersAutoDict-ChangeByte-ShuffleBytes-CopyPart-CMP- DE: "\001\000\000\000\000\000\001R"-"NARC"-; base unit: a6f416c913561d419c2d81bf5e03e26e7da800f2
+artifact_prefix='findings/shader_split/'; Test unit written to findings/shader_split/crash-9c0c396c7025171513c675989c912f84ebe1a66d
 ##[error]shader_split: ==finding== cra.Error@cra.py:narc_members
 ```
 
@@ -43,13 +43,13 @@ artifact_prefix='findings/shader_split/'; Test unit written to findings/shader_s
 
 ### lint-c (`.github/workflows/lint-c.yml`)
 
-- Latest run on `main`: https://github.com/seedds/nxnative/actions/runs/43562138326 — dark (conclusion: `cancelled`), 2026-11-14 05:33 UTC
+- Latest run on `main`: https://github.com/seedds/nxnative/actions/runs/43592638650 — dark (conclusion: `cancelled`), 2026-11-14 12:00 UTC
 - Dark since: 2026-11-05 11:55 UTC (first run of the current streak)
 - Likely cause: run cancelled
 
 ### tests (`.github/workflows/tests.yml`)
 
-- Latest run on `main`: https://github.com/seedds/nxnative/actions/runs/43562138339 — dark (conclusion: `cancelled`), 2026-11-14 05:33 UTC
+- Latest run on `main`: https://github.com/seedds/nxnative/actions/runs/43592638688 — dark (conclusion: `cancelled`), 2026-11-14 12:00 UTC
 - Dark since: 2026-11-06 01:42 UTC (first run of the current streak)
 - Likely cause: run cancelled
 

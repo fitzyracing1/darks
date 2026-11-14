@@ -4,13 +4,13 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/mksglu/context-mode/issues/new
-- **Stars:** 34065 · **Generated:** 2026-11-14T06:41:55.262Z
+- **Stars:** 34070 · **Generated:** 2026-11-14T12:39:18.791Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 2 workflows dark on main ("readme-stats", "weekly")
+CI: 3 workflows dark on main ("readme-stats", "weekly", "ci")
 <!-- END TITLE -->
 
 ## Body
@@ -57,6 +57,28 @@ hint: See the 'Note about fast-forwards' in 'git push --help' for details.
   code: 'ERR_MODULE_NOT_FOUND'
 }
 Node.js v24.22.2
+##[error]Process completed with exit code 1.
+```
+
+</details>
+
+### ci (`.github/workflows/ci.yml`)
+
+- Latest run on `main`: https://github.com/mksglu/context-mode/actions/runs/43591274272 — dark (conclusion: `failure`), 2026-11-14 11:42 UTC
+- Dark since: 2026-11-14 11:42 UTC (first run of the current streak)
+- Job / step: `windows hosts (ubuntu-latest)` → `11 agents x setup, doctor, hook, MCP handshake from the packed package`
+- Likely cause: windows-hosts: linux 55 pass, 2 fail
+
+<details><summary>End of the job log</summary>
+
+```
+| opencode | PASS | PASS | PASS | PASS | PASS |
+| pi | PASS | PASS | PASS | PASS | PASS |
+| vscode | PASS | PASS | PASS | PASS | PASS |
+| kiro | PASS | PASS | PASS | PASS | PASS |
+| zcode | PASS | PASS | PASS | PASS | PASS |
+| omp | PASS | FAIL | FAIL | PASS | PASS |
+windows-hosts: linux 55 pass, 2 fail
 ##[error]Process completed with exit code 1.
 ```
 

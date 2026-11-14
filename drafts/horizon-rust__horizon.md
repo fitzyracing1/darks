@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/horizon-rust/horizon/issues/new
-- **Stars:** 9409 · **Generated:** 2026-11-14T06:41:55.262Z
+- **Stars:** 9482 · **Generated:** 2026-11-14T12:39:18.791Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
@@ -17,18 +17,25 @@ These workflows are left out of the body below.
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: "mojang republish" workflow failing on main since 2026-11-12
+CI: 2 workflows dark on main ("mojang republish", "checks")
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! The **mojang republish** workflow (`.github/workflows/mojang-republish.yml`) on `main` has been failing since 2026-11-12. Here is what I saw, in case it's useful:
+Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
 
-- Latest run on `main`: https://github.com/horizon-rust/horizon/actions/runs/43566643125 — dark (conclusion: `failure`), 2026-11-14 06:30 UTC
+### mojang republish (`.github/workflows/mojang-republish.yml`)
+
+- Latest run on `main`: https://github.com/horizon-rust/horizon/actions/runs/43589879831 — dark (conclusion: `cancelled`), 2026-11-14 11:24 UTC
 - Dark since: 2026-11-12 20:01 UTC (first run of the current streak)
-- Job / step: `check`
-- Likely cause: System.IO.IOException: No space left on device : '/home/ludovic/.actions-runners/horizon-light-2/_diag/Worker_20261114-063012-utc.log'
+- Likely cause: run cancelled
+
+### checks (`.github/workflows/ci.yml`)
+
+- Latest run on `main`: https://github.com/horizon-rust/horizon/actions/runs/43594284387 — dark (conclusion: `cancelled`), 2026-11-14 12:19 UTC
+- Dark since: 2026-11-14 12:02 UTC (first run of the current streak)
+- Likely cause: run cancelled
 
 If this is already known or expected, feel free to close. Thanks for maintaining horizon!
 

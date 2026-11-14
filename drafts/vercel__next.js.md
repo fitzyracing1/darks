@@ -4,13 +4,13 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/vercel/next.js/issues/new
-- **Stars:** 143506 · **Generated:** 2026-11-14T06:41:55.262Z
+- **Stars:** 143510 · **Generated:** 2026-11-14T12:39:18.791Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 2 workflows dark on canary ("Rspack Next.js production integration tests", "Rspack Next.js development integration tests")
+CI: 3 workflows dark on canary ("Rspack Next.js production integration tests", "Rspack Next.js development integration tests", "build-and-test")
 <!-- END TITLE -->
 
 ## Body
@@ -61,6 +61,12 @@ Downloading single artifact
 ```
 
 </details>
+
+### build-and-test (`.github/workflows/build_and_test.yml`)
+
+- Latest run on `canary`: https://github.com/vercel/next.js/actions/runs/43574503161 — dark (conclusion: `failure`), 2026-11-14 08:10 UTC
+- Dark since: 2026-11-14 08:10 UTC (first run of the current streak)
+- Likely cause: no cause found in annotations
 
 If this is already known or expected, feel free to close. Thanks for maintaining next.js!
 

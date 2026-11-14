@@ -4,13 +4,13 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/storytold/vectorcraft/issues/new
-- **Stars:** 11715 · **Generated:** 2026-11-14T06:41:55.262Z
+- **Stars:** 11723 · **Generated:** 2026-11-14T12:39:18.791Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 2 workflows dark on main ("CI", "FreeBSD")
+CI: 3 workflows dark on main ("CI", "FreeBSD", "SonarCloud")
 <!-- END TITLE -->
 
 ## Body
@@ -20,21 +20,21 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### CI (`.github/workflows/ci.yml`)
 
-- Latest run on `main`: https://github.com/storytold/vectorcraft/actions/runs/43562956865 — dark (conclusion: `failure`), 2026-11-14 05:44 UTC
+- Latest run on `main`: https://github.com/storytold/vectorcraft/actions/runs/43582750246 — dark (conclusion: `failure`), 2026-11-14 09:54 UTC
 - Dark since: 2026-11-14 03:14 UTC (first run of the current streak)
 - Job / step: `gate / gate (ubuntu-24.04)` → `Gate`
-- Likely cause: FAIL  wasm: cargo check --target wasm32-unknown-unknown --keep-going (25 crates: vectorcraft-affinity, vectorcraft-apischema, vectorcraft-brush, vectorcraft-cad, vectorcraft-color, vectorcraft-doc, vectorcraft-effects, …
+- Likely cause: FAIL  test: cargo nextest run --workspace --lib --bins --tests: exited with exit status: 100
 
 <details><summary>End of the job log</summary>
 
 ```
-  ok    assets
-  ok    brands
-  ok    cursors
-  ok    i18n-report
-  ok    ui-commands
-  ok    layers
-  FAIL  wasm: cargo check --target wasm32-unknown-unknown --keep-going (25 crates: vectorcraft-affinity, vectorcraft-apischema, vectorcraft-brush, vectorcraft-cad, vectorcraft-color, vectorcraft-doc, vectorcraft-effects…
+  skip  assets
+  skip  brands
+  skip  cursors
+  skip  i18n-report
+  skip  ui-commands
+  skip  layers
+  skip  wasm
 ##[error]Process completed with exit code 1.
 ```
 
@@ -58,6 +58,28 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
    Compiling vectorcraft-web v0.24.1 (/home/runner/work/vectorcraft/vectorcraft/apps/vectorcraft-web)
 Killed
 ##[error]Process completed with exit code 137.
+```
+
+</details>
+
+### SonarCloud (`.github/workflows/sonarcloud.yml`)
+
+- Latest run on `main`: https://github.com/storytold/vectorcraft/actions/runs/43582750277 — dark (conclusion: `failure`), 2026-11-14 09:54 UTC
+- Dark since: 2026-11-14 09:49 UTC (first run of the current streak)
+- Job / step: `sonarcloud / SonarCloud Scan` → `Fail on Rust shard test failures`
+- Likely cause: Coverage shard 1 tests failed (exit 100); analysis was still uploaded
+
+<details><summary>End of the job log</summary>
+
+```
+11:20:37.517 INFO  ------------- Upload SCA dependency files
+11:20:38.716 INFO  Successfully sent architecture data
+11:20:40.011 INFO  Sensor cache published successfully
+11:20:42.989 INFO  Analysis total time: 3:36.099 min
+11:20:42.990 INFO  SonarScanner Engine completed successfully
+11:20:43.143 INFO  EXECUTION SUCCESS
+11:20:43.143 INFO  Total time: 3:40.421s
+##[error]Coverage shard 1 tests failed (exit 100); analysis was still uploaded
 ```
 
 </details>

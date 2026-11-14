@@ -4,9 +4,8 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/storytold/photocraft/issues/new
-- **Stars:** 79239 · **Generated:** 2026-11-14T06:41:55.262Z
+- **Stars:** 79304 · **Generated:** 2026-11-14T12:39:18.791Z
 - Nothing in this file has been sent anywhere.
-- **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
@@ -43,28 +42,44 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### SonarCloud (`.github/workflows/sonarcloud.yml`)
 
-- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/43558842770 — dark (conclusion: `cancelled`), 2026-11-14 04:53 UTC
+- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/43562973500 — dark (conclusion: `failure`), 2026-11-14 05:44 UTC
 - Dark since: 2026-11-12 12:27 UTC (first run of the current streak)
-- Likely cause: run cancelled
-
-### CI (`.github/workflows/ci.yml`)
-
-- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/43555115913 — dark (conclusion: `failure`), 2026-11-14 04:08 UTC
-- Dark since: 2026-11-14 03:13 UTC (first run of the current streak)
-- Job / step: `test (without heif)`
-- Likely cause: The job has exceeded the maximum execution time of 1h0m0s
+- Job / step: `sonarcloud / SonarCloud Scan` → `Fail on Rust shard test failures`
+- Likely cause: Coverage shard 4 tests failed (exit 100); analysis was still uploaded
 
 <details><summary>End of the job log</summary>
 
 ```
-    failures:
-    failures:
-        svg::gzip_compressed_embedded_svg_decompresses_once_with_a_size_cap
-    test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 603 filtered out; finished in 0.45s
-  stderr ───
-    thread 'svg::gzip_compressed_embedded_svg_decompresses_once_with_a_size_cap' (278857) panicked at crates/io/tests/it/svg.rs:12:62:
-    SVG: embedded SVG images exceed the byte or nesting budget
-    <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10"><image x="0" y="0" width="10" height="10" href="data:image/svg+xml;base64,H4sIAAAAAAAE/7IpLktXqMjNySu2VcooKSmw0tcvLy/XKzfWyy9K1zcyMDDQLy5LV1Ioz0wpybBVMl…
+08:16:11.695 INFO  ------------- Upload SCA dependency files
+08:16:12.806 INFO  Successfully sent architecture data
+08:16:14.416 INFO  Sensor cache published successfully
+08:16:16.785 INFO  Analysis total time: 2:44.872 min
+08:16:16.787 INFO  SonarScanner Engine completed successfully
+08:16:16.932 INFO  EXECUTION SUCCESS
+08:16:16.933 INFO  Total time: 2:49.766s
+##[error]Coverage shard 1 tests failed (exit 100); analysis was still uploaded
+```
+
+</details>
+
+### CI (`.github/workflows/ci.yml`)
+
+- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/43562973482 — dark (conclusion: `failure`), 2026-11-14 05:44 UTC
+- Dark since: 2026-11-14 03:13 UTC (first run of the current streak)
+- Job / step: `corpus tests` → `Corpus tests`
+- Likely cause: error: cargo test --release --features corpus,heif (photocraft-io, photocraft-engine): exited with exit status: 101
+
+<details><summary>End of the job log</summary>
+
+```
+   3: <photocraft_io::svg::tests::the_deepest_chain_of_embedded_svg_images_fits_a_small_stack::{closure#0} as core::ops::function::FnOnce<()>>::call_once
+note: Some details are omitted, run with `RUST_BACKTRACE=full` for a verbose backtrace.
+failures:
+    svg::tests::the_deepest_chain_of_embedded_svg_images_fits_a_small_stack
+test result: FAILED. 682 passed; 1 failed; 2 ignored; 0 measured; 0 filtered out; finished in 8.49s
+error: test failed, to rerun pass `-p photocraft-io --lib`
+error: cargo test --release --features corpus,heif (photocraft-io, photocraft-engine): exited with exit status: 101
+##[error]Process completed with exit code 1.
 ```
 
 </details>

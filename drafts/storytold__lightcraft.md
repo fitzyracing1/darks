@@ -4,14 +4,14 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/storytold/lightcraft/issues/new
-- **Stars:** 15950 · **Generated:** 2026-11-14T06:41:55.262Z
+- **Stars:** 15966 · **Generated:** 2026-11-14T12:39:18.791Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 3 workflows dark on main ("SonarCloud", "CI", "FreeBSD")
+CI: 2 workflows dark on main ("SonarCloud", "FreeBSD")
 <!-- END TITLE -->
 
 ## Body
@@ -21,31 +21,9 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### SonarCloud (`.github/workflows/sonarcloud.yml`)
 
-- Latest run on `main`: https://github.com/storytold/lightcraft/actions/runs/43562967875 — dark (conclusion: `cancelled`), 2026-11-14 05:44 UTC
+- Latest run on `main`: https://github.com/storytold/lightcraft/actions/runs/43589239183 — dark (conclusion: `cancelled`), 2026-11-14 11:16 UTC
 - Dark since: 2026-11-12 11:28 UTC (first run of the current streak)
 - Likely cause: run cancelled
-
-### CI (`.github/workflows/ci.yml`)
-
-- Latest run on `main`: https://github.com/storytold/lightcraft/actions/runs/43562967745 — dark (conclusion: `failure`), 2026-11-14 05:44 UTC
-- Dark since: 2026-11-14 03:13 UTC (first run of the current streak)
-- Job / step: `gate / gate (ubuntu-24.04)` → `Gate`
-- Likely cause: error: ci failed at 'heif'
-
-<details><summary>End of the job log</summary>
-
-```
-  skip  wasm
-Machine: linux x86_64 (Ubuntu 24.04.5 LTS, kernel 7.0.0-1017-azure), 4 CPUs, 16 GB RAM (14.0 GB available)
-GPU for the pipeline: probe failed: not probed: the test step did not run
-Data: corpus: 0 of 462 pinned raws, 0 images, 0 PngSuite files; CRAFT_FONTS_DIR set
-Skipped tests: unknown, the test step did not run
-Report: target/ci/report.json; to paste into a PR: target/ci/summary.md (or run with --summary-md)
-error: ci failed at `heif`
-##[error]Process completed with exit code 1.
-```
-
-</details>
 
 ### FreeBSD (`.github/workflows/freebsd.yml`)
 

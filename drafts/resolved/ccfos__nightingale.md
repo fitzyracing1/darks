@@ -1,8 +1,8 @@
 <!-- dark-draft: ccfos/nightingale -->
-<!-- draft-state: ready -->
+<!-- draft-state: resolved -->
 # Upstream issue draft: ccfos/nightingale
 
-- **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
+- **Status:** resolved — lit again (2026-11-14); nothing to file
 - **Would be filed at:** https://github.com/ccfos/nightingale/issues/new
 - **Stars:** 13487 · **Generated:** 2026-11-14T06:41:55.262Z
 - Nothing in this file has been sent anywhere.

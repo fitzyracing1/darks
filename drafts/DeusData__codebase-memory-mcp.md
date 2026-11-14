@@ -4,14 +4,15 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/DeusData/codebase-memory-mcp/issues/new
-- **Stars:** 48614 · **Generated:** 2026-11-14T06:41:55.262Z
+- **Stars:** 48623 · **Generated:** 2026-11-14T12:39:18.791Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
+- **Note for Joshua:** cancelled by a concurrency group — likely noise
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 2 workflows dark on main ("Nightly Soak", "test-impact-artifact")
+CI: 4 workflows dark on main ("Nightly Soak", "test-impact-artifact", "CodeQL SAST", +1 more)
 <!-- END TITLE -->
 
 ## Body
@@ -43,25 +44,23 @@ Total queries: 13704
 
 ### test-impact-artifact (`.github/workflows/test-impact-artifact.yml`)
 
-- Latest run on `main`: https://github.com/DeusData/codebase-memory-mcp/actions/runs/43539798581 — dark (conclusion: `failure`), 2026-11-14 01:18 UTC
+- Latest run on `main`: https://github.com/DeusData/codebase-memory-mcp/actions/runs/43593371882 — dark (conclusion: `cancelled`), 2026-11-14 12:08 UTC
 - Dark since: 2026-11-13 18:51 UTC (first run of the current streak)
-- Job / step: `publish` → `Publish the bundle`
-- Likely cause: test-impact publish: status 1: reading HEAD sources failed: internal/cbm/ac.c
+- Likely cause: run cancelled
 
-<details><summary>End of the job log</summary>
+### CodeQL SAST (`.github/workflows/codeql.yml`)
 
-```
-grammar_probe_c: 42 tests, 0 incomplete, exit 0, 1.1 s
-grammar_probe_d: 75 tests, 0 incomplete, exit 0, 4.5 s
-grammar_probe_e: 56 tests, 0 incomplete, exit 0, 3.1 s
-grammar_probe_f: 184 tests, 0 incomplete, exit 0, 19.1 s
-grammar_probe_g: 45 tests, 0 incomplete, exit 0, 2.8 s
-map: 10335 tests, 321 incomplete, 27644 functions -> /tmp/tmp.FAJmZtBoiT/coverage
-test-impact publish: status 1: reading HEAD sources failed: internal/cbm/ac.c
-##[error]Process completed with exit code 1.
-```
+- Latest run on `main`: https://github.com/DeusData/codebase-memory-mcp/actions/runs/43593371869 — dark (conclusion: `cancelled`), 2026-11-14 12:08 UTC
+- Dark since: 2026-11-14 12:08 UTC (first run of the current streak)
+- Job / step: `analyze (c-cpp, manual, codeql-cpp)`
+- Likely cause: Canceling since a higher priority waiting request for codeql-c-cpp-refs/heads/main exists
 
-</details>
+### OpenSSF Scorecard (`.github/workflows/scorecard.yml`)
+
+- Latest run on `main`: https://github.com/DeusData/codebase-memory-mcp/actions/runs/43593371947 — dark (conclusion: `cancelled`), 2026-11-14 12:08 UTC
+- Dark since: 2026-11-14 12:08 UTC (first run of the current streak)
+- Job / step: `scorecard`
+- Likely cause: Canceling since a higher priority waiting request for scorecard-refs/heads/main exists
 
 If this is already known or expected, feel free to close. Thanks for maintaining codebase-memory-mcp!
 
