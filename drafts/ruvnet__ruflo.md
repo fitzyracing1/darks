@@ -4,13 +4,13 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/ruvnet/ruflo/issues/new
-- **Stars:** 81646 · **Generated:** 2026-11-14T00:53:00.635Z
+- **Stars:** 81659 · **Generated:** 2026-11-14T06:41:55.262Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 3 workflows dark on main ("CI/CD Pipeline", "no-metaharness-smoke", "all-plugins-smoke")
+CI: 4 workflows dark on main ("CI/CD Pipeline", "no-metaharness-smoke", "all-plugins-smoke", +1 more)
 <!-- END TITLE -->
 
 ## Body
@@ -20,10 +20,10 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### CI/CD Pipeline (`.github/workflows/ci.yml`)
 
-- Latest run on `main`: https://github.com/ruvnet/ruflo/actions/runs/43505546162 — dark (conclusion: `failure`), 2026-11-13 20:52 UTC
+- Latest run on `main`: https://github.com/ruvnet/ruflo/actions/runs/43544676876 — dark (conclusion: `failure`), 2026-11-14 02:09 UTC
 - Dark since: 2026-11-12 02:08 UTC (first run of the current streak)
 - Job / step: `Test Suite (ubuntu-latest)` → `Run all tests`
-- Likely cause: Error: STACK_TRACE_ERROR
+- Likely cause: AssertionError: expected 0.0004374980926513672 to be greater than 0.001
 
 <details><summary>End of the job log</summary>
 
@@ -31,10 +31,10 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 CI test ratchet: FAILED — 2 unexpected failing file(s)
   + plugins/ruflo-console/tests/write-argv.spec.ts
       ✗ the POSIX scripts on a real disk (sh and dd as this machine has them) eight writers of 55 kB batches through the POSIX append tear no line here (one dd block per batch)
-        AssertionError: expected [ …(1561) ] to have a length of 2400 but got 1561
-  + v3/@claude-flow/cli/__tests__/cross-encoder-rerank.test.ts
-      ✗ crossEncoderRerank — graceful degradation contract handles empty doc list
-        Error: STACK_TRACE_ERROR
+        AssertionError: expected [ …(1620) ] to have a length of 2400 but got 1620
+  + v3/@claude-flow/neural/__tests__/moe-router-load-balance.test.ts
+      ✗ computeLoadBalanceLoss() uses the mean router probability (#4381) is not driven by the current call: one divergent query leaves the loss at the historical value
+        AssertionError: expected 0.0004374980926513672 to be greater than 0.001
 ##[error]Process completed with exit code 1.
 ```
 
@@ -79,6 +79,28 @@ CI test ratchet: FAILED — 2 unexpected failing file(s)
   },
   "generatedAt": "2026-11-12T21:58:13.364Z"
 }
+##[error]Process completed with exit code 1.
+```
+
+</details>
+
+### Clone Tracker (14-day rolling) (`.github/workflows/clone-tracker.yml`)
+
+- Latest run on `main`: https://github.com/ruvnet/ruflo/actions/runs/43566356629 — dark (conclusion: `failure`), 2026-11-14 06:26 UTC
+- Dark since: 2026-11-14 06:26 UTC (first run of the current streak)
+- Job / step: `Snapshot clones for ruflo ecosystem` → `Run clone tracker`
+- Likely cause: clone tracker: 5/5 repo(s) failed (ruvnet/ruflo, ruvnet/agentdb, ruvnet/agentic-flow, ruvnet/ruvector, ruvnet/ruv-FANN). Set the TRAFFIC_TOKEN secret (fine-grained PAT, Administration: read on these repos). No snapshot …
+
+<details><summary>End of the job log</summary>
+
+```
+  [error] failed to fetch clones for ruvnet/agentic-flow: gh: Resource not accessible by integration (HTTP 403)
+  ruvnet/agentic-flow      count=       0  uniques=     0
+  [error] failed to fetch clones for ruvnet/ruvector: gh: Resource not accessible by integration (HTTP 403)
+  ruvnet/ruvector          count=       0  uniques=     0
+  [error] failed to fetch clones for ruvnet/ruv-FANN: gh: Resource not accessible by integration (HTTP 403)
+  ruvnet/ruv-FANN          count=       0  uniques=     0
+clone tracker: 5/5 repo(s) failed (ruvnet/ruflo, ruvnet/agentdb, ruvnet/agentic-flow, ruvnet/ruvector, ruvnet/ruv-FANN). Set the TRAFFIC_TOKEN secret (fine-grained PAT, Administration: read on these repos). No snapshot …
 ##[error]Process completed with exit code 1.
 ```
 

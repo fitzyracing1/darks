@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/KnifeLemon/Filee/issues/new
-- **Stars:** 26777 · **Generated:** 2026-11-14T00:53:00.635Z
+- **Stars:** 26866 · **Generated:** 2026-11-14T06:41:55.262Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** cancelled by a concurrency group — likely noise
 
@@ -19,21 +19,21 @@ CI: "CI" workflow getting cancelled on main since 2026-11-13
 <!-- BEGIN BODY -->
 Hi! The **CI** workflow (`.github/workflows/ci.yml`) on `main` has been getting cancelled since 2026-11-13. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/KnifeLemon/Filee/actions/runs/43518067215 — dark (conclusion: `cancelled`), 2026-11-13 22:17 UTC
+- Latest run on `main`: https://github.com/KnifeLemon/Filee/actions/runs/43563674647 — dark (conclusion: `cancelled`), 2026-11-14 05:53 UTC
 - Dark since: 2026-11-13 18:23 UTC (first run of the current streak)
-- Job / step: `portable / portable (macos-15, osx-arm64)` → `Build and test native projects`
+- Job / step: `build (win-arm64)` → `Set up job`
 - Likely cause: Canceling since a higher priority waiting request for ci-refs/heads/main exists
 
 <details><summary>End of the job log</summary>
 
 ```
-  Passed Filee.App.Tests.RenderTests.Main_window_pages_render(page: "toolbar", language: "en") [1 s]
-  Passed Filee.App.Tests.SliceLabelFitTests.Every_label_of_every_built_in_donut_fits_its_slice_in_every_language(code: "fa") [28 s]
-  Passed Filee.App.Tests.CropOverlayTests.Several_files_show_a_strip_with_how_each_went(language: "pl", dark: False) [1 s]
-  Passed Filee.App.Tests.RenderTests.Main_window_pages_render(page: "toolbar", language: "hi") [1 s]
-  Passed Filee.App.Tests.SliceLabelFitTests.Every_label_of_every_built_in_donut_fits_its_slice_in_every_language(code: "pt-BR") [25 s]
-  Passed Filee.App.Tests.CropOverlayTests.Each_corner_drags_on_its_own [770 ms]
-  Passed Filee.App.Tests.RenderTests.Main_window_pages_render(page: "about", language: "ar") [320 ms]
+Prepare workflow directory
+Prepare all required actions
+Getting action download info
+Download action repository 'actions/checkout@v7' (SHA:3d3c42e5aac5ba805825da76410c181273ba90b1)
+Download action repository 'actions/setup-dotnet@v6' (SHA:0f4a354dd5547a28c70b7853dbd95d5b67886e73)
+Download action repository 'actions/cache@v5' (SHA:caa296126883cff596d87d8935842f9db880ef25)
+Download action repository 'actions/upload-artifact@v7' (SHA:cf430e030ddbb5b0abf93d22962f4752f3646cd9)
 ##[error]The operation was canceled.
 ```
 

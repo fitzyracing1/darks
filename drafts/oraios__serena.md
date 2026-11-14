@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/oraios/serena/issues/new
-- **Stars:** 31365 · **Generated:** 2026-11-14T00:53:00.635Z
+- **Stars:** 31368 · **Generated:** 2026-11-14T06:41:55.262Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title

@@ -4,14 +4,14 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/storytold/photocraft/issues/new
-- **Stars:** 79195 · **Generated:** 2026-11-14T00:53:00.635Z
+- **Stars:** 79239 · **Generated:** 2026-11-14T06:41:55.262Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 4 workflows dark on main ("FreeBSD", "Perf (nightly)", "SonarCloud", +1 more)
+CI: 3 workflows dark on main ("Perf (nightly)", "SonarCloud", "CI")
 <!-- END TITLE -->
 
 ## Body
@@ -19,31 +19,9 @@ CI: 4 workflows dark on main ("FreeBSD", "Perf (nightly)", "SonarCloud", +1 more
 <!-- BEGIN BODY -->
 Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
 
-### FreeBSD (`.github/workflows/freebsd.yml`)
-
-- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/43351801650 — dark (conclusion: `failure`), 2026-11-13 02:23 UTC
-- Dark since: 2026-11-12 02:25 UTC (first run of the current streak)
-- Job / step: `freebsd / FreeBSD 15 x86_64 (build + test)` → `Build and test`
-- Likely cause: error: test failed, to rerun pass '-p xtask --lib'
-
-<details><summary>End of the job log</summary>
-
-```
-thread 'psd_write_oracle::tests::export_batch_checks_reopened_result_and_propagates_command_failure' (550475) panicked at xtask/src/psd_write_oracle.rs:520:96:
-called `Result::unwrap()` on an `Err` value: "start CLI: Text file busy (os error 26)"
-note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
-failures:
-    psd_write_oracle::tests::export_batch_checks_reopened_result_and_propagates_command_failure
-test result: FAILED. 12 passed; 1 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.17s
-error: test failed, to rerun pass `-p xtask --lib`
-##[error]Process completed with exit code 101.
-```
-
-</details>
-
 ### Perf (nightly) (`.github/workflows/perf-nightly.yml`)
 
-- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/43359229965 — dark (conclusion: `failure`), 2026-11-13 03:28 UTC
+- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/43551672201 — dark (conclusion: `failure`), 2026-11-14 03:26 UTC
 - Dark since: 2026-11-12 03:28 UTC (first run of the current streak)
 - Job / step: `perf (macOS, Apple GPU)` → `Run benchmarks`
 - Likely cause: P44 Open .psd, 36 MP, 3 layers: **missing**: bench 'interactive_bench' failed: interactive_bench --reps 5 --json /Users/runner/work/photocraft/photocraft/target/perf/interactive_bench.json: exited with exit status: 101
@@ -51,11 +29,11 @@ error: test failed, to rerun pass `-p xtask --lib`
 <details><summary>End of the job log</summary>
 
 ```
-  P40 Brush dab 60 px on 36 MP: **missing**: bench `interactive_bench` failed: interactive_bench --reps 5 --json /Users/runner/work/photocraft/photocraft/target/perf/interactive_bench.json: exited with exit status: 101
   P41 Gaussian Blur r 40 on 36 MP: **missing**: bench `interactive_bench` failed: interactive_bench --reps 5 --json /Users/runner/work/photocraft/photocraft/target/perf/interactive_bench.json: exited with exit status: 1…
   P42 Curves dialog change, layer preview, 36 MP: **missing**: bench `interactive_bench` failed: interactive_bench --reps 5 --json /Users/runner/work/photocraft/photocraft/target/perf/interactive_bench.json: exited with…
   P43 Save .psd, 36 MP, 3 layers: **missing**: bench `interactive_bench` failed: interactive_bench --reps 5 --json /Users/runner/work/photocraft/photocraft/target/perf/interactive_bench.json: exited with exit status: 101
   P44 Open .psd, 36 MP, 3 layers: **missing**: bench `interactive_bench` failed: interactive_bench --reps 5 --json /Users/runner/work/photocraft/photocraft/target/perf/interactive_bench.json: exited with exit status: 101
+  P90 Free Transform begin, 2 layers on 24 MP (Ctrl+T + first preview frame): **BUDGET BROKEN**
   bench interactive_bench: interactive_bench --reps 5 --json /Users/runner/work/photocraft/photocraft/target/perf/interactive_bench.json: exited with exit status: 101
   bench large_file_bench: large_file_bench --reps 3 --json /Users/runner/work/photocraft/photocraft/target/perf/large_file_bench.json: exited with exit status: 1
 ##[error]Process completed with exit code 1.
@@ -65,28 +43,28 @@ error: test failed, to rerun pass `-p xtask --lib`
 
 ### SonarCloud (`.github/workflows/sonarcloud.yml`)
 
-- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/43535635459 — dark (conclusion: `cancelled`), 2026-11-14 00:39 UTC
+- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/43558842770 — dark (conclusion: `cancelled`), 2026-11-14 04:53 UTC
 - Dark since: 2026-11-12 12:27 UTC (first run of the current streak)
 - Likely cause: run cancelled
 
-### Release (`.github/workflows/release.yml`)
+### CI (`.github/workflows/ci.yml`)
 
-- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/43352909287 — dark (conclusion: `failure`), 2026-11-13 02:32 UTC
-- Dark since: 2026-11-13 02:32 UTC (first run of the current streak)
-- Job / step: `credits / refresh` → `Refresh contributor credits for this release commit`
-- Likely cause: Contributor refresh failed: gh failed: gh: HTTP 502
+- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/43555115913 — dark (conclusion: `failure`), 2026-11-14 04:08 UTC
+- Dark since: 2026-11-14 03:13 UTC (first run of the current streak)
+- Job / step: `test (without heif)`
+- Likely cause: The job has exceeded the maximum execution time of 1h0m0s
 
 <details><summary>End of the job log</summary>
 
 ```
-/home/runner/work/_temp/git-credentials-f8177b35-5147-453b-8fe2-e4d2ac904df9.config
-/home/runner/work/_temp/git-credentials-f8177b35-5147-453b-8fe2-e4d2ac904df9.config
-/github/runner_temp/git-credentials-f8177b35-5147-453b-8fe2-e4d2ac904df9.config
-/github/runner_temp/git-credentials-f8177b35-5147-453b-8fe2-e4d2ac904df9.config
-Removing credentials config '/home/runner/work/_temp/git-credentials-f8177b35-5147-453b-8fe2-e4d2ac904df9.config'
-##[start-action display=Generate and validate contributor credits;id=__self.__run]
-Contributor refresh failed: gh failed: gh: HTTP 502
-##[error]Process completed with exit code 1.
+    failures:
+    failures:
+        svg::gzip_compressed_embedded_svg_decompresses_once_with_a_size_cap
+    test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 603 filtered out; finished in 0.45s
+  stderr ───
+    thread 'svg::gzip_compressed_embedded_svg_decompresses_once_with_a_size_cap' (278857) panicked at crates/io/tests/it/svg.rs:12:62:
+    SVG: embedded SVG images exceed the byte or nesting budget
+    <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10"><image x="0" y="0" width="10" height="10" href="data:image/svg+xml;base64,H4sIAAAAAAAE/7IpLktXqMjNySu2VcooKSmw0tcvLy/XKzfWyy9K1zcyMDDQLy5LV1Ioz0wpybBVMl…
 ```
 
 </details>

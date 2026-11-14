@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/xberg-io/xberg/issues/new
-- **Stars:** 9583 · **Generated:** 2026-11-14T00:53:00.635Z
+- **Stars:** 9584 · **Generated:** 2026-11-14T06:41:55.262Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** cancelled by a concurrency group — likely noise
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
@@ -22,21 +22,21 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### CI Rust (`.github/workflows/ci-rust.yaml`)
 
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/43527998280 — dark (conclusion: `cancelled`), 2026-11-13 23:33 UTC
+- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/43563647462 — dark (conclusion: `cancelled`), 2026-11-14 05:53 UTC
 - Dark since: 2026-10-25 18:30 UTC (first run of the current streak)
-- Job / step: `Rust tract-only (no-ORT)` → `Run ./.github/actions/qualify-ocr-orientation`
+- Job / step: `Rust (ubuntu-24.04)` → `Verify NLI qualification contracts and runtime`
 - Likely cause: Canceling since a higher priority waiting request for ci-rust-refs/heads/main exists
 
 <details><summary>End of the job log</summary>
 
 ```
-   Compiling tract-linalg v0.23.10
-   Compiling tract-core v0.23.10
-   Compiling tract-nnef v0.23.10
-   Compiling tract-hir v0.23.10
-   Compiling tract-extra v0.23.10
-   Compiling tract-onnx-opl v0.23.10
-   Compiling tract-onnx v0.23.10
+   Compiling tokenizers v0.23.2
+   Compiling serde_toon_format v0.2.0
+   Compiling parking_lot v0.13.0
+   Compiling rmp-serde v1.3.1
+   Compiling ort v2.0.0-rc.15
+   Compiling infer v0.22.0
+   Compiling fs2 v0.4.3
 ##[error]The operation was canceled.
 ```
 
@@ -44,7 +44,7 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### CI E2E (`.github/workflows/ci-e2e.yaml`)
 
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/43526162376 — dark (conclusion: `cancelled`), 2026-11-13 23:18 UTC
+- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/43563647432 — dark (conclusion: `cancelled`), 2026-11-14 05:53 UTC
 - Dark since: 2026-11-03 17:32 UTC (first run of the current streak)
 - Job / step: `Build FFI (x86_64-unknown-linux-gnu)` → `Build FFI library`
 - Likely cause: Canceling since a higher priority waiting request for ci-e2e-refs/heads/main exists
@@ -52,13 +52,13 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 <details><summary>End of the job log</summary>
 
 ```
-     Running `CARGO=/home/runner/.rustup/toolchains/1.99.1-x86_64-unknown-linux-gnu/bin/cargo CARGO_CRATE_NAME=sevenz_rust2 CARGO_MANIFEST_DIR=/home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/sevenz-rus…
-   Compiling outlook-pst v1.2.0
-     Running `CARGO=/home/runner/.rustup/toolchains/1.99.1-x86_64-unknown-linux-gnu/bin/cargo CARGO_CRATE_NAME=outlook_pst CARGO_MANIFEST_DIR=/home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/outlook-pst…
-   Compiling rake v0.3.6
-     Running `CARGO=/home/runner/.rustup/toolchains/1.99.1-x86_64-unknown-linux-gnu/bin/cargo CARGO_CRATE_NAME=rake CARGO_MANIFEST_DIR=/home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/rake-0.3.6 CARGO_M…
-   Compiling lru v0.19.0
-     Running `CARGO=/home/runner/.rustup/toolchains/1.99.1-x86_64-unknown-linux-gnu/bin/cargo CARGO_CRATE_NAME=lru CARGO_MANIFEST_DIR=/home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/lru-0.19.0 CARGO_MA…
+     Running `CARGO=/home/runner/.rustup/toolchains/1.99.1-x86_64-unknown-linux-gnu/bin/cargo CARGO_CRATE_NAME=typenum CARGO_MANIFEST_DIR=/home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/typenum-1.20.1 …
+    compile time. It currently supports bits, unsigned integers, and signed
+    integers. It also provides a type-level array of type-level numbers, but its
+    implementation is incomplete.' CARGO_PKG_HOMEPAGE='' CARGO_PKG_LICENSE='MIT OR Apache-2.0' CARGO_PKG_LICENSE_FILE='' CARGO_PKG_NAME=typenum CARGO_PKG_README=README.md CARGO_PKG_REPOSITORY='https://github.com/paholg/…
+   Compiling compression-codecs v0.4.47
+     Running `CARGO=/home/runner/.rustup/toolchains/1.99.1-x86_64-unknown-linux-gnu/bin/cargo CARGO_CRATE_NAME=compression_codecs CARGO_MANIFEST_DIR=/home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/comp…
+' CARGO_PKG_HOMEPAGE='' CARGO_PKG_LICENSE='MIT OR Apache-2.0' CARGO_PKG_LICENSE_FILE='' CARGO_PKG_NAME=compression-codecs CARGO_PKG_README=README.md CARGO_PKG_REPOSITORY='https://github.com/Nullus157/async-compression' …
 ##[error]The operation was canceled.
 ```
 
@@ -66,21 +66,21 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### CI Integrations (`.github/workflows/ci-integrations.yaml`)
 
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/43525166340 — dark (conclusion: `cancelled`), 2026-11-13 23:11 UTC
+- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/43563647377 — dark (conclusion: `cancelled`), 2026-11-14 05:53 UTC
 - Dark since: 2026-11-12 03:46 UTC (first run of the current streak)
-- Job / step: `Build local integration bindings` → `Setup ONNX Runtime`
+- Job / step: `Build local integration bindings` → `Install system dependencies`
 - Likely cause: Canceling since a higher priority waiting request for ci-integrations-refs/heads/main exists
 
 <details><summary>End of the job log</summary>
 
 ```
-##[start-action display=Cache libheif + boost + zlib vcpkg (Windows);id=__self.cache-libheif-windows]
-##[end-action id=__self.cache-libheif-windows;outcome=skipped;conclusion=skipped;duration_ms=0]
-##[start-action display=Install dependencies (Windows);id=__self.__run_3]
-##[end-action id=__self.__run_3;outcome=skipped;conclusion=skipped;duration_ms=0]
-Prepare all required actions
-Getting action download info
-##[start-action display=Cache ONNX Runtime;id=__self_2.cache-onnx]
+[ 12%] Building CXX object CMakeFiles/libtesseract.dir/src/ccmain/paramsd.cpp.o
+[ 13%] Building CXX object CMakeFiles/libtesseract.dir/src/ccmain/pgedit.cpp.o
+[ 13%] Building CXX object CMakeFiles/libtesseract.dir/src/ccmain/recogtraining.cpp.o
+[ 14%] Building CXX object CMakeFiles/libtesseract.dir/src/ccmain/reject.cpp.o
+[ 14%] Building CXX object CMakeFiles/libtesseract.dir/src/ccmain/resultiterator.cpp.o
+[ 15%] Building CXX object CMakeFiles/libtesseract.dir/src/ccmain/superscript.cpp.o
+[ 15%] Building CXX object CMakeFiles/libtesseract.dir/src/ccmain/tessbox.cpp.o
 ##[error]The operation was canceled.
 ```
 
@@ -88,28 +88,43 @@ Getting action download info
 
 ### CI Lint (`.github/workflows/ci-lint.yaml`)
 
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/43533160564 — dark (conclusion: `cancelled`), 2026-11-14 00:17 UTC
+- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/43563647619 — dark (conclusion: `cancelled`), 2026-11-14 05:53 UTC
 - Dark since: 2026-11-12 05:22 UTC (first run of the current streak)
-- Job / step: `Submodule gitlinks reachable`
-- Likely cause: Canceling since a higher priority waiting request for ci-lint-refs/heads/main exists
+- Job / step: `Alef-generated bindings freshness` → `Verify alef-generated bindings are current`
+- Likely cause: run cancelled in job "Alef-generated bindings freshness"
+
+<details><summary>End of the job log</summary>
+
+```
+  /home/runner/work/xberg/xberg/docs-site/src/content/docs/reference/types.md
+  /home/runner/work/xberg/xberg/packages/csharp/src/Xberg/ExtractedDocument.cs
+  /home/runner/work/xberg/xberg/packages/dart/rust/src/lib.rs
+  /home/runner/work/xberg/xberg/packages/go/binding.go
+  /home/runner/work/xberg/xberg/packages/kotlin-android/src/main/kotlin/io/xberg/ExtractedDocument.kt
+ERROR generated bindings, versions, or snippet coverage are out of date
+[alef:verify] ERROR task failed
+##[error]Process completed with exit code 1.
+```
+
+</details>
 
 ### CI Mobile (`.github/workflows/ci-mobile.yaml`)
 
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/43526162300 — dark (conclusion: `cancelled`), 2026-11-13 23:18 UTC
+- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/43563647334 — dark (conclusion: `cancelled`), 2026-11-14 05:53 UTC
 - Dark since: 2026-11-13 15:36 UTC (first run of the current streak)
-- Job / step: `iOS cargo check (aarch64-apple-ios-sim)` → `cargo check xberg-dart`
+- Job / step: `iOS cargo check (aarch64-apple-ios)` → `cargo check xberg-swift`
 - Likely cause: Canceling since a higher priority waiting request for ci-mobile-refs/heads/main exists
 
 <details><summary>End of the job log</summary>
 
 ```
-    Checking alloc-stdlib v0.3.0
-    Checking idna v1.1.0
-    Checking chacha20 v0.10.2
-   Compiling generic-array v0.14.7
-   Compiling tiny-keccak v2.0.2
-   Compiling heck v0.5.0
-    Checking subtle v2.6.1
+    Checking sceptre v0.10.1
+   Compiling swift-bridge-build v0.1.59
+    Checking outlook-pst v1.2.0
+   Compiling xberg-swift v1.4.0 (/Users/runner/work/xberg/xberg/packages/swift/rust)
+   Compiling swift-bridge-macro v0.1.59
+    Checking swift-bridge v0.1.59
+   Compiling xberg v1.4.0 (/Users/runner/work/xberg/xberg/crates/xberg)
 ##[error]The operation was canceled.
 ```
 
@@ -137,27 +152,12 @@ fetched: fffa8137159d247dcf4984a13aba12451bcc7402bbe0bfbc7d93ff6d43689593
 
 </details>
 
-### CI Scripts (`.github/workflows/ci-scripts.yaml`)
+### CI Focused PR (`.github/workflows/ci-focused-pr.yaml`)
 
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/43533160122 — dark (conclusion: `cancelled`), 2026-11-14 00:17 UTC
-- Dark since: 2026-11-13 15:36 UTC (first run of the current streak)
-- Job / step: `Bats on macos-26` → `Run the shell contract tests`
-- Likely cause: Canceling since a higher priority waiting request for ci-scripts-refs/heads/main exists
-
-<details><summary>End of the job log</summary>
-
-```
-ok 412 local native staging should reject unsupported systems before creating package directories
-ok 413 local native staging should reject missing built libraries before creating package directories
-ok 414 local native staging should propagate failed artifact copies in both package layouts
-ok 415 macOS Elixir archive contracts run the complete portable unittest suite
-ok 416 macos_heif should_rebuild_a_prefix_without_a_version_receipt
-ok 417 macos_heif should_reject_an_old_receipt_before_reusing_a_prefix
-ok 418 macos_heif should_reject_a_current_receipt_with_stale_pkg_config_versions
-##[error]The operation was canceled.
-```
-
-</details>
+- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/43563647309 — dark (conclusion: `cancelled`), 2026-11-14 05:53 UTC
+- Dark since: 2026-11-14 04:41 UTC (first run of the current streak)
+- Job / step: `Focused pdf-ocr`
+- Likely cause: Canceling since a higher priority waiting request for ci-focused-pr-refs/heads/main exists
 
 If this is already known or expected, feel free to close. Thanks for maintaining xberg!
 

@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/DeusData/codebase-memory-mcp/issues/new
-- **Stars:** 48611 · **Generated:** 2026-11-14T00:53:00.635Z
+- **Stars:** 48614 · **Generated:** 2026-11-14T06:41:55.262Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
@@ -43,21 +43,21 @@ Total queries: 13704
 
 ### test-impact-artifact (`.github/workflows/test-impact-artifact.yml`)
 
-- Latest run on `main`: https://github.com/DeusData/codebase-memory-mcp/actions/runs/43486638301 — dark (conclusion: `failure`), 2026-11-13 18:51 UTC
+- Latest run on `main`: https://github.com/DeusData/codebase-memory-mcp/actions/runs/43539798581 — dark (conclusion: `failure`), 2026-11-14 01:18 UTC
 - Dark since: 2026-11-13 18:51 UTC (first run of the current streak)
 - Job / step: `publish` → `Publish the bundle`
-- Likely cause: test-impact publish: status 1: the graph of HEAD could not be built: frozen status 11, evidence 25, 190 file error(s): graph-ui/src/architecture/architecture-scenes.test.tsx 9-9
+- Likely cause: test-impact publish: status 1: reading HEAD sources failed: internal/cbm/ac.c
 
 <details><summary>End of the job log</summary>
 
 ```
-grammar_probe_c: 42 tests, 0 incomplete, exit 0, 0.9 s
-grammar_probe_d: 75 tests, 0 incomplete, exit 0, 3.5 s
-grammar_probe_e: 56 tests, 0 incomplete, exit 0, 2.2 s
-grammar_probe_f: 184 tests, 0 incomplete, exit 0, 14.0 s
-grammar_probe_g: 45 tests, 0 incomplete, exit 0, 1.7 s
-map: 10322 tests, 319 incomplete, 27583 functions -> /tmp/tmp.gk8QLANdNl/coverage
-test-impact publish: status 1: the graph of HEAD could not be built: frozen status 11, evidence 25, 190 file error(s): graph-ui/src/architecture/architecture-scenes.test.tsx 9-9
+grammar_probe_c: 42 tests, 0 incomplete, exit 0, 1.1 s
+grammar_probe_d: 75 tests, 0 incomplete, exit 0, 4.5 s
+grammar_probe_e: 56 tests, 0 incomplete, exit 0, 3.1 s
+grammar_probe_f: 184 tests, 0 incomplete, exit 0, 19.1 s
+grammar_probe_g: 45 tests, 0 incomplete, exit 0, 2.8 s
+map: 10335 tests, 321 incomplete, 27644 functions -> /tmp/tmp.FAJmZtBoiT/coverage
+test-impact publish: status 1: reading HEAD sources failed: internal/cbm/ac.c
 ##[error]Process completed with exit code 1.
 ```
 

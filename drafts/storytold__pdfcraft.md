@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/storytold/pdfcraft/issues/new
-- **Stars:** 20626 · **Generated:** 2026-11-14T00:53:00.635Z
+- **Stars:** 20639 · **Generated:** 2026-11-14T06:41:55.262Z
 - Nothing in this file has been sent anywhere.
 
 ## Skipped: upstream already tracking
@@ -24,7 +24,7 @@ CI: "Nightly macOS" workflow failing on main since 2026-11-12
 <!-- BEGIN BODY -->
 Hi! The **Nightly macOS** workflow (`.github/workflows/nightly-macos.yml`) on `main` has been failing since 2026-11-12. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/storytold/pdfcraft/actions/runs/43354042554 — dark (conclusion: `failure`), 2026-11-13 02:42 UTC
+- Latest run on `main`: https://github.com/storytold/pdfcraft/actions/runs/43547722540 — dark (conclusion: `failure`), 2026-11-14 02:41 UTC
 - Dark since: 2026-11-12 02:42 UTC (first run of the current streak)
 - Job / step: `gate / gate (macos-latest)` → `Gate`
 - Likely cause: error: 4 targets failed:

@@ -4,13 +4,13 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/open-metadata/OpenMetadata/issues/new
-- **Stars:** 15772 · **Generated:** 2026-11-14T00:53:00.635Z
+- **Stars:** 15773 · **Generated:** 2026-11-14T06:41:55.262Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 5 workflows dark on main ("Merge Queue Dequeue Report", "monitor-slack-link", "Integration Tests - MySQL + Elasticsearch", +2 more)
+CI: 8 workflows dark on main ("Merge Queue Dequeue Report", "monitor-slack-link", "Integration Tests - MySQL + Elasticsearch", +5 more)
 <!-- END TITLE -->
 
 ## Body
@@ -20,7 +20,7 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### Merge Queue Dequeue Report (`.github/workflows/merge-queue-dequeue-report.yml`)
 
-- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/43519081643 — dark (conclusion: `failure`), 2026-11-13 22:24 UTC
+- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/43561714859 — dark (conclusion: `failure`), 2026-11-14 05:28 UTC
 - Dark since: 2026-11-03 21:06 UTC (first run of the current streak)
 - Job / step: `evict-main-conflicts` → `Remove queue entries that conflict with main`
 - Likely cause: cannot iterate over: null
@@ -42,7 +42,7 @@ cannot iterate over: null
 
 ### monitor-slack-link (`.github/workflows/monitor-slack-link.yml`)
 
-- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/43534233555 — dark (conclusion: `failure`), 2026-11-14 00:26 UTC
+- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/43565420238 — dark (conclusion: `failure`), 2026-11-14 06:15 UTC
 - Dark since: 2026-11-06 22:08 UTC (first run of the current streak)
 - Job / step: `monitor-slack-link` → `Set up Python 3.9`
 - Likely cause: The version '3.9' with architecture 'x64' was not found for Ubuntu 26.04.
@@ -50,12 +50,12 @@ cannot iterate over: null
 <details><summary>End of the job log</summary>
 
 ```
-Updating files:  99% (27368/27644)
-Updating files: 100% (27644/27644)
-Updating files: 100% (27644/27644), done.
+Updating files:  99% (27370/27646)
+Updating files: 100% (27646/27646)
+Updating files: 100% (27646/27646), done.
 Switched to a new branch 'main'
 branch 'main' set up to track 'origin/main'.
-d47d0c5f208bdb9ff6f8d73603b6747169b0e4ee
+92e71072073f14127832e276c03cce19d0cf7f5b
 Version 3.9 was not found in the local cache
 ##[error]The version '3.9' with architecture 'x64' was not found for Ubuntu 26.04.
 ```
@@ -86,9 +86,9 @@ INFO  [2026-11-13 23:36:08,348] org.openmetadata.service.search.elasticsearch.El
 
 ### Integration Tests - PostgreSQL + OpenSearch (`.github/workflows/integration-tests-postgres-opensearch.yml`)
 
-- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/43519081928 — dark (conclusion: `failure`), 2026-11-13 22:24 UTC
+- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/43561714834 — dark (conclusion: `failure`), 2026-11-14 05:28 UTC
 - Dark since: 2026-11-13 04:11 UTC (first run of the current streak)
-- Job / step: `Integration Test Lane (parallel)` → `Run Integration Tests (PostgreSQL + OpenSearch)`
+- Job / step: `Integration Test Lane (global-state)` → `Run Integration Tests (PostgreSQL + OpenSearch)`
 - Likely cause: [ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
 
 <details><summary>End of the job log</summary>
@@ -124,6 +124,72 @@ INFO  [2026-11-13 23:36:08,348] org.openmetadata.service.search.elasticsearch.El
 [ERROR] For more information about the errors and possible solutions, please read the following articles:
 [ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
 ##[error]Process completed with exit code 1.
+```
+
+</details>
+
+### Postgresql PR Playwright E2E Tests (`.github/workflows/playwright-postgresql-e2e.yml`)
+
+- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/43547153622 — dark (conclusion: `failure`), 2026-11-14 02:35 UTC
+- Dark since: 2026-11-14 02:35 UTC (first run of the current streak)
+- Job / step: `playwright / playwright-ci (visual-07, visual-07.json, 3, visual, false)` → `Run Playwright tests`
+- Likely cause: 2 failed
+
+<details><summary>End of the job log</summary>
+
+```
+    Usage:
+        npx playwright show-trace playwright/output/test-results/VisualRegression-staticPages-glossary-matches-baseline-visual-regression-retry1/trace.zip
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+  2 failed
+    [visual-regression] › playwright/e2e/VisualRegression/glossaryInteractions.spec.ts:24:9 › Glossary interactions light › glossary-late-activity-count @Platform
+    [visual-regression] › playwright/e2e/VisualRegression/staticPages.spec.ts:64:7 › glossary matches baseline
+  312 passed (11.4m)
+##[error]2 failed
+```
+
+</details>
+
+### SonarCloud UI Nightly (`.github/workflows/ui-sonarcloud-nightly.yml`)
+
+- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/43549596925 — dark (conclusion: `failure`), 2026-11-14 03:03 UTC
+- Dark since: 2026-11-14 03:03 UTC (first run of the current streak)
+- Job / step: `Coverage + Sonar` → `Retry 'SonarCloud Branch Scan'`
+- Likely cause: [ERROR] Bootstrapper: An error occurred: Error: Scanner engine failed with code 1
+
+<details><summary>End of the job log</summary>
+
+```
+Caused by: io.grpc.StatusRuntimeException: UNAVAILABLE: HTTP/2 error code: NO_ERROR
+Received Goaway
+	at io.grpc.Status.asRuntimeException(Status.java:532)
+	at io.grpc.stub.ClientCalls$BlockingResponseStream.hasNext(ClientCalls.java:731)
+	at org.sonar.plugins.javascript.bridge.BridgeServerImpl.analyzeProject(BridgeServerImpl.java:492)
+	... 20 common frames omitted
+[ERROR] Bootstrapper: An error occurred: Error: Scanner engine failed with code 1
+##[error]Process completed with exit code 1.
+```
+
+</details>
+
+### OpenMetadata Service Unit Tests (`.github/workflows/openmetadata-service-unit-tests.yml`)
+
+- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/43561714818 — dark (conclusion: `failure`), 2026-11-14 05:28 UTC
+- Dark since: 2026-11-14 05:28 UTC (first run of the current streak)
+- Job / step: `openmetadata-service-unit-tests` → `Run openmetadata-service unit tests`
+- Likely cause: batch too large to write
+
+<details><summary>End of the job log</summary>
+
+```
+! at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100)
+! at org.junit.platform.engine.support.hierarchical.ForkJoinPoolHierarchicalTestExecutorService$ExclusiveTask.exec(ForkJoinPoolHierarchicalTestExecutorService.java:274)
+! at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:387)
+! at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1312)
+! at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1843)
+! at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1808)
+! at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188)
+##[error]Exception in thread "om-credential-read-90" java.lang.StackOverflowError: injected overflow in the decrypt of bob
 ```
 
 </details>

@@ -4,20 +4,22 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/headroomlabs-ai/headroom/issues/new
-- **Stars:** 79602 · **Generated:** 2026-11-14T00:53:00.635Z
+- **Stars:** 79614 · **Generated:** 2026-11-14T06:41:55.262Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: "PR Governance" workflow getting cancelled on main since 2026-11-09
+CI: 2 workflows dark on main ("PR Governance", "CI")
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! The **PR Governance** workflow (`.github/workflows/pr-health.yml`) on `main` has been getting cancelled since 2026-11-09. Here is what I saw, in case it's useful:
+Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
+
+### PR Governance (`.github/workflows/pr-health.yml`)
 
 - Latest run on `main`: https://github.com/headroomlabs-ai/headroom/actions/runs/43442791010 — dark (conclusion: `cancelled`), 2026-11-13 14:26 UTC
 - Dark since: 2026-11-09 14:26 UTC (first run of the current streak)
@@ -35,6 +37,28 @@ https://github.com/headroomlabs-ai/headroom/pull/3917
 https://github.com/headroomlabs-ai/headroom/pull/3917
 https://github.com/headroomlabs-ai/headroom/pull/3917
 ##[error]The operation was canceled.
+```
+
+</details>
+
+### CI (`.github/workflows/ci.yml`)
+
+- Latest run on `main`: https://github.com/headroomlabs-ai/headroom/actions/runs/43560783121 — dark (conclusion: `failure`), 2026-11-14 05:17 UTC
+- Dark since: 2026-11-14 05:15 UTC (first run of the current streak)
+- Job / step: `test (3)` → `Run test shard 3/4`
+- Likely cause: = 2 failed, 4915 passed, 101 skipped, 15006 deselected, 3624 warnings in 651.85s (0:10:51) =
+
+<details><summary>End of the job log</summary>
+
+```
+  Left contains one more item: 'delete'
+  Full diff: (-: missing in left side, +: extra in left side)
+  - []
+  + [
+  +     'delete',
+  + ]
+= 2 failed, 4915 passed, 101 skipped, 15006 deselected, 3624 warnings in 651.85s (0:10:51) =
+##[error]Process completed with exit code 1.
 ```
 
 </details>

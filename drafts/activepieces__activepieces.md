@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/activepieces/activepieces/issues/new
-- **Stars:** 25513 · **Generated:** 2026-11-14T00:53:00.635Z
+- **Stars:** 25518 · **Generated:** 2026-11-14T06:41:55.262Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -20,29 +20,29 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### Chat Evals (`.github/workflows/agent-evals.yml`)
 
-- Latest run on `main`: https://github.com/activepieces/activepieces/actions/runs/43377250014 — dark (conclusion: `failure`), 2026-11-13 06:13 UTC
+- Latest run on `main`: https://github.com/activepieces/activepieces/actions/runs/43565187379 — dark (conclusion: `failure`), 2026-11-14 06:12 UTC
 - Dark since: 2026-10-13 06:26 UTC (first run of the current streak)
 - Job / step: `Live judge gate` → `Run live chat evals (scope=regression)`
-- Likely cause: AssertionError: see the eval report above for the failing checks: expected [ …(2) ] to deeply equal [] (packages/server/worker/test/lib/agent-eval/agent-eval.test.ts:58)
+- Likely cause: Error: Hook timed out in 540000ms. (packages/server/worker/test/lib/agent-eval/agent-eval.test.ts:20)
 
 <details><summary>End of the job log</summary>
 
 ```
-     59|     })
-     60| })
+     21|         const fixtures = evalFixtures.load().filter((fixture) => SCOPE…
+     22|         const [fixtureResults, agreement] = await Promise.all([
 ⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
  Test Files  1 failed | 12 passed (13)
-      Tests  1 failed | 89 passed (90)
-   Start at  06:18:24
-   Duration  505.79s (tests 98%, import 2%, transform 1%)
-##[error]AssertionError: see the eval report above for the failing checks: expected [ …(2) ] to deeply equal []
+      Tests  89 passed | 1 skipped (90)
+   Start at  06:16:43
+   Duration  545.41s (tests 98%, import 2%, transform 1%)
+##[error]Error: Hook timed out in 540000ms.
 ```
 
 </details>
 
 ### Benchmark (`.github/workflows/benchmark.yml`)
 
-- Latest run on `main`: https://github.com/activepieces/activepieces/actions/runs/43356594713 — dark (conclusion: `failure`), 2026-11-13 03:05 UTC
+- Latest run on `main`: https://github.com/activepieces/activepieces/actions/runs/43549752437 — dark (conclusion: `failure`), 2026-11-14 03:05 UTC
 - Dark since: 2026-10-30 03:06 UTC (first run of the current streak)
 - Job / step: `benchmark (dedicated, 1, 28, 0.5, 1G, 1, 768, true, 28)` → `Detect regression against trailing 14 runs (scheduled runs only)`
 - Likely cause: </div><!-- /.error-footer -->
