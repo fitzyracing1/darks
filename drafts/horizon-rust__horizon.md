@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/horizon-rust/horizon/issues/new
-- **Stars:** 9895 · **Generated:** 2026-11-15T06:42:54.918Z
+- **Stars:** 10047 · **Generated:** 2026-11-15T12:40:30.415Z
 - Nothing in this file has been sent anywhere.
 
 ## Skipped: upstream already tracking
@@ -24,22 +24,22 @@ CI: "mojang republish" workflow failing on main since 2026-11-12
 <!-- BEGIN BODY -->
 Hi! The **mojang republish** workflow (`.github/workflows/mojang-republish.yml`) on `main` has been failing since 2026-11-12. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/horizon-rust/horizon/actions/runs/43685847134 — dark (conclusion: `failure`), 2026-11-15 06:31 UTC
+- Latest run on `main`: https://github.com/horizon-rust/horizon/actions/runs/43713939802 — dark (conclusion: `failure`), 2026-11-15 12:27 UTC
 - Dark since: 2026-11-12 20:01 UTC (first run of the current streak)
 - Job / step: `check` → `Check the manifest`
-- Likely cause: Path 'crates/horizon-core/tests/density_world_fields.rs' not uptodate; will not remove from working tree.
+- Likely cause: python3: can't open file '/var/lib/gha/light-6/_work/horizon/horizon/tools/ci/mojang_republish.py': [Errno 2] No such file or directory
 
 <details><summary>End of the job log</summary>
 
 ```
-HEAD is now at f4d8d62c31ec Merge pull request #15015 from Mik00000/perf/async-chunk-save
-Deleted branch main (was f4d8d62c31ec).
-HEAD is now at f4d8d62c31ec Merge pull request #15015 from Mik00000/perf/async-chunk-save
-From https://github.com/horizon-rust/horizon
- + f4d8d62c31ec...d5592b6e207a d5592b6e207af77d4d1871236b2ab10beb3b44f4 -> origin/main  (forced update)
+HEAD is now at a9a30a3b6 execute if stopwatch tests the stopwatch against its range (#16661)
   origin/main
-d5592b6e207af77d4d1871236b2ab10beb3b44f4
-##[error]error: Path 'crates/horizon-client-render/tests/atomic_member_values.rs' not uptodate; will not remove from working tree.
+a9a30a3b6e3c246747748572e7b10c5fc6b9dc5e
+Switched to a new branch 'main'
+branch 'main' set up to track 'origin/main'.
+a9a30a3b6e3c246747748572e7b10c5fc6b9dc5e
+python3: can't open file '/var/lib/gha/light-6/_work/horizon/horizon/tools/ci/mojang_republish.py': [Errno 2] No such file or directory
+##[error]Process completed with exit code 2.
 ```
 
 </details>

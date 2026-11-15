@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/storytold/effectcraft/issues/new
-- **Stars:** 8791 · **Generated:** 2026-11-15T06:42:54.918Z
+- **Stars:** 8807 · **Generated:** 2026-11-15T12:40:30.415Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -20,22 +20,22 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### SonarCloud (`.github/workflows/sonarcloud.yml`)
 
-- Latest run on `main`: https://github.com/storytold/effectcraft/actions/runs/43661673603 — dark (conclusion: `failure`), 2026-11-15 01:08 UTC
+- Latest run on `main`: https://github.com/storytold/effectcraft/actions/runs/43707689787 — dark (conclusion: `failure`), 2026-11-15 11:11 UTC
 - Dark since: 2026-11-14 15:48 UTC (first run of the current streak)
 - Job / step: `sonarcloud / SonarCloud Scan` → `Fail on Rust shard test failures`
-- Likely cause: Coverage shard 4 tests failed (exit 100); analysis was still uploaded
+- Likely cause: Coverage shard 3 tests failed (exit 100); analysis was still uploaded
 
 <details><summary>End of the job log</summary>
 
 ```
-01:35:00.891 INFO  ------------- Upload SCA dependency files
-01:35:02.636 INFO  Successfully sent architecture data
-01:35:04.335 INFO  Sensor cache published successfully
-01:35:05.899 INFO  Analysis total time: 3:47.423 min
-01:35:05.901 INFO  SonarScanner Engine completed successfully
-01:35:06.348 INFO  EXECUTION SUCCESS
-01:35:06.349 INFO  Total time: 3:54.494s
-##[error]Coverage shard 1 tests failed (exit 100); analysis was still uploaded
+11:53:36.377 INFO  ------------- Upload SCA dependency files
+11:53:38.483 INFO  Successfully sent architecture data
+11:53:40.792 INFO  Sensor cache published successfully
+11:53:42.663 INFO  Analysis total time: 4:43.279 min
+11:53:42.664 INFO  SonarScanner Engine completed successfully
+11:53:42.980 INFO  EXECUTION SUCCESS
+11:53:42.982 INFO  Total time: 4:50.741s
+##[error]Coverage shard 3 tests failed (exit 100); analysis was still uploaded
 ```
 
 </details>

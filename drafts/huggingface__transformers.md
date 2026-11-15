@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/huggingface/transformers/issues/new
-- **Stars:** 168996 · **Generated:** 2026-11-15T06:42:54.918Z
+- **Stars:** 168993 · **Generated:** 2026-11-15T12:40:30.415Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** workflow failed to start (config/permissions on their side)
 - **Note for Joshua:** self-hosted runner problem — maintainers usually know

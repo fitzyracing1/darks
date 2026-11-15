@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/open-metadata/OpenMetadata/issues/new
-- **Stars:** 15778 · **Generated:** 2026-11-15T06:42:54.918Z
+- **Stars:** 15780 · **Generated:** 2026-11-15T12:40:30.415Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -20,7 +20,7 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### Merge Queue Dequeue Report (`.github/workflows/merge-queue-dequeue-report.yml`)
 
-- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/43637167817 — dark (conclusion: `failure`), 2026-11-14 20:22 UTC
+- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/43687700504 — dark (conclusion: `failure`), 2026-11-15 06:56 UTC
 - Dark since: 2026-11-03 21:06 UTC (first run of the current streak)
 - Job / step: `evict-main-conflicts` → `Remove queue entries that conflict with main`
 - Likely cause: cannot iterate over: null
@@ -42,7 +42,7 @@ cannot iterate over: null
 
 ### monitor-slack-link (`.github/workflows/monitor-slack-link.yml`)
 
-- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/43684693490 — dark (conclusion: `failure`), 2026-11-15 06:16 UTC
+- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/43712699222 — dark (conclusion: `failure`), 2026-11-15 12:13 UTC
 - Dark since: 2026-11-06 22:08 UTC (first run of the current streak)
 - Job / step: `monitor-slack-link` → `Set up Python 3.9`
 - Likely cause: The version '3.9' with architecture 'x64' was not found for Ubuntu 26.04.
@@ -50,12 +50,12 @@ cannot iterate over: null
 <details><summary>End of the job log</summary>
 
 ```
-Updating files:  99% (27379/27655)
-Updating files: 100% (27655/27655)
-Updating files: 100% (27655/27655), done.
+Updating files:  99% (27377/27653)
+Updating files: 100% (27653/27653)
+Updating files: 100% (27653/27653), done.
 Switched to a new branch 'main'
 branch 'main' set up to track 'origin/main'.
-d4c91910b1ad0c91fb23e2b9cf020d43d677f4c1
+7de20d23d150534092f0a8d2112d65fc230e4e67
 Version 3.9 was not found in the local cache
 ##[error]The version '3.9' with architecture 'x64' was not found for Ubuntu 26.04.
 ```

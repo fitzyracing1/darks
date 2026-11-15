@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/storytold/photocraft/issues/new
-- **Stars:** 79447 · **Generated:** 2026-11-15T06:42:54.918Z
+- **Stars:** 79509 · **Generated:** 2026-11-15T12:40:30.415Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** cancelled by a concurrency group — likely noise
 
@@ -43,29 +43,29 @@ wrote /Users/runner/work/photocraft/photocraft/target/perf/results.json
 
 ### SonarCloud (`.github/workflows/sonarcloud.yml`)
 
-- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/43679779381 — dark (conclusion: `failure`), 2026-11-15 05:08 UTC
+- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/43703979575 — dark (conclusion: `failure`), 2026-11-15 10:25 UTC
 - Dark since: 2026-11-12 12:27 UTC (first run of the current streak)
-- Job / step: `sonarcloud / Tests 1/4` → `Merge this shard's profiles`
-- Likely cause: llvm-profdata could not merge shard 1's profiles (exit 1)
+- Job / step: `sonarcloud / SonarCloud Scan` → `Fail on Rust shard test failures`
+- Likely cause: Coverage shard 4 tests failed (exit 100); analysis was still uploaded
 
 <details><summary>End of the job log</summary>
 
 ```
-info: downloading 4 components
-  1.100.0-x86_64-unknown-linux-gnu installed - rustc 1.100.0 (0ef1bc386 2026-11-09)
-Raw profiles: 24G in 4773 files
-Filesystem      Size  Used Avail Use% Mounted on
-/dev/root       145G   96G   49G  67% /
-warning: profraw/shard-1-7550-1447527230544535458_0.profraw: invalid instrumentation profile data (file header is corrupt)
-error: no profile can be merged
-##[error]shard 1 wrote a truncated or corrupt coverage profile: profraw/shard-1-7550-1447527230544535458_0.profraw: invalid instrumentation profile data (file header is corrupt)
+11:26:30.897 INFO  ------------- Upload SCA dependency files
+11:26:32.365 INFO  Successfully sent architecture data
+11:26:34.105 INFO  Sensor cache published successfully
+11:26:36.537 INFO  Analysis total time: 4:42.105 min
+11:26:36.539 INFO  SonarScanner Engine completed successfully
+11:26:36.737 INFO  EXECUTION SUCCESS
+11:26:36.738 INFO  Total time: 4:49.076s
+##[error]Coverage shard 1 tests failed (exit 100); analysis was still uploaded
 ```
 
 </details>
 
 ### CI (`.github/workflows/ci.yml`)
 
-- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/43679779458 — dark (conclusion: `failure`), 2026-11-15 05:08 UTC
+- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/43703979897 — dark (conclusion: `failure`), 2026-11-15 10:25 UTC
 - Dark since: 2026-11-14 03:13 UTC (first run of the current streak)
 - Job / step: `test (without heif)` → `Test without heif`
 - Likely cause: error: test run failed

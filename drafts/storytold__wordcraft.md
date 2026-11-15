@@ -4,12 +4,12 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/storytold/wordcraft/issues/new
-- **Stars:** 18027 · **Generated:** 2026-11-15T06:42:54.918Z
+- **Stars:** 18046 · **Generated:** 2026-11-15T12:40:30.415Z
 - Nothing in this file has been sent anywhere.
 
 ## Skipped: upstream already tracking
 
-- SonarCloud (`.github/workflows/sonarcloud.yml`): [issue #6512](https://github.com/storytold/wordcraft/issues/6512) "SonarCloud coverage runs without the gate's craft-fonts, so glyph tests fail there", [issue #3772](https://github.com/storytold/wordcraft/issues/3772) "A13-1358b SonarCloud workflow uses `secrets: inherit` on a mutable `@main` shared workflow, handing it every repository secret when it only needs `SONAR_TOKEN`"
+- SonarCloud (`.github/workflows/sonarcloud.yml`): [issue #6512](https://github.com/storytold/wordcraft/issues/6512) "SonarCloud coverage runs without the gate's craft-fonts, so glyph tests fail there", [issue #3772](https://github.com/storytold/wordcraft/issues/3772) "A13-1358b SonarCloud workflow uses `secrets: inherit` on a mutable `@main` shared workflow, handing it every repository secret when it only needs `SONAR_TOKEN`", [issue #6757](https://github.com/storytold/wordcraft/issues/6757) "Layout: unequal_formats_lay_out_in_linear_time fails in every SonarCloud run (15x for 8x the runs in a debug build)"
 - FreeBSD (`.github/workflows/freebsd.yml`): [issue #2069](https://github.com/storytold/wordcraft/issues/2069) "FreeBSD nightly is red: two layout tests depend on the installed fonts"
 
 These workflows are left out of the body below.

@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/webiny/webiny-js/issues/new
-- **Stars:** 8053 · **Generated:** 2026-11-15T06:42:54.918Z
+- **Stars:** 8053 · **Generated:** 2026-11-15T12:40:30.415Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -86,22 +86,22 @@ GraphQL: Your token has not been granted the required scopes to execute this que
 
 ### Push (`.github/workflows/push.yml`)
 
-- Latest run on `next`: https://github.com/webiny/webiny-js/actions/runs/43433625297 — dark (conclusion: `failure`), 2026-11-13 13:26 UTC
+- Latest run on `next`: https://github.com/webiny/webiny-js/actions/runs/43711324727 — dark (conclusion: `failure`), 2026-11-15 11:56 UTC
 - Dark since: 2026-11-12 21:06 UTC (first run of the current streak)
-- Job / step: `Build` → `Build packages`
-- Likely cause: Property 'response' does not exist on type 'Interface<SendPasswordResetCodeInput, ITaskOutput>'.
+- Job / step: `E2E (DDB+OS) - Project setup` → `Deploy Core`
+- Likely cause: error: Rspack build failed.
 
 <details><summary>End of the job log</summary>
 
 ```
-↓ [12/14] Batch #12 (5 packages) [SKIPPED: [12/14] Batch #12 (5 packages)]
-❯ [13/14] Batch #13 (2 packages)
-↓ [13/14] Batch #13 (2 packages) [SKIPPED: [13/14] Batch #13 (2 packages)]
-❯ [14/14] Batch #14 (5 packages)
-↓ [14/14] Batch #14 (5 packages) [SKIPPED: [14/14] Batch #14 (5 packages)]
-Error building 1 package(s). Check the logs below.
-✖ @webiny/self-hosted-auth
-##[error]src/api/features/SendPasswordResetCode/SendPasswordResetCodeTask.ts(26,31): error TS2339: Property 'response' does not exist on type 'Interface<SendPasswordResetCodeInput, ITaskOutput>'.
+error   build failed in 0.97s
+File (node)                                              Size
+c.mjs                                                    0.1 kB
+u.mjs                                                    0.1 kB
+handler.mjs                                            632.6 kB
+Total:                                                 632.8 kB
+error: Rspack build failed.
+##[error]Process completed with exit code 1.
 ```
 
 </details>
