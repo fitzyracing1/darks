@@ -1,8 +1,8 @@
 <!-- dark-draft: socketio/socket.io -->
-<!-- draft-state: ready -->
+<!-- draft-state: resolved -->
 # Upstream issue draft: socketio/socket.io
 
-- **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
+- **Status:** resolved — lit again (2026-11-15); nothing to file
 - **Would be filed at:** https://github.com/socketio/socket.io/issues/new
 - **Stars:** 63246 · **Generated:** 2026-11-14T18:37:03.336Z
 - Nothing in this file has been sent anywhere.

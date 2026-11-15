@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/storytold/craft-anything/issues/new
-- **Stars:** 32600 · **Generated:** 2026-11-14T18:37:03.336Z
+- **Stars:** 32765 · **Generated:** 2026-11-15T00:56:28.163Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title

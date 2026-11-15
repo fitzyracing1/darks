@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/beenuar/AiSOC/issues/new
-- **Stars:** 7590 · **Generated:** 2026-11-14T18:37:03.336Z
+- **Stars:** 7640 · **Generated:** 2026-11-15T00:56:28.163Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -18,7 +18,7 @@ CI: "Deploy Docs to GitHub Pages" workflow failing on main since 2026-11-13
 <!-- BEGIN BODY -->
 Hi! The **Deploy Docs to GitHub Pages** workflow (`.github/workflows/deploy-docs.yml`) on `main` has been failing since 2026-11-13. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/beenuar/AiSOC/actions/runs/43611753748 — dark (conclusion: `failure`), 2026-11-14 15:44 UTC
+- Latest run on `main`: https://github.com/beenuar/AiSOC/actions/runs/43659817678 — dark (conclusion: `failure`), 2026-11-15 00:46 UTC
 - Dark since: 2026-11-13 03:33 UTC (first run of the current streak)
 - Job / step: `Build Docusaurus` → `Build docs`
 - Likely cause: ERR_PNPM_RECURSIVE_RUN_FIRST_FAIL  @aisoc/docs@0.0.1 build: 'docusaurus build'

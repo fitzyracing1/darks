@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/horizon-rust/horizon/issues/new
-- **Stars:** 9658 · **Generated:** 2026-11-14T18:37:03.336Z
+- **Stars:** 9756 · **Generated:** 2026-11-15T00:56:28.163Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
@@ -27,13 +27,29 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### mojang republish (`.github/workflows/mojang-republish.yml`)
 
-- Latest run on `main`: https://github.com/horizon-rust/horizon/actions/runs/43615388910 — dark (conclusion: `cancelled`), 2026-11-14 16:23 UTC
+- Latest run on `main`: https://github.com/horizon-rust/horizon/actions/runs/43653045858 — dark (conclusion: `failure`), 2026-11-14 23:23 UTC
 - Dark since: 2026-11-12 20:01 UTC (first run of the current streak)
-- Likely cause: run cancelled
+- Job / step: `check` → `Check the manifest`
+- Likely cause: Path 'tools/fixtures/shaderpacks/frame_identity_terrain/material.wgsl' not uptodate; will not remove from working tree.
+
+<details><summary>End of the job log</summary>
+
+```
+Deleted branch main (was 34f07fffe).
+Removing .local/
+HEAD is now at 34f07fffe tooling(parity): snbt_unicode hashes its test at the tests/it path (#16610)
+From https://github.com/horizon-rust/horizon
+ + 34f07fffe...545529215 5455292155d7c058f88fe77cb54b8f6be864e5af -> origin/main  (forced update)
+  origin/main
+5455292155d7c058f88fe77cb54b8f6be864e5af
+##[error]error: Path 'crates/horizon-client-render/src/gfx/celestial.rs' not uptodate; will not remove from working tree.
+```
+
+</details>
 
 ### checks (`.github/workflows/ci.yml`)
 
-- Latest run on `main`: https://github.com/horizon-rust/horizon/actions/runs/43626455521 — dark (conclusion: `cancelled`), 2026-11-14 18:24 UTC
+- Latest run on `main`: https://github.com/horizon-rust/horizon/actions/runs/43659613091 — dark (conclusion: `cancelled`), 2026-11-15 00:43 UTC
 - Dark since: 2026-11-14 12:02 UTC (first run of the current streak)
 - Likely cause: run cancelled
 

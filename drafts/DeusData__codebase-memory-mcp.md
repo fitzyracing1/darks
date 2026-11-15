@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/DeusData/codebase-memory-mcp/issues/new
-- **Stars:** 48637 · **Generated:** 2026-11-14T18:37:03.336Z
+- **Stars:** 48646 · **Generated:** 2026-11-15T00:56:28.163Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
@@ -43,22 +43,22 @@ Total queries: 13704
 
 ### test-impact-artifact (`.github/workflows/test-impact-artifact.yml`)
 
-- Latest run on `main`: https://github.com/DeusData/codebase-memory-mcp/actions/runs/43601924744 — dark (conclusion: `cancelled`), 2026-11-14 13:52 UTC
+- Latest run on `main`: https://github.com/DeusData/codebase-memory-mcp/actions/runs/43646065751 — dark (conclusion: `failure`), 2026-11-14 22:03 UTC
 - Dark since: 2026-11-13 18:51 UTC (first run of the current streak)
 - Job / step: `publish` → `Publish the bundle`
-- Likely cause: The job has exceeded the maximum execution time of 2h0m0s
+- Likely cause: test-impact publish: status 1: the graph of HEAD could not be built: frozen status 11, evidence 25, 194 file error(s): graph-ui/src/architecture/architecture-scenes.test.tsx 9-9
 
 <details><summary>End of the job log</summary>
 
 ```
-grammar_probe_b: 43 tests, 0 incomplete, exit 0, 1.0 s
-grammar_probe_c: 42 tests, 0 incomplete, exit 0, 0.6 s
-grammar_probe_d: 75 tests, 0 incomplete, exit 0, 2.2 s
-grammar_probe_e: 56 tests, 0 incomplete, exit 0, 1.4 s
-grammar_probe_f: 184 tests, 0 incomplete, exit 0, 15.5 s
-grammar_probe_g: 45 tests, 0 incomplete, exit 0, 1.1 s
-map: 10376 tests, 316 incomplete, 27806 functions -> /tmp/tmp.iwmO7tCiyg/coverage
-##[error]The operation was canceled.
+grammar_probe_c: 42 tests, 0 incomplete, exit 0, 0.8 s
+grammar_probe_d: 75 tests, 0 incomplete, exit 0, 3.2 s
+grammar_probe_e: 56 tests, 0 incomplete, exit 0, 2.1 s
+grammar_probe_f: 184 tests, 0 incomplete, exit 0, 11.4 s
+grammar_probe_g: 45 tests, 0 incomplete, exit 0, 1.6 s
+map: 10378 tests, 321 incomplete, 27812 functions -> /tmp/tmp.QJtxJxFrSo/coverage
+test-impact publish: status 1: the graph of HEAD could not be built: frozen status 11, evidence 25, 194 file error(s): graph-ui/src/architecture/architecture-scenes.test.tsx 9-9
+##[error]Process completed with exit code 1.
 ```
 
 </details>

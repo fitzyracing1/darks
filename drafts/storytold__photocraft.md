@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/storytold/photocraft/issues/new
-- **Stars:** 79374 · **Generated:** 2026-11-14T18:37:03.336Z
+- **Stars:** 79415 · **Generated:** 2026-11-15T00:56:28.163Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
@@ -43,29 +43,29 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### SonarCloud (`.github/workflows/sonarcloud.yml`)
 
-- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/43604422679 — dark (conclusion: `failure`), 2026-11-14 14:21 UTC
+- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/43638632738 — dark (conclusion: `cancelled`), 2026-11-14 20:39 UTC
 - Dark since: 2026-11-12 12:27 UTC (first run of the current streak)
-- Job / step: `sonarcloud / SonarCloud Scan` → `Fail on Rust shard test failures`
-- Likely cause: Coverage shard 4 tests failed (exit 100); analysis was still uploaded
+- Job / step: `sonarcloud / Tests 4/4`
+- Likely cause: The job has exceeded the maximum execution time of 2h0m0s
 
 <details><summary>End of the job log</summary>
 
 ```
-17:50:17.613 INFO  ------------- Upload SCA dependency files
-17:50:18.803 INFO  Successfully sent architecture data
-17:50:20.237 INFO  Sensor cache published successfully
-17:50:22.523 INFO  Analysis total time: 2:37.481 min
-17:50:22.525 INFO  SonarScanner Engine completed successfully
-17:50:22.662 INFO  EXECUTION SUCCESS
-17:50:22.663 INFO  Total time: 2:42.163s
-##[error]Coverage shard 1 tests failed (exit 100); analysis was still uploaded
+    failures:
+    failures:
+        svg::gzip_compressed_embedded_svg_decompresses_once_with_a_size_cap
+    test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 603 filtered out; finished in 0.91s
+  stderr ───
+    thread 'svg::gzip_compressed_embedded_svg_decompresses_once_with_a_size_cap' (66153) panicked at crates/io/tests/it/svg.rs:12:62:
+    SVG: embedded SVG images exceed the byte or nesting budget
+    <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10"><image x="0" y="0" width="10" height="10" href="data:image/svg+xml;base64,H4sIAAAAAAAE/7IpLktXqMjNySu2VcooKSmw0tcvLy/XKzfWyy9K1zcyMDDQLy5LV1Ioz0wpybBVMl…
 ```
 
 </details>
 
 ### CI (`.github/workflows/ci.yml`)
 
-- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/43604422686 — dark (conclusion: `failure`), 2026-11-14 14:21 UTC
+- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/43648552250 — dark (conclusion: `cancelled`), 2026-11-14 22:31 UTC
 - Dark since: 2026-11-14 03:13 UTC (first run of the current streak)
 - Job / step: `test (without heif)`
 - Likely cause: The job has exceeded the maximum execution time of 1h0m0s
@@ -76,9 +76,9 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
     failures:
     failures:
         svg::gzip_compressed_embedded_svg_decompresses_once_with_a_size_cap
-    test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 603 filtered out; finished in 0.37s
+    test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 603 filtered out; finished in 0.31s
   stderr ───
-    thread 'svg::gzip_compressed_embedded_svg_decompresses_once_with_a_size_cap' (278792) panicked at crates/io/tests/it/svg.rs:12:62:
+    thread 'svg::gzip_compressed_embedded_svg_decompresses_once_with_a_size_cap' (278619) panicked at crates/io/tests/it/svg.rs:12:62:
     SVG: embedded SVG images exceed the byte or nesting budget
     <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10"><image x="0" y="0" width="10" height="10" href="data:image/svg+xml;base64,H4sIAAAAAAAE/7IpLktXqMjNySu2VcooKSmw0tcvLy/XKzfWyy9K1zcyMDDQLy5LV1Ioz0wpybBVMl…
 ```

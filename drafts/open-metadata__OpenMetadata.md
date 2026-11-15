@@ -4,13 +4,13 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/open-metadata/OpenMetadata/issues/new
-- **Stars:** 15777 · **Generated:** 2026-11-14T18:37:03.336Z
+- **Stars:** 15778 · **Generated:** 2026-11-15T00:56:28.163Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 3 workflows dark on main ("Merge Queue Dequeue Report", "monitor-slack-link", "Maven Collate Tests")
+CI: 3 workflows dark on main ("Merge Queue Dequeue Report", "monitor-slack-link", "security-scan")
 <!-- END TITLE -->
 
 ## Body
@@ -20,7 +20,7 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### Merge Queue Dequeue Report (`.github/workflows/merge-queue-dequeue-report.yml`)
 
-- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/43617741453 — dark (conclusion: `failure`), 2026-11-14 16:49 UTC
+- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/43637167817 — dark (conclusion: `failure`), 2026-11-14 20:22 UTC
 - Dark since: 2026-11-03 21:06 UTC (first run of the current streak)
 - Job / step: `evict-main-conflicts` → `Remove queue entries that conflict with main`
 - Likely cause: cannot iterate over: null
@@ -42,7 +42,7 @@ cannot iterate over: null
 
 ### monitor-slack-link (`.github/workflows/monitor-slack-link.yml`)
 
-- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/43625108506 — dark (conclusion: `failure`), 2026-11-14 18:10 UTC
+- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/43658505025 — dark (conclusion: `failure`), 2026-11-15 00:30 UTC
 - Dark since: 2026-11-06 22:08 UTC (first run of the current streak)
 - Job / step: `monitor-slack-link` → `Set up Python 3.9`
 - Likely cause: The version '3.9' with architecture 'x64' was not found for Ubuntu 26.04.
@@ -55,31 +55,31 @@ Updating files: 100% (27655/27655)
 Updating files: 100% (27655/27655), done.
 Switched to a new branch 'main'
 branch 'main' set up to track 'origin/main'.
-b03472028fbf28fbd1f8616875617c263aae08dc
+d4c91910b1ad0c91fb23e2b9cf020d43d677f4c1
 Version 3.9 was not found in the local cache
 ##[error]The version '3.9' with architecture 'x64' was not found for Ubuntu 26.04.
 ```
 
 </details>
 
-### Maven Collate Tests (`.github/workflows/maven-build-collate.yml`)
+### security-scan (`.github/workflows/security-scan.yml`)
 
-- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/43617741588 — dark (conclusion: `failure`), 2026-11-14 16:49 UTC
-- Dark since: 2026-11-14 16:49 UTC (first run of the current streak)
-- Job / step: `maven-collate-ci` → `Trigger Collate build & wait`
-- Likely cause: Collate run did not succeed: https://github.com/open-metadata/openmetadata-collate/actions/runs/43617747496
+- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/43658160260 — dark (conclusion: `failure`), 2026-11-15 00:26 UTC
+- Dark since: 2026-11-15 00:26 UTC (first run of the current streak)
+- Job / step: `security-scan` → `Install Ubuntu dependencies`
+- Likely cause: E: Package 'wkhtmltopdf' has no installation candidate
 
 <details><summary>End of the job log</summary>
 
 ```
-* maven-collate-om-ci (ID 132516428483)
-  * Integration Tests (MySQL + Elasticsearch)
-X main OpenMetadata Collate Test open-metadata/openmetadata-collate#2548 · 43617747496
-Triggered via workflow_dispatch about 49 minutes ago
-JOBS
-X maven-collate-om-ci in 47m31s (ID 132516428483)
-  X Force workflow fail
-##[error]Collate run did not succeed: https://github.com/open-metadata/openmetadata-collate/actions/runs/43617747496
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Package wkhtmltopdf is not available, but is referred to by another package.
+This may mean that the package is missing, has been obsoleted, or
+is only available from another source
+E: Package 'wkhtmltopdf' has no installation candidate
+##[error]Process completed with exit code 100.
 ```
 
 </details>
