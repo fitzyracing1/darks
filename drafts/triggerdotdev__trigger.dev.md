@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/triggerdotdev/trigger.dev/issues/new
-- **Stars:** 16766 · **Generated:** 2026-11-15T00:56:28.163Z
+- **Stars:** 16766 · **Generated:** 2026-11-15T06:42:54.918Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -18,21 +18,21 @@ CI: "🛡️ E2E Tests: Webapp Auth (full)" workflow failing on main since 2026-
 <!-- BEGIN BODY -->
 Hi! The **🛡️ E2E Tests: Webapp Auth (full)** workflow (`.github/workflows/e2e-webapp-auth-full.yml`) on `main` has been failing since 2026-11-11. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/triggerdotdev/trigger.dev/actions/runs/43554494994 — dark (conclusion: `failure`), 2026-11-14 04:00 UTC
+- Latest run on `main`: https://github.com/triggerdotdev/trigger.dev/actions/runs/43674855230 — dark (conclusion: `failure`), 2026-11-15 04:00 UTC
 - Dark since: 2026-11-11 04:00 UTC (first run of the current streak)
 - Job / step: `🛡️ E2E Auth Tests (full)` → `🛡️ Run Webapp Full Auth E2E Tests`
-- Likely cause: {"traceId":"2cd8c3352bc49b9f0cbf761700711a4e","message":"sessionsRepository.listSessions","spanId":"7e820755c8ff00a5","kind":0,"timestamp":1794628973254000,"duration":2393.565,"attributes":{"repository.name":"clickhouse…
+- Likely cause: {"traceId":"548a097b2610d232d1907746a678d6a3","message":"ApiRunListPresenter.call","spanId":"82b475406bc87753","kind":1,"timestamp":1794715359347000,"duration":5197.77,"attributes":{"db.datasource":"control-plane-writer…
 
 <details><summary>End of the job log</summary>
 
 ```
-{"traceId":"dce81a05d88b5adf903cfb289d330bab","parentId":"b5988b8d6be2d1c7","message":"TriggerTaskService.call()","spanId":"c37de9d306ce11ce","kind":1,"timestamp":1794628972153000,"duration":8114.717,"attributes":{"$tri…
-{"traceId":"dce81a05d88b5adf903cfb289d330bab","message":"BatchTriggerV3Service.call()","spanId":"b5988b8d6be2d1c7","kind":1,"timestamp":1794628972152000,"duration":11930.023,"attributes":{"$trigger.env.id":"cmwfvr59u005…
-{"traceId":"2cd8c3352bc49b9f0cbf761700711a4e","parentId":"7e820755c8ff00a5","message":"query","spanId":"24ea17f8e6adf835","kind":0,"timestamp":1794628973254000,"duration":2194.63,"attributes":{"clickhouse.clientName":"c…
-{"traceId":"2cd8c3352bc49b9f0cbf761700711a4e","message":"sessionsRepository.listSessions","spanId":"7e820755c8ff00a5","kind":0,"timestamp":1794628973254000,"duration":2393.565,"attributes":{"repository.name":"clickhouse…
-{"traceId":"d10c53653e5ac5c88554c2d46933b9a4","message":"sessionRunManager.claimSessionRun","spanId":"68ff20080b550db2","kind":0,"timestamp":1794628973347000,"duration":2650.841,"attributes":{"$transaction":true,"max_wa…
-{"traceId":"d5d07de8aac64b91a93883acd06433a7","parentId":"96165f69b7f6dd3c","message":"doFlushBatch","spanId":"8f5848df0e66a363","kind":0,"timestamp":1794628973803000,"duration":2218.425,"attributes":{"event_count":4,"d…
-{"traceId":"d5d07de8aac64b91a93883acd06433a7","message":"flushBatch","spanId":"96165f69b7f6dd3c","kind":0,"timestamp":1794628973803000,"duration":2387.173,"attributes":{"flush_id":"7kPH85rEbc4b9b1gMXrtr","event_count":4…
+      Tests  4 failed | 261 passed (265)
+   Start at  04:02:31
+   Duration  8.81s (transform 632ms, setup 0ms, import 1.20s, tests 6.71s, environment 375ms)
+Express server closed gracefully.
+{"traceId":"548a097b2610d232d1907746a678d6a3","parentId":"0d8b227711d34414","message":"query","spanId":"da227e880e33eab7","kind":0,"timestamp":1794715359349000,"duration":2465.613,"attributes":{"clickhouse.clientName":"…
+{"traceId":"548a097b2610d232d1907746a678d6a3","parentId":"82b475406bc87753","message":"runsRepository.listRuns","spanId":"0d8b227711d34414","kind":0,"timestamp":1794715359349000,"duration":2936.703,"attributes":{"reposi…
+{"traceId":"548a097b2610d232d1907746a678d6a3","message":"ApiRunListPresenter.call","spanId":"82b475406bc87753","kind":1,"timestamp":1794715359347000,"duration":5197.77,"attributes":{"db.datasource":"control-plane-writer…
 ##[error]Process completed with exit code 1.
 ```
 

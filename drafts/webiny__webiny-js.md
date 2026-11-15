@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/webiny/webiny-js/issues/new
-- **Stars:** 8053 · **Generated:** 2026-11-15T00:56:28.163Z
+- **Stars:** 8053 · **Generated:** 2026-11-15T06:42:54.918Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -42,7 +42,7 @@ time="2026-11-15T00:17:21Z" level=fatal msg=failed
 
 ### Rebuild Global Cache ("dev" branch) (`.github/workflows/rebuildGlobalCacheDev.yml`)
 
-- Latest run on `next`: https://github.com/webiny/webiny-js/actions/runs/43554563292 — dark (conclusion: `failure`), 2026-11-14 04:01 UTC
+- Latest run on `next`: https://github.com/webiny/webiny-js/actions/runs/43674964067 — dark (conclusion: `failure`), 2026-11-15 04:02 UTC
 - Dark since: 2026-10-10 04:04 UTC (first run of the current streak)
 - Job / step: `Cache dependencies and packages` → `Run actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09`
 - Likely cause: The process '/usr/bin/git' failed with exit code 1
@@ -54,7 +54,7 @@ hint:
 hint: Disable this message with "git config set advice.defaultBranchName false"
 Initialized empty Git repository in /home/runner/work/webiny-js/webiny-js/dev/.git/
 The process '/usr/bin/git' failed with exit code 1
-Waiting 20 seconds before trying again
+Waiting 11 seconds before trying again
 The process '/usr/bin/git' failed with exit code 1
 Waiting 19 seconds before trying again
 ##[error]The process '/usr/bin/git' failed with exit code 1
@@ -108,7 +108,7 @@ Error building 1 package(s). Check the logs below.
 
 ### Rebuild Global Cache ("next" branch) (`.github/workflows/rebuildGlobalCacheNext.yml`)
 
-- Latest run on `next`: https://github.com/webiny/webiny-js/actions/runs/43554682500 — dark (conclusion: `failure`), 2026-11-14 04:03 UTC
+- Latest run on `next`: https://github.com/webiny/webiny-js/actions/runs/43675048289 — dark (conclusion: `failure`), 2026-11-15 04:03 UTC
 - Dark since: 2026-11-14 04:03 UTC (first run of the current streak)
 - Job / step: `Cache dependencies and packages` → `Build packages`
 - Likely cause: Property 'response' does not exist on type 'Interface<SendPasswordResetCodeInput, ITaskOutput>'.

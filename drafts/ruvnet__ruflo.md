@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/ruvnet/ruflo/issues/new
-- **Stars:** 81713 · **Generated:** 2026-11-15T00:56:28.163Z
+- **Stars:** 81737 · **Generated:** 2026-11-15T06:42:54.918Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -20,21 +20,21 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### CI/CD Pipeline (`.github/workflows/ci.yml`)
 
-- Latest run on `main`: https://github.com/ruvnet/ruflo/actions/runs/43544676876 — dark (conclusion: `failure`), 2026-11-14 02:09 UTC
+- Latest run on `main`: https://github.com/ruvnet/ruflo/actions/runs/43666394596 — dark (conclusion: `failure`), 2026-11-15 02:09 UTC
 - Dark since: 2026-11-12 02:08 UTC (first run of the current streak)
 - Job / step: `Test Suite (ubuntu-latest)` → `Run all tests`
-- Likely cause: AssertionError: expected 0.0004374980926513672 to be greater than 0.001
+- Likely cause: AssertionError: expected [ …(1500) ] to have a length of 2400 but got 1500
 
 <details><summary>End of the job log</summary>
 
 ```
-CI test ratchet: FAILED — 2 unexpected failing file(s)
+  duration_ms: 2.50605
+  ...
+JSON report written to /home/runner/work/ruflo/ruflo/.test-results/vitest.json
+CI test ratchet: FAILED — 1 unexpected failing file(s)
   + plugins/ruflo-console/tests/write-argv.spec.ts
       ✗ the POSIX scripts on a real disk (sh and dd as this machine has them) eight writers of 55 kB batches through the POSIX append tear no line here (one dd block per batch)
-        AssertionError: expected [ …(1620) ] to have a length of 2400 but got 1620
-  + v3/@claude-flow/neural/__tests__/moe-router-load-balance.test.ts
-      ✗ computeLoadBalanceLoss() uses the mean router probability (#4381) is not driven by the current call: one divergent query leaves the loss at the historical value
-        AssertionError: expected 0.0004374980926513672 to be greater than 0.001
+        AssertionError: expected [ …(1500) ] to have a length of 2400 but got 1500
 ##[error]Process completed with exit code 1.
 ```
 

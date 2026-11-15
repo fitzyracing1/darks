@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/n8n-io/n8n/issues/new
-- **Stars:** 210504 · **Generated:** 2026-11-15T00:56:28.163Z
+- **Stars:** 210539 · **Generated:** 2026-11-15T06:42:54.918Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** latest run was skipped, not failed — probably not worth filing
 
@@ -21,13 +21,13 @@ Hi! A few workflows on `master` have been dark recently. Details below, in case 
 
 ### Security: Sync from Public (`.github/workflows/sec-sync-public-to-private.yml`)
 
-- Latest run on `master`: https://github.com/n8n-io/n8n/actions/runs/43658720722 — dark (conclusion: `skipped`), 2026-11-15 00:32 UTC
+- Latest run on `master`: https://github.com/n8n-io/n8n/actions/runs/43684743236 — dark (conclusion: `skipped`), 2026-11-15 06:17 UTC
 - Dark since: 2026-10-13 15:19 UTC (first run of the current streak)
 - Likely cause: run skipped
 
 ### Test: E2E Infrastructure (`.github/workflows/test-e2e-infrastructure-reusable.yml`)
 
-- Latest run on `master`: https://github.com/n8n-io/n8n/actions/runs/43544087834 — dark (conclusion: `failure`), 2026-11-14 02:03 UTC
+- Latest run on `master`: https://github.com/n8n-io/n8n/actions/runs/43665903580 — dark (conclusion: `failure`), 2026-11-15 02:02 UTC
 - Dark since: 2026-11-14 02:03 UTC (first run of the current streak)
 - Job / step: `kafka / Shard 2` → `Run Tests`
 - Likely cause: Safe-chain: error connecting to currents-production.e8d8fcf9734e9ea0a5c511fc6813faf3.r2.cloudflarestorage.com:443 - This socket has been ended by the other party
@@ -35,12 +35,12 @@ Hi! A few workflows on `master` have been dark recently. Details below, in case 
 <details><summary>End of the job log</summary>
 
 ```
-├──────────┼──────────┼────────┼─────────┼─────────┼────────┼────────┼─────┼───────┼────────┼─────────┤
-│ v2 eager │   100.0% │  108.6 │ 33719ms │ 33977ms │      0 │    1ms │ 56% │ 707MB │    21% │     610 │
+│ v2 eager │   100.0% │  111.2 │ 32277ms │ 33028ms │      0 │    1ms │ 50% │ 739MB │    21% │     612 │
 [ELIFECYCLE] Command failed with exit code 1.
 Error: ERR_PNPM_RECURSIVE_RUN_FIRST_FAIL
   × "pnpm recursive run" failed in /home/runner/_work/n8n/n8n/packages/
   │ quality/testing/playwright
+Safe-chain: error connecting to currents-production.e8d8fcf9734e9ea0a5c511fc6813faf3.r2.cloudflarestorage.com:443 - This socket has been ended by the other party
 Safe-chain: error connecting to currents-production.e8d8fcf9734e9ea0a5c511fc6813faf3.r2.cloudflarestorage.com:443 - This socket has been ended by the other party
 ##[error]Process completed with exit code 1.
 ```
@@ -49,7 +49,7 @@ Safe-chain: error connecting to currents-production.e8d8fcf9734e9ea0a5c511fc6813
 
 ### Test: E2E Coverage Nightly (`.github/workflows/test-e2e-coverage-nightly.yml`)
 
-- Latest run on `master`: https://github.com/n8n-io/n8n/actions/runs/43544275599 — dark (conclusion: `failure`), 2026-11-14 02:04 UTC
+- Latest run on `master`: https://github.com/n8n-io/n8n/actions/runs/43666049561 — dark (conclusion: `failure`), 2026-11-15 02:04 UTC
 - Dark since: 2026-11-14 02:04 UTC (first run of the current streak)
 - Job / step: `E2E (coverage) / Shard 1` → `Run Tests`
 - Likely cause: Safe-chain: error connecting to cy.currents.dev:443 - This socket has been ended by the other party
@@ -61,7 +61,7 @@ Safe-chain: error connecting to cy.currents.dev:443 - This socket has been ended
 Safe-chain: error connecting to cy.currents.dev:443 - This socket has been ended by the other party
 Safe-chain: error connecting to cy.currents.dev:443 - This socket has been ended by the other party
 Safe-chain: error connecting to cy.currents.dev:443 - This socket has been ended by the other party
-Safe-chain: error connecting to currents-production.e8d8fcf9734e9ea0a5c511fc6813faf3.r2.cloudflarestorage.com:443 - This socket has been ended by the other party
+Safe-chain: error connecting to cy.currents.dev:443 - This socket has been ended by the other party
 Safe-chain: error connecting to cy.currents.dev:443 - This socket has been ended by the other party
 Safe-chain: error connecting to cy.currents.dev:443 - This socket has been ended by the other party
 ##[error]Process completed with exit code 1.
@@ -71,7 +71,7 @@ Safe-chain: error connecting to cy.currents.dev:443 - This socket has been ended
 
 ### Security: Sync Bundle Branches (`.github/workflows/sec-sync-bundle-branches.yml`)
 
-- Latest run on `master`: https://github.com/n8n-io/n8n/actions/runs/43550180364 — dark (conclusion: `skipped`), 2026-11-14 03:09 UTC
+- Latest run on `master`: https://github.com/n8n-io/n8n/actions/runs/43671218959 — dark (conclusion: `skipped`), 2026-11-15 03:11 UTC
 - Dark since: 2026-11-14 03:09 UTC (first run of the current streak)
 - Likely cause: run skipped
 

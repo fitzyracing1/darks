@@ -4,13 +4,13 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/storytold/lightcraft/issues/new
-- **Stars:** 15990 · **Generated:** 2026-11-15T00:56:28.163Z
+- **Stars:** 15997 · **Generated:** 2026-11-15T06:42:54.918Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 2 workflows dark on main ("SonarCloud", "FreeBSD")
+CI: 2 workflows dark on main ("SonarCloud", "Release")
 <!-- END TITLE -->
 
 ## Body
@@ -40,24 +40,24 @@ error: no profile can be merged
 
 </details>
 
-### FreeBSD (`.github/workflows/freebsd.yml`)
+### Release (`.github/workflows/release.yml`)
 
-- Latest run on `main`: https://github.com/storytold/lightcraft/actions/runs/43555779728 — dark (conclusion: `failure`), 2026-11-14 04:16 UTC
-- Dark since: 2026-11-14 04:16 UTC (first run of the current streak)
-- Job / step: `freebsd / FreeBSD 15 x86_64 (build + test)` → `Build and test`
-- Likely cause: error: test failed, to rerun pass '-p lightcraft-engine --lib'
+- Latest run on `main`: https://github.com/storytold/lightcraft/actions/runs/43667123980 — dark (conclusion: `failure`), 2026-11-15 02:18 UTC
+- Dark since: 2026-11-15 02:18 UTC (first run of the current streak)
+- Job / step: `release / FreeBSD aarch64` → `Build and package`
+- Likely cause: error: dist/release/lightcraft-0.21.1-freebsd-x86_64.tar.gz is not a FreeBSD aarch64 archive; packaging/freebsd/package.sh must honor CARGO_BUILD_TARGET
 
 <details><summary>End of the job log</summary>
 
 ```
-noise 0.01: none 1180486 B, ZIP 1214459 B (+2.9 %), LZW 1136338 B (-3.7 %)
-thread 'export::tests::sixteen_bit_zip_tiff_is_never_larger_than_uncompressed' (115495) panicked at crates/engine/src/export/tests.rs:962:9:
-noise 0.01: 16-bit ZIP 1214459 B is larger than uncompressed 1180486 B
-failures:
-    export::tests::sixteen_bit_zip_tiff_is_never_larger_than_uncompressed
-test result: FAILED. 1716 passed; 1 failed; 8 ignored; 0 measured; 0 filtered out; finished in 137.15s
-error: test failed, to rerun pass `-p lightcraft-engine --lib`
-##[error]Process completed with exit code 101.
+   Compiling lightcraft-mcp v0.21.1 (/home/runner/work/lightcraft/lightcraft/crates/mcp)
+   Compiling lightcraft-cli v0.21.1 (/home/runner/work/lightcraft/lightcraft/apps/lightcraft-cli)
+    Finished `release` profile [optimized + debuginfo] target(s) in 25m 00s
+wrote /home/runner/work/lightcraft/lightcraft/dist/release/lightcraft-0.21.1-freebsd-x86_64.tar.gz
+lightcraft-cli 0.21.1
+==> done
+error: dist/release/lightcraft-0.21.1-freebsd-x86_64.tar.gz is not a FreeBSD aarch64 archive; packaging/freebsd/package.sh must honor CARGO_BUILD_TARGET
+##[error]Process completed with exit code 1.
 ```
 
 </details>

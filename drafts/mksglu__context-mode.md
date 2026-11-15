@@ -4,43 +4,19 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/mksglu/context-mode/issues/new
-- **Stars:** 34098 · **Generated:** 2026-11-15T00:56:28.163Z
+- **Stars:** 34111 · **Generated:** 2026-11-15T06:42:54.918Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 2 workflows dark on main ("readme-stats", "weekly")
+CI: "weekly" workflow failing on main since 2026-11-09
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
-
-### readme-stats (`.github/workflows/readme-stats.yml`)
-
-- Latest run on `main`: https://github.com/mksglu/context-mode/actions/runs/43551340906 — dark (conclusion: `failure`), 2026-11-14 03:22 UTC
-- Dark since: 2026-11-05 03:23 UTC (first run of the current streak)
-- Job / step: `readme-stats` → `commit only if a file changed`
-- Likely cause: error: failed to push some refs to 'https://github.com/mksglu/context-mode'
-
-<details><summary>End of the job log</summary>
-
-```
- ! [rejected]        main -> main (fetch first)
-error: failed to push some refs to 'https://github.com/mksglu/context-mode'
-hint: Updates were rejected because the remote contains work that you do not
-hint: have locally. This is usually caused by another repository pushing to
-hint: the same ref. If you want to integrate the remote changes, use
-hint: 'git pull' before pushing again.
-hint: See the 'Note about fast-forwards' in 'git push --help' for details.
-##[error]Process completed with exit code 1.
-```
-
-</details>
-
-### weekly (`.github/workflows/weekly.yml`)
+Hi! The **weekly** workflow (`.github/workflows/weekly.yml`) on `main` has been failing since 2026-11-09. Here is what I saw, in case it's useful:
 
 - Latest run on `main`: https://github.com/mksglu/context-mode/actions/runs/42560203886 — dark (conclusion: `failure`), 2026-11-09 04:09 UTC
 - Dark since: 2026-11-09 04:09 UTC (first run of the current streak)

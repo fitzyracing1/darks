@@ -1,8 +1,8 @@
 <!-- dark-draft: awslabs/mcp -->
-<!-- draft-state: ready -->
+<!-- draft-state: resolved -->
 # Upstream issue draft: awslabs/mcp
 
-- **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
+- **Status:** resolved — lit again (2026-11-15); nothing to file
 - **Would be filed at:** https://github.com/awslabs/mcp/issues/new
 - **Stars:** 9922 · **Generated:** 2026-11-15T00:56:28.163Z
 - Nothing in this file has been sent anywhere.

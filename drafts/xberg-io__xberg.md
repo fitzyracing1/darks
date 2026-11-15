@@ -4,14 +4,13 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/xberg-io/xberg/issues/new
-- **Stars:** 9588 · **Generated:** 2026-11-15T00:56:28.163Z
+- **Stars:** 9588 · **Generated:** 2026-11-15T06:42:54.918Z
 - Nothing in this file has been sent anywhere.
-- **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 4 workflows dark on main ("CI Rust", "CI Lint", "CI Scripts", +1 more)
+CI: 2 workflows dark on main ("CI Rust", "CI Lint")
 <!-- END TITLE -->
 
 ## Body
@@ -43,24 +42,25 @@ error: function `prune_element_text` is never used
 
 ### CI Lint (`.github/workflows/ci-lint.yaml`)
 
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/43652792241 — dark (conclusion: `cancelled`), 2026-11-14 23:20 UTC
+- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/43669354876 — dark (conclusion: `failure`), 2026-11-15 02:46 UTC
 - Dark since: 2026-11-12 05:22 UTC (first run of the current streak)
-- Job / step: `AI governance validation`
-- Likely cause: The run was canceled by @tobocop2.
+- Job / step: `Benchmark script regressions` → `Validate Publish workflow contracts`
+- Likely cause: [release:test:contracts] ERROR task failed
 
-### CI Scripts (`.github/workflows/ci-scripts.yaml`)
+<details><summary>End of the job log</summary>
 
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/43652791896 — dark (conclusion: `cancelled`), 2026-11-14 23:20 UTC
-- Dark since: 2026-11-14 14:35 UTC (first run of the current streak)
-- Job / step: `Shell formatting`
-- Likely cause: The run was canceled by @tobocop2.
+```
+Checked latest-only groups for 18 CI workflows and 78 jobs
+[release:test:contracts] $ python3 scripts/ci/test_publish_workflow_contracts.py
+Traceback (most recent call last):
+  File "/home/runner/work/xberg/xberg/scripts/ci/test_publish_workflow_contracts.py", line 15, in <module>
+    import yaml
+ModuleNotFoundError: No module named 'yaml'
+[release:test:contracts] ERROR task failed
+##[error]Process completed with exit code 1.
+```
 
-### CI Docker (`.github/workflows/ci-docker.yaml`)
-
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/43652791834 — dark (conclusion: `cancelled`), 2026-11-14 23:20 UTC
-- Dark since: 2026-11-14 23:20 UTC (first run of the current streak)
-- Job / step: `Docker (full)`
-- Likely cause: The run was canceled by @tobocop2.
+</details>
 
 If this is already known or expected, feel free to close. Thanks for maintaining xberg!
 

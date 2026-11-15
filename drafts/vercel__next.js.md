@@ -4,36 +4,60 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/vercel/next.js/issues/new
-- **Stars:** 143524 · **Generated:** 2026-11-15T00:56:28.163Z
+- **Stars:** 143526 · **Generated:** 2026-11-15T06:42:54.918Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: "build-and-test" workflow failing on canary since 2026-11-14
+CI: 2 workflows dark on canary ("Rspack Next.js production integration tests", "Rspack Next.js development integration tests")
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! The **build-and-test** workflow (`.github/workflows/build_and_test.yml`) on `canary` has been failing since 2026-11-14. Here is what I saw, in case it's useful:
+Hi! A few workflows on `canary` have been dark recently. Details below, in case they're useful:
 
-- Latest run on `canary`: https://github.com/vercel/next.js/actions/runs/43652534027 — dark (conclusion: `failure`), 2026-11-14 23:18 UTC
-- Dark since: 2026-11-14 23:18 UTC (first run of the current streak)
-- Job / step: `test rspack dev (5/5, 18.3.1) / build` → `Run export NEXT_EXTERNAL_TESTS_FILTERS="$(pwd)/test/rspack-dev-tests-manifest.json"`
-- Likely cause: Some tests failed
+### Rspack Next.js production integration tests (`.github/workflows/rspack-nextjs-build-integration-tests.yml`)
+
+- Latest run on `canary`: https://github.com/vercel/next.js/actions/runs/43679339238 — dark (conclusion: `failure`), 2026-11-15 05:02 UTC
+- Dark since: 2026-11-15 05:02 UTC (first run of the current streak)
+- Job / step: `Rspack integration tests / Next.js integration test (Integration) (6/12) / build` → `Run # legacy integration tests with `node run-tests.js``
+- Likely cause: Unable to download artifact(s): Artifact not found for name: next-swc-aarch64-unknown-linux-gnu
 
 <details><summary>End of the job log</summary>
 
 ```
-Force exiting Jest: Have you considered using `--detectOpenHandles` to detect async operations that kept running after all tests finished?
-end of test/e2e/app-dir/logging/fetch-logging.test.ts output
---test output start-- {"numFailedTestSuites":1,"numFailedTests":2,"numPassedTestSuites":0,"numPassedTests":47,"numPendingTestSuites":0,"numPendingTests":4,"numRuntimeErrorTestSuites":0,"numTodoTests":0,"numTotalTestSuit…
-test/e2e/app-dir/use-cache/use-cache.partial-prefetching.test.ts finished on retry 0/2 in 244.393s
-Some tests failed
-Successfully updated test timings in KV store
-exiting with code 1
-##[error]Process completed with exit code 1.
+/etc/profile.d/apps-bin-path.sh: line 10: XDG_DATA_DIRS: unbound variable
+/etc/profile.d/apps-bin-path.sh: line 10: XDG_DATA_DIRS: unbound variable
+/etc/profile.d/apps-bin-path.sh: line 10: XDG_DATA_DIRS: unbound variable
+Waiting for background step(s) to complete: install-rust
+Finished waiting for background step(s).
+/etc/profile.d/apps-bin-path.sh: line 10: XDG_DATA_DIRS: unbound variable
+Downloading single artifact
+##[error]Unable to download artifact(s): Artifact not found for name: next-swc-aarch64-unknown-linux-gnu
+```
+
+</details>
+
+### Rspack Next.js development integration tests (`.github/workflows/rspack-nextjs-dev-integration-tests.yml`)
+
+- Latest run on `canary`: https://github.com/vercel/next.js/actions/runs/43679592677 — dark (conclusion: `failure`), 2026-11-15 05:05 UTC
+- Dark since: 2026-11-15 05:05 UTC (first run of the current streak)
+- Job / step: `Rspack integration tests / Next.js integration test (Integration) (1/16) / build` → `Run # legacy integration tests with `node run-tests.js``
+- Likely cause: Unable to download artifact(s): Artifact not found for name: next-swc-aarch64-unknown-linux-gnu
+
+<details><summary>End of the job log</summary>
+
+```
+/etc/profile.d/apps-bin-path.sh: line 10: XDG_DATA_DIRS: unbound variable
+/etc/profile.d/apps-bin-path.sh: line 10: XDG_DATA_DIRS: unbound variable
+/etc/profile.d/apps-bin-path.sh: line 10: XDG_DATA_DIRS: unbound variable
+Waiting for background step(s) to complete: install-rust
+Finished waiting for background step(s).
+/etc/profile.d/apps-bin-path.sh: line 10: XDG_DATA_DIRS: unbound variable
+Downloading single artifact
+##[error]Unable to download artifact(s): Artifact not found for name: next-swc-aarch64-unknown-linux-gnu
 ```
 
 </details>
