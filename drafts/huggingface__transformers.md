@@ -4,21 +4,15 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/huggingface/transformers/issues/new
-- **Stars:** 168993 · **Generated:** 2026-11-15T12:40:30.415Z
+- **Stars:** 168993 · **Generated:** 2026-11-15T18:36:31.465Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** workflow failed to start (config/permissions on their side)
 - **Note for Joshua:** self-hosted runner problem — maintainers usually know
 
-## Skipped: upstream already tracking
-
-- Build docker images (scheduled) (`.github/workflows/build-docker-images.yml`): [issue #50220](https://github.com/huggingface/transformers/issues/50220) "CI: build-docker-images Doc builder failing: pyarrow requires NumPy>=2.0 but image has 1.26.4"
-
-These workflows are left out of the body below.
-
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 7 workflows dark on main ("Self-hosted runner (nightly-past-ci-caller)", "Self-hosted runner (Intel Gaudi3 scheduled CI caller)", "Doctests", +4 more)
+CI: 3 workflows dark on main ("Self-hosted runner (nightly-past-ci-caller)", "vLLM Integration Tests", "SGLang Integration Tests")
 <!-- END TITLE -->
 
 ## Body
@@ -28,50 +22,9 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### Self-hosted runner (nightly-past-ci-caller) (`.github/workflows/self-nightly-past-ci-caller.yml`)
 
-- Latest run on `main`: https://github.com/huggingface/transformers/actions/runs/43667436280 — dark (conclusion: `startup_failure`), 2026-11-15 02:21 UTC
+- Latest run on `main`: https://github.com/huggingface/transformers/actions/runs/43723531348 — dark (conclusion: `startup_failure`), 2026-11-15 14:17 UTC
 - Dark since: 2026-11-14 02:20 UTC (first run of the current streak)
 - Likely cause: run startup_failure
-
-### Self-hosted runner (Intel Gaudi3 scheduled CI caller) (`.github/workflows/self-scheduled-intel-gaudi3-caller.yml`)
-
-- Latest run on `main`: https://github.com/huggingface/transformers/actions/runs/43667454704 — dark (conclusion: `failure`), 2026-11-15 02:22 UTC
-- Dark since: 2026-11-15 02:22 UTC (first run of the current streak)
-- Job / step: `Pipeline CI / Pipelines (1gaudi)`
-- Likely cause: Required runner group 'itac-bm-emr-gaudi3-dell-1gaudi' not found
-
-### Doctests (`.github/workflows/doctests.yml`)
-
-- Latest run on `main`: https://github.com/huggingface/transformers/actions/runs/43667502351 — dark (conclusion: `failure`), 2026-11-15 02:22 UTC
-- Dark since: 2026-11-15 02:22 UTC (first run of the current streak)
-- Likely cause: no cause found in annotations
-
-### Nvidia CI - Flash Attn (`.github/workflows/self-scheduled-flash-attn-caller.yml`)
-
-- Latest run on `main`: https://github.com/huggingface/transformers/actions/runs/43667606453 — dark (conclusion: `failure`), 2026-11-15 02:24 UTC
-- Dark since: 2026-11-15 02:24 UTC (first run of the current streak)
-- Likely cause: no cause found in annotations
-
-### Nvidia CI (`.github/workflows/self-scheduled-caller.yml`)
-
-- Latest run on `main`: https://github.com/huggingface/transformers/actions/runs/43667655478 — dark (conclusion: `failure`), 2026-11-15 02:24 UTC
-- Dark since: 2026-11-15 02:24 UTC (first run of the current streak)
-- Job / step: `Torch pipeline CI / PyTorch pipelines (aws-g5-12xlarge-cache)` → `Run all pipeline tests on GPU`
-- Likely cause: Executing the custom container implementation failed. Please contact your self hosted runner administrator.
-
-<details><summary>End of the job log</summary>
-
-```
-                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/transformers/src/transformers/modeling_utils.py", line 4634, in _finalize_model_loading
-    log_state_dict_report(
-  File "/transformers/src/transformers/utils/loading_report.py", line 316, in log_state_dict_report
-    raise RuntimeError(
-RuntimeError: You set `ignore_mismatched_sizes` to `False`, thus raising an error. For details look at the above report!
-===== 40 failed, 236 passed, 11 skipped, 25 warnings in 828.61s (0:13:48) ======
-##[error]Error: failed to run script step: command terminated with non-zero exit code: error executing command [sh -e /__w/_temp/66e8f860-e09c-11f1-b116-8316d937d3d6.sh], exit code 1
-```
-
-</details>
 
 ### vLLM Integration Tests (`.github/workflows/vllm-ci-caller.yml`)
 

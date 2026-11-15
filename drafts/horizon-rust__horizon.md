@@ -4,45 +4,54 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/horizon-rust/horizon/issues/new
-- **Stars:** 10047 · **Generated:** 2026-11-15T12:40:30.415Z
+- **Stars:** 10166 · **Generated:** 2026-11-15T18:36:31.465Z
 - Nothing in this file has been sent anywhere.
+- **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Skipped: upstream already tracking
 
-- parity-main (`.github/workflows/parity-main.yml`): [issue #15316](https://github.com/horizon-rust/horizon/issues/15316) "parity-main has not passed since 2026-11-07: no Nightly, and its bisect never finishes"
+- parity-main (`.github/workflows/parity-main.yml`): [issue #15316](https://github.com/horizon-rust/horizon/issues/15316) "parity-main has not passed since 2026-11-07: no Nightly, and its bisect never finishes", [issue #16904](https://github.com/horizon-rust/horizon/issues/16904) "parity-main bisect names a merge for a flaky harness (it blamed #16690 for pearl_wind_charge)"
 
 These workflows are left out of the body below.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: "mojang republish" workflow failing on main since 2026-11-12
+CI: 2 workflows dark on main ("mojang republish", "checks")
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! The **mojang republish** workflow (`.github/workflows/mojang-republish.yml`) on `main` has been failing since 2026-11-12. Here is what I saw, in case it's useful:
+Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
 
-- Latest run on `main`: https://github.com/horizon-rust/horizon/actions/runs/43713939802 — dark (conclusion: `failure`), 2026-11-15 12:27 UTC
+### mojang republish (`.github/workflows/mojang-republish.yml`)
+
+- Latest run on `main`: https://github.com/horizon-rust/horizon/actions/runs/43746650134 — dark (conclusion: `failure`), 2026-11-15 18:25 UTC
 - Dark since: 2026-11-12 20:01 UTC (first run of the current streak)
 - Job / step: `check` → `Check the manifest`
-- Likely cause: python3: can't open file '/var/lib/gha/light-6/_work/horizon/horizon/tools/ci/mojang_republish.py': [Errno 2] No such file or directory
+- Likely cause: python3: can't open file '/var/lib/gha/light-3/_work/horizon/horizon/tools/ci/mojang_republish.py': [Errno 2] No such file or directory
 
 <details><summary>End of the job log</summary>
 
 ```
-HEAD is now at a9a30a3b6 execute if stopwatch tests the stopwatch against its range (#16661)
+HEAD is now at 2e1c2acf7 parity(vehicles): a minecart loaded on fire keeps its Fire (#16751)
   origin/main
-a9a30a3b6e3c246747748572e7b10c5fc6b9dc5e
+2e1c2acf7146e2d758776b7f8fd12f59fc7320a8
 Switched to a new branch 'main'
 branch 'main' set up to track 'origin/main'.
-a9a30a3b6e3c246747748572e7b10c5fc6b9dc5e
-python3: can't open file '/var/lib/gha/light-6/_work/horizon/horizon/tools/ci/mojang_republish.py': [Errno 2] No such file or directory
+2e1c2acf7146e2d758776b7f8fd12f59fc7320a8
+python3: can't open file '/var/lib/gha/light-3/_work/horizon/horizon/tools/ci/mojang_republish.py': [Errno 2] No such file or directory
 ##[error]Process completed with exit code 2.
 ```
 
 </details>
+
+### checks (`.github/workflows/ci.yml`)
+
+- Latest run on `main`: https://github.com/horizon-rust/horizon/actions/runs/43746547499 — dark (conclusion: `cancelled`), 2026-11-15 18:24 UTC
+- Dark since: 2026-11-15 18:22 UTC (first run of the current streak)
+- Likely cause: run cancelled
 
 If this is already known or expected, feel free to close. Thanks for maintaining horizon!
 

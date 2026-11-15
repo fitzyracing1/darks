@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/langchain-ai/langchain/issues/new
-- **Stars:** 149544 · **Generated:** 2026-11-15T12:40:30.415Z
+- **Stars:** 149565 · **Generated:** 2026-11-15T18:36:31.465Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -18,10 +18,10 @@ CI: "⏰ Integration Tests" workflow failing on master since 2026-10-09
 <!-- BEGIN BODY -->
 Hi! The **⏰ Integration Tests** workflow (`.github/workflows/integration_tests.yml`) on `master` has been failing since 2026-10-09. Here is what I saw, in case it's useful:
 
-- Latest run on `master`: https://github.com/langchain-ai/langchain/actions/runs/43597798931 — dark (conclusion: `failure`), 2026-11-14 13:03 UTC
+- Latest run on `master`: https://github.com/langchain-ai/langchain/actions/runs/43716963220 — dark (conclusion: `failure`), 2026-11-15 13:03 UTC
 - Dark since: 2026-10-09 13:10 UTC (first run of the current streak)
-- Job / step: `🐍 Python 3.14: libs/partners/groq` → `🚀 Run Integration Tests`
-- Likely cause: = 71 failed, 2 passed, 11 skipped, 5 xfailed, 4 warnings, 71 retried in 296.31s (0:04:56) =
+- Job / step: `🐍 Python 3.11: libs/partners/groq` → `🚀 Run Integration Tests`
+- Likely cause: = 71 failed, 2 passed, 11 skipped, 5 xfailed, 71 retried in 297.31s (0:04:57) ==
 
 <details><summary>End of the job log</summary>
 
@@ -31,7 +31,7 @@ FAILED tests/integration_tests/test_standard.py::TestGroq::test_agent_loop[model
 FAILED tests/integration_tests/test_standard.py::test_json_schema[pydantic] - groq.InternalServerError: Error code: 501 - ***'error': 'path not allow-listed by gateway', 'provider': 'groq', 'path': '/groq/openai/v1/chat…
 FAILED tests/integration_tests/test_standard.py::test_json_schema[json_schema] - groq.InternalServerError: Error code: 501 - ***'error': 'path not allow-listed by gateway', 'provider': 'groq', 'path': '/groq/openai/v1/c…
 FAILED tests/integration_tests/test_standard.py::test_json_schema[typeddict] - groq.InternalServerError: Error code: 501 - ***'error': 'path not allow-listed by gateway', 'provider': 'groq', 'path': '/groq/openai/v1/cha…
-= 71 failed, 2 passed, 11 skipped, 5 xfailed, 4 warnings, 71 retried in 296.31s (0:04:56) =
+= 71 failed, 2 passed, 11 skipped, 5 xfailed, 71 retried in 297.31s (0:04:57) ==
 make: *** [Makefile:19: integration_tests] Error 1
 ##[error]Process completed with exit code 2.
 ```

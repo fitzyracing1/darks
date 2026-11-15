@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/storytold/photocraft/issues/new
-- **Stars:** 79509 · **Generated:** 2026-11-15T12:40:30.415Z
+- **Stars:** 79575 · **Generated:** 2026-11-15T18:36:31.465Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** cancelled by a concurrency group — likely noise
 
@@ -43,44 +43,44 @@ wrote /Users/runner/work/photocraft/photocraft/target/perf/results.json
 
 ### SonarCloud (`.github/workflows/sonarcloud.yml`)
 
-- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/43703979575 — dark (conclusion: `failure`), 2026-11-15 10:25 UTC
+- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/43737065051 — dark (conclusion: `failure`), 2026-11-15 16:43 UTC
 - Dark since: 2026-11-12 12:27 UTC (first run of the current streak)
-- Job / step: `sonarcloud / SonarCloud Scan` → `Fail on Rust shard test failures`
-- Likely cause: Coverage shard 4 tests failed (exit 100); analysis was still uploaded
+- Job / step: `sonarcloud / Build instrumented test archive` → `Build instrumented test archive`
+- Likely cause: warning: build failed, waiting for other jobs to finish...
 
 <details><summary>End of the job log</summary>
 
 ```
-11:26:30.897 INFO  ------------- Upload SCA dependency files
-11:26:32.365 INFO  Successfully sent architecture data
-11:26:34.105 INFO  Sensor cache published successfully
-11:26:36.537 INFO  Analysis total time: 4:42.105 min
-11:26:36.539 INFO  SonarScanner Engine completed successfully
-11:26:36.737 INFO  EXECUTION SUCCESS
-11:26:36.738 INFO  Total time: 4:49.076s
-##[error]Coverage shard 1 tests failed (exit 100); analysis was still uploaded
+26 | photocraft-ui-egui = { workspace = true }
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   |
+   = note: `cargo::unused_dependencies` is set to `warn` by default
+help: consider removing the dependency on `photocraft-ui-egui`
+warning: `photocraft-web` (manifest) generated 1 warning
+error: command `/home/runner/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/bin/cargo '--color=always' test --no-run '--message-format=json-render-diagnostics' --workspace` exited with code 101
+##[error]Process completed with exit code 101.
 ```
 
 </details>
 
 ### CI (`.github/workflows/ci.yml`)
 
-- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/43703979897 — dark (conclusion: `failure`), 2026-11-15 10:25 UTC
+- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/43737064889 — dark (conclusion: `failure`), 2026-11-15 16:43 UTC
 - Dark since: 2026-11-14 03:13 UTC (first run of the current streak)
-- Job / step: `test (without heif)` → `Test without heif`
-- Likely cause: error: test run failed
+- Job / step: `gate / gate (ubuntu-24.04)` → `Gate`
+- Likely cause: skip  panic_hunt
 
 <details><summary>End of the job log</summary>
 
 ```
-                 at ./tests/it/svg.rs:353:68
-       7: call_once<it::svg::gzip_compressed_embedded_svg_decompresses_once_with_a_size_cap::{closure_env#0}, ()>
-                 at /rustc/0ef1bc386059596dada8fb65b50425aab2ea637a/library/core/src/ops/function.rs:250:5
-       8: <fn() -> core::result::Result<(), alloc::string::String> as core::ops::function::FnOnce<()>>::call_once
-                 at /rustc/0ef1bc386059596dada8fb65b50425aab2ea637a/library/core/src/ops/function.rs:250:5
-    note: Some details are omitted, run with `RUST_BACKTRACE=full` for a verbose backtrace.
-error: test run failed
-##[error]Process completed with exit code 100.
+  skip  panel-commands
+  skip  scorecard
+  skip  test
+  skip  panic_hunt
+  skip  doctest
+  skip  wasm
+  skip  i18n
+##[error]Process completed with exit code 1.
 ```
 
 </details>

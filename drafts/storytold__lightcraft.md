@@ -4,19 +4,21 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/storytold/lightcraft/issues/new
-- **Stars:** 16008 · **Generated:** 2026-11-15T12:40:30.415Z
+- **Stars:** 16021 · **Generated:** 2026-11-15T18:36:31.465Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: "Release" workflow failing on main since 2026-11-15
+CI: 2 workflows dark on main ("Release", "SonarCloud")
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! The **Release** workflow (`.github/workflows/release.yml`) on `main` has been failing since 2026-11-15. Here is what I saw, in case it's useful:
+Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
+
+### Release (`.github/workflows/release.yml`)
 
 - Latest run on `main`: https://github.com/storytold/lightcraft/actions/runs/43667123980 — dark (conclusion: `failure`), 2026-11-15 02:18 UTC
 - Dark since: 2026-11-15 02:18 UTC (first run of the current streak)
@@ -34,6 +36,28 @@ lightcraft-cli 0.21.1
 ==> done
 error: dist/release/lightcraft-0.21.1-freebsd-x86_64.tar.gz is not a FreeBSD aarch64 archive; packaging/freebsd/package.sh must honor CARGO_BUILD_TARGET
 ##[error]Process completed with exit code 1.
+```
+
+</details>
+
+### SonarCloud (`.github/workflows/sonarcloud.yml`)
+
+- Latest run on `main`: https://github.com/storytold/lightcraft/actions/runs/43720377852 — dark (conclusion: `failure`), 2026-11-15 13:42 UTC
+- Dark since: 2026-11-15 12:17 UTC (first run of the current streak)
+- Job / step: `sonarcloud / SonarCloud Scan` → `Fail on Rust shard test failures`
+- Likely cause: Coverage shard 8 tests failed (exit 100); analysis was still uploaded
+
+<details><summary>End of the job log</summary>
+
+```
+16:13:49.467 INFO  ------------- Upload SCA dependency files
+16:13:50.731 INFO  Successfully sent architecture data
+16:13:52.399 INFO  Sensor cache published successfully
+16:13:53.920 INFO  Analysis total time: 1:40.114 min
+16:13:53.921 INFO  SonarScanner Engine completed successfully
+16:13:54.372 INFO  EXECUTION SUCCESS
+16:13:54.372 INFO  Total time: 1:44.941s
+##[error]Coverage shard 6 tests failed (exit 100); analysis was still uploaded
 ```
 
 </details>

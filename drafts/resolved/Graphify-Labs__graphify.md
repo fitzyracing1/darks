@@ -1,8 +1,8 @@
 <!-- dark-draft: Graphify-Labs/graphify -->
-<!-- draft-state: ready -->
+<!-- draft-state: resolved -->
 # Upstream issue draft: Graphify-Labs/graphify
 
-- **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
+- **Status:** resolved — lit again (2026-11-15); nothing to file
 - **Would be filed at:** https://github.com/Graphify-Labs/graphify/issues/new
 - **Stars:** 148083 · **Generated:** 2026-11-15T12:40:30.415Z
 - Nothing in this file has been sent anywhere.
