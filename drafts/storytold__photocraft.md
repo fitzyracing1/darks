@@ -4,14 +4,14 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/storytold/photocraft/issues/new
-- **Stars:** 79575 · **Generated:** 2026-11-15T18:36:31.465Z
+- **Stars:** 79615 · **Generated:** 2026-11-16T00:59:22.034Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** cancelled by a concurrency group — likely noise
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 5 workflows dark on main ("Perf (nightly)", "SonarCloud", "CI", +2 more)
+CI: 3 workflows dark on main ("Perf (nightly)", "FreeBSD", "Release")
 <!-- END TITLE -->
 
 ## Body
@@ -36,50 +36,6 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 | P34 | Brush preview memory, small dab on an 8K viewport | ≤ 2 MiB | the live brush preview buffers are UI-side; no headless counter yet | [#211](https://github.com/storytold/photocraft/issues/211) |
 | P35 | Marquee drag on 24 MP with Alt/Shift | ≤ 17 ms p95 | Shift/Alt marquee modifiers don't exist yet (#208) and the drag preview is UI-side | [#211](https://github.com/storytold/photocraft/issues/211) |
 wrote /Users/runner/work/photocraft/photocraft/target/perf/results.json
-##[error]Process completed with exit code 1.
-```
-
-</details>
-
-### SonarCloud (`.github/workflows/sonarcloud.yml`)
-
-- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/43737065051 — dark (conclusion: `failure`), 2026-11-15 16:43 UTC
-- Dark since: 2026-11-12 12:27 UTC (first run of the current streak)
-- Job / step: `sonarcloud / Build instrumented test archive` → `Build instrumented test archive`
-- Likely cause: warning: build failed, waiting for other jobs to finish...
-
-<details><summary>End of the job log</summary>
-
-```
-26 | photocraft-ui-egui = { workspace = true }
-   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-   |
-   = note: `cargo::unused_dependencies` is set to `warn` by default
-help: consider removing the dependency on `photocraft-ui-egui`
-warning: `photocraft-web` (manifest) generated 1 warning
-error: command `/home/runner/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/bin/cargo '--color=always' test --no-run '--message-format=json-render-diagnostics' --workspace` exited with code 101
-##[error]Process completed with exit code 101.
-```
-
-</details>
-
-### CI (`.github/workflows/ci.yml`)
-
-- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/43737064889 — dark (conclusion: `failure`), 2026-11-15 16:43 UTC
-- Dark since: 2026-11-14 03:13 UTC (first run of the current streak)
-- Job / step: `gate / gate (ubuntu-24.04)` → `Gate`
-- Likely cause: skip  panic_hunt
-
-<details><summary>End of the job log</summary>
-
-```
-  skip  panel-commands
-  skip  scorecard
-  skip  test
-  skip  panic_hunt
-  skip  doctest
-  skip  wasm
-  skip  i18n
 ##[error]Process completed with exit code 1.
 ```
 

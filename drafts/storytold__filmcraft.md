@@ -4,20 +4,22 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/storytold/filmcraft/issues/new
-- **Stars:** 18341 · **Generated:** 2026-11-15T18:36:31.465Z
+- **Stars:** 18358 · **Generated:** 2026-11-16T00:59:22.034Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** cancelled by a concurrency group — likely noise
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: "FreeBSD" workflow getting cancelled on main since 2026-11-15
+CI: 2 workflows dark on main ("FreeBSD", "SonarCloud")
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! The **FreeBSD** workflow (`.github/workflows/freebsd.yml`) on `main` has been getting cancelled since 2026-11-15. Here is what I saw, in case it's useful:
+Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
+
+### FreeBSD (`.github/workflows/freebsd.yml`)
 
 - Latest run on `main`: https://github.com/storytold/filmcraft/actions/runs/43668899664 — dark (conclusion: `cancelled`), 2026-11-15 02:40 UTC
 - Dark since: 2026-11-15 02:40 UTC (first run of the current streak)
@@ -35,6 +37,28 @@ Creating user 'colord' with uid '970'
 [160/166] Installing gtk3-3.24.52...
 [160/166] Extracting gtk3-3.24.52: .......... done
 ##[error]The operation was canceled.
+```
+
+</details>
+
+### SonarCloud (`.github/workflows/sonarcloud.yml`)
+
+- Latest run on `main`: https://github.com/storytold/filmcraft/actions/runs/43776855957 — dark (conclusion: `failure`), 2026-11-15 23:49 UTC
+- Dark since: 2026-11-15 21:53 UTC (first run of the current streak)
+- Job / step: `sonarcloud / SonarCloud Scan` → `Fail on Rust shard test failures`
+- Likely cause: Coverage shard 3 tests failed (exit 100); analysis was still uploaded
+
+<details><summary>End of the job log</summary>
+
+```
+00:43:20.016 INFO  ------------- Upload SCA dependency files
+00:43:21.316 INFO  Successfully sent architecture data
+00:43:22.998 INFO  Sensor cache published successfully
+00:43:24.415 INFO  Analysis total time: 2:09.214 min
+00:43:24.416 INFO  SonarScanner Engine completed successfully
+00:43:24.853 INFO  EXECUTION SUCCESS
+00:43:24.854 INFO  Total time: 2:16.217s
+##[error]Coverage shard 1 tests failed (exit 100); analysis was still uploaded
 ```
 
 </details>

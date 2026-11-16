@@ -4,14 +4,13 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/storytold/craft-anything/issues/new
-- **Stars:** 33571 · **Generated:** 2026-11-15T18:36:31.465Z
+- **Stars:** 33750 · **Generated:** 2026-11-16T00:59:22.034Z
 - Nothing in this file has been sent anywhere.
-- **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 2 workflows dark on main ("FreeBSD", "SonarCloud")
+CI: 2 workflows dark on main ("FreeBSD", "CI")
 <!-- END TITLE -->
 
 ## Body
@@ -41,11 +40,27 @@ error: test failed, to rerun pass `-p craft-anything-ai --lib`
 
 </details>
 
-### SonarCloud (`.github/workflows/sonarcloud.yml`)
+### CI (`.github/workflows/ci.yml`)
 
-- Latest run on `main`: https://github.com/storytold/craft-anything/actions/runs/43742952002 — dark (conclusion: `cancelled`), 2026-11-15 17:46 UTC
-- Dark since: 2026-11-15 16:28 UTC (first run of the current streak)
-- Likely cause: run cancelled
+- Latest run on `main`: https://github.com/storytold/craft-anything/actions/runs/43745765821 — dark (conclusion: `failure`), 2026-11-15 18:15 UTC
+- Dark since: 2026-11-15 18:15 UTC (first run of the current streak)
+- Job / step: `gate / gate (ubuntu-24.04)` → `Gate`
+- Likely cause: error: test failed, to rerun pass '-p craft-anything-engine --lib'
+
+<details><summary>End of the job log</summary>
+
+```
+   5: <fn() -> core::result::Result<(), alloc::string::String> as core::ops::function::FnOnce<()>>::call_once
+             at /rustc/0ef1bc386059596dada8fb65b50425aab2ea637a/library/core/src/ops/function.rs:250:5
+note: Some details are omitted, run with `RUST_BACKTRACE=full` for a verbose backtrace.
+failures:
+    plugins::tests::a_plugin_that_exits_at_once_says_what_it_printed_and_leaves_a_log
+test result: FAILED. 688 passed; 1 failed; 13 ignored; 0 measured; 0 filtered out; finished in 6.03s
+error: test failed, to rerun pass `-p craft-anything-engine --lib`
+##[error]Process completed with exit code 1.
+```
+
+</details>
 
 If this is already known or expected, feel free to close. Thanks for maintaining craft-anything!
 

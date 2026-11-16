@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/storytold/vectorcraft/issues/new
-- **Stars:** 11775 · **Generated:** 2026-11-15T18:36:31.465Z
+- **Stars:** 11787 · **Generated:** 2026-11-16T00:59:22.034Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
@@ -19,7 +19,7 @@ CI: "SonarCloud" workflow getting cancelled on main since 2026-11-15
 <!-- BEGIN BODY -->
 Hi! The **SonarCloud** workflow (`.github/workflows/sonarcloud.yml`) on `main` has been getting cancelled since 2026-11-15. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/storytold/vectorcraft/actions/runs/43738275564 — dark (conclusion: `cancelled`), 2026-11-15 16:56 UTC
+- Latest run on `main`: https://github.com/storytold/vectorcraft/actions/runs/43777502132 — dark (conclusion: `cancelled`), 2026-11-15 23:56 UTC
 - Dark since: 2026-11-15 05:37 UTC (first run of the current streak)
 - Likely cause: run cancelled
 

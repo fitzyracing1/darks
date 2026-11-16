@@ -4,14 +4,8 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/storytold/pdfcraft/issues/new
-- **Stars:** 20795 · **Generated:** 2026-11-15T18:36:31.465Z
+- **Stars:** 20816 · **Generated:** 2026-11-16T00:59:22.034Z
 - Nothing in this file has been sent anywhere.
-
-## Skipped: upstream already tracking
-
-- SonarCloud (`.github/workflows/sonarcloud.yml`): [issue #7225](https://github.com/storytold/pdfcraft/issues/7225) "SonarCloud coverage runs without the gate's craft-fonts, so glyph tests fail there"
-
-These workflows are left out of the body below.
 
 ## Suggested title
 
