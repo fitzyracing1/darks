@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/webiny/webiny-js/issues/new
-- **Stars:** 8053 · **Generated:** 2026-11-16T07:03:47.942Z
+- **Stars:** 8053 · **Generated:** 2026-11-16T12:52:35.150Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -86,20 +86,20 @@ GraphQL: Your token has not been granted the required scopes to execute this que
 
 ### Push (`.github/workflows/push.yml`)
 
-- Latest run on `next`: https://github.com/webiny/webiny-js/actions/runs/43711324727 — dark (conclusion: `failure`), 2026-11-15 11:56 UTC
+- Latest run on `next`: https://github.com/webiny/webiny-js/actions/runs/43865596116 — dark (conclusion: `failure`), 2026-11-16 12:19 UTC
 - Dark since: 2026-11-12 21:06 UTC (first run of the current streak)
-- Job / step: `E2E (DDB+OS) - Project setup` → `Deploy Core`
+- Job / step: `E2E (DDB) - Project setup` → `Deploy API`
 - Likely cause: error: Rspack build failed.
 
 <details><summary>End of the job log</summary>
 
 ```
-error   build failed in 0.97s
-File (node)                                              Size
-c.mjs                                                    0.1 kB
-u.mjs                                                    0.1 kB
-handler.mjs                                            632.6 kB
-Total:                                                 632.8 kB
+1.mjs                                                  153.0 kB
+3h.mjs                                                 200.5 kB
+8.mjs                                                  221.8 kB
+f.mjs                                                 1030.3 kB
+handler.mjs                                           4949.4 kB
+Total:                                                6819.0 kB
 error: Rspack build failed.
 ##[error]Process completed with exit code 1.
 ```

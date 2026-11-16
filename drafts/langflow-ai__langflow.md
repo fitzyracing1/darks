@@ -4,13 +4,13 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/langflow-ai/langflow/issues/new
-- **Stars:** 156689 · **Generated:** 2026-11-16T07:03:47.942Z
+- **Stars:** 156698 · **Generated:** 2026-11-16T12:52:35.150Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 2 workflows dark on main ("Deploy Storybook to GitHub Pages", "Cross-Bundle Test")
+CI: 3 workflows dark on main ("Deploy Storybook to GitHub Pages", "Cross-Bundle Test", "Store pytest durations")
 <!-- END TITLE -->
 
 ## Body
@@ -58,6 +58,28 @@ FAILED src/bundles/google/tests/test_workspace_network_errors.py::test_network_f
  +  where TimeoutError('private-payload user@example.com https://example.com/private?token=[redacted] = IntegrationNetworkError("Langflow could not reach gmail.googleapis.com (request timed out). Check this server's outbo…
 =========== 2 failed, 174 passed, 6 deselected, 2 warnings in 5.89s ============
 ##[error]Process completed with exit code 1.
+```
+
+</details>
+
+### Store pytest durations (`.github/workflows/store_pytest_durations.yml`)
+
+- Latest run on `main`: https://github.com/langflow-ai/langflow/actions/runs/43819883349 — dark (conclusion: `failure`), 2026-11-16 06:53 UTC
+- Dark since: 2026-11-16 06:53 UTC (first run of the current streak)
+- Job / step: `measure (main) / Unit Tests - Python 3.15 - Group 1` → `Install the project`
+- Likely cause: error: The requested interpreter resolved to Python 3.15.0, which is incompatible with the project's Python requirement: '>=3.10, <3.15'.
+
+<details><summary>End of the job log</summary>
+
+```
+- lfx-paddle: >=3.10, <3.15
+- lfx-serpingapi: >=3.10, <3.15
+- lfx-serply: >=3.10, <3.15
+- lfx-slack: >=3.10, <3.15
+- lfx-toolguard: >=3.10, <3.15
+- lfx-valkey: >=3.10, <3.15
+- lfx-vllm: >=3.10, <3.15
+##[error]Process completed with exit code 2.
 ```
 
 </details>

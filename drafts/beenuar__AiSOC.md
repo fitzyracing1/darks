@@ -4,39 +4,24 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/beenuar/AiSOC/issues/new
-- **Stars:** 7898 · **Generated:** 2026-11-16T07:03:47.942Z
+- **Stars:** 7920 · **Generated:** 2026-11-16T12:52:35.150Z
 - Nothing in this file has been sent anywhere.
+- **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: "Deploy Docs to GitHub Pages" workflow failing on main since 2026-11-13
+CI: "Publish Images" workflow getting cancelled on main since 2026-11-16
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! The **Deploy Docs to GitHub Pages** workflow (`.github/workflows/deploy-docs.yml`) on `main` has been failing since 2026-11-13. Here is what I saw, in case it's useful:
+Hi! The **Publish Images** workflow (`.github/workflows/publish-images.yml`) on `main` has been getting cancelled since 2026-11-16. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/beenuar/AiSOC/actions/runs/43804468465 — dark (conclusion: `failure`), 2026-11-16 04:30 UTC
-- Dark since: 2026-11-13 03:33 UTC (first run of the current streak)
-- Job / step: `Build Docusaurus` → `Build docs`
-- Likely cause: ERR_PNPM_RECURSIVE_RUN_FIRST_FAIL  @aisoc/docs@0.0.1 build: 'docusaurus build'
-
-<details><summary>End of the job log</summary>
-
-```
-  "reason": "Expected a closing tag for `<your>` (22:108-22:124) before the end of `tableData`",
-  "ruleId": "end-tag-mismatch",
-  "source": "mdast-util-mdx-jsx"
-}
-/home/runner/work/AiSOC/AiSOC/apps/docs:
- ERR_PNPM_RECURSIVE_RUN_FIRST_FAIL  @aisoc/docs@0.0.1 build: `docusaurus build`
-Exit status 1
-##[error]Process completed with exit code 1.
-```
-
-</details>
+- Latest run on `main`: https://github.com/beenuar/AiSOC/actions/runs/43864218962 — dark (conclusion: `cancelled`), 2026-11-16 12:10 UTC
+- Dark since: 2026-11-16 12:03 UTC (first run of the current streak)
+- Likely cause: run cancelled
 
 If this is already known or expected, feel free to close. Thanks for maintaining AiSOC!
 

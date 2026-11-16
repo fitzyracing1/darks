@@ -1,8 +1,8 @@
 <!-- dark-draft: vinta/awesome-python -->
-<!-- draft-state: ready -->
+<!-- draft-state: resolved -->
 # Upstream issue draft: vinta/awesome-python
 
-- **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
+- **Status:** resolved — lit again (2026-11-16); nothing to file
 - **Would be filed at:** https://github.com/vinta/awesome-python/issues/new
 - **Stars:** 335071 · **Generated:** 2026-11-16T07:03:47.942Z
 - Nothing in this file has been sent anywhere.

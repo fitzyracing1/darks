@@ -4,7 +4,7 @@
 
 - **Status:** not for filing — upstream already has an open issue/PR about every dark workflow here
 - **Would be filed at:** https://github.com/firecrawl/firecrawl/issues/new
-- **Stars:** 202133 · **Generated:** 2026-11-16T07:03:47.942Z
+- **Stars:** 202220 · **Generated:** 2026-11-16T12:52:35.150Z
 - Nothing in this file has been sent anywhere.
 
 ## Skipped: upstream already tracking

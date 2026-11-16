@@ -4,13 +4,13 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/xberg-io/xberg/issues/new
-- **Stars:** 9590 · **Generated:** 2026-11-16T07:03:47.942Z
+- **Stars:** 9592 · **Generated:** 2026-11-16T12:52:35.150Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 3 workflows dark on main ("CI Rust", "CI Lint", "CI E2E")
+CI: 4 workflows dark on main ("CI Rust", "CI Lint", "CI Docker", +1 more)
 <!-- END TITLE -->
 
 ## Body
@@ -42,7 +42,7 @@ error: called `.err().expect()` on a `Result` value
 
 ### CI Lint (`.github/workflows/ci-lint.yaml`)
 
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/43758280508 — dark (conclusion: `failure`), 2026-11-15 20:28 UTC
+- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/43832842095 — dark (conclusion: `failure`), 2026-11-16 08:38 UTC
 - Dark since: 2026-11-12 05:22 UTC (first run of the current streak)
 - Job / step: `Alef-generated bindings freshness` → `Verify alef-generated bindings are current`
 - Likely cause: [alef:verify] ERROR task failed
@@ -50,9 +50,9 @@ error: called `.err().expect()` on a `Result` value
 <details><summary>End of the job log</summary>
 
 ```
-      of which 324 are excluded from those headings by `[crates.verify].ignore_ephemeral` (declared ephemeral and never committed; still counted in the 347 above)
-    15 declared user-owned by `[workspace.ownership] user_owned` in alef.toml: not written, stamped or content-checked. Remove the pattern to hand a path back to alef (-vv lists them)
-  tree walk: 9847 file(s) opened, 884 never examined (name and extension outside the ownership walk's scan set, or not readable as text)
+  tree walk: 9849 file(s) opened, 884 never examined (name and extension outside the ownership walk's scan set, or not readable as text)
+Crates whose generation inputs (Rust sources or alef.toml) changed since their last successful `alef generate`/`alef all` run (rerun to see which files, if any, actually changed):
+  xberg
 Generated files drifted from a fresh render detected (this run's backends would emit different content than the owned bytes on disk -- rerun the owning stage, e.g. `alef generate`/`alef all`/`alef docs`, to refresh it):
   /home/runner/work/xberg/xberg/docs-site/src/content/docs/reference/api-rust.md
 ERROR generated bindings, versions, or snippet coverage are out of date
@@ -62,24 +62,46 @@ ERROR generated bindings, versions, or snippet coverage are out of date
 
 </details>
 
-### CI E2E (`.github/workflows/ci-e2e.yaml`)
+### CI Docker (`.github/workflows/ci-docker.yaml`)
 
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/43758280297 — dark (conclusion: `failure`), 2026-11-15 20:28 UTC
-- Dark since: 2026-11-15 06:52 UTC (first run of the current streak)
-- Job / step: `E2E (swift)` → `Run e2e tests (swift, instrumented)`
-- Likely cause: [swift:e2e] ERROR task failed
+- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/43832841467 — dark (conclusion: `failure`), 2026-11-16 08:38 UTC
+- Dark since: 2026-11-16 08:38 UTC (first run of the current streak)
+- Job / step: `Docker (full)` → `Build Docker image`
+- Likely cause: buildx failed with: failed to build: failed to solve: process "/bin/sh -c for attempt in 1 2 3 4 5; do         XBERG_CACHE_DIR=/app/.xberg /usr/local/bin/xberg cache warm --cache-dir /app/.xberg --format json && break;         [ \"$attempt\
 
 <details><summary>End of the job log</summary>
 
 ```
-ERROR before hook failed for swift: before hook failed for swift: bash scripts/setup-swift-bridge.sh: Command failed: bash scripts/setup-swift-bridge.sh
---- stderr ---
-cat: target/release/build/xberg-swift/54dde98f024baff3/out/SwiftBridgeCore.h: No such file or directory
-cat: target/release/build/xberg-swift/54dde98f024baff3/out/xberg-swift/xberg-swift.h: No such file or directory
---- stdout ---
-Using swift-bridge output from: target/release/build/xberg-swift/54dde98f024baff3/out
-[swift:e2e] ERROR task failed
-##[error]Process completed with exit code 1.
+ 239 | >>>     chown -R xberg:xberg /app/.xberg && \
+ 240 | >>>     echo "All models ready (PaddleOCR + layout detection)"
+ 241 |
+--------------------
+ERROR: failed to build: failed to solve: process "/bin/sh -c for attempt in 1 2 3 4 5; do         XBERG_CACHE_DIR=/app/.xberg /usr/local/bin/xberg cache warm --cache-dir /app/.xberg --format json && break;         [ \"$…
+builder-86a5f756-b742-4e19-a63f-8ca2fbb4e4ad/builder-86a5f756-b742-4e19-a63f-8ca2fbb4e4ad0/hqkj2vk13z6qi1p2hlol0f5a6
+Build summary supported!
+##[error]buildx failed with: failed to build: failed to solve: process "/bin/sh -c for attempt in 1 2 3 4 5; do         XBERG_CACHE_DIR=/app/.xberg /usr/local/bin/xberg cache warm --cache-dir /app/.xberg --format json &…
+```
+
+</details>
+
+### CI Focused PR (`.github/workflows/ci-focused-pr.yaml`)
+
+- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/43832841430 — dark (conclusion: `failure`), 2026-11-16 08:38 UTC
+- Dark since: 2026-11-16 08:38 UTC (first run of the current streak)
+- Job / step: `Focused nli` → `Run exact regression tests`
+- Likely cause: [nli:ci] ERROR task failed
+
+<details><summary>End of the job log</summary>
+
+```
+##[start-action display=Prepare ONNX Runtime (Windows);id=__self.__run_3]
+##[end-action id=__self.__run_3;outcome=skipped;conclusion=skipped;duration_ms=0]
+[nli:ci] $ ~/work/xberg/xberg/mise-tasks/nli/ci.sh
+    Updating crates.io index
+error: cannot update the lock file /home/runner/work/xberg/xberg/tools/benchmark-harness/nli_qualification/Cargo.lock because --locked was passed to prevent this
+help: to generate the lock file without accessing the network, remove the --locked flag and use --offline instead.
+[nli:ci] ERROR task failed
+##[error]Process completed with exit code 101.
 ```
 
 </details>

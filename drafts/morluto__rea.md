@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/morluto/rea/issues/new
-- **Stars:** 462520 · **Generated:** 2026-11-16T07:03:47.942Z
+- **Stars:** 463137 · **Generated:** 2026-11-16T12:52:35.150Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
@@ -21,7 +21,7 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### CI (`.github/workflows/ci.yml`)
 
-- Latest run on `main`: https://github.com/morluto/rea/actions/runs/43811744697 — dark (conclusion: `failure`), 2026-11-16 05:40 UTC
+- Latest run on `main`: https://github.com/morluto/rea/actions/runs/43859497477 — dark (conclusion: `failure`), 2026-11-16 11:38 UTC
 - Dark since: 2026-11-14 23:57 UTC (first run of the current streak)
 - Job / step: `Python producer tests` → `Run npm run test:python`
 - Likely cause: FAILED (errors=1)
@@ -34,7 +34,7 @@ Traceback (most recent call last):
     one = catalog.catalog_receipt(root, 'compact', ['one'])
 TypeError: catalog_receipt() takes 2 positional arguments but 3 were given
 ----------------------------------------------------------------------
-Ran 78 tests in 5.057s
+Ran 78 tests in 4.777s
 FAILED (errors=1)
 ##[error]Process completed with exit code 1.
 ```

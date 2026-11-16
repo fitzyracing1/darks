@@ -4,46 +4,56 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/tangency-labs/solidcraft/issues/new
-- **Stars:** 16549 · **Generated:** 2026-11-16T07:03:47.942Z
+- **Stars:** 16591 · **Generated:** 2026-11-16T12:52:35.150Z
 - Nothing in this file has been sent anywhere.
+- **Note for Joshua:** cancelled by a concurrency group — likely noise
+- **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Skipped: upstream already tracking
 
 - Docker (`.github/workflows/docker.yml`): [issue #14063](https://github.com/tangency-labs/solidcraft/issues/14063) "Native server-side project storage for Docker / self-hosted installations"
-- Claim (`.github/workflows/claim.yml`): [issue #6739](https://github.com/tangency-labs/solidcraft/issues/6739) "Claim bot: a cross-reference blocks legitimate PRs, and the bot cannot post its own message", [issue #4405](https://github.com/tangency-labs/solidcraft/issues/4405) "Claim bot: some claim PRs fail with 403 "Resource not accessible by integration""
+- Kernel rig (`.github/workflows/kernel-rig.yml`): [issue #11647](https://github.com/tangency-labs/solidcraft/issues/11647) "Remove the kernel rig's transitional checks when the kernel cases run in solidcore", [issue #13820](https://github.com/tangency-labs/solidcraft/issues/13820) "CI: SolidCraft's kernel rig as solidcore's operation-level gate, by area, with per-area known-failing lists and the parity gap to the fork", [issue #13717](https://github.com/tangency-labs/solidcraft/issues/13717) "Kernel rig CI deadline: G2 boss-root fillet leaves 711 cases unrun", [issue #13715](https://github.com/tangency-labs/solidcraft/issues/13715) "Kernel rig: a traced miss before a malformed pick grades the case unsupported instead of failing"
 
 These workflows are left out of the body below.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: "Triage" workflow failing on main since 2026-11-16
+CI: 2 workflows dark on main ("Fillet rig", "Pages")
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! The **Triage** workflow (`.github/workflows/triage.yml`) on `main` has been failing since 2026-11-16. Here is what I saw, in case it's useful:
+Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
 
-- Latest run on `main`: https://github.com/tangency-labs/solidcraft/actions/runs/43811955910 — dark (conclusion: `failure`), 2026-11-16 05:42 UTC
-- Dark since: 2026-11-16 05:42 UTC (first run of the current streak)
-- Job / step: `Triage bot` → `Run actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3`
-- Likely cause: Unhandled error: HttpError: Server Error
+### Fillet rig (`.github/workflows/fillet-rig.yml`)
+
+- Latest run on `main`: https://github.com/tangency-labs/solidcraft/actions/runs/43867487427 — dark (conclusion: `cancelled`), 2026-11-16 12:32 UTC
+- Dark since: 2026-11-16 12:32 UTC (first run of the current streak)
+- Job / step: `Fillet rig` → `Build the CLI (release)`
+- Likely cause: Canceling since a higher priority waiting request for fillet-rig-refs/heads/main exists
 
 <details><summary>End of the job log</summary>
 
 ```
-[command]/usr/local/bin/git checkout --progress --force -B main refs/remotes/origin/main
-Switched to a new branch 'main'
-branch 'main' set up to track 'origin/main'.
-[command]/usr/local/bin/git log -1 --format=%H
-b809d701eb4e6c555047c758866f140df3d353af
-GET /repos/tangency-labs/solidcraft/issues/12221/timeline?per_page=100 - 502 with id 9B4C:230B3F:538C29:10AE16C:6AFA97EE in 405ms
-RequestError [HttpError]: Server Error
-##[error]Unhandled error: HttpError: Server Error
+   Compiling solidcraft-derive v0.43.0 (/home/runner/_work/solidcraft/solidcraft/crates/derive)
+   Compiling solidcraft-doc v0.43.0 (/home/runner/_work/solidcraft/solidcraft/crates/doc)
+   Compiling craft-plugin-wasm v0.43.0 (/home/runner/_work/solidcraft/solidcraft/crates/craft-plugin-wasm)
+   Compiling solidcraft-display-units v0.43.0 (/home/runner/_work/solidcraft/solidcraft/crates/display-units)
+   Compiling solidcraft-control v0.43.0 (/home/runner/_work/solidcraft/solidcraft/crates/control)
+   Compiling solidcraft-mcp-server v0.43.0 (/home/runner/_work/solidcraft/solidcraft/crates/mcp-server)
+   Compiling solidcraft-cli v0.43.0 (/home/runner/_work/solidcraft/solidcraft/apps/solidcraft-cli)
+##[error]The operation was canceled.
 ```
 
 </details>
+
+### Pages (`.github/workflows/pages.yml`)
+
+- Latest run on `main`: https://github.com/tangency-labs/solidcraft/actions/runs/43868564198 — dark (conclusion: `cancelled`), 2026-11-16 12:39 UTC
+- Dark since: 2026-11-16 12:39 UTC (first run of the current streak)
+- Likely cause: run cancelled
 
 If this is already known or expected, feel free to close. Thanks for maintaining solidcraft!
 

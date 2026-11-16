@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/storytold/photocraft/issues/new
-- **Stars:** 79672 · **Generated:** 2026-11-16T07:03:47.942Z
+- **Stars:** 79734 · **Generated:** 2026-11-16T12:52:35.150Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -20,7 +20,7 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### Perf (nightly) (`.github/workflows/perf-nightly.yml`)
 
-- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/43672542532 — dark (conclusion: `failure`), 2026-11-15 03:28 UTC
+- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/43798983157 — dark (conclusion: `failure`), 2026-11-16 03:34 UTC
 - Dark since: 2026-11-12 03:28 UTC (first run of the current streak)
 - Job / step: `perf (macOS, Apple GPU)` → `Run benchmarks`
 - Likely cause: | P44 | Open .psd, 36 MP, 3 layers | track only | – | – | – | – | – | – | **missing**: bench 'interactive_bench' failed: interactive_bench --reps 5 --json /Users/runner/work/photocraft/photocraft/target/perf/interactive…
