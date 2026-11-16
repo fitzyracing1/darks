@@ -4,24 +4,33 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/tensorflow/tensorflow/issues/new
-- **Stars:** 201643 · **Generated:** 2026-11-16T00:59:22.034Z
+- **Stars:** 201625 · **Generated:** 2026-11-16T07:03:47.942Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** latest run was skipped, not failed — probably not worth filing
+- **Note for Joshua:** workflow failed to start (config/permissions on their side)
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: "Creates a GitHub Issue when a PR Rolled back via Commit to Master" workflow not completing (runs skipped) on master since 2026-10-13
+CI: 2 workflows dark on master ("Creates a GitHub Issue when a PR Rolled back via Commit to Master", "OSV-Scanner Scheduled Scan")
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! The **Creates a GitHub Issue when a PR Rolled back via Commit to Master** workflow (`.github/workflows/issue-on-pr-rollback.yml`) on `master` has been not completing (runs skipped) since 2026-10-13. Here is what I saw, in case it's useful:
+Hi! A few workflows on `master` have been dark recently. Details below, in case they're useful:
 
-- Latest run on `master`: https://github.com/tensorflow/tensorflow/actions/runs/43779189482 — dark (conclusion: `skipped`), 2026-11-16 00:14 UTC
+### Creates a GitHub Issue when a PR Rolled back via Commit to Master (`.github/workflows/issue-on-pr-rollback.yml`)
+
+- Latest run on `master`: https://github.com/tensorflow/tensorflow/actions/runs/43816380469 — dark (conclusion: `skipped`), 2026-11-16 06:23 UTC
 - Dark since: 2026-10-13 00:19 UTC (first run of the current streak)
 - Likely cause: run skipped
+
+### OSV-Scanner Scheduled Scan (`.github/workflows/osv-scanner-scheduled.yml`)
+
+- Latest run on `master`: https://github.com/tensorflow/tensorflow/actions/runs/43802040317 — dark (conclusion: `startup_failure`), 2026-11-16 04:06 UTC
+- Dark since: 2026-11-16 04:06 UTC (first run of the current streak)
+- Likely cause: run startup_failure
 
 If this is already known or expected, feel free to close. Thanks for maintaining tensorflow!
 

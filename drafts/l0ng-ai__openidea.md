@@ -4,40 +4,34 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/l0ng-ai/openidea/issues/new
-- **Stars:** 9050 · **Generated:** 2026-11-16T00:59:22.034Z
+- **Stars:** 9103 · **Generated:** 2026-11-16T07:03:47.942Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** cancelled by a concurrency group — likely noise
+- **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: "CI" workflow getting cancelled on main since 2026-11-10
+CI: 2 workflows dark on main ("CI", "Language smoke")
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! The **CI** workflow (`.github/workflows/ci.yml`) on `main` has been getting cancelled since 2026-11-10. Here is what I saw, in case it's useful:
+Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
 
-- Latest run on `main`: https://github.com/l0ng-ai/openidea/actions/runs/43780958762 — dark (conclusion: `cancelled`), 2026-11-16 00:32 UTC
+### CI (`.github/workflows/ci.yml`)
+
+- Latest run on `main`: https://github.com/l0ng-ai/openidea/actions/runs/43817421638 — dark (conclusion: `cancelled`), 2026-11-16 06:32 UTC
 - Dark since: 2026-11-10 13:06 UTC (first run of the current streak)
-- Job / step: `E2E` → `Run pnpm e2e`
+- Job / step: `Changes`
 - Likely cause: Canceling since a higher priority waiting request for ci-refs/heads/main exists
 
-<details><summary>End of the job log</summary>
+### Language smoke (`.github/workflows/language-smoke.yml`)
 
-```
-  ✓  165 [chromium] › e2e/console-ui.spec.ts:5:5 › run console controls fit 520px and retain their native icon size (6.4s)
-  ✓  166 [chromium] › e2e/console-ui.spec.ts:5:5 › debug console controls fit 220px and retain their native icon size (6.1s)
-  ✓  167 [chromium] › e2e/console-ui.spec.ts:5:5 › debug console controls fit 280px and retain their native icon size (6.3s)
-  ✓  168 [chromium] › e2e/console-ui.spec.ts:5:5 › debug console controls fit 520px and retain their native icon size (6.4s)
-  ✓  169 [chromium] › e2e/console-ui.spec.ts:5:5 › services-run console controls fit 220px and retain their native icon size (6.5s)
-  ✓  170 [chromium] › e2e/console-ui.spec.ts:5:5 › services-run console controls fit 280px and retain their native icon size (6.5s)
-context canceled
-##[error]The operation was canceled.
-```
-
-</details>
+- Latest run on `main`: https://github.com/l0ng-ai/openidea/actions/runs/43817421691 — dark (conclusion: `cancelled`), 2026-11-16 06:32 UTC
+- Dark since: 2026-11-16 04:12 UTC (first run of the current streak)
+- Likely cause: run cancelled
 
 If this is already known or expected, feel free to close. Thanks for maintaining openidea!
 

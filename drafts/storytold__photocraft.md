@@ -4,9 +4,8 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/storytold/photocraft/issues/new
-- **Stars:** 79615 · **Generated:** 2026-11-16T00:59:22.034Z
+- **Stars:** 79672 · **Generated:** 2026-11-16T07:03:47.942Z
 - Nothing in this file has been sent anywhere.
-- **Note for Joshua:** cancelled by a concurrency group — likely noise
 
 ## Suggested title
 
@@ -43,44 +42,44 @@ wrote /Users/runner/work/photocraft/photocraft/target/perf/results.json
 
 ### FreeBSD (`.github/workflows/freebsd.yml`)
 
-- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/43667743768 — dark (conclusion: `cancelled`), 2026-11-15 02:25 UTC
+- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/43792347118 — dark (conclusion: `failure`), 2026-11-16 02:28 UTC
 - Dark since: 2026-11-15 02:25 UTC (first run of the current streak)
 - Job / step: `freebsd / FreeBSD 15 x86_64 (build + test)` → `Build and test`
-- Likely cause: Canceling since a higher priority waiting request for freebsd-refs/heads/main exists
+- Likely cause: error: cannot update the lock file /home/runner/work/photocraft/photocraft/Cargo.lock because --locked was passed to prevent this
 
 <details><summary>End of the job log</summary>
 
 ```
-   Compiling aes v0.8.4
-   Compiling cbc v0.1.2
-   Compiling ecb v0.1.2
-   Compiling rangemap v1.8.0
-   Compiling photocraft-cli v0.23.1 (/home/runner/work/photocraft/photocraft/apps/photocraft-cli)
-   Compiling xtask v0.23.1 (/home/runner/work/photocraft/photocraft/xtask)
-   Compiling lopdf v0.38.0
-##[error]The operation was canceled.
+warning: patch `egui_system_font_provider v0.37.0 (https://github.com/storytold/egui.git?rev=6d518fc799681571963842f95b55a6b68431b15a#6d518fc7)` was not used in the crate graph
+help: Check that the patched package version and available features are compatible
+      with the dependency requirements. If the patch has a different version from
+      what is locked in the Cargo.lock file, run `cargo update` to use the new
+      version. This may also occur with an optional dependency that is not enabled.
+error: cannot update the lock file /home/runner/work/photocraft/photocraft/Cargo.lock because --locked was passed to prevent this
+help: to generate the lock file without accessing the network, remove the --locked flag and use --offline instead.
+##[error]Process completed with exit code 101.
 ```
 
 </details>
 
 ### Release (`.github/workflows/release.yml`)
 
-- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/43668275415 — dark (conclusion: `failure`), 2026-11-15 02:32 UTC
+- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/43792966491 — dark (conclusion: `failure`), 2026-11-16 02:34 UTC
 - Dark since: 2026-11-15 02:32 UTC (first run of the current streak)
-- Job / step: `release / FreeBSD aarch64` → `Build and package`
-- Likely cause: error: dist/release/photocraft-0.23.1-freebsd-x86_64.tar.gz is not a FreeBSD aarch64 archive; packaging/freebsd/package.sh must honor CARGO_BUILD_TARGET
+- Job / step: `release / Git dependencies come from storytold` → `Git dependencies come from storytold`
+- Likely cause: error: cannot update the lock file /home/runner/work/photocraft/photocraft/Cargo.lock because --locked was passed to prevent this
 
 <details><summary>End of the job log</summary>
 
 ```
-   Compiling clap_complete v4.6.11
-   Compiling photocraft-automation v0.23.1 (/home/runner/work/photocraft/photocraft/crates/automation)
-    Finished `release` profile [optimized] target(s) in 13m 06s
-wrote /home/runner/work/photocraft/photocraft/dist/release/photocraft-0.23.1-freebsd-x86_64.tar.gz
-photocraft-cli 0.23.1 (2fec95b0d, 2026-11-15)
-==> done
-error: dist/release/photocraft-0.23.1-freebsd-x86_64.tar.gz is not a FreeBSD aarch64 archive; packaging/freebsd/package.sh must honor CARGO_BUILD_TARGET
-##[error]Process completed with exit code 1.
+warning: patch `egui_system_font_provider v0.37.0 (https://github.com/storytold/egui.git?rev=6d518fc799681571963842f95b55a6b68431b15a#6d518fc7)` was not used in the crate graph
+help: Check that the patched package version and available features are compatible
+      with the dependency requirements. If the patch has a different version from
+      what is locked in the Cargo.lock file, run `cargo update` to use the new
+      version. This may also occur with an optional dependency that is not enabled.
+error: cannot update the lock file /home/runner/work/photocraft/photocraft/Cargo.lock because --locked was passed to prevent this
+help: to generate the lock file without accessing the network, remove the --locked flag and use --offline instead.
+##[error]Process completed with exit code 101.
 ```
 
 </details>

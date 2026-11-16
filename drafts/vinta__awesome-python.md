@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/vinta/awesome-python/issues/new
-- **Stars:** 335026 · **Generated:** 2026-11-16T00:59:22.034Z
+- **Stars:** 335071 · **Generated:** 2026-11-16T07:03:47.942Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title

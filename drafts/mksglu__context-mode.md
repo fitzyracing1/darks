@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/mksglu/context-mode/issues/new
-- **Stars:** 34145 · **Generated:** 2026-11-16T00:59:22.034Z
+- **Stars:** 34160 · **Generated:** 2026-11-16T07:03:47.942Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -18,7 +18,7 @@ CI: "weekly" workflow failing on main since 2026-11-09
 <!-- BEGIN BODY -->
 Hi! The **weekly** workflow (`.github/workflows/weekly.yml`) on `main` has been failing since 2026-11-09. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/mksglu/context-mode/actions/runs/42560203886 — dark (conclusion: `failure`), 2026-11-09 04:09 UTC
+- Latest run on `main`: https://github.com/mksglu/context-mode/actions/runs/43802331794 — dark (conclusion: `failure`), 2026-11-16 04:09 UTC
 - Dark since: 2026-11-09 04:09 UTC (first run of the current streak)
 - Job / step: `weekly` → `Run node scripts/release/smoke.mjs --ref release --agent claude-code`
 - Likely cause: Error [ERR_MODULE_NOT_FOUND]: Cannot find package '@modelcontextprotocol/sdk' imported from /home/runner/work/context-mode/context-mode/scripts/release/smoke.mjs

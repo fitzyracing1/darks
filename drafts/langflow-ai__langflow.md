@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/langflow-ai/langflow/issues/new
-- **Stars:** 156684 · **Generated:** 2026-11-16T00:59:22.034Z
+- **Stars:** 156689 · **Generated:** 2026-11-16T07:03:47.942Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -42,9 +42,25 @@ Creating Pages deployment with payload:
 
 ### Cross-Bundle Test (`.github/workflows/cross-bundle-test.yml`)
 
-- Latest run on `main`: https://github.com/langflow-ai/langflow/actions/runs/42572056954 — dark (conclusion: `failure`), 2026-11-09 06:16 UTC
+- Latest run on `main`: https://github.com/langflow-ai/langflow/actions/runs/43815980710 — dark (conclusion: `failure`), 2026-11-16 06:19 UTC
 - Dark since: 2026-10-26 06:25 UTC (first run of the current streak)
-- Likely cause: no cause found in annotations
+- Job / step: `src/bundles/google (py3.12)` → `Run the bundle's own tests`
+- Likely cause: =========== 2 failed, 174 passed, 6 deselected, 2 warnings in 5.89s ============
+
+<details><summary>End of the job log</summary>
+
+```
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED src/bundles/google/tests/test_workspace_network_errors.py::test_network_failures_are_actionable_without_replaying_the_action[False-failure0-timeout-timed out] - assert TimeoutError('private-payload user@example.c…
+ +  where TimeoutError('private-payload user@example.com https://example.com/private?token=[redacted] = IntegrationNetworkError("Langflow could not reach gmail.googleapis.com (request timed out). Check this server's outbo…
+FAILED src/bundles/google/tests/test_workspace_network_errors.py::test_network_failures_are_actionable_without_replaying_the_action[True-failure0-timeout-timed out] - assert TimeoutError('private-payload user@example.co…
+ +  where TimeoutError('private-payload user@example.com https://example.com/private?token=[redacted] = IntegrationNetworkError("Langflow could not reach gmail.googleapis.com (request timed out). Check this server's outbo…
+=========== 2 failed, 174 passed, 6 deselected, 2 warnings in 5.89s ============
+##[error]Process completed with exit code 1.
+```
+
+</details>
 
 If this is already known or expected, feel free to close. Thanks for maintaining langflow!
 

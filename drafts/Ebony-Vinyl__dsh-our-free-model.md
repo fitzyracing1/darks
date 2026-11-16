@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/Ebony-Vinyl/dsh-our-free-model/issues/new
-- **Stars:** 75799 · **Generated:** 2026-11-16T00:59:22.034Z
+- **Stars:** 76353 · **Generated:** 2026-11-16T07:03:47.942Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -18,7 +18,7 @@ CI: "test" workflow failing on main since 2026-11-14
 <!-- BEGIN BODY -->
 Hi! The **test** workflow (`.github/workflows/test.yml`) on `main` has been failing since 2026-11-14. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/Ebony-Vinyl/dsh-our-free-model/actions/runs/43672703068 — dark (conclusion: `failure`), 2026-11-15 03:30 UTC
+- Latest run on `main`: https://github.com/Ebony-Vinyl/dsh-our-free-model/actions/runs/43797653750 — dark (conclusion: `failure`), 2026-11-16 03:21 UTC
 - Dark since: 2026-11-14 19:28 UTC (first run of the current streak)
 - Job / step: `standalone-frontend` → `Run node scripts/build-standalone-ui.mjs --check`
 - Likely cause: Error: 独立端存在未引用的旧资源：channels-DPbv4N7g.js

@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/activepieces/activepieces/issues/new
-- **Stars:** 25546 · **Generated:** 2026-11-16T00:59:22.034Z
+- **Stars:** 25551 · **Generated:** 2026-11-16T07:03:47.942Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -20,9 +20,9 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### Chat Evals (`.github/workflows/agent-evals.yml`)
 
-- Latest run on `main`: https://github.com/activepieces/activepieces/actions/runs/43688648271 — dark (conclusion: `failure`), 2026-11-15 07:09 UTC
+- Latest run on `main`: https://github.com/activepieces/activepieces/actions/runs/43816243998 — dark (conclusion: `failure`), 2026-11-16 06:21 UTC
 - Dark since: 2026-10-13 06:26 UTC (first run of the current streak)
-- Job / step: `Live judge gate` → `Run live chat evals (scope=all)`
+- Job / step: `Live judge gate` → `Run live chat evals (scope=regression)`
 - Likely cause: Error: Hook timed out in 540000ms. (packages/server/worker/test/lib/agent-eval/agent-eval.test.ts:20)
 
 <details><summary>End of the job log</summary>
@@ -33,8 +33,8 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 ⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
  Test Files  1 failed | 12 passed (13)
       Tests  89 passed | 1 skipped (90)
-   Start at  07:13:23
-   Duration  544.76s (tests 98%, import 2%)
+   Start at  06:26:20
+   Duration  545.44s (tests 98%, import 2%)
 ##[error]Error: Hook timed out in 540000ms.
 ```
 
@@ -42,21 +42,21 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### Benchmark (`.github/workflows/benchmark.yml`)
 
-- Latest run on `main`: https://github.com/activepieces/activepieces/actions/runs/43670738984 — dark (conclusion: `failure`), 2026-11-15 03:05 UTC
+- Latest run on `main`: https://github.com/activepieces/activepieces/actions/runs/43796071053 — dark (conclusion: `failure`), 2026-11-16 03:05 UTC
 - Dark since: 2026-10-30 03:06 UTC (first run of the current streak)
-- Job / step: `benchmark (dedicated, 1, 28, 0.5, 1G, 1, 768, true, 28)` → `Detect regression against trailing 14 runs (scheduled runs only)`
-- Likely cause: </div><!-- /.error-footer -->
+- Job / step: `benchmark (shared, 1, 28, 0.5, 1G, 1, 768, false, 28)` → `Detect regression against trailing 14 runs (scheduled runs only)`
+- Likely cause: Box signals API responded 401: {"error":{"type":"invalid_request_error","message":"Unknown token. Send it as \"Authorization: ***"."}}
 
 <details><summary>End of the job log</summary>
 
 ```
-    </p>
-    <script>(function(){function d(){var b=a.getElementById("cf-footer-item-ip"),c=a.getElementById("cf-footer-ip-reveal");b&&"classList"in b&&(b.classList.remove("hidden"),c.addEventListener("click",function(){c.classL…
-  </div><!-- /.error-footer -->
-    </div>
-</div>
-</body>
-</html>
+      "pct": 13.032089063523253,
+      "breach": ***
+    }
+  ],
+  "breachCount": 2
+}
+Box signals API responded 401: {"error":{"type":"invalid_request_error","message":"Unknown token. Send it as \"Authorization: ***"."}}
 ##[error]Process completed with exit code 1.
 ```
 

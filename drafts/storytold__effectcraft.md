@@ -4,13 +4,15 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/storytold/effectcraft/issues/new
-- **Stars:** 8836 · **Generated:** 2026-11-16T00:59:22.034Z
+- **Stars:** 8844 · **Generated:** 2026-11-16T07:03:47.942Z
 - Nothing in this file has been sent anywhere.
+- **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
+- **Note for Joshua:** cancelled by a concurrency group — likely noise
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 2 workflows dark on main ("SonarCloud", "FreeBSD")
+CI: 2 workflows dark on main ("Release", "CI (macOS)")
 <!-- END TITLE -->
 
 ## Body
@@ -18,46 +20,46 @@ CI: 2 workflows dark on main ("SonarCloud", "FreeBSD")
 <!-- BEGIN BODY -->
 Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
 
-### SonarCloud (`.github/workflows/sonarcloud.yml`)
+### Release (`.github/workflows/release.yml`)
 
-- Latest run on `main`: https://github.com/storytold/effectcraft/actions/runs/43772695558 — dark (conclusion: `failure`), 2026-11-15 23:03 UTC
-- Dark since: 2026-11-14 15:48 UTC (first run of the current streak)
-- Job / step: `sonarcloud / SonarCloud Scan` → `Fail on Rust shard test failures`
-- Likely cause: Coverage shard 1 tests failed (exit 100); analysis was still uploaded
+- Latest run on `main`: https://github.com/storytold/effectcraft/actions/runs/43787731778 — dark (conclusion: `cancelled`), 2026-11-16 01:41 UTC
+- Dark since: 2026-11-16 01:41 UTC (first run of the current streak)
+- Job / step: `release / Linux riscv64` → `Build and package (deb, rpm, tar.gz)`
+- Likely cause: The run was canceled by @FredApps.
 
 <details><summary>End of the job log</summary>
 
 ```
-00:14:56.453 INFO  ------------- Upload SCA dependency files
-00:14:58.311 INFO  Successfully sent architecture data
-00:15:01.479 INFO  Sensor cache published successfully
-00:15:03.551 INFO  Analysis total time: 3:47.479 min
-00:15:03.553 INFO  SonarScanner Engine completed successfully
-00:15:03.952 INFO  EXECUTION SUCCESS
-00:15:03.953 INFO  Total time: 3:54.103s
-##[error]Coverage shard 1 tests failed (exit 100); analysis was still uploaded
+   Compiling cpu-time v1.0.0
+   Compiling effectcraft-cli v0.24.1 (/home/runner/work/effectcraft/effectcraft/apps/effectcraft-cli)
+    Finished `release` profile [optimized] target(s) in 18m 40s
+/home/runner/work/effectcraft/effectcraft/target/linux-package/root/usr/share/applications/ai.storyteller.effectcraft.desktop: hint: value "AudioVideo;Video;Graphics;2DGraphics;" for key "Categories" in group "Desktop E…
+✔ Validation was successful.
+wrote /home/runner/work/effectcraft/effectcraft/dist/release/effectcraft-0.24.1-linux-riscv64.tar.gz
+using deb packager...
+##[error]The operation was canceled.
 ```
 
 </details>
 
-### FreeBSD (`.github/workflows/freebsd.yml`)
+### CI (macOS) (`.github/workflows/ci-macos.yml`)
 
-- Latest run on `main`: https://github.com/storytold/effectcraft/actions/runs/43669689260 — dark (conclusion: `failure`), 2026-11-15 02:51 UTC
-- Dark since: 2026-11-15 02:51 UTC (first run of the current streak)
-- Job / step: `freebsd / FreeBSD 15 aarch64 (build + test)` → `Set up the aarch64 cross toolchain`
-- Likely cause: 3.24.52
+- Latest run on `main`: https://github.com/storytold/effectcraft/actions/runs/43815705720 — dark (conclusion: `cancelled`), 2026-11-16 06:17 UTC
+- Dark since: 2026-11-16 06:17 UTC (first run of the current streak)
+- Job / step: `gate / gate (macos-15)` → `Gate`
+- Likely cause: Canceling since a higher priority waiting request for ci-macos-refs/heads/main exists
 
 <details><summary>End of the job log</summary>
 
 ```
-../libpkgconf/dependency.c:299 [void pkgconf_dependency_unref(pkgconf_client_t *, pkgconf_dependency_t *)]: cairo-xlib refcount@0x1fb8cb411ba0: 0
-../libpkgconf/dependency.c:299 [void pkgconf_dependency_unref(pkgconf_client_t *, pkgconf_dependency_t *)]: cairo refcount@0x1fb8cb411c00: 0
-../libpkgconf/dependency.c:299 [void pkgconf_dependency_unref(pkgconf_client_t *, pkgconf_dependency_t *)]: epoxy refcount@0x1fb8cb411c60: 0
-../libpkgconf/dependency.c:299 [void pkgconf_dependency_unref(pkgconf_client_t *, pkgconf_dependency_t *)]: fribidi refcount@0x1fb8cb411cc0: 0
-../libpkgconf/dependency.c:299 [void pkgconf_dependency_unref(pkgconf_client_t *, pkgconf_dependency_t *)]: gdk-3.0 refcount@0x1fb8cb411d20: 0
-../libpkgconf/cache.c:227 [void pkgconf_cache_free(pkgconf_client_t *)]: cleared package cache
-3.24.52
-##[error]Process completed with exit code 1.
+        PASS [   0.325s] (4762/6412) effectcraft-track klt::tests::window_taps_match_per_pixel_sampling_bit_for_bit
+        PASS [   0.342s] (4763/6412) effectcraft-track mask::tests::follows_a_rotating_scaling_disk
+        PASS [   0.488s] (4764/6412) effectcraft-track mask::tests::follows_the_disk_through_a_frame_offset
+        PASS [   0.012s] (4765/6412) effectcraft-track plane::tests::channels
+        PASS [   0.017s] (4766/6412) effectcraft-track plane::tests::gradient_window_and_interior_path_match_the_clamped_definition
+        PASS [   0.018s] (4767/6412) effectcraft-track plane::tests::sampling_and_pyramid_share_coordinates
+        PASS [   0.987s] (4768/6412) effectcraft-track roto::bench::tests::a_users_clip_becomes_a_scenario_and_bad_ones_are_refused
+##[error]The operation was canceled.
 ```
 
 </details>
