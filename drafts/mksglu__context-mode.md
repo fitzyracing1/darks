@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/mksglu/context-mode/issues/new
-- **Stars:** 34167 · **Generated:** 2026-11-16T12:52:35.150Z
+- **Stars:** 34173 · **Generated:** 2026-11-16T18:39:14.787Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title

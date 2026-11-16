@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/langchain-ai/langchain/issues/new
-- **Stars:** 149633 · **Generated:** 2026-11-16T12:52:35.150Z
+- **Stars:** 149672 · **Generated:** 2026-11-16T18:39:14.787Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -18,21 +18,21 @@ CI: "⏰ Integration Tests" workflow failing on master since 2026-10-09
 <!-- BEGIN BODY -->
 Hi! The **⏰ Integration Tests** workflow (`.github/workflows/integration_tests.yml`) on `master` has been failing since 2026-10-09. Here is what I saw, in case it's useful:
 
-- Latest run on `master`: https://github.com/langchain-ai/langchain/actions/runs/43716963220 — dark (conclusion: `failure`), 2026-11-15 13:03 UTC
+- Latest run on `master`: https://github.com/langchain-ai/langchain/actions/runs/43873831422 — dark (conclusion: `failure`), 2026-11-16 13:14 UTC
 - Dark since: 2026-10-09 13:10 UTC (first run of the current streak)
-- Job / step: `🐍 Python 3.11: libs/partners/groq` → `🚀 Run Integration Tests`
-- Likely cause: = 71 failed, 2 passed, 11 skipped, 5 xfailed, 71 retried in 297.31s (0:04:57) ==
+- Job / step: `🐍 Python 3.11: libs/partners/xai` → `🚀 Run Integration Tests`
+- Likely cause: ======== 3 failed, 39 passed, 12 skipped, 1 xpassed in 69.17s (0:01:09) ========
 
 <details><summary>End of the job log</summary>
 
 ```
-FAILED tests/integration_tests/test_standard.py::TestGroq::test_unicode_tool_call_integration - groq.InternalServerError: Error code: 501 - ***'error': 'path not allow-listed by gateway', 'provider': 'groq', 'path': '/g…
-FAILED tests/integration_tests/test_standard.py::TestGroq::test_agent_loop[model0] - groq.InternalServerError: Error code: 501 - ***'error': 'path not allow-listed by gateway', 'provider': 'groq', 'path': '/groq/openai/…
-FAILED tests/integration_tests/test_standard.py::test_json_schema[pydantic] - groq.InternalServerError: Error code: 501 - ***'error': 'path not allow-listed by gateway', 'provider': 'groq', 'path': '/groq/openai/v1/chat…
-FAILED tests/integration_tests/test_standard.py::test_json_schema[json_schema] - groq.InternalServerError: Error code: 501 - ***'error': 'path not allow-listed by gateway', 'provider': 'groq', 'path': '/groq/openai/v1/c…
-FAILED tests/integration_tests/test_standard.py::test_json_schema[typeddict] - groq.InternalServerError: Error code: 501 - ***'error': 'path not allow-listed by gateway', 'provider': 'groq', 'path': '/groq/openai/v1/cha…
-= 71 failed, 2 passed, 11 skipped, 5 xfailed, 71 retried in 297.31s (0:04:57) ==
-make: *** [Makefile:19: integration_tests] Error 1
+10.04s call     tests/integration_tests/test_chat_models_standard.py::TestXAIStandard::test_structured_output_async[json_schema]
+=========================== short test summary info ============================
+FAILED tests/integration_tests/test_chat_models.py::test_reasoning[] - KeyError: 'reasoning_content'
+FAILED tests/integration_tests/test_chat_models.py::test_reasoning[v1] - KeyError: 'reasoning_content'
+FAILED tests/integration_tests/test_chat_models_standard.py::TestXAIStandard::test_tool_calling[model1] - [XPASS(strict)] xAI v1 streaming aggregate does not surface tool_call content block; tool calls are only availabl…
+======== 3 failed, 39 passed, 12 skipped, 1 xpassed in 69.17s (0:01:09) ========
+make: *** [Makefile:22: integration_tests] Error 1
 ##[error]Process completed with exit code 2.
 ```
 

@@ -4,23 +4,20 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/storytold/effectcraft/issues/new
-- **Stars:** 8857 · **Generated:** 2026-11-16T12:52:35.150Z
+- **Stars:** 8866 · **Generated:** 2026-11-16T18:39:14.787Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
-- **Note for Joshua:** cancelled by a concurrency group — likely noise
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 3 workflows dark on main ("Release", "CI (macOS)", "SonarCloud")
+CI: "Release" workflow getting cancelled on main since 2026-11-16
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
-
-### Release (`.github/workflows/release.yml`)
+Hi! The **Release** workflow (`.github/workflows/release.yml`) on `main` has been getting cancelled since 2026-11-16. Here is what I saw, in case it's useful:
 
 - Latest run on `main`: https://github.com/storytold/effectcraft/actions/runs/43787731778 — dark (conclusion: `cancelled`), 2026-11-16 01:41 UTC
 - Dark since: 2026-11-16 01:41 UTC (first run of the current streak)
@@ -41,34 +38,6 @@ using deb packager...
 ```
 
 </details>
-
-### CI (macOS) (`.github/workflows/ci-macos.yml`)
-
-- Latest run on `main`: https://github.com/storytold/effectcraft/actions/runs/43862826126 — dark (conclusion: `cancelled`), 2026-11-16 12:01 UTC
-- Dark since: 2026-11-16 06:17 UTC (first run of the current streak)
-- Job / step: `gate / gate (macos-15)` → `Gate`
-- Likely cause: Canceling since a higher priority waiting request for ci-macos-refs/heads/main exists
-
-<details><summary>End of the job log</summary>
-
-```
-   Compiling rfd v0.17.2
-   Compiling fmv-macos-events v0.1.0
-   Compiling cpu-time v1.0.0
-   Compiling effectcraft-web v0.24.1 (/Users/runner/work/effectcraft/effectcraft/apps/effectcraft-web)
-   Compiling socket2 v0.6.5
-   Compiling xtask v0.24.1 (/Users/runner/work/effectcraft/effectcraft/xtask)
-   Compiling effectcraft-cli v0.24.1 (/Users/runner/work/effectcraft/effectcraft/apps/effectcraft-cli)
-##[error]The operation was canceled.
-```
-
-</details>
-
-### SonarCloud (`.github/workflows/sonarcloud.yml`)
-
-- Latest run on `main`: https://github.com/storytold/effectcraft/actions/runs/43862826196 — dark (conclusion: `cancelled`), 2026-11-16 12:01 UTC
-- Dark since: 2026-11-16 12:01 UTC (first run of the current streak)
-- Likely cause: run cancelled
 
 If this is already known or expected, feel free to close. Thanks for maintaining effectcraft!
 

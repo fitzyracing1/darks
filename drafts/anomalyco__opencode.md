@@ -4,13 +4,13 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/anomalyco/opencode/issues/new
-- **Stars:** 227198 · **Generated:** 2026-11-16T12:52:35.150Z
+- **Stars:** 227266 · **Generated:** 2026-11-16T18:39:14.787Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 2 workflows dark on dev ("nightly-beta", "check-test")
+CI: 2 workflows dark on dev ("nightly-beta", "release")
 <!-- END TITLE -->
 
 ## Body
@@ -40,23 +40,23 @@ could not create workflow dispatch event: HTTP 422: No ref found for: beta (http
 
 </details>
 
-### check-test (`.github/workflows/check-test.yml`)
+### release (`.github/workflows/release.yml`)
 
-- Latest run on `dev`: https://github.com/anomalyco/opencode/actions/runs/43865599159 — dark (conclusion: `failure`), 2026-11-16 12:19 UTC
-- Dark since: 2026-11-16 11:20 UTC (first run of the current streak)
-- Job / step: `e2e (windows, app-2)` → `Run app e2e tests against production build`
-- Likely cause: 1 failed
+- Latest run on `dev`: https://github.com/anomalyco/opencode/actions/runs/43868068201 — dark (conclusion: `failure`), 2026-11-16 12:36 UTC
+- Dark since: 2026-11-16 12:36 UTC (first run of the current streak)
+- Job / step: `publish-npm` → `Publish`
+- Likely cause: npm error A complete log of this run can be found in: /home/runner/.npm/_logs/2026-11-16T13_07_45_887Z-debug-0.log
 
 <details><summary>End of the job log</summary>
 
 ```
-[375/375] [chromium] › e2e\regression\settings.spec.ts:2677:1 › the Side tabs interface mode switches to vertical tabs and survives reload
-[376/375] [chromium] › e2e\regression\settings.spec.ts:2696:3 › settings layout (desktop): every page scrolls inside settings with room below
-[377/375] [chromium] › e2e\regression\settings.spec.ts:2696:3 › settings layout (mobile): every page scrolls inside settings with room below
-  1 failed
-    [chromium] › e2e\regression\settings.spec.ts:278:3 › background activity alignment stays physical and persists (ar)
-  374 passed (5.2m)
-error: script "test:e2e:built" exited with code 1
+npm notice npm tokens that bypass 2FA are being restricted for account changes and direct publishing. Learn how to prepare: https://gh.io/npm-gat-bypass2fa-deprecation
+npm notice Publishing to https://registry.npmjs.org/ with tag dev and public access
+npm notice publish Signed provenance statement with source and build information from GitHub Actions
+npm notice publish Provenance statement published to transparency log: https://search.sigstore.dev/?logIndex=3926054119
+npm error code E401
+npm error 401 Unauthorized - PUT https://registry.npmjs.org/@opencode%2fcli-windows-arm64 - Failed to generate Web Auth URLs due to error: BadRequestError: token is invalid
+npm error A complete log of this run can be found in: /home/runner/.npm/_logs/2026-11-16T13_07_45_887Z-debug-0.log
 ##[error]Process completed with exit code 1.
 ```
 

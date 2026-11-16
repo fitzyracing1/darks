@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/webpack/webpack/issues/new
-- **Stars:** 66009 · **Generated:** 2026-11-16T12:52:35.150Z
+- **Stars:** 66010 · **Generated:** 2026-11-16T18:39:14.787Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -18,16 +18,16 @@ CI: "Github Actions" workflow failing on main since 2026-11-16
 <!-- BEGIN BODY -->
 Hi! The **Github Actions** workflow (`.github/workflows/test.yml`) on `main` has been failing since 2026-11-16. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/webpack/webpack/actions/runs/43853659322 — dark (conclusion: `failure`), 2026-11-16 10:59 UTC
+- Latest run on `main`: https://github.com/webpack/webpack/actions/runs/43902214482 — dark (conclusion: `failure`), 2026-11-16 15:58 UTC
 - Dark since: 2026-11-16 10:58 UTC (first run of the current streak)
-- Job / step: `runtimes (bun)` → `Run yarn test:bun --ci`
-- Likely cause: Tests:       1 failed, 413 skipped, 179911 passed, 180325 total
+- Job / step: `runtimes (deno)` → `Run yarn test:deno --ci`
+- Likely cause: Tests:       1 failed, 345 skipped, 181207 passed, 181553 total
 
 <details><summary>End of the job log</summary>
 
 ```
-Snapshots:   68850 passed, 68850 total
-Time:        847.548 s
+Snapshots:   69274 passed, 69274 total
+Time:        989.844 s
 Ran all test suites.
 error Command failed with exit code 1.
 info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.

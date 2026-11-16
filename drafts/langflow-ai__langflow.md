@@ -4,13 +4,13 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/langflow-ai/langflow/issues/new
-- **Stars:** 156698 · **Generated:** 2026-11-16T12:52:35.150Z
+- **Stars:** 156707 · **Generated:** 2026-11-16T18:39:14.787Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 3 workflows dark on main ("Deploy Storybook to GitHub Pages", "Cross-Bundle Test", "Store pytest durations")
+CI: 4 workflows dark on main ("Deploy Storybook to GitHub Pages", "Cross-Bundle Test", "Store pytest durations", +1 more)
 <!-- END TITLE -->
 
 ## Body
@@ -80,6 +80,28 @@ FAILED src/bundles/google/tests/test_workspace_network_errors.py::test_network_f
 - lfx-valkey: >=3.10, <3.15
 - lfx-vllm: >=3.10, <3.15
 ##[error]Process completed with exit code 2.
+```
+
+</details>
+
+### Mend (`.github/workflows/mend.yml`)
+
+- Latest run on `main`: https://github.com/langflow-ai/langflow/actions/runs/43927231843 — dark (conclusion: `failure`), 2026-11-16 18:17 UTC
+- Dark since: 2026-11-16 18:17 UTC (first run of the current streak)
+- Job / step: `mend-scan` → `Run Mend Scan`
+- Likely cause: Process finished with exit code SERVER_FAILURE (-5)
+
+<details><summary>End of the job log</summary>
+
+```
+   PIP                                               COMPLETED                  00:02:53.620               2654 total dependencies (751 unique)
+   HTML                                              COMPLETED                  00:00:00.721               1 total dependencies (1 unique)
+Scan Files Matching Includes Pattern                 COMPLETED                  00:00:02.824               0 source/binary files
+======================================================================================================================================================
+Elapsed running time:                                                           00:03:08.009
+======================================================================================================================================================
+Process finished with exit code SERVER_FAILURE (-5)
+##[error]Process completed with exit code 251.
 ```
 
 </details>

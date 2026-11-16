@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/horizon-rust/horizon/issues/new
-- **Stars:** 10527 · **Generated:** 2026-11-16T12:52:35.150Z
+- **Stars:** 10669 · **Generated:** 2026-11-16T18:39:14.787Z
 - Nothing in this file has been sent anywhere.
 
 ## Skipped: upstream already tracking
@@ -24,21 +24,21 @@ CI: "mojang republish" workflow failing on main since 2026-11-12
 <!-- BEGIN BODY -->
 Hi! The **mojang republish** workflow (`.github/workflows/mojang-republish.yml`) on `main` has been failing since 2026-11-12. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/horizon-rust/horizon/actions/runs/43868371835 — dark (conclusion: `failure`), 2026-11-16 12:38 UTC
+- Latest run on `main`: https://github.com/horizon-rust/horizon/actions/runs/43929060303 — dark (conclusion: `failure`), 2026-11-16 18:27 UTC
 - Dark since: 2026-11-12 20:01 UTC (first run of the current streak)
 - Job / step: `check` → `Check the manifest`
-- Likely cause: HEAD is now at 69ab572dbd bug(launcher): registry shader packs made for a retired shader API are refused, not installed (#17327)
+- Likely cause: python3: can't open file '/var/lib/gha/light-7/_work/horizon/horizon/tools/ci/mojang_republish.py': [Errno 2] No such file or directory
 
 <details><summary>End of the job log</summary>
 
 ```
-HEAD is now at 69ab572dbd bug(launcher): registry shader packs made for a retired shader API are refused, not installed (#17327)
+HEAD is now at c07bfa76e7 tooling(launcher): the real-profile test checks the home a run names, so pr_ready's launcher tests pass (#17371)
   origin/main
-69ab572dbd1bf2f2924a424f791014e09d9d0b50
+c07bfa76e71e8db9e84a7e61832a8fb898718e81
 Switched to a new branch 'main'
 branch 'main' set up to track 'origin/main'.
-69ab572dbd1bf2f2924a424f791014e09d9d0b50
-python3: can't open file '/var/lib/gha/light-5/_work/horizon/horizon/tools/ci/mojang_republish.py': [Errno 2] No such file or directory
+c07bfa76e71e8db9e84a7e61832a8fb898718e81
+python3: can't open file '/var/lib/gha/light-7/_work/horizon/horizon/tools/ci/mojang_republish.py': [Errno 2] No such file or directory
 ##[error]Process completed with exit code 2.
 ```
 

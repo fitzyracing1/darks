@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/seedds/nxnative/issues/new
-- **Stars:** 15829 · **Generated:** 2026-11-16T12:52:35.150Z
+- **Stars:** 15872 · **Generated:** 2026-11-16T18:39:14.787Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
@@ -43,13 +43,13 @@ Base64: UEFDeDQwM0xTQVJDU0hOIRQA//4AEAAAqAIAegAAAAAAAAAAAAAYAABTRkFUDAAoAGUAAAAA
 
 ### tests (`.github/workflows/tests.yml`)
 
-- Latest run on `main`: https://github.com/seedds/nxnative/actions/runs/43867981165 — dark (conclusion: `cancelled`), 2026-11-16 12:35 UTC
+- Latest run on `main`: https://github.com/seedds/nxnative/actions/runs/43928181267 — dark (conclusion: `cancelled`), 2026-11-16 18:22 UTC
 - Dark since: 2026-11-06 01:42 UTC (first run of the current streak)
 - Likely cause: run cancelled
 
 ### lint-c (`.github/workflows/lint-c.yml`)
 
-- Latest run on `main`: https://github.com/seedds/nxnative/actions/runs/43867981390 — dark (conclusion: `cancelled`), 2026-11-16 12:35 UTC
+- Latest run on `main`: https://github.com/seedds/nxnative/actions/runs/43928182586 — dark (conclusion: `cancelled`), 2026-11-16 18:22 UTC
 - Dark since: 2026-11-16 07:54 UTC (first run of the current streak)
 - Likely cause: run cancelled
 

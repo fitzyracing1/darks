@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/tonhowtf/omniget/issues/new
-- **Stars:** 14464 · **Generated:** 2026-11-16T12:52:35.150Z
+- **Stars:** 14471 · **Generated:** 2026-11-16T18:39:14.787Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title

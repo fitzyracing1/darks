@@ -4,20 +4,22 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/storytold/filmcraft/issues/new
-- **Stars:** 18388 · **Generated:** 2026-11-16T12:52:35.150Z
+- **Stars:** 18412 · **Generated:** 2026-11-16T18:39:14.787Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: "Release" workflow getting cancelled on main since 2026-11-16
+CI: 2 workflows dark on main ("Release", "SonarCloud")
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! The **Release** workflow (`.github/workflows/release.yml`) on `main` has been getting cancelled since 2026-11-16. Here is what I saw, in case it's useful:
+Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
+
+### Release (`.github/workflows/release.yml`)
 
 - Latest run on `main`: https://github.com/storytold/filmcraft/actions/runs/43788506479 — dark (conclusion: `cancelled`), 2026-11-16 01:49 UTC
 - Dark since: 2026-11-16 01:49 UTC (first run of the current streak)
@@ -35,6 +37,28 @@ Hi! The **Release** workflow (`.github/workflows/release.yml`) on `main` has bee
    Compiling open v5.4.5
    Compiling filmcraft-cli v0.20.1 (D:\a\filmcraft\filmcraft\apps\filmcraft-cli)
 ##[error]The operation was canceled.
+```
+
+</details>
+
+### SonarCloud (`.github/workflows/sonarcloud.yml`)
+
+- Latest run on `main`: https://github.com/storytold/filmcraft/actions/runs/43915753370 — dark (conclusion: `failure`), 2026-11-16 17:11 UTC
+- Dark since: 2026-11-16 16:44 UTC (first run of the current streak)
+- Job / step: `sonarcloud / SonarCloud Scan` → `Fail on Rust shard test failures`
+- Likely cause: Coverage shard 2 tests failed (exit 100); analysis was still uploaded
+
+<details><summary>End of the job log</summary>
+
+```
+17:38:48.074 INFO  ------------- Upload SCA dependency files
+17:38:49.016 INFO  Successfully sent architecture data
+17:38:50.043 INFO  Sensor cache published successfully
+17:38:51.355 INFO  Analysis total time: 2:24.460 min
+17:38:51.356 INFO  SonarScanner Engine completed successfully
+17:38:51.836 INFO  EXECUTION SUCCESS
+17:38:51.837 INFO  Total time: 2:31.585s
+##[error]Coverage shard 2 tests failed (exit 100); analysis was still uploaded
 ```
 
 </details>
