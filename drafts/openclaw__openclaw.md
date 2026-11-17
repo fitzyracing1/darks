@@ -4,24 +4,33 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/openclaw/openclaw/issues/new
-- **Stars:** 394586 · **Generated:** 2026-11-16T18:39:14.787Z
+- **Stars:** 394601 · **Generated:** 2026-11-17T01:01:47.497Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** latest run was skipped, not failed — probably not worth filing
+- **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: "Docs" workflow not completing (runs skipped) on main since 2026-11-16
+CI: 2 workflows dark on main ("Docs", "CI")
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! The **Docs** workflow (`.github/workflows/docs.yml`) on `main` has been not completing (runs skipped) since 2026-11-16. Here is what I saw, in case it's useful:
+Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
 
-- Latest run on `main`: https://github.com/openclaw/openclaw/actions/runs/43928650569 — dark (conclusion: `skipped`), 2026-11-16 18:25 UTC
+### Docs (`.github/workflows/docs.yml`)
+
+- Latest run on `main`: https://github.com/openclaw/openclaw/actions/runs/43990888013 — dark (conclusion: `skipped`), 2026-11-17 00:50 UTC
 - Dark since: 2026-11-16 18:25 UTC (first run of the current streak)
 - Likely cause: run skipped
+
+### CI (`.github/workflows/ci.yml`)
+
+- Latest run on `main`: https://github.com/openclaw/openclaw/actions/runs/43990144344 — dark (conclusion: `cancelled`), 2026-11-17 00:45 UTC
+- Dark since: 2026-11-17 00:45 UTC (first run of the current streak)
+- Likely cause: run cancelled
 
 If this is already known or expected, feel free to close. Thanks for maintaining openclaw!
 

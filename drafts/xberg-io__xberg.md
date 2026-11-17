@@ -4,14 +4,15 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/xberg-io/xberg/issues/new
-- **Stars:** 9593 · **Generated:** 2026-11-16T18:39:14.787Z
+- **Stars:** 9594 · **Generated:** 2026-11-17T01:01:47.497Z
 - Nothing in this file has been sent anywhere.
+- **Note for Joshua:** cancelled by a concurrency group — likely noise
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 12 workflows dark on main ("CI Rust", "CI Lint", "CI Docker", +9 more)
+CI: 6 workflows dark on main ("CI Rust", "CI Lint", "CI Integrations", +3 more)
 <!-- END TITLE -->
 
 ## Body
@@ -21,118 +22,61 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### CI Rust (`.github/workflows/ci-rust.yaml`)
 
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/43891425409 — dark (conclusion: `cancelled`), 2026-11-16 14:58 UTC
+- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/43963567746 — dark (conclusion: `cancelled`), 2026-11-16 21:47 UTC
 - Dark since: 2026-10-25 18:30 UTC (first run of the current streak)
-- Job / step: `Rust (windows-latest, static-embeddings link)`
-- Likely cause: The run was canceled by @Goldziher.
-
-### CI Lint (`.github/workflows/ci-lint.yaml`)
-
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/43891425670 — dark (conclusion: `cancelled`), 2026-11-16 14:58 UTC
-- Dark since: 2026-11-12 05:22 UTC (first run of the current streak)
-- Job / step: `Submodule gitlinks reachable`
-- Likely cause: The run was canceled by @Goldziher.
-
-### CI Docker (`.github/workflows/ci-docker.yaml`)
-
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/43832841467 — dark (conclusion: `failure`), 2026-11-16 08:38 UTC
-- Dark since: 2026-11-16 08:38 UTC (first run of the current streak)
-- Job / step: `Docker (full)` → `Build Docker image`
-- Likely cause: buildx failed with: failed to build: failed to solve: process "/bin/sh -c for attempt in 1 2 3 4 5; do         XBERG_CACHE_DIR=/app/.xberg /usr/local/bin/xberg cache warm --cache-dir /app/.xberg --format json && break;         [ \"$attempt\
+- Job / step: `Rust (windows-latest)` → `Post Install system dependencies`
+- Likely cause: Canceling since a higher priority waiting request for ci-rust-refs/heads/main exists
 
 <details><summary>End of the job log</summary>
 
 ```
- 239 | >>>     chown -R xberg:xberg /app/.xberg && \
- 240 | >>>     echo "All models ready (PaddleOCR + layout detection)"
- 241 |
---------------------
-ERROR: failed to build: failed to solve: process "/bin/sh -c for attempt in 1 2 3 4 5; do         XBERG_CACHE_DIR=/app/.xberg /usr/local/bin/xberg cache warm --cache-dir /app/.xberg --format json && break;         [ \"$…
-builder-86a5f756-b742-4e19-a63f-8ca2fbb4e4ad/builder-86a5f756-b742-4e19-a63f-8ca2fbb4e4ad0/hqkj2vk13z6qi1p2hlol0f5a6
-Build summary supported!
-##[error]buildx failed with: failed to build: failed to solve: process "/bin/sh -c for attempt in 1 2 3 4 5; do         XBERG_CACHE_DIR=/app/.xberg /usr/local/bin/xberg cache warm --cache-dir /app/.xberg --format json &…
+running 0 tests
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+##[start-action display=Cache ONNX Runtime;id=__ad1c35e5-9872-4152-a08f-5b170916b9d0.cache-onnx]
+[warning]Path Validation Error: Path(s) specified in the action for caching do(es) not exist, hence no cache is being saved.
+##[end-action id=__ad1c35e5-9872-4152-a08f-5b170916b9d0.cache-onnx;outcome=success;conclusion=success;duration_ms=651]
+##[start-action display=Cache libheif + boost + zlib vcpkg (Windows);id=__46c92d46-e067-47a7-9dae-33059ede50c6.cache-libheif-windows]
+[command]"C:\Program Files\Git\usr\bin\tar.exe" --posix -cf cache.tzst --exclude cache.tzst -P -C D:/a/xberg/xberg --files-from manifest.txt --force-local --use-compress-program "zstd -T0"
+##[error]The operation was canceled.
 ```
 
 </details>
 
-### CI Focused PR (`.github/workflows/ci-focused-pr.yaml`)
+### CI Lint (`.github/workflows/ci-lint.yaml`)
 
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/43891425542 — dark (conclusion: `cancelled`), 2026-11-16 14:58 UTC
-- Dark since: 2026-11-16 08:38 UTC (first run of the current streak)
-- Job / step: `Focused api-jobs`
-- Likely cause: The run was canceled by @Goldziher.
+- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/43963568255 — dark (conclusion: `cancelled`), 2026-11-16 21:47 UTC
+- Dark since: 2026-11-12 05:22 UTC (first run of the current streak)
+- Job / step: `AI governance validation`
+- Likely cause: Canceling since a higher priority waiting request for ci-lint-refs/heads/main exists
 
 ### CI Integrations (`.github/workflows/ci-integrations.yaml`)
 
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/43891425265 — dark (conclusion: `cancelled`), 2026-11-16 14:58 UTC
+- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/43943263858 — dark (conclusion: `failure`), 2026-11-16 19:49 UTC
 - Dark since: 2026-11-16 14:58 UTC (first run of the current streak)
-- Job / step: `Build local integration bindings` → `Set up job`
-- Likely cause: The run was canceled by @Goldziher.
+- Job / step: `Build local integration bindings` → `Build and stage Java binding`
+- Likely cause: [integrations:ci:build:java-binding] ERROR task failed
 
 <details><summary>End of the job log</summary>
 
 ```
-Download action repository 'actions/cache@v6' (SHA:55cc8345863c7cc4c66a329aec7e433d2d1c52a9)
-Download action repository 'actions/upload-artifact@v7' (SHA:cf430e030ddbb5b0abf93d22962f4752f3646cd9)
-Getting action download info
-Download action repository 'actions-rust-lang/setup-rust-toolchain@v2' (SHA:a188e68d0fd2bd36ad51dccb2b07ba6e75105f30)
-Download action repository 'mozilla-actions/sccache-action@v0.0.11' (SHA:fc920bf0ec8de6ee65d409111f7ec508035751ba)
-Getting action download info
-Download action repository 'Swatinem/rust-cache@d1527c8f67ef9af357290475d4af4b0fab8f12e0' (SHA:d1527c8f67ef9af357290475d4af4b0fab8f12e0)
-##[error]A task was canceled.
+[ERROR]
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR]
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException
+[integrations:ci:build:java-binding] ERROR task failed
+##[error]Process completed with exit code 1.
 ```
 
 </details>
 
 ### CI E2E (`.github/workflows/ci-e2e.yaml`)
 
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/43891425281 — dark (conclusion: `cancelled`), 2026-11-16 14:58 UTC
+- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/43943263765 — dark (conclusion: `cancelled`), 2026-11-16 19:49 UTC
 - Dark since: 2026-11-16 14:58 UTC (first run of the current streak)
-- Job / step: `Build FFI (aarch64-unknown-linux-gnu)`
-- Likely cause: The run was canceled by @Goldziher.
-
-### CI Mobile (`.github/workflows/ci-mobile.yaml`)
-
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/43891425540 — dark (conclusion: `cancelled`), 2026-11-16 14:58 UTC
-- Dark since: 2026-11-16 14:58 UTC (first run of the current streak)
-- Job / step: `iOS cargo check (aarch64-apple-ios)`
-- Likely cause: The run was canceled by @Goldziher.
-
-### CI Scripts (`.github/workflows/ci-scripts.yaml`)
-
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/43891425228 — dark (conclusion: `cancelled`), 2026-11-16 14:58 UTC
-- Dark since: 2026-11-16 14:58 UTC (first run of the current streak)
-- Job / step: `Bats on ubuntu-latest` → `Set up job`
-- Likely cause: The run was canceled by @Goldziher.
-
-<details><summary>End of the job log</summary>
-
-```
-Metadata: read
-Secret source: Actions
-Cache mode: write
-Prepare workflow directory
-Prepare all required actions
-Getting action download info
-Download action repository 'actions/checkout@v7' (SHA:3d3c42e5aac5ba805825da76410c181273ba90b1)
-##[error]The operation was canceled.
-```
-
-</details>
-
-### CI Docs (`.github/workflows/ci-docs.yaml`)
-
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/43891426151 — dark (conclusion: `cancelled`), 2026-11-16 14:58 UTC
-- Dark since: 2026-11-16 14:58 UTC (first run of the current streak)
-- Job / step: `docs / Build`
-- Likely cause: The run was canceled by @Goldziher.
-
-### Native libheif runtime qualification (`.github/workflows/ci-native-runtime.yaml`)
-
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/43891425231 — dark (conclusion: `cancelled`), 2026-11-16 14:58 UTC
-- Dark since: 2026-11-16 14:58 UTC (first run of the current streak)
-- Job / step: `libheif 1.19.8 ABI and real decoding`
-- Likely cause: The run was canceled by @Goldziher.
+- Job / step: `E2E (java)`
+- Likely cause: Canceling since a higher priority waiting request for ci-e2e-refs/heads/main exists
 
 ### ADRs (`.github/workflows/adrs.yml`)
 

@@ -4,13 +4,13 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/ruvnet/ruflo/issues/new
-- **Stars:** 81865 · **Generated:** 2026-11-16T18:39:14.787Z
+- **Stars:** 81879 · **Generated:** 2026-11-17T01:01:47.497Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 4 workflows dark on main ("CI/CD Pipeline", "no-metaharness-smoke", "all-plugins-smoke", +1 more)
+CI: 3 workflows dark on main ("CI/CD Pipeline", "no-metaharness-smoke", "Clone Tracker (14-day rolling)")
 <!-- END TITLE -->
 
 ## Body
@@ -20,21 +20,21 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### CI/CD Pipeline (`.github/workflows/ci.yml`)
 
-- Latest run on `main`: https://github.com/ruvnet/ruflo/actions/runs/43913461117 — dark (conclusion: `failure`), 2026-11-16 16:59 UTC
+- Latest run on `main`: https://github.com/ruvnet/ruflo/actions/runs/43941969698 — dark (conclusion: `failure`), 2026-11-16 19:41 UTC
 - Dark since: 2026-11-12 02:08 UTC (first run of the current streak)
 - Job / step: `Test Suite (ubuntu-latest)` → `Run all tests`
-- Likely cause: AssertionError: expected [ …(1320) ] to have a length of 2400 but got 1320
+- Likely cause: AssertionError: expected [ …(1260) ] to have a length of 2400 but got 1260
 
 <details><summary>End of the job log</summary>
 
 ```
-  duration_ms: 1.966469
+  duration_ms: 1.944569
   ...
 JSON report written to /home/runner/work/ruflo/ruflo/.test-results/vitest.json
 CI test ratchet: FAILED — 1 unexpected failing file(s)
   + plugins/ruflo-console/tests/write-argv.spec.ts
       ✗ the POSIX scripts on a real disk (sh and dd as this machine has them) eight writers of 55 kB batches through the POSIX append tear no line here (one dd block per batch)
-        AssertionError: expected [ …(1320) ] to have a length of 2400 but got 1320
+        AssertionError: expected [ …(1260) ] to have a length of 2400 but got 1260
 ##[error]Process completed with exit code 1.
 ```
 
@@ -57,28 +57,6 @@ CI test ratchet: FAILED — 1 unexpected failing file(s)
 | `guard-probe (fast)` | ✓ | 2817/2817 | 148.5s |  |
 **Summary**: 51/52 plugins OK · 3581/3582 steps passed · 570.4s wall (parallel: true)
 ⚠ 1 plugin(s) failed their smoke contract — see failing steps above.
-##[error]Process completed with exit code 1.
-```
-
-</details>
-
-### all-plugins-smoke (`.github/workflows/all-plugins-smoke.yml`)
-
-- Latest run on `main`: https://github.com/ruvnet/ruflo/actions/runs/43314293871 — dark (conclusion: `failure`), 2026-11-12 21:51 UTC
-- Dark since: 2026-11-12 20:56 UTC (first run of the current streak)
-- Job / step: `smoke-all` → `Discover and run every plugin smoke contract (parallel)`
-- Likely cause: "stepsFailed": 1,
-
-<details><summary>End of the job log</summary>
-
-```
-    "stepsPassed": 3581,
-    "stepsFailed": 1,
-    "stepsTotal": 3582,
-    "wallTimeMs": 695030
-  },
-  "generatedAt": "2026-11-12T21:58:13.364Z"
-}
 ##[error]Process completed with exit code 1.
 ```
 

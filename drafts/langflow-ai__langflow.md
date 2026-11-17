@@ -4,13 +4,13 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/langflow-ai/langflow/issues/new
-- **Stars:** 156707 · **Generated:** 2026-11-16T18:39:14.787Z
+- **Stars:** 156714 · **Generated:** 2026-11-17T01:01:47.497Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 4 workflows dark on main ("Deploy Storybook to GitHub Pages", "Cross-Bundle Test", "Store pytest durations", +1 more)
+CI: 5 workflows dark on main ("Deploy Storybook to GitHub Pages", "Cross-Bundle Test", "Store pytest durations", +2 more)
 <!-- END TITLE -->
 
 ## Body
@@ -102,6 +102,28 @@ Elapsed running time:                                                           
 ======================================================================================================================================================
 Process finished with exit code SERVER_FAILURE (-5)
 ##[error]Process completed with exit code 251.
+```
+
+</details>
+
+### GP Download Translations (`.github/workflows/gp-download.yml`)
+
+- Latest run on `main`: https://github.com/langflow-ai/langflow/actions/runs/43975451828 — dark (conclusion: `failure`), 2026-11-16 23:01 UTC
+- Dark since: 2026-11-16 23:01 UTC (first run of the current streak)
+- Job / step: `Download translations from Globalization Pipeline` → `Download translations from GP`
+- Likely cause: FAILED languages: ['fr', 'ja', 'es', 'de', 'pt', 'zh-Hans']
+
+<details><summary>End of the job log</summary>
+
+```
+Downloading 'de' translations...
+  Error downloading 'de': 401 Client Error: Unauthorized for url: https://g11n-pipeline-api.straker.global/translate/rest/langflow-test/v2/bundles/langflow-ui/de
+Downloading 'pt' translations...
+  Error downloading 'pt': 401 Client Error: Unauthorized for url: https://g11n-pipeline-api.straker.global/translate/rest/langflow-test/v2/bundles/langflow-ui/pt
+Downloading 'zh-Hans' translations...
+  Error downloading 'zh-Hans': 401 Client Error: Unauthorized for url: https://g11n-pipeline-api.straker.global/translate/rest/langflow-test/v2/bundles/langflow-ui/zh-Hans
+FAILED languages: ['fr', 'ja', 'es', 'de', 'pt', 'zh-Hans']
+##[error]Process completed with exit code 1.
 ```
 
 </details>

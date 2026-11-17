@@ -1,8 +1,8 @@
 <!-- dark-draft: iptv-org/iptv -->
-<!-- draft-state: ready -->
+<!-- draft-state: resolved -->
 # Upstream issue draft: iptv-org/iptv
 
-- **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
+- **Status:** resolved — lit again (2026-11-17); nothing to file
 - **Would be filed at:** https://github.com/iptv-org/iptv/issues/new
 - **Stars:** 144168 · **Generated:** 2026-11-16T18:39:14.787Z
 - Nothing in this file has been sent anywhere.

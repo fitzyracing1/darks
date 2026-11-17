@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/webiny/webiny-js/issues/new
-- **Stars:** 8053 · **Generated:** 2026-11-16T18:39:14.787Z
+- **Stars:** 8053 · **Generated:** 2026-11-17T01:01:47.497Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -20,21 +20,21 @@ Hi! A few workflows on `next` have been dark recently. Details below, in case th
 
 ### Cloud infrastructure Cleanup (`.github/workflows/cleanup.yml`)
 
-- Latest run on `next`: https://github.com/webiny/webiny-js/actions/runs/43779351702 — dark (conclusion: `failure`), 2026-11-16 00:16 UTC
+- Latest run on `next`: https://github.com/webiny/webiny-js/actions/runs/43985785612 — dark (conclusion: `failure`), 2026-11-17 00:12 UTC
 - Dark since: 2026-10-10 00:23 UTC (first run of the current streak)
 - Job / step: `aws-nuke` → `Run AWS Nuke`
-- Likely cause: time="2026-11-16T00:19:24Z" level=fatal msg=failed
+- Likely cause: time="2026-11-17T00:29:15Z" level=fatal msg=failed
 
 <details><summary>End of the job log</summary>
 
 ```
 global - IAMPolicy - arn:aws:iam::726952677045:policy/DeployWebinyProjectExtra - [ARN: "arn:aws:iam::726952677045:policy/DeployWebinyProjectExtra", CreateDate: "2024-11-08T04:19:21Z", Name: "DeployWebinyProjectExtra", P…
 DeleteConflict: Cannot delete a policy attached to entities.
-	status code: 409, request id: 2490d015-3f64-4764-86ca-c644c52b8b8c
+	status code: 409, request id: 10ac18a9-9584-4174-b201-004f89438322
 global - IAMPolicy - arn:aws:iam::726952677045:policy/DeployWebinyProjectGroup3 - [ARN: "arn:aws:iam::726952677045:policy/DeployWebinyProjectGroup3", CreateDate: "2024-11-28T06:06:51Z", Name: "DeployWebinyProjectGroup3"…
 DeleteConflict: Cannot delete a policy attached to entities.
-	status code: 409, request id: a437ad4c-ea59-4c79-a29d-acc51f6c316b
-time="2026-11-16T00:19:24Z" level=fatal msg=failed
+	status code: 409, request id: c8c4d2ac-c63a-4a9b-8656-ba080959681d
+time="2026-11-17T00:29:15Z" level=fatal msg=failed
 ##[error]Process completed with exit code 1.
 ```
 
@@ -86,21 +86,21 @@ GraphQL: Your token has not been granted the required scopes to execute this que
 
 ### Push (`.github/workflows/push.yml`)
 
-- Latest run on `next`: https://github.com/webiny/webiny-js/actions/runs/43909628260 — dark (conclusion: `failure`), 2026-11-16 16:37 UTC
+- Latest run on `next`: https://github.com/webiny/webiny-js/actions/runs/43972554087 — dark (conclusion: `failure`), 2026-11-16 22:42 UTC
 - Dark since: 2026-11-12 21:06 UTC (first run of the current streak)
-- Job / step: `E2E (DDB+OS) - Project setup` → `Deploy Core`
-- Likely cause: error: Rspack build failed.
+- Job / step: `E2E (DDB+OS) - Project setup` → `Deploy API`
+- Likely cause: 5 errored
 
 <details><summary>End of the job log</summary>
 
 ```
-error   build failed in 0.97s
-File (node)                                              Size
-c.mjs                                                    0.1 kB
-u.mjs                                                    0.1 kB
-handler.mjs                                            632.6 kB
-Total:                                                 632.8 kB
-error: Rspack build failed.
+  aws:lambdaweb:Function (wby-graphql-web):
+    error: [ERROR] operation error CloudControl: CreateResource, https response error StatusCode: 400, RequestID: 4f1367b1-fa29-4d3c-85e3-1ac4cffc8859, api error AccessDeniedException: User: arn:aws:sts::726952677045:as…
+    error: operation error CloudControl:: operation error CloudControl: CreateResource, https response error StatusCode: 400, RequestID: 4f1367b1-fa29-4d3c-85e3-1ac4cffc8859, api error AccessDeniedException: User: arn:a…
+Resources:
+    + 12 created
+    5 errored
+Duration: 10s
 ##[error]Process completed with exit code 1.
 ```
 
