@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/activepieces/activepieces/issues/new
-- **Stars:** 25571 · **Generated:** 2026-11-17T01:01:47.497Z
+- **Stars:** 25579 · **Generated:** 2026-11-17T06:45:50.833Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -20,7 +20,7 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### Chat Evals (`.github/workflows/agent-evals.yml`)
 
-- Latest run on `main`: https://github.com/activepieces/activepieces/actions/runs/43816243998 — dark (conclusion: `failure`), 2026-11-16 06:21 UTC
+- Latest run on `main`: https://github.com/activepieces/activepieces/actions/runs/44029726396 — dark (conclusion: `failure`), 2026-11-17 06:14 UTC
 - Dark since: 2026-10-13 06:26 UTC (first run of the current streak)
 - Job / step: `Live judge gate` → `Run live chat evals (scope=regression)`
 - Likely cause: Error: Hook timed out in 540000ms. (packages/server/worker/test/lib/agent-eval/agent-eval.test.ts:20)
@@ -33,8 +33,8 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 ⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
  Test Files  1 failed | 12 passed (13)
       Tests  89 passed | 1 skipped (90)
-   Start at  06:26:20
-   Duration  545.44s (tests 98%, import 2%)
+   Start at  06:18:33
+   Duration  545.25s (tests 98%, import 2%, transform 1%)
 ##[error]Error: Hook timed out in 540000ms.
 ```
 
@@ -42,21 +42,21 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### Benchmark (`.github/workflows/benchmark.yml`)
 
-- Latest run on `main`: https://github.com/activepieces/activepieces/actions/runs/43796071053 — dark (conclusion: `failure`), 2026-11-16 03:05 UTC
+- Latest run on `main`: https://github.com/activepieces/activepieces/actions/runs/44007701383 — dark (conclusion: `failure`), 2026-11-17 03:05 UTC
 - Dark since: 2026-10-30 03:06 UTC (first run of the current streak)
-- Job / step: `benchmark (shared, 1, 28, 0.5, 1G, 1, 768, false, 28)` → `Detect regression against trailing 14 runs (scheduled runs only)`
-- Likely cause: Box signals API responded 401: {"error":{"type":"invalid_request_error","message":"Unknown token. Send it as \"Authorization: ***"."}}
+- Job / step: `benchmark (dedicated, 1, 28, 0.5, 1G, 1, 768, true, 28)` → `Setup flow, platform API key, and wait for app`
+- Likely cause: ERROR: resolve piece versions: no result after 600 attempts
 
 <details><summary>End of the job log</summary>
 
 ```
-      "pct": 13.032089063523253,
-      "breach": ***
-    }
-  ],
-  "breachCount": 2
-}
-Box signals API responded 401: {"error":{"type":"invalid_request_error","message":"Unknown token. Send it as \"Authorization: ***"."}}
+  worker → 0.5 vCPU                cpuset 0-15 (28 replica(s))
+Waiting for app to be ready...
+App is ready
+Authenticating...
+Signed up. Project: dGNH94EcxrdDd9wANcYLd
+Resolving piece versions from registry (polling /pieces up to 600s)...
+ERROR: resolve piece versions: no result after 600 attempts
 ##[error]Process completed with exit code 1.
 ```
 

@@ -1,8 +1,8 @@
 <!-- dark-draft: ccch1mneyyy/dsh-Go -->
-<!-- draft-state: ready -->
+<!-- draft-state: resolved -->
 # Upstream issue draft: ccch1mneyyy/dsh-Go
 
-- **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
+- **Status:** resolved — lit again (2026-11-17); nothing to file
 - **Would be filed at:** https://github.com/ccch1mneyyy/dsh-Go/issues/new
 - **Stars:** 24789 · **Generated:** 2026-11-17T01:01:47.497Z
 - Nothing in this file has been sent anywhere.

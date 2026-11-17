@@ -1,8 +1,8 @@
 <!-- dark-draft: storytold/photocraft -->
-<!-- draft-state: ready -->
+<!-- draft-state: resolved -->
 # Upstream issue draft: storytold/photocraft
 
-- **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
+- **Status:** resolved — lit again (2026-11-17); nothing to file
 - **Would be filed at:** https://github.com/storytold/photocraft/issues/new
 - **Stars:** 79828 · **Generated:** 2026-11-17T01:01:47.497Z
 - Nothing in this file has been sent anywhere.

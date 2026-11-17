@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/Comfy-Org/ComfyUI/issues/new
-- **Stars:** 147185 · **Generated:** 2026-11-17T01:01:47.497Z
+- **Stars:** 147237 · **Generated:** 2026-11-17T06:45:50.833Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title

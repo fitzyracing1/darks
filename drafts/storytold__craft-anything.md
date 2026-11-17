@@ -4,24 +4,21 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/storytold/craft-anything/issues/new
-- **Stars:** 34787 · **Generated:** 2026-11-17T01:01:47.497Z
+- **Stars:** 35051 · **Generated:** 2026-11-17T06:45:50.833Z
 - Nothing in this file has been sent anywhere.
-- **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 2 workflows dark on main ("FreeBSD", "SonarCloud")
+CI: "FreeBSD" workflow failing on main since 2026-11-12
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
+Hi! The **FreeBSD** workflow (`.github/workflows/freebsd.yml`) on `main` has been failing since 2026-11-12. Here is what I saw, in case it's useful:
 
-### FreeBSD (`.github/workflows/freebsd.yml`)
-
-- Latest run on `main`: https://github.com/storytold/craft-anything/actions/runs/43792347529 — dark (conclusion: `failure`), 2026-11-16 02:28 UTC
+- Latest run on `main`: https://github.com/storytold/craft-anything/actions/runs/44003018123 — dark (conclusion: `failure`), 2026-11-17 02:26 UTC
 - Dark since: 2026-11-12 02:26 UTC (first run of the current streak)
 - Job / step: `freebsd / FreeBSD 15 x86_64 (build + test)` → `Build and test`
 - Likely cause: error: test failed, to rerun pass '-p craft-anything-ai --lib'
@@ -34,18 +31,12 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 failures:
     rebuild::kinds::runs::tests::a_relative_project_runs_a_console_check
     rebuild::tests::console_study_keeps_two_real_observations_for_each_input
-test result: FAILED. 673 passed; 2 failed; 3 ignored; 0 measured; 0 filtered out; finished in 12.71s
+test result: FAILED. 680 passed; 2 failed; 3 ignored; 0 measured; 0 filtered out; finished in 12.60s
 error: test failed, to rerun pass `-p craft-anything-ai --lib`
 ##[error]Process completed with exit code 101.
 ```
 
 </details>
-
-### SonarCloud (`.github/workflows/sonarcloud.yml`)
-
-- Latest run on `main`: https://github.com/storytold/craft-anything/actions/runs/43989203280 — dark (conclusion: `cancelled`), 2026-11-17 00:38 UTC
-- Dark since: 2026-11-17 00:38 UTC (first run of the current streak)
-- Likely cause: run cancelled
 
 If this is already known or expected, feel free to close. Thanks for maintaining craft-anything!
 

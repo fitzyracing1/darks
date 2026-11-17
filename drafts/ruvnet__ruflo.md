@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/ruvnet/ruflo/issues/new
-- **Stars:** 81879 · **Generated:** 2026-11-17T01:01:47.497Z
+- **Stars:** 81904 · **Generated:** 2026-11-17T06:45:50.833Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -20,21 +20,21 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### CI/CD Pipeline (`.github/workflows/ci.yml`)
 
-- Latest run on `main`: https://github.com/ruvnet/ruflo/actions/runs/43941969698 — dark (conclusion: `failure`), 2026-11-16 19:41 UTC
+- Latest run on `main`: https://github.com/ruvnet/ruflo/actions/runs/44000906520 — dark (conclusion: `failure`), 2026-11-17 02:09 UTC
 - Dark since: 2026-11-12 02:08 UTC (first run of the current streak)
 - Job / step: `Test Suite (ubuntu-latest)` → `Run all tests`
-- Likely cause: AssertionError: expected [ …(1260) ] to have a length of 2400 but got 1260
+- Likely cause: AssertionError: expected [ …(1500) ] to have a length of 2400 but got 1500
 
 <details><summary>End of the job log</summary>
 
 ```
-  duration_ms: 1.944569
+  duration_ms: 2.665009
   ...
 JSON report written to /home/runner/work/ruflo/ruflo/.test-results/vitest.json
 CI test ratchet: FAILED — 1 unexpected failing file(s)
   + plugins/ruflo-console/tests/write-argv.spec.ts
       ✗ the POSIX scripts on a real disk (sh and dd as this machine has them) eight writers of 55 kB batches through the POSIX append tear no line here (one dd block per batch)
-        AssertionError: expected [ …(1260) ] to have a length of 2400 but got 1260
+        AssertionError: expected [ …(1500) ] to have a length of 2400 but got 1500
 ##[error]Process completed with exit code 1.
 ```
 

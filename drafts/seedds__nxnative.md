@@ -4,9 +4,8 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/seedds/nxnative/issues/new
-- **Stars:** 15911 · **Generated:** 2026-11-17T01:01:47.497Z
+- **Stars:** 15943 · **Generated:** 2026-11-17T06:45:50.833Z
 - Nothing in this file has been sent anywhere.
-- **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
@@ -43,15 +42,47 @@ Base64: UEFDeDQwM0xTQVJDU0hOIRQA//4AEAAAqAIAegAAAAAAAAAAAAAYAABTRkFUDAAoAGUAAAAA
 
 ### tests (`.github/workflows/tests.yml`)
 
-- Latest run on `main`: https://github.com/seedds/nxnative/actions/runs/43986669856 — dark (conclusion: `cancelled`), 2026-11-17 00:19 UTC
+- Latest run on `main`: https://github.com/seedds/nxnative/actions/runs/44018182120 — dark (conclusion: `failure`), 2026-11-17 04:35 UTC
 - Dark since: 2026-11-06 01:42 UTC (first run of the current streak)
-- Likely cause: run cancelled
+- Job / step: `Sanitizers (ASan, UBSan and TSan over the host and CPU texture tests)` → `ASan and UBSan, every host unit test (dm/host/tests)`
+- Likely cause: controller 'After timeout' (HID) is now a GameController controller: read through it
+
+<details><summary>End of the job log</summary>
+
+```
+[hid] 'Lic Pro Controller': IMU factory calibration received
+controller 'Lic Pro Controller' (HID): back in report 0x3F: read from it, and asked for full mode again
+controller 'Pad' (HID, 0000:0000): buttons in Nintendo's report 0x3F: read with its numbering
+controller 'LED pad' (HID, 0000:0000): buttons in Nintendo's report 0x3F: read with its numbering
+controller 'Mute' (HID, 0000:0000): Nintendo's report descriptor (input 0x3F, 0x21, 0x30; output 0x01, 0x10): asking for its device info
+make[1]: *** [run] Abort trap: 6
+make: *** [asan] Error 2
+##[error]Process completed with exit code 2.
+```
+
+</details>
 
 ### lint-c (`.github/workflows/lint-c.yml`)
 
-- Latest run on `main`: https://github.com/seedds/nxnative/actions/runs/43986144674 — dark (conclusion: `cancelled`), 2026-11-17 00:15 UTC
+- Latest run on `main`: https://github.com/seedds/nxnative/actions/runs/44018182205 — dark (conclusion: `failure`), 2026-11-17 04:35 UTC
 - Dark since: 2026-11-16 07:54 UTC (first run of the current streak)
-- Likely cause: run cancelled
+- Job / step: `clang-tidy (ratchet)` → `clang-tidy against the baseline`
+- Likely cause: An undefined value may be read from 'errno' [clang-analyzer-unix.Errno] (2 in this file, the baseline has 1) (dm/host/hle_fs.c:516)
+
+<details><summary>End of the job log</summary>
+
+```
+[340/344] dm/host/tests/t_vorbis.c: 0 findings
+[341/344] dm/host/tests/t_watch_sample.c: 0 findings
+[342/344] dm/host/tests/t_web_stack.c: 0 findings
+[343/344] dm/host/thread.c: 1 findings
+[344/344] dm/host/web_apple.m: 0 findings
+LLVM 23.1.4: 193 findings in 67 files, 110 file/check pairs
+dm/gfx/tests/t_feedback.m: clang-diagnostic-error: 4 findings, the baseline has 0
+##[error]too few arguments to function call, expected 3, have 1 [clang-diagnostic-error] (4 in this file, the baseline has 0)
+```
+
+</details>
 
 If this is already known or expected, feel free to close. Thanks for maintaining nxnative!
 

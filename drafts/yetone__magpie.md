@@ -1,12 +1,30 @@
 <!-- dark-draft: yetone/magpie -->
-<!-- draft-state: duplicate -->
+<!-- draft-state: ready -->
 # Upstream issue draft: yetone/magpie
 
-- **Status:** not for filing — upstream already has an open issue/PR about every dark workflow here
+- **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/yetone/magpie/issues/new
-- **Stars:** 37554 · **Generated:** 2026-11-17T01:01:47.497Z
+- **Stars:** 37764 · **Generated:** 2026-11-17T06:45:50.833Z
 - Nothing in this file has been sent anywhere.
+- **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
-## Skipped: upstream already tracking
+## Suggested title
 
-- Test (`.github/workflows/test.yml`): [issue #6903](https://github.com/yetone/magpie/issues/6903) "ci: macOS Test step hits its 75m cap with every package ok (ce1663336); it took 31m when the cap was set"
+<!-- BEGIN TITLE -->
+CI: "Test" workflow getting cancelled on main since 2026-11-08
+<!-- END TITLE -->
+
+## Body
+
+<!-- BEGIN BODY -->
+Hi! The **Test** workflow (`.github/workflows/test.yml`) on `main` has been getting cancelled since 2026-11-08. Here is what I saw, in case it's useful:
+
+- Latest run on `main`: https://github.com/yetone/magpie/actions/runs/44029076595 — dark (conclusion: `cancelled`), 2026-11-17 06:09 UTC
+- Dark since: 2026-11-08 23:28 UTC (first run of the current streak)
+- Likely cause: run cancelled
+
+If this is already known or expected, feel free to close. Thanks for maintaining magpie!
+
+---
+<sub>Found by the [dark crawler](https://github.com/fitzyracing1/darks), which checks the latest default-branch run of each workflow in popular repos. Reviewed and filed by hand.</sub>
+<!-- END BODY -->
