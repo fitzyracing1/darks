@@ -4,31 +4,23 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/n8n-io/n8n/issues/new
-- **Stars:** 210695 · **Generated:** 2026-11-17T06:45:50.833Z
+- **Stars:** 210729 · **Generated:** 2026-11-17T12:40:23.310Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** latest run was skipped, not failed — probably not worth filing
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 2 workflows dark on master ("Security: Sync from Public", "Security: Sync Bundle Branches")
+CI: "Security: Sync from Public" workflow not completing (runs skipped) on master since 2026-10-13
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! A few workflows on `master` have been dark recently. Details below, in case they're useful:
+Hi! The **Security: Sync from Public** workflow (`.github/workflows/sec-sync-public-to-private.yml`) on `master` has been not completing (runs skipped) since 2026-10-13. Here is what I saw, in case it's useful:
 
-### Security: Sync from Public (`.github/workflows/sec-sync-public-to-private.yml`)
-
-- Latest run on `master`: https://github.com/n8n-io/n8n/actions/runs/44030398605 — dark (conclusion: `skipped`), 2026-11-17 06:19 UTC
+- Latest run on `master`: https://github.com/n8n-io/n8n/actions/runs/44081537526 — dark (conclusion: `skipped`), 2026-11-17 12:16 UTC
 - Dark since: 2026-10-13 15:19 UTC (first run of the current streak)
-- Likely cause: run skipped
-
-### Security: Sync Bundle Branches (`.github/workflows/sec-sync-bundle-branches.yml`)
-
-- Latest run on `master`: https://github.com/n8n-io/n8n/actions/runs/44008393524 — dark (conclusion: `skipped`), 2026-11-17 03:11 UTC
-- Dark since: 2026-11-17 03:11 UTC (first run of the current streak)
 - Likely cause: run skipped
 
 If this is already known or expected, feel free to close. Thanks for maintaining n8n!

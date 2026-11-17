@@ -4,36 +4,37 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/KnifeLemon/Filee/issues/new
-- **Stars:** 28207 · **Generated:** 2026-11-17T06:45:50.833Z
+- **Stars:** 28344 · **Generated:** 2026-11-17T12:40:23.310Z
 - Nothing in this file has been sent anywhere.
+- **Note for Joshua:** cancelled by a concurrency group — likely noise
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: "CI" workflow failing on main since 2026-11-15
+CI: "CI" workflow getting cancelled on main since 2026-11-15
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! The **CI** workflow (`.github/workflows/ci.yml`) on `main` has been failing since 2026-11-15. Here is what I saw, in case it's useful:
+Hi! The **CI** workflow (`.github/workflows/ci.yml`) on `main` has been getting cancelled since 2026-11-15. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/KnifeLemon/Filee/actions/runs/43764628811 — dark (conclusion: `failure`), 2026-11-15 21:36 UTC
+- Latest run on `main`: https://github.com/KnifeLemon/Filee/actions/runs/44082307945 — dark (conclusion: `cancelled`), 2026-11-17 12:21 UTC
 - Dark since: 2026-11-15 17:58 UTC (first run of the current streak)
-- Job / step: `portable / portable (macos-15-intel, osx-x64)` → `Build portable package`
-- Likely cause: | Create dmg failed with exit code 1
+- Job / step: `metadata (linux-x64)` → `Test`
+- Likely cause: Canceling since a higher priority waiting request for ci-refs/heads/main exists
 
 <details><summary>End of the job log</summary>
 
 ```
-    raise DMGError(callback, f"Unable to detach device cleanly: {output}")
-dmgbuild.core.DMGError: Unable to detach device cleanly: hdiutil: couldn't eject "disk2" - Resource busy
-Exception: /Users/runner/work/Filee/Filee/build/build-portable.ps1:91
-Line |
-  91 |  … EXITCODE -ne 0) { throw "$name failed with exit code $LASTEXITCODE" }
-     |                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-     | Create dmg failed with exit code 1
-##[error]Process completed with exit code 1.
+No VM guests are running outdated hypervisor (qemu) binaries on this host.
+/home/runner/work/_temp/exiftool.tar.gz: OK
+  Determining projects to restore...
+  Restored /home/runner/work/Filee/Filee/src/Filee.Core/Filee.Core.csproj (in 1.03 sec).
+  Restored /home/runner/work/Filee/Filee/src/Filee.Engines/Filee.Engines.csproj (in 5.54 sec).
+  Restored /home/runner/work/Filee/Filee/tests/Filee.Engines.Tests/Filee.Engines.Tests.csproj (in 5.54 sec).
+  Filee.Core -> /home/runner/work/Filee/Filee/src/Filee.Core/bin/Release/net10.0/Filee.Core.dll
+##[error]The operation was canceled.
 ```
 
 </details>

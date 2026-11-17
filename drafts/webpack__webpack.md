@@ -4,8 +4,9 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/webpack/webpack/issues/new
-- **Stars:** 66009 · **Generated:** 2026-11-17T06:45:50.833Z
+- **Stars:** 66009 · **Generated:** 2026-11-17T12:40:23.310Z
 - Nothing in this file has been sent anywhere.
+- **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
@@ -18,25 +19,10 @@ CI: "Github Actions" workflow failing on main since 2026-11-16
 <!-- BEGIN BODY -->
 Hi! The **Github Actions** workflow (`.github/workflows/test.yml`) on `main` has been failing since 2026-11-16. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/webpack/webpack/actions/runs/43956356566 — dark (conclusion: `failure`), 2026-11-16 21:04 UTC
+- Latest run on `main`: https://github.com/webpack/webpack/actions/runs/44049009720 — dark (conclusion: `failure`), 2026-11-17 08:42 UTC
 - Dark since: 2026-11-16 10:58 UTC (first run of the current streak)
-- Job / step: `unit` → `Run yarn cover:unit --ci --cacheDirectory .jest-cache`
-- Likely cause: Tests:       26 failed, 93602 passed, 93628 total
-
-<details><summary>End of the job log</summary>
-
-```
-Snapshots:   66403 passed, 66403 total
-Time:        364.808 s, estimated 482 s
-Ran all test suites.
-error Command failed with exit code 1.
-info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
-error Command failed with exit code 1.
-info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
-##[error]Process completed with exit code 1.
-```
-
-</details>
+- Job / step: `test262`
+- Likely cause: The hosted runner lost communication with the server. Anything in your workflow that terminates the runner process, starves it for CPU/Memory, or blocks its network access can cause this error.
 
 If this is already known or expected, feel free to close. Thanks for maintaining webpack!
 

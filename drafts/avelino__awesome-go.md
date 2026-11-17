@@ -4,19 +4,21 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/avelino/awesome-go/issues/new
-- **Stars:** 194330 · **Generated:** 2026-11-17T06:45:50.833Z
+- **Stars:** 194391 · **Generated:** 2026-11-17T12:40:23.310Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: "Check For Stale Repositories" workflow failing on main since 2026-11-15
+CI: 2 workflows dark on main ("Check For Stale Repositories", "Auto-merge README PRs")
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! The **Check For Stale Repositories** workflow (`.github/workflows/run-check.yaml`) on `main` has been failing since 2026-11-15. Here is what I saw, in case it's useful:
+Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
+
+### Check For Stale Repositories (`.github/workflows/run-check.yaml`)
 
 - Latest run on `main`: https://github.com/avelino/awesome-go/actions/runs/43657100387 — dark (conclusion: `failure`), 2026-11-15 00:13 UTC
 - Dark since: 2026-11-15 00:13 UTC (first run of the current streak)
@@ -33,6 +35,28 @@ Hi! The **Check For Stale Repositories** workflow (`.github/workflows/run-check.
 FAIL
 exit status 1
 FAIL	github.com/avelino/awesome-go	0.134s
+##[error]Process completed with exit code 1.
+```
+
+</details>
+
+### Auto-merge README PRs (`.github/workflows/auto-merge-readme.yaml`)
+
+- Latest run on `main`: https://github.com/avelino/awesome-go/actions/runs/44082851993 — dark (conclusion: `failure`), 2026-11-17 12:24 UTC
+- Dark since: 2026-11-17 11:48 UTC (first run of the current streak)
+- Job / step: `Auto-merge README PRs` → `Merge eligible PRs`
+- Likely cause: "message": "Not Found",
+
+<details><summary>End of the job log</summary>
+
+```
+#5780: skip, patch removes a line: "-- [Go in Practice, Second Edition](https://www.manning.com/books/go-in-practice-second-edition) - Your practical guide on the ins-and-outs of Go development, covering the standard li…
+#5111: skip, not mergeable
+#4669: skip, no maintainer approval on head ec475be
+#4629: skip, no maintainer approval on head 8f3f7f9
+#4594: skip, not mergeable
+#4561: skip, not mergeable
+exit status 1
 ##[error]Process completed with exit code 1.
 ```
 

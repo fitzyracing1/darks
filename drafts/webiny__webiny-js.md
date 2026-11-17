@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/webiny/webiny-js/issues/new
-- **Stars:** 8053 · **Generated:** 2026-11-17T06:45:50.833Z
+- **Stars:** 8053 · **Generated:** 2026-11-17T12:40:23.310Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -86,20 +86,20 @@ GraphQL: Your token has not been granted the required scopes to execute this que
 
 ### Push (`.github/workflows/push.yml`)
 
-- Latest run on `next`: https://github.com/webiny/webiny-js/actions/runs/43972554087 — dark (conclusion: `failure`), 2026-11-16 22:42 UTC
+- Latest run on `next`: https://github.com/webiny/webiny-js/actions/runs/44078538209 — dark (conclusion: `failure`), 2026-11-17 11:56 UTC
 - Dark since: 2026-11-12 21:06 UTC (first run of the current streak)
-- Job / step: `E2E (DDB+OS) - Project setup` → `Deploy API`
-- Likely cause: 5 errored
+- Job / step: `E2E (DDB) - Project setup` → `Deploy API`
+- Likely cause: 4 errored
 
 <details><summary>End of the job log</summary>
 
 ```
-  aws:lambdaweb:Function (wby-graphql-web):
-    error: [ERROR] operation error CloudControl: CreateResource, https response error StatusCode: 400, RequestID: 4f1367b1-fa29-4d3c-85e3-1ac4cffc8859, api error AccessDeniedException: User: arn:aws:sts::726952677045:as…
-    error: operation error CloudControl:: operation error CloudControl: CreateResource, https response error StatusCode: 400, RequestID: 4f1367b1-fa29-4d3c-85e3-1ac4cffc8859, api error AccessDeniedException: User: arn:a…
+    error:   sdk-v2/provider2.go:574: sdk.helper_schema: creating CloudFront Cache Policy (wby-api-web-wb-cache-policy-1826b3c): operation error CloudFront: CreateCachePolicy, https response error StatusCode: 403, Reque…
+    error: 1 error occurred:
+    \t* creating CloudFront Cache Policy (wby-api-web-wb-cache-policy-1826b3c): operation error CloudFront: CreateCachePolicy, https response error StatusCode: 403, RequestID: 48fcf011-aa43-4a2e-bc39-6a356aeeb416, Acces…
 Resources:
     + 12 created
-    5 errored
+    4 errored
 Duration: 10s
 ##[error]Process completed with exit code 1.
 ```

@@ -4,14 +4,15 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/xberg-io/xberg/issues/new
-- **Stars:** 9596 · **Generated:** 2026-11-17T06:45:50.833Z
+- **Stars:** 9596 · **Generated:** 2026-11-17T12:40:23.310Z
 - Nothing in this file has been sent anywhere.
+- **Note for Joshua:** cancelled by a concurrency group — likely noise
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 4 workflows dark on main ("CI Rust", "CI Lint", "ADRs", +1 more)
+CI: 6 workflows dark on main ("CI Rust", "CI Lint", "ADRs", +3 more)
 <!-- END TITLE -->
 
 ## Body
@@ -21,43 +22,28 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### CI Rust (`.github/workflows/ci-rust.yaml`)
 
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/43971840573 — dark (conclusion: `failure`), 2026-11-16 22:37 UTC
+- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/44047226673 — dark (conclusion: `cancelled`), 2026-11-17 08:29 UTC
 - Dark since: 2026-10-25 18:30 UTC (first run of the current streak)
-- Job / step: `Rust (macos-26)` → `Run tests`
-- Likely cause: [rust:test:ci] ERROR task failed
-
-<details><summary>End of the job log</summary>
-
-```
-Filesystem      Size    Used   Avail Capacity iused ifree %iused  Mounted on
-/dev/disk2s5   320Gi   220Gi    78Gi    74%    2.1M  814M    0%   /System/Volumes/Data
-Cargo environment:
-cargo 1.100.0 (3acc79c0c 2026-11-05)
-rustc 1.100.0 (0ef1bc386 2026-11-09)
-Finished in 8868.14s
-[rust:test:ci] ERROR task failed
-##[error]Process completed with exit code 1.
-```
-
-</details>
+- Job / step: `Narrow feature leg (formats-no-heic)`
+- Likely cause: Canceling since a higher priority waiting request for ci-rust-refs/heads/main exists
 
 ### CI Lint (`.github/workflows/ci-lint.yaml`)
 
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/43971841111 — dark (conclusion: `failure`), 2026-11-16 22:37 UTC
+- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/44051203772 — dark (conclusion: `failure`), 2026-11-17 08:57 UTC
 - Dark since: 2026-11-12 05:22 UTC (first run of the current streak)
-- Job / step: `Generated e2e suites freshness` → `Verify generated e2e suites are current`
-- Likely cause: [e2e:verify] ERROR task failed
+- Job / step: `validate / Validate (poly)` → `Lint`
+- Likely cause: warning: build failed, waiting for other jobs to finish...
 
 <details><summary>End of the job log</summary>
 
 ```
-@@ -54,5 +61,4 @@ void main() {
-     final result = await XbergBridge.listValidators();
-     expect(result, isNotNull);
-   });
--
- }
-[e2e:verify] ERROR task failed
+         = note: requested on the command line with `-D clippy::print-stderr`
+      error: could not compile `xberg-native-pdf` (test "test_render_resolution_pipeline_qa_wave5") due to 1 previous error
+      warning: build failed, waiting for other jobs to finish...
+  ✓ checkstyle
+  ✓ credo
+  ✓ golangci-lint
+  ✓ pyrefly
 ##[error]Process completed with exit code 1.
 ```
 
@@ -76,6 +62,35 @@ Finished in 8868.14s
 - Dark since: 2026-11-16 14:58 UTC (first run of the current streak)
 - Job / step: `validate / Validate AI-Rulez`
 - Likely cause: The run was canceled by @Goldziher.
+
+### CI E2E (`.github/workflows/ci-e2e.yaml`)
+
+- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/44047226696 — dark (conclusion: `cancelled`), 2026-11-17 08:29 UTC
+- Dark since: 2026-11-17 08:05 UTC (first run of the current streak)
+- Job / step: `Build FFI (x86_64-unknown-linux-gnu)`
+- Likely cause: Canceling since a higher priority waiting request for ci-e2e-refs/heads/main exists
+
+### CI Scripts (`.github/workflows/ci-scripts.yaml`)
+
+- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/44047226921 — dark (conclusion: `failure`), 2026-11-17 08:29 UTC
+- Dark since: 2026-11-17 08:05 UTC (first run of the current streak)
+- Job / step: `Shell formatting` → `Check shell formatting`
+- Likely cause: [lint:shell] ERROR task failed
+
+<details><summary>End of the job log</summary>
+
+```
+ 	[ ! -x "$BATS_TEST_TMPDIR/rustup-init" ]
+-	sed '/sha256sum -c - &&$/d' "$BATS_TEST_TMPDIR/bootstrap-inert" > "$BATS_TEST_TMPDIR/bootstrap-unverified"
++	sed '/sha256sum -c - &&$/d' "$BATS_TEST_TMPDIR/bootstrap-inert" >"$BATS_TEST_TMPDIR/bootstrap-unverified"
+ 	run run_inert_bootstrap aarch64 yes bootstrap-unverified
+ 	[ "$status" -eq 0 ]
+ 	[ -f "$BATS_TEST_TMPDIR/executed" ]
+[lint:shell] ERROR task failed
+##[error]Process completed with exit code 1.
+```
+
+</details>
 
 If this is already known or expected, feel free to close. Thanks for maintaining xberg!
 

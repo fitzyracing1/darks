@@ -1,25 +1,25 @@
 <!-- dark-draft: anomalyco/opencode -->
-<!-- draft-state: resolved -->
+<!-- draft-state: ready -->
 # Upstream issue draft: anomalyco/opencode
 
-- **Status:** resolved — lit again (2026-11-17); nothing to file
+- **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/anomalyco/opencode/issues/new
-- **Stars:** 227325 · **Generated:** 2026-11-17T01:01:47.497Z
+- **Stars:** 227465 · **Generated:** 2026-11-17T12:40:23.310Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: "nightly-beta" workflow failing on dev since 2026-11-13
+CI: "nightly-beta" workflow failing on dev since 2026-11-17
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! The **nightly-beta** workflow (`.github/workflows/nightly-beta.yml`) on `dev` has been failing since 2026-11-13. Here is what I saw, in case it's useful:
+Hi! The **nightly-beta** workflow (`.github/workflows/nightly-beta.yml`) on `dev` has been failing since 2026-11-17. Here is what I saw, in case it's useful:
 
-- Latest run on `dev`: https://github.com/anomalyco/opencode/actions/runs/43840413786 — dark (conclusion: `failure`), 2026-11-16 09:30 UTC
-- Dark since: 2026-11-13 09:22 UTC (first run of the current streak)
+- Latest run on `dev`: https://github.com/anomalyco/opencode/actions/runs/44055008456 — dark (conclusion: `failure`), 2026-11-17 09:22 UTC
+- Dark since: 2026-11-17 09:22 UTC (first run of the current streak)
 - Job / step: `dispatch` → `Dispatch beta test runs`
 - Likely cause: could not create workflow dispatch event: HTTP 422: No ref found for: beta (https://api.github.com/repos/anomalyco/opencode/actions/workflows/396447938/dispatches)
 
