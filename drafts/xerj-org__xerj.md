@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/xerj-org/xerj/issues/new
-- **Stars:** 19181 · **Generated:** 2026-11-17T12:40:23.310Z
+- **Stars:** 19197 · **Generated:** 2026-11-17T18:39:49.297Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
@@ -17,7 +17,7 @@ These workflows are left out of the body below.
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 3 workflows dark on main ("Release", "CI", "pack publish")
+CI: 4 workflows dark on main ("Release", "CI", "pack publish", +1 more)
 <!-- END TITLE -->
 
 ## Body
@@ -34,25 +34,9 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### CI (`.github/workflows/ci.yml`)
 
-- Latest run on `main`: https://github.com/xerj-org/xerj/actions/runs/42529567939 — dark (conclusion: `failure`), 2026-11-08 22:18 UTC
+- Latest run on `main`: https://github.com/xerj-org/xerj/actions/runs/44147727160 — dark (conclusion: `failure`), 2026-11-17 18:25 UTC
 - Dark since: 2026-11-07 06:22 UTC (first run of the current streak)
-- Job / step: `Build + Test` → `Unit + integration tests`
-- Likely cause: error: test failed, to rerun pass '-p xerj-autoindex --test field_report_surfaces'
-
-<details><summary>End of the job log</summary>
-
-```
-thread 'homepage_prompt_defers_the_field_report_to_llms_txt' (68229) panicked at crates/xerj-autoindex/tests/field_report_surfaces.rs:145:5:
-the homepage prompt a person reads must be the short llms.txt prompt
-note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
-failures:
-    homepage_prompt_defers_the_field_report_to_llms_txt
-test result: FAILED. 3 passed; 1 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
-error: test failed, to rerun pass `-p xerj-autoindex --test field_report_surfaces`
-##[error]Process completed with exit code 101.
-```
-
-</details>
+- Likely cause: no cause found in annotations
 
 ### pack publish (`.github/workflows/pack-publish.yml`)
 
@@ -75,6 +59,12 @@ HTTP 500 (https://api.github.com/repos/xerj-org/xerj/releases/assets/726257115)
 ```
 
 </details>
+
+### Fresh-agent field report (`.github/workflows/field-report-e2e.yml`)
+
+- Latest run on `main`: https://github.com/xerj-org/xerj/actions/runs/44147727055 — dark (conclusion: `failure`), 2026-11-17 18:25 UTC
+- Dark since: 2026-11-17 17:53 UTC (first run of the current streak)
+- Likely cause: no cause found in annotations
 
 If this is already known or expected, feel free to close. Thanks for maintaining xerj!
 

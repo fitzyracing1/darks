@@ -1,8 +1,8 @@
 <!-- dark-draft: microsoft/TypeScript -->
-<!-- draft-state: ready -->
+<!-- draft-state: resolved -->
 # Upstream issue draft: microsoft/TypeScript
 
-- **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
+- **Status:** resolved — lit again (2026-11-17); nothing to file
 - **Would be filed at:** https://github.com/microsoft/TypeScript/issues/new
 - **Stars:** 111836 · **Generated:** 2026-11-17T12:40:23.310Z
 - Nothing in this file has been sent anywhere.

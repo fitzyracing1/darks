@@ -4,13 +4,13 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/open-metadata/OpenMetadata/issues/new
-- **Stars:** 15796 · **Generated:** 2026-11-17T12:40:23.310Z
+- **Stars:** 15798 · **Generated:** 2026-11-17T18:39:49.297Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 6 workflows dark on main ("Merge Queue Dequeue Report", "monitor-slack-link", "Maven Collate Tests", +3 more)
+CI: 5 workflows dark on main ("Merge Queue Dequeue Report", "monitor-slack-link", "Integration Tests - MySQL + Elasticsearch", +2 more)
 <!-- END TITLE -->
 
 ## Body
@@ -20,7 +20,7 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### Merge Queue Dequeue Report (`.github/workflows/merge-queue-dequeue-report.yml`)
 
-- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/44083453829 — dark (conclusion: `failure`), 2026-11-17 12:28 UTC
+- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/44142706454 — dark (conclusion: `failure`), 2026-11-17 17:58 UTC
 - Dark since: 2026-11-03 21:06 UTC (first run of the current streak)
 - Job / step: `evict-main-conflicts` → `Remove queue entries that conflict with main`
 - Likely cause: cannot iterate over: null
@@ -42,7 +42,7 @@ cannot iterate over: null
 
 ### monitor-slack-link (`.github/workflows/monitor-slack-link.yml`)
 
-- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/44081384735 — dark (conclusion: `failure`), 2026-11-17 12:15 UTC
+- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/44145305662 — dark (conclusion: `failure`), 2026-11-17 18:12 UTC
 - Dark since: 2026-11-06 22:08 UTC (first run of the current streak)
 - Job / step: `monitor-slack-link` → `Set up Python 3.9`
 - Likely cause: The version '3.9' with architecture 'x64' was not found for Ubuntu 26.04.
@@ -50,43 +50,21 @@ cannot iterate over: null
 <details><summary>End of the job log</summary>
 
 ```
-Updating files:  99% (27101/27374)
-Updating files: 100% (27374/27374)
-Updating files: 100% (27374/27374), done.
+Updating files:  99% (27122/27395)
+Updating files: 100% (27395/27395)
+Updating files: 100% (27395/27395), done.
 Switched to a new branch 'main'
 branch 'main' set up to track 'origin/main'.
-c34d08956adc92508dd6455192a455322a0169bc
+65a6afbda3062e14fc33d4e1a71e6f9f566f5e83
 Version 3.9 was not found in the local cache
 ##[error]The version '3.9' with architecture 'x64' was not found for Ubuntu 26.04.
 ```
 
 </details>
 
-### Maven Collate Tests (`.github/workflows/maven-build-collate.yml`)
-
-- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/44074256162 — dark (conclusion: `failure`), 2026-11-17 11:28 UTC
-- Dark since: 2026-11-16 11:24 UTC (first run of the current streak)
-- Job / step: `maven-collate-ci` → `Trigger Collate build & wait`
-- Likely cause: Collate run did not succeed: https://github.com/open-metadata/openmetadata-collate/actions/runs/44074269164
-
-<details><summary>End of the job log</summary>
-
-```
-maven-collate-om-ci: .github#14
-! This method or constructor is empty; @SneakyThrows has been ignored.
-maven-collate-om-ci: .github#35
-! This method or constructor is empty; @SneakyThrows has been ignored.
-maven-collate-om-ci: .github#35
-! Not generating isSupportsOwners(): A method with that name already exists
-maven-collate-om-ci: .github#602
-##[error]Collate run did not succeed: https://github.com/open-metadata/openmetadata-collate/actions/runs/44074269164
-```
-
-</details>
-
 ### Integration Tests - MySQL + Elasticsearch (`.github/workflows/integration-tests-mysql-elasticsearch.yml`)
 
-- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/44074255950 — dark (conclusion: `failure`), 2026-11-17 11:27 UTC
+- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/44122416137 — dark (conclusion: `failure`), 2026-11-17 16:08 UTC
 - Dark since: 2026-11-16 11:25 UTC (first run of the current streak)
 - Job / step: `Integration Test Lane (global-state)` → `Run Integration Tests (MySQL + Elasticsearch)`
 - Likely cause: [ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
@@ -108,9 +86,9 @@ maven-collate-om-ci: .github#602
 
 ### Integration Tests - PostgreSQL + OpenSearch (`.github/workflows/integration-tests-postgres-opensearch.yml`)
 
-- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/44074256429 — dark (conclusion: `failure`), 2026-11-17 11:28 UTC
+- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/44122417167 — dark (conclusion: `failure`), 2026-11-17 16:08 UTC
 - Dark since: 2026-11-16 11:25 UTC (first run of the current streak)
-- Job / step: `Integration Test Lane (parallel)` → `Run Integration Tests (PostgreSQL + OpenSearch)`
+- Job / step: `Integration Test Lane (rdf)` → `Run Integration Tests (PostgreSQL + OpenSearch)`
 - Likely cause: [ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
 
 <details><summary>End of the job log</summary>
@@ -130,7 +108,7 @@ maven-collate-om-ci: .github#602
 
 ### Integration Tests - PostgreSQL + Elasticsearch + Redis (`.github/workflows/integration-tests-postgres-elasticsearch-redis.yml`)
 
-- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/44074256194 — dark (conclusion: `failure`), 2026-11-17 11:28 UTC
+- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/44122416005 — dark (conclusion: `failure`), 2026-11-17 16:08 UTC
 - Dark since: 2026-11-16 11:25 UTC (first run of the current streak)
 - Job / step: `Integration Test Lane (parallel)` → `Run Integration Tests (PostgreSQL + Elasticsearch + Redis)`
 - Likely cause: [ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

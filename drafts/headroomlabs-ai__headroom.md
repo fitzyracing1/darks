@@ -4,36 +4,37 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/headroomlabs-ai/headroom/issues/new
-- **Stars:** 79879 · **Generated:** 2026-11-17T12:40:23.310Z
+- **Stars:** 79905 · **Generated:** 2026-11-17T18:39:49.297Z
 - Nothing in this file has been sent anywhere.
+- **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: "CI" workflow failing on main since 2026-11-17
+CI: "PR Governance" workflow getting cancelled on main since 2026-11-17
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! The **CI** workflow (`.github/workflows/ci.yml`) on `main` has been failing since 2026-11-17. Here is what I saw, in case it's useful:
+Hi! The **PR Governance** workflow (`.github/workflows/pr-health.yml`) on `main` has been getting cancelled since 2026-11-17. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/headroomlabs-ai/headroom/actions/runs/44027113710 — dark (conclusion: `failure`), 2026-11-17 05:52 UTC
-- Dark since: 2026-11-17 05:26 UTC (first run of the current streak)
-- Job / step: `test (3)` → `Run test shard 3/4`
-- Likely cause: = 4967 passed, 120 skipped, 15250 deselected, 1173 warnings, 7 errors in 870.45s (0:14:30) =
+- Latest run on `main`: https://github.com/headroomlabs-ai/headroom/actions/runs/44103185862 — dark (conclusion: `cancelled`), 2026-11-17 14:26 UTC
+- Dark since: 2026-11-17 14:26 UTC (first run of the current streak)
+- Job / step: `label` → `Label open pull requests`
+- Likely cause: The job has exceeded the maximum execution time of 10m0s
 
 <details><summary>End of the job log</summary>
 
 ```
-ERROR tests/test_memory_sync_full_store.py::test_sync_refetch_after_import_does_not_truncate_exports - ImportError: hnswlib is required for HNSWVectorIndex. Install with: pip install hnswlib
-Note: hnswlib requires C++ compilation and may not be available on all platforms (crashes with SIGILL on CPUs without AVX support).
-ERROR tests/test_memory_sync_full_store.py::test_explicit_existing_snapshot_is_not_requeried - ImportError: hnswlib is required for HNSWVectorIndex. Install with: pip install hnswlib
-Note: hnswlib requires C++ compilation and may not be available on all platforms (crashes with SIGILL on CPUs without AVX support).
-ERROR tests/test_memory_sync_full_store.py::test_optional_unbounded_query_preserves_the_default_limit - ImportError: hnswlib is required for HNSWVectorIndex. Install with: pip install hnswlib
-Note: hnswlib requires C++ compilation and may not be available on all platforms (crashes with SIGILL on CPUs without AVX support).
-= 4967 passed, 120 skipped, 15250 deselected, 1173 warnings, 7 errors in 870.45s (0:14:30) =
-##[error]Process completed with exit code 1.
+https://github.com/headroomlabs-ai/headroom/pull/3647
+https://github.com/headroomlabs-ai/headroom/pull/3647
+https://github.com/headroomlabs-ai/headroom/pull/3647
+https://github.com/headroomlabs-ai/headroom/pull/3641
+https://github.com/headroomlabs-ai/headroom/pull/3641
+https://github.com/headroomlabs-ai/headroom/pull/3641
+https://github.com/headroomlabs-ai/headroom/pull/3640
+##[error]The operation was canceled.
 ```
 
 </details>

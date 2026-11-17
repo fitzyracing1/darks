@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/langchain-ai/langchain/issues/new
-- **Stars:** 149763 · **Generated:** 2026-11-17T12:40:23.310Z
+- **Stars:** 149783 · **Generated:** 2026-11-17T18:39:49.297Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -18,21 +18,21 @@ CI: "⏰ Integration Tests" workflow failing on master since 2026-10-09
 <!-- BEGIN BODY -->
 Hi! The **⏰ Integration Tests** workflow (`.github/workflows/integration_tests.yml`) on `master` has been failing since 2026-10-09. Here is what I saw, in case it's useful:
 
-- Latest run on `master`: https://github.com/langchain-ai/langchain/actions/runs/43873831422 — dark (conclusion: `failure`), 2026-11-16 13:14 UTC
+- Latest run on `master`: https://github.com/langchain-ai/langchain/actions/runs/44089139182 — dark (conclusion: `failure`), 2026-11-17 13:04 UTC
 - Dark since: 2026-10-09 13:10 UTC (first run of the current streak)
-- Job / step: `🐍 Python 3.11: libs/partners/xai` → `🚀 Run Integration Tests`
-- Likely cause: ======== 3 failed, 39 passed, 12 skipped, 1 xpassed in 69.17s (0:01:09) ========
+- Job / step: `🐍 Python 3.14: libs/partners/aws` → `🚀 Run Integration Tests`
+- Likely cause: = 248 failed, 255 passed, 269 skipped, 12 xfailed, 5 xpassed, 69 warnings in 169.23s (0:02:49) =
 
 <details><summary>End of the job log</summary>
 
 ```
-10.04s call     tests/integration_tests/test_chat_models_standard.py::TestXAIStandard::test_structured_output_async[json_schema]
-=========================== short test summary info ============================
-FAILED tests/integration_tests/test_chat_models.py::test_reasoning[] - KeyError: 'reasoning_content'
-FAILED tests/integration_tests/test_chat_models.py::test_reasoning[v1] - KeyError: 'reasoning_content'
-FAILED tests/integration_tests/test_chat_models_standard.py::TestXAIStandard::test_tool_calling[model1] - [XPASS(strict)] xAI v1 streaming aggregate does not surface tool_call content block; tool calls are only availabl…
-======== 3 failed, 39 passed, 12 skipped, 1 xpassed in 69.17s (0:01:09) ========
-make: *** [Makefile:22: integration_tests] Error 1
+FAILED tests/integration_tests/tools/test_nova.py::TestNovaStreaming::test_accumulating_chunks_into_full_message - botocore.exceptions.ClientError: An error occurred (501) when calling the ConverseStream operation:
+FAILED tests/integration_tests/tools/test_nova.py::TestNovaStreaming::test_chunk_content_structure - botocore.exceptions.ClientError: An error occurred (501) when calling the ConverseStream operation:
+FAILED tests/integration_tests/tools/test_nova.py::TestNovaStreaming::test_with_string_tool_names - botocore.exceptions.ClientError: An error occurred (501) when calling the ConverseStream operation:
+FAILED tests/integration_tests/tools/test_nova.py::TestNovaStreaming::test_empty_chunks_handling - botocore.exceptions.ClientError: An error occurred (501) when calling the ConverseStream operation:
+FAILED tests/integration_tests/tools/test_nova.py::TestNovaStreaming::test_with_both_system_tools - botocore.exceptions.ClientError: An error occurred (501) when calling the ConverseStream operation:
+= 248 failed, 255 passed, 269 skipped, 12 xfailed, 5 xpassed, 69 warnings in 169.23s (0:02:49) =
+make: *** [Makefile:33: integration_tests] Error 1
 ##[error]Process completed with exit code 2.
 ```
 

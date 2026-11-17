@@ -4,40 +4,45 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/NousResearch/hermes-agent/issues/new
-- **Stars:** 264072 · **Generated:** 2026-11-17T12:40:23.310Z
+- **Stars:** 264156 · **Generated:** 2026-11-17T18:39:49.297Z
 - Nothing in this file has been sent anywhere.
-- **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Skipped: upstream already tracking
 
 - Docker Build, Test, and Publish (`.github/workflows/docker.yml`): [issue #155129](https://github.com/NousResearch/hermes-agent/issues/155129) "Docker Build, Test, and Publish on main stuck since Nov 5 — run 42066863849 holds the concurrency group (publish jobs waiting on never-evaluated container-publish deployments)"
-- CI (`.github/workflows/ci.yaml`): [issue #152690](https://github.com/NousResearch/hermes-agent/issues/152690) "CI: a growing share of ci.yaml runs end at creation with zero jobs ("workflow file issue"), including pushes to main"
-- Nix flake check (`.github/workflows/nix.yml`): [issue #141750](https://github.com/NousResearch/hermes-agent/issues/141750) "nix flake check --no-build fails: uv2nix reads the filtered Python source at eval time"
 
 These workflows are left out of the body below.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 2 workflows dark on main ("Deploy Site", "Docs Search Monitor")
+CI: "Docs Search Monitor" workflow failing on main since 2026-11-17
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
+Hi! The **Docs Search Monitor** workflow (`.github/workflows/docs-search-monitor.yml`) on `main` has been failing since 2026-11-17. Here is what I saw, in case it's useful:
 
-### Deploy Site (`.github/workflows/deploy-site.yml`)
-
-- Latest run on `main`: https://github.com/NousResearch/hermes-agent/actions/runs/44083049737 — dark (conclusion: `cancelled`), 2026-11-17 12:25 UTC
-- Dark since: 2026-11-17 12:19 UTC (first run of the current streak)
-- Likely cause: run cancelled
-
-### Docs Search Monitor (`.github/workflows/docs-search-monitor.yml`)
-
-- Latest run on `main`: https://github.com/NousResearch/hermes-agent/actions/runs/44082863611 — dark (conclusion: `cancelled`), 2026-11-17 12:24 UTC
+- Latest run on `main`: https://github.com/NousResearch/hermes-agent/actions/runs/44147025904 — dark (conclusion: `failure`), 2026-11-17 18:21 UTC
 - Dark since: 2026-11-17 12:24 UTC (first run of the current streak)
-- Likely cause: run cancelled
+- Job / step: `probe` → `Probe live docs search`
+- Likely cause: search button never opened the search modal within 30s
+
+<details><summary>End of the job log</summary>
+
+```
+ok   query "telegram": 755 hits
+ok   query "install": 1766 hits
+ok   query "skills": 3225 hits
+ok   result opens: https://hermes-agent.nousresearch.com/docs/zh-Hans/user-guide/messaging/telegram
+ok   result opens: https://hermes-agent.nousresearch.com/docs/zh-Hans/user-guide/switching-to-source
+ok   result opens: https://hermes-agent.nousresearch.com/docs/zh-Hans/user-guide/skills/optional/software-development/software-development-hermes-agent-skill-authoring
+FAIL search button never opened the search modal within 30s
+##[error]search button never opened the search modal within 30s
+```
+
+</details>
 
 If this is already known or expected, feel free to close. Thanks for maintaining hermes-agent!
 

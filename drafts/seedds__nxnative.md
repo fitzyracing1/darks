@@ -4,8 +4,9 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/seedds/nxnative/issues/new
-- **Stars:** 15977 · **Generated:** 2026-11-17T12:40:23.310Z
+- **Stars:** 16008 · **Generated:** 2026-11-17T18:39:49.297Z
 - Nothing in this file has been sent anywhere.
+- **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
@@ -42,47 +43,15 @@ Base64: UEFDeDQwM0xCQUhTAAAAAAAAAAAAAAAAAAAAAABOQVJDAAAAAAIAAAAAAAB7AAAAAAAAAIAI
 
 ### tests (`.github/workflows/tests.yml`)
 
-- Latest run on `main`: https://github.com/seedds/nxnative/actions/runs/44081791863 — dark (conclusion: `failure`), 2026-11-17 12:17 UTC
+- Latest run on `main`: https://github.com/seedds/nxnative/actions/runs/44142606386 — dark (conclusion: `cancelled`), 2026-11-17 17:57 UTC
 - Dark since: 2026-11-06 01:42 UTC (first run of the current streak)
-- Job / step: `Build check (Mac host, gfx tests, iOS sources)` → `Every gfx test compiled, not run`
-- Likely cause: 66 warnings and 2 errors generated.
-
-<details><summary>End of the job log</summary>
-
-```
- 12931 | static int encode_args(id<MTLCommandEncoder> en, NvShader *sh, int nvn_stage, int metal_vertex) { cbs_note(sh); za_shader((__bridge const void *)sh, sh->key[0] ? sh->key : sh->builtin ? sh->builtin : "?"); AP_B…
-       |                                              ^
-66 warnings and 2 errors generated.
-make: *** [t_geometry] Error 1
-make: *** Waiting for unfinished jobs....
-make: *** [t_geometry_feedback] Error 1
-make: *** [t_geometry_hazards] Error 1
-##[error]Process completed with exit code 2.
-```
-
-</details>
+- Likely cause: run cancelled
 
 ### lint-c (`.github/workflows/lint-c.yml`)
 
-- Latest run on `main`: https://github.com/seedds/nxnative/actions/runs/44070325089 — dark (conclusion: `failure`), 2026-11-17 11:02 UTC
+- Latest run on `main`: https://github.com/seedds/nxnative/actions/runs/44138932967 — dark (conclusion: `cancelled`), 2026-11-17 17:36 UTC
 - Dark since: 2026-11-16 07:54 UTC (first run of the current streak)
-- Job / step: `clang-tidy (ratchet)` → `clang-tidy against the baseline`
-- Likely cause: clang-analyzer-nullability.NullablePassedToNonnull: 0 findings, the baseline still has 1: shrink it (python3 dm/tools/lint_c.py tidy --update) (dm/gfx/tests/t_logic.m)
-
-<details><summary>End of the job log</summary>
-
-```
-[344/348] dm/host/tests/t_vorbis.c: 0 findings
-[345/348] dm/host/tests/t_watch_sample.c: 0 findings
-[346/348] dm/host/tests/t_web_stack.c: 0 findings
-[347/348] dm/host/thread.c: 1 findings
-[348/348] dm/host/web_apple.m: 0 findings
-LLVM 23.1.4: 177 findings in 62 files, 104 file/check pairs
-dm/gfx/tests/t_geometry.m: clang-diagnostic-error: 2 findings, the baseline has 0
-##[error]use of undeclared identifier 'g_mdi_v'; did you mean 'g_mdx_n'? [clang-diagnostic-error] (2 in this file, the baseline has 0)
-```
-
-</details>
+- Likely cause: run cancelled
 
 If this is already known or expected, feel free to close. Thanks for maintaining nxnative!
 

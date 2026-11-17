@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/webiny/webiny-js/issues/new
-- **Stars:** 8053 · **Generated:** 2026-11-17T12:40:23.310Z
+- **Stars:** 8052 · **Generated:** 2026-11-17T18:39:49.297Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -86,25 +86,9 @@ GraphQL: Your token has not been granted the required scopes to execute this que
 
 ### Push (`.github/workflows/push.yml`)
 
-- Latest run on `next`: https://github.com/webiny/webiny-js/actions/runs/44078538209 — dark (conclusion: `failure`), 2026-11-17 11:56 UTC
+- Latest run on `next`: https://github.com/webiny/webiny-js/actions/runs/44096497021 — dark (conclusion: `failure`), 2026-11-17 13:48 UTC
 - Dark since: 2026-11-12 21:06 UTC (first run of the current streak)
-- Job / step: `E2E (DDB) - Project setup` → `Deploy API`
-- Likely cause: 4 errored
-
-<details><summary>End of the job log</summary>
-
-```
-    error:   sdk-v2/provider2.go:574: sdk.helper_schema: creating CloudFront Cache Policy (wby-api-web-wb-cache-policy-1826b3c): operation error CloudFront: CreateCachePolicy, https response error StatusCode: 403, Reque…
-    error: 1 error occurred:
-    \t* creating CloudFront Cache Policy (wby-api-web-wb-cache-policy-1826b3c): operation error CloudFront: CreateCachePolicy, https response error StatusCode: 403, RequestID: 48fcf011-aa43-4a2e-bc39-6a356aeeb416, Acces…
-Resources:
-    + 12 created
-    4 errored
-Duration: 10s
-##[error]Process completed with exit code 1.
-```
-
-</details>
+- Likely cause: step "E2E - run tests" in job "E2E (DDB) - Project setup" exited nonzero
 
 If this is already known or expected, feel free to close. Thanks for maintaining webiny-js!
 

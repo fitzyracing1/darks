@@ -4,9 +4,9 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/KnifeLemon/Filee/issues/new
-- **Stars:** 28344 · **Generated:** 2026-11-17T12:40:23.310Z
+- **Stars:** 28439 · **Generated:** 2026-11-17T18:39:49.297Z
 - Nothing in this file has been sent anywhere.
-- **Note for Joshua:** cancelled by a concurrency group — likely noise
+- **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
@@ -19,25 +19,9 @@ CI: "CI" workflow getting cancelled on main since 2026-11-15
 <!-- BEGIN BODY -->
 Hi! The **CI** workflow (`.github/workflows/ci.yml`) on `main` has been getting cancelled since 2026-11-15. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/KnifeLemon/Filee/actions/runs/44082307945 — dark (conclusion: `cancelled`), 2026-11-17 12:21 UTC
+- Latest run on `main`: https://github.com/KnifeLemon/Filee/actions/runs/44143261565 — dark (conclusion: `cancelled`), 2026-11-17 18:01 UTC
 - Dark since: 2026-11-15 17:58 UTC (first run of the current streak)
-- Job / step: `metadata (linux-x64)` → `Test`
-- Likely cause: Canceling since a higher priority waiting request for ci-refs/heads/main exists
-
-<details><summary>End of the job log</summary>
-
-```
-No VM guests are running outdated hypervisor (qemu) binaries on this host.
-/home/runner/work/_temp/exiftool.tar.gz: OK
-  Determining projects to restore...
-  Restored /home/runner/work/Filee/Filee/src/Filee.Core/Filee.Core.csproj (in 1.03 sec).
-  Restored /home/runner/work/Filee/Filee/src/Filee.Engines/Filee.Engines.csproj (in 5.54 sec).
-  Restored /home/runner/work/Filee/Filee/tests/Filee.Engines.Tests/Filee.Engines.Tests.csproj (in 5.54 sec).
-  Filee.Core -> /home/runner/work/Filee/Filee/src/Filee.Core/bin/Release/net10.0/Filee.Core.dll
-##[error]The operation was canceled.
-```
-
-</details>
+- Likely cause: run cancelled
 
 If this is already known or expected, feel free to close. Thanks for maintaining Filee!
 
