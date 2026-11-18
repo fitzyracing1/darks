@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/activepieces/activepieces/issues/new
-- **Stars:** 25590 · **Generated:** 2026-11-18T00:55:09.675Z
+- **Stars:** 25597 · **Generated:** 2026-11-18T06:45:12.554Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -20,43 +20,43 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### Chat Evals (`.github/workflows/agent-evals.yml`)
 
-- Latest run on `main`: https://github.com/activepieces/activepieces/actions/runs/44029726396 — dark (conclusion: `failure`), 2026-11-17 06:14 UTC
+- Latest run on `main`: https://github.com/activepieces/activepieces/actions/runs/44249867391 — dark (conclusion: `failure`), 2026-11-18 06:14 UTC
 - Dark since: 2026-10-13 06:26 UTC (first run of the current streak)
 - Job / step: `Live judge gate` → `Run live chat evals (scope=regression)`
-- Likely cause: Error: Hook timed out in 540000ms. (packages/server/worker/test/lib/agent-eval/agent-eval.test.ts:20)
+- Likely cause: AssertionError: see the eval report above for the failing checks: expected [ …(2) ] to deeply equal [] (packages/server/worker/test/lib/agent-eval/agent-eval.test.ts:58)
 
 <details><summary>End of the job log</summary>
 
 ```
-     21|         const fixtures = evalFixtures.load().filter((fixture) => SCOPE…
-     22|         const [fixtureResults, agreement] = await Promise.all([
+     59|     })
+     60| })
 ⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
  Test Files  1 failed | 12 passed (13)
-      Tests  89 passed | 1 skipped (90)
-   Start at  06:18:33
-   Duration  545.25s (tests 98%, import 2%, transform 1%)
-##[error]Error: Hook timed out in 540000ms.
+      Tests  1 failed | 89 passed (90)
+   Start at  06:19:01
+   Duration  419.30s (tests 97%, import 2%, transform 1%)
+##[error]AssertionError: see the eval report above for the failing checks: expected [ …(2) ] to deeply equal []
 ```
 
 </details>
 
 ### Benchmark (`.github/workflows/benchmark.yml`)
 
-- Latest run on `main`: https://github.com/activepieces/activepieces/actions/runs/44007701383 — dark (conclusion: `failure`), 2026-11-17 03:05 UTC
+- Latest run on `main`: https://github.com/activepieces/activepieces/actions/runs/44227948880 — dark (conclusion: `failure`), 2026-11-18 03:05 UTC
 - Dark since: 2026-10-30 03:06 UTC (first run of the current streak)
-- Job / step: `benchmark (dedicated, 1, 28, 0.5, 1G, 1, 768, true, 28)` → `Setup flow, platform API key, and wait for app`
-- Likely cause: ERROR: resolve piece versions: no result after 600 attempts
+- Job / step: `benchmark (shared, 1, 28, 0.5, 1G, 1, 768, false, 28)` → `Detect regression against trailing 14 runs (scheduled runs only)`
+- Likely cause: Box signals API responded 401: {"error":{"type":"invalid_request_error","message":"Unknown token. Send it as \"Authorization: ***"."}}
 
 <details><summary>End of the job log</summary>
 
 ```
-  worker → 0.5 vCPU                cpuset 0-15 (28 replica(s))
-Waiting for app to be ready...
-App is ready
-Authenticating...
-Signed up. Project: dGNH94EcxrdDd9wANcYLd
-Resolving piece versions from registry (polling /pieces up to 600s)...
-ERROR: resolve piece versions: no result after 600 attempts
+      "pct": 11.8125610152945,
+      "breach": ***
+    }
+  ],
+  "breachCount": 1
+}
+Box signals API responded 401: {"error":{"type":"invalid_request_error","message":"Unknown token. Send it as \"Authorization: ***"."}}
 ##[error]Process completed with exit code 1.
 ```
 

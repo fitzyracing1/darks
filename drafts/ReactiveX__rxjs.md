@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/ReactiveX/rxjs/issues/new
-- **Stars:** 31719 · **Generated:** 2026-11-18T00:55:09.675Z
+- **Stars:** 31719 · **Generated:** 2026-11-18T06:45:12.554Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -42,7 +42,7 @@ Node.js v24.12.0
 
 ### Extended property fuzzing (`.github/workflows/fuzz.yml`)
 
-- Latest run on `master`: https://github.com/ReactiveX/rxjs/actions/runs/42973114120 — dark (conclusion: `failure`), 2026-11-11 06:32 UTC
+- Latest run on `master`: https://github.com/ReactiveX/rxjs/actions/runs/44252186161 — dark (conclusion: `failure`), 2026-11-18 06:33 UTC
 - Dark since: 2026-09-16 06:45 UTC (first run of the current streak)
 - Job / step: `Observable and release-policy properties` → `Run extended properties; fast-check reports the reproduction seed on failure`
 - Likely cause: Could not find 'scripts/release/authorize-stage.test.mjs, scripts/release/install-pinned-npm.test.mjs, scripts/release/release-policy.test.mjs, scripts/release/release-candidate.test.mjs, scripts/release/stage-release.t…
@@ -51,12 +51,12 @@ Node.js v24.12.0
 <details><summary>End of the job log</summary>
 
 ```
- ✓ src/lifecycle.fuzz.spec.ts (1 test) 716ms
-     ✓ preserves sharing, ref-count, restart, terminal, abort, and teardown invariants  714ms
+ ✓ src/lifecycle.fuzz.spec.ts (1 test) 1003ms
+     ✓ preserves sharing, ref-count, restart, terminal, abort, and teardown invariants  1002ms
  Test Files  1 passed (1)
       Tests  1 passed (1)
-   Start at  06:32:48
-   Duration  927ms (transform 78ms, setup 0ms, import 102ms, tests 716ms, environment 0ms)
+   Start at  06:33:44
+   Duration  1.26s (transform 92ms, setup 0ms, import 121ms, tests 1.00s, environment 0ms)
 Could not find 'scripts/release/authorize-stage.test.mjs, scripts/release/install-pinned-npm.test.mjs, scripts/release/release-policy.test.mjs, scripts/release/release-candidate.test.mjs, scripts/release/stage-release.t…
 ##[error]Process completed with exit code 1.
 ```

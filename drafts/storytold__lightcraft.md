@@ -4,19 +4,21 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/storytold/lightcraft/issues/new
-- **Stars:** 16121 · **Generated:** 2026-11-18T00:55:09.675Z
+- **Stars:** 16126 · **Generated:** 2026-11-18T06:45:12.554Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: "SonarCloud" workflow failing on main since 2026-11-17
+CI: 2 workflows dark on main ("SonarCloud", "FreeBSD")
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! The **SonarCloud** workflow (`.github/workflows/sonarcloud.yml`) on `main` has been failing since 2026-11-17. Here is what I saw, in case it's useful:
+Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
+
+### SonarCloud (`.github/workflows/sonarcloud.yml`)
 
 - Latest run on `main`: https://github.com/storytold/lightcraft/actions/runs/44090686337 — dark (conclusion: `failure`), 2026-11-17 13:14 UTC
 - Dark since: 2026-11-17 02:58 UTC (first run of the current streak)
@@ -34,6 +36,28 @@ Hi! The **SonarCloud** workflow (`.github/workflows/sonarcloud.yml`) on `main` h
 16:03:43.151 INFO  EXECUTION SUCCESS
 16:03:43.152 INFO  Total time: 1:55.593s
 ##[error]Coverage shard 7 tests failed (exit 100); analysis was still uploaded
+```
+
+</details>
+
+### FreeBSD (`.github/workflows/freebsd.yml`)
+
+- Latest run on `main`: https://github.com/storytold/lightcraft/actions/runs/44236239203 — dark (conclusion: `failure`), 2026-11-18 04:17 UTC
+- Dark since: 2026-11-18 04:17 UTC (first run of the current streak)
+- Job / step: `freebsd / FreeBSD 15 x86_64 (build + test)` → `Build and test`
+- Likely cause: process didn't exit successfully: '/var/tmp/craft-target/debug/build/lightcraft/9d9393413b4ba0e9/out/lightcraft-9d9393413b4ba0e9' (signal: 11, SIGSEGV: invalid memory reference)
+
+<details><summary>End of the job log</summary>
+
+```
+test window_gpu::tests::composition_only_changes_windows_dx12_presentation ... ok
+test tests::ui_json_is_written_atomically ... ok
+test window_gpu::tests::marker_records_the_failed_renderer ... ok
+test window_gpu::tests::probe_fallback_is_silent ... ok
+error: test failed, to rerun pass `-p lightcraft --bin lightcraft`
+Caused by:
+  process didn't exit successfully: `/var/tmp/craft-target/debug/build/lightcraft/9d9393413b4ba0e9/out/lightcraft-9d9393413b4ba0e9` (signal: 11, SIGSEGV: invalid memory reference)
+##[error]Process completed with exit code 101.
 ```
 
 </details>

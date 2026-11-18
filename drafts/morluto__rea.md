@@ -4,24 +4,22 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/morluto/rea/issues/new
-- **Stars:** 466323 · **Generated:** 2026-11-18T00:55:09.675Z
+- **Stars:** 466837 · **Generated:** 2026-11-18T06:45:12.554Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 2 workflows dark on main ("Mutation sweep", "CI")
+CI: "Mutation sweep" workflow getting cancelled on main since 2026-11-17
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
+Hi! The **Mutation sweep** workflow (`.github/workflows/mutation.yml`) on `main` has been getting cancelled since 2026-11-17. Here is what I saw, in case it's useful:
 
-### Mutation sweep (`.github/workflows/mutation.yml`)
-
-- Latest run on `main`: https://github.com/morluto/rea/actions/runs/44019863741 — dark (conclusion: `cancelled`), 2026-11-17 04:49 UTC
+- Latest run on `main`: https://github.com/morluto/rea/actions/runs/44240010237 — dark (conclusion: `cancelled`), 2026-11-18 04:49 UTC
 - Dark since: 2026-11-17 04:49 UTC (first run of the current streak)
 - Job / step: `Mutation sweep (reverse-tools)` → `Run the complete configuration`
 - Likely cause: The job has exceeded the maximum execution time of 1h0m0s
@@ -29,23 +27,17 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 <details><summary>End of the job log</summary>
 
 ```
-Mutation testing 85% (elapsed: ~55m, remaining: ~9m) 785/1030 tested (108 survived, 0 timed out)
-Mutation testing 85% (elapsed: ~55m, remaining: ~9m) 787/1030 tested (109 survived, 0 timed out)
-Mutation testing 86% (elapsed: ~56m, remaining: ~9m) 789/1030 tested (109 survived, 0 timed out)
-Mutation testing 86% (elapsed: ~56m, remaining: ~9m) 791/1030 tested (109 survived, 0 timed out)
-Mutation testing 86% (elapsed: ~56m, remaining: ~9m) 792/1030 tested (109 survived, 0 timed out)
-Mutation testing 86% (elapsed: ~56m, remaining: ~9m) 793/1030 tested (109 survived, 0 timed out)
-Mutation testing 86% (elapsed: ~56m, remaining: ~9m) 796/1030 tested (109 survived, 0 timed out)
+Mutation testing 84% (elapsed: ~55m, remaining: ~10m) 739/1030 tested (93 survived, 0 timed out)
+Mutation testing 84% (elapsed: ~55m, remaining: ~10m) 741/1030 tested (93 survived, 0 timed out)
+Mutation testing 84% (elapsed: ~56m, remaining: ~10m) 742/1030 tested (93 survived, 0 timed out)
+Mutation testing 84% (elapsed: ~56m, remaining: ~10m) 744/1030 tested (94 survived, 0 timed out)
+Mutation testing 84% (elapsed: ~56m, remaining: ~10m) 745/1030 tested (94 survived, 0 timed out)
+Mutation testing 84% (elapsed: ~56m, remaining: ~10m) 746/1030 tested (95 survived, 0 timed out)
+Mutation testing 84% (elapsed: ~56m, remaining: ~10m) 747/1030 tested (96 survived, 0 timed out)
 ##[error]The operation was canceled.
 ```
 
 </details>
-
-### CI (`.github/workflows/ci.yml`)
-
-- Latest run on `main`: https://github.com/morluto/rea/actions/runs/44208791021 — dark (conclusion: `cancelled`), 2026-11-18 00:33 UTC
-- Dark since: 2026-11-17 23:48 UTC (first run of the current streak)
-- Likely cause: run cancelled
 
 If this is already known or expected, feel free to close. Thanks for maintaining rea!
 

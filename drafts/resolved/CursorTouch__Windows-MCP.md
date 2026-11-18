@@ -1,8 +1,8 @@
 <!-- dark-draft: CursorTouch/Windows-MCP -->
-<!-- draft-state: ready -->
+<!-- draft-state: resolved -->
 # Upstream issue draft: CursorTouch/Windows-MCP
 
-- **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
+- **Status:** resolved — lit again (2026-11-18); nothing to file
 - **Would be filed at:** https://github.com/CursorTouch/Windows-MCP/issues/new
 - **Stars:** 11833 · **Generated:** 2026-11-18T00:55:09.675Z
 - Nothing in this file has been sent anywhere.
