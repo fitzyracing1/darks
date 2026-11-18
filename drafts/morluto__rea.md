@@ -4,20 +4,22 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/morluto/rea/issues/new
-- **Stars:** 465915 · **Generated:** 2026-11-17T18:39:49.297Z
+- **Stars:** 466323 · **Generated:** 2026-11-18T00:55:09.675Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: "Mutation sweep" workflow getting cancelled on main since 2026-11-17
+CI: 2 workflows dark on main ("Mutation sweep", "CI")
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! The **Mutation sweep** workflow (`.github/workflows/mutation.yml`) on `main` has been getting cancelled since 2026-11-17. Here is what I saw, in case it's useful:
+Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
+
+### Mutation sweep (`.github/workflows/mutation.yml`)
 
 - Latest run on `main`: https://github.com/morluto/rea/actions/runs/44019863741 — dark (conclusion: `cancelled`), 2026-11-17 04:49 UTC
 - Dark since: 2026-11-17 04:49 UTC (first run of the current streak)
@@ -38,6 +40,12 @@ Mutation testing 86% (elapsed: ~56m, remaining: ~9m) 796/1030 tested (109 surviv
 ```
 
 </details>
+
+### CI (`.github/workflows/ci.yml`)
+
+- Latest run on `main`: https://github.com/morluto/rea/actions/runs/44208791021 — dark (conclusion: `cancelled`), 2026-11-18 00:33 UTC
+- Dark since: 2026-11-17 23:48 UTC (first run of the current streak)
+- Likely cause: run cancelled
 
 If this is already known or expected, feel free to close. Thanks for maintaining rea!
 

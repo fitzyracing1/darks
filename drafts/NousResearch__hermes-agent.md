@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/NousResearch/hermes-agent/issues/new
-- **Stars:** 264156 · **Generated:** 2026-11-17T18:39:49.297Z
+- **Stars:** 264226 · **Generated:** 2026-11-18T00:55:09.675Z
 - Nothing in this file has been sent anywhere.
 
 ## Skipped: upstream already tracking
@@ -16,30 +16,30 @@ These workflows are left out of the body below.
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: "Docs Search Monitor" workflow failing on main since 2026-11-17
+CI: "auto-fix lint issues & formatting" workflow failing on main since 2026-11-18
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! The **Docs Search Monitor** workflow (`.github/workflows/docs-search-monitor.yml`) on `main` has been failing since 2026-11-17. Here is what I saw, in case it's useful:
+Hi! The **auto-fix lint issues & formatting** workflow (`.github/workflows/js-autofix.yml`) on `main` has been failing since 2026-11-18. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/NousResearch/hermes-agent/actions/runs/44147025904 — dark (conclusion: `failure`), 2026-11-17 18:21 UTC
-- Dark since: 2026-11-17 12:24 UTC (first run of the current streak)
-- Job / step: `probe` → `Probe live docs search`
-- Likely cause: search button never opened the search modal within 30s
+- Latest run on `main`: https://github.com/NousResearch/hermes-agent/actions/runs/44206662170 — dark (conclusion: `failure`), 2026-11-18 00:17 UTC
+- Dark since: 2026-11-18 00:17 UTC (first run of the current streak)
+- Job / step: `Apply patch` → `Apply patch and push to bot branch`
+- Likely cause: error: failed to push some refs to 'https://github.com/NousResearch/hermes-agent'
 
 <details><summary>End of the job log</summary>
 
 ```
-ok   query "telegram": 755 hits
-ok   query "install": 1766 hits
-ok   query "skills": 3225 hits
-ok   result opens: https://hermes-agent.nousresearch.com/docs/zh-Hans/user-guide/messaging/telegram
-ok   result opens: https://hermes-agent.nousresearch.com/docs/zh-Hans/user-guide/switching-to-source
-ok   result opens: https://hermes-agent.nousresearch.com/docs/zh-Hans/user-guide/skills/optional/software-development/software-development-hermes-agent-skill-authoring
-FAIL search button never opened the search modal within 30s
-##[error]search button never opened the search modal within 30s
+Total of 1 artifact(s) downloaded
+Download artifact has finished successfully
+[main 4132b11ddde] fmt(js): `pnpm run fix` on merge
+ 650 files changed, 27392 insertions(+), 10752 deletions(-)
+To https://github.com/NousResearch/hermes-agent
+ ! [remote rejected]         HEAD -> bot/js-autofix (refusing to allow a GitHub App to create or update workflow `.github/workflows/README.md` without `workflows` permission)
+error: failed to push some refs to 'https://github.com/NousResearch/hermes-agent'
+##[error]Process completed with exit code 1.
 ```
 
 </details>

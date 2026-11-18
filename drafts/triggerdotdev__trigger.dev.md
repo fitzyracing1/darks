@@ -4,22 +4,19 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/triggerdotdev/trigger.dev/issues/new
-- **Stars:** 16776 · **Generated:** 2026-11-17T18:39:49.297Z
+- **Stars:** 16777 · **Generated:** 2026-11-18T00:55:09.675Z
 - Nothing in this file has been sent anywhere.
-- **Note for Joshua:** cancelled by a concurrency group — likely noise
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 2 workflows dark on main ("🛡️ E2E Tests: Webapp Auth (full)", "CodeQL")
+CI: "🛡️ E2E Tests: Webapp Auth (full)" workflow failing on main since 2026-11-11
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
-
-### 🛡️ E2E Tests: Webapp Auth (full) (`.github/workflows/e2e-webapp-auth-full.yml`)
+Hi! The **🛡️ E2E Tests: Webapp Auth (full)** workflow (`.github/workflows/e2e-webapp-auth-full.yml`) on `main` has been failing since 2026-11-11. Here is what I saw, in case it's useful:
 
 - Latest run on `main`: https://github.com/triggerdotdev/trigger.dev/actions/runs/44014137672 — dark (conclusion: `failure`), 2026-11-17 04:00 UTC
 - Dark since: 2026-11-11 04:00 UTC (first run of the current streak)
@@ -37,28 +34,6 @@ Express server closed gracefully.
 {"traceId":"58a6345bd43a3696989c44281d0516a3","parentId":"b2a12878c7afb5f6","message":"enqueueScheduledTask","spanId":"61bb7c097389c8e6","kind":0,"timestamp":1794888162288000,"duration":803.291,"attributes":{"instanceId…
 {"traceId":"58a6345bd43a3696989c44281d0516a3","message":"registerNextTaskScheduleInstance","spanId":"b2a12878c7afb5f6","kind":0,"timestamp":1794888162279000,"duration":9882.526,"attributes":{"instanceId":"cmwk62hnp000h5…
 ##[error]Process completed with exit code 1.
-```
-
-</details>
-
-### CodeQL (`.github/workflows/codeql.yml`)
-
-- Latest run on `main`: https://github.com/triggerdotdev/trigger.dev/actions/runs/44147885722 — dark (conclusion: `cancelled`), 2026-11-17 18:26 UTC
-- Dark since: 2026-11-17 18:26 UTC (first run of the current streak)
-- Job / step: `Analyze (actions)` → `Checkout repository`
-- Likely cause: Canceling since a higher priority waiting request for CodeQL-refs/heads/main exists
-
-<details><summary>End of the job log</summary>
-
-```
-hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
-hint: 'development'. The just-created branch can be renamed via this command:
-hint:
-hint: 	git branch -m <name>
-hint:
-hint: Disable this message with "git config set advice.defaultBranchName false"
-Initialized empty Git repository in /home/runner/work/trigger.dev/trigger.dev/.git/
-##[error]The operation was canceled.
 ```
 
 </details>

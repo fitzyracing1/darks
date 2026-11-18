@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/storytold/photocraft/issues/new
-- **Stars:** 80048 · **Generated:** 2026-11-17T18:39:49.297Z
+- **Stars:** 80104 · **Generated:** 2026-11-18T00:55:09.675Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -20,7 +20,7 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### CI (`.github/workflows/ci.yml`)
 
-- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/44118677186 — dark (conclusion: `failure`), 2026-11-17 15:49 UTC
+- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/44133203247 — dark (conclusion: `failure`), 2026-11-17 17:06 UTC
 - Dark since: 2026-11-17 15:41 UTC (first run of the current streak)
 - Job / step: `gate / gate (ubuntu-24.04)` → `Gate`
 - Likely cause: skip  panic_hunt
@@ -42,7 +42,7 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### SonarCloud (`.github/workflows/sonarcloud.yml`)
 
-- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/44118677380 — dark (conclusion: `failure`), 2026-11-17 15:49 UTC
+- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/44133202949 — dark (conclusion: `failure`), 2026-11-17 17:06 UTC
 - Dark since: 2026-11-17 15:41 UTC (first run of the current streak)
 - Job / step: `sonarcloud / SonarCloud Scan` → `Fail on Rust shard test failures`
 - Likely cause: Coverage shard 4 tests failed (exit 100); analysis was still uploaded
@@ -50,13 +50,13 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 <details><summary>End of the job log</summary>
 
 ```
-17:56:34.049 INFO  ------------- Upload SCA dependency files
-17:56:35.290 INFO  Successfully sent architecture data
-17:56:36.688 INFO  Sensor cache published successfully
-17:56:38.408 INFO  Analysis total time: 3:24.441 min
-17:56:38.409 INFO  SonarScanner Engine completed successfully
-17:56:38.569 INFO  EXECUTION SUCCESS
-17:56:38.570 INFO  Total time: 3:31.484s
+19:17:51.899 INFO  ------------- Upload SCA dependency files
+19:17:53.542 INFO  Successfully sent architecture data
+19:17:54.945 INFO  Sensor cache published successfully
+19:17:58.441 INFO  Analysis total time: 2:53.587 min
+19:17:58.442 INFO  SonarScanner Engine completed successfully
+19:17:58.584 INFO  EXECUTION SUCCESS
+19:17:58.585 INFO  Total time: 2:58.160s
 ##[error]Coverage shard 1 tests failed (exit 100); analysis was still uploaded
 ```
 

@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/webiny/webiny-js/issues/new
-- **Stars:** 8052 · **Generated:** 2026-11-17T18:39:49.297Z
+- **Stars:** 8052 · **Generated:** 2026-11-18T00:55:09.675Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -20,21 +20,21 @@ Hi! A few workflows on `next` have been dark recently. Details below, in case th
 
 ### Cloud infrastructure Cleanup (`.github/workflows/cleanup.yml`)
 
-- Latest run on `next`: https://github.com/webiny/webiny-js/actions/runs/43985785612 — dark (conclusion: `failure`), 2026-11-17 00:12 UTC
+- Latest run on `next`: https://github.com/webiny/webiny-js/actions/runs/44205983540 — dark (conclusion: `failure`), 2026-11-18 00:13 UTC
 - Dark since: 2026-10-10 00:23 UTC (first run of the current streak)
 - Job / step: `aws-nuke` → `Run AWS Nuke`
-- Likely cause: time="2026-11-17T00:29:15Z" level=fatal msg=failed
+- Likely cause: time="2026-11-18T00:31:26Z" level=fatal msg=failed
 
 <details><summary>End of the job log</summary>
 
 ```
 global - IAMPolicy - arn:aws:iam::726952677045:policy/DeployWebinyProjectExtra - [ARN: "arn:aws:iam::726952677045:policy/DeployWebinyProjectExtra", CreateDate: "2024-11-08T04:19:21Z", Name: "DeployWebinyProjectExtra", P…
 DeleteConflict: Cannot delete a policy attached to entities.
-	status code: 409, request id: 10ac18a9-9584-4174-b201-004f89438322
+	status code: 409, request id: bcf20172-f5be-447f-a00d-52865c79a617
 global - IAMPolicy - arn:aws:iam::726952677045:policy/DeployWebinyProjectGroup3 - [ARN: "arn:aws:iam::726952677045:policy/DeployWebinyProjectGroup3", CreateDate: "2024-11-28T06:06:51Z", Name: "DeployWebinyProjectGroup3"…
 DeleteConflict: Cannot delete a policy attached to entities.
-	status code: 409, request id: c8c4d2ac-c63a-4a9b-8656-ba080959681d
-time="2026-11-17T00:29:15Z" level=fatal msg=failed
+	status code: 409, request id: 19a32114-69fc-4261-af39-458e029f7b8b
+time="2026-11-18T00:31:26Z" level=fatal msg=failed
 ##[error]Process completed with exit code 1.
 ```
 
@@ -86,9 +86,25 @@ GraphQL: Your token has not been granted the required scopes to execute this que
 
 ### Push (`.github/workflows/push.yml`)
 
-- Latest run on `next`: https://github.com/webiny/webiny-js/actions/runs/44096497021 — dark (conclusion: `failure`), 2026-11-17 13:48 UTC
+- Latest run on `next`: https://github.com/webiny/webiny-js/actions/runs/44194167007 — dark (conclusion: `failure`), 2026-11-17 22:52 UTC
 - Dark since: 2026-11-12 21:06 UTC (first run of the current streak)
-- Likely cause: step "E2E - run tests" in job "E2E (DDB) - Project setup" exited nonzero
+- Job / step: `E2E (DDB+OS) - Project setup` → `Deploy API`
+- Likely cause: 4 errored
+
+<details><summary>End of the job log</summary>
+
+```
+    error:   sdk-v2/provider2.go:574: sdk.helper_schema: creating CloudFront Cache Policy (wby-api-web-route-cache-policy-358f2b8): operation error CloudFront: CreateCachePolicy, https response error StatusCode: 400, Re…
+    error: 1 error occurred:
+    \t* creating CloudFront Cache Policy (wby-api-web-route-cache-policy-358f2b8): operation error CloudFront: CreateCachePolicy, https response error StatusCode: 400, RequestID: 0bdb2945-2552-4145-9778-d1530b999b5a, To…
+Resources:
+    + 13 created
+    4 errored
+Duration: 12s
+##[error]Process completed with exit code 1.
+```
+
+</details>
 
 If this is already known or expected, feel free to close. Thanks for maintaining webiny-js!
 

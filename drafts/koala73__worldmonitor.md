@@ -4,36 +4,36 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/koala73/worldmonitor/issues/new
-- **Stars:** 90836 · **Generated:** 2026-11-17T18:39:49.297Z
+- **Stars:** 90852 · **Generated:** 2026-11-18T00:55:09.675Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: "Security Audit" workflow failing on main since 2026-11-17
+CI: "Feed Validation" workflow failing on main since 2026-11-18
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! The **Security Audit** workflow (`.github/workflows/security-audit.yml`) on `main` has been failing since 2026-11-17. Here is what I saw, in case it's useful:
+Hi! The **Feed Validation** workflow (`.github/workflows/feed-validation.yml`) on `main` has been failing since 2026-11-18. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/koala73/worldmonitor/actions/runs/44144145056 — dark (conclusion: `failure`), 2026-11-17 18:05 UTC
-- Dark since: 2026-11-17 18:05 UTC (first run of the current streak)
-- Job / step: `audit-lockfile` → `Audit package-lock.json`
-- Likely cause: high GHSA-fc5q-39xc-vjpf picomatch: picomatch vulnerable to ReDoS through single-branch repeated extglobs (https://github.com/advisories/GHSA-fc5q-39xc-vjpf) — published 2026-10-19, grace ended 2026-10-26.
+- Latest run on `main`: https://github.com/koala73/worldmonitor/actions/runs/44205858876 — dark (conclusion: `failure`), 2026-11-18 00:12 UTC
+- Dark since: 2026-11-18 00:12 UTC (first run of the current streak)
+- Job / step: `validate` → `Run npm run test:feeds:ci`
+- Likely cause: FAIL: 4 feed(s) violate the CI guardrails (allowlist drift or plaintext URL). Fix shared/news-catalog.json and/or the 4 allowlist mirrors (shared/rss-allowed-domains.json, .cjs, scripts/shared/rss-allowed-domains.json, …
 
 <details><summary>End of the job log</summary>
 
 ```
-branch 'main' set up to track 'origin/main'.
-b0517712725fbc19f2be21563633461851c26b56
-Found in cache @ /opt/hostedtoolcache/node/24.22.2/x64
-node: v24.22.2
-npm: 11.19.1
-yarn: 1.22.22
-Production audit FAILED for package-lock.json: 1 blocking advisory/advisories.
-##[error]high GHSA-fc5q-39xc-vjpf picomatch: picomatch vulnerable to ReDoS through single-branch repeated extglobs (https://github.com/advisories/GHSA-fc5q-39xc-vjpf) — published 2026-10-19, grace ended 2026-10-26.
+  Reuters — St. Kitts & Nevis         | https://news.google.com/rss/search?q=site%3Areuters.com+%28%22St.+Kitts+%26+Nevis%22%29+when%3A30d&hl=en-US&gl=US&ceid=US%3Aen
+  Samoa Global News                   | https://samoaglobalnews.com/feed/
+  The St. Kitts-Nevis Observer        | https://www.thestkittsnevisobserver.com/feed/
+  WINNFM 98.9                         | https://winnfm.com/feed/
+  Bellingcat                          | https://news.google.com/rss/search?q=site%3Abellingcat.com%20when%3A7d&hl=en-US&gl=US&ceid=US:en
+FAIL: 4 feed(s) violate the CI guardrails (allowlist drift or plaintext URL). Fix shared/news-catalog.json and/or the 4 allowlist mirrors (shared/rss-allowed-domains.json, .cjs, scripts/shared/rss-allowed-domains.json, …
+Summary: 1255 OK, 11 stale, 89 dead, 40 empty, 1 skipped
+##[error]Process completed with exit code 1.
 ```
 
 </details>

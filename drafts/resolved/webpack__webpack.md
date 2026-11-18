@@ -1,8 +1,8 @@
 <!-- dark-draft: webpack/webpack -->
-<!-- draft-state: ready -->
+<!-- draft-state: resolved -->
 # Upstream issue draft: webpack/webpack
 
-- **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
+- **Status:** resolved — lit again (2026-11-18); nothing to file
 - **Would be filed at:** https://github.com/webpack/webpack/issues/new
 - **Stars:** 66009 · **Generated:** 2026-11-17T18:39:49.297Z
 - Nothing in this file has been sent anywhere.

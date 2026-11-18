@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/open-metadata/OpenMetadata/issues/new
-- **Stars:** 15798 · **Generated:** 2026-11-17T18:39:49.297Z
+- **Stars:** 15802 · **Generated:** 2026-11-18T00:55:09.675Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -42,7 +42,7 @@ cannot iterate over: null
 
 ### monitor-slack-link (`.github/workflows/monitor-slack-link.yml`)
 
-- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/44145305662 — dark (conclusion: `failure`), 2026-11-17 18:12 UTC
+- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/44208042005 — dark (conclusion: `failure`), 2026-11-18 00:28 UTC
 - Dark since: 2026-11-06 22:08 UTC (first run of the current streak)
 - Job / step: `monitor-slack-link` → `Set up Python 3.9`
 - Likely cause: The version '3.9' with architecture 'x64' was not found for Ubuntu 26.04.
@@ -64,31 +64,31 @@ Version 3.9 was not found in the local cache
 
 ### Integration Tests - MySQL + Elasticsearch (`.github/workflows/integration-tests-mysql-elasticsearch.yml`)
 
-- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/44122416137 — dark (conclusion: `failure`), 2026-11-17 16:08 UTC
+- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/44142706357 — dark (conclusion: `failure`), 2026-11-17 17:58 UTC
 - Dark since: 2026-11-16 11:25 UTC (first run of the current streak)
-- Job / step: `Integration Test Lane (global-state)` → `Run Integration Tests (MySQL + Elasticsearch)`
-- Likely cause: [ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+- Job / step: `Integration Test Lane (parallel)` → `Run Integration Tests (MySQL + Elasticsearch)`
+- Likely cause: INFO  [2026-11-17 19:07:15,188] org.openmetadata.service.OpenMetadataApplication: Cache with name Stats CacheStats{hitCount=91480, missCount=126494, loadSuccessCount=0, loadExceptionCount=0, totalLoadTime=0, evictionCou…
 
 <details><summary>End of the job log</summary>
 
 ```
-[ERROR] -> [Help 1]
-[ERROR]
-[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
-[ERROR] Re-run Maven using the -X switch to enable full debug logging.
-[ERROR]
-[ERROR] For more information about the errors and possible solutions, please read the following articles:
-[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
-##[error]Process completed with exit code 1.
+INFO  [2026-11-17 19:07:15,609] org.openmetadata.service.OpenMetadataApplication: Stopping the application
+INFO  [2026-11-17 19:07:15,610] org.openmetadata.service.security.auth.UserActivityTracker: Shutting down UserActivityTracker...
+INFO  [2026-11-17 19:07:15,613] org.openmetadata.service.socket.DbWebSocketRelay: DbWebSocketRelay stopped instance=runnervmccnms:2834:1794938704866
+INFO  [2026-11-17 19:07:15,613] org.openmetadata.service.jdbi3.HikariCPDataSourceFactory: Shutting down HikariCP connection pool: database
+INFO  [2026-11-17 19:07:15,613] com.zaxxer.hikari.HikariDataSource: database - Shutdown initiated...
+INFO  [2026-11-17 19:07:15,619] com.zaxxer.hikari.HikariDataSource: database - Shutdown completed.
+INFO  [2026-11-17 19:07:15,620] org.openmetadata.service.rdf.RdfBackgroundScheduler: RDF background scheduler stopped
+##[error]Process completed with exit code 124.
 ```
 
 </details>
 
 ### Integration Tests - PostgreSQL + OpenSearch (`.github/workflows/integration-tests-postgres-opensearch.yml`)
 
-- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/44122417167 — dark (conclusion: `failure`), 2026-11-17 16:08 UTC
+- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/44142706460 — dark (conclusion: `failure`), 2026-11-17 17:58 UTC
 - Dark since: 2026-11-16 11:25 UTC (first run of the current streak)
-- Job / step: `Integration Test Lane (rdf)` → `Run Integration Tests (PostgreSQL + OpenSearch)`
+- Job / step: `Integration Test Lane (global-state)` → `Run Integration Tests (PostgreSQL + OpenSearch)`
 - Likely cause: [ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
 
 <details><summary>End of the job log</summary>
@@ -108,9 +108,9 @@ Version 3.9 was not found in the local cache
 
 ### Integration Tests - PostgreSQL + Elasticsearch + Redis (`.github/workflows/integration-tests-postgres-elasticsearch-redis.yml`)
 
-- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/44122416005 — dark (conclusion: `failure`), 2026-11-17 16:08 UTC
+- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/44142706227 — dark (conclusion: `failure`), 2026-11-17 17:58 UTC
 - Dark since: 2026-11-16 11:25 UTC (first run of the current streak)
-- Job / step: `Integration Test Lane (parallel)` → `Run Integration Tests (PostgreSQL + Elasticsearch + Redis)`
+- Job / step: `Integration Test Lane (global-state)` → `Run Integration Tests (PostgreSQL + Elasticsearch + Redis)`
 - Likely cause: [ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
 
 <details><summary>End of the job log</summary>

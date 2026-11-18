@@ -4,13 +4,13 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/langflow-ai/langflow/issues/new
-- **Stars:** 156723 · **Generated:** 2026-11-17T18:39:49.297Z
+- **Stars:** 156722 · **Generated:** 2026-11-18T00:55:09.675Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 5 workflows dark on main ("Deploy Storybook to GitHub Pages", "Cross-Bundle Test", "Store pytest durations", +2 more)
+CI: 4 workflows dark on main ("Deploy Storybook to GitHub Pages", "Cross-Bundle Test", "Store pytest durations", +1 more)
 <!-- END TITLE -->
 
 ## Body
@@ -20,10 +20,10 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### Deploy Storybook to GitHub Pages (`.github/workflows/deploy-storybook.yml`)
 
-- Latest run on `main`: https://github.com/langflow-ai/langflow/actions/runs/42892406169 — dark (conclusion: `failure`), 2026-11-10 20:09 UTC
+- Latest run on `main`: https://github.com/langflow-ai/langflow/actions/runs/44160401480 — dark (conclusion: `failure`), 2026-11-17 19:36 UTC
 - Dark since: 2026-09-16 01:11 UTC (first run of the current streak)
 - Job / step: `Deploy Storybook` → `Deploy to GitHub Pages`
-- Likely cause: Error: Failed to create deployment (status: 400) with build version 5abad254f9cd8589e1f95b57e207dfb7840b5d61. Request ID 4889:114872:B7835:13E48A:6AF37A6E Responded with: Missing environment. Ensure your workflow's deployment job has an env
+- Likely cause: Error: Failed to create deployment (status: 400) with build version 7296958064e7dde5a0a71b0afce2d4510c6d5ada. Request ID 24C2:36E96:109A579:344B896:6AFCAD4B Responded with: Missing environment. Ensure your workflow's deployment job has an e
 
 <details><summary>End of the job log</summary>
 
@@ -31,8 +31,8 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 Found 1 artifact(s)
 Creating Pages deployment with payload:
 {
-	"artifact_id": 13797624935,
-	"pages_build_version": "5abad254f9cd8589e1f95b57e207dfb7840b5d61",
+	"artifact_id": 14363870300,
+	"pages_build_version": "7296958064e7dde5a0a71b0afce2d4510c6d5ada",
 	"oidc_token": "***"
 }
 ##[error]Creating Pages deployment failed
@@ -84,31 +84,9 @@ FAILED src/bundles/google/tests/test_workspace_network_errors.py::test_network_f
 
 </details>
 
-### Mend (`.github/workflows/mend.yml`)
-
-- Latest run on `main`: https://github.com/langflow-ai/langflow/actions/runs/43927231843 — dark (conclusion: `failure`), 2026-11-16 18:17 UTC
-- Dark since: 2026-11-16 18:17 UTC (first run of the current streak)
-- Job / step: `mend-scan` → `Run Mend Scan`
-- Likely cause: Process finished with exit code SERVER_FAILURE (-5)
-
-<details><summary>End of the job log</summary>
-
-```
-   PIP                                               COMPLETED                  00:02:53.620               2654 total dependencies (751 unique)
-   HTML                                              COMPLETED                  00:00:00.721               1 total dependencies (1 unique)
-Scan Files Matching Includes Pattern                 COMPLETED                  00:00:02.824               0 source/binary files
-======================================================================================================================================================
-Elapsed running time:                                                           00:03:08.009
-======================================================================================================================================================
-Process finished with exit code SERVER_FAILURE (-5)
-##[error]Process completed with exit code 251.
-```
-
-</details>
-
 ### GP Download Translations (`.github/workflows/gp-download.yml`)
 
-- Latest run on `main`: https://github.com/langflow-ai/langflow/actions/runs/43975451828 — dark (conclusion: `failure`), 2026-11-16 23:01 UTC
+- Latest run on `main`: https://github.com/langflow-ai/langflow/actions/runs/44195500509 — dark (conclusion: `failure`), 2026-11-17 23:00 UTC
 - Dark since: 2026-11-16 23:01 UTC (first run of the current streak)
 - Job / step: `Download translations from Globalization Pipeline` → `Download translations from GP`
 - Likely cause: FAILED languages: ['fr', 'ja', 'es', 'de', 'pt', 'zh-Hans']
@@ -119,9 +97,9 @@ Process finished with exit code SERVER_FAILURE (-5)
 Downloading 'de' translations...
   Error downloading 'de': 401 Client Error: Unauthorized for url: https://g11n-pipeline-api.straker.global/translate/rest/langflow-test/v2/bundles/langflow-ui/de
 Downloading 'pt' translations...
-  Error downloading 'pt': 401 Client Error: Unauthorized for url: https://g11n-pipeline-api.straker.global/translate/rest/langflow-test/v2/bundles/langflow-ui/pt
+  Error downloading 'pt': 403 Client Error: Forbidden for url: https://g11n-pipeline-api.straker.global/translate/rest/langflow-test/v2/bundles/langflow-ui/pt
 Downloading 'zh-Hans' translations...
-  Error downloading 'zh-Hans': 401 Client Error: Unauthorized for url: https://g11n-pipeline-api.straker.global/translate/rest/langflow-test/v2/bundles/langflow-ui/zh-Hans
+  Error downloading 'zh-Hans': 403 Client Error: Forbidden for url: https://g11n-pipeline-api.straker.global/translate/rest/langflow-test/v2/bundles/langflow-ui/zh-Hans
 FAILED languages: ['fr', 'ja', 'es', 'de', 'pt', 'zh-Hans']
 ##[error]Process completed with exit code 1.
 ```

@@ -4,45 +4,21 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/beenuar/AiSOC/issues/new
-- **Stars:** 8054 · **Generated:** 2026-11-17T18:39:49.297Z
+- **Stars:** 8064 · **Generated:** 2026-11-18T00:55:09.675Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 2 workflows dark on main ("Grading integrity", "Deploy Docs to GitHub Pages")
+CI: "Deploy Docs to GitHub Pages" workflow failing on main since 2026-11-16
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
+Hi! The **Deploy Docs to GitHub Pages** workflow (`.github/workflows/deploy-docs.yml`) on `main` has been failing since 2026-11-16. Here is what I saw, in case it's useful:
 
-### Grading integrity (`.github/workflows/grading-integrity.yml`)
-
-- Latest run on `main`: https://github.com/beenuar/AiSOC/actions/runs/44102199898 — dark (conclusion: `failure`), 2026-11-17 14:21 UTC
-- Dark since: 2026-11-16 12:10 UTC (first run of the current streak)
-- Job / step: `No run on main ended cancelled` → `Ask the Actions API what actually ran`
-- Likely cause: the cancellation is correct, record it in that gate's EXCEPTIONS with the
-
-<details><summary>End of the job log</summary>
-
-```
-Find out why it was cancelled. If a concurrency group did it,
-scripts/check_workflow_concurrency.py explains the shape and the fix. If
-the cancellation is correct, record it in that gate's EXCEPTIONS with the
-reason and what is lost.
-Re-run it rather than excusing it, and do so now: the window above is the
-whole of what this gate can see, so once the run ages out of it this
-report goes green with nothing fixed.
-##[error]Process completed with exit code 1.
-```
-
-</details>
-
-### Deploy Docs to GitHub Pages (`.github/workflows/deploy-docs.yml`)
-
-- Latest run on `main`: https://github.com/beenuar/AiSOC/actions/runs/44095810591 — dark (conclusion: `failure`), 2026-11-17 13:44 UTC
+- Latest run on `main`: https://github.com/beenuar/AiSOC/actions/runs/44204827293 — dark (conclusion: `failure`), 2026-11-18 00:04 UTC
 - Dark since: 2026-11-16 12:50 UTC (first run of the current streak)
 - Job / step: `Build Docusaurus` → `Build docs`
 - Likely cause: ERR_PNPM_RECURSIVE_RUN_FIRST_FAIL  @aisoc/docs@0.0.1 build: 'docusaurus build'

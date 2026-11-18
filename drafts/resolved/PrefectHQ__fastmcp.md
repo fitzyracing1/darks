@@ -1,8 +1,8 @@
 <!-- dark-draft: PrefectHQ/fastmcp -->
-<!-- draft-state: ready -->
+<!-- draft-state: resolved -->
 # Upstream issue draft: PrefectHQ/fastmcp
 
-- **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
+- **Status:** resolved — lit again (2026-11-18); nothing to file
 - **Would be filed at:** https://github.com/PrefectHQ/fastmcp/issues/new
 - **Stars:** 28628 · **Generated:** 2026-11-17T18:39:49.297Z
 - Nothing in this file has been sent anywhere.
