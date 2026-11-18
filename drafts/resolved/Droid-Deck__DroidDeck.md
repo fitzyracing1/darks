@@ -1,8 +1,8 @@
 <!-- dark-draft: Droid-Deck/DroidDeck -->
-<!-- draft-state: ready -->
+<!-- draft-state: resolved -->
 # Upstream issue draft: Droid-Deck/DroidDeck
 
-- **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
+- **Status:** resolved — lit again (2026-11-18); nothing to file
 - **Would be filed at:** https://github.com/Droid-Deck/DroidDeck/issues/new
 - **Stars:** 20680 · **Generated:** 2026-11-18T06:45:12.554Z
 - Nothing in this file has been sent anywhere.

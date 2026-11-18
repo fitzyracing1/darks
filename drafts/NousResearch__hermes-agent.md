@@ -4,7 +4,7 @@
 
 - **Status:** not for filing — upstream already has an open issue/PR about every dark workflow here
 - **Would be filed at:** https://github.com/NousResearch/hermes-agent/issues/new
-- **Stars:** 264295 · **Generated:** 2026-11-18T06:45:12.554Z
+- **Stars:** 264385 · **Generated:** 2026-11-18T12:42:30.883Z
 - Nothing in this file has been sent anywhere.
 
 ## Skipped: upstream already tracking

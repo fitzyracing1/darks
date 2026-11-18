@@ -4,14 +4,14 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/storytold/photocraft/issues/new
-- **Stars:** 80160 · **Generated:** 2026-11-18T06:45:12.554Z
+- **Stars:** 80212 · **Generated:** 2026-11-18T12:42:30.883Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 5 workflows dark on main ("CI", "SonarCloud", "FreeBSD", +2 more)
+CI: 6 workflows dark on main ("CI", "SonarCloud", "FreeBSD", +3 more)
 <!-- END TITLE -->
 
 ## Body
@@ -21,21 +21,21 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### CI (`.github/workflows/ci.yml`)
 
-- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/44133203247 — dark (conclusion: `failure`), 2026-11-17 17:06 UTC
+- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/44278542810 — dark (conclusion: `failure`), 2026-11-18 09:43 UTC
 - Dark since: 2026-11-17 15:41 UTC (first run of the current streak)
-- Job / step: `gate / gate (ubuntu-24.04)` → `Gate`
-- Likely cause: skip  panic_hunt
+- Job / step: `corpus tests` → `Corpus tests`
+- Likely cause: error: cargo test --release --features corpus,heif (photocraft-io, photocraft-engine): exited with exit status: 101
 
 <details><summary>End of the job log</summary>
 
 ```
-  FAIL  panel-commands: 0 unrouted click handler(s), 1 stale allowlist entr(y/ies)
-  skip  scorecard
-  skip  test
-  skip  panic_hunt
-  skip  doctest
-  skip  wasm
-  skip  i18n
+711 |         s.actions.list.iter().find(|a| a.name == "Parent").unwrap().steps.clone()
+    |                        ^^^^ method not found in `craft::craft_automation::actions::ActionList`
+Some errors have detailed explanations: E0308, E0599.
+For more information about an error, try `rustc --explain E0308`.
+error: could not compile `photocraft-engine` (lib test) due to 2 previous errors
+warning: build failed, waiting for other jobs to finish...
+error: cargo test --release --features corpus,heif (photocraft-io, photocraft-engine): exited with exit status: 101
 ##[error]Process completed with exit code 1.
 ```
 
@@ -43,22 +43,22 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### SonarCloud (`.github/workflows/sonarcloud.yml`)
 
-- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/44133202949 — dark (conclusion: `failure`), 2026-11-17 17:06 UTC
+- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/44278542757 — dark (conclusion: `failure`), 2026-11-18 09:43 UTC
 - Dark since: 2026-11-17 15:41 UTC (first run of the current streak)
-- Job / step: `sonarcloud / SonarCloud Scan` → `Fail on Rust shard test failures`
-- Likely cause: Coverage shard 4 tests failed (exit 100); analysis was still uploaded
+- Job / step: `sonarcloud / Build instrumented test archive` → `Build instrumented test archive`
+- Likely cause: warning: build failed, waiting for other jobs to finish...
 
 <details><summary>End of the job log</summary>
 
 ```
-19:17:51.899 INFO  ------------- Upload SCA dependency files
-19:17:53.542 INFO  Successfully sent architecture data
-19:17:54.945 INFO  Sensor cache published successfully
-19:17:58.441 INFO  Analysis total time: 2:53.587 min
-19:17:58.442 INFO  SonarScanner Engine completed successfully
-19:17:58.584 INFO  EXECUTION SUCCESS
-19:17:58.585 INFO  Total time: 2:58.160s
-##[error]Coverage shard 1 tests failed (exit 100); analysis was still uploaded
+18 | photocraft-formats = { workspace = true }
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   |
+   = note: `cargo::unused_dependencies` is set to `warn` by default
+help: consider removing the dependency on `photocraft-formats`
+warning: `photocraft-format` (manifest) generated 1 warning
+error: command `/home/runner/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/bin/cargo '--color=always' test --no-run '--message-format=json-render-diagnostics' --workspace` exited with code 101
+##[error]Process completed with exit code 101.
 ```
 
 </details>
@@ -125,6 +125,28 @@ error: could not compile `photocraft-ui-egui` (lib) due to 13 previous errors
 warning: build failed, waiting for other jobs to finish...
 error: cargo build --release -p photocraft-ui-egui --example perf_scenarios --example perf_scenarios --example flat_open_bench --example interactive_bench --example fx_bench --example bevel_bench --example camera_raw_be…
 ##[error]Process completed with exit code 1.
+```
+
+</details>
+
+### ast-grep (`.github/workflows/ast-grep.yml`)
+
+- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/44276194392 — dark (conclusion: `failure`), 2026-11-18 09:28 UTC
+- Dark since: 2026-11-18 09:28 UTC (first run of the current streak)
+- Job / step: `scan / scan` → `ast-grep`
+- Likely cause: String as an error type (apps/photocraft/src/main.rs:102)
+
+<details><summary>End of the job log</summary>
+
+```
+Running 4 tests
+----------- Case Details -----------
+PASS args-os  ..........
+PASS string-error  ............
+PASS clap-error-message  ............
+PASS clap-error-message-variable  ..........
+test result: ok. 4 passed; 0 failed;
+##[error]String as an error type
 ```
 
 </details>

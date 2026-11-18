@@ -4,46 +4,22 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/storytold/vectorcraft/issues/new
-- **Stars:** 11856 · **Generated:** 2026-11-18T06:45:12.554Z
+- **Stars:** 11863 · **Generated:** 2026-11-18T12:42:30.883Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 2 workflows dark on main ("CI", "SonarCloud")
+CI: "SonarCloud" workflow getting cancelled on main since 2026-11-18
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
+Hi! The **SonarCloud** workflow (`.github/workflows/sonarcloud.yml`) on `main` has been getting cancelled since 2026-11-18. Here is what I saw, in case it's useful:
 
-### CI (`.github/workflows/ci.yml`)
-
-- Latest run on `main`: https://github.com/storytold/vectorcraft/actions/runs/44249219351 — dark (conclusion: `failure`), 2026-11-18 06:09 UTC
-- Dark since: 2026-11-17 20:23 UTC (first run of the current streak)
-- Job / step: `gate / gate (ubuntu-24.04)` → `Gate`
-- Likely cause: Compiling vectorcraft-web v0.24.1 (/home/runner/work/vectorcraft/vectorcraft/apps/vectorcraft-web)
-
-<details><summary>End of the job log</summary>
-
-```
-   Compiling eframe v0.37.0 (https://github.com/storytold/egui.git?rev=6d518fc799681571963842f95b55a6b68431b15a#6d518fc7)
-   Compiling webbrowser v1.2.5
-   Compiling craft-window v0.1.0 (https://github.com/storytold/craft-libs?rev=64b181977a0488e4d1e167bc5cc8cfededc2ed4b#64b18197)
-   Compiling craft-psd v0.1.0 (https://github.com/storytold/craft-libs?rev=64b181977a0488e4d1e167bc5cc8cfededc2ed4b#64b18197)
-   Compiling craft-web-api v0.1.0 (https://github.com/storytold/craft-libs?rev=64b181977a0488e4d1e167bc5cc8cfededc2ed4b#64b18197)
-   Compiling vectorcraft-cli v0.24.1 (/home/runner/work/vectorcraft/vectorcraft/apps/vectorcraft-cli)
-   Compiling vectorcraft-web v0.24.1 (/home/runner/work/vectorcraft/vectorcraft/apps/vectorcraft-web)
-##[error]Process completed with exit code 143.
-```
-
-</details>
-
-### SonarCloud (`.github/workflows/sonarcloud.yml`)
-
-- Latest run on `main`: https://github.com/storytold/vectorcraft/actions/runs/44249975003 — dark (conclusion: `cancelled`), 2026-11-18 06:15 UTC
+- Latest run on `main`: https://github.com/storytold/vectorcraft/actions/runs/44294657438 — dark (conclusion: `cancelled`), 2026-11-18 11:26 UTC
 - Dark since: 2026-11-18 03:14 UTC (first run of the current streak)
 - Likely cause: run cancelled
 

@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/storytold/lightcraft/issues/new
-- **Stars:** 16126 · **Generated:** 2026-11-18T06:45:12.554Z
+- **Stars:** 16142 · **Generated:** 2026-11-18T12:42:30.883Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -20,22 +20,22 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### SonarCloud (`.github/workflows/sonarcloud.yml`)
 
-- Latest run on `main`: https://github.com/storytold/lightcraft/actions/runs/44090686337 — dark (conclusion: `failure`), 2026-11-17 13:14 UTC
+- Latest run on `main`: https://github.com/storytold/lightcraft/actions/runs/44283042623 — dark (conclusion: `failure`), 2026-11-18 10:11 UTC
 - Dark since: 2026-11-17 02:58 UTC (first run of the current streak)
 - Job / step: `sonarcloud / SonarCloud Scan` → `Fail on Rust shard test failures`
-- Likely cause: Coverage shard 8 tests failed (exit 100); analysis was still uploaded
+- Likely cause: Coverage shard 6 tests failed (exit 100); analysis was still uploaded
 
 <details><summary>End of the job log</summary>
 
 ```
-16:03:37.371 INFO  ------------- Upload SCA dependency files
-16:03:38.696 INFO  Successfully sent architecture data
-16:03:41.026 INFO  Sensor cache published successfully
-16:03:42.675 INFO  Analysis total time: 1:49.423 min
-16:03:42.676 INFO  SonarScanner Engine completed successfully
-16:03:43.151 INFO  EXECUTION SUCCESS
-16:03:43.152 INFO  Total time: 1:55.593s
-##[error]Coverage shard 7 tests failed (exit 100); analysis was still uploaded
+11:44:32.943 INFO  ------------- Upload SCA dependency files
+11:44:34.605 INFO  Successfully sent architecture data
+11:44:36.279 INFO  Sensor cache published successfully
+11:44:37.991 INFO  Analysis total time: 2:11.613 min
+11:44:37.993 INFO  SonarScanner Engine completed successfully
+11:44:38.395 INFO  EXECUTION SUCCESS
+11:44:38.396 INFO  Total time: 2:18.295s
+##[error]Coverage shard 6 tests failed (exit 100); analysis was still uploaded
 ```
 
 </details>
