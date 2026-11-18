@@ -4,13 +4,13 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/webiny/webiny-js/issues/new
-- **Stars:** 8053 · **Generated:** 2026-11-18T12:42:30.883Z
+- **Stars:** 8053 · **Generated:** 2026-11-18T18:38:42.583Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 4 workflows dark on next ("Cloud infrastructure Cleanup", "Rebuild Global Cache ("dev" branch)", "Record E2E replay steps", +1 more)
+CI: 3 workflows dark on next ("Cloud infrastructure Cleanup", "Rebuild Global Cache ("dev" branch)", "Record E2E replay steps")
 <!-- END TITLE -->
 
 ## Body
@@ -79,28 +79,6 @@ Switched to a new branch 'next'
 branch 'next' set up to track 'origin/next'.
 cccae9eaa399c4cf956e5cab7cee6eebae595048
 GraphQL: Your token has not been granted the required scopes to execute this query. The 'login' field requires one of the following scopes: ['read:org'], but your token has only been granted the: ['repo'] scopes. Please…
-##[error]Process completed with exit code 1.
-```
-
-</details>
-
-### Push (`.github/workflows/push.yml`)
-
-- Latest run on `next`: https://github.com/webiny/webiny-js/actions/runs/44194167007 — dark (conclusion: `failure`), 2026-11-17 22:52 UTC
-- Dark since: 2026-11-12 21:06 UTC (first run of the current streak)
-- Job / step: `E2E (DDB+OS) - Project setup` → `Deploy API`
-- Likely cause: 4 errored
-
-<details><summary>End of the job log</summary>
-
-```
-    error:   sdk-v2/provider2.go:574: sdk.helper_schema: creating CloudFront Cache Policy (wby-api-web-route-cache-policy-358f2b8): operation error CloudFront: CreateCachePolicy, https response error StatusCode: 400, Re…
-    error: 1 error occurred:
-    \t* creating CloudFront Cache Policy (wby-api-web-route-cache-policy-358f2b8): operation error CloudFront: CreateCachePolicy, https response error StatusCode: 400, RequestID: 0bdb2945-2552-4145-9778-d1530b999b5a, To…
-Resources:
-    + 13 created
-    4 errored
-Duration: 12s
 ##[error]Process completed with exit code 1.
 ```
 

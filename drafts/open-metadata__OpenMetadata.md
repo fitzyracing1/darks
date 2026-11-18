@@ -4,13 +4,13 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/open-metadata/OpenMetadata/issues/new
-- **Stars:** 15811 · **Generated:** 2026-11-18T12:42:30.883Z
+- **Stars:** 15813 · **Generated:** 2026-11-18T18:38:42.583Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 3 workflows dark on main ("Merge Queue Dequeue Report", "monitor-slack-link", "Maven Collate Tests")
+CI: 3 workflows dark on main ("Merge Queue Dequeue Report", "monitor-slack-link", "Integration Tests - PostgreSQL + OpenSearch")
 <!-- END TITLE -->
 
 ## Body
@@ -20,7 +20,7 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### Merge Queue Dequeue Report (`.github/workflows/merge-queue-dequeue-report.yml`)
 
-- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/44293996858 — dark (conclusion: `failure`), 2026-11-18 11:21 UTC
+- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/44343525814 — dark (conclusion: `failure`), 2026-11-18 16:07 UTC
 - Dark since: 2026-11-03 21:06 UTC (first run of the current streak)
 - Job / step: `evict-main-conflicts` → `Remove queue entries that conflict with main`
 - Likely cause: cannot iterate over: null
@@ -42,7 +42,7 @@ cannot iterate over: null
 
 ### monitor-slack-link (`.github/workflows/monitor-slack-link.yml`)
 
-- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/44302108750 — dark (conclusion: `failure`), 2026-11-18 12:14 UTC
+- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/44366948651 — dark (conclusion: `failure`), 2026-11-18 18:11 UTC
 - Dark since: 2026-11-06 22:08 UTC (first run of the current streak)
 - Job / step: `monitor-slack-link` → `Set up Python 3.9`
 - Likely cause: The version '3.9' with architecture 'x64' was not found for Ubuntu 26.04.
@@ -50,36 +50,36 @@ cannot iterate over: null
 <details><summary>End of the job log</summary>
 
 ```
-Updating files:  99% (27145/27419)
-Updating files: 100% (27419/27419)
-Updating files: 100% (27419/27419), done.
+Updating files:  99% (27156/27430)
+Updating files: 100% (27430/27430)
+Updating files: 100% (27430/27430), done.
 Switched to a new branch 'main'
 branch 'main' set up to track 'origin/main'.
-56d1f8e74ce804e86059bc632d55cceb90c5f07f
+e714413921a88abfc142b7ee8f1384d02f69ff56
 Version 3.9 was not found in the local cache
 ##[error]The version '3.9' with architecture 'x64' was not found for Ubuntu 26.04.
 ```
 
 </details>
 
-### Maven Collate Tests (`.github/workflows/maven-build-collate.yml`)
+### Integration Tests - PostgreSQL + OpenSearch (`.github/workflows/integration-tests-postgres-opensearch.yml`)
 
-- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/44293996792 — dark (conclusion: `failure`), 2026-11-18 11:21 UTC
-- Dark since: 2026-11-18 11:21 UTC (first run of the current streak)
-- Job / step: `maven-collate-ci` → `Trigger Collate build & wait`
-- Likely cause: Collate run did not succeed: https://github.com/open-metadata/openmetadata-collate/actions/runs/44294014288
+- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/44343525930 — dark (conclusion: `failure`), 2026-11-18 16:07 UTC
+- Dark since: 2026-11-18 15:40 UTC (first run of the current streak)
+- Job / step: `Integration Test Lane (parallel)` → `Run Integration Tests (PostgreSQL + OpenSearch)`
+- Likely cause: [ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
 
 <details><summary>End of the job log</summary>
 
 ```
-maven-collate-om-ci: .github#35
-! This method or constructor is empty; @SneakyThrows has been ignored.
-maven-collate-om-ci: .github#14
-! This method or constructor is empty; @SneakyThrows has been ignored.
-maven-collate-om-ci: .github#35
-! Not generating isSupportsOwners(): A method with that name already exists
-maven-collate-om-ci: .github#602
-##[error]Collate run did not succeed: https://github.com/open-metadata/openmetadata-collate/actions/runs/44294014288
+[ERROR] -> [Help 1]
+[ERROR]
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR]
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+##[error]Process completed with exit code 1.
 ```
 
 </details>

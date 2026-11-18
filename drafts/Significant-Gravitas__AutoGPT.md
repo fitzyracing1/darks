@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/Significant-Gravitas/AutoGPT/issues/new
-- **Stars:** 188081 · **Generated:** 2026-11-18T12:42:30.883Z
+- **Stars:** 188084 · **Generated:** 2026-11-18T18:38:42.583Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -18,7 +18,7 @@ CI: "Security - Public advisory sync" workflow failing on master since 2026-11-1
 <!-- BEGIN BODY -->
 Hi! The **Security - Public advisory sync** workflow (`.github/workflows/security-advisory-sync.yml`) on `master` has been failing since 2026-11-18. Here is what I saw, in case it's useful:
 
-- Latest run on `master`: https://github.com/Significant-Gravitas/AutoGPT/actions/runs/44304850355 — dark (conclusion: `failure`), 2026-11-18 12:32 UTC
+- Latest run on `master`: https://github.com/Significant-Gravitas/AutoGPT/actions/runs/44370062551 — dark (conclusion: `failure`), 2026-11-18 18:28 UTC
 - Dark since: 2026-11-18 12:32 UTC (first run of the current streak)
 - Job / step: `public-data` → `Read public data anonymously`
 - Likely cause: Public security sync failed: Published advisory release mapping is invalid or ambiguous
@@ -27,11 +27,11 @@ Hi! The **Security - Public advisory sync** workflow (`.github/workflows/securit
 
 ```
 includeif.gitdir:/github/workspace/.git/worktrees/*.path
-/home/runner/work/_temp/git-credentials-81641d83-517d-4092-856e-85988d426585.config
-/home/runner/work/_temp/git-credentials-81641d83-517d-4092-856e-85988d426585.config
-/github/runner_temp/git-credentials-81641d83-517d-4092-856e-85988d426585.config
-/github/runner_temp/git-credentials-81641d83-517d-4092-856e-85988d426585.config
-Removing credentials config '/home/runner/work/_temp/git-credentials-81641d83-517d-4092-856e-85988d426585.config'
+/home/runner/work/_temp/git-credentials-678003bb-62c3-4491-9e43-3cf6f57ef61c.config
+/home/runner/work/_temp/git-credentials-678003bb-62c3-4491-9e43-3cf6f57ef61c.config
+/github/runner_temp/git-credentials-678003bb-62c3-4491-9e43-3cf6f57ef61c.config
+/github/runner_temp/git-credentials-678003bb-62c3-4491-9e43-3cf6f57ef61c.config
+Removing credentials config '/home/runner/work/_temp/git-credentials-678003bb-62c3-4491-9e43-3cf6f57ef61c.config'
 Public security sync failed: Published advisory release mapping is invalid or ambiguous
 ##[error]Process completed with exit code 1.
 ```

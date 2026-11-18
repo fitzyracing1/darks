@@ -4,9 +4,15 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/headroomlabs-ai/headroom/issues/new
-- **Stars:** 79978 · **Generated:** 2026-11-18T12:42:30.883Z
+- **Stars:** 80078 · **Generated:** 2026-11-18T18:38:42.583Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
+
+## Skipped: upstream already tracking
+
+- Security (`.github/workflows/security.yml`): [issue #4783](https://github.com/headroomlabs-ai/headroom/issues/4783) "BUG Several security-related tests cannot catch the defect they describe (loopback gating, rate-limit key, bypass header, CORS, upstream sweep, trust_remote_code scan, live marker)"
+
+These workflows are left out of the body below.
 
 ## Suggested title
 
@@ -19,7 +25,7 @@ CI: "PR Governance" workflow getting cancelled on main since 2026-11-17
 <!-- BEGIN BODY -->
 Hi! The **PR Governance** workflow (`.github/workflows/pr-health.yml`) on `main` has been getting cancelled since 2026-11-17. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/headroomlabs-ai/headroom/actions/runs/44103185862 — dark (conclusion: `cancelled`), 2026-11-17 14:26 UTC
+- Latest run on `main`: https://github.com/headroomlabs-ai/headroom/actions/runs/44324340360 — dark (conclusion: `cancelled`), 2026-11-18 14:26 UTC
 - Dark since: 2026-11-17 14:26 UTC (first run of the current streak)
 - Job / step: `label` → `Label open pull requests`
 - Likely cause: The job has exceeded the maximum execution time of 10m0s
@@ -27,13 +33,13 @@ Hi! The **PR Governance** workflow (`.github/workflows/pr-health.yml`) on `main`
 <details><summary>End of the job log</summary>
 
 ```
-https://github.com/headroomlabs-ai/headroom/pull/3647
-https://github.com/headroomlabs-ai/headroom/pull/3647
-https://github.com/headroomlabs-ai/headroom/pull/3647
-https://github.com/headroomlabs-ai/headroom/pull/3641
-https://github.com/headroomlabs-ai/headroom/pull/3641
-https://github.com/headroomlabs-ai/headroom/pull/3641
-https://github.com/headroomlabs-ai/headroom/pull/3640
+https://github.com/headroomlabs-ai/headroom/pull/3813
+https://github.com/headroomlabs-ai/headroom/pull/3813
+https://github.com/headroomlabs-ai/headroom/pull/3793
+https://github.com/headroomlabs-ai/headroom/pull/3793
+https://github.com/headroomlabs-ai/headroom/pull/3793
+https://github.com/headroomlabs-ai/headroom/pull/3793
+https://github.com/headroomlabs-ai/headroom/pull/3787
 ##[error]The operation was canceled.
 ```
 

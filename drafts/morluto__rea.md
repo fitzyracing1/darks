@@ -4,37 +4,45 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/morluto/rea/issues/new
-- **Stars:** 467413 · **Generated:** 2026-11-18T12:42:30.883Z
+- **Stars:** 467939 · **Generated:** 2026-11-18T18:38:42.583Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: "Mutation sweep" workflow getting cancelled on main since 2026-11-17
+CI: 2 workflows dark on main ("CodeQL production", "CI")
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! The **Mutation sweep** workflow (`.github/workflows/mutation.yml`) on `main` has been getting cancelled since 2026-11-17. Here is what I saw, in case it's useful:
+Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
 
-- Latest run on `main`: https://github.com/morluto/rea/actions/runs/44240010237 — dark (conclusion: `cancelled`), 2026-11-18 04:49 UTC
-- Dark since: 2026-11-17 04:49 UTC (first run of the current streak)
-- Job / step: `Mutation sweep (reverse-tools)` → `Run the complete configuration`
-- Likely cause: The job has exceeded the maximum execution time of 1h0m0s
+### CodeQL production (`.github/workflows/codeql.yml`)
+
+- Latest run on `main`: https://github.com/morluto/rea/actions/runs/44367752956 — dark (conclusion: `cancelled`), 2026-11-18 18:15 UTC
+- Dark since: 2026-11-18 17:54 UTC (first run of the current streak)
+- Likely cause: run cancelled
+
+### CI (`.github/workflows/ci.yml`)
+
+- Latest run on `main`: https://github.com/morluto/rea/actions/runs/44367753197 — dark (conclusion: `failure`), 2026-11-18 18:15 UTC
+- Dark since: 2026-11-18 17:59 UTC (first run of the current streak)
+- Job / step: `Static checks` → `Run npm run check:ci:fast`
+- Likely cause: command (/home/runner/work/rea/rea/) /opt/hostedtoolcache/node/24.22.1/x64/bin/npm run typecheck exited (2)
 
 <details><summary>End of the job log</summary>
 
 ```
-Mutation testing 84% (elapsed: ~55m, remaining: ~10m) 739/1030 tested (93 survived, 0 timed out)
-Mutation testing 84% (elapsed: ~55m, remaining: ~10m) 741/1030 tested (93 survived, 0 timed out)
-Mutation testing 84% (elapsed: ~56m, remaining: ~10m) 742/1030 tested (93 survived, 0 timed out)
-Mutation testing 84% (elapsed: ~56m, remaining: ~10m) 744/1030 tested (94 survived, 0 timed out)
-Mutation testing 84% (elapsed: ~56m, remaining: ~10m) 745/1030 tested (94 survived, 0 timed out)
-Mutation testing 84% (elapsed: ~56m, remaining: ~10m) 746/1030 tested (95 survived, 0 timed out)
-Mutation testing 84% (elapsed: ~56m, remaining: ~10m) 747/1030 tested (96 survived, 0 timed out)
-##[error]The operation was canceled.
+Checking formatting...
+All matched files use the correct format.
+Finished in 7616ms on 8699 files using 4 threads.
+typecheck
+cache miss, executing f3979f02acf0a461
+> rea-agents@6.9.0 typecheck
+> node scripts/run-typescript.mjs --noEmit && node scripts/run-typescript.mjs --noEmit -p tsconfig.scripts.json
+##[error]tests/boundary/providers/CutterBridgeService.test.ts(108,31): error TS2322: Type 'Promise<{ sessions: never[]; bridge_directory: string; discovery_status: "no_live_bridge_found"; bridge_directory_security: "pri…
 ```
 
 </details>

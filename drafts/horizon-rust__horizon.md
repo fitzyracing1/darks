@@ -4,7 +4,7 @@
 
 - **Status:** not for filing — upstream already has an open issue/PR about every dark workflow here
 - **Would be filed at:** https://github.com/horizon-rust/horizon/issues/new
-- **Stars:** 11219 · **Generated:** 2026-11-18T12:42:30.883Z
+- **Stars:** 11281 · **Generated:** 2026-11-18T18:38:42.583Z
 - Nothing in this file has been sent anywhere.
 
 ## Skipped: upstream already tracking
