@@ -4,59 +4,37 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/huggingface/transformers/issues/new
-- **Stars:** 169201 · **Generated:** 2026-11-19T06:47:13.117Z
+- **Stars:** 169246 · **Generated:** 2026-11-19T12:43:24.149Z
 - Nothing in this file has been sent anywhere.
-- **Note for Joshua:** workflow failed to start (config/permissions on their side)
 - **Note for Joshua:** self-hosted runner problem — maintainers usually know
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 4 workflows dark on main ("Self-hosted runner (nightly-past-ci-caller)", "Self-hosted runner (Intel Gaudi3 scheduled CI caller)", "Doctests", +1 more)
+CI: "Slow tests on important models (on Push - A10)" workflow failing on main since 2026-11-19
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
+Hi! The **Slow tests on important models (on Push - A10)** workflow (`.github/workflows/push-important-models.yml`) on `main` has been failing since 2026-11-19. Here is what I saw, in case it's useful:
 
-### Self-hosted runner (nightly-past-ci-caller) (`.github/workflows/self-nightly-past-ci-caller.yml`)
-
-- Latest run on `main`: https://github.com/huggingface/transformers/actions/runs/44443751366 — dark (conclusion: `startup_failure`), 2026-11-19 02:21 UTC
-- Dark since: 2026-11-19 02:21 UTC (first run of the current streak)
-- Likely cause: run startup_failure
-
-### Self-hosted runner (Intel Gaudi3 scheduled CI caller) (`.github/workflows/self-scheduled-intel-gaudi3-caller.yml`)
-
-- Latest run on `main`: https://github.com/huggingface/transformers/actions/runs/44443812552 — dark (conclusion: `failure`), 2026-11-19 02:22 UTC
-- Dark since: 2026-11-19 02:22 UTC (first run of the current streak)
-- Job / step: `Pipeline CI / Pipelines (1gaudi)`
-- Likely cause: Required runner group 'itac-bm-emr-gaudi3-dell-1gaudi' not found
-
-### Doctests (`.github/workflows/doctests.yml`)
-
-- Latest run on `main`: https://github.com/huggingface/transformers/actions/runs/44443932274 — dark (conclusion: `failure`), 2026-11-19 02:23 UTC
-- Dark since: 2026-11-19 02:23 UTC (first run of the current streak)
-- Likely cause: no cause found in annotations
-
-### SGLang Integration Tests (`.github/workflows/sglang-ci-caller.yml`)
-
-- Latest run on `main`: https://github.com/huggingface/transformers/actions/runs/44449816323 — dark (conclusion: `failure`), 2026-11-19 03:12 UTC
-- Dark since: 2026-11-19 03:12 UTC (first run of the current streak)
-- Job / step: `SGLang integration (processors-and-mappings)` → `Run canonical SGLang integration tests`
+- Latest run on `main`: https://github.com/huggingface/transformers/actions/runs/44501079933 — dark (conclusion: `failure`), 2026-11-19 09:57 UTC
+- Dark since: 2026-11-19 09:57 UTC (first run of the current streak)
+- Job / step: `Model CI / run_models_gpu (aws-g5-12xlarge-cache, 0) / run_models_gpu (models/gemma3)` → `Run all tests on GPU`
 - Likely cause: Executing the custom container implementation failed. Please contact your self hosted runner administrator.
 
 <details><summary>End of the job log</summary>
 
 ```
----- generated xml file: /__w/transformers/transformers/reports/results.xml ----
-=========================== short test summary info ============================
-FAILED test/registered/unit/utils/test_hf_transformers.py::TestNormalizeRopeScalingCompat::test_no_crash_on_dict_without_rope_type - Exception: retry() exceed maximum number of retries.
-FAILED test/registered/unit/utils/test_hf_transformers.py::TestNormalizeRopeScalingCompat::test_no_crash_on_non_dict_rope_scaling - Exception: retry() exceed maximum number of retries.
-FAILED test/registered/unit/utils/test_hf_transformers.py::TestNormalizeTpStyle::test_tied_embedding_plan_normalizes - Exception: retry() exceed maximum number of retries.
-======== 3 failed, 95 passed, 19 warnings, 17 subtests passed in 8.27s =========
-sys:1: DeprecationWarning: builtin type swigvarlink has no __module__ attribute
-##[error]Error: failed to run script step: command terminated with non-zero exit code: error executing command [sh -e /__w/_temp/eddddaa0-e3c8-11f1-b514-67d3b85b7466.sh], exit code 1
+drwxr-xr-x.  3 root root     73 Nov 19 10:01 reports
+drwxr-xr-x.  3 root root     68 Nov 18 00:41 scripts
+-rw-r--r--.  1 root root  12743 Nov 18 00:41 setup.py
+drwxr-xr-x.  1 root root     67 Nov 18 00:41 src
+-rw-r--r--.  1 root root 375842 Nov 19 10:19 test_outputs.txt
+drwxr-xr-x.  1 root root   4096 Nov 19 10:01 tests
+drwxr-xr-x.  1 root root     56 Nov 19 10:01 utils
+##[error]Error: failed to run script step: command terminated with non-zero exit code: error executing command [sh -e /__w/_temp/2f049b40-e400-11f1-b575-97f176c30587.sh], exit code 1
 ```
 
 </details>

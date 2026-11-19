@@ -4,37 +4,36 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/czlonkowski/n8n-mcp/issues/new
-- **Stars:** 23285 · **Generated:** 2026-11-19T06:47:13.117Z
+- **Stars:** 23283 · **Generated:** 2026-11-19T12:43:24.149Z
 - Nothing in this file has been sent anywhere.
-- **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: "Test Suite" workflow getting cancelled on main since 2026-11-18
+CI: "Test Suite" workflow failing on main since 2026-11-18
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! The **Test Suite** workflow (`.github/workflows/test.yml`) on `main` has been getting cancelled since 2026-11-18. Here is what I saw, in case it's useful:
+Hi! The **Test Suite** workflow (`.github/workflows/test.yml`) on `main` has been failing since 2026-11-18. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/czlonkowski/n8n-mcp/actions/runs/44305857944 — dark (conclusion: `cancelled`), 2026-11-18 12:38 UTC
+- Latest run on `main`: https://github.com/czlonkowski/n8n-mcp/actions/runs/44479330104 — dark (conclusion: `failure`), 2026-11-19 07:24 UTC
 - Dark since: 2026-11-18 12:38 UTC (first run of the current streak)
-- Job / step: `test` → `Run integration tests (live n8n instance)`
-- Likely cause: The job has exceeded the maximum execution time of 15m0s
+- Job / step: `test` → `Run unit tests with coverage`
+- Likely cause: Tests  1 failed | 7656 passed | 35 skipped (7692)
 
 <details><summary>End of the job log</summary>
 
 ```
-   ✓ Integration: handleDiagnostic > Environment Detection > should provide mode-specific debugging suggestions  527ms
-   ✓ Integration: handleDiagnostic > Environment Detection > should include Docker debugging if IS_DOCKER is true  516ms
-   ✓ Integration: handleDiagnostic > Environment Detection > should not include Docker debugging if IS_DOCKER is false  508ms
-   ✓ Integration: handleDiagnostic > Verbose Mode > should include additional debug info in verbose mode  504ms
-   ✓ Integration: handleDiagnostic > Verbose Mode > should not include debug info when verbose is false  512ms
-   ✓ Integration: handleDiagnostic > Verbose Mode > should not include debug info by default  508ms
-   ✓ Integration: handleDiagnostic > Response Format > should return complete diagnostic response structure  508ms
-##[error]The operation was canceled.
+ ❯ tests/unit/property/ssrf-protection.property.test.ts:538:7
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+ Test Files  1 failed | 222 passed (223)
+      Tests  1 failed | 7656 passed | 35 skipped (7692)
+   Start at  07:25:19
+   Duration  51.97s (transform 8.90s, setup 4.05s, collect 38.19s, tests 96.39s, environment 48ms, prepare 19.89s)
+JUNIT report written to /home/runner/work/n8n-mcp/n8n-mcp/test-results/junit.xml
+##[error]Process completed with exit code 1.
 ```
 
 </details>

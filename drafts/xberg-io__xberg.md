@@ -4,14 +4,14 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/xberg-io/xberg/issues/new
-- **Stars:** 9603 · **Generated:** 2026-11-19T06:47:13.117Z
+- **Stars:** 9604 · **Generated:** 2026-11-19T12:43:24.149Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 8 workflows dark on main ("CI Rust", "CI E2E", "CI Focused PR", +5 more)
+CI: 6 workflows dark on main ("CI Rust", "CI E2E", "CI Lint", +3 more)
 <!-- END TITLE -->
 
 ## Body
@@ -48,34 +48,27 @@ Reading state information...
 
 </details>
 
-### CI Focused PR (`.github/workflows/ci-focused-pr.yaml`)
+### CI Lint (`.github/workflows/ci-lint.yaml`)
 
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/44459951725 — dark (conclusion: `cancelled`), 2026-11-19 04:40 UTC
+- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/44481046733 — dark (conclusion: `failure`), 2026-11-19 07:37 UTC
 - Dark since: 2026-11-18 18:37 UTC (first run of the current streak)
-- Job / step: `Focused pdf-table-paint` → `Run exact regression tests`
-- Likely cause: The run was canceled by @Goldziher.
+- Job / step: `validate / Validate (poly)` → `Install poly`
+- Likely cause: unknown field 'ref', expected one of 'id', 'source', 'revision', 'path'
 
 <details><summary>End of the job log</summary>
 
 ```
-   Compiling memmap2 v0.9.12
-   Compiling xberg-child-test v0.0.0 (/home/runner/work/xberg/xberg/crates/xberg/tests/support/child-process)
-   Compiling hex v0.4.3
-   Compiling jotdown v0.10.0
-   Compiling jpeg-encoder v0.7.1
-   Compiling pastey v0.2.3
-   Compiling dotenvy v0.15.7
-##[error]The operation was canceled.
+##[end-action id=__Goldziher_polylint.components-cache;outcome=success;conclusion=success;duration_ms=1086]
+##[start-action display=Run set -euo pipefail;id=__Goldziher_polylint.__run_4]
+poly components: parsing /home/runner/work/xberg/xberg/poly.lock: TOML parse error at line 7, column 1
+  |
+7 | ref = "v0"
+  | ^^^
+unknown field `ref`, expected one of `id`, `source`, `revision`, `path`
+##[error]Process completed with exit code 2.
 ```
 
 </details>
-
-### CI Lint (`.github/workflows/ci-lint.yaml`)
-
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/44459952303 — dark (conclusion: `cancelled`), 2026-11-19 04:40 UTC
-- Dark since: 2026-11-18 18:37 UTC (first run of the current streak)
-- Job / step: `Benchmark script regressions`
-- Likely cause: The run was canceled by @Goldziher.
 
 ### CI Integrations (`.github/workflows/ci-integrations.yaml`)
 
@@ -116,28 +109,6 @@ Reading state information...
     Checking transpose v0.2.3
     Checking num-rational v0.4.2
     Checking sharded-slab v0.1.7
-##[error]The operation was canceled.
-```
-
-</details>
-
-### CI Scripts (`.github/workflows/ci-scripts.yaml`)
-
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/44459951740 — dark (conclusion: `cancelled`), 2026-11-19 04:40 UTC
-- Dark since: 2026-11-19 04:40 UTC (first run of the current streak)
-- Job / step: `Bats on ubuntu-latest` → `Run the shell contract tests`
-- Likely cause: The run was canceled by @Goldziher.
-
-<details><summary>End of the job log</summary>
-
-```
-ok 459 macos_heif should_extract_a_verified_download_before_running_cmake
-ok 460 macos_heif should_reject_an_invalid_parallel_build_limit_before_downloading
-ok 461 macos_heif should_pass_an_explicit_one_job_limit_to_the_actual_build_function
-ok 462 macos_heif rejects an unknown profile before downloading
-ok 463 macos_heif encoder profile requires arm64 at the 15.0 floor
-ok 464 macos_heif encoder profile rejects a populated prefix from another profile
-ok 465 macos_heif encoder profile builds both encoders and stages pinned notices
 ##[error]The operation was canceled.
 ```
 

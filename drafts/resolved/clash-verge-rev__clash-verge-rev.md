@@ -1,8 +1,8 @@
 <!-- dark-draft: clash-verge-rev/clash-verge-rev -->
-<!-- draft-state: ready -->
+<!-- draft-state: resolved -->
 # Upstream issue draft: clash-verge-rev/clash-verge-rev
 
-- **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
+- **Status:** resolved — lit again (2026-11-19); nothing to file
 - **Would be filed at:** https://github.com/clash-verge-rev/clash-verge-rev/issues/new
 - **Stars:** 159266 · **Generated:** 2026-11-19T06:47:13.117Z
 - Nothing in this file has been sent anywhere.

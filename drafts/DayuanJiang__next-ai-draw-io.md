@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/DayuanJiang/next-ai-draw-io/issues/new
-- **Stars:** 37059 · **Generated:** 2026-11-19T06:47:13.117Z
+- **Stars:** 37071 · **Generated:** 2026-11-19T12:43:24.149Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title

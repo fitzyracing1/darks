@@ -4,36 +4,45 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/storytold/vectorcraft/issues/new
-- **Stars:** 11896 · **Generated:** 2026-11-19T06:47:13.117Z
+- **Stars:** 11906 · **Generated:** 2026-11-19T12:43:24.149Z
 - Nothing in this file has been sent anywhere.
+- **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: "SonarCloud" workflow failing on main since 2026-11-18
+CI: 2 workflows dark on main ("SonarCloud", "FreeBSD")
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! The **SonarCloud** workflow (`.github/workflows/sonarcloud.yml`) on `main` has been failing since 2026-11-18. Here is what I saw, in case it's useful:
+Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
 
-- Latest run on `main`: https://github.com/storytold/vectorcraft/actions/runs/44468275385 — dark (conclusion: `failure`), 2026-11-19 05:53 UTC
+### SonarCloud (`.github/workflows/sonarcloud.yml`)
+
+- Latest run on `main`: https://github.com/storytold/vectorcraft/actions/runs/44509773233 — dark (conclusion: `cancelled`), 2026-11-19 10:53 UTC
 - Dark since: 2026-11-18 03:14 UTC (first run of the current streak)
-- Job / step: `sonarcloud / Build instrumented test archive` → `Build instrumented test archive`
-- Likely cause: Compiling vectorcraft-web v0.24.1 (/home/runner/work/vectorcraft/vectorcraft/apps/vectorcraft-web)
+- Likely cause: run cancelled
+
+### FreeBSD (`.github/workflows/freebsd.yml`)
+
+- Latest run on `main`: https://github.com/storytold/vectorcraft/actions/runs/44457862126 — dark (conclusion: `failure`), 2026-11-19 04:22 UTC
+- Dark since: 2026-11-19 04:22 UTC (first run of the current streak)
+- Job / step: `freebsd / FreeBSD 15 x86_64 (build + test)` → `Build and test`
+- Likely cause: error: test failed, to rerun pass '-p vectorcraft-engine --lib'
 
 <details><summary>End of the job log</summary>
 
 ```
-   Compiling eframe v0.37.0 (https://github.com/storytold/egui.git?rev=6d518fc799681571963842f95b55a6b68431b15a#6d518fc7)
-   Compiling craft-print v0.1.0 (https://github.com/storytold/craft-libs?rev=64b181977a0488e4d1e167bc5cc8cfededc2ed4b#64b18197)
-   Compiling webbrowser v1.2.5
-   Compiling craft-window v0.1.0 (https://github.com/storytold/craft-libs?rev=64b181977a0488e4d1e167bc5cc8cfededc2ed4b#64b18197)
-   Compiling craft-web-api v0.1.0 (https://github.com/storytold/craft-libs?rev=64b181977a0488e4d1e167bc5cc8cfededc2ed4b#64b18197)
-   Compiling vectorcraft-cli v0.24.1 (/home/runner/work/vectorcraft/vectorcraft/apps/vectorcraft-cli)
-   Compiling vectorcraft-web v0.24.1 (/home/runner/work/vectorcraft/vectorcraft/apps/vectorcraft-web)
-##[error]Process completed with exit code 143.
+assertion `left == right` failed: the pages are read from the file read once
+  left: 1
+ right: 0
+failures:
+    tests::placed_document::linked_pages_read_the_file_once_and_a_blank_page_keeps_its_crop_box
+test result: FAILED. 7712 passed; 1 failed; 15 ignored; 0 measured; 0 filtered out; finished in 126.71s
+error: test failed, to rerun pass `-p vectorcraft-engine --lib`
+##[error]Process completed with exit code 101.
 ```
 
 </details>

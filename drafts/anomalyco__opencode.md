@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/anomalyco/opencode/issues/new
-- **Stars:** 227883 · **Generated:** 2026-11-19T06:47:13.117Z
+- **Stars:** 227948 · **Generated:** 2026-11-19T12:43:24.149Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -18,7 +18,7 @@ CI: "nightly-beta" workflow failing on dev since 2026-11-18
 <!-- BEGIN BODY -->
 Hi! The **nightly-beta** workflow (`.github/workflows/nightly-beta.yml`) on `dev` has been failing since 2026-11-18. Here is what I saw, in case it's useful:
 
-- Latest run on `dev`: https://github.com/anomalyco/opencode/actions/runs/44275288645 — dark (conclusion: `failure`), 2026-11-18 09:22 UTC
+- Latest run on `dev`: https://github.com/anomalyco/opencode/actions/runs/44495851172 — dark (conclusion: `failure`), 2026-11-19 09:22 UTC
 - Dark since: 2026-11-18 09:22 UTC (first run of the current streak)
 - Job / step: `dispatch` → `Dispatch beta test runs`
 - Likely cause: could not create workflow dispatch event: HTTP 422: No ref found for: beta (https://api.github.com/repos/anomalyco/opencode/actions/workflows/396447938/dispatches)

@@ -4,60 +4,37 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/ccch1mneyyy/dsh-Go/issues/new
-- **Stars:** 27485 · **Generated:** 2026-11-19T06:47:13.117Z
+- **Stars:** 27831 · **Generated:** 2026-11-19T12:43:24.149Z
 - Nothing in this file has been sent anywhere.
+- **Note for Joshua:** cancelled by a concurrency group — likely noise
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 2 workflows dark on main ("iOS compile", "CI")
+CI: "iOS compile" workflow getting cancelled on main since 2026-11-18
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
+Hi! The **iOS compile** workflow (`.github/workflows/ios-compile.yml`) on `main` has been getting cancelled since 2026-11-18. Here is what I saw, in case it's useful:
 
-### iOS compile (`.github/workflows/ios-compile.yml`)
-
-- Latest run on `main`: https://github.com/ccch1mneyyy/dsh-Go/actions/runs/44464025480 — dark (conclusion: `failure`), 2026-11-19 05:16 UTC
+- Latest run on `main`: https://github.com/ccch1mneyyy/dsh-Go/actions/runs/44508267838 — dark (conclusion: `cancelled`), 2026-11-19 10:43 UTC
 - Dark since: 2026-11-18 02:01 UTC (first run of the current streak)
-- Job / step: `engine` → `Exercise Swift phone and companion voice contracts`
-- Likely cause: IOSAudioSessionCoordinatorTests.testBackgroundLeaseDestructionStillStopsItsOutputBeforePreemption() Failed IOSAudioSessionCoordinatorTests.swift:837: Asynchronous wait failed: Exceeded timeout of 2 seconds, with unfulfilled expectations: "q
+- Job / step: `engine` → `Launch the real app`
+- Likely cause: Canceling since a higher priority waiting request for ios-compile-refs/heads/main exists
 
 <details><summary>End of the job log</summary>
 
 ```
-Test session results, code coverage, and logs:
-	/Users/runner/work/_temp/swift-contracts.xcresult
-Failing tests:
-	IOSAudioSessionCoordinatorTests.testBackgroundLeaseDestructionStillStopsItsOutputBeforePreemption()
-** TEST FAILED **
-Testing started
-##[notice]IOSPhoneSelfRunnerTests 16, IOSPhonePairingStoreTests 13, IOSPhoneCoreDeviceTests 37, IOSPhoneScreenTests 38, IOSPhoneDDIBackgroundTests 4, IOSPhoneOperationTests 36, IOSPhoneApprovalTests 8, IOSPhoneClipboard…
-##[error]IOSAudioSessionCoordinatorTests.testBackgroundLeaseDestructionStillStopsItsOutputBeforePreemption() Failed IOSAudioSessionCoordinatorTests.swift:837: Asynchronous wait failed: Exceeded timeout of 2 seconds, wit…
-```
-
-</details>
-
-### CI (`.github/workflows/ci.yml`)
-
-- Latest run on `main`: https://github.com/ccch1mneyyy/dsh-Go/actions/runs/44464025516 — dark (conclusion: `failure`), 2026-11-19 05:16 UTC
-- Dark since: 2026-11-19 02:49 UTC (first run of the current streak)
-- Job / step: `Flutter 2` → `Test every third file`
-- Likely cause: 5025 tests passed, 3 failed, 151 skipped.
-
-<details><summary>End of the job log</summary>
-
-```
-✅ /home/runner/work/dsh-Go/dsh-Go/app/test/workspace/workspaces_state_test.dart: text errors are one short line
-✅ /home/runner/work/dsh-Go/dsh-Go/app/test/workspace/workspaces_state_test.dart: recentWorkspace the one whose conversation moved last
-✅ /home/runner/work/dsh-Go/dsh-Go/app/test/workspace/workspaces_state_test.dart: recentWorkspace a workspace with no known conversation counts from its creation
-✅ /home/runner/work/dsh-Go/dsh-Go/app/test/workspace/workspaces_state_test.dart: recentWorkspace nothing to tell them apart: the first on the list; none: null
-✅ /home/runner/work/dsh-Go/dsh-Go/app/test/workspace/workspace_geometry_test.dart: drawer switcher glyph on the 20 line, highlight on the 10 line, 36 tall, one centre line
-✅ /home/runner/work/dsh-Go/dsh-Go/app/test/workspace/workspace_geometry_test.dart: breadcrumbs capsules: equal insets, one height, one centre line; first on the page gutter
-✅ /home/runner/work/dsh-Go/dsh-Go/app/test/workspace/workspace_geometry_test.dart: switcher sheet cards 20 in on both sides; rows share the glyph column
-##[error]5025 tests passed, 3 failed, 151 skipped.
+  vector_graphics_compiler 1.3.4 (1.3.6 available)
+  windows_file_picker 2.0.1 (2.0.2 available)
+  xml 7.0.1 (7.1.0 available)
+Got dependencies!
+47 packages have newer versions incompatible with dependency constraints.
+Try `flutter pub outdated` for more information.
+Building io.github.ccch1mneyyy.dshgo for simulator (ios)...
+##[error]The operation was canceled.
 ```
 
 </details>
