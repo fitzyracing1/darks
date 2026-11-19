@@ -4,43 +4,19 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/ReactiveX/rxjs/issues/new
-- **Stars:** 31719 · **Generated:** 2026-11-19T00:54:00.080Z
+- **Stars:** 31719 · **Generated:** 2026-11-19T06:47:13.117Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 2 workflows dark on master ("OSV vulnerability policy", "Extended property fuzzing")
+CI: "Extended property fuzzing" workflow failing on master since 2026-09-16
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! A few workflows on `master` have been dark recently. Details below, in case they're useful:
-
-### OSV vulnerability policy (`.github/workflows/osv.yml`)
-
-- Latest run on `master`: https://github.com/ReactiveX/rxjs/actions/runs/43827202352 — dark (conclusion: `failure`), 2026-11-16 07:55 UTC
-- Dark since: 2026-09-14 07:50 UTC (first run of the current streak)
-- Job / step: `No unreviewed release-reachable vulnerabilities` → `Reject expired, unowned, untracked, or overlong exceptions`
-- Likely cause: expected: [],
-
-<details><summary>End of the job log</summary>
-
-```
-    ... 77 more items
-  ],
-  expected: [],
-  operator: 'deepStrictEqual',
-  diff: 'simple'
-}
-Node.js v24.12.0
-##[error]Process completed with exit code 1.
-```
-
-</details>
-
-### Extended property fuzzing (`.github/workflows/fuzz.yml`)
+Hi! The **Extended property fuzzing** workflow (`.github/workflows/fuzz.yml`) on `master` has been failing since 2026-09-16. Here is what I saw, in case it's useful:
 
 - Latest run on `master`: https://github.com/ReactiveX/rxjs/actions/runs/44252186161 — dark (conclusion: `failure`), 2026-11-18 06:33 UTC
 - Dark since: 2026-09-16 06:45 UTC (first run of the current streak)

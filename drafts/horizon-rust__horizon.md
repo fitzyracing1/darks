@@ -4,9 +4,10 @@
 
 - **Status:** not for filing — upstream already has an open issue/PR about every dark workflow here
 - **Would be filed at:** https://github.com/horizon-rust/horizon/issues/new
-- **Stars:** 11318 · **Generated:** 2026-11-19T00:54:00.080Z
+- **Stars:** 11340 · **Generated:** 2026-11-19T06:47:13.117Z
 - Nothing in this file has been sent anywhere.
 
 ## Skipped: upstream already tracking
 
 - parity-main (`.github/workflows/parity-main.yml`): [issue #18133](https://github.com/horizon-rust/horizon/issues/18133) "parity-main known failures (#18119)", [issue #15316](https://github.com/horizon-rust/horizon/issues/15316) "parity-main has not passed since 2026-11-07: no Nightly, and its bisect never finishes"
+- launcher (`.github/workflows/launcher.yml`): [issue #15814](https://github.com/horizon-rust/horizon/issues/15814) "macOS launcher releases are ad hoc signed and not notarized (launcher 0.2.62)", [issue #17417](https://github.com/horizon-rust/horizon/issues/17417) "bug(launcher): the game-lease cleanup test fails in optimized builds and blocks launcher releases", [issue #18322](https://github.com/horizon-rust/horizon/issues/18322) "Error 78 when launching through the launcher", [issue #18222](https://github.com/horizon-rust/horizon/issues/18222) "Windows: launcher-hosted dedicated server exits 78 before loading the world", [issue #4537](https://github.com/horizon-rust/horizon/issues/4537) "Launcher is not readable by screen readers. Accesibility issue"

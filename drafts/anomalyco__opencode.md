@@ -4,21 +4,19 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/anomalyco/opencode/issues/new
-- **Stars:** 227836 · **Generated:** 2026-11-19T00:54:00.080Z
+- **Stars:** 227883 · **Generated:** 2026-11-19T06:47:13.117Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 2 workflows dark on dev ("nightly-beta", "check-test")
+CI: "nightly-beta" workflow failing on dev since 2026-11-18
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! A few workflows on `dev` have been dark recently. Details below, in case they're useful:
-
-### nightly-beta (`.github/workflows/nightly-beta.yml`)
+Hi! The **nightly-beta** workflow (`.github/workflows/nightly-beta.yml`) on `dev` has been failing since 2026-11-18. Here is what I saw, in case it's useful:
 
 - Latest run on `dev`: https://github.com/anomalyco/opencode/actions/runs/44275288645 — dark (conclusion: `failure`), 2026-11-18 09:22 UTC
 - Dark since: 2026-11-18 09:22 UTC (first run of the current streak)
@@ -36,28 +34,6 @@ Prepare all required actions
 Complete job name: dispatch
 could not create workflow dispatch event: HTTP 422: No ref found for: beta (https://api.github.com/repos/anomalyco/opencode/actions/workflows/396447938/dispatches)
 ##[error]Process completed with exit code 1.
-```
-
-</details>
-
-### check-test (`.github/workflows/check-test.yml`)
-
-- Latest run on `dev`: https://github.com/anomalyco/opencode/actions/runs/44429651685 — dark (conclusion: `failure`), 2026-11-19 00:31 UTC
-- Dark since: 2026-11-19 00:31 UTC (first run of the current streak)
-- Job / step: `unit (windows)` → `Run unit tests`
-- Likely cause: @opencode/core#test: command (C:\runner\_work\opencode\opencode\packages\core) C:\Users\runneradmin\.bun\bin\bun.exe run test exited (1)
-
-<details><summary>End of the job log</summary>
-
-```
-}
-[00:35:31.318] INFO (#154661): mcp connected {
-  server: "resources",
-  tools: 1,
-} {
-  server: "resources",
-  directory: "C:\\runner\\_work\\opencode\\opencode\\packages\\core\\test",
-##[error]@opencode/core#test: command (C:\runner\_work\opencode\opencode\packages\core) C:\Users\runneradmin\.bun\bin\bun.exe run test exited (1)
 ```
 
 </details>

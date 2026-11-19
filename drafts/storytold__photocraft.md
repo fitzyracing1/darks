@@ -4,14 +4,14 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/storytold/photocraft/issues/new
-- **Stars:** 80311 · **Generated:** 2026-11-19T00:54:00.080Z
+- **Stars:** 80362 · **Generated:** 2026-11-19T06:47:13.117Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 5 workflows dark on main ("SonarCloud", "FreeBSD", "Release", +2 more)
+CI: 3 workflows dark on main ("FreeBSD", "Release", "Perf (nightly)")
 <!-- END TITLE -->
 
 ## Body
@@ -19,29 +19,23 @@ CI: 5 workflows dark on main ("SonarCloud", "FreeBSD", "Release", +2 more)
 <!-- BEGIN BODY -->
 Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
 
-### SonarCloud (`.github/workflows/sonarcloud.yml`)
-
-- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/44428218184 — dark (conclusion: `cancelled`), 2026-11-19 00:20 UTC
-- Dark since: 2026-11-17 15:41 UTC (first run of the current streak)
-- Likely cause: run cancelled
-
 ### FreeBSD (`.github/workflows/freebsd.yml`)
 
-- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/44223231034 — dark (conclusion: `failure`), 2026-11-18 02:26 UTC
+- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/44444265007 — dark (conclusion: `failure`), 2026-11-19 02:25 UTC
 - Dark since: 2026-11-18 02:26 UTC (first run of the current streak)
-- Job / step: `freebsd / FreeBSD 15 aarch64 (build + test)` → `Build and test`
-- Likely cause: 'default-features = false' cannot override workspace's 'default-features'
+- Job / step: `freebsd / FreeBSD 15 x86_64 (build + test)` → `Build and test`
+- Likely cause: warning: build failed, waiting for other jobs to finish...
 
 <details><summary>End of the job log</summary>
 
 ```
-  failed to load manifest for dependency `photocraft-text`
-Caused by:
-  failed to parse manifest at `/home/runner/work/photocraft/photocraft/crates/text/Cargo.toml`
-Caused by:
-  error inheriting `craft` from workspace root manifest's `workspace.dependencies.craft`
-Caused by:
-  `default-features = false` cannot override workspace's `default-features`
+   |
+26 | photocraft-ui-egui = { workspace = true }
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   |
+   = note: `cargo::unused_dependencies` is set to `warn` by default
+help: consider removing the dependency on `photocraft-ui-egui`
+warning: `photocraft-web` (manifest) generated 1 warning
 ##[error]Process completed with exit code 101.
 ```
 
@@ -49,66 +43,44 @@ Caused by:
 
 ### Release (`.github/workflows/release.yml`)
 
-- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/44224002107 — dark (conclusion: `failure`), 2026-11-18 02:32 UTC
+- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/44445095812 — dark (conclusion: `failure`), 2026-11-19 02:32 UTC
 - Dark since: 2026-11-18 02:32 UTC (first run of the current streak)
-- Job / step: `release / Windows x64` → `Post Run step-security/rust-cache@851174d9a2fdc03e0896e02844dcc61d81dd7851`
-- Likely cause: The job has exceeded the maximum execution time of 1h30m0s
+- Job / step: `release / FreeBSD aarch64` → `Set up the aarch64 cross toolchain`
+- Likely cause: error: could not fetch https://download.freebsd.org/releases/arm64/aarch64/15.1-RELEASE/MANIFEST after 3 attempts
 
 <details><summary>End of the job log</summary>
 
 ```
-(Use `node --trace-deprecation ...` to show where the warning was created)
-... Cleaning D:\a\photocraft\photocraft\target ...
-... Cleaning cargo registry (cache-all-crates: false) ...
-... Cleaning cargo/bin ...
-... Cleaning cargo git cache ...
-... Saving cache ...
-[command]"C:\Program Files\Git\usr\bin\tar.exe" --posix -cf cache.tzst --exclude cache.tzst -P -C D:/a/photocraft/photocraft --files-from manifest.txt --force-local --use-compress-program "zstd -T0"
-##[error]The operation was canceled.
+Warning: Permanently added '[127.0.0.1]:10022' (ED25519) to the list of known hosts.
+Warning: Permanently added '[127.0.0.1]:10022' (ED25519) to the list of known hosts.
+tar: Removing leading '/' from member names
+curl: (28) Connection timed out after 20062 milliseconds
+curl: (28) Connection timed out after 20027 milliseconds
+curl: (28) Connection timed out after 20019 milliseconds
+error: could not fetch https://download.freebsd.org/releases/arm64/aarch64/15.1-RELEASE/MANIFEST after 3 attempts
+##[error]Process completed with exit code 1.
 ```
 
 </details>
 
 ### Perf (nightly) (`.github/workflows/perf-nightly.yml`)
 
-- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/44230748066 — dark (conclusion: `failure`), 2026-11-18 03:29 UTC
+- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/44451779041 — dark (conclusion: `cancelled`), 2026-11-19 03:29 UTC
 - Dark since: 2026-11-18 03:29 UTC (first run of the current streak)
 - Job / step: `perf (macOS, Apple GPU)` → `Run benchmarks`
-- Likely cause: error: cargo build --release -p photocraft-ui-egui --example perf_scenarios --example perf_scenarios --example flat_open_bench --example interactive_bench --example fx_bench --example bevel_bench --example camera_raw_be…
+- Likely cause: The job has exceeded the maximum execution time of 2h0m0s
 
 <details><summary>End of the job log</summary>
 
 ```
-997 |     T: Serialize,
-    |        ^^^^^^^^^ required by this bound in `to_value`
-    = note: this error originates in the macro `$crate::json_internal` which comes from the expansion of the macro `json` (in Nightly builds, run with -Z macro-backtrace for more info)
-For more information about this error, try `rustc --explain E0277`.
-error: could not compile `photocraft-ui-egui` (lib) due to 13 previous errors
-warning: build failed, waiting for other jobs to finish...
-error: cargo build --release -p photocraft-ui-egui --example perf_scenarios --example perf_scenarios --example flat_open_bench --example interactive_bench --example fx_bench --example bevel_bench --example camera_raw_be…
-##[error]Process completed with exit code 1.
-```
-
-</details>
-
-### CI (`.github/workflows/ci.yml`)
-
-- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/44426596595 — dark (conclusion: `failure`), 2026-11-19 00:08 UTC
-- Dark since: 2026-11-19 00:08 UTC (first run of the current streak)
-- Job / step: `gate / test 3/4 (ubuntu-24.04)` → `Gate`
-- Likely cause: skip  panic_hunt
-
-<details><summary>End of the job log</summary>
-
-```
-                 at /rustc/0ef1bc386059596dada8fb65b50425aab2ea637a/library/core/src/ops/function.rs:250:5
-    note: Some details are omitted, run with `RUST_BACKTRACE=full` for a verbose backtrace.
-error: test run failed
-error: ci failed at `test`
-CI summary:
-  FAIL  test: cargo nextest run --profile ci --workspace --locked --features heif --lib --bins --tests --partition hash:2/3 -E not ((package(photocraft-gpu) | test(/(^|::|_)gpu_tests::/))): exited with exit status: 100
-  skip  panic_hunt
-##[error]Process completed with exit code 1.
+   Compiling photocraft-ui-egui v0.23.1 (/Users/runner/work/photocraft/photocraft/crates/ui-egui)
+   Compiling photocraft-ops v0.23.1 (/Users/runner/work/photocraft/photocraft/crates/ops)
+   Compiling photocraft-engine v0.23.1 (/Users/runner/work/photocraft/photocraft/crates/engine)
+   Compiling egui_extras v0.37.0 (https://github.com/storytold/egui.git?rev=e9711ca9b69772f875ae0d1cef1977ff8c16234d#e9711ca9)
+   Compiling photocraft-gpu v0.23.1 (/Users/runner/work/photocraft/photocraft/crates/gpu)
+   Compiling memory-stats v1.2.0
+   Compiling photocraft-testkit v0.23.1 (/Users/runner/work/photocraft/photocraft/crates/testkit)
+##[error]The operation was canceled.
 ```
 
 </details>

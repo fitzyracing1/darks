@@ -1,8 +1,8 @@
 <!-- dark-draft: kajisho5/ffmpeg-skill -->
-<!-- draft-state: ready -->
+<!-- draft-state: resolved -->
 # Upstream issue draft: kajisho5/ffmpeg-skill
 
-- **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
+- **Status:** resolved — lit again (2026-11-19); nothing to file
 - **Would be filed at:** https://github.com/kajisho5/ffmpeg-skill/issues/new
 - **Stars:** 8025 · **Generated:** 2026-11-19T00:54:00.080Z
 - Nothing in this file has been sent anywhere.

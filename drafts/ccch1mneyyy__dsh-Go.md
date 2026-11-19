@@ -4,36 +4,60 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/ccch1mneyyy/dsh-Go/issues/new
-- **Stars:** 27192 · **Generated:** 2026-11-19T00:54:00.080Z
+- **Stars:** 27485 · **Generated:** 2026-11-19T06:47:13.117Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: "iOS compile" workflow failing on main since 2026-11-18
+CI: 2 workflows dark on main ("iOS compile", "CI")
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! The **iOS compile** workflow (`.github/workflows/ios-compile.yml`) on `main` has been failing since 2026-11-18. Here is what I saw, in case it's useful:
+Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
 
-- Latest run on `main`: https://github.com/ccch1mneyyy/dsh-Go/actions/runs/44250135934 — dark (conclusion: `failure`), 2026-11-18 06:16 UTC
+### iOS compile (`.github/workflows/ios-compile.yml`)
+
+- Latest run on `main`: https://github.com/ccch1mneyyy/dsh-Go/actions/runs/44464025480 — dark (conclusion: `failure`), 2026-11-19 05:16 UTC
 - Dark since: 2026-11-18 02:01 UTC (first run of the current streak)
-- Job / step: `engine` → `Drive other apps with the phone runner`
-- Likely cause: searchd EXC_CRASH SIGABRT  Abort trap: 6 | libsystem_kernel.dylib __pthread_kill+8 | libsystem_pthread.dylib pthread_kill+264 | libsystem_c.dylib abort+116 | libsystem_c.dylib abort_report_np+80 | SpotlightIndex __si_indexingWatchdogInit_bl
+- Job / step: `engine` → `Exercise Swift phone and companion voice contracts`
+- Likely cause: IOSAudioSessionCoordinatorTests.testBackgroundLeaseDestructionStillStopsItsOutputBeforePreemption() Failed IOSAudioSessionCoordinatorTests.swift:837: Asynchronous wait failed: Exceeded timeout of 2 seconds, with unfulfilled expectations: "q
 
 <details><summary>End of the job log</summary>
 
 ```
-[7] 列表项 "John Appleseed"
-[8] 按钮 "Contact photo for John Appleseed"
-[9] 文字 "John Appleseed"
-[10] 列表项 "b"
-[11] 文字 "B"
-[12] 列表项 "Kate Bell"
-##[notice][phone-runner] frame changed (read 1 of 3): 260405/3162132 pixels, largest 255, box 51,224-1196,2615, size 1206x2622
-##[error]typing didn't reach the field: Error Domain=com.apple.dt.xctest.ui-testing.error Code=10008 "No matches found for first query match sequence: `Descendants matching type Any` -> `Elements matching predicate 'has…
+Test session results, code coverage, and logs:
+	/Users/runner/work/_temp/swift-contracts.xcresult
+Failing tests:
+	IOSAudioSessionCoordinatorTests.testBackgroundLeaseDestructionStillStopsItsOutputBeforePreemption()
+** TEST FAILED **
+Testing started
+##[notice]IOSPhoneSelfRunnerTests 16, IOSPhonePairingStoreTests 13, IOSPhoneCoreDeviceTests 37, IOSPhoneScreenTests 38, IOSPhoneDDIBackgroundTests 4, IOSPhoneOperationTests 36, IOSPhoneApprovalTests 8, IOSPhoneClipboard…
+##[error]IOSAudioSessionCoordinatorTests.testBackgroundLeaseDestructionStillStopsItsOutputBeforePreemption() Failed IOSAudioSessionCoordinatorTests.swift:837: Asynchronous wait failed: Exceeded timeout of 2 seconds, wit…
+```
+
+</details>
+
+### CI (`.github/workflows/ci.yml`)
+
+- Latest run on `main`: https://github.com/ccch1mneyyy/dsh-Go/actions/runs/44464025516 — dark (conclusion: `failure`), 2026-11-19 05:16 UTC
+- Dark since: 2026-11-19 02:49 UTC (first run of the current streak)
+- Job / step: `Flutter 2` → `Test every third file`
+- Likely cause: 5025 tests passed, 3 failed, 151 skipped.
+
+<details><summary>End of the job log</summary>
+
+```
+✅ /home/runner/work/dsh-Go/dsh-Go/app/test/workspace/workspaces_state_test.dart: text errors are one short line
+✅ /home/runner/work/dsh-Go/dsh-Go/app/test/workspace/workspaces_state_test.dart: recentWorkspace the one whose conversation moved last
+✅ /home/runner/work/dsh-Go/dsh-Go/app/test/workspace/workspaces_state_test.dart: recentWorkspace a workspace with no known conversation counts from its creation
+✅ /home/runner/work/dsh-Go/dsh-Go/app/test/workspace/workspaces_state_test.dart: recentWorkspace nothing to tell them apart: the first on the list; none: null
+✅ /home/runner/work/dsh-Go/dsh-Go/app/test/workspace/workspace_geometry_test.dart: drawer switcher glyph on the 20 line, highlight on the 10 line, 36 tall, one centre line
+✅ /home/runner/work/dsh-Go/dsh-Go/app/test/workspace/workspace_geometry_test.dart: breadcrumbs capsules: equal insets, one height, one centre line; first on the page gutter
+✅ /home/runner/work/dsh-Go/dsh-Go/app/test/workspace/workspace_geometry_test.dart: switcher sheet cards 20 in on both sides; rows share the glyph column
+##[error]5025 tests passed, 3 failed, 151 skipped.
 ```
 
 </details>

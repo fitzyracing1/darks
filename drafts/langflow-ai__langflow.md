@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/langflow-ai/langflow/issues/new
-- **Stars:** 156754 · **Generated:** 2026-11-19T00:54:00.080Z
+- **Stars:** 156768 · **Generated:** 2026-11-19T06:47:13.117Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -108,9 +108,25 @@ FAILED languages: ['fr', 'ja', 'es', 'de', 'pt', 'zh-Hans']
 
 ### Nightly Build (`.github/workflows/nightly_build.yml`)
 
-- Latest run on `main`: https://github.com/langflow-ai/langflow/actions/runs/44428491635 — dark (conclusion: `failure`), 2026-11-19 00:22 UTC
+- Latest run on `main`: https://github.com/langflow-ai/langflow/actions/runs/44207308638 — dark (conclusion: `failure`), 2026-11-18 00:22 UTC
 - Dark since: 2026-11-18 00:22 UTC (first run of the current streak)
-- Likely cause: step "Commit tag" in job "create-nightly-tag" exited nonzero
+- Job / step: `Run Frontend Tests - Linux / Live provider smoke tests` → `Run live-provider smoke tests`
+- Likely cause: 1 failed
+
+<details><summary>End of the job log</summary>
+
+```
+Removing the temp database
+tempDbPath /home/runner/work/langflow/langflow/src/frontend/temp
+Temp database directory does not exist, skipping removal
+  1 failed
+    [chromium] › tests/live/admin-upgrade-repair.spec.ts:16:5 › distinguishes report imports and explains running-version history @release @database
+  2 skipped
+  3 passed (4.5m)
+##[error]Process completed with exit code 1.
+```
+
+</details>
 
 If this is already known or expected, feel free to close. Thanks for maintaining langflow!
 

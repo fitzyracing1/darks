@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/webiny/webiny-js/issues/new
-- **Stars:** 8052 · **Generated:** 2026-11-19T00:54:00.080Z
+- **Stars:** 8053 · **Generated:** 2026-11-19T06:47:13.117Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -42,7 +42,7 @@ time="2026-11-19T00:29:40Z" level=fatal msg=failed
 
 ### Rebuild Global Cache ("dev" branch) (`.github/workflows/rebuildGlobalCacheDev.yml`)
 
-- Latest run on `next`: https://github.com/webiny/webiny-js/actions/runs/44234508330 — dark (conclusion: `failure`), 2026-11-18 04:02 UTC
+- Latest run on `next`: https://github.com/webiny/webiny-js/actions/runs/44455504224 — dark (conclusion: `failure`), 2026-11-19 04:02 UTC
 - Dark since: 2026-10-10 04:04 UTC (first run of the current streak)
 - Job / step: `Cache dependencies and packages` → `Run actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09`
 - Likely cause: The process '/usr/bin/git' failed with exit code 1
@@ -56,7 +56,7 @@ Initialized empty Git repository in /home/runner/work/webiny-js/webiny-js/dev/.g
 The process '/usr/bin/git' failed with exit code 1
 Waiting 18 seconds before trying again
 The process '/usr/bin/git' failed with exit code 1
-Waiting 12 seconds before trying again
+Waiting 20 seconds before trying again
 ##[error]The process '/usr/bin/git' failed with exit code 1
 ```
 
@@ -64,7 +64,7 @@ Waiting 12 seconds before trying again
 
 ### Record E2E replay steps (`.github/workflows/recordReplayCache.yml`)
 
-- Latest run on `next`: https://github.com/webiny/webiny-js/actions/runs/44220143763 — dark (conclusion: `failure`), 2026-11-18 02:01 UTC
+- Latest run on `next`: https://github.com/webiny/webiny-js/actions/runs/44441217589 — dark (conclusion: `failure`), 2026-11-19 02:01 UTC
 - Dark since: 2026-11-04 02:01 UTC (first run of the current streak)
 - Job / step: `Open the replay recordings PR` → `Commit recordings and open the PR`
 - Likely cause: GraphQL: Your token has not been granted the required scopes to execute this query. The 'login' field requires one of the following scopes: ['read:org'], but your token has only been granted the: ['repo'] scopes. Please…
@@ -72,12 +72,12 @@ Waiting 12 seconds before trying again
 <details><summary>End of the job log</summary>
 
 ```
-From https://github.com/webiny/webiny-js
- * [new branch]        next       -> origin/next
-  origin/next
+Updating files:  99% (20357/20562)
+Updating files: 100% (20562/20562)
+Updating files: 100% (20562/20562), done.
 Switched to a new branch 'next'
 branch 'next' set up to track 'origin/next'.
-cccae9eaa399c4cf956e5cab7cee6eebae595048
+c31748b7ff36637ca722b40b2800470b7824be62
 GraphQL: Your token has not been granted the required scopes to execute this query. The 'login' field requires one of the following scopes: ['read:org'], but your token has only been granted the: ['repo'] scopes. Please…
 ##[error]Process completed with exit code 1.
 ```

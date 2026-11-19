@@ -4,36 +4,36 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/storytold/lightcraft/issues/new
-- **Stars:** 16168 · **Generated:** 2026-11-19T00:54:00.080Z
+- **Stars:** 16175 · **Generated:** 2026-11-19T06:47:13.117Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: "FreeBSD" workflow failing on main since 2026-11-18
+CI: "SonarCloud" workflow failing on main since 2026-11-18
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! The **FreeBSD** workflow (`.github/workflows/freebsd.yml`) on `main` has been failing since 2026-11-18. Here is what I saw, in case it's useful:
+Hi! The **SonarCloud** workflow (`.github/workflows/sonarcloud.yml`) on `main` has been failing since 2026-11-18. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/storytold/lightcraft/actions/runs/44236239203 — dark (conclusion: `failure`), 2026-11-18 04:17 UTC
-- Dark since: 2026-11-18 04:17 UTC (first run of the current streak)
-- Job / step: `freebsd / FreeBSD 15 x86_64 (build + test)` → `Build and test`
-- Likely cause: process didn't exit successfully: '/var/tmp/craft-target/debug/build/lightcraft/9d9393413b4ba0e9/out/lightcraft-9d9393413b4ba0e9' (signal: 11, SIGSEGV: invalid memory reference)
+- Latest run on `main`: https://github.com/storytold/lightcraft/actions/runs/44458408454 — dark (conclusion: `failure`), 2026-11-19 04:27 UTC
+- Dark since: 2026-11-18 23:57 UTC (first run of the current streak)
+- Job / step: `sonarcloud / SonarCloud Scan` → `Fail on Rust shard test failures`
+- Likely cause: Coverage shard 2 tests failed (exit 100); analysis was still uploaded
 
 <details><summary>End of the job log</summary>
 
 ```
-test window_gpu::tests::composition_only_changes_windows_dx12_presentation ... ok
-test tests::ui_json_is_written_atomically ... ok
-test window_gpu::tests::marker_records_the_failed_renderer ... ok
-test window_gpu::tests::probe_fallback_is_silent ... ok
-error: test failed, to rerun pass `-p lightcraft --bin lightcraft`
-Caused by:
-  process didn't exit successfully: `/var/tmp/craft-target/debug/build/lightcraft/9d9393413b4ba0e9/out/lightcraft-9d9393413b4ba0e9` (signal: 11, SIGSEGV: invalid memory reference)
-##[error]Process completed with exit code 101.
+06:04:46.322 INFO  ------------- Upload SCA dependency files
+06:04:48.006 INFO  Successfully sent architecture data
+06:04:50.222 INFO  Sensor cache published successfully
+06:04:51.783 INFO  Analysis total time: 2:27.857 min
+06:04:51.785 INFO  SonarScanner Engine completed successfully
+06:04:52.313 INFO  EXECUTION SUCCESS
+06:04:52.314 INFO  Total time: 2:34.945s
+##[error]Coverage shard 2 tests failed (exit 100); analysis was still uploaded
 ```
 
 </details>

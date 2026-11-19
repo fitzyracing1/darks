@@ -4,9 +4,8 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/seedds/nxnative/issues/new
-- **Stars:** 16155 · **Generated:** 2026-11-19T00:54:00.080Z
+- **Stars:** 16184 · **Generated:** 2026-11-19T06:47:13.117Z
 - Nothing in this file has been sent anywhere.
-- **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
@@ -43,28 +42,44 @@ artifact_prefix='findings/shader_split/'; Test unit written to findings/shader_s
 
 ### tests (`.github/workflows/tests.yml`)
 
-- Latest run on `main`: https://github.com/seedds/nxnative/actions/runs/44430696743 — dark (conclusion: `cancelled`), 2026-11-19 00:39 UTC
+- Latest run on `main`: https://github.com/seedds/nxnative/actions/runs/44465099205 — dark (conclusion: `failure`), 2026-11-19 05:25 UTC
 - Dark since: 2026-11-06 01:42 UTC (first run of the current streak)
-- Likely cause: run cancelled
-
-### lint-c (`.github/workflows/lint-c.yml`)
-
-- Latest run on `main`: https://github.com/seedds/nxnative/actions/runs/44428649399 — dark (conclusion: `failure`), 2026-11-19 00:23 UTC
-- Dark since: 2026-11-16 07:54 UTC (first run of the current streak)
-- Job / step: `clang-tidy (ratchet)` → `clang-tidy against the baseline`
-- Likely cause: comparing object representation of type 'float' which does not have a unique object representation; consider comparing the values manually [bugprone-suspicious-memory-comparison] (1 in this file, the baseline has 0) (dm/gfx/tests/t_gl_imports.m:733)
+- Job / step: `Host unit tests and CPU-only gfx tests` → `Host unit tests (dm/host/tests)`
+- Likely cause: Assertion failed: (a->vs && !a->soft), function vt_session_lifecycle, file t_codec_video.c, line 111.
 
 <details><summary>End of the job log</summary>
 
 ```
-[353/357] dm/host/tests/t_vorbis.c: 0 findings
-[354/357] dm/host/tests/t_watch_sample.c: 0 findings
-[355/357] dm/host/tests/t_web_stack.c: 0 findings
-[356/357] dm/host/thread.c: 1 findings
-[357/357] dm/host/web_apple.m: 0 findings
+[dm] [movie] AVC: VideoToolbox decoding 64×64, profile 66, reorder depth 0
+[dm] [movie] AVC: VideoToolbox decoding 64×64, profile 66, reorder depth 0
+[dm] [RED] movie: VideoToolbox cannot create an AV1 session (-12906)
+[dm] [movie] AV1: dav1d decodes the stream instead
+[dm] [movie] AV1: dav1d 1.5.4 decoding, 4 threads on 3 frames at once (a stream VideoToolbox refused)
+Assertion failed: (a->vs && !a->soft), function vt_session_lifecycle, file t_codec_video.c, line 111.
+make: *** [run] Abort trap: 6
+##[error]Process completed with exit code 2.
+```
+
+</details>
+
+### lint-c (`.github/workflows/lint-c.yml`)
+
+- Latest run on `main`: https://github.com/seedds/nxnative/actions/runs/44465099267 — dark (conclusion: `failure`), 2026-11-19 05:25 UTC
+- Dark since: 2026-11-16 07:54 UTC (first run of the current streak)
+- Job / step: `clang-tidy (ratchet)` → `clang-tidy against the baseline`
+- Likely cause: Nullable pointer is passed to a callee that requires a non-null 1st parameter [clang-analyzer-nullability.NullablePassedToNonnull] (1 in this file, the baseline has 0) (dm/gfx/tests/t_upload_idle.m:46)
+
+<details><summary>End of the job log</summary>
+
+```
+[356/360] dm/host/tests/t_vorbis.c: 0 findings
+[357/360] dm/host/tests/t_watch_sample.c: 0 findings
+[358/360] dm/host/tests/t_web_stack.c: 0 findings
+[359/360] dm/host/thread.c: 1 findings
+[360/360] dm/host/web_apple.m: 0 findings
 LLVM 23.1.4: 186 findings in 65 files, 107 file/check pairs
-dm/gfx/tests/t_gl_imports.m: bugprone-suspicious-memory-comparison: 1 findings, the baseline has 0
-##[error]comparing object representation of type 'float' which does not have a unique object representation; consider comparing the values manually [bugprone-suspicious-memory-comparison] (1 in this file, the baseline h…
+dm/gfx/tests/t_upload_idle.m: clang-analyzer-nullability.NullablePassedToNonnull: 1 findings, the baseline has 0
+##[error]Nullable pointer is passed to a callee that requires a non-null 1st parameter [clang-analyzer-nullability.NullablePassedToNonnull] (1 in this file, the baseline has 0)
 ```
 
 </details>

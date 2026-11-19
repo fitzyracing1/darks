@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/openclaw/openclaw/issues/new
-- **Stars:** 394760 · **Generated:** 2026-11-19T00:54:00.080Z
+- **Stars:** 394781 · **Generated:** 2026-11-19T06:47:13.117Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** latest run was skipped, not failed — probably not worth filing
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
@@ -22,13 +22,13 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### Docs (`.github/workflows/docs.yml`)
 
-- Latest run on `main`: https://github.com/openclaw/openclaw/actions/runs/44431702098 — dark (conclusion: `skipped`), 2026-11-19 00:46 UTC
+- Latest run on `main`: https://github.com/openclaw/openclaw/actions/runs/44473062533 — dark (conclusion: `skipped`), 2026-11-19 06:33 UTC
 - Dark since: 2026-11-19 00:43 UTC (first run of the current streak)
 - Likely cause: run skipped
 
 ### CI (`.github/workflows/ci.yml`)
 
-- Latest run on `main`: https://github.com/openclaw/openclaw/actions/runs/44431703324 — dark (conclusion: `cancelled`), 2026-11-19 00:46 UTC
+- Latest run on `main`: https://github.com/openclaw/openclaw/actions/runs/44472467962 — dark (conclusion: `cancelled`), 2026-11-19 06:28 UTC
 - Dark since: 2026-11-19 00:43 UTC (first run of the current streak)
 - Likely cause: run cancelled
 
