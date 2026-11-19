@@ -4,14 +4,14 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/storytold/photocraft/issues/new
-- **Stars:** 80265 · **Generated:** 2026-11-18T18:38:42.583Z
+- **Stars:** 80311 · **Generated:** 2026-11-19T00:54:00.080Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 4 workflows dark on main ("SonarCloud", "FreeBSD", "Release", +1 more)
+CI: 5 workflows dark on main ("SonarCloud", "FreeBSD", "Release", +2 more)
 <!-- END TITLE -->
 
 ## Body
@@ -21,7 +21,7 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### SonarCloud (`.github/workflows/sonarcloud.yml`)
 
-- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/44349486399 — dark (conclusion: `cancelled`), 2026-11-18 16:38 UTC
+- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/44428218184 — dark (conclusion: `cancelled`), 2026-11-19 00:20 UTC
 - Dark since: 2026-11-17 15:41 UTC (first run of the current streak)
 - Likely cause: run cancelled
 
@@ -86,6 +86,28 @@ For more information about this error, try `rustc --explain E0277`.
 error: could not compile `photocraft-ui-egui` (lib) due to 13 previous errors
 warning: build failed, waiting for other jobs to finish...
 error: cargo build --release -p photocraft-ui-egui --example perf_scenarios --example perf_scenarios --example flat_open_bench --example interactive_bench --example fx_bench --example bevel_bench --example camera_raw_be…
+##[error]Process completed with exit code 1.
+```
+
+</details>
+
+### CI (`.github/workflows/ci.yml`)
+
+- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/44426596595 — dark (conclusion: `failure`), 2026-11-19 00:08 UTC
+- Dark since: 2026-11-19 00:08 UTC (first run of the current streak)
+- Job / step: `gate / test 3/4 (ubuntu-24.04)` → `Gate`
+- Likely cause: skip  panic_hunt
+
+<details><summary>End of the job log</summary>
+
+```
+                 at /rustc/0ef1bc386059596dada8fb65b50425aab2ea637a/library/core/src/ops/function.rs:250:5
+    note: Some details are omitted, run with `RUST_BACKTRACE=full` for a verbose backtrace.
+error: test run failed
+error: ci failed at `test`
+CI summary:
+  FAIL  test: cargo nextest run --profile ci --workspace --locked --features heif --lib --bins --tests --partition hash:2/3 -E not ((package(photocraft-gpu) | test(/(^|::|_)gpu_tests::/))): exited with exit status: 100
+  skip  panic_hunt
 ##[error]Process completed with exit code 1.
 ```
 

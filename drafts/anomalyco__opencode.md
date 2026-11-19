@@ -4,13 +4,13 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/anomalyco/opencode/issues/new
-- **Stars:** 227787 · **Generated:** 2026-11-18T18:38:42.583Z
+- **Stars:** 227836 · **Generated:** 2026-11-19T00:54:00.080Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 2 workflows dark on dev ("nightly-beta", "release")
+CI: 2 workflows dark on dev ("nightly-beta", "check-test")
 <!-- END TITLE -->
 
 ## Body
@@ -40,24 +40,24 @@ could not create workflow dispatch event: HTTP 422: No ref found for: beta (http
 
 </details>
 
-### release (`.github/workflows/release.yml`)
+### check-test (`.github/workflows/check-test.yml`)
 
-- Latest run on `dev`: https://github.com/anomalyco/opencode/actions/runs/44303999431 — dark (conclusion: `failure`), 2026-11-18 12:26 UTC
-- Dark since: 2026-11-18 12:26 UTC (first run of the current streak)
-- Job / step: `publish-npm` → `Publish`
-- Likely cause: @opencode/cli-windows-x64-baseline@0.0.0-dev-1311 did not appear in the registry
+- Latest run on `dev`: https://github.com/anomalyco/opencode/actions/runs/44429651685 — dark (conclusion: `failure`), 2026-11-19 00:31 UTC
+- Dark since: 2026-11-19 00:31 UTC (first run of the current streak)
+- Job / step: `unit (windows)` → `Run unit tests`
+- Likely cause: @opencode/core#test: command (C:\runner\_work\opencode\opencode\packages\core) C:\Users\runneradmin\.bun\bin\bun.exe run test exited (1)
 
 <details><summary>End of the job log</summary>
 
 ```
-waiting for @opencode/cli-windows-x64-baseline@0.0.0-dev-1311
-waiting for @opencode/cli-windows-x64-baseline@0.0.0-dev-1311
-waiting for @opencode/cli-windows-x64-baseline@0.0.0-dev-1311
-waiting for @opencode/cli-windows-x64-baseline@0.0.0-dev-1311
-waiting for @opencode/cli-windows-x64-baseline@0.0.0-dev-1311
-waiting for @opencode/cli-windows-x64-baseline@0.0.0-dev-1311
-waiting for @opencode/cli-windows-x64-baseline@0.0.0-dev-1311
-##[error]@opencode/cli-windows-x64-baseline@0.0.0-dev-1311 did not appear in the registry
+}
+[00:35:31.318] INFO (#154661): mcp connected {
+  server: "resources",
+  tools: 1,
+} {
+  server: "resources",
+  directory: "C:\\runner\\_work\\opencode\\opencode\\packages\\core\\test",
+##[error]@opencode/core#test: command (C:\runner\_work\opencode\opencode\packages\core) C:\Users\runneradmin\.bun\bin\bun.exe run test exited (1)
 ```
 
 </details>

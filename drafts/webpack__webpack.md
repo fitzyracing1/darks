@@ -1,33 +1,33 @@
 <!-- dark-draft: webpack/webpack -->
-<!-- draft-state: resolved -->
+<!-- draft-state: ready -->
 # Upstream issue draft: webpack/webpack
 
-- **Status:** resolved — lit again (2026-11-18); nothing to file
+- **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/webpack/webpack/issues/new
-- **Stars:** 66009 · **Generated:** 2026-11-17T18:39:49.297Z
+- **Stars:** 66009 · **Generated:** 2026-11-19T00:54:00.080Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: "Github Actions" workflow failing on main since 2026-11-16
+CI: "Github Actions" workflow failing on main since 2026-11-18
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! The **Github Actions** workflow (`.github/workflows/test.yml`) on `main` has been failing since 2026-11-16. Here is what I saw, in case it's useful:
+Hi! The **Github Actions** workflow (`.github/workflows/test.yml`) on `main` has been failing since 2026-11-18. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/webpack/webpack/actions/runs/44121833359 — dark (conclusion: `failure`), 2026-11-17 16:05 UTC
-- Dark since: 2026-11-16 10:58 UTC (first run of the current streak)
-- Job / step: `unit` → `Run yarn cover:unit --ci --cacheDirectory .jest-cache`
-- Likely cause: Tests:       1 failed, 95710 passed, 95711 total
+- Latest run on `main`: https://github.com/webpack/webpack/actions/runs/44418646780 — dark (conclusion: `failure`), 2026-11-18 23:12 UTC
+- Dark since: 2026-11-18 23:12 UTC (first run of the current streak)
+- Job / step: `runtimes (deno)` → `Run yarn test:deno --ci`
+- Likely cause: Tests:       2 failed, 433 skipped, 186891 passed, 187326 total
 
 <details><summary>End of the job log</summary>
 
 ```
-Snapshots:   69394 passed, 69394 total
-Time:        563.125 s
+Snapshots:   75484 passed, 75484 total
+Time:        1549.285 s
 Ran all test suites.
 error Command failed with exit code 1.
 info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.

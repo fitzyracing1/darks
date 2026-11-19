@@ -4,9 +4,8 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/storytold/vectorcraft/issues/new
-- **Stars:** 11881 · **Generated:** 2026-11-18T18:38:42.583Z
+- **Stars:** 11892 · **Generated:** 2026-11-19T00:54:00.080Z
 - Nothing in this file has been sent anywhere.
-- **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
@@ -21,16 +20,32 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### SonarCloud (`.github/workflows/sonarcloud.yml`)
 
-- Latest run on `main`: https://github.com/storytold/vectorcraft/actions/runs/44368239856 — dark (conclusion: `cancelled`), 2026-11-18 18:18 UTC
+- Latest run on `main`: https://github.com/storytold/vectorcraft/actions/runs/44426624026 — dark (conclusion: `failure`), 2026-11-19 00:08 UTC
 - Dark since: 2026-11-18 03:14 UTC (first run of the current streak)
-- Likely cause: run cancelled
+- Job / step: `sonarcloud / Build instrumented test archive` → `Build instrumented test archive`
+- Likely cause: help: consider removing the dependency on 'thiserror'
+
+<details><summary>End of the job log</summary>
+
+```
+14 | thiserror = { workspace = true }
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   |
+   = note: `cargo::unused_dependencies` is set to `warn` by default
+help: consider removing the dependency on `thiserror`
+warning: `vectorcraft-geom` (manifest) generated 1 warning
+error: command `/home/runner/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/bin/cargo '--color=always' test --no-run '--message-format=json-render-diagnostics' --workspace` exited with code 101
+##[error]Process completed with exit code 101.
+```
+
+</details>
 
 ### CI (`.github/workflows/ci.yml`)
 
-- Latest run on `main`: https://github.com/storytold/vectorcraft/actions/runs/44361966566 — dark (conclusion: `failure`), 2026-11-18 17:44 UTC
+- Latest run on `main`: https://github.com/storytold/vectorcraft/actions/runs/44426624178 — dark (conclusion: `failure`), 2026-11-19 00:08 UTC
 - Dark since: 2026-11-18 17:39 UTC (first run of the current streak)
 - Job / step: `gate / gate (ubuntu-24.04)` → `Gate`
-- Likely cause: FAIL  clippy: cargo clippy --workspace --all-targets --keep-going -- -D warnings: exited with exit status: 101
+- Likely cause: FAIL  fmt: cargo fmt --all -- --check: exited with exit status: 1
 
 <details><summary>End of the job log</summary>
 

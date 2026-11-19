@@ -4,13 +4,14 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/activepieces/activepieces/issues/new
-- **Stars:** 25604 · **Generated:** 2026-11-18T18:38:42.583Z
+- **Stars:** 25612 · **Generated:** 2026-11-19T00:54:00.080Z
 - Nothing in this file has been sent anywhere.
+- **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 2 workflows dark on main ("Chat Evals", "Benchmark")
+CI: 3 workflows dark on main ("Chat Evals", "Benchmark", "Continuous Delivery — Staging")
 <!-- END TITLE -->
 
 ## Body
@@ -58,6 +59,28 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 }
 Box signals API responded 401: {"error":{"type":"invalid_request_error","message":"Unknown token. Send it as \"Authorization: ***"."}}
 ##[error]Process completed with exit code 1.
+```
+
+</details>
+
+### Continuous Delivery — Staging (`.github/workflows/continuous-delivery-stg.yml`)
+
+- Latest run on `main`: https://github.com/activepieces/activepieces/actions/runs/44331715007 — dark (conclusion: `cancelled`), 2026-11-18 15:06 UTC
+- Dark since: 2026-11-18 15:06 UTC (first run of the current streak)
+- Job / step: `build-image` → `Run depot/build-push-action@v1`
+- Likely cause: The job has exceeded the maximum execution time of 6h0m0s
+
+<details><summary>End of the job log</summary>
+
+```
+#42 pushing manifest for ghcr.io/activepieces/activepieces-cloud
+#42 pushing manifest for ghcr.io/activepieces/activepieces-cloud 4.4s done
+#42 DONE 11.8s
+#17 [linux/arm64 base 2/6] RUN apt-get update &&     apt-get install -y --no-install-recommends         openssh-client         python3         g++         build-essential         git         poppler-utils         popple…
+#17 CANCELED
+Build Summary: https://depot.dev/orgs/DJF9h3Y1VV/projects/du7O4b0e8P/builds/6frtxgx646
+failed to solve: Canceled: context canceled
+##[error]failed with: failed to solve: Canceled: context canceled
 ```
 
 </details>

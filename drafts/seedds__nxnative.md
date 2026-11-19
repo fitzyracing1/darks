@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/seedds/nxnative/issues/new
-- **Stars:** 16133 · **Generated:** 2026-11-18T18:38:42.583Z
+- **Stars:** 16155 · **Generated:** 2026-11-19T00:54:00.080Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
@@ -43,15 +43,31 @@ artifact_prefix='findings/shader_split/'; Test unit written to findings/shader_s
 
 ### tests (`.github/workflows/tests.yml`)
 
-- Latest run on `main`: https://github.com/seedds/nxnative/actions/runs/44369801987 — dark (conclusion: `cancelled`), 2026-11-18 18:26 UTC
+- Latest run on `main`: https://github.com/seedds/nxnative/actions/runs/44430696743 — dark (conclusion: `cancelled`), 2026-11-19 00:39 UTC
 - Dark since: 2026-11-06 01:42 UTC (first run of the current streak)
 - Likely cause: run cancelled
 
 ### lint-c (`.github/workflows/lint-c.yml`)
 
-- Latest run on `main`: https://github.com/seedds/nxnative/actions/runs/44363579654 — dark (conclusion: `cancelled`), 2026-11-18 17:53 UTC
+- Latest run on `main`: https://github.com/seedds/nxnative/actions/runs/44428649399 — dark (conclusion: `failure`), 2026-11-19 00:23 UTC
 - Dark since: 2026-11-16 07:54 UTC (first run of the current streak)
-- Likely cause: run cancelled
+- Job / step: `clang-tidy (ratchet)` → `clang-tidy against the baseline`
+- Likely cause: comparing object representation of type 'float' which does not have a unique object representation; consider comparing the values manually [bugprone-suspicious-memory-comparison] (1 in this file, the baseline has 0) (dm/gfx/tests/t_gl_imports.m:733)
+
+<details><summary>End of the job log</summary>
+
+```
+[353/357] dm/host/tests/t_vorbis.c: 0 findings
+[354/357] dm/host/tests/t_watch_sample.c: 0 findings
+[355/357] dm/host/tests/t_web_stack.c: 0 findings
+[356/357] dm/host/thread.c: 1 findings
+[357/357] dm/host/web_apple.m: 0 findings
+LLVM 23.1.4: 186 findings in 65 files, 107 file/check pairs
+dm/gfx/tests/t_gl_imports.m: bugprone-suspicious-memory-comparison: 1 findings, the baseline has 0
+##[error]comparing object representation of type 'float' which does not have a unique object representation; consider comparing the values manually [bugprone-suspicious-memory-comparison] (1 in this file, the baseline h…
+```
+
+</details>
 
 If this is already known or expected, feel free to close. Thanks for maintaining nxnative!
 

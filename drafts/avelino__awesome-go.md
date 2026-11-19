@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/avelino/awesome-go/issues/new
-- **Stars:** 194631 · **Generated:** 2026-11-18T18:38:42.583Z
+- **Stars:** 194674 · **Generated:** 2026-11-19T00:54:00.080Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -42,7 +42,7 @@ FAIL	github.com/avelino/awesome-go	0.134s
 
 ### Auto-merge README PRs (`.github/workflows/auto-merge-readme.yaml`)
 
-- Latest run on `main`: https://github.com/avelino/awesome-go/actions/runs/44368569895 — dark (conclusion: `failure`), 2026-11-18 18:20 UTC
+- Latest run on `main`: https://github.com/avelino/awesome-go/actions/runs/44430683069 — dark (conclusion: `failure`), 2026-11-19 00:38 UTC
 - Dark since: 2026-11-17 11:48 UTC (first run of the current streak)
 - Job / step: `Auto-merge README PRs` → `Merge eligible PRs`
 - Likely cause: "message": "Not Found",

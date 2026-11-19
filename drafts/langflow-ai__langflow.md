@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/langflow-ai/langflow/issues/new
-- **Stars:** 156746 · **Generated:** 2026-11-18T18:38:42.583Z
+- **Stars:** 156754 · **Generated:** 2026-11-19T00:54:00.080Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -86,7 +86,7 @@ FAILED src/bundles/google/tests/test_workspace_network_errors.py::test_network_f
 
 ### GP Download Translations (`.github/workflows/gp-download.yml`)
 
-- Latest run on `main`: https://github.com/langflow-ai/langflow/actions/runs/44195500509 — dark (conclusion: `failure`), 2026-11-17 23:00 UTC
+- Latest run on `main`: https://github.com/langflow-ai/langflow/actions/runs/44416930500 — dark (conclusion: `failure`), 2026-11-18 23:00 UTC
 - Dark since: 2026-11-16 23:01 UTC (first run of the current streak)
 - Job / step: `Download translations from Globalization Pipeline` → `Download translations from GP`
 - Likely cause: FAILED languages: ['fr', 'ja', 'es', 'de', 'pt', 'zh-Hans']
@@ -97,9 +97,9 @@ FAILED src/bundles/google/tests/test_workspace_network_errors.py::test_network_f
 Downloading 'de' translations...
   Error downloading 'de': 401 Client Error: Unauthorized for url: https://g11n-pipeline-api.straker.global/translate/rest/langflow-test/v2/bundles/langflow-ui/de
 Downloading 'pt' translations...
-  Error downloading 'pt': 403 Client Error: Forbidden for url: https://g11n-pipeline-api.straker.global/translate/rest/langflow-test/v2/bundles/langflow-ui/pt
+  Error downloading 'pt': 401 Client Error: Unauthorized for url: https://g11n-pipeline-api.straker.global/translate/rest/langflow-test/v2/bundles/langflow-ui/pt
 Downloading 'zh-Hans' translations...
-  Error downloading 'zh-Hans': 403 Client Error: Forbidden for url: https://g11n-pipeline-api.straker.global/translate/rest/langflow-test/v2/bundles/langflow-ui/zh-Hans
+  Error downloading 'zh-Hans': 401 Client Error: Unauthorized for url: https://g11n-pipeline-api.straker.global/translate/rest/langflow-test/v2/bundles/langflow-ui/zh-Hans
 FAILED languages: ['fr', 'ja', 'es', 'de', 'pt', 'zh-Hans']
 ##[error]Process completed with exit code 1.
 ```
@@ -108,25 +108,9 @@ FAILED languages: ['fr', 'ja', 'es', 'de', 'pt', 'zh-Hans']
 
 ### Nightly Build (`.github/workflows/nightly_build.yml`)
 
-- Latest run on `main`: https://github.com/langflow-ai/langflow/actions/runs/44207308638 — dark (conclusion: `failure`), 2026-11-18 00:22 UTC
+- Latest run on `main`: https://github.com/langflow-ai/langflow/actions/runs/44428491635 — dark (conclusion: `failure`), 2026-11-19 00:22 UTC
 - Dark since: 2026-11-18 00:22 UTC (first run of the current streak)
-- Job / step: `Run Frontend Tests - Linux / Live provider smoke tests` → `Run live-provider smoke tests`
-- Likely cause: 1 failed
-
-<details><summary>End of the job log</summary>
-
-```
-Removing the temp database
-tempDbPath /home/runner/work/langflow/langflow/src/frontend/temp
-Temp database directory does not exist, skipping removal
-  1 failed
-    [chromium] › tests/live/admin-upgrade-repair.spec.ts:16:5 › distinguishes report imports and explains running-version history @release @database
-  2 skipped
-  3 passed (4.5m)
-##[error]Process completed with exit code 1.
-```
-
-</details>
+- Likely cause: step "Commit tag" in job "create-nightly-tag" exited nonzero
 
 If this is already known or expected, feel free to close. Thanks for maintaining langflow!
 

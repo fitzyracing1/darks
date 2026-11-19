@@ -4,28 +4,19 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/storytold/lightcraft/issues/new
-- **Stars:** 16157 · **Generated:** 2026-11-18T18:38:42.583Z
+- **Stars:** 16168 · **Generated:** 2026-11-19T00:54:00.080Z
 - Nothing in this file has been sent anywhere.
-- **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 2 workflows dark on main ("SonarCloud", "FreeBSD")
+CI: "FreeBSD" workflow failing on main since 2026-11-18
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
-
-### SonarCloud (`.github/workflows/sonarcloud.yml`)
-
-- Latest run on `main`: https://github.com/storytold/lightcraft/actions/runs/44335579251 — dark (conclusion: `cancelled`), 2026-11-18 15:26 UTC
-- Dark since: 2026-11-17 02:58 UTC (first run of the current streak)
-- Likely cause: run cancelled
-
-### FreeBSD (`.github/workflows/freebsd.yml`)
+Hi! The **FreeBSD** workflow (`.github/workflows/freebsd.yml`) on `main` has been failing since 2026-11-18. Here is what I saw, in case it's useful:
 
 - Latest run on `main`: https://github.com/storytold/lightcraft/actions/runs/44236239203 — dark (conclusion: `failure`), 2026-11-18 04:17 UTC
 - Dark since: 2026-11-18 04:17 UTC (first run of the current streak)

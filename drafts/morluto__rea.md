@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/morluto/rea/issues/new
-- **Stars:** 467939 · **Generated:** 2026-11-18T18:38:42.583Z
+- **Stars:** 468285 · **Generated:** 2026-11-19T00:54:00.080Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
@@ -21,31 +21,15 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### CodeQL production (`.github/workflows/codeql.yml`)
 
-- Latest run on `main`: https://github.com/morluto/rea/actions/runs/44367752956 — dark (conclusion: `cancelled`), 2026-11-18 18:15 UTC
+- Latest run on `main`: https://github.com/morluto/rea/actions/runs/44429657338 — dark (conclusion: `cancelled`), 2026-11-19 00:31 UTC
 - Dark since: 2026-11-18 17:54 UTC (first run of the current streak)
 - Likely cause: run cancelled
 
 ### CI (`.github/workflows/ci.yml`)
 
-- Latest run on `main`: https://github.com/morluto/rea/actions/runs/44367753197 — dark (conclusion: `failure`), 2026-11-18 18:15 UTC
+- Latest run on `main`: https://github.com/morluto/rea/actions/runs/44429657942 — dark (conclusion: `cancelled`), 2026-11-19 00:31 UTC
 - Dark since: 2026-11-18 17:59 UTC (first run of the current streak)
-- Job / step: `Static checks` → `Run npm run check:ci:fast`
-- Likely cause: command (/home/runner/work/rea/rea/) /opt/hostedtoolcache/node/24.22.1/x64/bin/npm run typecheck exited (2)
-
-<details><summary>End of the job log</summary>
-
-```
-Checking formatting...
-All matched files use the correct format.
-Finished in 7616ms on 8699 files using 4 threads.
-typecheck
-cache miss, executing f3979f02acf0a461
-> rea-agents@6.9.0 typecheck
-> node scripts/run-typescript.mjs --noEmit && node scripts/run-typescript.mjs --noEmit -p tsconfig.scripts.json
-##[error]tests/boundary/providers/CutterBridgeService.test.ts(108,31): error TS2322: Type 'Promise<{ sessions: never[]; bridge_directory: string; discovery_status: "no_live_bridge_found"; bridge_directory_security: "pri…
-```
-
-</details>
+- Likely cause: run cancelled
 
 If this is already known or expected, feel free to close. Thanks for maintaining rea!
 

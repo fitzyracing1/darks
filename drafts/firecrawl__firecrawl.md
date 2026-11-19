@@ -1,26 +1,26 @@
 <!-- dark-draft: firecrawl/firecrawl -->
-<!-- draft-state: resolved -->
+<!-- draft-state: ready -->
 # Upstream issue draft: firecrawl/firecrawl
 
-- **Status:** resolved — lit again (2026-11-17); nothing to file
+- **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/firecrawl/firecrawl/issues/new
-- **Stars:** 202489 · **Generated:** 2026-11-17T12:40:23.310Z
+- **Stars:** 203187 · **Generated:** 2026-11-19T00:54:00.080Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: "Publish Rust SDK" workflow getting cancelled on main since 2026-11-13
+CI: "Publish Firecrawl Local" workflow getting cancelled on main since 2026-11-18
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! The **Publish Rust SDK** workflow (`.github/workflows/publish-rust-sdk.yml`) on `main` has been getting cancelled since 2026-11-13. Here is what I saw, in case it's useful:
+Hi! The **Publish Firecrawl Local** workflow (`.github/workflows/publish-local.yml`) on `main` has been getting cancelled since 2026-11-18. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/firecrawl/firecrawl/actions/runs/43474926270 — dark (conclusion: `cancelled`), 2026-11-13 17:39 UTC
-- Dark since: 2026-11-13 17:39 UTC (first run of the current streak)
+- Latest run on `main`: https://github.com/firecrawl/firecrawl/actions/runs/44387248443 — dark (conclusion: `cancelled`), 2026-11-18 20:05 UTC
+- Dark since: 2026-11-18 17:19 UTC (first run of the current streak)
 - Job / step: `Publish to crates.io`
 - Likely cause: run cancelled in job "Publish to crates.io"
 

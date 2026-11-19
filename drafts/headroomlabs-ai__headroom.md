@@ -4,15 +4,9 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/headroomlabs-ai/headroom/issues/new
-- **Stars:** 80078 · **Generated:** 2026-11-18T18:38:42.583Z
+- **Stars:** 80103 · **Generated:** 2026-11-19T00:54:00.080Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
-
-## Skipped: upstream already tracking
-
-- Security (`.github/workflows/security.yml`): [issue #4783](https://github.com/headroomlabs-ai/headroom/issues/4783) "BUG Several security-related tests cannot catch the defect they describe (loopback gating, rate-limit key, bypass header, CORS, upstream sweep, trust_remote_code scan, live marker)"
-
-These workflows are left out of the body below.
 
 ## Suggested title
 
