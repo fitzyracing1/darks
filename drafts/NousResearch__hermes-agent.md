@@ -4,9 +4,8 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/NousResearch/hermes-agent/issues/new
-- **Stars:** 264640 · **Generated:** 2026-11-19T12:43:24.149Z
+- **Stars:** 264711 · **Generated:** 2026-11-19T18:39:01.765Z
 - Nothing in this file has been sent anywhere.
-- **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Skipped: upstream already tracking
 
@@ -18,17 +17,33 @@ These workflows are left out of the body below.
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: "Deploy Site" workflow getting cancelled on main since 2026-11-19
+CI: "Deploy Site" workflow failing on main since 2026-11-19
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! The **Deploy Site** workflow (`.github/workflows/deploy-site.yml`) on `main` has been getting cancelled since 2026-11-19. Here is what I saw, in case it's useful:
+Hi! The **Deploy Site** workflow (`.github/workflows/deploy-site.yml`) on `main` has been failing since 2026-11-19. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/NousResearch/hermes-agent/actions/runs/44523576137 — dark (conclusion: `cancelled`), 2026-11-19 12:24 UTC
+- Latest run on `main`: https://github.com/NousResearch/hermes-agent/actions/runs/44560893584 — dark (conclusion: `failure`), 2026-11-19 15:58 UTC
 - Dark since: 2026-11-19 12:23 UTC (first run of the current streak)
-- Likely cause: run cancelled
+- Job / step: `deploy-docs` → `Deploy to GitHub Pages`
+- Likely cause: Error: No artifacts named "github-pages" were found for this workflow run. Ensure artifacts are uploaded with actions/upload-artifact@v4 or later.
+
+<details><summary>End of the job log</summary>
+
+```
+Artifact github-pages has been successfully uploaded! Final size is 135435711 bytes. Artifact ID is 14549272688
+Artifact download URL: https://github.com/NousResearch/hermes-agent/actions/runs/44560893584/artifacts/14549272688
+##[end-action id=__actions_upload-pages-artifact.upload-artifact;outcome=success;conclusion=success;duration_ms=6875]
+(node:4234) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+Fetching artifact metadata for "github-pages" in this workflow run
+Found 0 artifact(s)
+##[error]Fetching artifact metadata failed. Is githubstatus.com reporting issues with API requests, Pages, or Actions? Please re-run the deployment at a later time.
+```
+
+</details>
 
 If this is already known or expected, feel free to close. Thanks for maintaining hermes-agent!
 

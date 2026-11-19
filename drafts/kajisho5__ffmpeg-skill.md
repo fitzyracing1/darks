@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/kajisho5/ffmpeg-skill/issues/new
-- **Stars:** 8140 · **Generated:** 2026-11-19T12:43:24.149Z
+- **Stars:** 8258 · **Generated:** 2026-11-19T18:39:01.765Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** cancelled by a concurrency group — likely noise
 
@@ -19,7 +19,7 @@ CI: "pages" workflow getting cancelled on main since 2026-11-19
 <!-- BEGIN BODY -->
 Hi! The **pages** workflow (`.github/workflows/pages.yml`) on `main` has been getting cancelled since 2026-11-19. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/kajisho5/ffmpeg-skill/actions/runs/44512732991 — dark (conclusion: `cancelled`), 2026-11-19 11:12 UTC
+- Latest run on `main`: https://github.com/kajisho5/ffmpeg-skill/actions/runs/44579802943 — dark (conclusion: `cancelled`), 2026-11-19 17:41 UTC
 - Dark since: 2026-11-19 11:04 UTC (first run of the current streak)
 - Job / step: `build` → `Run actions/jekyll-build-pages@44a6e6beabd48582f863aeeb6cb2151cc1716697`
 - Likely cause: Canceling since a higher priority waiting request for pages exists
@@ -32,7 +32,7 @@ Hi! The **pages** workflow (`.github/workflows/pages.yml`) on `main` has been ge
            Writing: /github/workspace/_site/readme.html
            Writing: /github/workspace/_site/docs/roadmap.html
            Writing: /github/workspace/_site/assets/css/style.css
-                    done in 3.034 seconds.
+                    done in 2.113 seconds.
  Auto-regeneration: disabled. Use --watch to enable.
 ##[error]The operation was canceled.
 ```

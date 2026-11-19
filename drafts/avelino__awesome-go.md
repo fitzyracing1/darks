@@ -4,45 +4,21 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/avelino/awesome-go/issues/new
-- **Stars:** 194760 · **Generated:** 2026-11-19T12:43:24.149Z
+- **Stars:** 194797 · **Generated:** 2026-11-19T18:39:01.765Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 2 workflows dark on main ("Check For Stale Repositories", "Auto-merge README PRs")
+CI: "Auto-merge README PRs" workflow failing on main since 2026-11-17
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
+Hi! The **Auto-merge README PRs** workflow (`.github/workflows/auto-merge-readme.yaml`) on `main` has been failing since 2026-11-17. Here is what I saw, in case it's useful:
 
-### Check For Stale Repositories (`.github/workflows/run-check.yaml`)
-
-- Latest run on `main`: https://github.com/avelino/awesome-go/actions/runs/43657100387 — dark (conclusion: `failure`), 2026-11-15 00:13 UTC
-- Dark since: 2026-11-15 00:13 UTC (first run of the current streak)
-- Job / step: `Running test` → `run script`
-- Likely cause: FAIL	github.com/avelino/awesome-go	0.134s
-
-<details><summary>End of the job log</summary>
-
-```
-8e402c3e03633b97e70085d70e24d77035c080f4
-=== RUN   TestStaleRepository
-    stale_repositories_test.go:274: getAllFlaggedRepositories: rate limit or auth failure (status 401)
---- FAIL: TestStaleRepository (0.13s)
-FAIL
-exit status 1
-FAIL	github.com/avelino/awesome-go	0.134s
-##[error]Process completed with exit code 1.
-```
-
-</details>
-
-### Auto-merge README PRs (`.github/workflows/auto-merge-readme.yaml`)
-
-- Latest run on `main`: https://github.com/avelino/awesome-go/actions/runs/44523579695 — dark (conclusion: `failure`), 2026-11-19 12:24 UTC
+- Latest run on `main`: https://github.com/avelino/awesome-go/actions/runs/44587072675 — dark (conclusion: `failure`), 2026-11-19 18:22 UTC
 - Dark since: 2026-11-17 11:48 UTC (first run of the current streak)
 - Job / step: `Auto-merge README PRs` → `Merge eligible PRs`
 - Likely cause: "message": "Not Found",

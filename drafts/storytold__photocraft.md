@@ -4,14 +4,14 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/storytold/photocraft/issues/new
-- **Stars:** 80431 · **Generated:** 2026-11-19T12:43:24.149Z
+- **Stars:** 80475 · **Generated:** 2026-11-19T18:39:01.765Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 3 workflows dark on main ("FreeBSD", "Release", "Perf (nightly)")
+CI: 5 workflows dark on main ("FreeBSD", "Release", "Perf (nightly)", +2 more)
 <!-- END TITLE -->
 
 ## Body
@@ -81,6 +81,34 @@ error: could not fetch https://download.freebsd.org/releases/arm64/aarch64/15.1-
    Compiling memory-stats v1.2.0
    Compiling photocraft-testkit v0.23.1 (/Users/runner/work/photocraft/photocraft/crates/testkit)
 ##[error]The operation was canceled.
+```
+
+</details>
+
+### SonarCloud (`.github/workflows/sonarcloud.yml`)
+
+- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/44585573637 — dark (conclusion: `cancelled`), 2026-11-19 18:13 UTC
+- Dark since: 2026-11-19 16:52 UTC (first run of the current streak)
+- Likely cause: run cancelled
+
+### CI (`.github/workflows/ci.yml`)
+
+- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/44582769788 — dark (conclusion: `failure`), 2026-11-19 17:58 UTC
+- Dark since: 2026-11-19 17:58 UTC (first run of the current streak)
+- Job / step: `gate / test 2/4 (ubuntu-24.04)` → `Gate`
+- Likely cause: skip  panic_hunt
+
+<details><summary>End of the job log</summary>
+
+```
+       4: <photocraft_ui_egui::canvas::paint_tool::tests::live_stroke_uses_pen_tilt_and_redraws_partially::{closure#0} as core::ops::function::FnOnce<()>>::call_once
+    note: Some details are omitted, run with `RUST_BACKTRACE=full` for a verbose backtrace.
+error: test run failed
+error: ci failed at `test`
+CI summary:
+  FAIL  test: cargo nextest run --profile ci --binaries-metadata /home/runner/work/photocraft/photocraft/target/nextest-archive/target/nextest/binaries-metadata.json --cargo-metadata /home/runner/work/photocraft/photocr…
+  skip  panic_hunt
+##[error]Process completed with exit code 1.
 ```
 
 </details>

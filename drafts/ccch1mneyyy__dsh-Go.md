@@ -4,9 +4,15 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/ccch1mneyyy/dsh-Go/issues/new
-- **Stars:** 27831 · **Generated:** 2026-11-19T12:43:24.149Z
+- **Stars:** 28114 · **Generated:** 2026-11-19T18:39:01.765Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** cancelled by a concurrency group — likely noise
+
+## Skipped: upstream already tracking
+
+- iOS guest (`.github/workflows/ios-guest.yml`): [issue #651](https://github.com/ccch1mneyyy/dsh-Go/issues/651) "Bug iOS：guest 任务卡住后取消会把内核 quarantine，之后所有 Linux 命令报 "Guest resource exit was not confirmed""
+
+These workflows are left out of the body below.
 
 ## Suggested title
 
@@ -19,9 +25,9 @@ CI: "iOS compile" workflow getting cancelled on main since 2026-11-18
 <!-- BEGIN BODY -->
 Hi! The **iOS compile** workflow (`.github/workflows/ios-compile.yml`) on `main` has been getting cancelled since 2026-11-18. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/ccch1mneyyy/dsh-Go/actions/runs/44508267838 — dark (conclusion: `cancelled`), 2026-11-19 10:43 UTC
+- Latest run on `main`: https://github.com/ccch1mneyyy/dsh-Go/actions/runs/44573979779 — dark (conclusion: `cancelled`), 2026-11-19 17:08 UTC
 - Dark since: 2026-11-18 02:01 UTC (first run of the current streak)
-- Job / step: `engine` → `Launch the real app`
+- Job / step: `engine` → `Run the engine inside the app`
 - Likely cause: Canceling since a higher priority waiting request for ios-compile-refs/heads/main exists
 
 <details><summary>End of the job log</summary>

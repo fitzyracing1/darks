@@ -4,35 +4,35 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/koala73/worldmonitor/issues/new
-- **Stars:** 90934 · **Generated:** 2026-11-19T12:43:24.149Z
+- **Stars:** 90938 · **Generated:** 2026-11-19T18:39:01.765Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: "Status Page Monitor" workflow failing on main since 2026-11-19
+CI: "Railway Native Deploy Health" workflow failing on main since 2026-11-19
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! The **Status Page Monitor** workflow (`.github/workflows/status-page-monitor.yml`) on `main` has been failing since 2026-11-19. Here is what I saw, in case it's useful:
+Hi! The **Railway Native Deploy Health** workflow (`.github/workflows/railway-deploy-drift.yml`) on `main` has been failing since 2026-11-19. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/koala73/worldmonitor/actions/runs/44522975786 — dark (conclusion: `failure`), 2026-11-19 12:20 UTC
-- Dark since: 2026-11-19 12:20 UTC (first run of the current streak)
-- Job / step: `monitor` → `Run npx playwright install --with-deps chromium`
-- Likely cause: Error: Installation process exited with code: 100
+- Latest run on `main`: https://github.com/koala73/worldmonitor/actions/runs/44586778383 — dark (conclusion: `failure`), 2026-11-19 18:20 UTC
+- Dark since: 2026-11-19 18:20 UTC (first run of the current streak)
+- Job / step: `Railway native deployment health` → `Check Railway deployment configuration and drift`
+- Likely cause: 1: operation timed out
 
 <details><summary>End of the job log</summary>
 
 ```
-E: Failed to fetch https://security.ubuntu.com/ubuntu/pool/main/x/xfonts-encodings/xfonts-encodings_1.0.5-0ubuntu3_all.deb  Could not wait for server fd - select (11: Resource temporarily unavailable) [IP: 91.189.91.81 …
-E: Failed to fetch https://security.ubuntu.com/ubuntu/pool/main/x/xfonts-utils/xfonts-utils_7.7%2b7build1_amd64v3.deb  Could not wait for server fd - select (11: Resource temporarily unavailable) [IP: 91.189.91.81 443]
-E: Failed to fetch https://security.ubuntu.com/ubuntu/pool/universe/x/xfonts-cyrillic/xfonts-cyrillic_1.0.5%2bnmu1build1_all.deb  Could not wait for server fd - select (11: Resource temporarily unavailable) [IP: 91.189.…
-E: Failed to fetch https://security.ubuntu.com/ubuntu/pool/universe/x/xfonts-scalable/xfonts-scalable_1.0.3-1.3build1_all.deb  Could not wait for server fd - select (11: Resource temporarily unavailable) [IP: 91.189.91.…
-E: Unable to fetch some archives, maybe run apt update or try with --fix-missing?
-Failed to install browsers
-Error: Installation process exited with code: 100
+node: v24.22.2
+npm: 11.19.1
+yarn: 1.22.22
+railway service list --project 29419572-0b0d-437f-8e71-4fa68daf514f --environment production --json failed (1): Failed to fetch: error sending request for url (https://backboard.railway.com/graphql/v2)
+Caused by:
+    0: error sending request for url (https://backboard.railway.com/graphql/v2)
+    1: operation timed out
 ##[error]Process completed with exit code 1.
 ```
 

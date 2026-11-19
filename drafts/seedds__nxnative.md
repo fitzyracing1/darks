@@ -4,9 +4,10 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/seedds/nxnative/issues/new
-- **Stars:** 16215 · **Generated:** 2026-11-19T12:43:24.149Z
+- **Stars:** 16239 · **Generated:** 2026-11-19T18:39:01.765Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** cancelled by a concurrency group — likely noise
+- **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
@@ -43,25 +44,9 @@ Base64: UEFDeDQwM0wubm5uPW4AAAAAAAAAAAAAAAAAAAAAAAAAAAA=
 
 ### tests (`.github/workflows/tests.yml`)
 
-- Latest run on `main`: https://github.com/seedds/nxnative/actions/runs/44516888710 — dark (conclusion: `failure`), 2026-11-19 11:40 UTC
+- Latest run on `main`: https://github.com/seedds/nxnative/actions/runs/44574901127 — dark (conclusion: `cancelled`), 2026-11-19 17:13 UTC
 - Dark since: 2026-11-06 01:42 UTC (first run of the current streak)
-- Job / step: `Sanitizers (ASan, UBSan and TSan over the host and CPU texture tests)` → `ASan and UBSan, every host unit test (dm/host/tests)`
-- Likely cause: windowless role: task role 0 -> 7, USER_INTERACTIVE base priority 20 -> 20 (7 checks, 1 failed)
-
-<details><summary>End of the job log</summary>
-
-```
-haptics: player 1 controller unknown, rumble through the DualShock 4 effects report (Bluetooth, product 0x09cc)
-Apple haptics: channels, pulses, idle release, startup handlers, engine replacement, backoff, stale callbacks, plain players, Joy-Con recovery and lifetime, the DualSense's handles, level cutoff and the DualShock 4 rout…
-build/asan/t_front_role
-FAIL: the default application role lifts the interactive QoS ceiling (line 27)
-windowless role: task role 0 -> 7, USER_INTERACTIVE base priority 20 -> 20 (7 checks, 1 failed)
-make[1]: *** [run] Error 1
-make: *** [asan] Error 2
-##[error]Process completed with exit code 2.
-```
-
-</details>
+- Likely cause: run cancelled
 
 If this is already known or expected, feel free to close. Thanks for maintaining nxnative!
 

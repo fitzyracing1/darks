@@ -4,12 +4,11 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/google-gemini/gemini-cli/issues/new
-- **Stars:** 108940 · **Generated:** 2026-11-19T12:43:24.149Z
+- **Stars:** 108940 · **Generated:** 2026-11-19T18:39:01.765Z
 - Nothing in this file has been sent anywhere.
 
 ## Skipped: upstream already tracking
 
-- Release: Nightly (`.github/workflows/release-nightly.yml`): [issue #30364](https://github.com/google-gemini/gemini-cli/issues/30364) "Nightly Release Failed for v0.70.0-nightly.20261119.g615d6bc8c on 2026-11-19"
 - Memory Tests: Nightly (`.github/workflows/memory-nightly.yml`): [issue #30084](https://github.com/google-gemini/gemini-cli/issues/30084) "CI: memory-nightly failing: 4 memory regressions over 10% (idle-session-startup +54.2%: 107.6MB vs 69.8MB)"
 
 These workflows are left out of the body below.
@@ -17,7 +16,7 @@ These workflows are left out of the body below.
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 2 workflows dark on main ("📋 Gemini Scheduled Issue Triage", "Performance Tests: Nightly")
+CI: 3 workflows dark on main ("📋 Gemini Scheduled Issue Triage", "Performance Tests: Nightly", "Testing: E2E (Chained)")
 <!-- END TITLE -->
 
 ## Body
@@ -27,21 +26,21 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### 📋 Gemini Scheduled Issue Triage (`.github/workflows/gemini-scheduled-issue-triage.yml`)
 
-- Latest run on `main`: https://github.com/google-gemini/gemini-cli/actions/runs/44521333664 — dark (conclusion: `failure`), 2026-11-19 12:09 UTC
+- Latest run on `main`: https://github.com/google-gemini/gemini-cli/actions/runs/44584719031 — dark (conclusion: `failure`), 2026-11-19 18:09 UTC
 - Dark since: 2026-11-11 14:07 UTC (first run of the current streak)
 - Job / step: `triage-issues` → `Run Standard Triage Analysis`
-- Likely cause: google-github-actions/auth failed with: failed to generate Google Cloud federated token for //iam.googleapis.com/projects/710019748844/locations/global/workloadIdentityPools/github-29fc077a/providers/gh-29fc077a: {"error":"invalid_target","
+- Likely cause: google-github-actions/auth failed with: failed to generate Google Cloud federated token for //iam.googleapis.com/projects/710019748844/locations/global/workloadIdentityPools/github-29fc077a/providers/gh-29fc077a: {"error":"invalid_request",
 
 <details><summary>End of the job log</summary>
 
 ```
-##[end-action id=gemini_standard_issue_analysis.sanitize_workflow_name;outcome=success;conclusion=success;duration_ms=14]
+##[end-action id=gemini_standard_issue_analysis.sanitize_workflow_name;outcome=success;conclusion=success;duration_ms=16]
 ##[start-action display=Configure Gemini CLI;id=gemini_standard_issue_analysis.__run]
-##[end-action id=gemini_standard_issue_analysis.__run;outcome=success;conclusion=success;duration_ms=11]
+##[end-action id=gemini_standard_issue_analysis.__run;outcome=success;conclusion=success;duration_ms=13]
 ##[start-action display=Install Custom Commands;id=gemini_standard_issue_analysis.__run_2]
-##[end-action id=gemini_standard_issue_analysis.__run_2;outcome=success;conclusion=success;duration_ms=12]
+##[end-action id=gemini_standard_issue_analysis.__run_2;outcome=success;conclusion=success;duration_ms=14]
 ##[start-action display=Authenticate to Google Cloud;id=gemini_standard_issue_analysis.auth]
-Created credentials file at "/home/runner/work/gemini-cli/gemini-cli/gha-creds-a6f36563f04aa7d9.json"
+Created credentials file at "/home/runner/work/gemini-cli/gemini-cli/gha-creds-5cdef9db8b225fa4.json"
 ##[error]google-github-actions/auth failed with: failed to generate Google Cloud federated token for //iam.googleapis.com/projects/710019748844/locations/global/workloadIdentityPools/github-29fc077a/providers/gh-29fc077…
 ```
 
@@ -64,6 +63,28 @@ Created credentials file at "/home/runner/work/gemini-cli/gemini-cli/gha-creds-a
  ❯ startVitest ../node_modules/vitest/dist/chunks/cli-api.BkDphVBG.js:10510:8
  ❯ start ../node_modules/vitest/dist/chunks/cac.Cb-PYCCB.js:1412:15
  ❯ CAC.run ../node_modules/vitest/dist/chunks/cac.Cb-PYCCB.js:1391:2
+##[error]Process completed with exit code 1.
+```
+
+</details>
+
+### Testing: E2E (Chained) (`.github/workflows/chained_e2e.yml`)
+
+- Latest run on `main`: https://github.com/google-gemini/gemini-cli/actions/runs/44577334277 — dark (conclusion: `failure`), 2026-11-19 17:27 UTC
+- Dark since: 2026-11-19 17:27 UTC (first run of the current streak)
+- Job / step: `Slow E2E - Win` → `Run E2E tests`
+- Likely cause: Tests  6 failed | 88 passed | 53 skipped (147)
+
+<details><summary>End of the job log</summary>
+
+```
+ ❯ TestRig.runInteractive ../packages/test-utils/src/test-rig.ts:1662:5
+ ❯ shell-background.test.ts:81:17
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[10/18]⎯
+ Test Files  5 failed | 33 passed | 10 skipped (48)
+      Tests  6 failed | 88 passed | 53 skipped (147)
+   Start at  17:39:38
+   Duration  645.32s (transform 38.54s, setup 0ms, collect 1849.73s, tests 3533.78s, environment 65ms, prepare 44.60s)
 ##[error]Process completed with exit code 1.
 ```
 
