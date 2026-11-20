@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/morluto/rea/issues/new
-- **Stars:** 469684 · **Generated:** 2026-11-19T18:39:01.765Z
+- **Stars:** 470000 · **Generated:** 2026-11-20T00:53:29.653Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
@@ -21,13 +21,13 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### CI (`.github/workflows/ci.yml`)
 
-- Latest run on `main`: https://github.com/morluto/rea/actions/runs/44588034282 — dark (conclusion: `cancelled`), 2026-11-19 18:27 UTC
+- Latest run on `main`: https://github.com/morluto/rea/actions/runs/44647784658 — dark (conclusion: `cancelled`), 2026-11-20 00:40 UTC
 - Dark since: 2026-11-19 11:19 UTC (first run of the current streak)
 - Likely cause: run cancelled
 
 ### CodeQL production (`.github/workflows/codeql.yml`)
 
-- Latest run on `main`: https://github.com/morluto/rea/actions/runs/44588033725 — dark (conclusion: `cancelled`), 2026-11-19 18:27 UTC
+- Latest run on `main`: https://github.com/morluto/rea/actions/runs/44647216642 — dark (conclusion: `cancelled`), 2026-11-20 00:36 UTC
 - Dark since: 2026-11-19 12:04 UTC (first run of the current streak)
 - Likely cause: run cancelled
 

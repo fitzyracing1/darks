@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/triggerdotdev/trigger.dev/issues/new
-- **Stars:** 16785 · **Generated:** 2026-11-19T18:39:01.765Z
+- **Stars:** 16786 · **Generated:** 2026-11-20T00:53:29.653Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title

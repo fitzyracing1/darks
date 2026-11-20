@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/seedds/nxnative/issues/new
-- **Stars:** 16239 · **Generated:** 2026-11-19T18:39:01.765Z
+- **Stars:** 16257 · **Generated:** 2026-11-20T00:53:29.653Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** cancelled by a concurrency group — likely noise
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
@@ -12,7 +12,7 @@
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 2 workflows dark on main ("fuzz", "tests")
+CI: 4 workflows dark on main ("fuzz", "tests", "lint-python", +1 more)
 <!-- END TITLE -->
 
 ## Body
@@ -44,8 +44,36 @@ Base64: UEFDeDQwM0wubm5uPW4AAAAAAAAAAAAAAAAAAAAAAAAAAAA=
 
 ### tests (`.github/workflows/tests.yml`)
 
-- Latest run on `main`: https://github.com/seedds/nxnative/actions/runs/44574901127 — dark (conclusion: `cancelled`), 2026-11-19 17:13 UTC
+- Latest run on `main`: https://github.com/seedds/nxnative/actions/runs/44645179816 — dark (conclusion: `cancelled`), 2026-11-20 00:21 UTC
 - Dark since: 2026-11-06 01:42 UTC (first run of the current streak)
+- Likely cause: run cancelled
+
+### lint-python (`.github/workflows/lint-python.yml`)
+
+- Latest run on `main`: https://github.com/seedds/nxnative/actions/runs/44646678063 — dark (conclusion: `failure`), 2026-11-20 00:32 UTC
+- Dark since: 2026-11-19 19:37 UTC (first run of the current streak)
+- Job / step: `ruff and pyright (ratchet)` → `ruff and pyright against the baseline`
+- Likely cause: Argument of type "list[str]" cannot be assigned to parameter "iterable" of type "Iterable[LiteralString]" in function "join" "list[str]" is not assignable to "Iterable[LiteralString]" Type parameter "_T_co@Iterable" is covariant, but "str"  (dm/gfx/tools/gl_shaders.py:369)
+
+<details><summary>End of the job log</summary>
+
+```
+Using cached lz4-4.4.5-cp314-cp314-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (1.4 MB)
+Using cached capstone-5.0.9-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (1.5 MB)
+Using cached fonttools-4.67.0-cp314-cp314-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (5.3 MB)
+Using cached nodeenv-1.12.0-py3-none-any.whl (39 kB)
+Using cached typing_extensions-4.16.0-py3-none-any.whl (45 kB)
+Installing collected packages: typing-extensions, ruff, nodeenv, lz4, fonttools, capstone, pyright
+Successfully installed capstone-5.0.9 fonttools-4.67.0 lz4-4.4.5 nodeenv-1.12.0 pyright-1.1.414 ruff-0.17.2 typing-extensions-4.16.0
+##[error]No overloads for "join" match the provided arguments
+```
+
+</details>
+
+### lint-c (`.github/workflows/lint-c.yml`)
+
+- Latest run on `main`: https://github.com/seedds/nxnative/actions/runs/44645179804 — dark (conclusion: `cancelled`), 2026-11-20 00:21 UTC
+- Dark since: 2026-11-19 19:54 UTC (first run of the current streak)
 - Likely cause: run cancelled
 
 If this is already known or expected, feel free to close. Thanks for maintaining nxnative!

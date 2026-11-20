@@ -4,20 +4,14 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/xerj-org/xerj/issues/new
-- **Stars:** 17962 · **Generated:** 2026-11-19T18:39:01.765Z
+- **Stars:** 18007 · **Generated:** 2026-11-20T00:53:29.653Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
-
-## Skipped: upstream already tracking
-
-- hub packs (`.github/workflows/hub-packs.yml`): [issue #2975](https://github.com/xerj-org/xerj/issues/2975) "bug: hub packs: every owner--repo pack fails "corpus index" with 0 records — corpus-hub builds xerj without the #1906 fix"
-
-These workflows are left out of the body below.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 6 workflows dark on main ("Release", "CI", "pack publish", +3 more)
+CI: 7 workflows dark on main ("Release", "CI", "pack publish", +4 more)
 <!-- END TITLE -->
 
 ## Body
@@ -56,6 +50,28 @@ layout ok: 991 members
 https://github.com/xerj-org/xerj/releases/tag/untagged-17d9af01f0130e8a6164
 HTTP 500 (https://api.github.com/repos/xerj-org/xerj/releases/assets/726257115)
 ##[error]Process completed with exit code 1.
+```
+
+</details>
+
+### hub packs (`.github/workflows/hub-packs.yml`)
+
+- Latest run on `main`: https://github.com/xerj-org/xerj/actions/runs/42566888510 — dark (conclusion: `failure`), 2026-11-09 05:22 UTC
+- Dark since: 2026-11-09 05:22 UTC (first run of the current streak)
+- Job / step: `re-pin moved upstreams (opens PRs)` → `Open re-pin pull requests`
+- Likely cause: 8 re-pin PR(s) could not be opened
+
+<details><summary>End of the job log</summary>
+
+```
+##[warning]exploit-pocs-2026/ZeroDayEvil--CVE-2026-40369-EXPLOIT: cannot read HEAD of https://github.com/ZeroDayEvil/CVE-2026-40369-EXPLOIT; skipped
+##[warning]exploit-pocs-2026/jelasin--CVE-2026-42945: cannot read HEAD of https://github.com/jelasin/CVE-2026-42945; skipped
+##[warning]exploit-pocs-2026/hnytgl--CVE-2026-42945: cannot read HEAD of https://github.com/hnytgl/CVE-2026-42945; skipped
+##[warning]exploit-pocs-2026/fan-67--local-mcp: cannot read HEAD of https://github.com/fan-67/local-mcp; skipped
+##[warning]exploit-pocs-2026/MRdark-ops--CVE-2026-8065: cannot read HEAD of https://github.com/MRdark-ops/CVE-2026-8065; skipped
+##[warning]exploit-pocs-2026/K52-ai--CVE-2026-83627: cannot read HEAD of https://github.com/K52-ai/CVE-2026-83627; skipped
+repin: classes=weekly; 8 corpus(es) moved
+##[error]8 re-pin PR(s) could not be opened
 ```
 
 </details>

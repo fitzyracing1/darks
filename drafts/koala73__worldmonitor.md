@@ -4,35 +4,35 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/koala73/worldmonitor/issues/new
-- **Stars:** 90938 · **Generated:** 2026-11-19T18:39:01.765Z
+- **Stars:** 90951 · **Generated:** 2026-11-20T00:53:29.653Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: "Railway Native Deploy Health" workflow failing on main since 2026-11-19
+CI: "Feed Validation" workflow failing on main since 2026-11-20
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! The **Railway Native Deploy Health** workflow (`.github/workflows/railway-deploy-drift.yml`) on `main` has been failing since 2026-11-19. Here is what I saw, in case it's useful:
+Hi! The **Feed Validation** workflow (`.github/workflows/feed-validation.yml`) on `main` has been failing since 2026-11-20. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/koala73/worldmonitor/actions/runs/44586778383 — dark (conclusion: `failure`), 2026-11-19 18:20 UTC
-- Dark since: 2026-11-19 18:20 UTC (first run of the current streak)
-- Job / step: `Railway native deployment health` → `Check Railway deployment configuration and drift`
-- Likely cause: 1: operation timed out
+- Latest run on `main`: https://github.com/koala73/worldmonitor/actions/runs/44643770499 — dark (conclusion: `failure`), 2026-11-20 00:11 UTC
+- Dark since: 2026-11-20 00:11 UTC (first run of the current streak)
+- Job / step: `validate` → `Run npm run test:feeds:ci`
+- Likely cause: The Times Group Malawi              | Timeout (15s)        | https://times.mw/feed/
 
 <details><summary>End of the job log</summary>
 
 ```
-node: v24.22.2
-npm: 11.19.1
-yarn: 1.22.22
-railway service list --project 29419572-0b0d-437f-8e71-4fa68daf514f --environment production --json failed (1): Failed to fetch: error sending request for url (https://backboard.railway.com/graphql/v2)
-Caused by:
-    0: error sending request for url (https://backboard.railway.com/graphql/v2)
-    1: operation timed out
+  Liechtensteiner Vaterland           | https://news.google.com/rss/search?q=site%3Avaterland.li+when%3A7d&hl=en-US&gl=US&ceid=US%3Aen
+  Los Tiempos                         | https://news.google.com/rss/search?q=site%3Alostiempos.com+when%3A7d&hl=en-US&gl=US&ceid=US%3Aen
+  Reuters — St. Kitts & Nevis         | https://news.google.com/rss/search?q=site%3Areuters.com+%28%22St.+Kitts+%26+Nevis%22%29+when%3A30d&hl=en-US&gl=US&ceid=US%3Aen
+  The UB Post                         | https://news.google.com/rss/search?q=site%3Aubpost.mn+when%3A7d&hl=en&gl=US&ceid=US%3Aen
+  Le Quotidien Luxembourg             | https://news.google.com/rss/search?q=site%3Alequotidien.lu+when%3A7d&hl=en-US&gl=US&ceid=US%3Aen
+  Bellingcat                          | https://news.google.com/rss/search?q=site%3Abellingcat.com%20when%3A7d&hl=en-US&gl=US&ceid=US:en
+Summary: 1300 OK, 13 stale, 76 dead, 30 empty, 1 skipped
 ##[error]Process completed with exit code 1.
 ```
 

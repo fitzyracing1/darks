@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/xberg-io/xberg/issues/new
-- **Stars:** 9603 · **Generated:** 2026-11-19T18:39:01.765Z
+- **Stars:** 9603 · **Generated:** 2026-11-20T00:53:29.653Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** cancelled by a concurrency group — likely noise
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
@@ -12,7 +12,7 @@
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 7 workflows dark on main ("CI Rust", "CI E2E", "CI Lint", +4 more)
+CI: 4 workflows dark on main ("CI Rust", "CI Lint", "CI Mobile", +1 more)
 <!-- END TITLE -->
 
 ## Body
@@ -42,53 +42,24 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 </details>
 
-### CI E2E (`.github/workflows/ci-e2e.yaml`)
-
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/44569172204 — dark (conclusion: `cancelled`), 2026-11-19 16:42 UTC
-- Dark since: 2026-11-18 18:37 UTC (first run of the current streak)
-- Job / step: `Build FFI (x86_64-unknown-linux-gnu)` → `Build CLI`
-- Likely cause: Canceling since a higher priority waiting request for ci-e2e-refs/heads/main exists
-
-<details><summary>End of the job log</summary>
-
-```
-   Compiling tiny-skia v0.12.0
-   Compiling tree-sitter-language v0.1.9
-   Compiling fraction v0.17.0
-   Compiling ecb v0.2.1
-   Compiling pem v3.0.6
-   Compiling tracing-futures v0.2.5
-   Compiling fancy-regex v0.20.2
-##[error]The operation was canceled.
-```
-
-</details>
-
 ### CI Lint (`.github/workflows/ci-lint.yaml`)
 
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/44569184824 — dark (conclusion: `cancelled`), 2026-11-19 16:42 UTC
+- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/44581871013 — dark (conclusion: `failure`), 2026-11-19 17:52 UTC
 - Dark since: 2026-11-18 18:37 UTC (first run of the current streak)
-- Job / step: `Plugin bundle freshness`
-- Likely cause: Canceling since a higher priority waiting request for ci-lint-refs/heads/main exists
-
-### CI Integrations (`.github/workflows/ci-integrations.yaml`)
-
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/44569172149 — dark (conclusion: `cancelled`), 2026-11-19 16:42 UTC
-- Dark since: 2026-11-18 22:06 UTC (first run of the current streak)
-- Job / step: `Build local integration bindings` → `Build abi3 Python wheel`
-- Likely cause: Canceling since a higher priority waiting request for ci-integrations-refs/heads/main exists
+- Job / step: `Benchmark script regressions` → `Validate Publish workflow contracts`
+- Likely cause: [release:test:contracts] ERROR task failed
 
 <details><summary>End of the job log</summary>
 
 ```
-   Compiling rake v0.3.6
-   Compiling lru v0.19.0
-   Compiling org v0.3.1
-   Compiling similar v3.2.1
-   Compiling minijinja v3.1.0
-   Compiling jotdown v0.10.0
-   Compiling pyo3-async-runtimes v0.30.0
-##[error]The operation was canceled.
+    test()
+    ~~~~^^
+  File "/home/runner/work/xberg/xberg/scripts/ci/test_publish_workflow_contracts.py", line 1429, in test_lint_go_inputs_override_incompatible_reusable_defaults
+    assert go_version == [tools["go"]], "lint must use the repository's locked Go version"
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: lint must use the repository's locked Go version
+[release:test:contracts] ERROR task failed
+##[error]Process completed with exit code 1.
 ```
 
 </details>
@@ -121,13 +92,6 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 - Dark since: 2026-11-19 04:40 UTC (first run of the current streak)
 - Job / step: `docs / Build`
 - Likely cause: The run was canceled by @Goldziher.
-
-### CI Scripts (`.github/workflows/ci-scripts.yaml`)
-
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/44569071669 — dark (conclusion: `cancelled`), 2026-11-19 16:42 UTC
-- Dark since: 2026-11-19 16:42 UTC (first run of the current streak)
-- Job / step: `Bats on macos-26`
-- Likely cause: Canceling since a higher priority waiting request for ci-scripts-refs/heads/main exists
 
 If this is already known or expected, feel free to close. Thanks for maintaining xberg!
 

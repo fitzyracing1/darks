@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/reactive-resume/reactive-resume/issues/new
-- **Stars:** 45924 · **Generated:** 2026-11-19T18:39:01.765Z
+- **Stars:** 45923 · **Generated:** 2026-11-20T00:53:29.653Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -18,22 +18,22 @@ CI: "Mobile release" workflow failing on main since 2026-11-19
 <!-- BEGIN BODY -->
 Hi! The **Mobile release** workflow (`.github/workflows/mobile-release.yml`) on `main` has been failing since 2026-11-19. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/reactive-resume/reactive-resume/actions/runs/44452070943 — dark (conclusion: `failure`), 2026-11-19 03:31 UTC
+- Latest run on `main`: https://github.com/reactive-resume/reactive-resume/actions/runs/44622489405 — dark (conclusion: `failure`), 2026-11-19 21:48 UTC
 - Dark since: 2026-11-19 03:19 UTC (first run of the current streak)
-- Job / step: `Build android` → `Build signed binary`
-- Likely cause: The strategy configuration was canceled because "build.ios" failed
+- Job / step: `Build ios` → `Set up Ruby and gems`
+- Likely cause: The process '/Users/runner/hostedtoolcache/Ruby/3.3.14/arm64/bin/gem' failed with exit code 1
 
 <details><summary>End of the job log</summary>
 
 ```
-[03:33:17]: ▸ Here are the highlights of this release:
-[03:33:17]: ▸ - Java 26 support
-[03:33:17]: ▸ - Non-class-based JVM tests
-[03:33:17]: ▸ - Enhanced console progress bar
-[03:33:17]: ▸ For more details see https://docs.gradle.org/9.4.1/release-notes.html
-[03:33:17]: ▸ To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/9.4.1/userguide/gradle_daemon.html#sec:disabling_the_daemon i…
-[03:33:17]: ▸ Daemon will be stopped at the end of the build
-##[error]The operation was canceled.
+	/Users/runner/hostedtoolcache/Ruby/3.3.14/arm64/lib/ruby/3.3.0/rubygems/command.rb:326:in `invoke_with_build_args'
+	/Users/runner/hostedtoolcache/Ruby/3.3.14/arm64/lib/ruby/3.3.0/rubygems/command_manager.rb:253:in `invoke_command'
+	/Users/runner/hostedtoolcache/Ruby/3.3.14/arm64/lib/ruby/3.3.0/rubygems/command_manager.rb:194:in `process_args'
+	/Users/runner/hostedtoolcache/Ruby/3.3.14/arm64/lib/ruby/3.3.0/rubygems/command_manager.rb:152:in `run'
+	/Users/runner/hostedtoolcache/Ruby/3.3.14/arm64/lib/ruby/3.3.0/rubygems/gem_runner.rb:56:in `run'
+	/Users/runner/hostedtoolcache/Ruby/3.3.14/arm64/bin/gem:12:in `<main>'
+Took   0.07 seconds
+##[error]The process '/Users/runner/hostedtoolcache/Ruby/3.3.14/arm64/bin/gem' failed with exit code 1
 ```
 
 </details>

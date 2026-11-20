@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/DeusData/codebase-memory-mcp/issues/new
-- **Stars:** 48875 · **Generated:** 2026-11-19T18:39:01.765Z
+- **Stars:** 48882 · **Generated:** 2026-11-20T00:53:29.653Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
@@ -43,9 +43,25 @@ OK: baseline RSS=22900736 FDs=23
 
 ### test-impact-artifact (`.github/workflows/test-impact-artifact.yml`)
 
-- Latest run on `main`: https://github.com/DeusData/codebase-memory-mcp/actions/runs/44573398402 — dark (conclusion: `cancelled`), 2026-11-19 17:05 UTC
+- Latest run on `main`: https://github.com/DeusData/codebase-memory-mcp/actions/runs/44577175583 — dark (conclusion: `failure`), 2026-11-19 17:26 UTC
 - Dark since: 2026-11-13 18:51 UTC (first run of the current streak)
-- Likely cause: run cancelled
+- Job / step: `publish` → `Publish the bundle`
+- Likely cause: test-impact publish: status 1: reading HEAD sources failed: internal/cbm/ac.c
+
+<details><summary>End of the job log</summary>
+
+```
+grammar_probe_c: 42 tests, 0 incomplete, exit 0, 0.5 s
+grammar_probe_d: 75 tests, 0 incomplete, exit 0, 2.0 s
+grammar_probe_e: 56 tests, 0 incomplete, exit 0, 1.3 s
+grammar_probe_f: 184 tests, 0 incomplete, exit 0, 15.5 s
+grammar_probe_g: 45 tests, 0 incomplete, exit 0, 1.0 s
+map: 10500 tests, 318 incomplete, 28294 functions -> /tmp/tmp.fFoi2261Dk/coverage
+test-impact publish: status 1: reading HEAD sources failed: internal/cbm/ac.c
+##[error]Process completed with exit code 1.
+```
+
+</details>
 
 If this is already known or expected, feel free to close. Thanks for maintaining codebase-memory-mcp!
 
