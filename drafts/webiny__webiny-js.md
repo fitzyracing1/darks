@@ -4,13 +4,13 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/webiny/webiny-js/issues/new
-- **Stars:** 8052 · **Generated:** 2026-11-20T12:41:20.099Z
+- **Stars:** 8052 · **Generated:** 2026-11-20T18:40:22.935Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 3 workflows dark on next ("Cloud infrastructure Cleanup", "Rebuild Global Cache ("dev" branch)", "Record E2E replay steps")
+CI: 4 workflows dark on next ("Cloud infrastructure Cleanup", "Rebuild Global Cache ("dev" branch)", "Record E2E replay steps", +1 more)
 <!-- END TITLE -->
 
 ## Body
@@ -83,6 +83,12 @@ GraphQL: Your token has not been granted the required scopes to execute this que
 ```
 
 </details>
+
+### Push (`.github/workflows/push.yml`)
+
+- Latest run on `next`: https://github.com/webiny/webiny-js/actions/runs/44754820016 — dark (conclusion: `failure`), 2026-11-20 14:34 UTC
+- Dark since: 2026-11-20 14:34 UTC (first run of the current streak)
+- Likely cause: no cause found in annotations
 
 If this is already known or expected, feel free to close. Thanks for maintaining webiny-js!
 

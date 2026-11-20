@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/seedds/nxnative/issues/new
-- **Stars:** 16293 · **Generated:** 2026-11-20T12:41:20.099Z
+- **Stars:** 16316 · **Generated:** 2026-11-20T18:40:22.935Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
@@ -21,16 +21,16 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### tests (`.github/workflows/tests.yml`)
 
-- Latest run on `main`: https://github.com/seedds/nxnative/actions/runs/44722766897 — dark (conclusion: `cancelled`), 2026-11-20 10:51 UTC
+- Latest run on `main`: https://github.com/seedds/nxnative/actions/runs/44787112706 — dark (conclusion: `cancelled`), 2026-11-20 17:50 UTC
 - Dark since: 2026-11-06 01:42 UTC (first run of the current streak)
 - Likely cause: run cancelled
 
 ### lint-python (`.github/workflows/lint-python.yml`)
 
-- Latest run on `main`: https://github.com/seedds/nxnative/actions/runs/44722766860 — dark (conclusion: `failure`), 2026-11-20 10:51 UTC
+- Latest run on `main`: https://github.com/seedds/nxnative/actions/runs/44789539496 — dark (conclusion: `failure`), 2026-11-20 18:05 UTC
 - Dark since: 2026-11-19 19:37 UTC (first run of the current streak)
 - Job / step: `ruff and pyright (ratchet)` → `ruff and pyright against the baseline`
-- Likely cause: Argument of type "TextIOWrapper[_WrappedBuffer] | int" cannot be assigned to parameter "creationflags" of type "int" in function "__init__" Type "TextIOWrapper[_WrappedBuffer] | int" is not assignable to type "int" "TextIOWrapper[_WrappedBu (scripts/build_ipa_from_nsp.py:1765)
+- Likely cause: Argument of type "TextIOWrapper[_WrappedBuffer] | int" cannot be assigned to parameter "creationflags" of type "int" in function "__init__" Type "TextIOWrapper[_WrappedBuffer] | int" is not assignable to type "int" "TextIOWrapper[_WrappedBu (scripts/build_ipa_from_nsp.py:1770)
 
 <details><summary>End of the job log</summary>
 
@@ -49,7 +49,7 @@ Successfully installed capstone-5.0.9 fonttools-4.67.0 lz4-4.4.5 nodeenv-1.12.0 
 
 ### lint-c (`.github/workflows/lint-c.yml`)
 
-- Latest run on `main`: https://github.com/seedds/nxnative/actions/runs/44722766953 — dark (conclusion: `cancelled`), 2026-11-20 10:51 UTC
+- Latest run on `main`: https://github.com/seedds/nxnative/actions/runs/44786971075 — dark (conclusion: `cancelled`), 2026-11-20 17:49 UTC
 - Dark since: 2026-11-19 19:54 UTC (first run of the current streak)
 - Likely cause: run cancelled
 

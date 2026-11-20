@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/sveltejs/svelte/issues/new
-- **Stars:** 89828 · **Generated:** 2026-11-20T12:41:20.099Z
+- **Stars:** 89831 · **Generated:** 2026-11-20T18:40:22.935Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -18,22 +18,22 @@ CI: "CI" workflow failing on main since 2026-11-20
 <!-- BEGIN BODY -->
 Hi! The **CI** workflow (`.github/workflows/ci.yml`) on `main` has been failing since 2026-11-20. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/sveltejs/svelte/actions/runs/44729669960 — dark (conclusion: `failure`), 2026-11-20 11:41 UTC
+- Latest run on `main`: https://github.com/sveltejs/svelte/actions/runs/44757801844 — dark (conclusion: `failure`), 2026-11-20 14:53 UTC
 - Dark since: 2026-11-20 11:41 UTC (first run of the current streak)
-- Job / step: `Tests (22, ubuntu-latest)` → `Run pnpm test`
-- Likely cause: The strategy configuration was canceled because "Tests._20_windows-latest" failed
+- Job / step: `Tests (20, windows-latest)` → `Run pnpm test`
+- Likely cause: Tests  1 failed | 8421 passed | 39 skipped (8461)
 
 <details><summary>End of the job log</summary>
 
 ```
-> vitest run
- RUN  v4.1.7 /home/runner/work/svelte/svelte
-init
- Test Files  46 passed (46)
-      Tests  8422 passed | 39 skipped (8461)
-   Start at  11:44:57
-   Duration  87.81s (transform 52.44s, setup 0ms, import 48.87s, tests 198.54s, environment 7.12s)
-##[error]The operation was canceled.
+ ❯ packages/svelte/tests/signals/test.ts:758:2
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+ Test Files  1 failed | 45 passed (46)
+      Tests  1 failed | 8421 passed | 39 skipped (8461)
+   Start at  14:54:55
+   Duration  143.74s (transform 88.54s, setup 0ms, import 85.07s, tests 309.82s, environment 15.21s)
+ ELIFECYCLE  Test failed. See above for more details.
+##[error]Process completed with exit code 1.
 ```
 
 </details>

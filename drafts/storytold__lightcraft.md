@@ -4,8 +4,9 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/storytold/lightcraft/issues/new
-- **Stars:** 16221 · **Generated:** 2026-11-20T12:41:20.099Z
+- **Stars:** 16230 · **Generated:** 2026-11-20T18:40:22.935Z
 - Nothing in this file has been sent anywhere.
+- **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
@@ -20,22 +21,22 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### SonarCloud (`.github/workflows/sonarcloud.yml`)
 
-- Latest run on `main`: https://github.com/storytold/lightcraft/actions/runs/44706287955 — dark (conclusion: `failure`), 2026-11-20 08:54 UTC
+- Latest run on `main`: https://github.com/storytold/lightcraft/actions/runs/44749914784 — dark (conclusion: `cancelled`), 2026-11-20 14:04 UTC
 - Dark since: 2026-11-18 23:57 UTC (first run of the current streak)
-- Job / step: `sonarcloud / Tests 7/8` → `Merge this shard's profiles`
-- Likely cause: llvm-profdata could not merge shard 7's profiles (exit 1)
+- Job / step: `sonarcloud / Tests 8/8` → `Run this shard's tests`
+- Likely cause: The job has exceeded the maximum execution time of 2h0m0s
 
 <details><summary>End of the job log</summary>
 
 ```
-info: downloading 4 components
-  1.100.0-x86_64-unknown-linux-gnu installed - rustc 1.100.0 (0ef1bc386 2026-11-09)
-Raw profiles: 1.4G in 858 files
-Filesystem      Size  Used Avail Use% Mounted on
-/dev/root       145G   64G   82G  44% /
-warning: profraw/shard-7-10451-16701917663194703865_0.profraw: invalid instrumentation profile data (file header is corrupt)
-error: no profile can be merged
-##[error]shard 7 wrote a truncated or corrupt coverage profile: profraw/shard-7-10451-16701917663194703865_0.profraw: invalid instrumentation profile data (file header is corrupt)
+        SLOW [>6300.000s] (───────) lightcraft-ui-egui tests::appearance::auto_follows_the_system_and_falls_back_to_dark
+        SLOW [>5640.000s] (───────) lightcraft-ui-egui tests::lifecycle_037::a_widget_gesture_cancels_if_its_target_moves_between_resolution_and_the_press
+        SLOW [>6360.000s] (───────) lightcraft-ui-egui tests::appearance::auto_follows_the_system_and_falls_back_to_dark
+        SLOW [>5700.000s] (───────) lightcraft-ui-egui tests::lifecycle_037::a_widget_gesture_cancels_if_its_target_moves_between_resolution_and_the_press
+        SLOW [>6420.000s] (───────) lightcraft-ui-egui tests::appearance::auto_follows_the_system_and_falls_back_to_dark
+        SLOW [>5760.000s] (───────) lightcraft-ui-egui tests::lifecycle_037::a_widget_gesture_cancels_if_its_target_moves_between_resolution_and_the_press
+        SLOW [>6480.000s] (───────) lightcraft-ui-egui tests::appearance::auto_follows_the_system_and_falls_back_to_dark
+##[error]The operation was canceled.
 ```
 
 </details>

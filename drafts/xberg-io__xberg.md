@@ -4,14 +4,14 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/xberg-io/xberg/issues/new
-- **Stars:** 9602 · **Generated:** 2026-11-20T12:41:20.099Z
+- **Stars:** 9603 · **Generated:** 2026-11-20T18:40:22.935Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** cancelled by a concurrency group — likely noise
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 5 workflows dark on main ("CI Lint", "CI Integrations", "CI E2E", +2 more)
+CI: 7 workflows dark on main ("CI Lint", "CI Integrations", "CI E2E", +4 more)
 <!-- END TITLE -->
 
 ## Body
@@ -21,65 +21,35 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### CI Lint (`.github/workflows/ci-lint.yaml`)
 
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/44725309428 — dark (conclusion: `failure`), 2026-11-20 11:09 UTC
+- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/44792810481 — dark (conclusion: `cancelled`), 2026-11-20 18:26 UTC
 - Dark since: 2026-11-18 18:37 UTC (first run of the current streak)
-- Job / step: `Docs snippets gate` → `Run docs snippets gate`
-- Likely cause: [docs:snippets:all] ERROR task failed
-
-<details><summary>End of the job log</summary>
-
-```
-url_html_page_extract.md                                     rust/rust    PASS       compile 281262ms
-url_recursive_document_urls.md                               rust/rust    PASS       compile 281262ms
-url_remote_text_document.md                                  rust/rust    PASS       compile 281262ms
-----------------------------------------------------------------------------------------------------
-Checked at requested level: 709/1219 (58.2%) -- capability-capped 363, declared-capped 0, unavailable 0, downgraded 0, failed 0, skipped 0, errors 147 did not fully verify
-Total: 1219  Passed: 1072  Downgraded: 0  Failed: 0  Skipped: 0  Errors: 147  Unavailable: 0
-[docs:snippets:all] ERROR task failed
-##[error]Process completed with exit code 1.
-```
-
-</details>
+- Job / step: `Hand-declared FFI surfaces match the emitted header`
+- Likely cause: Canceling since a higher priority waiting request for ci-lint-refs/heads/main exists
 
 ### CI Integrations (`.github/workflows/ci-integrations.yaml`)
 
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/44719407515 — dark (conclusion: `cancelled`), 2026-11-20 10:27 UTC
+- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/44792809991 — dark (conclusion: `cancelled`), 2026-11-20 18:26 UTC
 - Dark since: 2026-11-20 07:25 UTC (first run of the current streak)
-- Job / step: `Build local integration bindings` → `Build Node package`
+- Job / step: `Build local integration bindings`
 - Likely cause: Canceling since a higher priority waiting request for ci-integrations-refs/heads/main exists
-
-<details><summary>End of the job log</summary>
-
-```
-   Compiling crc-fast v1.10.0
-   Compiling xet-core-structures v1.8.1
-   Compiling toml_parser v1.1.5+spec-1.1.0
-   Compiling ort-sys v2.0.0-rc.15
-   Compiling num v0.4.3
-   Compiling web_atoms v0.3.0
-   Compiling serde_with v3.24.0
-##[error]The operation was canceled.
-```
-
-</details>
 
 ### CI E2E (`.github/workflows/ci-e2e.yaml`)
 
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/44719407478 — dark (conclusion: `cancelled`), 2026-11-20 10:27 UTC
+- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/44792809977 — dark (conclusion: `cancelled`), 2026-11-20 18:26 UTC
 - Dark since: 2026-11-20 07:25 UTC (first run of the current streak)
-- Job / step: `Build FFI (x86_64-unknown-linux-gnu)` → `Build CLI`
+- Job / step: `Build FFI (aarch64-unknown-linux-gnu)` → `Install system dependencies`
 - Likely cause: Canceling since a higher priority waiting request for ci-e2e-refs/heads/main exists
 
 <details><summary>End of the job log</summary>
 
 ```
-   Compiling lru v0.19.0
-   Compiling xberg-cli v1.4.2 (/home/runner/work/xberg/xberg/crates/xberg-cli)
-   Compiling jotdown v0.10.0
-   Compiling similar v3.2.1
-   Compiling minijinja v3.1.0
-   Compiling org v0.3.1
-   Compiling clap_complete v4.6.12
+Setting up libtesseract-dev:arm64 (5.3.4-1build5) ...
+Setting up tesseract-ocr (5.3.4-1build5) ...
+Processing triggers for fontconfig (2.15.0-1.1ubuntu2) ...
+Processing triggers for libc-bin (2.39-0ubuntu8.12) ...
+Processing triggers for man-db (2.12.0-4build2) ...
+Not building database; man-db/auto-update is not 'true'.
+Processing triggers for install-info (7.1-3build2) ...
 ##[error]The operation was canceled.
 ```
 
@@ -87,25 +57,10 @@ Total: 1219  Passed: 1072  Downgraded: 0  Failed: 0  Skipped: 0  Errors: 147  Un
 
 ### CI Rust (`.github/workflows/ci-rust.yaml`)
 
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/44719407470 — dark (conclusion: `cancelled`), 2026-11-20 10:27 UTC
+- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/44792810241 — dark (conclusion: `cancelled`), 2026-11-20 18:26 UTC
 - Dark since: 2026-11-20 07:25 UTC (first run of the current streak)
-- Job / step: `Rust (windows-latest, static-embeddings link)` → `Build xberg test harness (ocr + static-embeddings, real MSVC link)`
+- Job / step: `Rust tract-only (no-ORT)`
 - Likely cause: Canceling since a higher priority waiting request for ci-rust-refs/heads/main exists
-
-<details><summary>End of the job log</summary>
-
-```
-   Compiling libyaml-rs v0.3.0
-   Compiling oorandom v11.1.5
-   Compiling typed-arena v2.0.2
-   Compiling daachorse v3.0.3
-   Compiling pulldown-cmark-escape v0.11.0
-   Compiling utf8-zero v0.8.1
-   Compiling xet-data v1.8.1
-##[error]The operation was canceled.
-```
-
-</details>
 
 ### CI Docker (`.github/workflows/ci-docker.yaml`)
 
@@ -125,6 +80,35 @@ Total: 1219  Passed: 1072  Downgraded: 0  Failed: 0  Skipped: 0  Errors: 147  Un
      Failed to establish a new connection: [Errno 111] Connection refused
 Tip: Use `--wait-for-schema=NUM` to wait up to NUM seconds for schema availability.
 ##[error]Process completed with exit code 2.
+```
+
+</details>
+
+### CI Mobile (`.github/workflows/ci-mobile.yaml`)
+
+- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/44792810333 — dark (conclusion: `cancelled`), 2026-11-20 18:26 UTC
+- Dark since: 2026-11-20 18:26 UTC (first run of the current streak)
+- Job / step: `Android cargo check (arm64-v8a)`
+- Likely cause: Canceling since a higher priority waiting request for ci-mobile-refs/heads/main exists
+
+### CI Focused PR (`.github/workflows/ci-focused-pr.yaml`)
+
+- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/44792809934 — dark (conclusion: `cancelled`), 2026-11-20 18:26 UTC
+- Dark since: 2026-11-20 18:26 UTC (first run of the current streak)
+- Job / step: `Focused pdf-table-paint` → `Run exact regression tests`
+- Likely cause: Canceling since a higher priority waiting request for ci-focused-pr-refs/heads/main-regressions exists
+
+<details><summary>End of the job log</summary>
+
+```
+   Compiling wiremock v0.6.5
+   Compiling tokio-test v0.4.6
+   Compiling tar v0.4.46
+   Compiling ort v2.0.0-rc.15
+   Compiling v_htmlescape v1.0.0
+   Compiling infer v0.22.0
+   Compiling lopdf v0.45.0
+##[error]The operation was canceled.
 ```
 
 </details>

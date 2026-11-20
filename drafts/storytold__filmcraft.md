@@ -1,49 +1,25 @@
 <!-- dark-draft: storytold/filmcraft -->
-<!-- draft-state: resolved -->
+<!-- draft-state: ready -->
 # Upstream issue draft: storytold/filmcraft
 
-- **Status:** resolved — lit again (2026-11-18); nothing to file
+- **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/storytold/filmcraft/issues/new
-- **Stars:** 18529 · **Generated:** 2026-11-18T12:42:30.883Z
+- **Stars:** 18701 · **Generated:** 2026-11-20T18:40:22.935Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 2 workflows dark on main ("SonarCloud", "CI")
+CI: "CI" workflow failing on main since 2026-11-20
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
+Hi! The **CI** workflow (`.github/workflows/ci.yml`) on `main` has been failing since 2026-11-20. Here is what I saw, in case it's useful:
 
-### SonarCloud (`.github/workflows/sonarcloud.yml`)
-
-- Latest run on `main`: https://github.com/storytold/filmcraft/actions/runs/44279547228 — dark (conclusion: `failure`), 2026-11-18 09:49 UTC
-- Dark since: 2026-11-18 09:23 UTC (first run of the current streak)
-- Job / step: `sonarcloud / SonarCloud Scan` → `Fail on Rust shard test failures`
-- Likely cause: Coverage shard 4 tests failed (exit 100); analysis was still uploaded
-
-<details><summary>End of the job log</summary>
-
-```
-10:17:48.486 INFO  ------------- Upload SCA dependency files
-10:17:50.127 INFO  Successfully sent architecture data
-10:17:51.369 INFO  Sensor cache published successfully
-10:17:52.775 INFO  Analysis total time: 2:12.578 min
-10:17:52.776 INFO  SonarScanner Engine completed successfully
-10:17:53.221 INFO  EXECUTION SUCCESS
-10:17:53.222 INFO  Total time: 2:19.915s
-##[error]Coverage shard 1 tests failed (exit 100); analysis was still uploaded
-```
-
-</details>
-
-### CI (`.github/workflows/ci.yml`)
-
-- Latest run on `main`: https://github.com/storytold/filmcraft/actions/runs/44279546986 — dark (conclusion: `failure`), 2026-11-18 09:49 UTC
-- Dark since: 2026-11-18 09:23 UTC (first run of the current streak)
+- Latest run on `main`: https://github.com/storytold/filmcraft/actions/runs/44750176700 — dark (conclusion: `failure`), 2026-11-20 14:05 UTC
+- Dark since: 2026-11-20 14:05 UTC (first run of the current streak)
 - Job / step: `gate / gate (ubuntu-24.04)` → `Gate`
 - Likely cause: failed: "/home/runner/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/bin/cargo" "nextest" "run" "--workspace" "--lib" "--bins" "--tests" "--no-fail-fast"
 
