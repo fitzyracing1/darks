@@ -4,14 +4,14 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/storytold/photocraft/issues/new
-- **Stars:** 80593 · **Generated:** 2026-11-20T06:46:04.904Z
+- **Stars:** 80648 · **Generated:** 2026-11-20T12:41:20.099Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 3 workflows dark on main ("FreeBSD", "Perf (nightly)", "SonarCloud")
+CI: 4 workflows dark on main ("FreeBSD", "Perf (nightly)", "SonarCloud", +1 more)
 <!-- END TITLE -->
 
 ## Body
@@ -65,22 +65,28 @@ error: could not fetch https://download.freebsd.org/releases/arm64/aarch64/15.1-
 
 ### SonarCloud (`.github/workflows/sonarcloud.yml`)
 
-- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/44664836978 — dark (conclusion: `failure`), 2026-11-20 03:01 UTC
+- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/44725582264 — dark (conclusion: `cancelled`), 2026-11-20 11:11 UTC
 - Dark since: 2026-11-19 16:52 UTC (first run of the current streak)
-- Job / step: `sonarcloud / SonarCloud Scan` → `Fail on Rust shard test failures`
-- Likely cause: Coverage shard 2 tests failed (exit 100); analysis was still uploaded
+- Likely cause: run cancelled
+
+### CI (`.github/workflows/ci.yml`)
+
+- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/44725608544 — dark (conclusion: `failure`), 2026-11-20 11:11 UTC
+- Dark since: 2026-11-20 11:11 UTC (first run of the current streak)
+- Job / step: `corpus tests` → `Corpus tests`
+- Likely cause: error: cargo test --release --features corpus,heif (photocraft-io, photocraft-engine): exited with exit status: 101
 
 <details><summary>End of the job log</summary>
 
 ```
-04:52:28.583 INFO  ------------- Upload SCA dependency files
-04:52:29.786 INFO  Successfully sent architecture data
-04:52:31.316 INFO  Sensor cache published successfully
-04:52:37.528 INFO  Analysis total time: 3:28.553 min
-04:52:37.529 INFO  SonarScanner Engine completed successfully
-04:52:37.612 INFO  EXECUTION SUCCESS
-04:52:37.613 INFO  Total time: 3:33.457s
-##[error]Coverage shard 2 tests failed (exit 100); analysis was still uploaded
+    |                                  ^^^^^^^^^^^ cannot borrow as mutable
+    |
+    = help: trait `DerefMut` is required to modify through a dereference, but it is not implemented for `DocState`
+For more information about this error, try `rustc --explain E0596`.
+error: could not compile `photocraft-engine` (lib test) due to 1 previous error
+warning: build failed, waiting for other jobs to finish...
+error: cargo test --release --features corpus,heif (photocraft-io, photocraft-engine): exited with exit status: 101
+##[error]Process completed with exit code 1.
 ```
 
 </details>

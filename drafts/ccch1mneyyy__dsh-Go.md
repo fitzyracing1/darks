@@ -4,9 +4,10 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/ccch1mneyyy/dsh-Go/issues/new
-- **Stars:** 28465 · **Generated:** 2026-11-20T06:46:04.904Z
+- **Stars:** 28731 · **Generated:** 2026-11-20T12:41:20.099Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** cancelled by a concurrency group — likely noise
+- **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Skipped: upstream already tracking
 
@@ -17,29 +18,44 @@ These workflows are left out of the body below.
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: "iOS compile" workflow getting cancelled on main since 2026-11-20
+CI: 3 workflows dark on main ("iOS compile", "CI", "OHOS compile")
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! The **iOS compile** workflow (`.github/workflows/ios-compile.yml`) on `main` has been getting cancelled since 2026-11-20. Here is what I saw, in case it's useful:
+Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
 
-- Latest run on `main`: https://github.com/ccch1mneyyy/dsh-Go/actions/runs/44680663099 — dark (conclusion: `cancelled`), 2026-11-20 05:23 UTC
+### iOS compile (`.github/workflows/ios-compile.yml`)
+
+- Latest run on `main`: https://github.com/ccch1mneyyy/dsh-Go/actions/runs/44735901967 — dark (conclusion: `cancelled`), 2026-11-20 12:27 UTC
 - Dark since: 2026-11-20 01:21 UTC (first run of the current streak)
-- Job / step: `engine` → `Archive as for TestFlight, and look inside`
+- Job / step: `phone-protocol`
 - Likely cause: Canceling since a higher priority waiting request for ios-compile-refs/heads/main exists
+
+### CI (`.github/workflows/ci.yml`)
+
+- Latest run on `main`: https://github.com/ccch1mneyyy/dsh-Go/actions/runs/44735901996 — dark (conclusion: `cancelled`), 2026-11-20 12:27 UTC
+- Dark since: 2026-11-20 11:26 UTC (first run of the current streak)
+- Likely cause: run cancelled
+
+### OHOS compile (`.github/workflows/ohos-compile.yml`)
+
+- Latest run on `main`: https://github.com/ccch1mneyyy/dsh-Go/actions/runs/44735901884 — dark (conclusion: `cancelled`), 2026-11-20 12:27 UTC
+- Dark since: 2026-11-20 12:27 UTC (first run of the current streak)
+- Job / step: `compile` → `Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1`
+- Likely cause: Canceling since a higher priority waiting request for ohos-compile-refs/heads/main exists
 
 <details><summary>End of the job log</summary>
 
 ```
-Finished uploading artifact content to blob storage!
-SHA256 digest of uploaded artifact zip is bc0514fc8d43d7f000e7742dc0ac7dfe6176c4a8590dbddadb5953451081c6e0
-Finalizing artifact upload
-Artifact ios-native-tools.zip successfully finalized. Artifact ID 14607000608
-Artifact ios-native-tools has been successfully uploaded! Final size is 7432 bytes. Artifact ID is 14607000608
-Artifact download URL: https://github.com/ccch1mneyyy/dsh-Go/actions/runs/44680663099/artifacts/14607000608
-Shared CoreDevice/XCTest native owner restored for these inputs; nothing to build.
+[command]/opt/homebrew/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+[command]/opt/homebrew/bin/git config --file /Users/runner/work/_temp/git-credentials-2adcd828-ea88-4e73-82ea-983b7193bdde.config http.https://github.com/.extraheader AUTHORIZATION: basic ***
+[command]/opt/homebrew/bin/git config --local includeIf.gitdir:/Users/runner/work/dsh-Go/dsh-Go/.git.path /Users/runner/work/_temp/git-credentials-2adcd828-ea88-4e73-82ea-983b7193bdde.config
+[command]/opt/homebrew/bin/git config --local includeIf.gitdir:/Users/runner/work/dsh-Go/dsh-Go/.git/worktrees/*.path /Users/runner/work/_temp/git-credentials-2adcd828-ea88-4e73-82ea-983b7193bdde.config
+[command]/opt/homebrew/bin/git config --local includeIf.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-2adcd828-ea88-4e73-82ea-983b7193bdde.config
+[command]/opt/homebrew/bin/git config --local includeIf.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-2adcd828-ea88-4e73-82ea-983b7193bdde.config
+[command]/opt/homebrew/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +cf5cc532f0a009f2923d89b00ab2304b2aad62a8:refs/remotes/origin/main
 ##[error]The operation was canceled.
 ```
 

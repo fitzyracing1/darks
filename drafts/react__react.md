@@ -1,26 +1,26 @@
 <!-- dark-draft: react/react -->
-<!-- draft-state: resolved -->
+<!-- draft-state: ready -->
 # Upstream issue draft: react/react
 
-- **Status:** resolved — lit again (2026-11-19); nothing to file
+- **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/react/react/issues/new
-- **Stars:** 252737 · **Generated:** 2026-11-19T06:47:13.117Z
+- **Stars:** 252831 · **Generated:** 2026-11-20T12:41:20.099Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: "(DevTools) Regression Tests" workflow failing on main since 2026-11-19
+CI: "(DevTools) Regression Tests" workflow failing on main since 2026-11-20
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! The **(DevTools) Regression Tests** workflow (`.github/workflows/devtools_regression_tests.yml`) on `main` has been failing since 2026-11-19. Here is what I saw, in case it's useful:
+Hi! The **(DevTools) Regression Tests** workflow (`.github/workflows/devtools_regression_tests.yml`) on `main` has been failing since 2026-11-20. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/react/react/actions/runs/44425861894 — dark (conclusion: `failure`), 2026-11-19 00:03 UTC
-- Dark since: 2026-11-19 00:03 UTC (first run of the current streak)
-- Job / step: `Run DevTools e2e tests for versions (18.0)` → `Run ./scripts/ci/download_devtools_regression_build.js 18.0`
+- Latest run on `main`: https://github.com/react/react/actions/runs/44642670888 — dark (conclusion: `failure`), 2026-11-20 00:03 UTC
+- Dark since: 2026-11-20 00:03 UTC (first run of the current streak)
+- Job / step: `Run DevTools e2e tests for versions (17.0)` → `Run ./scripts/ci/download_devtools_regression_build.js 17.0`
 - Likely cause: Error: Cannot find module 'child-process-promise'
 
 <details><summary>End of the job log</summary>

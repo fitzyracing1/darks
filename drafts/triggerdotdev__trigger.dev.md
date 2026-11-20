@@ -4,19 +4,22 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/triggerdotdev/trigger.dev/issues/new
-- **Stars:** 16791 · **Generated:** 2026-11-20T06:46:04.904Z
+- **Stars:** 16791 · **Generated:** 2026-11-20T12:41:20.099Z
 - Nothing in this file has been sent anywhere.
+- **Note for Joshua:** cancelled by a concurrency group — likely noise
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: "🛡️ E2E Tests: Webapp Auth (full)" workflow failing on main since 2026-11-11
+CI: 2 workflows dark on main ("🛡️ E2E Tests: Webapp Auth (full)", "CodeQL")
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! The **🛡️ E2E Tests: Webapp Auth (full)** workflow (`.github/workflows/e2e-webapp-auth-full.yml`) on `main` has been failing since 2026-11-11. Here is what I saw, in case it's useful:
+Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
+
+### 🛡️ E2E Tests: Webapp Auth (full) (`.github/workflows/e2e-webapp-auth-full.yml`)
 
 - Latest run on `main`: https://github.com/triggerdotdev/trigger.dev/actions/runs/44671493405 — dark (conclusion: `failure`), 2026-11-20 04:00 UTC
 - Dark since: 2026-11-11 04:00 UTC (first run of the current streak)
@@ -34,6 +37,28 @@ Hi! The **🛡️ E2E Tests: Webapp Auth (full)** workflow (`.github/workflows/e
 {"traceId":"95babca8ca3a7313ae995de2c1bf034a","message":"api_auth.tenant_usage","spanId":"17d593b5d61cc553","kind":0,"timestamp":1795147347745000,"duration":3.216,"attributes":{"forceRecording":true,"tenant_usage.organi…
 {"traceId":"ce427795940db9bfa08769f506cc8064","message":"api_auth.tenant_usage","spanId":"812929dc85f88f8a","kind":0,"timestamp":1795147347745000,"duration":3.206,"attributes":{"forceRecording":true,"tenant_usage.organi…
 ##[error]Process completed with exit code 1.
+```
+
+</details>
+
+### CodeQL (`.github/workflows/codeql.yml`)
+
+- Latest run on `main`: https://github.com/triggerdotdev/trigger.dev/actions/runs/44735373594 — dark (conclusion: `cancelled`), 2026-11-20 12:23 UTC
+- Dark since: 2026-11-20 12:23 UTC (first run of the current streak)
+- Job / step: `Analyze (javascript-typescript)` → `Perform CodeQL Analysis`
+- Likely cause: Canceling since a higher priority waiting request for CodeQL-refs/heads/main exists
+
+<details><summary>End of the job log</summary>
+
+```
+[2026-11-20 12:24:49] [build-stdout] Extracting /home/runner/work/trigger.dev/trigger.dev/apps/webapp/app/services/personalAccessToken.server.ts
+[2026-11-20 12:24:49] [build-stdout] Done extracting /home/runner/work/trigger.dev/trigger.dev/apps/webapp/app/services/personalAccessToken.server.ts (65 ms)
+[2026-11-20 12:24:49] [build-stdout] Extracting /home/runner/work/trigger.dev/trigger.dev/apps/webapp/app/services/personalAccessTokenExpiryEmails.server.ts
+[2026-11-20 12:24:49] [build-stdout] Done extracting /home/runner/work/trigger.dev/trigger.dev/apps/webapp/app/services/personalAccessTokenExpiryEmails.server.ts (11 ms)
+[2026-11-20 12:24:49] [build-stdout] Extracting /home/runner/work/trigger.dev/trigger.dev/apps/webapp/app/services/planCheckoutCaches.server.ts
+[2026-11-20 12:24:49] [build-stdout] Done extracting /home/runner/work/trigger.dev/trigger.dev/apps/webapp/app/services/planCheckoutCaches.server.ts (2 ms)
+[2026-11-20 12:24:49] [build-stdout] Extracting /home/runner/work/trigger.dev/trigger.dev/apps/webapp/app/services/platform.v3.server.ts
+##[error]The operation was canceled.
 ```
 
 </details>
