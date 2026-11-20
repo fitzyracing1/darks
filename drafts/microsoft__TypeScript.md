@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/microsoft/TypeScript/issues/new
-- **Stars:** 111862 · **Generated:** 2026-11-20T00:53:29.653Z
+- **Stars:** 111865 · **Generated:** 2026-11-20T06:46:04.904Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -18,7 +18,7 @@ CI: "Close issues" workflow failing on main since 2026-11-19
 <!-- BEGIN BODY -->
 Hi! The **Close issues** workflow (`.github/workflows/close-issues.yml`) on `main` has been failing since 2026-11-19. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/microsoft/TypeScript/actions/runs/44434615237 — dark (conclusion: `failure`), 2026-11-19 01:08 UTC
+- Latest run on `main`: https://github.com/microsoft/TypeScript/actions/runs/44651387195 — dark (conclusion: `failure`), 2026-11-20 01:08 UTC
 - Dark since: 2026-11-19 01:08 UTC (first run of the current streak)
 - Job / step: `close-issues` → `Run azure/login@a641126d1b8aa4d1fa005f4f92df94a3a4c4c906`
 - Likely cause: Login failed with Error: The process '/usr/bin/az' failed with exit code 1. Double check if the 'auth-type' is correct. Refer to https://github.com/Azure/login#readme for more information.
@@ -33,7 +33,7 @@ Federated token details:
  audience - api://AzureADTokenExchange
  job_workflow_ref - microsoft/TypeScript/.github/workflows/close-issues.yml@refs/heads/main
 Attempting Azure CLI login by using OIDC...
-##[error]AADSTS53003: Access has been blocked by Conditional Access policies. The access policy does not allow token issuance. Trace ID: 3bfa13bb-4e21-4c2d-b3b7-436d325e0500 Correlation ID: 33a28bee-fd4a-4f05-9b3e-29ba5…
+##[error]AADSTS53003: Access has been blocked by Conditional Access policies. The access policy does not allow token issuance. Trace ID: 5aa6ab86-01f7-4aee-9c3e-00efaea30400 Correlation ID: 095db07a-c252-407a-a128-2b993…
 ```
 
 </details>

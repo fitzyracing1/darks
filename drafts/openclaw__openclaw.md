@@ -4,24 +4,39 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/openclaw/openclaw/issues/new
-- **Stars:** 394835 · **Generated:** 2026-11-20T00:53:29.653Z
+- **Stars:** 394863 · **Generated:** 2026-11-20T06:46:04.904Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** latest run was skipped, not failed — probably not worth filing
+- **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: "Docs" workflow not completing (runs skipped) on main since 2026-11-19
+CI: 3 workflows dark on main ("Docs", "CI", "Docs Sync Publish Repo")
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! The **Docs** workflow (`.github/workflows/docs.yml`) on `main` has been not completing (runs skipped) since 2026-11-19. Here is what I saw, in case it's useful:
+Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
 
-- Latest run on `main`: https://github.com/openclaw/openclaw/actions/runs/44646054730 — dark (conclusion: `skipped`), 2026-11-20 00:27 UTC
+### Docs (`.github/workflows/docs.yml`)
+
+- Latest run on `main`: https://github.com/openclaw/openclaw/actions/runs/44688751296 — dark (conclusion: `skipped`), 2026-11-20 06:34 UTC
 - Dark since: 2026-11-19 00:43 UTC (first run of the current streak)
 - Likely cause: run skipped
+
+### CI (`.github/workflows/ci.yml`)
+
+- Latest run on `main`: https://github.com/openclaw/openclaw/actions/runs/44688482176 — dark (conclusion: `cancelled`), 2026-11-20 06:32 UTC
+- Dark since: 2026-11-20 06:31 UTC (first run of the current streak)
+- Likely cause: run cancelled
+
+### Docs Sync Publish Repo (`.github/workflows/docs-sync-publish.yml`)
+
+- Latest run on `main`: https://github.com/openclaw/openclaw/actions/runs/44688480792 — dark (conclusion: `cancelled`), 2026-11-20 06:32 UTC
+- Dark since: 2026-11-20 06:32 UTC (first run of the current streak)
+- Likely cause: run cancelled
 
 If this is already known or expected, feel free to close. Thanks for maintaining openclaw!
 

@@ -4,36 +4,36 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/koala73/worldmonitor/issues/new
-- **Stars:** 90951 · **Generated:** 2026-11-20T00:53:29.653Z
+- **Stars:** 90970 · **Generated:** 2026-11-20T06:46:04.904Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: "Feed Validation" workflow failing on main since 2026-11-20
+CI: "Sentry Resolve Pin Audit" workflow failing on main since 2026-11-20
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! The **Feed Validation** workflow (`.github/workflows/feed-validation.yml`) on `main` has been failing since 2026-11-20. Here is what I saw, in case it's useful:
+Hi! The **Sentry Resolve Pin Audit** workflow (`.github/workflows/sentry-resolve-pin-audit.yml`) on `main` has been failing since 2026-11-20. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/koala73/worldmonitor/actions/runs/44643770499 — dark (conclusion: `failure`), 2026-11-20 00:11 UTC
-- Dark since: 2026-11-20 00:11 UTC (first run of the current streak)
-- Job / step: `validate` → `Run npm run test:feeds:ci`
-- Likely cause: The Times Group Malawi              | Timeout (15s)        | https://times.mw/feed/
+- Latest run on `main`: https://github.com/koala73/worldmonitor/actions/runs/44687982712 — dark (conclusion: `failure`), 2026-11-20 06:27 UTC
+- Dark since: 2026-11-20 06:27 UTC (first run of the current streak)
+- Job / step: `audit` → `Audit resolved issues for release pins`
+- Likely cause: WORLDMONITOR-1FS is resolved and pinned to release c90b3314b69a25d0faa0052749423cd2abaa3974; deployed release compatibility needs verification.
 
 <details><summary>End of the job log</summary>
 
 ```
-  Liechtensteiner Vaterland           | https://news.google.com/rss/search?q=site%3Avaterland.li+when%3A7d&hl=en-US&gl=US&ceid=US%3Aen
-  Los Tiempos                         | https://news.google.com/rss/search?q=site%3Alostiempos.com+when%3A7d&hl=en-US&gl=US&ceid=US%3Aen
-  Reuters — St. Kitts & Nevis         | https://news.google.com/rss/search?q=site%3Areuters.com+%28%22St.+Kitts+%26+Nevis%22%29+when%3A30d&hl=en-US&gl=US&ceid=US%3Aen
-  The UB Post                         | https://news.google.com/rss/search?q=site%3Aubpost.mn+when%3A7d&hl=en&gl=US&ceid=US%3Aen
-  Le Quotidien Luxembourg             | https://news.google.com/rss/search?q=site%3Alequotidien.lu+when%3A7d&hl=en-US&gl=US&ceid=US%3Aen
-  Bellingcat                          | https://news.google.com/rss/search?q=site%3Abellingcat.com%20when%3A7d&hl=en-US&gl=US&ceid=US:en
-Summary: 1300 OK, 13 stale, 76 dead, 30 empty, 1 skipped
-##[error]Process completed with exit code 1.
+npm: 11.19.1
+yarn: 1.22.22
+Sentry resolve pins require review: 2 of 347 resolved issues are pinned; verify deployed release compatibility before repair.
+  WORLDMONITOR-1FR pinned to release c90b3314b69a25d0faa0052749423cd2abaa3974 (in-release)
+    https://elie-habib.sentry.io/issues/7857755809/
+  WORLDMONITOR-1FS pinned to release c90b3314b69a25d0faa0052749423cd2abaa3974 (in-release)
+    https://elie-habib.sentry.io/issues/7857755817/
+##[error]WORLDMONITOR-1FR is resolved and pinned to release c90b3314b69a25d0faa0052749423cd2abaa3974; deployed release compatibility needs verification.
 ```
 
 </details>

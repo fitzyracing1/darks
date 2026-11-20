@@ -4,43 +4,20 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/xberg-io/xberg/issues/new
-- **Stars:** 9603 · **Generated:** 2026-11-20T00:53:29.653Z
+- **Stars:** 9602 · **Generated:** 2026-11-20T06:46:04.904Z
 - Nothing in this file has been sent anywhere.
-- **Note for Joshua:** cancelled by a concurrency group — likely noise
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 4 workflows dark on main ("CI Rust", "CI Lint", "CI Mobile", +1 more)
+CI: 3 workflows dark on main ("CI Lint", "CI Mobile", "CI Docs")
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
 Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
-
-### CI Rust (`.github/workflows/ci-rust.yaml`)
-
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/44569172298 — dark (conclusion: `cancelled`), 2026-11-19 16:42 UTC
-- Dark since: 2026-10-25 18:30 UTC (first run of the current streak)
-- Job / step: `Rust (windows-latest, static-embeddings link)` → `Build xberg test harness (ocr + static-embeddings, real MSVC link)`
-- Likely cause: Canceling since a higher priority waiting request for ci-rust-refs/heads/main exists
-
-<details><summary>End of the job log</summary>
-
-```
-   Compiling toml_datetime v1.1.3+spec-1.1.0
-   Compiling serde_spanned v1.1.3
-   Compiling parking_lot_core v0.10.0
-   Compiling nom v8.0.0
-   Compiling astral-html v0.0.4
-   Compiling toml_writer v1.2.0+spec-1.1.0
-   Compiling finl_unicode v1.5.1
-##[error]The operation was canceled.
-```
-
-</details>
 
 ### CI Lint (`.github/workflows/ci-lint.yaml`)
 

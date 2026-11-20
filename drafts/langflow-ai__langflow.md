@@ -4,13 +4,13 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/langflow-ai/langflow/issues/new
-- **Stars:** 156782 · **Generated:** 2026-11-20T00:53:29.653Z
+- **Stars:** 156788 · **Generated:** 2026-11-20T06:46:04.904Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 5 workflows dark on main ("Deploy Storybook to GitHub Pages", "Cross-Bundle Test", "Store pytest durations", +2 more)
+CI: 6 workflows dark on main ("Deploy Storybook to GitHub Pages", "Cross-Bundle Test", "Store pytest durations", +3 more)
 <!-- END TITLE -->
 
 ## Body
@@ -123,6 +123,28 @@ Temp database directory does not exist, skipping removal
     [chromium] › tests/live/admin-upgrade-repair.spec.ts:16:5 › distinguishes report imports and explains running-version history @release @database
   2 skipped
   3 passed (4.5m)
+##[error]Process completed with exit code 1.
+```
+
+</details>
+
+### A11y / IBM Equal Access Scans (`.github/workflows/a11y-scan.yml`)
+
+- Latest run on `main`: https://github.com/langflow-ai/langflow/actions/runs/44659407407 — dark (conclusion: `failure`), 2026-11-20 02:14 UTC
+- Dark since: 2026-11-20 02:14 UTC (first run of the current streak)
+- Job / step: `Python route scan (real backend, nightly)` → `Run Python Route Scan`
+- Likely cause: No files were found with the provided path: python-route-scan. No artifacts will be uploaded.
+
+<details><summary>End of the job log</summary>
+
+```
+    )
+    ^
+  File "/home/runner/work/_temp/setup-uv-cache/archive-v0/UxDe6YJlVIG79PA9/lib/python3.13/site-packages/playwright/_impl/_connection.py", line 563, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TimeoutError: Page.goto: Timeout 45000ms exceeded.
+Call log:
+  - navigating to "http://localhost:3000/flows", waiting until "domcontentloaded"
 ##[error]Process completed with exit code 1.
 ```
 
