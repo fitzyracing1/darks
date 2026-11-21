@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/clash-verge-rev/clash-verge-rev/issues/new
-- **Stars:** 159606 · **Generated:** 2026-11-20T18:40:22.935Z
+- **Stars:** 159610 · **Generated:** 2026-11-21T00:52:59.041Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -18,7 +18,7 @@ CI: "Auto Build" workflow failing on dev since 2026-11-20
 <!-- BEGIN BODY -->
 Hi! The **Auto Build** workflow (`.github/workflows/autobuild.yml`) on `dev` has been failing since 2026-11-20. Here is what I saw, in case it's useful:
 
-- Latest run on `dev`: https://github.com/clash-verge-rev/clash-verge-rev/actions/runs/44715647433 — dark (conclusion: `failure`), 2026-11-20 10:01 UTC
+- Latest run on `dev`: https://github.com/clash-verge-rev/clash-verge-rev/actions/runs/44825405821 — dark (conclusion: `failure`), 2026-11-20 22:01 UTC
 - Dark since: 2026-11-20 10:01 UTC (first run of the current streak)
 - Job / step: `Autobuild ARM Linux (ubuntu-22.04, armv7-unknown-linux-gnueabihf, armhf)` → `Tauri Build for Linux`
 - Likely cause: Error failed to build app: failed to build app

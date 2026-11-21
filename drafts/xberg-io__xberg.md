@@ -4,14 +4,20 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/xberg-io/xberg/issues/new
-- **Stars:** 9603 · **Generated:** 2026-11-20T18:40:22.935Z
+- **Stars:** 9605 · **Generated:** 2026-11-21T00:52:59.041Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** cancelled by a concurrency group — likely noise
+
+## Skipped: upstream already tracking
+
+- CI Lint (`.github/workflows/ci-lint.yaml`): [issue #3343](https://github.com/xberg-io/xberg/issues/3343) "ci(lint): enforce cargo-deny on the shipped feature graphs and remove stale exceptions"
+
+These workflows are left out of the body below.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 7 workflows dark on main ("CI Lint", "CI Integrations", "CI E2E", +4 more)
+CI: 5 workflows dark on main ("CI Integrations", "CI E2E", "CI Rust", +2 more)
 <!-- END TITLE -->
 
 ## Body
@@ -19,47 +25,25 @@ CI: 7 workflows dark on main ("CI Lint", "CI Integrations", "CI E2E", +4 more)
 <!-- BEGIN BODY -->
 Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
 
-### CI Lint (`.github/workflows/ci-lint.yaml`)
-
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/44792810481 — dark (conclusion: `cancelled`), 2026-11-20 18:26 UTC
-- Dark since: 2026-11-18 18:37 UTC (first run of the current streak)
-- Job / step: `Hand-declared FFI surfaces match the emitted header`
-- Likely cause: Canceling since a higher priority waiting request for ci-lint-refs/heads/main exists
-
 ### CI Integrations (`.github/workflows/ci-integrations.yaml`)
 
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/44792809991 — dark (conclusion: `cancelled`), 2026-11-20 18:26 UTC
+- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/44842060628 — dark (conclusion: `cancelled`), 2026-11-21 00:10 UTC
 - Dark since: 2026-11-20 07:25 UTC (first run of the current streak)
 - Job / step: `Build local integration bindings`
 - Likely cause: Canceling since a higher priority waiting request for ci-integrations-refs/heads/main exists
 
 ### CI E2E (`.github/workflows/ci-e2e.yaml`)
 
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/44792809977 — dark (conclusion: `cancelled`), 2026-11-20 18:26 UTC
+- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/44842060587 — dark (conclusion: `cancelled`), 2026-11-21 00:10 UTC
 - Dark since: 2026-11-20 07:25 UTC (first run of the current streak)
-- Job / step: `Build FFI (aarch64-unknown-linux-gnu)` → `Install system dependencies`
+- Job / step: `Build FFI (x86_64-unknown-linux-gnu)`
 - Likely cause: Canceling since a higher priority waiting request for ci-e2e-refs/heads/main exists
-
-<details><summary>End of the job log</summary>
-
-```
-Setting up libtesseract-dev:arm64 (5.3.4-1build5) ...
-Setting up tesseract-ocr (5.3.4-1build5) ...
-Processing triggers for fontconfig (2.15.0-1.1ubuntu2) ...
-Processing triggers for libc-bin (2.39-0ubuntu8.12) ...
-Processing triggers for man-db (2.12.0-4build2) ...
-Not building database; man-db/auto-update is not 'true'.
-Processing triggers for install-info (7.1-3build2) ...
-##[error]The operation was canceled.
-```
-
-</details>
 
 ### CI Rust (`.github/workflows/ci-rust.yaml`)
 
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/44792810241 — dark (conclusion: `cancelled`), 2026-11-20 18:26 UTC
+- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/44842060597 — dark (conclusion: `cancelled`), 2026-11-21 00:10 UTC
 - Dark since: 2026-11-20 07:25 UTC (first run of the current streak)
-- Job / step: `Rust tract-only (no-ORT)`
+- Job / step: `Chunking scaling guard`
 - Likely cause: Canceling since a higher priority waiting request for ci-rust-refs/heads/main exists
 
 ### CI Docker (`.github/workflows/ci-docker.yaml`)
@@ -84,34 +68,12 @@ Tip: Use `--wait-for-schema=NUM` to wait up to NUM seconds for schema availabili
 
 </details>
 
-### CI Mobile (`.github/workflows/ci-mobile.yaml`)
-
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/44792810333 — dark (conclusion: `cancelled`), 2026-11-20 18:26 UTC
-- Dark since: 2026-11-20 18:26 UTC (first run of the current streak)
-- Job / step: `Android cargo check (arm64-v8a)`
-- Likely cause: Canceling since a higher priority waiting request for ci-mobile-refs/heads/main exists
-
 ### CI Focused PR (`.github/workflows/ci-focused-pr.yaml`)
 
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/44792809934 — dark (conclusion: `cancelled`), 2026-11-20 18:26 UTC
+- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/44842060652 — dark (conclusion: `cancelled`), 2026-11-21 00:10 UTC
 - Dark since: 2026-11-20 18:26 UTC (first run of the current streak)
-- Job / step: `Focused pdf-table-paint` → `Run exact regression tests`
+- Job / step: `Focused pdf-ocr`
 - Likely cause: Canceling since a higher priority waiting request for ci-focused-pr-refs/heads/main-regressions exists
-
-<details><summary>End of the job log</summary>
-
-```
-   Compiling wiremock v0.6.5
-   Compiling tokio-test v0.4.6
-   Compiling tar v0.4.46
-   Compiling ort v2.0.0-rc.15
-   Compiling v_htmlescape v1.0.0
-   Compiling infer v0.22.0
-   Compiling lopdf v0.45.0
-##[error]The operation was canceled.
-```
-
-</details>
 
 If this is already known or expected, feel free to close. Thanks for maintaining xberg!
 

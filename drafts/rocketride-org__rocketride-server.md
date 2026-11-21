@@ -4,9 +4,8 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/rocketride-org/rocketride-server/issues/new
-- **Stars:** 20008 · **Generated:** 2026-11-20T18:40:22.935Z
+- **Stars:** 20009 · **Generated:** 2026-11-21T00:52:59.041Z
 - Nothing in this file has been sent anywhere.
-- **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
@@ -43,10 +42,25 @@ libc++abi: terminating due to uncaught exception of type pybind11::attribute_err
 
 ### CI (`.github/workflows/ci.yml`)
 
-- Latest run on `develop`: https://github.com/rocketride-org/rocketride-server/actions/runs/44756735499 — dark (conclusion: `failure`), 2026-11-20 14:46 UTC
+- Latest run on `develop`: https://github.com/rocketride-org/rocketride-server/actions/runs/44824045227 — dark (conclusion: `failure`), 2026-11-20 21:51 UTC
 - Dark since: 2026-11-20 14:46 UTC (first run of the current streak)
-- Job / step: `Build / Windows Server 2022`
-- Likely cause: The hosted runner lost communication with the server. Anything in your workflow that terminates the runner process, starves it for CPU/Memory, or blocks its network access can cause this error.
+- Job / step: `Build / Windows Server 2022` → `Test`
+- Likely cause: [PASSED]: RocketRideClient lifecycle operations maps unsolicited transport loss during auth to ConnectionException without disconnected publication
+
+<details><summary>End of the job log</summary>
+
+```
+[PASSED]: RocketRideClient lifecycle operations logout publishes exactly one balancing onDisconnected for an accepted login
+    at ChildProcess.<anonymous> (D:\a\rocketride-server\rocketride-server\scripts\lib\exec.js:266:12)
+    at ChildProcess.emit (node:events:519:28)
+    at maybeClose (node:internal/child_process:1101:16)
+    at Socket.<anonymous> (node:internal/child_process:456:11)
+    at Socket.emit (node:events:519:28)
+    at Pipe.<anonymous> (node:net:347:12)
+##[error]Process completed with exit code 1.
+```
+
+</details>
 
 If this is already known or expected, feel free to close. Thanks for maintaining rocketride-server!
 

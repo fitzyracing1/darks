@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/langflow-ai/langflow/issues/new
-- **Stars:** 156805 · **Generated:** 2026-11-20T18:40:22.935Z
+- **Stars:** 156811 · **Generated:** 2026-11-21T00:52:59.041Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -86,7 +86,7 @@ FAILED src/bundles/google/tests/test_workspace_network_errors.py::test_network_f
 
 ### GP Download Translations (`.github/workflows/gp-download.yml`)
 
-- Latest run on `main`: https://github.com/langflow-ai/langflow/actions/runs/44633848434 — dark (conclusion: `failure`), 2026-11-19 23:00 UTC
+- Latest run on `main`: https://github.com/langflow-ai/langflow/actions/runs/44833504149 — dark (conclusion: `failure`), 2026-11-20 23:00 UTC
 - Dark since: 2026-11-16 23:01 UTC (first run of the current streak)
 - Job / step: `Download translations from Globalization Pipeline` → `Download translations from GP`
 - Likely cause: FAILED languages: ['fr', 'ja', 'es', 'de', 'pt', 'zh-Hans']
@@ -95,11 +95,11 @@ FAILED src/bundles/google/tests/test_workspace_network_errors.py::test_network_f
 
 ```
 Downloading 'de' translations...
-  Error downloading 'de': HTTPSConnectionPool(host='g11n-pipeline-api.straker.global', port=443): Max retries exceeded with url: /translate/rest/langflow-test/v2/bundles/langflow-ui/de (Caused by ConnectTimeoutError(<HT…
+  Error downloading 'de': 401 Client Error: Unauthorized for url: https://g11n-pipeline-api.straker.global/translate/rest/langflow-test/v2/bundles/langflow-ui/de
 Downloading 'pt' translations...
-  Error downloading 'pt': HTTPSConnectionPool(host='g11n-pipeline-api.straker.global', port=443): Max retries exceeded with url: /translate/rest/langflow-test/v2/bundles/langflow-ui/pt (Caused by ConnectTimeoutError(<HT…
+  Error downloading 'pt': 401 Client Error: Unauthorized for url: https://g11n-pipeline-api.straker.global/translate/rest/langflow-test/v2/bundles/langflow-ui/pt
 Downloading 'zh-Hans' translations...
-  Error downloading 'zh-Hans': HTTPSConnectionPool(host='g11n-pipeline-api.straker.global', port=443): Max retries exceeded with url: /translate/rest/langflow-test/v2/bundles/langflow-ui/zh-Hans (Caused by ConnectTimeou…
+  Error downloading 'zh-Hans': 401 Client Error: Unauthorized for url: https://g11n-pipeline-api.straker.global/translate/rest/langflow-test/v2/bundles/langflow-ui/zh-Hans
 FAILED languages: ['fr', 'ja', 'es', 'de', 'pt', 'zh-Hans']
 ##[error]Process completed with exit code 1.
 ```
@@ -108,21 +108,21 @@ FAILED languages: ['fr', 'ja', 'es', 'de', 'pt', 'zh-Hans']
 
 ### Nightly Build (`.github/workflows/nightly_build.yml`)
 
-- Latest run on `main`: https://github.com/langflow-ai/langflow/actions/runs/44207308638 — dark (conclusion: `failure`), 2026-11-18 00:22 UTC
+- Latest run on `main`: https://github.com/langflow-ai/langflow/actions/runs/44843345551 — dark (conclusion: `failure`), 2026-11-21 00:22 UTC
 - Dark since: 2026-11-18 00:22 UTC (first run of the current streak)
-- Job / step: `Run Frontend Tests - Linux / Live provider smoke tests` → `Run live-provider smoke tests`
-- Likely cause: 1 failed
+- Job / step: `create-nightly-tag` → `Commit tag`
+- Likely cause: lfx-whatsapp 0.1.1: unable to query public index https://pypi.org/pypi/lfx-whatsapp/0.1.1/json: _ssl.c:1015: The handshake operation timed out
 
 <details><summary>End of the job log</summary>
 
 ```
-Removing the temp database
-tempDbPath /home/runner/work/langflow/langflow/src/frontend/temp
-Temp database directory does not exist, skipping removal
-  1 failed
-    [chromium] › tests/live/admin-upgrade-repair.spec.ts:16:5 › distinguishes report imports and explains running-version history @release @database
-  2 skipped
-  3 passed (4.5m)
++ uv run --no-sync ./scripts/ci/update_lfx_version.py v1.14.0.dev35 v0.4.0.dev129
+Updated lfx to nightly version 1.14.0.dev35
++ echo 'Updating base/main project versions to the shared nightly tag'
+Updating base/main project versions to the shared nightly tag
++ uv run --no-sync ./scripts/ci/update_pyproject_combined.py main v1.14.0.dev34 v1.14.0.dev34 v1.14.0.dev35
+Bundle versions conflict with the nightly lfx line:
+lfx-whatsapp 0.1.1: unable to query public index https://pypi.org/pypi/lfx-whatsapp/0.1.1/json: _ssl.c:1015: The handshake operation timed out
 ##[error]Process completed with exit code 1.
 ```
 

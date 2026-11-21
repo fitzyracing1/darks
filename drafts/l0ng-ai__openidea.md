@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/l0ng-ai/openidea/issues/new
-- **Stars:** 9700 · **Generated:** 2026-11-20T18:40:22.935Z
+- **Stars:** 9710 · **Generated:** 2026-11-21T00:52:59.041Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
@@ -21,13 +21,13 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### CI (`.github/workflows/ci.yml`)
 
-- Latest run on `main`: https://github.com/l0ng-ai/openidea/actions/runs/44788179295 — dark (conclusion: `cancelled`), 2026-11-20 17:57 UTC
+- Latest run on `main`: https://github.com/l0ng-ai/openidea/actions/runs/44841611828 — dark (conclusion: `cancelled`), 2026-11-21 00:06 UTC
 - Dark since: 2026-11-10 13:06 UTC (first run of the current streak)
 - Likely cause: run cancelled
 
 ### Language smoke (`.github/workflows/language-smoke.yml`)
 
-- Latest run on `main`: https://github.com/l0ng-ai/openidea/actions/runs/44786283574 — dark (conclusion: `cancelled`), 2026-11-20 17:45 UTC
+- Latest run on `main`: https://github.com/l0ng-ai/openidea/actions/runs/44840663595 — dark (conclusion: `cancelled`), 2026-11-20 23:58 UTC
 - Dark since: 2026-11-20 06:27 UTC (first run of the current streak)
 - Likely cause: run cancelled
 

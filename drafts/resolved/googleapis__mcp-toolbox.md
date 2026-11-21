@@ -1,8 +1,8 @@
 <!-- dark-draft: googleapis/mcp-toolbox -->
-<!-- draft-state: ready -->
+<!-- draft-state: resolved -->
 # Upstream issue draft: googleapis/mcp-toolbox
 
-- **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
+- **Status:** resolved — lit again (2026-11-21); nothing to file
 - **Would be filed at:** https://github.com/googleapis/mcp-toolbox/issues/new
 - **Stars:** 16918 · **Generated:** 2026-11-20T18:40:22.935Z
 - Nothing in this file has been sent anywhere.

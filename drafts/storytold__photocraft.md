@@ -4,14 +4,14 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/storytold/photocraft/issues/new
-- **Stars:** 80701 · **Generated:** 2026-11-20T18:40:22.935Z
+- **Stars:** 80737 · **Generated:** 2026-11-21T00:52:59.041Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 3 workflows dark on main ("FreeBSD", "Perf (nightly)", "SonarCloud")
+CI: 2 workflows dark on main ("FreeBSD", "Perf (nightly)")
 <!-- END TITLE -->
 
 ## Body
@@ -62,12 +62,6 @@ error: could not fetch https://download.freebsd.org/releases/arm64/aarch64/15.1-
 ```
 
 </details>
-
-### SonarCloud (`.github/workflows/sonarcloud.yml`)
-
-- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/44780165712 — dark (conclusion: `cancelled`), 2026-11-20 17:07 UTC
-- Dark since: 2026-11-19 16:52 UTC (first run of the current streak)
-- Likely cause: run cancelled
 
 If this is already known or expected, feel free to close. Thanks for maintaining photocraft!
 

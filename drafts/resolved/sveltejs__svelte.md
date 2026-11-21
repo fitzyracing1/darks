@@ -1,8 +1,8 @@
 <!-- dark-draft: sveltejs/svelte -->
-<!-- draft-state: ready -->
+<!-- draft-state: resolved -->
 # Upstream issue draft: sveltejs/svelte
 
-- **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
+- **Status:** resolved — lit again (2026-11-21); nothing to file
 - **Would be filed at:** https://github.com/sveltejs/svelte/issues/new
 - **Stars:** 89831 · **Generated:** 2026-11-20T18:40:22.935Z
 - Nothing in this file has been sent anywhere.

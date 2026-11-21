@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/avelino/awesome-go/issues/new
-- **Stars:** 194982 · **Generated:** 2026-11-20T18:40:22.935Z
+- **Stars:** 195035 · **Generated:** 2026-11-21T00:52:59.041Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -18,7 +18,7 @@ CI: "Auto-merge README PRs" workflow failing on main since 2026-11-17
 <!-- BEGIN BODY -->
 Hi! The **Auto-merge README PRs** workflow (`.github/workflows/auto-merge-readme.yaml`) on `main` has been failing since 2026-11-17. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/avelino/awesome-go/actions/runs/44792009460 — dark (conclusion: `failure`), 2026-11-20 18:21 UTC
+- Latest run on `main`: https://github.com/avelino/awesome-go/actions/runs/44845064873 — dark (conclusion: `failure`), 2026-11-21 00:37 UTC
 - Dark since: 2026-11-17 11:48 UTC (first run of the current streak)
 - Job / step: `Auto-merge README PRs` → `Merge eligible PRs`
 - Likely cause: "message": "Not Found",
