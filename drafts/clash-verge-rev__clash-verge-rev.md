@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/clash-verge-rev/clash-verge-rev/issues/new
-- **Stars:** 159610 · **Generated:** 2026-11-21T00:52:59.041Z
+- **Stars:** 159643 · **Generated:** 2026-11-21T06:41:51.202Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title

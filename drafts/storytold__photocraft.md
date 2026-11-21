@@ -4,14 +4,14 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/storytold/photocraft/issues/new
-- **Stars:** 80737 · **Generated:** 2026-11-21T00:52:59.041Z
+- **Stars:** 80778 · **Generated:** 2026-11-21T06:41:51.202Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 2 workflows dark on main ("FreeBSD", "Perf (nightly)")
+CI: 4 workflows dark on main ("FreeBSD", "Perf (nightly)", "SonarCloud", +1 more)
 <!-- END TITLE -->
 
 ## Body
@@ -21,7 +21,7 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### FreeBSD (`.github/workflows/freebsd.yml`)
 
-- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/44660713361 — dark (conclusion: `failure`), 2026-11-20 02:25 UTC
+- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/44855798189 — dark (conclusion: `failure`), 2026-11-21 02:25 UTC
 - Dark since: 2026-11-18 02:26 UTC (first run of the current streak)
 - Job / step: `freebsd / FreeBSD 15 aarch64 (build + test)` → `Set up the aarch64 cross toolchain`
 - Likely cause: error: could not fetch https://download.freebsd.org/releases/arm64/aarch64/15.1-RELEASE/base.txz after 3 attempts
@@ -29,12 +29,12 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 <details><summary>End of the job log</summary>
 
 ```
- 90 148.3M  90 133.7M   0      0 781.8k      0   03:14   02:55   00:19 544.8k
- 90 148.3M  90 134.5M   0      0 781.6k      0   03:14   02:56   00:18 614.4k
- 91 148.3M  91 135.7M   0      0 784.3k      0   03:13   02:57   00:16 741.8k
- 91 148.3M  91 136.4M   0      0 784.0k      0   03:13   02:58   00:15 767.3k
- 92 148.3M  92 137.4M   0      0 785.4k      0   03:13   02:59   00:14 883.5k
-curl: (28) Operation timed out after 180000 milliseconds with 144834012 out of 155595600 bytes received
+ 59 148.3M  59 88.34M   0      0 516.0k      0   04:54   02:55   01:59 515.0k
+ 59 148.3M  59 88.74M   0      0 515.4k      0   04:54   02:56   01:58 514.9k
+ 60 148.3M  60 89.12M   0      0 514.4k      0   04:55   02:57   01:58 435.9k
+ 60 148.3M  60 89.78M   0      0 515.2k      0   04:54   02:58   01:56 475.5k
+ 60 148.3M  60 90.45M   0      0 516.2k      0   04:54   02:59   01:55 534.4k
+curl: (28) Operation timed out after 180000 milliseconds with 95321564 out of 155595600 bytes received
 error: could not fetch https://download.freebsd.org/releases/arm64/aarch64/15.1-RELEASE/base.txz after 3 attempts
 ##[error]Process completed with exit code 1.
 ```
@@ -43,7 +43,7 @@ error: could not fetch https://download.freebsd.org/releases/arm64/aarch64/15.1-
 
 ### Perf (nightly) (`.github/workflows/perf-nightly.yml`)
 
-- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/44668055682 — dark (conclusion: `cancelled`), 2026-11-20 03:29 UTC
+- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/44861309627 — dark (conclusion: `cancelled`), 2026-11-21 03:28 UTC
 - Dark since: 2026-11-18 03:29 UTC (first run of the current streak)
 - Job / step: `perf (macOS, Apple GPU)` → `Run benchmarks`
 - Likely cause: The job has exceeded the maximum execution time of 2h0m0s
@@ -51,14 +51,58 @@ error: could not fetch https://download.freebsd.org/releases/arm64/aarch64/15.1-
 <details><summary>End of the job log</summary>
 
 ```
-   Compiling photocraft-ui-egui v0.23.1 (/Users/runner/work/photocraft/photocraft/crates/ui-egui)
-   Compiling photocraft-ops v0.23.1 (/Users/runner/work/photocraft/photocraft/crates/ops)
-   Compiling egui_extras v0.37.0 (https://github.com/storytold/egui.git?rev=e9711ca9b69772f875ae0d1cef1977ff8c16234d#e9711ca9)
-   Compiling photocraft-engine v0.23.1 (/Users/runner/work/photocraft/photocraft/crates/engine)
+   Compiling egui_extras v0.37.0 (https://github.com/storytold/egui.git?rev=6525c87923ca47465aac244460fe4b1139349060#6525c879)
    Compiling photocraft-gpu v0.23.1 (/Users/runner/work/photocraft/photocraft/crates/gpu)
+   Compiling kittest v0.5.0
+   Compiling open v5.4.5
    Compiling memory-stats v1.2.0
    Compiling photocraft-testkit v0.23.1 (/Users/runner/work/photocraft/photocraft/crates/testkit)
+   Compiling egui_kittest v0.37.0 (https://github.com/storytold/egui.git?rev=6525c87923ca47465aac244460fe4b1139349060#6525c879)
 ##[error]The operation was canceled.
+```
+
+</details>
+
+### SonarCloud (`.github/workflows/sonarcloud.yml`)
+
+- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/44839158332 — dark (conclusion: `failure`), 2026-11-20 23:45 UTC
+- Dark since: 2026-11-20 23:45 UTC (first run of the current streak)
+- Job / step: `sonarcloud / SonarCloud Scan` → `Fail on Rust shard test failures`
+- Likely cause: Coverage shard 1 tests failed (exit 100); analysis was still uploaded
+
+<details><summary>End of the job log</summary>
+
+```
+00:49:44.766 INFO  ------------- Upload SCA dependency files
+00:49:46.191 INFO  Successfully sent architecture data
+00:49:47.982 INFO  Sensor cache published successfully
+00:49:51.363 INFO  Analysis total time: 3:48.094 min
+00:49:51.364 INFO  SonarScanner Engine completed successfully
+00:49:51.525 INFO  EXECUTION SUCCESS
+00:49:51.526 INFO  Total time: 3:54.006s
+##[error]Coverage shard 1 tests failed (exit 100); analysis was still uploaded
+```
+
+</details>
+
+### Release (`.github/workflows/release.yml`)
+
+- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/44856457485 — dark (conclusion: `failure`), 2026-11-21 02:32 UTC
+- Dark since: 2026-11-21 02:32 UTC (first run of the current streak)
+- Job / step: `release / Linux aarch64` → `Run storytold/craft-common-actions/actions/rust-channel@main`
+- Likely cause: ModuleNotFoundError: No module named 'tomllib'
+
+<details><summary>End of the job log</summary>
+
+```
+##[end-action id=__storytold_craft-common-actions_3.__storytold_craft-common-actions.__run;outcome=success;conclusion=success;duration_ms=591]
+##[end-action id=__storytold_craft-common-actions_3.__storytold_craft-common-actions;outcome=success;conclusion=success;duration_ms=597]
+##[start-action display=Run python3 "$CHANNEL";id=rust.channel]
+Traceback (most recent call last):
+  File "/home/runner/work/_actions/storytold/craft-common-actions/main/actions/rust-channel/channel.py", line 9, in <module>
+    import tomllib
+ModuleNotFoundError: No module named 'tomllib'
+##[error]Process completed with exit code 1.
 ```
 
 </details>

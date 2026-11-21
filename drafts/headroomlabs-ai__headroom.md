@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/headroomlabs-ai/headroom/issues/new
-- **Stars:** 80218 · **Generated:** 2026-11-21T00:52:59.041Z
+- **Stars:** 80223 · **Generated:** 2026-11-21T06:41:51.202Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 

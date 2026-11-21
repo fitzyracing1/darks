@@ -4,9 +4,8 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/xberg-io/xberg/issues/new
-- **Stars:** 9605 · **Generated:** 2026-11-21T00:52:59.041Z
+- **Stars:** 9605 · **Generated:** 2026-11-21T06:41:51.202Z
 - Nothing in this file has been sent anywhere.
-- **Note for Joshua:** cancelled by a concurrency group — likely noise
 
 ## Skipped: upstream already tracking
 
@@ -17,7 +16,7 @@ These workflows are left out of the body below.
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 5 workflows dark on main ("CI Integrations", "CI E2E", "CI Rust", +2 more)
+CI: 3 workflows dark on main ("CI E2E", "CI Rust", "CI Docker")
 <!-- END TITLE -->
 
 ## Body
@@ -25,26 +24,49 @@ CI: 5 workflows dark on main ("CI Integrations", "CI E2E", "CI Rust", +2 more)
 <!-- BEGIN BODY -->
 Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
 
-### CI Integrations (`.github/workflows/ci-integrations.yaml`)
-
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/44842060628 — dark (conclusion: `cancelled`), 2026-11-21 00:10 UTC
-- Dark since: 2026-11-20 07:25 UTC (first run of the current streak)
-- Job / step: `Build local integration bindings`
-- Likely cause: Canceling since a higher priority waiting request for ci-integrations-refs/heads/main exists
-
 ### CI E2E (`.github/workflows/ci-e2e.yaml`)
 
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/44842060587 — dark (conclusion: `cancelled`), 2026-11-21 00:10 UTC
+- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/44842112910 — dark (conclusion: `failure`), 2026-11-21 00:11 UTC
 - Dark since: 2026-11-20 07:25 UTC (first run of the current streak)
-- Job / step: `Build FFI (x86_64-unknown-linux-gnu)`
-- Likely cause: Canceling since a higher priority waiting request for ci-e2e-refs/heads/main exists
+- Job / step: `E2E (wasm)` → `Run e2e tests`
+- Likely cause: cannot find function 'strip_fallback_furniture_in_page_points' in this scope (crates/xberg/src/extractors/pdf/ocr/pipeline.rs:4308)
+
+<details><summary>End of the job log</summary>
+
+```
+warning: xberg-tesseract@1.4.2: Patch command failed, will apply programmatic fixups.
+warning: xberg-tesseract@1.4.2: wasm32-wasi-clang: warning: argument '--target=wasm32-wasi' is deprecated, use --target=wasm32-wasip1 instead [-Wdeprecated]
+warning: xberg-tesseract@1.4.2: wasm32-wasi-clang: warning: argument '--target=wasm32-wasi' is deprecated, use --target=wasm32-wasip1 instead [-Wdeprecated]
+warning: xberg-tesseract@1.4.2: wasm32-wasi-clang: warning: argument '--target=wasm32-wasi' is deprecated, use --target=wasm32-wasip1 instead [-Wdeprecated]
+warning: xberg-tesseract@1.4.2: wasm32-wasi-clang: warning: argument '--target=wasm32-wasi' is deprecated, use --target=wasm32-wasip1 instead [-Wdeprecated]
+warning: ignoring -C extra-filename flag due to -o flag
+error[E0425]: cannot find function `strip_fallback_furniture_in_page_points` in this scope
+##[error]    --> crates/xberg/src/extractors/pdf/ocr/pipeline.rs:4308:13
+```
+
+</details>
 
 ### CI Rust (`.github/workflows/ci-rust.yaml`)
 
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/44842060597 — dark (conclusion: `cancelled`), 2026-11-21 00:10 UTC
+- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/44842112087 — dark (conclusion: `failure`), 2026-11-21 00:11 UTC
 - Dark since: 2026-11-20 07:25 UTC (first run of the current streak)
-- Job / step: `Chunking scaling guard`
-- Likely cause: Canceling since a higher priority waiting request for ci-rust-refs/heads/main exists
+- Job / step: `Rust (ubuntu-24.04)` → `Clippy formula recognition cell`
+- Likely cause: cannot find function 'strip_fallback_furniture_in_page_points' in this scope (crates/xberg/src/extractors/pdf/ocr/pipeline.rs:4308)
+
+<details><summary>End of the job log</summary>
+
+```
+    Checking jsonschema v0.61.2
+    Checking criterion v0.8.2
+    Checking zip v9.7.0
+    Checking serial_test v4.0.1
+    Checking wiremock v0.6.5
+    Checking qrcode v0.14.1
+error[E0425]: cannot find function `strip_fallback_furniture_in_page_points` in this scope
+##[error]    --> crates/xberg/src/extractors/pdf/ocr/pipeline.rs:4308:13
+```
+
+</details>
 
 ### CI Docker (`.github/workflows/ci-docker.yaml`)
 
@@ -67,13 +89,6 @@ Tip: Use `--wait-for-schema=NUM` to wait up to NUM seconds for schema availabili
 ```
 
 </details>
-
-### CI Focused PR (`.github/workflows/ci-focused-pr.yaml`)
-
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/44842060652 — dark (conclusion: `cancelled`), 2026-11-21 00:10 UTC
-- Dark since: 2026-11-20 18:26 UTC (first run of the current streak)
-- Job / step: `Focused pdf-ocr`
-- Likely cause: Canceling since a higher priority waiting request for ci-focused-pr-refs/heads/main-regressions exists
 
 If this is already known or expected, feel free to close. Thanks for maintaining xberg!
 

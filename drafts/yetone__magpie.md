@@ -4,39 +4,24 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/yetone/magpie/issues/new
-- **Stars:** 39515 · **Generated:** 2026-11-21T00:52:59.041Z
+- **Stars:** 39598 · **Generated:** 2026-11-21T06:41:51.202Z
 - Nothing in this file has been sent anywhere.
+- **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: "Test" workflow failing on main since 2026-11-18
+CI: "Test" workflow getting cancelled on main since 2026-11-18
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! The **Test** workflow (`.github/workflows/test.yml`) on `main` has been failing since 2026-11-18. Here is what I saw, in case it's useful:
+Hi! The **Test** workflow (`.github/workflows/test.yml`) on `main` has been getting cancelled since 2026-11-18. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/yetone/magpie/actions/runs/44814702832 — dark (conclusion: `failure`), 2026-11-20 20:48 UTC
+- Latest run on `main`: https://github.com/yetone/magpie/actions/runs/44874067136 — dark (conclusion: `cancelled`), 2026-11-21 06:07 UTC
 - Dark since: 2026-11-18 11:36 UTC (first run of the current streak)
-- Job / step: `test (macos-latest, 3/3)` → `Test`
-- Likely cause: internal/proc/disclaim_darwin.go:35:19: warning: 'posix_spawn_file_actions_addchdir_np' is deprecated: first deprecated in macOS 26.0 - posix_spawn_file_actions_addchdir(3) has replaced posix_spawn_file_actions_addchdir…
-
-<details><summary>End of the job log</summary>
-
-```
-Cache Size: ~23 MB (23912749 B)
-[command]/opt/homebrew/bin/gtar -xf /Users/runner/work/_temp/2654df96-303d-40fb-abbb-bc296ae71c27/cache.tzst -P -C /Users/runner/work/magpie/magpie --delay-directory-restore --use-compress-program unzstd
-Cache restored successfully
-[command]/Users/runner/.bun/bin/bun --revision
-1.4.2+744846f84
-Using a cached version of Bun: 1.4.2+744846f84
-# github.com/yetone/magpie/internal/proc
-##[error]internal/proc/disclaim_darwin.go:35:19: warning: 'posix_spawn_file_actions_addchdir_np' is deprecated: first deprecated in macOS 26.0 - posix_spawn_file_actions_addchdir(3) has replaced posix_spawn_file_actions…
-```
-
-</details>
+- Likely cause: run cancelled
 
 If this is already known or expected, feel free to close. Thanks for maintaining magpie!
 

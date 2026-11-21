@@ -4,13 +4,13 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/langflow-ai/langflow/issues/new
-- **Stars:** 156811 · **Generated:** 2026-11-21T00:52:59.041Z
+- **Stars:** 156815 · **Generated:** 2026-11-21T06:41:51.202Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 6 workflows dark on main ("Deploy Storybook to GitHub Pages", "Cross-Bundle Test", "Store pytest durations", +3 more)
+CI: 5 workflows dark on main ("Deploy Storybook to GitHub Pages", "Cross-Bundle Test", "Store pytest durations", +2 more)
 <!-- END TITLE -->
 
 ## Body
@@ -123,28 +123,6 @@ Updating base/main project versions to the shared nightly tag
 + uv run --no-sync ./scripts/ci/update_pyproject_combined.py main v1.14.0.dev34 v1.14.0.dev34 v1.14.0.dev35
 Bundle versions conflict with the nightly lfx line:
 lfx-whatsapp 0.1.1: unable to query public index https://pypi.org/pypi/lfx-whatsapp/0.1.1/json: _ssl.c:1015: The handshake operation timed out
-##[error]Process completed with exit code 1.
-```
-
-</details>
-
-### A11y / IBM Equal Access Scans (`.github/workflows/a11y-scan.yml`)
-
-- Latest run on `main`: https://github.com/langflow-ai/langflow/actions/runs/44659407407 — dark (conclusion: `failure`), 2026-11-20 02:14 UTC
-- Dark since: 2026-11-20 02:14 UTC (first run of the current streak)
-- Job / step: `Python route scan (real backend, nightly)` → `Run Python Route Scan`
-- Likely cause: No files were found with the provided path: python-route-scan. No artifacts will be uploaded.
-
-<details><summary>End of the job log</summary>
-
-```
-    )
-    ^
-  File "/home/runner/work/_temp/setup-uv-cache/archive-v0/UxDe6YJlVIG79PA9/lib/python3.13/site-packages/playwright/_impl/_connection.py", line 563, in wrap_api_call
-    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
-playwright._impl._errors.TimeoutError: Page.goto: Timeout 45000ms exceeded.
-Call log:
-  - navigating to "http://localhost:3000/flows", waiting until "domcontentloaded"
 ##[error]Process completed with exit code 1.
 ```
 

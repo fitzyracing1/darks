@@ -4,19 +4,21 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/storytold/vectorcraft/issues/new
-- **Stars:** 11961 · **Generated:** 2026-11-21T00:52:59.041Z
+- **Stars:** 11970 · **Generated:** 2026-11-21T06:41:51.202Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: "FreeBSD" workflow failing on main since 2026-11-20
+CI: 2 workflows dark on main ("FreeBSD", "Release")
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! The **FreeBSD** workflow (`.github/workflows/freebsd.yml`) on `main` has been failing since 2026-11-20. Here is what I saw, in case it's useful:
+Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
+
+### FreeBSD (`.github/workflows/freebsd.yml`)
 
 - Latest run on `main`: https://github.com/storytold/vectorcraft/actions/runs/44673985543 — dark (conclusion: `failure`), 2026-11-20 04:22 UTC
 - Dark since: 2026-11-20 04:22 UTC (first run of the current streak)
@@ -34,6 +36,28 @@ failures:
 test result: FAILED. 1842 passed; 1 failed; 8 ignored; 0 measured; 0 filtered out; finished in 479.86s
 error: test failed, to rerun pass `-p vectorcraft-eps --lib`
 ##[error]Process completed with exit code 101.
+```
+
+</details>
+
+### Release (`.github/workflows/release.yml`)
+
+- Latest run on `main`: https://github.com/storytold/vectorcraft/actions/runs/44858283314 — dark (conclusion: `failure`), 2026-11-21 02:53 UTC
+- Dark since: 2026-11-21 02:53 UTC (first run of the current streak)
+- Job / step: `release / Linux x86_64` → `Run storytold/craft-common-actions/actions/rust-channel@main`
+- Likely cause: ModuleNotFoundError: No module named 'tomllib'
+
+<details><summary>End of the job log</summary>
+
+```
+##[end-action id=__storytold_craft-common-actions_3.__storytold_craft-common-actions.__run;outcome=success;conclusion=success;duration_ms=664]
+##[end-action id=__storytold_craft-common-actions_3.__storytold_craft-common-actions;outcome=success;conclusion=success;duration_ms=670]
+##[start-action display=Run python3 "$CHANNEL";id=rust.channel]
+Traceback (most recent call last):
+  File "/home/runner/work/_actions/storytold/craft-common-actions/main/actions/rust-channel/channel.py", line 9, in <module>
+    import tomllib
+ModuleNotFoundError: No module named 'tomllib'
+##[error]Process completed with exit code 1.
 ```
 
 </details>

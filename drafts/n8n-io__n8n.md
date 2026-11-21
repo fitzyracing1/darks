@@ -4,14 +4,14 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/n8n-io/n8n/issues/new
-- **Stars:** 211554 · **Generated:** 2026-11-21T00:52:59.041Z
+- **Stars:** 211562 · **Generated:** 2026-11-21T06:41:51.202Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** latest run was skipped, not failed — probably not worth filing
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 2 workflows dark on master ("Security: Sync from Public", "CI: Master (Build, Test, Lint)")
+CI: 3 workflows dark on master ("Security: Sync from Public", "Test: E2E Coverage Nightly", "Security: Sync Bundle Branches")
 <!-- END TITLE -->
 
 ## Body
@@ -21,31 +21,37 @@ Hi! A few workflows on `master` have been dark recently. Details below, in case 
 
 ### Security: Sync from Public (`.github/workflows/sec-sync-public-to-private.yml`)
 
-- Latest run on `master`: https://github.com/n8n-io/n8n/actions/runs/44844136701 — dark (conclusion: `skipped`), 2026-11-21 00:29 UTC
+- Latest run on `master`: https://github.com/n8n-io/n8n/actions/runs/44874824202 — dark (conclusion: `skipped`), 2026-11-21 06:17 UTC
 - Dark since: 2026-10-13 15:19 UTC (first run of the current streak)
 - Likely cause: run skipped
 
-### CI: Master (Build, Test, Lint) (`.github/workflows/ci-master.yml`)
+### Test: E2E Coverage Nightly (`.github/workflows/test-e2e-coverage-nightly.yml`)
 
-- Latest run on `master`: https://github.com/n8n-io/n8n/actions/runs/44839439329 — dark (conclusion: `failure`), 2026-11-20 23:48 UTC
-- Dark since: 2026-11-20 23:48 UTC (first run of the current streak)
-- Job / step: `Unit tests (24.22.2) / CLI Integration Tests (2/2)` → `Test Integration (cli, scoped)`
-- Likely cause: command (/home/runner/_work/n8n/n8n/packages/cli) /home/runner/setup-pnpm/pnpm run test:integration --shard=2/2 --maxWorkers=50% --passWithNoTests exited (1)
+- Latest run on `master`: https://github.com/n8n-io/n8n/actions/runs/44853829442 — dark (conclusion: `failure`), 2026-11-21 02:04 UTC
+- Dark since: 2026-11-21 02:04 UTC (first run of the current streak)
+- Job / step: `E2E (coverage) / Shard 1` → `Run Tests`
+- Likely cause: × "pnpm recursive run" failed in /home/runner/_work/n8n/n8n/packages/
 
 <details><summary>End of the job log</summary>
 
 ```
- ✓ test/integration/dynamic-credentials/dynamic-credential-user-entry.repository.test.ts (16 tests) 277ms
- ✓ src/modules/n8n-packages/__tests__/export-folder.integration.test.ts (22 tests) 1843ms
- ✓ test/integration/ldap/ldap.api.test.ts (32 tests) 1099ms
-(node:24549) TimeoutNaNWarning: NaN is not a number.
-Timeout duration was set to 1.
-(Use `node --trace-warnings ...` to show where the warning was created)
- ✓ test/integration/external-secrets/secret-providers-project.api.test.ts (46 tests) 1374ms
-##[error]command (/home/runner/_work/n8n/n8n/packages/cli) /home/runner/setup-pnpm/pnpm run test:integration --shard=2/2 --maxWorkers=50% --passWithNoTests exited (1)
+(node:16255) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+emit-spec-backend-lcovs: 11 dirs → 11 per-spec backend lcov(s) in coverage/by-spec (115019 seen → 53605 resolved (noPkg 11674, noJs 0, noMap 6524, other 43216))
+[ELIFECYCLE] Command failed with exit code 1.
+Error: ERR_PNPM_RECURSIVE_RUN_FIRST_FAIL
+  × "pnpm recursive run" failed in /home/runner/_work/n8n/n8n/packages/
+  │ quality/testing/playwright
+##[error]Process completed with exit code 1.
 ```
 
 </details>
+
+### Security: Sync Bundle Branches (`.github/workflows/sec-sync-bundle-branches.yml`)
+
+- Latest run on `master`: https://github.com/n8n-io/n8n/actions/runs/44859777847 — dark (conclusion: `skipped`), 2026-11-21 03:11 UTC
+- Dark since: 2026-11-21 03:11 UTC (first run of the current streak)
+- Likely cause: run skipped
 
 If this is already known or expected, feel free to close. Thanks for maintaining n8n!
 

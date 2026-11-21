@@ -4,35 +4,35 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/storytold/filmcraft/issues/new
-- **Stars:** 18719 · **Generated:** 2026-11-21T00:52:59.041Z
+- **Stars:** 18736 · **Generated:** 2026-11-21T06:41:51.202Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: "CI" workflow failing on main since 2026-11-20
+CI: "Release" workflow failing on main since 2026-11-21
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! The **CI** workflow (`.github/workflows/ci.yml`) on `main` has been failing since 2026-11-20. Here is what I saw, in case it's useful:
+Hi! The **Release** workflow (`.github/workflows/release.yml`) on `main` has been failing since 2026-11-21. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/storytold/filmcraft/actions/runs/44750176700 — dark (conclusion: `failure`), 2026-11-20 14:05 UTC
-- Dark since: 2026-11-20 14:05 UTC (first run of the current streak)
-- Job / step: `gate / gate (ubuntu-24.04)` → `Gate`
-- Likely cause: failed: "/home/runner/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/bin/cargo" "nextest" "run" "--workspace" "--lib" "--bins" "--tests" "--no-fail-fast"
+- Latest run on `main`: https://github.com/storytold/filmcraft/actions/runs/44852479641 — dark (conclusion: `failure`), 2026-11-21 01:50 UTC
+- Dark since: 2026-11-21 01:50 UTC (first run of the current streak)
+- Job / step: `release / Linux x86_64` → `Run storytold/craft-common-actions/actions/rust-channel@main`
+- Likely cause: ModuleNotFoundError: No module named 'tomllib'
 
 <details><summary>End of the job log</summary>
 
 ```
-     Running tests/it/main.rs (target/debug/build/filmcraft-web/4dc56294c1b4cf51/out/it-4dc56294c1b4cf51)
-running 0 tests
-test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 13 filtered out; finished in 0.00s
-     Running unittests src/main.rs (target/debug/build/xtask/7dd990ea25aedf8c/out/xtask-7dd990ea25aedf8c)
-running 0 tests
-test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 18 filtered out; finished in 0.00s
-failed: "/home/runner/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/bin/cargo" "nextest" "run" "--workspace" "--lib" "--bins" "--tests" "--no-fail-fast"
+##[end-action id=__storytold_craft-common-actions_3.__storytold_craft-common-actions.__run;outcome=success;conclusion=success;duration_ms=1385]
+##[end-action id=__storytold_craft-common-actions_3.__storytold_craft-common-actions;outcome=success;conclusion=success;duration_ms=1390]
+##[start-action display=Run python3 "$CHANNEL";id=rust.channel]
+Traceback (most recent call last):
+  File "/home/runner/work/_actions/storytold/craft-common-actions/main/actions/rust-channel/channel.py", line 9, in <module>
+    import tomllib
+ModuleNotFoundError: No module named 'tomllib'
 ##[error]Process completed with exit code 1.
 ```
 

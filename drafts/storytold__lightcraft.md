@@ -4,14 +4,13 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/storytold/lightcraft/issues/new
-- **Stars:** 16240 · **Generated:** 2026-11-21T00:52:59.041Z
+- **Stars:** 16243 · **Generated:** 2026-11-21T06:41:51.202Z
 - Nothing in this file has been sent anywhere.
-- **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 2 workflows dark on main ("SonarCloud", "FreeBSD")
+CI: 2 workflows dark on main ("SonarCloud", "Release")
 <!-- END TITLE -->
 
 ## Body
@@ -21,28 +20,44 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### SonarCloud (`.github/workflows/sonarcloud.yml`)
 
-- Latest run on `main`: https://github.com/storytold/lightcraft/actions/runs/44835269808 — dark (conclusion: `cancelled`), 2026-11-20 23:14 UTC
+- Latest run on `main`: https://github.com/storytold/lightcraft/actions/runs/44853141831 — dark (conclusion: `failure`), 2026-11-21 01:57 UTC
 - Dark since: 2026-11-18 23:57 UTC (first run of the current streak)
-- Likely cause: run cancelled
-
-### FreeBSD (`.github/workflows/freebsd.yml`)
-
-- Latest run on `main`: https://github.com/storytold/lightcraft/actions/runs/44673419303 — dark (conclusion: `failure`), 2026-11-20 04:17 UTC
-- Dark since: 2026-11-20 04:17 UTC (first run of the current streak)
-- Job / step: `freebsd / FreeBSD 15 x86_64 (build + test)` → `Build and test`
-- Likely cause: process didn't exit successfully: '/var/tmp/craft-target/debug/build/lightcraft/cb971947e928aa38/out/lightcraft-cb971947e928aa38' (signal: 11, SIGSEGV: invalid memory reference)
+- Job / step: `sonarcloud / SonarCloud Scan` → `Fail on Rust shard test failures`
+- Likely cause: Coverage shard 8 tests failed (exit 100); analysis was still uploaded
 
 <details><summary>End of the job log</summary>
 
 ```
-test window_gpu::tests::composition_only_changes_windows_dx12_presentation ... ok
-test window_gpu::tests::marker_records_the_failed_renderer ... ok
-test tests::ui_json_is_written_atomically ... ok
-test window_gpu::tests::probe_fallback_is_silent ... ok
-error: test failed, to rerun pass `-p lightcraft --bin lightcraft`
-Caused by:
-  process didn't exit successfully: `/var/tmp/craft-target/debug/build/lightcraft/cb971947e928aa38/out/lightcraft-cb971947e928aa38` (signal: 11, SIGSEGV: invalid memory reference)
-##[error]Process completed with exit code 101.
+05:02:08.319 INFO  ------------- Upload SCA dependency files
+05:02:09.468 INFO  Successfully sent architecture data
+05:02:10.875 INFO  Sensor cache published successfully
+05:02:12.142 INFO  Analysis total time: 2:05.490 min
+05:02:12.144 INFO  SonarScanner Engine completed successfully
+05:02:12.665 INFO  EXECUTION SUCCESS
+05:02:12.666 INFO  Total time: 2:13.171s
+##[error]Coverage shard 1 tests failed (exit 100); analysis was still uploaded
+```
+
+</details>
+
+### Release (`.github/workflows/release.yml`)
+
+- Latest run on `main`: https://github.com/storytold/lightcraft/actions/runs/44855028980 — dark (conclusion: `failure`), 2026-11-21 02:17 UTC
+- Dark since: 2026-11-21 02:17 UTC (first run of the current streak)
+- Job / step: `release / Linux x86_64` → `Run storytold/craft-common-actions/actions/rust-channel@main`
+- Likely cause: ModuleNotFoundError: No module named 'tomllib'
+
+<details><summary>End of the job log</summary>
+
+```
+##[end-action id=__storytold_craft-common-actions_3.__storytold_craft-common-actions.__run;outcome=success;conclusion=success;duration_ms=584]
+##[end-action id=__storytold_craft-common-actions_3.__storytold_craft-common-actions;outcome=success;conclusion=success;duration_ms=591]
+##[start-action display=Run python3 "$CHANNEL";id=rust.channel]
+Traceback (most recent call last):
+  File "/home/runner/work/_actions/storytold/craft-common-actions/main/actions/rust-channel/channel.py", line 9, in <module>
+    import tomllib
+ModuleNotFoundError: No module named 'tomllib'
+##[error]Process completed with exit code 1.
 ```
 
 </details>

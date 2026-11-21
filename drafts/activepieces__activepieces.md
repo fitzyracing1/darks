@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/activepieces/activepieces/issues/new
-- **Stars:** 25648 · **Generated:** 2026-11-21T00:52:59.041Z
+- **Stars:** 25657 · **Generated:** 2026-11-21T06:41:51.202Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -18,22 +18,22 @@ CI: "Chat Evals" workflow failing on main since 2026-10-13
 <!-- BEGIN BODY -->
 Hi! The **Chat Evals** workflow (`.github/workflows/agent-evals.yml`) on `main` has been failing since 2026-10-13. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/activepieces/activepieces/actions/runs/44686370161 — dark (conclusion: `failure`), 2026-11-20 06:14 UTC
+- Latest run on `main`: https://github.com/activepieces/activepieces/actions/runs/44874519405 — dark (conclusion: `failure`), 2026-11-21 06:13 UTC
 - Dark since: 2026-10-13 06:26 UTC (first run of the current streak)
 - Job / step: `Live judge gate` → `Run live chat evals (scope=regression)`
-- Likely cause: fetch failed
+- Likely cause: AssertionError: see the eval report above for the failing checks: expected [ 'guard-duplicate-flow-not-agent' ] to deeply equal [] (packages/server/worker/test/lib/agent-eval/agent-eval.test.ts:58)
 
 <details><summary>End of the job log</summary>
 
 ```
-     21|         const fixtures = evalFixtures.load().filter((fixture) => SCOPE…
-     22|         const [fixtureResults, agreement] = await Promise.all([
+     59|     })
+     60| })
 ⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
  Test Files  1 failed | 12 passed (13)
-      Tests  89 passed | 1 skipped (90)
-   Start at  06:18:41
-   Duration  545.54s (tests 98%, import 2%, transform 1%)
-##[error]Error: Hook timed out in 540000ms.
+      Tests  1 failed | 89 passed (90)
+   Start at  06:18:01
+   Duration  475.12s (tests 97%, import 2%, transform 1%)
+##[error]AssertionError: see the eval report above for the failing checks: expected [ 'guard-duplicate-flow-not-agent' ] to deeply equal []
 ```
 
 </details>
