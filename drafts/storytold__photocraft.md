@@ -4,14 +4,14 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/storytold/photocraft/issues/new
-- **Stars:** 80778 · **Generated:** 2026-11-21T06:41:51.202Z
+- **Stars:** 80821 · **Generated:** 2026-11-21T12:38:51.607Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 4 workflows dark on main ("FreeBSD", "Perf (nightly)", "SonarCloud", +1 more)
+CI: 3 workflows dark on main ("FreeBSD", "Perf (nightly)", "Release")
 <!-- END TITLE -->
 
 ## Body
@@ -59,28 +59,6 @@ error: could not fetch https://download.freebsd.org/releases/arm64/aarch64/15.1-
    Compiling photocraft-testkit v0.23.1 (/Users/runner/work/photocraft/photocraft/crates/testkit)
    Compiling egui_kittest v0.37.0 (https://github.com/storytold/egui.git?rev=6525c87923ca47465aac244460fe4b1139349060#6525c879)
 ##[error]The operation was canceled.
-```
-
-</details>
-
-### SonarCloud (`.github/workflows/sonarcloud.yml`)
-
-- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/44839158332 — dark (conclusion: `failure`), 2026-11-20 23:45 UTC
-- Dark since: 2026-11-20 23:45 UTC (first run of the current streak)
-- Job / step: `sonarcloud / SonarCloud Scan` → `Fail on Rust shard test failures`
-- Likely cause: Coverage shard 1 tests failed (exit 100); analysis was still uploaded
-
-<details><summary>End of the job log</summary>
-
-```
-00:49:44.766 INFO  ------------- Upload SCA dependency files
-00:49:46.191 INFO  Successfully sent architecture data
-00:49:47.982 INFO  Sensor cache published successfully
-00:49:51.363 INFO  Analysis total time: 3:48.094 min
-00:49:51.364 INFO  SonarScanner Engine completed successfully
-00:49:51.525 INFO  EXECUTION SUCCESS
-00:49:51.526 INFO  Total time: 3:54.006s
-##[error]Coverage shard 1 tests failed (exit 100); analysis was still uploaded
 ```
 
 </details>

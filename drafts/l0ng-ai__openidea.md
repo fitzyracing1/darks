@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/l0ng-ai/openidea/issues/new
-- **Stars:** 9726 · **Generated:** 2026-11-21T06:41:51.202Z
+- **Stars:** 9752 · **Generated:** 2026-11-21T12:38:51.607Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
@@ -19,7 +19,7 @@ CI: "CI" workflow getting cancelled on main since 2026-11-10
 <!-- BEGIN BODY -->
 Hi! The **CI** workflow (`.github/workflows/ci.yml`) on `main` has been getting cancelled since 2026-11-10. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/l0ng-ai/openidea/actions/runs/44874545460 — dark (conclusion: `cancelled`), 2026-11-21 06:13 UTC
+- Latest run on `main`: https://github.com/l0ng-ai/openidea/actions/runs/44902184222 — dark (conclusion: `cancelled`), 2026-11-21 12:05 UTC
 - Dark since: 2026-11-10 13:06 UTC (first run of the current streak)
 - Likely cause: run cancelled
 

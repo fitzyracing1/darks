@@ -4,13 +4,13 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/open-metadata/OpenMetadata/issues/new
-- **Stars:** 15826 · **Generated:** 2026-11-21T06:41:51.202Z
+- **Stars:** 15826 · **Generated:** 2026-11-21T12:38:51.607Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 5 workflows dark on main ("monitor-slack-link", "Merge Queue Dequeue Report", "Integration Tests - PostgreSQL + OpenSearch", +2 more)
+CI: 6 workflows dark on main ("monitor-slack-link", "Merge Queue Dequeue Report", "Integration Tests - MySQL + Elasticsearch", +3 more)
 <!-- END TITLE -->
 
 ## Body
@@ -20,7 +20,7 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### monitor-slack-link (`.github/workflows/monitor-slack-link.yml`)
 
-- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/44874705435 — dark (conclusion: `failure`), 2026-11-21 06:15 UTC
+- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/44902796600 — dark (conclusion: `failure`), 2026-11-21 12:13 UTC
 - Dark since: 2026-11-06 22:08 UTC (first run of the current streak)
 - Job / step: `monitor-slack-link` → `Set up Python 3.9`
 - Likely cause: The version '3.9' with architecture 'x64' was not found for Ubuntu 26.04.
@@ -58,6 +58,28 @@ Prepare all required actions
 Complete job name: evict-main-conflicts
 cannot iterate over: null
 ##[error]Process completed with exit code 1.
+```
+
+</details>
+
+### Integration Tests - MySQL + Elasticsearch (`.github/workflows/integration-tests-mysql-elasticsearch.yml`)
+
+- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/44870880829 — dark (conclusion: `failure`), 2026-11-21 05:26 UTC
+- Dark since: 2026-11-21 05:26 UTC (first run of the current streak)
+- Job / step: `Integration Test Lane (parallel)` → `Run Integration Tests (MySQL + Elasticsearch)`
+- Likely cause: INFO  [2026-11-21 06:36:49,346] org.openmetadata.service.jdbi3.BulkExecutor: Shutting down BulkExecutor...
+
+<details><summary>End of the job log</summary>
+
+```
+INFO  [2026-11-21 06:36:49,181] org.openmetadata.service.rdf.RdfRepository: RDF Repository initialized with FUSEKI storage
+INFO  [2026-11-21 06:36:49,191] org.openmetadata.service.rdf.storage.JenaFusekiStorage: ASK query result: true
+INFO  [2026-11-21 06:36:49,191] org.openmetadata.service.rdf.RdfRepository: OpenMetadata ontologies already loaded
+INFO  [2026-11-21 06:36:49,193] org.openmetadata.service.rdf.maintenance.RdfStorageMaintenanceService: RDF storage maintenance compacts the serving dataset every 24 h
+INFO  [2026-11-21 06:36:49,193] org.openmetadata.service.rdf.RdfUpdater: RDF updater initialized with durable, ordered live writes
+INFO  [2026-11-21 06:36:49,345] io.dropwizard.health.HealthCheckManager: delayed shutdown: started (waiting 5 seconds)
+INFO  [2026-11-21 06:36:49,346] org.openmetadata.service.jdbi3.BulkExecutor: Shutting down BulkExecutor...
+##[error]Process completed with exit code 124.
 ```
 
 </details>
