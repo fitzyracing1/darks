@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/pascalorg/editor/issues/new
-- **Stars:** 25671 · **Generated:** 2026-11-22T06:43:27.919Z
+- **Stars:** 25675 · **Generated:** 2026-11-22T12:39:46.823Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -18,7 +18,7 @@ CI: "CI" workflow failing on main since 2026-11-21
 <!-- BEGIN BODY -->
 Hi! The **CI** workflow (`.github/workflows/ci.yml`) on `main` has been failing since 2026-11-21. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/pascalorg/editor/actions/runs/44885545209 — dark (conclusion: `failure`), 2026-11-21 08:34 UTC
+- Latest run on `main`: https://github.com/pascalorg/editor/actions/runs/45019721200 — dark (conclusion: `failure`), 2026-11-22 11:56 UTC
 - Dark since: 2026-11-21 08:06 UTC (first run of the current streak)
 - Job / step: `Test` → `Test`
 - Likely cause: command (/home/runner/work/editor/editor/packages/core) /home/runner/.bun/bin/bun run test exited (1)
@@ -26,13 +26,13 @@ Hi! The **CI** workflow (`.github/workflows/ci.yml`) on `main` has been failing 
 <details><summary>End of the job log</summary>
 
 ```
-(pass) polygon boolean kernel > square with a hole preserves area, membership, hole rims and boundary distance [0.38ms]
-(pass) polygon boolean kernel > quantises inputs to 0.1 mm and removes sub-1e-6 square metre slivers [0.27ms]
-(pass) polygon boolean kernel > disconnected components and holes have deterministic ordering [0.28ms]
-(pass) polygon boolean kernel > quantising a narrow notch preserves its reversal until clipping resolves it [0.44ms]
-(pass) polygon boolean kernel > all operations reject non-finite outer and hole coordinates without throwing [0.69ms]
-(pass) polygon boolean kernel > clipping exceptions return empty polygons in all operations [0.40ms]
-(pass) polygon boolean kernel > development warns once per failing caller and production stays quiet [0.31ms]
+  ^ this test timed out after 5000ms.
+ 7310 pass
+ 3 skip
+ 2 fail
+ 124169 expect() calls
+Ran 7315 tests across 400 files. [138.02s]
+error: script "test" exited with code 1
 ##[error]command (/home/runner/work/editor/editor/packages/core) /home/runner/.bun/bin/bun run test exited (1)
 ```
 

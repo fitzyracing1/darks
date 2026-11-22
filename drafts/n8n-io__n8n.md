@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/n8n-io/n8n/issues/new
-- **Stars:** 211689 · **Generated:** 2026-11-22T06:43:27.919Z
+- **Stars:** 211758 · **Generated:** 2026-11-22T12:39:46.823Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** latest run was skipped, not failed — probably not worth filing
 
@@ -21,7 +21,7 @@ Hi! A few workflows on `master` have been dark recently. Details below, in case 
 
 ### Security: Sync from Public (`.github/workflows/sec-sync-public-to-private.yml`)
 
-- Latest run on `master`: https://github.com/n8n-io/n8n/actions/runs/44993052996 — dark (conclusion: `skipped`), 2026-11-22 06:17 UTC
+- Latest run on `master`: https://github.com/n8n-io/n8n/actions/runs/45021270128 — dark (conclusion: `skipped`), 2026-11-22 12:14 UTC
 - Dark since: 2026-10-13 15:19 UTC (first run of the current streak)
 - Likely cause: run skipped
 

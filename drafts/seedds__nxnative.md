@@ -4,19 +4,22 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/seedds/nxnative/issues/new
-- **Stars:** 16432 · **Generated:** 2026-11-22T06:43:27.919Z
+- **Stars:** 16452 · **Generated:** 2026-11-22T12:39:46.823Z
 - Nothing in this file has been sent anywhere.
+- **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: "lint-c" workflow failing on main since 2026-11-22
+CI: 2 workflows dark on main ("lint-c", "tests")
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! The **lint-c** workflow (`.github/workflows/lint-c.yml`) on `main` has been failing since 2026-11-22. Here is what I saw, in case it's useful:
+Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
+
+### lint-c (`.github/workflows/lint-c.yml`)
 
 - Latest run on `main`: https://github.com/seedds/nxnative/actions/runs/44985562689 — dark (conclusion: `failure`), 2026-11-22 04:33 UTC
 - Dark since: 2026-11-22 01:45 UTC (first run of the current streak)
@@ -37,6 +40,12 @@ LLVM 23.1.4: 181 findings in 63 files, 102 file/check pairs
 ```
 
 </details>
+
+### tests (`.github/workflows/tests.yml`)
+
+- Latest run on `main`: https://github.com/seedds/nxnative/actions/runs/45019650411 — dark (conclusion: `cancelled`), 2026-11-22 11:55 UTC
+- Dark since: 2026-11-22 07:46 UTC (first run of the current streak)
+- Likely cause: run cancelled
 
 If this is already known or expected, feel free to close. Thanks for maintaining nxnative!
 

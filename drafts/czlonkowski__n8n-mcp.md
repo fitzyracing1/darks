@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/czlonkowski/n8n-mcp/issues/new
-- **Stars:** 23293 · **Generated:** 2026-11-22T06:43:27.919Z
+- **Stars:** 23294 · **Generated:** 2026-11-22T12:39:46.823Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title

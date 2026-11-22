@@ -4,14 +4,14 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/storytold/photocraft/issues/new
-- **Stars:** 80930 · **Generated:** 2026-11-22T06:43:27.919Z
+- **Stars:** 80966 · **Generated:** 2026-11-22T12:39:46.823Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 6 workflows dark on main ("FreeBSD", "Perf (nightly)", "Release", +3 more)
+CI: 5 workflows dark on main ("FreeBSD", "Perf (nightly)", "Release", +2 more)
 <!-- END TITLE -->
 
 ## Body
@@ -87,66 +87,44 @@ ModuleNotFoundError: No module named 'tomllib'
 
 ### CI (`.github/workflows/ci.yml`)
 
-- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/44989993254 — dark (conclusion: `cancelled`), 2026-11-22 05:34 UTC
+- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/45012450601 — dark (conclusion: `failure`), 2026-11-22 10:26 UTC
 - Dark since: 2026-11-22 05:03 UTC (first run of the current streak)
-- Job / step: `cache prune` → `Prune replaced cache entries`
-- Likely cause: The run was canceled by @aiongg.
+- Job / step: `gate / test 3/4 (artcraft-k8s-trusted)` → `Gate`
+- Likely cause: skip  panic_hunt
 
 <details><summary>End of the job log</summary>
 
 ```
-View security insights and recommended policy at:
-https://app.stepsecurity.io/github/storytold/photocraft/actions/runs/44989993254
-[!] Workflow is currently being executed in ARC based runner.
-[harden-runner] main-step
-View security insights and recommended policy at:
-https://app.stepsecurity.io/github/storytold/photocraft/actions/runs/44989993254
-##[start-action display=Prune;id=__storytold_craft-common-actions.__run]
-##[error]The operation was canceled.
+    stack backtrace:
+    note: Some details are omitted, run with `RUST_BACKTRACE=full` for a verbose backtrace.
+error: test run failed
+error: ci failed at `test`
+CI summary:
+  FAIL  test: cargo nextest run --profile ci --binaries-metadata /home/runner/_work/photocraft/photocraft/target/nextest-archive/target/nextest/binaries-metadata.json --cargo-metadata /home/runner/_work/photocraft/photo…
+  skip  panic_hunt
+##[error]Process completed with exit code 1.
 ```
 
 </details>
 
 ### SonarCloud (`.github/workflows/sonarcloud.yml`)
 
-- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/44989993287 — dark (conclusion: `failure`), 2026-11-22 05:34 UTC
+- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/45012450572 — dark (conclusion: `failure`), 2026-11-22 10:26 UTC
 - Dark since: 2026-11-22 05:03 UTC (first run of the current streak)
-- Job / step: `sonarcloud / Tests 1/4` → `Merge this shard's profiles`
-- Likely cause: llvm-profdata could not merge shard 1's profiles (exit 1)
+- Job / step: `sonarcloud / SonarCloud Scan` → `Fail on Rust shard test failures`
+- Likely cause: Coverage shard 3 tests failed (exit 100); analysis was still uploaded
 
 <details><summary>End of the job log</summary>
 
 ```
-info: downloading 4 components
-  1.100.0-x86_64-unknown-linux-gnu installed - rustc 1.100.0 (0ef1bc386 2026-11-09)
-Raw profiles: 16G in 3880 files
-Filesystem      Size  Used Avail Use% Mounted on
-/dev/root       145G   82G   64G  57% /
-warning: profraw/shard-1-7628-12108047719234342681_0.profraw: invalid instrumentation profile data (file header is corrupt)
-error: no profile can be merged
-##[error]shard 1 wrote a truncated or corrupt coverage profile: profraw/shard-1-7628-12108047719234342681_0.profraw: invalid instrumentation profile data (file header is corrupt)
-```
-
-</details>
-
-### Documentation (`.github/workflows/docs.yml`)
-
-- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/44987718234 — dark (conclusion: `failure`), 2026-11-22 05:03 UTC
-- Dark since: 2026-11-22 05:03 UTC (first run of the current streak)
-- Job / step: `mdBook build / gate (artcraft-k8s-trusted)` → `Setup`
-- Likely cause: /home/runner/_work/_temp/4ad5656c-9a03-4dbe-b725-b0625fa27b31.sh: line 1: python: command not found
-
-<details><summary>End of the job log</summary>
-
-```
-##[end-action id=__storytold_craft-common-actions.__step-security_taiki-e-install-action.__run;outcome=success;conclusion=success;duration_ms=684]
-##[start-action display=Run Set-StrictMode -Version Latest;id=__storytold_craft-common-actions.__step-security_taiki-e-install-action.__run_2]
-##[end-action id=__storytold_craft-common-actions.__step-security_taiki-e-install-action.__run_2;outcome=skipped;conclusion=skipped;duration_ms=0]
-##[end-action id=__storytold_craft-common-actions.__step-security_taiki-e-install-action;outcome=success;conclusion=success;duration_ms=709]
-##[start-action display=Run storytold/craft-common-actions/actions/rust-cache@bf191401c5b42eb6ac209e953880ae948a41570a;id=__storytold_craft-common-actions.__storytold_craft-common-actions_3]
-##[start-action display=Cache profile key;id=__storytold_craft-common-actions.__storytold_craft-common-actions_3.cache-profile]
-/home/runner/_work/_temp/4ad5656c-9a03-4dbe-b725-b0625fa27b31.sh: line 1: python: command not found
-##[error]Process completed with exit code 127.
+11:24:13.725 INFO  ------------- Upload SCA dependency files
+11:24:14.901 INFO  Successfully sent architecture data
+11:24:16.307 INFO  Sensor cache published successfully
+11:24:18.988 INFO  Analysis total time: 3:22.936 min
+11:24:18.991 INFO  SonarScanner Engine completed successfully
+11:24:19.077 INFO  EXECUTION SUCCESS
+11:24:19.078 INFO  Total time: 3:28.981s
+##[error]Coverage shard 3 tests failed (exit 100); analysis was still uploaded
 ```
 
 </details>

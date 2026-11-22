@@ -4,19 +4,21 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/rocketride-org/rocketride-server/issues/new
-- **Stars:** 19998 · **Generated:** 2026-11-22T06:43:27.919Z
+- **Stars:** 19998 · **Generated:** 2026-11-22T12:39:46.823Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: "check-externals" workflow failing on develop since 2026-11-19
+CI: 2 workflows dark on develop ("check-externals", "CI")
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! The **check-externals** workflow (`.github/workflows/check-externals.yml`) on `develop` has been failing since 2026-11-19. Here is what I saw, in case it's useful:
+Hi! A few workflows on `develop` have been dark recently. Details below, in case they're useful:
+
+### check-externals (`.github/workflows/check-externals.yml`)
 
 - Latest run on `develop`: https://github.com/rocketride-org/rocketride-server/actions/runs/44979289937 — dark (conclusion: `failure`), 2026-11-22 03:08 UTC
 - Dark since: 2026-11-19 03:09 UTC (first run of the current streak)
@@ -33,6 +35,28 @@ Hi! The **check-externals** workflow (`.github/workflows/check-externals.yml`) o
 /home/runner/work/rocketride-server/rocketride-server/dist/server/lib/python3.12/site-packages/peft/import_utils.py:52: FutureWarning: Support for Transformers < 5.6 is deprecated in PEFT and will be removed in the next…
   warnings.warn(
 libc++abi: terminating due to uncaught exception of type pybind11::attribute_error: module 'matplotlib.ft2font' has no attribute '__path__'
+##[error]Process completed with exit code 1.
+```
+
+</details>
+
+### CI (`.github/workflows/ci.yml`)
+
+- Latest run on `develop`: https://github.com/rocketride-org/rocketride-server/actions/runs/45015894573 — dark (conclusion: `failure`), 2026-11-22 11:09 UTC
+- Dark since: 2026-11-22 11:09 UTC (first run of the current streak)
+- Job / step: `Build / Windows Server 2022` → `Test`
+- Likely cause: Tests:       1 failed, 12 skipped, 499 passed, 512 total
+
+<details><summary>End of the job log</summary>
+
+```
+Time:        334.193 s
+Ran all test suites.
+Force exiting Jest: Have you considered using `--detectOpenHandles` to detect async operations that kept running after all tests finished?
+    at ChildProcess.<anonymous> (D:\a\rocketride-server\rocketride-server\scripts\lib\exec.js:266:12)
+    at ChildProcess.emit (node:events:519:28)
+    at maybeClose (node:internal/child_process:1101:16)
+    at ChildProcess._handle.onexit (node:internal/child_process:304:5)
 ##[error]Process completed with exit code 1.
 ```
 

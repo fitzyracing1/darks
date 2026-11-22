@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/DeusData/codebase-memory-mcp/issues/new
-- **Stars:** 49008 · **Generated:** 2026-11-22T06:43:27.919Z
+- **Stars:** 49019 · **Generated:** 2026-11-22T12:39:46.823Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
@@ -21,9 +21,9 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### Nightly Soak (`.github/workflows/nightly-soak.yml`)
 
-- Latest run on `main`: https://github.com/DeusData/codebase-memory-mcp/actions/runs/43666039324 — dark (conclusion: `cancelled`), 2026-11-15 02:04 UTC
+- Latest run on `main`: https://github.com/DeusData/codebase-memory-mcp/actions/runs/44974392333 — dark (conclusion: `cancelled`), 2026-11-22 02:04 UTC
 - Dark since: 2026-11-01 02:04 UTC (first run of the current streak)
-- Job / step: `soak / soak-quick (ubuntu-24.04-arm, linux, arm64, gcc, g++)` → `Soak legs (quick,query-leak, 240 min each)`
+- Job / step: `soak / soak-quick (macos-15, darwin, arm64, cc, c++)` → `Soak legs (quick,query-leak, 240 min each)`
 - Likely cause: The job has exceeded the maximum execution time of 6h0m0s
 
 <details><summary>End of the job log</summary>
@@ -32,9 +32,9 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 Generating test project (~200 files)...
 OK: 377 files in test project
 --- Phase 1: start server ---
-OK: server running (pid=209575)
+OK: server running (pid=39280)
 --- Phase 2: initial index ---
-OK: baseline RSS=22900736 FDs=23
+OK: baseline RSS=8732672 FDs=21
 --- Phase 3: workload loop (240m) ---
 ##[error]The operation was canceled.
 ```

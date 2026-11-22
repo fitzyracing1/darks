@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/ccch1mneyyy/dsh-Go/issues/new
-- **Stars:** 29778 · **Generated:** 2026-11-22T06:43:27.919Z
+- **Stars:** 29965 · **Generated:** 2026-11-22T12:39:46.823Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** cancelled by a concurrency group — likely noise
 
@@ -21,21 +21,21 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### iOS compile (`.github/workflows/ios-compile.yml`)
 
-- Latest run on `main`: https://github.com/ccch1mneyyy/dsh-Go/actions/runs/44992183119 — dark (conclusion: `cancelled`), 2026-11-22 06:05 UTC
+- Latest run on `main`: https://github.com/ccch1mneyyy/dsh-Go/actions/runs/45021565174 — dark (conclusion: `cancelled`), 2026-11-22 12:18 UTC
 - Dark since: 2026-11-20 18:29 UTC (first run of the current streak)
-- Job / step: `engine` → `Run the engine inside the app`
+- Job / step: `compile` → `Compile for the simulator`
 - Likely cause: Canceling since a higher priority waiting request for ios-compile-refs/heads/main exists
 
 <details><summary>End of the job log</summary>
 
 ```
-  vector_graphics_compiler 1.3.4 (1.3.6 available)
-  windows_file_picker 2.0.1 (2.0.2 available)
-  xml 7.0.1 (7.1.0 available)
-Got dependencies!
-47 packages have newer versions incompatible with dependency constraints.
-Try `flutter pub outdated` for more information.
-Building io.github.ccch1mneyyy.dshgo for simulator (ios)...
+   Compiling web-time v1.1.0
+   Compiling siphasher v1.0.4
+   Compiling base64 v0.22.1
+   Compiling idevice v0.1.68 (/Users/runner/work/dsh-Go/dsh-Go/tooling/ios/phone-self-runner/.upstream/idevice)
+   Compiling dsh-phone-self-runner v0.1.0 (/Users/runner/work/dsh-Go/dsh-Go/tooling/ios/phone-self-runner)
+    Finished `release` profile [optimized] target(s) in 1m 08s
+info: downloading component rust-std
 ##[error]The operation was canceled.
 ```
 
@@ -43,21 +43,21 @@ Building io.github.ccch1mneyyy.dshgo for simulator (ios)...
 
 ### iOS UI tour (`.github/workflows/ios-ui-tour.yml`)
 
-- Latest run on `main`: https://github.com/ccch1mneyyy/dsh-Go/actions/runs/44992183149 — dark (conclusion: `cancelled`), 2026-11-22 06:05 UTC
+- Latest run on `main`: https://github.com/ccch1mneyyy/dsh-Go/actions/runs/45021565148 — dark (conclusion: `cancelled`), 2026-11-22 12:18 UTC
 - Dark since: 2026-11-22 06:05 UTC (first run of the current streak)
-- Job / step: `tour` → `Run the tour`
+- Job / step: `tour` → `Build the tour for the simulator`
 - Likely cause: Canceling since a higher priority waiting request for ios-ui-tour-refs/heads/main exists
 
 <details><summary>End of the job log</summary>
 
 ```
-shot 4 sheet_rising_light in 23899 ms
-Note: No display specified. Defaulting to display: F50B8928-9ECE-48C7-BAF1-DA9A53DA1545 (screenID: 1, name: LCD)
-Wrote screenshot to: /Users/runner/work/_temp/ui-tour/04-sheet_rising_light.png
-Detected file type from extension: PNG
-shot 5 sheet_light in 18243 ms
-Note: No display specified. Defaulting to display: F50B8928-9ECE-48C7-BAF1-DA9A53DA1545 (screenID: 1, name: LCD)
-Wrote screenshot to: /Users/runner/work/_temp/ui-tour/05-sheet_light.png
+   Compiling cpufeatures v0.2.17
+   Compiling crypto-common v0.1.7
+   Compiling block-buffer v0.10.4
+   Compiling libm v0.2.16
+   Compiling zerocopy v0.8.63
+   Compiling digest v0.10.7
+   Compiling futures-core v0.3.34
 ##[error]The operation was canceled.
 ```
 
