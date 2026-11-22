@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/DeusData/codebase-memory-mcp/issues/new
-- **Stars:** 48995 · **Generated:** 2026-11-22T00:55:06.197Z
+- **Stars:** 49008 · **Generated:** 2026-11-22T06:43:27.919Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
@@ -43,22 +43,22 @@ OK: baseline RSS=22900736 FDs=23
 
 ### test-impact-artifact (`.github/workflows/test-impact-artifact.yml`)
 
-- Latest run on `main`: https://github.com/DeusData/codebase-memory-mcp/actions/runs/44577175583 — dark (conclusion: `failure`), 2026-11-19 17:26 UTC
+- Latest run on `main`: https://github.com/DeusData/codebase-memory-mcp/actions/runs/44980880256 — dark (conclusion: `cancelled`), 2026-11-22 03:29 UTC
 - Dark since: 2026-11-13 18:51 UTC (first run of the current streak)
 - Job / step: `publish` → `Publish the bundle`
-- Likely cause: test-impact publish: status 1: reading HEAD sources failed: internal/cbm/ac.c
+- Likely cause: The job has exceeded the maximum execution time of 2h0m0s
 
 <details><summary>End of the job log</summary>
 
 ```
-grammar_probe_c: 42 tests, 0 incomplete, exit 0, 0.5 s
-grammar_probe_d: 75 tests, 0 incomplete, exit 0, 2.0 s
-grammar_probe_e: 56 tests, 0 incomplete, exit 0, 1.3 s
-grammar_probe_f: 184 tests, 0 incomplete, exit 0, 15.5 s
-grammar_probe_g: 45 tests, 0 incomplete, exit 0, 1.0 s
-map: 10500 tests, 318 incomplete, 28294 functions -> /tmp/tmp.fFoi2261Dk/coverage
-test-impact publish: status 1: reading HEAD sources failed: internal/cbm/ac.c
-##[error]Process completed with exit code 1.
+grammar_probe_b: 43 tests, 0 incomplete, exit 0, 2.1 s
+grammar_probe_c: 42 tests, 0 incomplete, exit 0, 1.1 s
+grammar_probe_d: 75 tests, 0 incomplete, exit 0, 4.4 s
+grammar_probe_e: 56 tests, 0 incomplete, exit 0, 3.0 s
+grammar_probe_f: 184 tests, 0 incomplete, exit 0, 20.1 s
+grammar_probe_g: 45 tests, 0 incomplete, exit 0, 2.4 s
+map: 10500 tests, 323 incomplete, 28295 functions -> /tmp/tmp.LONWdjAMpl/coverage
+##[error]The operation was canceled.
 ```
 
 </details>

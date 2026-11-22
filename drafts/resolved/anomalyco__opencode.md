@@ -1,8 +1,8 @@
 <!-- dark-draft: anomalyco/opencode -->
-<!-- draft-state: ready -->
+<!-- draft-state: resolved -->
 # Upstream issue draft: anomalyco/opencode
 
-- **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
+- **Status:** resolved — lit again (2026-11-22); nothing to file
 - **Would be filed at:** https://github.com/anomalyco/opencode/issues/new
 - **Stars:** 228435 · **Generated:** 2026-11-22T00:55:06.197Z
 - Nothing in this file has been sent anywhere.

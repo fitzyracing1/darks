@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/xerj-org/xerj/issues/new
-- **Stars:** 19247 · **Generated:** 2026-11-22T00:55:06.197Z
+- **Stars:** 19277 · **Generated:** 2026-11-22T06:43:27.919Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
@@ -21,14 +21,14 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### Release (`.github/workflows/release.yml`)
 
-- Latest run on `main`: https://github.com/xerj-org/xerj/actions/runs/44861221557 — dark (conclusion: `cancelled`), 2026-11-21 03:27 UTC
+- Latest run on `main`: https://github.com/xerj-org/xerj/actions/runs/44980788530 — dark (conclusion: `cancelled`), 2026-11-22 03:28 UTC
 - Dark since: 2026-11-06 03:27 UTC (first run of the current streak)
-- Job / step: `Build x86_64-apple-darwin`
+- Job / step: `Build aarch64-apple-darwin`
 - Likely cause: The configuration 'macos-14-arm64-us-default' is not supported
 
 ### CI (`.github/workflows/ci.yml`)
 
-- Latest run on `main`: https://github.com/xerj-org/xerj/actions/runs/44422894163 — dark (conclusion: `failure`), 2026-11-18 23:41 UTC
+- Latest run on `main`: https://github.com/xerj-org/xerj/actions/runs/44970052552 — dark (conclusion: `failure`), 2026-11-22 01:08 UTC
 - Dark since: 2026-11-07 06:22 UTC (first run of the current streak)
 - Likely cause: no cause found in annotations
 
@@ -78,7 +78,7 @@ repin: classes=weekly; 8 corpus(es) moved
 
 ### Fresh-agent field report (`.github/workflows/field-report-e2e.yml`)
 
-- Latest run on `main`: https://github.com/xerj-org/xerj/actions/runs/44422894003 — dark (conclusion: `failure`), 2026-11-18 23:41 UTC
+- Latest run on `main`: https://github.com/xerj-org/xerj/actions/runs/44970044451 — dark (conclusion: `failure`), 2026-11-22 01:08 UTC
 - Dark since: 2026-11-17 17:53 UTC (first run of the current streak)
 - Likely cause: no cause found in annotations
 

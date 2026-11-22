@@ -1,8 +1,8 @@
 <!-- dark-draft: twbs/bootstrap -->
-<!-- draft-state: ready -->
+<!-- draft-state: resolved -->
 # Upstream issue draft: twbs/bootstrap
 
-- **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
+- **Status:** resolved — lit again (2026-11-22); nothing to file
 - **Would be filed at:** https://github.com/twbs/bootstrap/issues/new
 - **Stars:** 175108 · **Generated:** 2026-11-22T00:55:06.197Z
 - Nothing in this file has been sent anywhere.

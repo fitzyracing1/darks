@@ -4,36 +4,61 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/ccch1mneyyy/dsh-Go/issues/new
-- **Stars:** 29601 · **Generated:** 2026-11-22T00:55:06.197Z
+- **Stars:** 29778 · **Generated:** 2026-11-22T06:43:27.919Z
 - Nothing in this file has been sent anywhere.
+- **Note for Joshua:** cancelled by a concurrency group — likely noise
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: "iOS compile" workflow failing on main since 2026-11-20
+CI: 2 workflows dark on main ("iOS compile", "iOS UI tour")
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! The **iOS compile** workflow (`.github/workflows/ios-compile.yml`) on `main` has been failing since 2026-11-20. Here is what I saw, in case it's useful:
+Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
 
-- Latest run on `main`: https://github.com/ccch1mneyyy/dsh-Go/actions/runs/44958168518 — dark (conclusion: `failure`), 2026-11-21 22:42 UTC
+### iOS compile (`.github/workflows/ios-compile.yml`)
+
+- Latest run on `main`: https://github.com/ccch1mneyyy/dsh-Go/actions/runs/44992183119 — dark (conclusion: `cancelled`), 2026-11-22 06:05 UTC
 - Dark since: 2026-11-20 18:29 UTC (first run of the current streak)
-- Job / step: `engine` → `Exercise Swift phone and companion voice contracts`
-- Likely cause: searchd EXC_CRASH SIGABRT  Abort trap: 6 | libsystem_kernel.dylib __pthread_kill+8 | libsystem_pthread.dylib pthread_kill+264 | libsystem_c.dylib abort+116 | libsystem_c.dylib abort_report_np+80 | SpotlightIndex __si_indexingWatchdogInit_bl
+- Job / step: `engine` → `Run the engine inside the app`
+- Likely cause: Canceling since a higher priority waiting request for ios-compile-refs/heads/main exists
 
 <details><summary>End of the job log</summary>
 
 ```
-Test session results, code coverage, and logs:
-	/Users/runner/work/_temp/swift-contracts.xcresult
-Failing tests:
-	IOSAudioSessionCoordinatorTests.testMainThreadCleanupIsOneShotAcrossQueuedAndImmediateCalls()
-** TEST FAILED **
-Testing started
-##[notice]IOSPhoneSelfRunnerTests 16, IOSPhonePairingStoreTests 13, IOSPhoneCoreDeviceTests 37, IOSPhoneScreenTests 38, IOSPhoneDDIBackgroundTests 4, IOSPhoneOperationTests 36, IOSPhoneApprovalTests 8, IOSPhoneClipboard…
-##[error]IOSAudioSessionCoordinatorTests.testMainThreadCleanupIsOneShotAcrossQueuedAndImmediateCalls() Failed IOSAudioSessionCoordinatorTests.swift:852: Asynchronous wait failed: Exceeded timeout of 2 seconds, with unfu…
+  vector_graphics_compiler 1.3.4 (1.3.6 available)
+  windows_file_picker 2.0.1 (2.0.2 available)
+  xml 7.0.1 (7.1.0 available)
+Got dependencies!
+47 packages have newer versions incompatible with dependency constraints.
+Try `flutter pub outdated` for more information.
+Building io.github.ccch1mneyyy.dshgo for simulator (ios)...
+##[error]The operation was canceled.
+```
+
+</details>
+
+### iOS UI tour (`.github/workflows/ios-ui-tour.yml`)
+
+- Latest run on `main`: https://github.com/ccch1mneyyy/dsh-Go/actions/runs/44992183149 — dark (conclusion: `cancelled`), 2026-11-22 06:05 UTC
+- Dark since: 2026-11-22 06:05 UTC (first run of the current streak)
+- Job / step: `tour` → `Run the tour`
+- Likely cause: Canceling since a higher priority waiting request for ios-ui-tour-refs/heads/main exists
+
+<details><summary>End of the job log</summary>
+
+```
+shot 4 sheet_rising_light in 23899 ms
+Note: No display specified. Defaulting to display: F50B8928-9ECE-48C7-BAF1-DA9A53DA1545 (screenID: 1, name: LCD)
+Wrote screenshot to: /Users/runner/work/_temp/ui-tour/04-sheet_rising_light.png
+Detected file type from extension: PNG
+shot 5 sheet_light in 18243 ms
+Note: No display specified. Defaulting to display: F50B8928-9ECE-48C7-BAF1-DA9A53DA1545 (screenID: 1, name: LCD)
+Wrote screenshot to: /Users/runner/work/_temp/ui-tour/05-sheet_light.png
+##[error]The operation was canceled.
 ```
 
 </details>

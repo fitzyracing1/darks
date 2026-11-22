@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/storytold/filmcraft/issues/new
-- **Stars:** 18779 · **Generated:** 2026-11-22T00:55:06.197Z
+- **Stars:** 18796 · **Generated:** 2026-11-22T06:43:27.919Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -18,7 +18,7 @@ CI: "Release" workflow failing on main since 2026-11-21
 <!-- BEGIN BODY -->
 Hi! The **Release** workflow (`.github/workflows/release.yml`) on `main` has been failing since 2026-11-21. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/storytold/filmcraft/actions/runs/44852479641 — dark (conclusion: `failure`), 2026-11-21 01:50 UTC
+- Latest run on `main`: https://github.com/storytold/filmcraft/actions/runs/44973288679 — dark (conclusion: `failure`), 2026-11-22 01:50 UTC
 - Dark since: 2026-11-21 01:50 UTC (first run of the current streak)
 - Job / step: `release / Linux x86_64` → `Run storytold/craft-common-actions/actions/rust-channel@main`
 - Likely cause: ModuleNotFoundError: No module named 'tomllib'
@@ -26,8 +26,8 @@ Hi! The **Release** workflow (`.github/workflows/release.yml`) on `main` has bee
 <details><summary>End of the job log</summary>
 
 ```
-##[end-action id=__storytold_craft-common-actions_3.__storytold_craft-common-actions.__run;outcome=success;conclusion=success;duration_ms=1385]
-##[end-action id=__storytold_craft-common-actions_3.__storytold_craft-common-actions;outcome=success;conclusion=success;duration_ms=1390]
+##[end-action id=__storytold_craft-common-actions_3.__storytold_craft-common-actions.__run;outcome=success;conclusion=success;duration_ms=1619]
+##[end-action id=__storytold_craft-common-actions_3.__storytold_craft-common-actions;outcome=success;conclusion=success;duration_ms=1658]
 ##[start-action display=Run python3 "$CHANNEL";id=rust.channel]
 Traceback (most recent call last):
   File "/home/runner/work/_actions/storytold/craft-common-actions/main/actions/rust-channel/channel.py", line 9, in <module>
