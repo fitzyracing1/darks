@@ -4,21 +4,23 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/avelino/awesome-go/issues/new
-- **Stars:** 195191 · **Generated:** 2026-11-21T18:36:18.976Z
+- **Stars:** 195235 · **Generated:** 2026-11-22T00:55:06.197Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: "Auto-merge README PRs" workflow failing on main since 2026-11-17
+CI: 2 workflows dark on main ("Auto-merge README PRs", "Check For Stale Repositories")
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! The **Auto-merge README PRs** workflow (`.github/workflows/auto-merge-readme.yaml`) on `main` has been failing since 2026-11-17. Here is what I saw, in case it's useful:
+Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
 
-- Latest run on `main`: https://github.com/avelino/awesome-go/actions/runs/44934847986 — dark (conclusion: `failure`), 2026-11-21 18:19 UTC
+### Auto-merge README PRs (`.github/workflows/auto-merge-readme.yaml`)
+
+- Latest run on `main`: https://github.com/avelino/awesome-go/actions/runs/44967783508 — dark (conclusion: `failure`), 2026-11-22 00:40 UTC
 - Dark since: 2026-11-17 11:48 UTC (first run of the current streak)
 - Job / step: `Auto-merge README PRs` → `Merge eligible PRs`
 - Likely cause: "message": "Not Found",
@@ -33,6 +35,28 @@ Hi! The **Auto-merge README PRs** workflow (`.github/workflows/auto-merge-readme
 #4594: skip, not mergeable
 #4561: skip, not mergeable
 exit status 1
+##[error]Process completed with exit code 1.
+```
+
+</details>
+
+### Check For Stale Repositories (`.github/workflows/run-check.yaml`)
+
+- Latest run on `main`: https://github.com/avelino/awesome-go/actions/runs/44965569705 — dark (conclusion: `failure`), 2026-11-22 00:13 UTC
+- Dark since: 2026-11-22 00:13 UTC (first run of the current streak)
+- Job / step: `Running test` → `run script`
+- Likely cause: FAIL	github.com/avelino/awesome-go	0.137s
+
+<details><summary>End of the job log</summary>
+
+```
+a7623113f007bfaad6de95afc127c4429536d503
+=== RUN   TestStaleRepository
+    stale_repositories_test.go:274: getAllFlaggedRepositories: rate limit or auth failure (status 401)
+--- FAIL: TestStaleRepository (0.13s)
+FAIL
+exit status 1
+FAIL	github.com/avelino/awesome-go	0.137s
 ##[error]Process completed with exit code 1.
 ```
 

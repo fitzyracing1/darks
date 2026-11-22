@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/react/react/issues/new
-- **Stars:** 252843 · **Generated:** 2026-11-21T18:36:18.976Z
+- **Stars:** 252820 · **Generated:** 2026-11-22T00:55:06.197Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -18,9 +18,9 @@ CI: "(DevTools) Regression Tests" workflow failing on main since 2026-11-20
 <!-- BEGIN BODY -->
 Hi! The **(DevTools) Regression Tests** workflow (`.github/workflows/devtools_regression_tests.yml`) on `main` has been failing since 2026-11-20. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/react/react/actions/runs/44841177114 — dark (conclusion: `failure`), 2026-11-21 00:03 UTC
+- Latest run on `main`: https://github.com/react/react/actions/runs/44964730077 — dark (conclusion: `failure`), 2026-11-22 00:03 UTC
 - Dark since: 2026-11-20 00:03 UTC (first run of the current streak)
-- Job / step: `Run DevTools e2e tests for versions (16.5)` → `Run ./scripts/ci/download_devtools_regression_build.js 16.5`
+- Job / step: `Run DevTools e2e tests for versions (17.0)` → `Run ./scripts/ci/download_devtools_regression_build.js 17.0`
 - Likely cause: Error: Cannot find module 'child-process-promise'
 
 <details><summary>End of the job log</summary>

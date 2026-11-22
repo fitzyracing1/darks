@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/twbs/bootstrap/issues/new
-- **Stars:** 175106 · **Generated:** 2026-11-21T18:36:18.976Z
+- **Stars:** 175108 · **Generated:** 2026-11-22T00:55:06.197Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -18,21 +18,21 @@ CI: "Lint" workflow failing on main since 2026-11-20
 <!-- BEGIN BODY -->
 Hi! The **Lint** workflow (`.github/workflows/lint.yml`) on `main` has been failing since 2026-11-20. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/twbs/bootstrap/actions/runs/44849262326 — dark (conclusion: `failure`), 2026-11-21 01:17 UTC
+- Latest run on `main`: https://github.com/twbs/bootstrap/actions/runs/44952718361 — dark (conclusion: `failure`), 2026-11-21 21:40 UTC
 - Dark since: 2026-11-20 18:41 UTC (first run of the current streak)
 - Job / step: `lint` → `Lint`
-- Likely cause: ✖ 17 problems (0 errors, 17 warnings)
+- Likely cause: ERROR: "docs-mdx" exited with 1.
 
 <details><summary>End of the job log</summary>
 
 ```
   1345:1  warning  This line has a length of 214. Maximum allowed is 200  @stylistic/max-len
   1372:1  warning  This line has a length of 202. Maximum allowed is 200  @stylistic/max-len
-ERROR: "docs-mdx" exited with 1.
   1394:1  warning  This line has a length of 204. Maximum allowed is 200  @stylistic/max-len
 /home/runner/work/bootstrap/bootstrap/js/tests/unit/tooltip.spec.js
-  1511:1  warning  File has too many lines (1771). Maximum allowed is 1500  max-lines
+  1511:1  warning  File has too many lines (1766). Maximum allowed is 1500  max-lines
 ✖ 17 problems (0 errors, 17 warnings)
+ERROR: "docs-mdx" exited with 1.
 ##[error]Process completed with exit code 1.
 ```
 

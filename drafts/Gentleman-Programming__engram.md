@@ -4,19 +4,21 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/Gentleman-Programming/engram/issues/new
-- **Stars:** 8254 · **Generated:** 2026-11-21T18:36:18.976Z
+- **Stars:** 8257 · **Generated:** 2026-11-22T00:55:06.197Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: "Stable release gap audit" workflow failing on main since 2026-11-09
+CI: 2 workflows dark on main ("Stable release gap audit", "CI")
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! The **Stable release gap audit** workflow (`.github/workflows/release-gap-audit.yml`) on `main` has been failing since 2026-11-09. Here is what I saw, in case it's useful:
+Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
+
+### Stable release gap audit (`.github/workflows/release-gap-audit.yml`)
 
 - Latest run on `main`: https://github.com/Gentleman-Programming/engram/actions/runs/43840382777 — dark (conclusion: `failure`), 2026-11-16 09:30 UTC
 - Dark since: 2026-11-09 09:25 UTC (first run of the current streak)
@@ -33,6 +35,28 @@ Hi! The **Stable release gap audit** workflow (`.github/workflows/release-gap-au
 Path changes are a release-lag signal, not proof of a fix.
 - **Pi npm latest: gap after pi-v0.8.0.** 5 relevant path(s) changed on main: `"plugin/pi/index.ts"`, `"plugin/pi/runtime-contract.js"`, `"plugin/pi/test/index-source.test.mjs"`, `"plugin/pi/test/received-http-error.tes…
 - **Go latest stable GitHub Release: gap after v3.7.2.** 15 relevant path(s) changed on main: `"cmd/engram/hook_claude.go"`, `"cmd/engram/hook_claude_context.go"`, `"cmd/engram/hook_claude_context_test.go"`, `"cmd/engra…
+##[error]Process completed with exit code 1.
+```
+
+</details>
+
+### CI (`.github/workflows/ci.yml`)
+
+- Latest run on `main`: https://github.com/Gentleman-Programming/engram/actions/runs/44962142173 — dark (conclusion: `failure`), 2026-11-21 23:30 UTC
+- Dark since: 2026-11-21 23:30 UTC (first run of the current streak)
+- Job / step: `Windows Full Suite (Observational)` → `Run full default-tags module suite`
+- Likely cause: {"Time":"2026-11-21T23:46:00.3289053Z","Action":"fail","Package":"github.com/Gentleman-Programming/engram/v3/plugin","Elapsed":440.136}
+
+<details><summary>End of the job log</summary>
+
+```
+{"Time":"2026-11-21T23:46:00.3184415Z","Action":"output","Package":"github.com/Gentleman-Programming/engram/v3/plugin","Test":"TestHooksJSONPluginRootIsQuoted","Output":"    hooks_quoting_test.go:87: checked 6 hook comm…
+{"Time":"2026-11-21T23:46:00.3184415Z","Action":"output","Package":"github.com/Gentleman-Programming/engram/v3/plugin","Test":"TestHooksJSONPluginRootIsQuoted","Output":"--- PASS: TestHooksJSONPluginRootIsQuoted (0.00s)…
+{"Time":"2026-11-21T23:46:00.3184415Z","Action":"pass","Package":"github.com/Gentleman-Programming/engram/v3/plugin","Test":"TestHooksJSONPluginRootIsQuoted","Elapsed":0}
+{"Time":"2026-11-21T23:46:00.3184415Z","Action":"output","Package":"github.com/Gentleman-Programming/engram/v3/plugin","Output":"FAIL\n"}
+{"Time":"2026-11-21T23:46:00.3289053Z","Action":"output","Package":"github.com/Gentleman-Programming/engram/v3/plugin","Output":"FAIL\tgithub.com/Gentleman-Programming/engram/v3/plugin\t440.136s\n"}
+{"Time":"2026-11-21T23:46:00.3289053Z","Action":"fail","Package":"github.com/Gentleman-Programming/engram/v3/plugin","Elapsed":440.136}
+go: downloading golang.org/x/net v0.57.0
 ##[error]Process completed with exit code 1.
 ```
 

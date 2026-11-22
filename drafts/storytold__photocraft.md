@@ -4,14 +4,14 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/storytold/photocraft/issues/new
-- **Stars:** 80865 · **Generated:** 2026-11-21T18:36:18.976Z
+- **Stars:** 80887 · **Generated:** 2026-11-22T00:55:06.197Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 4 workflows dark on main ("FreeBSD", "Perf (nightly)", "Release", +1 more)
+CI: 3 workflows dark on main ("FreeBSD", "Perf (nightly)", "Release")
 <!-- END TITLE -->
 
 ## Body
@@ -84,12 +84,6 @@ ModuleNotFoundError: No module named 'tomllib'
 ```
 
 </details>
-
-### SonarCloud (`.github/workflows/sonarcloud.yml`)
-
-- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/44931105257 — dark (conclusion: `cancelled`), 2026-11-21 17:37 UTC
-- Dark since: 2026-11-21 17:17 UTC (first run of the current streak)
-- Likely cause: run cancelled
 
 If this is already known or expected, feel free to close. Thanks for maintaining photocraft!
 

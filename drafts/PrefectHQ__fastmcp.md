@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/PrefectHQ/fastmcp/issues/new
-- **Stars:** 28703 · **Generated:** 2026-11-21T18:36:18.976Z
+- **Stars:** 28706 · **Generated:** 2026-11-22T00:55:06.197Z
 - Nothing in this file has been sent anywhere.
 
 ## Skipped: upstream already tracking

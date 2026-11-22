@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/storytold/lightcraft/issues/new
-- **Stars:** 16266 · **Generated:** 2026-11-21T18:36:18.976Z
+- **Stars:** 16271 · **Generated:** 2026-11-22T00:55:06.197Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
@@ -21,9 +21,25 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### SonarCloud (`.github/workflows/sonarcloud.yml`)
 
-- Latest run on `main`: https://github.com/storytold/lightcraft/actions/runs/44933127428 — dark (conclusion: `cancelled`), 2026-11-21 18:00 UTC
+- Latest run on `main`: https://github.com/storytold/lightcraft/actions/runs/44947141174 — dark (conclusion: `failure`), 2026-11-21 20:36 UTC
 - Dark since: 2026-11-18 23:57 UTC (first run of the current streak)
-- Likely cause: run cancelled
+- Job / step: `sonarcloud / Tests 5/8` → `Run this shard's tests`
+- Likely cause: The job has exceeded the maximum execution time of 2h0m0s
+
+<details><summary>End of the job log</summary>
+
+```
+        SLOW [>6180.000s] (───────) lightcraft-ui-egui tests::find_similar::a_second_search_waits_for_the_first
+        SLOW [>6240.000s] (───────) lightcraft-ui-egui tests::find_similar::a_second_search_waits_for_the_first
+        SLOW [>6300.000s] (───────) lightcraft-ui-egui tests::find_similar::a_second_search_waits_for_the_first
+        SLOW [>6360.000s] (───────) lightcraft-ui-egui tests::find_similar::a_second_search_waits_for_the_first
+        SLOW [>6420.000s] (───────) lightcraft-ui-egui tests::find_similar::a_second_search_waits_for_the_first
+        SLOW [>6480.000s] (───────) lightcraft-ui-egui tests::find_similar::a_second_search_waits_for_the_first
+        SLOW [>6540.000s] (───────) lightcraft-ui-egui tests::find_similar::a_second_search_waits_for_the_first
+##[error]The operation was canceled.
+```
+
+</details>
 
 ### Release (`.github/workflows/release.yml`)
 
