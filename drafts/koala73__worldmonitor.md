@@ -4,36 +4,36 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/koala73/worldmonitor/issues/new
-- **Stars:** 91053 · **Generated:** 2026-11-22T12:39:46.823Z
+- **Stars:** 91065 · **Generated:** 2026-11-22T18:35:55.565Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: "Sentry Resolve Pin Audit" workflow failing on main since 2026-11-22
+CI: "Umami Storage Monitor" workflow failing on main since 2026-11-22
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! The **Sentry Resolve Pin Audit** workflow (`.github/workflows/sentry-resolve-pin-audit.yml`) on `main` has been failing since 2026-11-22. Here is what I saw, in case it's useful:
+Hi! The **Umami Storage Monitor** workflow (`.github/workflows/umami-storage-monitor.yml`) on `main` has been failing since 2026-11-22. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/koala73/worldmonitor/actions/runs/44993675338 — dark (conclusion: `failure`), 2026-11-22 06:25 UTC
-- Dark since: 2026-11-22 06:25 UTC (first run of the current streak)
-- Job / step: `audit` → `Audit resolved issues for release pins`
-- Likely cause: WORLDMONITOR-1FS is resolved and pinned to release c90b3314b69a25d0faa0052749423cd2abaa3974; deployed release compatibility needs verification.
+- Latest run on `main`: https://github.com/koala73/worldmonitor/actions/runs/45054323354 — dark (conclusion: `failure`), 2026-11-22 18:18 UTC
+- Dark since: 2026-11-22 17:46 UTC (first run of the current streak)
+- Job / step: `monitor` → `Check the retention runner is retiring rows`
+- Likely cause: HISTORY_WINDOW_SATURATED: none of the 1000 records read reached a running state (1000 were SKIPPED refusals) and the read filled its 1000-record window, so the deployment that decides health is older than the window rather than absent — wid
 
 <details><summary>End of the job log</summary>
 
 ```
-Switched to a new branch 'main'
-branch 'main' set up to track 'origin/main'.
-c140eab2b93d1272300de5e02de930350d053702
-Found in cache @ /opt/hostedtoolcache/node/24.22.3/x64
-node: v24.22.3
-npm: 11.19.1
-yarn: 1.22.22
-##[error]WORLDMONITOR-1AY is resolved and pinned to release 92eee70e5a89b7e503108ccd1278222cbd809330; deployed release compatibility needs verification.
+Finished uploading artifact content to blob storage!
+SHA256 digest of uploaded artifact zip is 5ca73cb5116b097ee8c8132d5bc621cf41a2a62f66b8219171ac8f215aacfb3d
+Finalizing artifact upload
+Artifact umami-storage-state.zip successfully finalized. Artifact ID 14767020634
+Artifact umami-storage-state has been successfully uploaded! Final size is 2727 bytes. Artifact ID is 14767020634
+Artifact download URL: https://github.com/koala73/worldmonitor/actions/runs/45054323354/artifacts/14767020634
+Umami retention runner HISTORY_WINDOW_SATURATED: none of the 1000 records read reached a running state (1000 were SKIPPED refusals) and the read filled its 1000-record window, so the deployment that decides health is ol…
+##[error]HISTORY_WINDOW_SATURATED: none of the 1000 records read reached a running state (1000 were SKIPPED refusals) and the read filled its 1000-record window, so the deployment that decides health is older than the w…
 ```
 
 </details>

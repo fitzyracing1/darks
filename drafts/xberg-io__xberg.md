@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/xberg-io/xberg/issues/new
-- **Stars:** 9609 · **Generated:** 2026-11-22T12:39:46.823Z
+- **Stars:** 9611 · **Generated:** 2026-11-22T18:35:55.565Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** cancelled by a concurrency group — likely noise
 
@@ -21,66 +21,51 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### CI Lint (`.github/workflows/ci-lint.yaml`)
 
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/45019387358 — dark (conclusion: `cancelled`), 2026-11-22 11:51 UTC
+- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/45047547421 — dark (conclusion: `failure`), 2026-11-22 17:06 UTC
 - Dark since: 2026-11-18 18:37 UTC (first run of the current streak)
-- Job / step: `Docs snippets gate` → `Install system dependencies`
-- Likely cause: Canceling since a higher priority waiting request for ci-lint-refs/heads/main exists
+- Job / step: `Benchmark script regressions` → `Enforce main-only CI`
+- Likely cause: [ci:verify:main-only] ERROR task failed
 
 <details><summary>End of the job log</summary>
 
 ```
-[ 89%] Building CXX object libheif/CMakeFiles/heif.dir/sequences/chunk.cc.o
-[ 90%] Building CXX object libheif/CMakeFiles/heif.dir/sequences/track.cc.o
-[ 91%] Building CXX object libheif/CMakeFiles/heif.dir/sequences/track_visual.cc.o
-[ 92%] Building CXX object libheif/CMakeFiles/heif.dir/sequences/track_metadata.cc.o
-[ 93%] Building CXX object libheif/CMakeFiles/heif.dir/plugins_unix.cc.o
-[ 94%] Building CXX object libheif/CMakeFiles/heif.dir/plugins/decoder_libde265.cc.o
-[ 95%] Building CXX object libheif/CMakeFiles/heif.dir/plugins/decoder_aom.cc.o
-##[error]The operation was canceled.
+    assert len(paths) == EXPECTED_WORKFLOWS, "CI workflow inventory changed"
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: CI workflow inventory changed
+----------------------------------------------------------------------
+Ran 23 tests in 0.688s
+FAILED (failures=7)
+[ci:verify:main-only] ERROR task failed
+##[error]Process completed with exit code 1.
 ```
 
 </details>
 
 ### CI E2E (`.github/workflows/ci-e2e.yaml`)
 
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/45019386913 — dark (conclusion: `cancelled`), 2026-11-22 11:51 UTC
+- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/45047487501 — dark (conclusion: `cancelled`), 2026-11-22 17:05 UTC
 - Dark since: 2026-11-20 07:25 UTC (first run of the current streak)
-- Job / step: `Build FFI (x86_64-unknown-linux-gnu)` → `Build FFI library`
+- Job / step: `Build FFI (x86_64-unknown-linux-gnu)`
 - Likely cause: Canceling since a higher priority waiting request for ci-e2e-refs/heads/main exists
-
-<details><summary>End of the job log</summary>
-
-```
-[tree-sitter-language-pack 1.25.2] cargo:rerun-if-changed=/home/runner/work/xberg/xberg/target/release/build/tree-sitter-language-pack/17f8fe3ed8f482ed/out/_parsers/parsers/sysml/queries/indents.scm
-[tree-sitter-language-pack 1.25.2] cargo:rerun-if-changed=/home/runner/work/xberg/xberg/target/release/build/tree-sitter-language-pack/17f8fe3ed8f482ed/out/_parsers/parsers/sysml/queries/folds.scm
-[tree-sitter-language-pack 1.25.2] cargo:rerun-if-changed=/home/runner/work/xberg/xberg/target/release/build/tree-sitter-language-pack/17f8fe3ed8f482ed/out/_parsers/parsers/systemtap/queries/highlights.scm
-[tree-sitter-language-pack 1.25.2] cargo:rerun-if-changed=/home/runner/work/xberg/xberg/target/release/build/tree-sitter-language-pack/17f8fe3ed8f482ed/out/_parsers/parsers/systemtap/queries/locals.scm
-[tree-sitter-language-pack 1.25.2] cargo:rerun-if-changed=/home/runner/work/xberg/xberg/target/release/build/tree-sitter-language-pack/17f8fe3ed8f482ed/out/_parsers/parsers/systemverilog/queries/highlights.scm
-[tree-sitter-language-pack 1.25.2] cargo:rerun-if-changed=/home/runner/work/xberg/xberg/target/release/build/tree-sitter-language-pack/17f8fe3ed8f482ed/out/_parsers/parsers/t32/queries/highlights.scm
-[tree-sitter-language-pack 1.25.2] cargo:rerun-if-changed=/home/runner/work/xberg/xberg/target/release/build/tree-sitter-language-pack/17f8fe3ed8f482ed/out/_parsers/parsers/t32/queries/injections.scm
-##[error]The operation was canceled.
-```
-
-</details>
 
 ### CI Rust (`.github/workflows/ci-rust.yaml`)
 
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/45019386973 — dark (conclusion: `cancelled`), 2026-11-22 11:51 UTC
+- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/45047547094 — dark (conclusion: `failure`), 2026-11-22 17:06 UTC
 - Dark since: 2026-11-20 07:25 UTC (first run of the current streak)
-- Job / step: `Crate package verification` → `Install system dependencies`
-- Likely cause: Canceling since a higher priority waiting request for ci-rust-refs/heads/main exists
+- Job / step: `Rust (windows-latest)` → `Clippy Windows ORT surface`
+- Likely cause: manual checked division (crates/xberg-native-pdf/src/extractors/images.rs:2488)
 
 <details><summary>End of the job log</summary>
 
 ```
-[  9%] Building C object src/CMakeFiles/leptonica.dir/bootnumgen1.c.o
-[  9%] Building C object src/CMakeFiles/leptonica.dir/bootnumgen2.c.o
-[ 10%] Building C object src/CMakeFiles/leptonica.dir/bootnumgen3.c.o
-[ 10%] Building C object src/CMakeFiles/leptonica.dir/bootnumgen4.c.o
-[ 11%] Building C object src/CMakeFiles/leptonica.dir/boxbasic.c.o
-[ 12%] Building C object src/CMakeFiles/leptonica.dir/boxfunc1.c.o
-[ 12%] Building C object src/CMakeFiles/leptonica.dir/boxfunc2.c.o
-##[error]The operation was canceled.
+    Checking rqrr-zeroize v0.10.1
+    Checking lofty v0.25.5
+    Checking resvg v0.50.0
+    Checking jsonschema v0.62.0
+    Checking model2vec-rs v0.5.0
+    Checking liter-llm v2.7.3
+error: manual checked division
+##[error]    --> crates\xberg-native-pdf\src\extractors\images.rs:2376:25
 ```
 
 </details>
@@ -109,66 +94,66 @@ Tip: Use `--wait-for-schema=NUM` to wait up to NUM seconds for schema availabili
 
 ### CI Integrations (`.github/workflows/ci-integrations.yaml`)
 
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/45019386854 — dark (conclusion: `cancelled`), 2026-11-22 11:51 UTC
+- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/45047547170 — dark (conclusion: `failure`), 2026-11-22 17:06 UTC
 - Dark since: 2026-11-21 14:13 UTC (first run of the current streak)
 - Job / step: `Build local integration bindings` → `Build abi3 Python wheel`
-- Likely cause: Canceling since a higher priority waiting request for ci-integrations-refs/heads/main exists
+- Likely cause: a value of type 'Vec<Vec<AnnotationPoint>>' cannot be built from an iterator over elements of type 'Vec<xberg::AnnotationPoint>' (crates/xberg-py/src/lib.rs:42150)
 
 <details><summary>End of the job log</summary>
 
 ```
-   Compiling atoi_simd v0.18.1
-   Compiling html-to-markdown-rs v3.22.2
-   Compiling g2p v1.2.2
-   Compiling wyz v0.5.1
-   Compiling memchr-n v0.1.10
-   Compiling v_escape-base v1.0.0
-   Compiling candle-transformers v0.11.1
-##[error]The operation was canceled.
-```
-
-</details>
-
-### CI Focused PR (`.github/workflows/ci-focused-pr.yaml`)
-
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/45019386923 — dark (conclusion: `cancelled`), 2026-11-22 11:51 UTC
-- Dark since: 2026-11-21 15:33 UTC (first run of the current streak)
-- Job / step: `Focused nli` → `Run exact regression tests`
-- Likely cause: Canceling since a higher priority waiting request for ci-focused-pr-refs/heads/main-regressions exists
-
-<details><summary>End of the job log</summary>
-
-```
-   Compiling reqwest-middleware v0.5.2
-   Compiling xet-core-structures v1.8.1
-   Compiling xet-client v1.8.1
-   Compiling xet-data v1.8.1
-   Compiling hf-xet v1.8.1
-   Compiling hf-hub v1.0.0
-   Compiling nli-qualification v0.0.0 (/home/runner/work/xberg/xberg/tools/benchmark-harness/nli_qualification)
-##[error]The operation was canceled.
+   Compiling similar v3.2.1
+   Compiling minijinja v3.1.0
+   Compiling jotdown v0.10.0
+   Compiling org v0.3.1
+   Compiling pyo3-async-runtimes v0.30.0
+   Compiling xberg-py v1.5.0 (/home/runner/work/xberg/xberg/crates/xberg-py)
+error[E0425]: cannot find type `PolygonAnnotationInput` in crate `xberg`
+##[error]     --> crates/xberg-py/src/lib.rs:32542:33
 ```
 
 </details>
 
 ### CI Mobile (`.github/workflows/ci-mobile.yaml`)
 
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/45020500599 — dark (conclusion: `failure`), 2026-11-22 12:05 UTC
+- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/45047547073 — dark (conclusion: `failure`), 2026-11-22 17:06 UTC
 - Dark since: 2026-11-22 10:51 UTC (first run of the current streak)
-- Job / step: `iOS cargo check (aarch64-apple-ios-sim)` → `cargo check xberg-dart`
-- Likely cause: unused variable: 'stored_scan' (crates/xberg/src/extractors/pdf/ocr/pipeline/page_ocr/finish.rs:26)
+- Job / step: `Android cargo check (x86_64)` → `cargo ndk check xberg-dart`
+- Likely cause: mismatched types (packages/dart/rust/src/lib.rs:12082)
 
 <details><summary>End of the job log</summary>
 
 ```
    Compiling delegate-attr v0.3.1
     Checking fs2 v0.4.3
-    Checking similar v3.2.1
-    Checking jotdown v0.10.0
     Checking org v0.3.1
-   Compiling xberg-dart v1.5.0 (/Users/runner/work/xberg/xberg/packages/dart/rust)
-error: unused variable: `stored_scan`
-##[error]  --> crates/xberg/src/extractors/pdf/ocr/pipeline/page_ocr/finish.rs:26:13
+   Compiling xberg-dart v1.5.0 (/home/runner/work/xberg/xberg/packages/dart/rust)
+    Checking jotdown v0.10.0
+    Checking similar v3.2.1
+error[E0433]: cannot find `DrawingSetText` in `xberg`
+##[error]    --> packages/dart/rust/src/lib.rs:7859:16
+```
+
+</details>
+
+### CI Scripts (`.github/workflows/ci-scripts.yaml`)
+
+- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/45043579467 — dark (conclusion: `failure`), 2026-11-22 16:23 UTC
+- Dark since: 2026-11-22 16:23 UTC (first run of the current streak)
+- Job / step: `Shell formatting` → `Check shell formatting`
+- Likely cause: [lint:shell] ERROR task failed
+
+<details><summary>End of the job log</summary>
+
+```
++	[ -z "$(ls -A "$TMPDIR")" ] || {
++		ls -A "$TMPDIR"
++		return 1
++	}
+ }
+ @test "pdfium:provision should repeat the selected platform and version in its env hint" {
+[lint:shell] ERROR task failed
+##[error]Process completed with exit code 1.
 ```
 
 </details>

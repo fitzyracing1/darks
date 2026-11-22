@@ -4,14 +4,14 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/storytold/photocraft/issues/new
-- **Stars:** 80966 · **Generated:** 2026-11-22T12:39:46.823Z
+- **Stars:** 81004 · **Generated:** 2026-11-22T18:35:55.565Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 5 workflows dark on main ("FreeBSD", "Perf (nightly)", "Release", +2 more)
+CI: 4 workflows dark on main ("FreeBSD", "Perf (nightly)", "Release", +1 more)
 <!-- END TITLE -->
 
 ## Body
@@ -85,49 +85,11 @@ ModuleNotFoundError: No module named 'tomllib'
 
 </details>
 
-### CI (`.github/workflows/ci.yml`)
-
-- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/45012450601 — dark (conclusion: `failure`), 2026-11-22 10:26 UTC
-- Dark since: 2026-11-22 05:03 UTC (first run of the current streak)
-- Job / step: `gate / test 3/4 (artcraft-k8s-trusted)` → `Gate`
-- Likely cause: skip  panic_hunt
-
-<details><summary>End of the job log</summary>
-
-```
-    stack backtrace:
-    note: Some details are omitted, run with `RUST_BACKTRACE=full` for a verbose backtrace.
-error: test run failed
-error: ci failed at `test`
-CI summary:
-  FAIL  test: cargo nextest run --profile ci --binaries-metadata /home/runner/_work/photocraft/photocraft/target/nextest-archive/target/nextest/binaries-metadata.json --cargo-metadata /home/runner/_work/photocraft/photo…
-  skip  panic_hunt
-##[error]Process completed with exit code 1.
-```
-
-</details>
-
 ### SonarCloud (`.github/workflows/sonarcloud.yml`)
 
-- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/45012450572 — dark (conclusion: `failure`), 2026-11-22 10:26 UTC
+- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/45052334192 — dark (conclusion: `cancelled`), 2026-11-22 17:57 UTC
 - Dark since: 2026-11-22 05:03 UTC (first run of the current streak)
-- Job / step: `sonarcloud / SonarCloud Scan` → `Fail on Rust shard test failures`
-- Likely cause: Coverage shard 3 tests failed (exit 100); analysis was still uploaded
-
-<details><summary>End of the job log</summary>
-
-```
-11:24:13.725 INFO  ------------- Upload SCA dependency files
-11:24:14.901 INFO  Successfully sent architecture data
-11:24:16.307 INFO  Sensor cache published successfully
-11:24:18.988 INFO  Analysis total time: 3:22.936 min
-11:24:18.991 INFO  SonarScanner Engine completed successfully
-11:24:19.077 INFO  EXECUTION SUCCESS
-11:24:19.078 INFO  Total time: 3:28.981s
-##[error]Coverage shard 3 tests failed (exit 100); analysis was still uploaded
-```
-
-</details>
+- Likely cause: run cancelled
 
 If this is already known or expected, feel free to close. Thanks for maintaining photocraft!
 

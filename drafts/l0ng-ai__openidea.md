@@ -4,32 +4,39 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/l0ng-ai/openidea/issues/new
-- **Stars:** 9811 · **Generated:** 2026-11-22T12:39:46.823Z
+- **Stars:** 9836 · **Generated:** 2026-11-22T18:35:55.565Z
 - Nothing in this file has been sent anywhere.
-- **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 2 workflows dark on main ("CI", "Language smoke")
+CI: "CI" workflow failing on main since 2026-11-10
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
+Hi! The **CI** workflow (`.github/workflows/ci.yml`) on `main` has been failing since 2026-11-10. Here is what I saw, in case it's useful:
 
-### CI (`.github/workflows/ci.yml`)
-
-- Latest run on `main`: https://github.com/l0ng-ai/openidea/actions/runs/45022855073 — dark (conclusion: `cancelled`), 2026-11-22 12:32 UTC
+- Latest run on `main`: https://github.com/l0ng-ai/openidea/actions/runs/45035645771 — dark (conclusion: `failure`), 2026-11-22 14:57 UTC
 - Dark since: 2026-11-10 13:06 UTC (first run of the current streak)
-- Likely cause: run cancelled
+- Job / step: `Cargo deny` → `Run cargo deny check`
+- Likely cause: advisories FAILED, bans ok, licenses ok, sources ok
 
-### Language smoke (`.github/workflows/language-smoke.yml`)
+<details><summary>End of the job log</summary>
 
-- Latest run on `main`: https://github.com/l0ng-ai/openidea/actions/runs/45022847363 — dark (conclusion: `cancelled`), 2026-11-22 12:32 UTC
-- Dark since: 2026-11-22 04:26 UTC (first run of the current streak)
-- Likely cause: run cancelled
+```
+         │   └── openidea v0.1.50 (*)
+         ├── tauri-plugin-opener v2.7.2
+         │   └── openidea v0.1.50 (*)
+         ├── tauri-plugin-single-instance v2.5.4
+         │   └── openidea v0.1.50 (*)
+         └── zbus-secret-service-keyring-store v1.0.1 (*)
+advisories FAILED, bans ok, licenses ok, sources ok
+##[error]Process completed with exit code 1.
+```
+
+</details>
 
 If this is already known or expected, feel free to close. Thanks for maintaining openidea!
 

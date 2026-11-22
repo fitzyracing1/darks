@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/storytold/pdfcraft/issues/new
-- **Stars:** 21439 · **Generated:** 2026-11-22T12:39:46.823Z
+- **Stars:** 21458 · **Generated:** 2026-11-22T18:35:55.565Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title

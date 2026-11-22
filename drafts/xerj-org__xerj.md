@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/xerj-org/xerj/issues/new
-- **Stars:** 19339 · **Generated:** 2026-11-22T12:39:46.823Z
+- **Stars:** 19394 · **Generated:** 2026-11-22T18:35:55.565Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
@@ -28,7 +28,7 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### CI (`.github/workflows/ci.yml`)
 
-- Latest run on `main`: https://github.com/xerj-org/xerj/actions/runs/45020468084 — dark (conclusion: `failure`), 2026-11-22 12:05 UTC
+- Latest run on `main`: https://github.com/xerj-org/xerj/actions/runs/45035864550 — dark (conclusion: `failure`), 2026-11-22 15:00 UTC
 - Dark since: 2026-11-07 06:22 UTC (first run of the current streak)
 - Likely cause: no cause found in annotations
 

@@ -4,43 +4,25 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/Niko1221/Strata/issues/new
-- **Stars:** 46710 · **Generated:** 2026-11-22T12:39:46.823Z
+- **Stars:** 46887 · **Generated:** 2026-11-22T18:35:55.565Z
 - Nothing in this file has been sent anywhere.
+
+## Skipped: upstream already tracking
+
+- Checks (`.github/workflows/check.yml`): [issue #6629](https://github.com/Niko1221/Strata/issues/6629) "Docs settings-register: 41 HIP knobs land without a status in 0.2.19 — the pristine tag fails tools/test_settings_register.py"
+
+These workflows are left out of the body below.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 2 workflows dark on main ("Checks", "Minimal serving runtime")
+CI: "Minimal serving runtime" workflow failing on main since 2026-11-21
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
-
-### Checks (`.github/workflows/check.yml`)
-
-- Latest run on `main`: https://github.com/Niko1221/Strata/actions/runs/45016591569 — dark (conclusion: `failure`), 2026-11-22 11:17 UTC
-- Dark since: 2026-11-21 16:45 UTC (first run of the current streak)
-- Job / step: `macOS / host typecheck + test + build` → `tools/check`
-- Likely cause: check: 2 passed, 1 failed, 0 not run (of 3 steps)
-
-<details><summary>End of the job log</summary>
-
-```
-  host-test          1  starts a real browser: set STRATA_TEST_BROWSER=1
-  host-test          1  PowerShell is checked on Windows
-  host-test          1  needs Windows PowerShell to parse the script (Windows only)
-  host-test          1  STRATA_TEST_PI_AI_DIR is not set (the Harness AI package folder)
-  host-test          1  needs Windows PowerShell (Windows only)
-check: 2 passed, 1 failed, 0 not run (of 3 steps)
-scratch kept: /Users/runner/work/_temp/check
-##[error]Process completed with exit code 1.
-```
-
-</details>
-
-### Minimal serving runtime (`.github/workflows/terminal-minimal-server.yml`)
+Hi! The **Minimal serving runtime** workflow (`.github/workflows/terminal-minimal-server.yml`) on `main` has been failing since 2026-11-21. Here is what I saw, in case it's useful:
 
 - Latest run on `main`: https://github.com/Niko1221/Strata/actions/runs/45016591436 — dark (conclusion: `failure`), 2026-11-22 11:17 UTC
 - Dark since: 2026-11-21 16:45 UTC (first run of the current streak)

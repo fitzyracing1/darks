@@ -4,13 +4,13 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/open-metadata/OpenMetadata/issues/new
-- **Stars:** 15832 · **Generated:** 2026-11-22T12:39:46.823Z
+- **Stars:** 15834 · **Generated:** 2026-11-22T18:35:55.565Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 4 workflows dark on main ("monitor-slack-link", "py-tests", "Postgresql PR Playwright E2E Tests", +1 more)
+CI: 9 workflows dark on main ("monitor-slack-link", "py-tests", "Postgresql PR Playwright E2E Tests", +6 more)
 <!-- END TITLE -->
 
 ## Body
@@ -20,7 +20,7 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### monitor-slack-link (`.github/workflows/monitor-slack-link.yml`)
 
-- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/45021130671 — dark (conclusion: `failure`), 2026-11-22 12:13 UTC
+- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/45053601510 — dark (conclusion: `failure`), 2026-11-22 18:11 UTC
 - Dark since: 2026-11-06 22:08 UTC (first run of the current streak)
 - Job / step: `monitor-slack-link` → `Set up Python 3.9`
 - Likely cause: The version '3.9' with architecture 'x64' was not found for Ubuntu 26.04.
@@ -33,7 +33,7 @@ Updating files: 100% (27546/27546)
 Updating files: 100% (27546/27546), done.
 Switched to a new branch 'main'
 branch 'main' set up to track 'origin/main'.
-78e4716b17be950e79e3634c49f0b52323d6732a
+5af6f6ab7a271eba9f48322be42db574b9bbf8bd
 Version 3.9 was not found in the local cache
 ##[error]The version '3.9' with architecture 'x64' was not found for Ubuntu 26.04.
 ```
@@ -102,6 +102,116 @@ Received Goaway
 	... 20 common frames omitted
 [ERROR] Bootstrapper: An error occurred: Error: Scanner engine failed with code 1
 ##[error]Process completed with exit code 1.
+```
+
+</details>
+
+### Integration Tests - PostgreSQL + Elasticsearch + Redis (`.github/workflows/integration-tests-postgres-elasticsearch-redis.yml`)
+
+- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/45047214843 — dark (conclusion: `failure`), 2026-11-22 17:02 UTC
+- Dark since: 2026-11-22 17:02 UTC (first run of the current streak)
+- Job / step: `Integration Test Lane (parallel)` → `Run Integration Tests (PostgreSQL + Elasticsearch + Redis)`
+- Likely cause: [ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+
+<details><summary>End of the job log</summary>
+
+```
+[ERROR] -> [Help 1]
+[ERROR]
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR]
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+##[error]Process completed with exit code 1.
+```
+
+</details>
+
+### Integration Tests - MySQL + Elasticsearch (`.github/workflows/integration-tests-mysql-elasticsearch.yml`)
+
+- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/45047214914 — dark (conclusion: `failure`), 2026-11-22 17:03 UTC
+- Dark since: 2026-11-22 17:03 UTC (first run of the current streak)
+- Job / step: `Integration Test Lane (parallel)` → `Run Integration Tests (MySQL + Elasticsearch)`
+- Likely cause: INFO  [2026-11-22 18:14:15,014] org.openmetadata.service.apps.bundles.searchIndex.distributed.JobRecoveryManager: Startup recovery completed: 0 locks cleaned, 0 orphaned jobs processed (0 recovered, 0 marked failed)
+
+<details><summary>End of the job log</summary>
+
+```
+INFO  [2026-11-22 18:14:14,487] org.openmetadata.mcp.server.auth.repository.OAuthAuthorizationCodeRepository: Deleted expired authorization codes
+INFO  [2026-11-22 18:14:14,488] org.openmetadata.mcp.server.auth.repository.McpPendingAuthRequestRepository: Deleted expired pending auth requests
+INFO  [2026-11-22 18:14:14,488] org.openmetadata.mcp.server.auth.jobs.OAuthTokenCleanupJob: OAuth token cleanup completed successfully
+INFO  [2026-11-22 18:14:14,700] org.openmetadata.service.resources.settings.SettingsCache: Loaded Setting searchSettings
+INFO  [2026-11-22 18:14:15,011] org.openmetadata.service.apps.bundles.searchIndex.distributed.JobRecoveryManager: Performing startup recovery for distributed indexing jobs...
+INFO  [2026-11-22 18:14:15,014] org.openmetadata.service.apps.bundles.searchIndex.distributed.JobRecoveryManager: Startup recovery completed: 0 locks cleaned, 0 orphaned jobs processed (0 recovered, 0 marked failed)
+INFO  [2026-11-22 18:14:21,226] org.openmetadata.service.security.auth.UserActivityTracker: Flushing 718 user activities to database
+##[error]Process completed with exit code 124.
+```
+
+</details>
+
+### Integration Tests - PostgreSQL + OpenSearch (`.github/workflows/integration-tests-postgres-opensearch.yml`)
+
+- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/45047215055 — dark (conclusion: `failure`), 2026-11-22 17:03 UTC
+- Dark since: 2026-11-22 17:03 UTC (first run of the current streak)
+- Job / step: `Integration Test Lane (parallel)` → `Run Integration Tests (PostgreSQL + OpenSearch)`
+- Likely cause: [ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+
+<details><summary>End of the job log</summary>
+
+```
+[ERROR] -> [Help 1]
+[ERROR]
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR]
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+##[error]Process completed with exit code 1.
+```
+
+</details>
+
+### Merge Queue Dequeue Report (`.github/workflows/merge-queue-dequeue-report.yml`)
+
+- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/45047215063 — dark (conclusion: `failure`), 2026-11-22 17:03 UTC
+- Dark since: 2026-11-22 17:03 UTC (first run of the current streak)
+- Job / step: `evict-main-conflicts` → `Remove queue entries that conflict with main`
+- Likely cause: cannot iterate over: null
+
+<details><summary>End of the job log</summary>
+
+```
+PullRequests: write
+Secret source: Actions
+Cache mode: write
+Prepare workflow directory
+Prepare all required actions
+Complete job name: evict-main-conflicts
+cannot iterate over: null
+##[error]Process completed with exit code 1.
+```
+
+</details>
+
+### OpenMetadata Service Unit Tests (`.github/workflows/openmetadata-service-unit-tests.yml`)
+
+- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/45047214919 — dark (conclusion: `failure`), 2026-11-22 17:03 UTC
+- Dark since: 2026-11-22 17:03 UTC (first run of the current streak)
+- Job / step: `openmetadata-service-unit-tests` → `Run openmetadata-service unit tests`
+- Likely cause: injected error inside the read
+
+<details><summary>End of the job log</summary>
+
+```
+[INFO] Running org.openmetadata.service.apps.bundles.insights.workflows.WorkflowStatsBatchAggregationTest
+[INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.177 s -- in org.openmetadata.service.apps.bundles.insights.workflows.WorkflowStatsBatchAggregationTest
+[INFO] Running org.openmetadata.service.apps.bundles.insights.DataInsightsAppTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.256 s -- in org.openmetadata.service.apps.bundles.insights.DataInsightsAppTest
+[INFO] Running org.openmetadata.service.apps.bundles.rdf.RdfIndexingRunContextTest
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.009 s -- in org.openmetadata.service.apps.bundles.rdf.RdfIndexingRunContextTest
+[INFO] Running org.openmetadata.service.apps.bundles.rdf.sink.RdfBulkSinkTest
+##[error]Exception in thread "rdf-sink-writer" java.lang.OutOfMemoryError: simulated: batch too large to write
 ```
 
 </details>

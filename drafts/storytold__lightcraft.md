@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/storytold/lightcraft/issues/new
-- **Stars:** 16281 · **Generated:** 2026-11-22T12:39:46.823Z
+- **Stars:** 16289 · **Generated:** 2026-11-22T18:35:55.565Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -20,22 +20,22 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### SonarCloud (`.github/workflows/sonarcloud.yml`)
 
-- Latest run on `main`: https://github.com/storytold/lightcraft/actions/runs/44984135408 — dark (conclusion: `failure`), 2026-11-22 04:14 UTC
+- Latest run on `main`: https://github.com/storytold/lightcraft/actions/runs/45039142234 — dark (conclusion: `failure`), 2026-11-22 15:35 UTC
 - Dark since: 2026-11-18 23:57 UTC (first run of the current streak)
-- Job / step: `sonarcloud / Tests 1/8` → `Merge this shard's profiles`
-- Likely cause: llvm-profdata could not merge shard 1's profiles (exit 1)
+- Job / step: `sonarcloud / Tests 8/8` → `Merge this shard's profiles`
+- Likely cause: llvm-profdata could not merge shard 8's profiles (exit 1)
 
 <details><summary>End of the job log</summary>
 
 ```
 info: downloading 4 components
   1.100.0-x86_64-unknown-linux-gnu installed - rustc 1.100.0 (0ef1bc386 2026-11-09)
-Raw profiles: 1.5G in 934 files
+Raw profiles: 1.4G in 869 files
 Filesystem      Size  Used Avail Use% Mounted on
-/dev/root       145G   64G   81G  44% /
-warning: profraw/shard-1-11248-16891802771724957895_0.profraw: invalid instrumentation profile data (file header is corrupt)
+/dev/root       145G   64G   82G  44% /
+warning: profraw/shard-8-13165-16734759543913275171_0.profraw: invalid instrumentation profile data (file header is corrupt)
 error: no profile can be merged
-##[error]shard 1 wrote a truncated or corrupt coverage profile: profraw/shard-1-11248-16891802771724957895_0.profraw: invalid instrumentation profile data (file header is corrupt)
+##[error]shard 8 wrote a truncated or corrupt coverage profile: profraw/shard-8-13165-16734759543913275171_0.profraw: invalid instrumentation profile data (file header is corrupt)
 ```
 
 </details>
