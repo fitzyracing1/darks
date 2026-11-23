@@ -4,12 +4,12 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/ItsNotRexed/Leonida/issues/new
-- **Stars:** 15066 · **Generated:** 2026-11-23T00:56:34.623Z
+- **Stars:** 16970 · **Generated:** 2026-11-23T06:58:02.022Z
 - Nothing in this file has been sent anywhere.
 
 ## Skipped: upstream already tracking
 
-- Runtime (`.github/workflows/runtime.yml`): [issue #2831](https://github.com/ItsNotRexed/Leonida/issues/2831) "Low disk space: the port runs without the 300 GB assets stage; document a run-only build (check,shaders,runtime)", [issue #1725](https://github.com/ItsNotRexed/Leonida/issues/1725) "Runtime tests d3d12_descriptor, d3d12_copy_xfmt and d3d12_vulkan_device fail on Intel UHD 770 (Xe-LP, 101.7092)"
+- Runtime (`.github/workflows/runtime.yml`): [issue #4420](https://github.com/ItsNotRexed/Leonida/issues/4420) "NVIDIA GTX 1060 (Pascal, 582.78): three runtime GPU tests fail on clean main", [issue #2831](https://github.com/ItsNotRexed/Leonida/issues/2831) "Low disk space: the port runs without the 300 GB assets stage; document a run-only build (check,shaders,runtime)", [issue #1725](https://github.com/ItsNotRexed/Leonida/issues/1725) "Runtime tests d3d12_descriptor, d3d12_copy_xfmt and d3d12_vulkan_device fail on Intel UHD 770 (Xe-LP, 101.7092)", [issue #4810](https://github.com/ItsNotRexed/Leonida/issues/4810) "d3d12_vulkan_device_test: 8 invalid-argument cases where the layer accepts what an older NVIDIA runtime refuses (per-vendor divergence, needs a ruling)"
 
 These workflows are left out of the body below.
 
@@ -24,21 +24,21 @@ CI: "CI" workflow failing on main since 2026-11-22
 <!-- BEGIN BODY -->
 Hi! The **CI** workflow (`.github/workflows/ci.yml`) on `main` has been failing since 2026-11-22. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/ItsNotRexed/Leonida/actions/runs/45057423436 — dark (conclusion: `failure`), 2026-11-22 18:51 UTC
+- Latest run on `main`: https://github.com/ItsNotRexed/Leonida/actions/runs/45076072668 — dark (conclusion: `failure`), 2026-11-22 22:09 UTC
 - Dark since: 2026-11-22 13:02 UTC (first run of the current streak)
-- Job / step: `check` → `Tests (standard library only, no game data)`
-- Likely cause: FAILED (failures=1)
+- Job / step: `semantic-tests (ubuntu-latest)` → `Translator semantic tests`
+- Likely cause: FAILED (failures=7, errors=2, expected failures=1)
 
 <details><summary>End of the job log</summary>
 
 ```
-Traceback (most recent call last):
-  File "D:\a\Leonida\Leonida\tests\test_report_paths.py", line 110, in test_macos_case_sensitive_volume_keeps_case
-    self.assertNotEqual(report_paths.path_key("/tmp/leonida_x/R.json"), report_paths.path_key("/tmp/leonida_x/r.json"))
-AssertionError: 'd:\\tmp\\leonida_x\\r.json' == 'd:\\tmp\\leonida_x\\r.json'
+    apply_mutation(path, old, new)
+  File "/home/runner/work/Leonida/Leonida/tests/semantic/test_mutations.py", line 120, in apply_mutation
+    raise AssertionError(f"mutation anchor must occur exactly once: {old!r}")
+AssertionError: mutation anchor must occur exactly once: '        elif op == "v_mul_legacy_f32":\n            # Legacy multiply treats 0 * anything (inf/NaN included) as 0.\n            x, y = self.src_f(a[1]), self.src…
 ----------------------------------------------------------------------
-Ran 15 tests in 3.802s
-FAILED (failures=1)
+Ran 7456 tests in 447.043s
+FAILED (failures=7, errors=2, expected failures=1)
 ##[error]Process completed with exit code 1.
 ```
 

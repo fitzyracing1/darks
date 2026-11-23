@@ -4,60 +4,36 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/storytold/lightcraft/issues/new
-- **Stars:** 16304 · **Generated:** 2026-11-23T00:56:34.623Z
+- **Stars:** 16312 · **Generated:** 2026-11-23T06:58:02.022Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 2 workflows dark on main ("SonarCloud", "Release")
+CI: "SonarCloud" workflow failing on main since 2026-11-18
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
+Hi! The **SonarCloud** workflow (`.github/workflows/sonarcloud.yml`) on `main` has been failing since 2026-11-18. Here is what I saw, in case it's useful:
 
-### SonarCloud (`.github/workflows/sonarcloud.yml`)
-
-- Latest run on `main`: https://github.com/storytold/lightcraft/actions/runs/45074985073 — dark (conclusion: `failure`), 2026-11-22 21:57 UTC
+- Latest run on `main`: https://github.com/storytold/lightcraft/actions/runs/45100534009 — dark (conclusion: `failure`), 2026-11-23 02:29 UTC
 - Dark since: 2026-11-18 23:57 UTC (first run of the current streak)
-- Job / step: `sonarcloud / SonarCloud Scan` → `Fail on Rust shard test failures`
-- Likely cause: Coverage shard 8 tests failed (exit 100); analysis was still uploaded
+- Job / step: `sonarcloud / Tests 4/8` → `Merge this shard's profiles`
+- Likely cause: llvm-profdata could not merge shard 4's profiles (exit 1)
 
 <details><summary>End of the job log</summary>
 
 ```
-23:44:54.533 INFO  ------------- Upload SCA dependency files
-23:44:55.861 INFO  Successfully sent architecture data
-23:44:58.262 INFO  Sensor cache published successfully
-23:44:59.332 INFO  Analysis total time: 2:04.062 min
-23:44:59.334 INFO  SonarScanner Engine completed successfully
-23:44:59.734 INFO  EXECUTION SUCCESS
-23:44:59.735 INFO  Total time: 2:10.811s
-##[error]Coverage shard 1 tests failed (exit 100); analysis was still uploaded
-```
-
-</details>
-
-### Release (`.github/workflows/release.yml`)
-
-- Latest run on `main`: https://github.com/storytold/lightcraft/actions/runs/44975443260 — dark (conclusion: `failure`), 2026-11-22 02:18 UTC
-- Dark since: 2026-11-21 02:17 UTC (first run of the current streak)
-- Job / step: `release / Linux x86_64` → `Run storytold/craft-common-actions/actions/rust-channel@main`
-- Likely cause: ModuleNotFoundError: No module named 'tomllib'
-
-<details><summary>End of the job log</summary>
-
-```
-##[end-action id=__storytold_craft-common-actions_3.__storytold_craft-common-actions.__run;outcome=success;conclusion=success;duration_ms=600]
-##[end-action id=__storytold_craft-common-actions_3.__storytold_craft-common-actions;outcome=success;conclusion=success;duration_ms=604]
-##[start-action display=Run python3 "$CHANNEL";id=rust.channel]
-Traceback (most recent call last):
-  File "/home/runner/work/_actions/storytold/craft-common-actions/main/actions/rust-channel/channel.py", line 9, in <module>
-    import tomllib
-ModuleNotFoundError: No module named 'tomllib'
-##[error]Process completed with exit code 1.
+info: downloading 4 components
+  1.100.0-x86_64-unknown-linux-gnu installed - rustc 1.100.0 (0ef1bc386 2026-11-09)
+Raw profiles: 1.4G in 877 files
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/root       145G   64G   82G  44% /
+warning: profraw/shard-4-9571-15144630631723491570_0.profraw: invalid instrumentation profile data (file header is corrupt)
+error: no profile can be merged
+##[error]shard 4 wrote a truncated or corrupt coverage profile: profraw/shard-4-9571-15144630631723491570_0.profraw: invalid instrumentation profile data (file header is corrupt)
 ```
 
 </details>

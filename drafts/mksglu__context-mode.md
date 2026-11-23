@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/mksglu/context-mode/issues/new
-- **Stars:** 34397 · **Generated:** 2026-11-23T00:56:34.623Z
+- **Stars:** 34406 · **Generated:** 2026-11-23T06:58:02.022Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -18,7 +18,7 @@ CI: "weekly" workflow failing on main since 2026-11-09
 <!-- BEGIN BODY -->
 Hi! The **weekly** workflow (`.github/workflows/weekly.yml`) on `main` has been failing since 2026-11-09. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/mksglu/context-mode/actions/runs/43802331794 — dark (conclusion: `failure`), 2026-11-16 04:09 UTC
+- Latest run on `main`: https://github.com/mksglu/context-mode/actions/runs/45110146820 — dark (conclusion: `failure`), 2026-11-23 04:09 UTC
 - Dark since: 2026-11-09 04:09 UTC (first run of the current streak)
 - Job / step: `weekly` → `Run node scripts/release/smoke.mjs --ref release --agent claude-code`
 - Likely cause: Error [ERR_MODULE_NOT_FOUND]: Cannot find package '@modelcontextprotocol/sdk' imported from /home/runner/work/context-mode/context-mode/scripts/release/smoke.mjs
@@ -32,7 +32,7 @@ Hi! The **weekly** workflow (`.github/workflows/weekly.yml`) on `main` has been 
     at ModuleJob.syncLink (node:internal/modules/esm/module_job:276:33) {
   code: 'ERR_MODULE_NOT_FOUND'
 }
-Node.js v24.22.2
+Node.js v24.22.3
 ##[error]Process completed with exit code 1.
 ```
 

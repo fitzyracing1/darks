@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/storytold/craft-anything/issues/new
-- **Stars:** 41220 · **Generated:** 2026-11-23T00:56:34.623Z
+- **Stars:** 41491 · **Generated:** 2026-11-23T06:58:02.022Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -18,22 +18,22 @@ CI: "FreeBSD" workflow failing on main since 2026-11-22
 <!-- BEGIN BODY -->
 Hi! The **FreeBSD** workflow (`.github/workflows/freebsd.yml`) on `main` has been failing since 2026-11-22. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/storytold/craft-anything/actions/runs/44976169281 — dark (conclusion: `failure`), 2026-11-22 02:27 UTC
+- Latest run on `main`: https://github.com/storytold/craft-anything/actions/runs/45100419673 — dark (conclusion: `failure`), 2026-11-23 02:28 UTC
 - Dark since: 2026-11-22 02:27 UTC (first run of the current streak)
-- Job / step: `freebsd / FreeBSD 15 aarch64 (build + test)` → `Set up the aarch64 cross toolchain`
-- Likely cause: error: could not fetch https://download.freebsd.org/releases/arm64/aarch64/15.1-RELEASE/base.txz after 3 attempts
+- Job / step: `freebsd / FreeBSD 15 x86_64 (build + test)` → `Build and test`
+- Likely cause: test result: FAILED. 121 passed; 1 failed; 0 ignored; 0 measured; 0 filtered out; finished in 2.28s
 
 <details><summary>End of the job log</summary>
 
 ```
- 82 148.3M  82 121.9M   0      0 711.0k      0   03:33   02:55   00:38 625.7k
- 82 148.3M  82 122.5M   0      0 710.4k      0   03:33   02:56   00:37 581.6k
- 82 148.3M  82 123.1M   0      0 709.6k      0   03:34   02:57   00:37 591.5k
- 83 148.3M  83 123.7M   0      0 709.1k      0   03:34   02:58   00:36 578.9k
- 83 148.3M  83 124.3M   0      0 708.5k      0   03:34   02:59   00:35 566.1k
-curl: (28) Operation timed out after 180000 milliseconds with 130645468 out of 155595600 bytes received
-error: could not fetch https://download.freebsd.org/releases/arm64/aarch64/15.1-RELEASE/base.txz after 3 attempts
-##[error]Process completed with exit code 1.
+        },
+    ],
+}
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+failures:
+    a_check_shows_the_claims_that_dont_hold_and_the_rest_on_request
+test result: FAILED. 121 passed; 1 failed; 0 ignored; 0 measured; 0 filtered out; finished in 2.28s
+##[error]Process completed with exit code 101.
 ```
 
 </details>

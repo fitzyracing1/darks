@@ -4,14 +4,14 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/storytold/photocraft/issues/new
-- **Stars:** 81045 · **Generated:** 2026-11-23T00:56:34.623Z
+- **Stars:** 81081 · **Generated:** 2026-11-23T06:58:02.022Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 5 workflows dark on main ("FreeBSD", "Perf (nightly)", "Release", +2 more)
+CI: 3 workflows dark on main ("FreeBSD", "Perf (nightly)", "Release")
 <!-- END TITLE -->
 
 ## Body
@@ -43,7 +43,7 @@ error: could not fetch https://download.freebsd.org/releases/arm64/aarch64/15.1-
 
 ### Perf (nightly) (`.github/workflows/perf-nightly.yml`)
 
-- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/44980802471 — dark (conclusion: `cancelled`), 2026-11-22 03:28 UTC
+- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/45106488160 — dark (conclusion: `cancelled`), 2026-11-23 03:31 UTC
 - Dark since: 2026-11-18 03:29 UTC (first run of the current streak)
 - Job / step: `perf (macOS, Apple GPU)` → `Run benchmarks`
 - Likely cause: The job has exceeded the maximum execution time of 2h0m0s
@@ -51,13 +51,13 @@ error: could not fetch https://download.freebsd.org/releases/arm64/aarch64/15.1-
 <details><summary>End of the job log</summary>
 
 ```
-   Compiling egui_extras v0.37.0 (https://github.com/storytold/egui.git?rev=8a3c5ecb29ab8679d57035f2cb51d7ec8a5c080f#8a3c5ecb)
    Compiling photocraft-gpu v0.23.1 (/Users/runner/work/photocraft/photocraft/crates/gpu)
    Compiling kittest v0.5.0
    Compiling memory-stats v1.2.0
    Compiling open v5.4.5
-   Compiling egui_kittest v0.37.0 (https://github.com/storytold/egui.git?rev=8a3c5ecb29ab8679d57035f2cb51d7ec8a5c080f#8a3c5ecb)
+   Compiling egui_kittest v0.37.0 (https://github.com/storytold/egui.git?rev=f5025284445ea19c35f746d96fc0b75468b3f560#f5025284)
    Compiling photocraft-testkit v0.23.1 (/Users/runner/work/photocraft/photocraft/crates/testkit)
+   Compiling photocraft-engine v0.23.1 (/Users/runner/work/photocraft/photocraft/crates/engine)
 ##[error]The operation was canceled.
 ```
 
@@ -65,66 +65,22 @@ error: could not fetch https://download.freebsd.org/releases/arm64/aarch64/15.1-
 
 ### Release (`.github/workflows/release.yml`)
 
-- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/44976646035 — dark (conclusion: `failure`), 2026-11-22 02:33 UTC
+- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/45101030021 — dark (conclusion: `failure`), 2026-11-23 02:34 UTC
 - Dark since: 2026-11-21 02:32 UTC (first run of the current streak)
-- Job / step: `release / Linux aarch64` → `Run storytold/craft-common-actions/actions/rust-channel@main`
-- Likely cause: ModuleNotFoundError: No module named 'tomllib'
+- Job / step: `release / FreeBSD x86_64` → `Build and package`
+- Likely cause: process didn't exit successfully: '/root/.rustup/toolchains/1.100.0-x86_64-unknown-freebsd/bin/rustc --crate-name photocraft --edition=2024 apps/photocraft/src/main.rs --error-format=json --json=diagnostic-rendered-ansi…
 
 <details><summary>End of the job log</summary>
 
 ```
-##[end-action id=__storytold_craft-common-actions_3.__storytold_craft-common-actions.__run;outcome=success;conclusion=success;duration_ms=567]
-##[end-action id=__storytold_craft-common-actions_3.__storytold_craft-common-actions;outcome=success;conclusion=success;duration_ms=573]
-##[start-action display=Run python3 "$CHANNEL";id=rust.channel]
-Traceback (most recent call last):
-  File "/home/runner/work/_actions/storytold/craft-common-actions/main/actions/rust-channel/channel.py", line 9, in <module>
-    import tomllib
-ModuleNotFoundError: No module named 'tomllib'
-##[error]Process completed with exit code 1.
-```
-
-</details>
-
-### SonarCloud (`.github/workflows/sonarcloud.yml`)
-
-- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/45080918084 — dark (conclusion: `failure`), 2026-11-22 23:01 UTC
-- Dark since: 2026-11-22 05:03 UTC (first run of the current streak)
-- Job / step: `sonarcloud / SonarCloud Scan` → `Fail on Rust shard test failures`
-- Likely cause: Coverage shard 3 tests failed (exit 100); analysis was still uploaded
-
-<details><summary>End of the job log</summary>
-
-```
-00:33:05.430 INFO  ------------- Upload SCA dependency files
-00:33:06.705 INFO  Successfully sent architecture data
-00:33:08.263 INFO  Sensor cache published successfully
-00:33:11.805 INFO  Analysis total time: 3:08.895 min
-00:33:11.806 INFO  SonarScanner Engine completed successfully
-00:33:11.954 INFO  EXECUTION SUCCESS
-00:33:11.955 INFO  Total time: 3:13.729s
-##[error]Coverage shard 3 tests failed (exit 100); analysis was still uploaded
-```
-
-</details>
-
-### CI (`.github/workflows/ci.yml`)
-
-- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/45084093244 — dark (conclusion: `failure`), 2026-11-22 23:35 UTC
-- Dark since: 2026-11-22 22:17 UTC (first run of the current streak)
-- Job / step: `gate / test 3/4 (artcraft-k8s-main)` → `Gate`
-- Likely cause: skip  panic_hunt
-
-<details><summary>End of the job log</summary>
-
-```
-       4: <photocraft_engine_core::select_mask_edits::tests::thin_edits_across_a_huge_canvas_paint_only_their_tiles::{closure#0} as core::ops::function::FnOnce<()>>::call_once
-    note: Some details are omitted, run with `RUST_BACKTRACE=full` for a verbose backtrace.
-error: test run failed
-CI summary:
-error: ci failed at `test`
-  FAIL  test: cargo nextest run --profile ci --binaries-metadata /home/runner/_work/photocraft/photocraft/target/nextest-archive/target/nextest/binaries-metadata.json --cargo-metadata /home/runner/_work/photocraft/photo…
-  skip  panic_hunt
-##[error]Process completed with exit code 1.
+   Compiling quick-xml v0.42.0
+   Compiling plist v1.10.3
+   Compiling open v5.4.5
+   Compiling photocraft-tablet v0.23.1 (/home/runner/work/photocraft/photocraft/crates/tablet)
+error: could not compile `photocraft` (bin "photocraft")
+Caused by:
+  process didn't exit successfully: `/root/.rustup/toolchains/1.100.0-x86_64-unknown-freebsd/bin/rustc --crate-name photocraft --edition=2024 apps/photocraft/src/main.rs --error-format=json --json=diagnostic-rendered-an…
+##[error]Process completed with exit code 101.
 ```
 
 </details>

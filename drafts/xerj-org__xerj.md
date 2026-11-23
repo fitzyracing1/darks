@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/xerj-org/xerj/issues/new
-- **Stars:** 19421 · **Generated:** 2026-11-23T00:56:34.623Z
+- **Stars:** 19490 · **Generated:** 2026-11-23T06:58:02.022Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
@@ -21,7 +21,7 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### Release (`.github/workflows/release.yml`)
 
-- Latest run on `main`: https://github.com/xerj-org/xerj/actions/runs/44980788530 — dark (conclusion: `cancelled`), 2026-11-22 03:28 UTC
+- Latest run on `main`: https://github.com/xerj-org/xerj/actions/runs/45106337949 — dark (conclusion: `cancelled`), 2026-11-23 03:30 UTC
 - Dark since: 2026-11-06 03:27 UTC (first run of the current streak)
 - Job / step: `Build aarch64-apple-darwin`
 - Likely cause: The configuration 'macos-14-arm64-us-default' is not supported

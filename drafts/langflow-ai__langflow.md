@@ -4,13 +4,13 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/langflow-ai/langflow/issues/new
-- **Stars:** 156852 · **Generated:** 2026-11-23T00:56:34.623Z
+- **Stars:** 156860 · **Generated:** 2026-11-23T06:58:02.022Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 6 workflows dark on main ("Deploy Storybook to GitHub Pages", "Cross-Bundle Test", "Store pytest durations", +3 more)
+CI: 4 workflows dark on main ("Deploy Storybook to GitHub Pages", "Store pytest durations", "GP Download Translations", +1 more)
 <!-- END TITLE -->
 
 ## Body
@@ -36,28 +36,6 @@ Creating Pages deployment with payload:
 	"oidc_token": "***"
 }
 ##[error]Creating Pages deployment failed
-```
-
-</details>
-
-### Cross-Bundle Test (`.github/workflows/cross-bundle-test.yml`)
-
-- Latest run on `main`: https://github.com/langflow-ai/langflow/actions/runs/43815980710 — dark (conclusion: `failure`), 2026-11-16 06:19 UTC
-- Dark since: 2026-10-26 06:25 UTC (first run of the current streak)
-- Job / step: `src/bundles/google (py3.12)` → `Run the bundle's own tests`
-- Likely cause: =========== 2 failed, 174 passed, 6 deselected, 2 warnings in 5.89s ============
-
-<details><summary>End of the job log</summary>
-
-```
--- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
-=========================== short test summary info ============================
-FAILED src/bundles/google/tests/test_workspace_network_errors.py::test_network_failures_are_actionable_without_replaying_the_action[False-failure0-timeout-timed out] - assert TimeoutError('private-payload user@example.c…
- +  where TimeoutError('private-payload user@example.com https://example.com/private?token=[redacted] = IntegrationNetworkError("Langflow could not reach gmail.googleapis.com (request timed out). Check this server's outbo…
-FAILED src/bundles/google/tests/test_workspace_network_errors.py::test_network_failures_are_actionable_without_replaying_the_action[True-failure0-timeout-timed out] - assert TimeoutError('private-payload user@example.co…
- +  where TimeoutError('private-payload user@example.com https://example.com/private?token=[redacted] = IntegrationNetworkError("Langflow could not reach gmail.googleapis.com (request timed out). Check this server's outbo…
-=========== 2 failed, 174 passed, 6 deselected, 2 warnings in 5.89s ============
-##[error]Process completed with exit code 1.
 ```
 
 </details>
@@ -108,31 +86,9 @@ FAILED languages: ['fr', 'ja', 'es', 'de', 'pt', 'zh-Hans']
 
 ### Nightly Build (`.github/workflows/nightly_build.yml`)
 
-- Latest run on `main`: https://github.com/langflow-ai/langflow/actions/runs/44966434080 — dark (conclusion: `failure`), 2026-11-22 00:24 UTC
+- Latest run on `main`: https://github.com/langflow-ai/langflow/actions/runs/45088580511 — dark (conclusion: `failure`), 2026-11-23 00:24 UTC
 - Dark since: 2026-11-18 00:22 UTC (first run of the current streak)
-- Likely cause: no cause found in annotations
-
-### A11y / IBM Equal Access Scans (`.github/workflows/a11y-scan.yml`)
-
-- Latest run on `main`: https://github.com/langflow-ai/langflow/actions/runs/44975215053 — dark (conclusion: `failure`), 2026-11-22 02:15 UTC
-- Dark since: 2026-11-22 02:15 UTC (first run of the current streak)
-- Job / step: `Python route scan (real backend, nightly)` → `Run Python Route Scan`
-- Likely cause: No files were found with the provided path: python-route-scan. No artifacts will be uploaded.
-
-<details><summary>End of the job log</summary>
-
-```
-    )
-    ^
-  File "/home/runner/work/_temp/setup-uv-cache/archive-v0/Dz5KtB5EfjvbCIN9/lib/python3.13/site-packages/playwright/_impl/_connection.py", line 563, in wrap_api_call
-    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
-playwright._impl._errors.TimeoutError: Page.goto: Timeout 45000ms exceeded.
-Call log:
-  - navigating to "http://localhost:3000/flows", waiting until "domcontentloaded"
-##[error]Process completed with exit code 1.
-```
-
-</details>
+- Likely cause: cause not readable (GET /repos/langflow-ai/langflow/actions/runs/45088580511/jobs?filter=latest&per_)
 
 If this is already known or expected, feel free to close. Thanks for maintaining langflow!
 

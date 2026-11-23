@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/vitejs/vite/issues/new
-- **Stars:** 84044 · **Generated:** 2026-11-23T00:56:34.623Z
+- **Stars:** 84047 · **Generated:** 2026-11-23T06:58:02.022Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title

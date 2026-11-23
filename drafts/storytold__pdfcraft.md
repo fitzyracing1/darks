@@ -4,36 +4,36 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/storytold/pdfcraft/issues/new
-- **Stars:** 21476 · **Generated:** 2026-11-23T00:56:34.623Z
+- **Stars:** 21499 · **Generated:** 2026-11-23T06:58:02.022Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: "Release" workflow failing on main since 2026-11-21
+CI: "Nightly macOS" workflow failing on main since 2026-11-23
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! The **Release** workflow (`.github/workflows/release.yml`) on `main` has been failing since 2026-11-21. Here is what I saw, in case it's useful:
+Hi! The **Nightly macOS** workflow (`.github/workflows/nightly-macos.yml`) on `main` has been failing since 2026-11-23. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/storytold/pdfcraft/actions/runs/44976200146 — dark (conclusion: `failure`), 2026-11-22 02:27 UTC
-- Dark since: 2026-11-21 02:26 UTC (first run of the current streak)
-- Job / step: `release / Linux aarch64` → `Run storytold/craft-common-actions/actions/rust-channel@main`
-- Likely cause: ModuleNotFoundError: No module named 'tomllib'
+- Latest run on `main`: https://github.com/storytold/pdfcraft/actions/runs/45101764325 — dark (conclusion: `failure`), 2026-11-23 02:42 UTC
+- Dark since: 2026-11-23 02:42 UTC (first run of the current streak)
+- Job / step: `gate / gate (macos-latest)` → `Gate`
+- Likely cause: error: 1 target failed:
 
 <details><summary>End of the job log</summary>
 
 ```
-##[end-action id=__storytold_craft-common-actions_3.__storytold_craft-common-actions.__run;outcome=success;conclusion=success;duration_ms=550]
-##[end-action id=__storytold_craft-common-actions_3.__storytold_craft-common-actions;outcome=success;conclusion=success;duration_ms=557]
-##[start-action display=Run python3 "$CHANNEL";id=rust.channel]
-Traceback (most recent call last):
-  File "/home/runner/work/_actions/storytold/craft-common-actions/main/actions/rust-channel/channel.py", line 9, in <module>
-    import tomllib
-ModuleNotFoundError: No module named 'tomllib'
-##[error]Process completed with exit code 1.
+running 0 tests
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+   Doc-tests pdfcraft_xfdf
+running 0 tests
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+error: 1 target failed:
+    `-p pdfcraft-ui-egui --lib`
+##[error]Process completed with exit code 101.
 ```
 
 </details>

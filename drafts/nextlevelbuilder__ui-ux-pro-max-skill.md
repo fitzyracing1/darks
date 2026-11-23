@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/issues/new
-- **Stars:** 152855 · **Generated:** 2026-11-23T00:56:34.623Z
+- **Stars:** 152979 · **Generated:** 2026-11-23T06:58:02.022Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -20,7 +20,7 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### Release (`.github/workflows/release.yml`)
 
-- Latest run on `main`: https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/actions/runs/44983721194 — dark (conclusion: `failure`), 2026-11-22 04:08 UTC
+- Latest run on `main`: https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/actions/runs/45109995085 — dark (conclusion: `failure`), 2026-11-23 04:08 UTC
 - Dark since: 2026-10-03 16:05 UTC (first run of the current streak)
 - Job / step: `Semantic release` → `Run semantic-release`
 - Likely cause: at default (file:///home/runner/.npm/_npx/63271f8df082dd7b/node_modules/@semantic-release/npm/lib/get-error.js:7:10)
@@ -42,7 +42,7 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### Refresh upstream catalogs (`.github/workflows/refresh-catalogs.yml`)
 
-- Latest run on `main`: https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/actions/runs/43798288919 — dark (conclusion: `failure`), 2026-11-16 03:27 UTC
+- Latest run on `main`: https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/actions/runs/45105873828 — dark (conclusion: `failure`), 2026-11-23 03:25 UTC
 - Dark since: 2026-10-05 03:42 UTC (first run of the current streak)
 - Job / step: `Build review-only catalog candidates` → `Report refresh validation failure`
 - Likely cause: A catalog candidate failed validation; inspect the uploaded review artifact.
@@ -51,11 +51,11 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ```
 Finished uploading artifact content to blob storage!
-SHA256 digest of uploaded artifact zip is 6a951617a0d7b967588686c9aaee5d684614a433f20a8ffb047a5fbc338d5ff7
+SHA256 digest of uploaded artifact zip is ee75b7984b7f63060d9a9a59911289323cfdd60df3933ce104e4fb46f7023212
 Finalizing artifact upload
-Artifact catalog-refresh-review-43798288919.zip successfully finalized. Artifact ID 14195053587
-Artifact catalog-refresh-review-43798288919 has been successfully uploaded! Final size is 144148 bytes. Artifact ID is 14195053587
-Artifact download URL: https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/actions/runs/43798288919/artifacts/14195053587
+Artifact catalog-refresh-review-45105873828.zip successfully finalized. Artifact ID 14786579058
+Artifact catalog-refresh-review-45105873828 has been successfully uploaded! Final size is 144147 bytes. Artifact ID is 14786579058
+Artifact download URL: https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/actions/runs/45105873828/artifacts/14786579058
 A catalog candidate failed validation; inspect the uploaded review artifact.
 ##[error]Process completed with exit code 1.
 ```
