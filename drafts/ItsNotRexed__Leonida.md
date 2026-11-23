@@ -4,12 +4,12 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/ItsNotRexed/Leonida/issues/new
-- **Stars:** 16970 · **Generated:** 2026-11-23T06:58:02.022Z
+- **Stars:** 19336 · **Generated:** 2026-11-23T12:44:06.505Z
 - Nothing in this file has been sent anywhere.
 
 ## Skipped: upstream already tracking
 
-- Runtime (`.github/workflows/runtime.yml`): [issue #4420](https://github.com/ItsNotRexed/Leonida/issues/4420) "NVIDIA GTX 1060 (Pascal, 582.78): three runtime GPU tests fail on clean main", [issue #2831](https://github.com/ItsNotRexed/Leonida/issues/2831) "Low disk space: the port runs without the 300 GB assets stage; document a run-only build (check,shaders,runtime)", [issue #1725](https://github.com/ItsNotRexed/Leonida/issues/1725) "Runtime tests d3d12_descriptor, d3d12_copy_xfmt and d3d12_vulkan_device fail on Intel UHD 770 (Xe-LP, 101.7092)", [issue #4810](https://github.com/ItsNotRexed/Leonida/issues/4810) "d3d12_vulkan_device_test: 8 invalid-argument cases where the layer accepts what an older NVIDIA runtime refuses (per-vendor divergence, needs a ruling)"
+- Runtime (`.github/workflows/runtime.yml`): [issue #4420](https://github.com/ItsNotRexed/Leonida/issues/4420) "NVIDIA GTX 1060 (Pascal, 582.78): three runtime GPU tests fail on clean main", [issue #1725](https://github.com/ItsNotRexed/Leonida/issues/1725) "Runtime tests d3d12_descriptor, d3d12_copy_xfmt and d3d12_vulkan_device fail on Intel UHD 770 (Xe-LP, 101.7092)", [issue #4810](https://github.com/ItsNotRexed/Leonida/issues/4810) "d3d12_vulkan_device_test: 8 invalid-argument cases where the layer accepts what an older NVIDIA runtime refuses (per-vendor divergence, needs a ruling)"
 
 These workflows are left out of the body below.
 
@@ -24,21 +24,21 @@ CI: "CI" workflow failing on main since 2026-11-22
 <!-- BEGIN BODY -->
 Hi! The **CI** workflow (`.github/workflows/ci.yml`) on `main` has been failing since 2026-11-22. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/ItsNotRexed/Leonida/actions/runs/45076072668 — dark (conclusion: `failure`), 2026-11-22 22:09 UTC
+- Latest run on `main`: https://github.com/ItsNotRexed/Leonida/actions/runs/45089467016 — dark (conclusion: `failure`), 2026-11-23 00:33 UTC
 - Dark since: 2026-11-22 13:02 UTC (first run of the current streak)
-- Job / step: `semantic-tests (ubuntu-latest)` → `Translator semantic tests`
-- Likely cause: FAILED (failures=7, errors=2, expected failures=1)
+- Job / step: `translator-tests` → `Translator tests`
+- Likely cause: 1 failed, 1637 passed, 11 skipped, 99 subtests passed in 48.68s
 
 <details><summary>End of the job log</summary>
 
 ```
-    apply_mutation(path, old, new)
-  File "/home/runner/work/Leonida/Leonida/tests/semantic/test_mutations.py", line 120, in apply_mutation
-    raise AssertionError(f"mutation anchor must occur exactly once: {old!r}")
-AssertionError: mutation anchor must occur exactly once: '        elif op == "v_mul_legacy_f32":\n            # Legacy multiply treats 0 * anything (inf/NaN included) as 0.\n            x, y = self.src_f(a[1]), self.src…
-----------------------------------------------------------------------
-Ran 7456 tests in 447.043s
-FAILED (failures=7, errors=2, expected failures=1)
+tests/test_u16_high_half.py:83: AssertionError
+=========================== short test summary info ============================
+FAILED tests/test_u16_high_half.py::test_d16_buffer_store_no_redundant_extract_after_shr16 - AssertionError: error: line 153: Operand '135[%135]' requires a previous definition
+    %_arr_uint_135 = OpTypeArray %uint %135
+assert 1 == 0
+ +  where 1 = CompletedProcess(args=['spirv-val', '--target-env', 'vulkan1.2', '/tmp/pytest-of-runner/pytest-0/test_d16_buffer_store...r="error: line 153: Operand '135[%135]' requires a previous definition\n  %_arr_uint…
+1 failed, 1637 passed, 11 skipped, 99 subtests passed in 48.68s
 ##[error]Process completed with exit code 1.
 ```
 

@@ -1,8 +1,8 @@
 <!-- dark-draft: wangzan101/Mika -->
-<!-- draft-state: ready -->
+<!-- draft-state: resolved -->
 # Upstream issue draft: wangzan101/Mika
 
-- **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
+- **Status:** resolved — lit again (2026-11-23); nothing to file
 - **Would be filed at:** https://github.com/wangzan101/Mika/issues/new
 - **Stars:** 9687 · **Generated:** 2026-11-23T06:58:02.022Z
 - Nothing in this file has been sent anywhere.

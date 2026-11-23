@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/storytold/vectorcraft/issues/new
-- **Stars:** 12027 · **Generated:** 2026-11-23T06:58:02.022Z
+- **Stars:** 12034 · **Generated:** 2026-11-23T12:44:06.505Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -18,21 +18,21 @@ CI: "FreeBSD" workflow failing on main since 2026-11-22
 <!-- BEGIN BODY -->
 Hi! The **FreeBSD** workflow (`.github/workflows/freebsd.yml`) on `main` has been failing since 2026-11-22. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/storytold/vectorcraft/actions/runs/44984725992 — dark (conclusion: `failure`), 2026-11-22 04:21 UTC
+- Latest run on `main`: https://github.com/storytold/vectorcraft/actions/runs/45111661096 — dark (conclusion: `failure`), 2026-11-23 04:24 UTC
 - Dark since: 2026-11-22 04:21 UTC (first run of the current streak)
 - Job / step: `freebsd / FreeBSD 15 x86_64 (build + test)` → `Build and test`
-- Likely cause: error: test failed, to rerun pass '-p vectorcraft-engine --lib'
+- Likely cause: help: consider removing the dependency on 'thiserror'
 
 <details><summary>End of the job log</summary>
 
 ```
-assertion `left == right` failed: turned 180: {"fonts":[{"area":false,"family":"Source Sans 3","leading":null,"score":0.889,"size":39.92530781914129,"style":"Regular","tracking":0.0}],"ids":[9],"texts":["no"],"truncated…
-  left: Array [String("no")]
- right: Array [String("no.")]
-failures:
-    cmd::retype::tests::turned_near_matched_round_glyphs_keep_the_line_turn
-test result: FAILED. 8293 passed; 1 failed; 15 ignored; 0 measured; 0 filtered out; finished in 247.85s
-error: test failed, to rerun pass `-p vectorcraft-engine --lib`
+   |
+20 | craft-web-api = { git = "https://github.com/storytold/craft-libs", rev = "50b0ee7bf811e363b5f238382b5c77318cf33e46", version = "0.1.0" }
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   |
+   = note: `cargo::unused_dependencies` is set to `warn` by default
+help: consider removing the dependency on `craft-web-api`
+warning: `vectorcraft-web` (manifest) generated 1 warning
 ##[error]Process completed with exit code 101.
 ```
 

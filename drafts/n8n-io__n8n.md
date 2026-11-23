@@ -4,76 +4,24 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/n8n-io/n8n/issues/new
-- **Stars:** 211871 · **Generated:** 2026-11-23T06:58:02.022Z
+- **Stars:** 211899 · **Generated:** 2026-11-23T12:44:06.505Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** latest run was skipped, not failed — probably not worth filing
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 4 workflows dark on master ("Security: Sync from Public", "Test: E2E Coverage Nightly", "Security: Sync Bundle Branches", +1 more)
+CI: "Security: Sync from Public" workflow not completing (runs skipped) on master since 2026-10-13
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! A few workflows on `master` have been dark recently. Details below, in case they're useful:
+Hi! The **Security: Sync from Public** workflow (`.github/workflows/sec-sync-public-to-private.yml`) on `master` has been not completing (runs skipped) since 2026-10-13. Here is what I saw, in case it's useful:
 
-### Security: Sync from Public (`.github/workflows/sec-sync-public-to-private.yml`)
-
-- Latest run on `master`: https://github.com/n8n-io/n8n/actions/runs/45124186647 — dark (conclusion: `skipped`), 2026-11-23 06:27 UTC
+- Latest run on `master`: https://github.com/n8n-io/n8n/actions/runs/45172898577 — dark (conclusion: `skipped`), 2026-11-23 12:17 UTC
 - Dark since: 2026-10-13 15:19 UTC (first run of the current streak)
 - Likely cause: run skipped
-
-### Test: E2E Coverage Nightly (`.github/workflows/test-e2e-coverage-nightly.yml`)
-
-- Latest run on `master`: https://github.com/n8n-io/n8n/actions/runs/45098138809 — dark (conclusion: `failure`), 2026-11-23 02:05 UTC
-- Dark since: 2026-11-21 02:04 UTC (first run of the current streak)
-- Job / step: `E2E (coverage) / Shard 1` → `Run Tests`
-- Likely cause: × "pnpm recursive run" failed in /home/runner/_work/n8n/n8n/packages/
-
-<details><summary>End of the job log</summary>
-
-```
-(node:16275) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
-(Use `node --trace-deprecation ...` to show where the warning was created)
-emit-spec-backend-lcovs: 11 dirs → 11 per-spec backend lcov(s) in coverage/by-spec (115311 seen → 53533 resolved (noPkg 11796, noJs 0, noMap 6437, other 43545))
-[ELIFECYCLE] Command failed with exit code 1.
-Error: ERR_PNPM_RECURSIVE_RUN_FIRST_FAIL
-  × "pnpm recursive run" failed in /home/runner/_work/n8n/n8n/packages/
-  │ quality/testing/playwright
-##[error]Process completed with exit code 1.
-```
-
-</details>
-
-### Security: Sync Bundle Branches (`.github/workflows/sec-sync-bundle-branches.yml`)
-
-- Latest run on `master`: https://github.com/n8n-io/n8n/actions/runs/45104637116 — dark (conclusion: `skipped`), 2026-11-23 03:12 UTC
-- Dark since: 2026-11-21 03:11 UTC (first run of the current streak)
-- Likely cause: run skipped
-
-### Test: E2E Infrastructure (`.github/workflows/test-e2e-infrastructure-reusable.yml`)
-
-- Latest run on `master`: https://github.com/n8n-io/n8n/actions/runs/45097952366 — dark (conclusion: `failure`), 2026-11-23 02:03 UTC
-- Dark since: 2026-11-22 02:03 UTC (first run of the current streak)
-- Job / step: `kafka / Shard 2` → `Run Tests`
-- Likely cause: × "pnpm recursive run" failed in /home/runner/_work/n8n/n8n/packages/
-
-<details><summary>End of the job log</summary>
-
-```
-│ Profile  │ complete │ exec/s │     p50 │     p99 │ errors │ ev lag │ CPU │   RAM │ PG CPU │ pg tx/s │
-├──────────┼──────────┼────────┼─────────┼─────────┼────────┼────────┼─────┼───────┼────────┼─────────┤
-│ v2 eager │   100.0% │  111.2 │ 31241ms │ 32123ms │      0 │    1ms │ 50% │ 705MB │    20% │     586 │
-[ELIFECYCLE] Command failed with exit code 1.
-Error: ERR_PNPM_RECURSIVE_RUN_FIRST_FAIL
-  × "pnpm recursive run" failed in /home/runner/_work/n8n/n8n/packages/
-  │ quality/testing/playwright
-##[error]Process completed with exit code 1.
-```
-
-</details>
 
 If this is already known or expected, feel free to close. Thanks for maintaining n8n!
 

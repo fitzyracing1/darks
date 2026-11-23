@@ -4,19 +4,21 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/tonhowtf/omniget/issues/new
-- **Stars:** 14570 · **Generated:** 2026-11-23T06:58:02.022Z
+- **Stars:** 14573 · **Generated:** 2026-11-23T12:44:06.505Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: "Security" workflow failing on main since 2026-11-23
+CI: 2 workflows dark on main ("Security", "dead-code")
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! The **Security** workflow (`.github/workflows/security.yml`) on `main` has been failing since 2026-11-23. Here is what I saw, in case it's useful:
+Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
+
+### Security (`.github/workflows/security.yml`)
 
 - Latest run on `main`: https://github.com/tonhowtf/omniget/actions/runs/45125701072 — dark (conclusion: `failure`), 2026-11-23 06:40 UTC
 - Dark since: 2026-11-23 06:40 UTC (first run of the current streak)
@@ -34,6 +36,28 @@ Hi! The **Security** workflow (`.github/workflows/security.yml`) on `main` has b
           └── ssh-key v0.7.0-rc.11
               └── russh v0.65.1 (*)
 advisories FAILED
+```
+
+</details>
+
+### dead-code (`.github/workflows/dead-code.yml`)
+
+- Latest run on `main`: https://github.com/tonhowtf/omniget/actions/runs/45145687200 — dark (conclusion: `failure`), 2026-11-23 09:17 UTC
+- Dark since: 2026-11-23 09:17 UTC (first run of the current streak)
+- Job / step: `scan` → `Unused files and dependencies (knip)`
+- Likely cause: ELIFECYCLE  Command failed with exit code 2.
+
+<details><summary>End of the job log</summary>
+
+```
+dashjs              package.json:92:6
+lottie-web          package.json:94:6
+pdfjs-dist          package.json:96:6
+thinking-orbs       package.json:100:6
+Configuration hints (1)
+. (root)    knip.json  Add entry and/or refine project files (898 unused files)
+ ELIFECYCLE  Command failed with exit code 2.
+##[error]Process completed with exit code 2.
 ```
 
 </details>

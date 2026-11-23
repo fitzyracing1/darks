@@ -4,13 +4,13 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/langflow-ai/langflow/issues/new
-- **Stars:** 156860 · **Generated:** 2026-11-23T06:58:02.022Z
+- **Stars:** 156871 · **Generated:** 2026-11-23T12:44:06.505Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 4 workflows dark on main ("Deploy Storybook to GitHub Pages", "Store pytest durations", "GP Download Translations", +1 more)
+CI: 3 workflows dark on main ("Deploy Storybook to GitHub Pages", "GP Download Translations", "Nightly Build")
 <!-- END TITLE -->
 
 ## Body
@@ -36,28 +36,6 @@ Creating Pages deployment with payload:
 	"oidc_token": "***"
 }
 ##[error]Creating Pages deployment failed
-```
-
-</details>
-
-### Store pytest durations (`.github/workflows/store_pytest_durations.yml`)
-
-- Latest run on `main`: https://github.com/langflow-ai/langflow/actions/runs/43819883349 — dark (conclusion: `failure`), 2026-11-16 06:53 UTC
-- Dark since: 2026-11-16 06:53 UTC (first run of the current streak)
-- Job / step: `measure (main) / Unit Tests - Python 3.15 - Group 1` → `Install the project`
-- Likely cause: error: The requested interpreter resolved to Python 3.15.0, which is incompatible with the project's Python requirement: '>=3.10, <3.15'.
-
-<details><summary>End of the job log</summary>
-
-```
-- lfx-paddle: >=3.10, <3.15
-- lfx-serpingapi: >=3.10, <3.15
-- lfx-serply: >=3.10, <3.15
-- lfx-slack: >=3.10, <3.15
-- lfx-toolguard: >=3.10, <3.15
-- lfx-valkey: >=3.10, <3.15
-- lfx-vllm: >=3.10, <3.15
-##[error]Process completed with exit code 2.
 ```
 
 </details>

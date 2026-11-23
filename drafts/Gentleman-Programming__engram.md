@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/Gentleman-Programming/engram/issues/new
-- **Stars:** 8271 · **Generated:** 2026-11-23T06:58:02.022Z
+- **Stars:** 8273 · **Generated:** 2026-11-23T12:44:06.505Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -18,21 +18,21 @@ CI: "Stable release gap audit" workflow failing on main since 2026-11-09
 <!-- BEGIN BODY -->
 Hi! The **Stable release gap audit** workflow (`.github/workflows/release-gap-audit.yml`) on `main` has been failing since 2026-11-09. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/Gentleman-Programming/engram/actions/runs/43840382777 — dark (conclusion: `failure`), 2026-11-16 09:30 UTC
+- Latest run on `main`: https://github.com/Gentleman-Programming/engram/actions/runs/45147003049 — dark (conclusion: `failure`), 2026-11-23 09:26 UTC
 - Dark since: 2026-11-09 09:25 UTC (first run of the current streak)
 - Job / step: `audit` → `Compare published stable releases with main`
-- Likely cause: - **Go latest stable GitHub Release: gap after v3.7.2.** 15 relevant path(s) changed on main: '"cmd/engram/hook_claude.go"', '"cmd/engram/hook_claude_context.go"', '"cmd/engram/hook_claude_context_test.go"', '"cmd/engra…
+- Likely cause: - **Pi npm latest: gap after pi-v0.8.0.** 9 relevant path(s) changed on main: '"plugin/pi/cli.js"', '"plugin/pi/index.ts"', '"plugin/pi/runtime-contract.js"', '"plugin/pi/test/index-source.test.mjs"', '"plugin/pi/test/p…
 
 <details><summary>End of the job log</summary>
 
 ```
 ℹ skipped 0
 ℹ todo 0
-ℹ duration_ms 108.716235
+ℹ duration_ms 56.580221
 ## Stable release gap audit
 Path changes are a release-lag signal, not proof of a fix.
-- **Pi npm latest: gap after pi-v0.8.0.** 5 relevant path(s) changed on main: `"plugin/pi/index.ts"`, `"plugin/pi/runtime-contract.js"`, `"plugin/pi/test/index-source.test.mjs"`, `"plugin/pi/test/received-http-error.tes…
-- **Go latest stable GitHub Release: gap after v3.7.2.** 15 relevant path(s) changed on main: `"cmd/engram/hook_claude.go"`, `"cmd/engram/hook_claude_context.go"`, `"cmd/engram/hook_claude_context_test.go"`, `"cmd/engra…
+- **Pi npm latest: gap after pi-v0.8.0.** 9 relevant path(s) changed on main: `"plugin/pi/cli.js"`, `"plugin/pi/index.ts"`, `"plugin/pi/runtime-contract.js"`, `"plugin/pi/test/index-source.test.mjs"`, `"plugin/pi/test/p…
+- **Go latest stable GitHub Release: gap after v3.7.2.** 151 relevant path(s) changed on main: `"cmd/engram/cloud.go"`, `"cmd/engram/cloud_runtime_auth_integration_test.go"`, `"cmd/engram/cloud_runtime_e2e_test.go"`, `"…
 ##[error]Process completed with exit code 1.
 ```
 

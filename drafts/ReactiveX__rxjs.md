@@ -4,19 +4,21 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/ReactiveX/rxjs/issues/new
-- **Stars:** 31722 · **Generated:** 2026-11-23T06:58:02.022Z
+- **Stars:** 31722 · **Generated:** 2026-11-23T12:44:06.505Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: "Extended property fuzzing" workflow failing on master since 2026-09-16
+CI: 2 workflows dark on master ("Extended property fuzzing", "OSV vulnerability policy")
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! The **Extended property fuzzing** workflow (`.github/workflows/fuzz.yml`) on `master` has been failing since 2026-09-16. Here is what I saw, in case it's useful:
+Hi! A few workflows on `master` have been dark recently. Details below, in case they're useful:
+
+### Extended property fuzzing (`.github/workflows/fuzz.yml`)
 
 - Latest run on `master`: https://github.com/ReactiveX/rxjs/actions/runs/44252186161 — dark (conclusion: `failure`), 2026-11-18 06:33 UTC
 - Dark since: 2026-09-16 06:45 UTC (first run of the current streak)
@@ -35,6 +37,28 @@ Hi! The **Extended property fuzzing** workflow (`.github/workflows/fuzz.yml`) on
    Duration  1.26s (transform 92ms, setup 0ms, import 121ms, tests 1.00s, environment 0ms)
 Could not find 'scripts/release/authorize-stage.test.mjs, scripts/release/install-pinned-npm.test.mjs, scripts/release/release-policy.test.mjs, scripts/release/release-candidate.test.mjs, scripts/release/stage-release.t…
 ##[error]Process completed with exit code 1.
+```
+
+</details>
+
+### OSV vulnerability policy (`.github/workflows/osv.yml`)
+
+- Latest run on `master`: https://github.com/ReactiveX/rxjs/actions/runs/45132928321 — dark (conclusion: `failure`), 2026-11-23 07:41 UTC
+- Dark since: 2026-11-23 07:41 UTC (first run of the current streak)
+- Job / step: `No unreviewed release-reachable vulnerabilities` → `Run full OSV scan with only reviewed docs-tooling exceptions`
+- Likely cause: Filtered 373 vulnerabilities from output
+
+<details><summary>End of the job log</summary>
+
+```
+GHSA-96hv-2xvq-fx4p and 1 alias have been filtered out because: workspace=apps/rxjs.dev; owner=benlesh; tracking=docs/security/LEGACY_DOCS_VULNERABILITIES.md; reviewed=2026-11-19; unreachable=apps/rxjs.dev is excluded f…
+GHSA-3h5v-q93c-6h6q and 1 alias have been filtered out because: workspace=apps/rxjs.dev; owner=benlesh; tracking=docs/security/LEGACY_DOCS_VULNERABILITIES.md; reviewed=2026-11-19; unreachable=apps/rxjs.dev is excluded f…
+GHSA-58qx-3vcg-4xpx and 1 alias have been filtered out because: workspace=apps/rxjs.dev; owner=benlesh; tracking=docs/security/LEGACY_DOCS_VULNERABILITIES.md; reviewed=2026-11-19; unreachable=apps/rxjs.dev is excluded f…
+GHSA-96hv-2xvq-fx4p and 1 alias have been filtered out because: workspace=apps/rxjs.dev; owner=benlesh; tracking=docs/security/LEGACY_DOCS_VULNERABILITIES.md; reviewed=2026-11-19; unreachable=apps/rxjs.dev is excluded f…
+GHSA-776f-qx25-q3cc and 1 alias have been filtered out because: workspace=apps/rxjs.dev; owner=benlesh; tracking=docs/security/LEGACY_DOCS_VULNERABILITIES.md; reviewed=2026-11-19; unreachable=apps/rxjs.dev is excluded f…
+Filtered 373 vulnerabilities from output
+Exit code: 1
+##[warning]No files were found with the provided path: .security. No artifacts will be uploaded.
 ```
 
 </details>

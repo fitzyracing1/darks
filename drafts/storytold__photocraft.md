@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/storytold/photocraft/issues/new
-- **Stars:** 81081 · **Generated:** 2026-11-23T06:58:02.022Z
+- **Stars:** 81116 · **Generated:** 2026-11-23T12:44:06.505Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
@@ -21,22 +21,22 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### FreeBSD (`.github/workflows/freebsd.yml`)
 
-- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/44976143217 — dark (conclusion: `failure`), 2026-11-22 02:27 UTC
+- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/45100414094 — dark (conclusion: `cancelled`), 2026-11-23 02:28 UTC
 - Dark since: 2026-11-18 02:26 UTC (first run of the current streak)
-- Job / step: `freebsd / FreeBSD 15 aarch64 (build + test)` → `Set up the aarch64 cross toolchain`
-- Likely cause: error: could not fetch https://download.freebsd.org/releases/arm64/aarch64/15.1-RELEASE/base.txz after 3 attempts
+- Job / step: `freebsd / FreeBSD 15 x86_64 (build + test)` → `Build and test`
+- Likely cause: The job has exceeded the maximum execution time of 5h0m0s
 
 <details><summary>End of the job log</summary>
 
 ```
- 86 148.3M  86 128.5M   0      0 750.8k      0   03:22   02:55   00:27 676.4k
- 87 148.3M  87 129.6M   0      0 752.9k      0   03:21   02:56   00:25 769.8k
- 87 148.3M  87 130.3M   0      0 752.7k      0   03:21   02:57   00:24 787.4k
- 88 148.3M  88 130.9M   0      0 751.9k      0   03:22   02:58   00:24 822.1k
- 88 148.3M  88 131.8M   0      0 752.9k      0   03:21   02:59   00:22 877.3k
-curl: (28) Operation timed out after 180000 milliseconds with 139214300 out of 155595600 bytes received
-error: could not fetch https://download.freebsd.org/releases/arm64/aarch64/15.1-RELEASE/base.txz after 3 attempts
-##[error]Process completed with exit code 1.
+test move_shift_click_tests::locked_top_layer_is_clicked_through_while_the_context_menu_still_lists_it ... ok
+test move_shift_click_tests::pasteboard_only_empty_marquee_preserves_selection ... ok
+test move_shift_click_tests::point_clicks_toggle_members_but_keep_the_singleton_and_plain_multi_selection ... ok
+test move_shift_click_tests::shift_click_adds_shape_layers_one_after_another ... ok
+test move_shift_click_tests::shift_drag_moves_the_layers_selected_after_the_press ... ok
+test move_shift_click_tests::transparent_canvas_empty_marquee_preserves_selection ... ok
+test move_shift_diagonal_tests::shift_drag_locks_to_the_eight_directions_and_alt_copies_along_them ... ok
+##[error]The operation was canceled.
 ```
 
 </details>

@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/webiny/webiny-js/issues/new
-- **Stars:** 8054 · **Generated:** 2026-11-23T06:58:02.022Z
+- **Stars:** 8054 · **Generated:** 2026-11-23T12:44:06.505Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -86,7 +86,7 @@ GraphQL: Your token has not been granted the required scopes to execute this que
 
 ### Push (`.github/workflows/push.yml`)
 
-- Latest run on `next`: https://github.com/webiny/webiny-js/actions/runs/44754820016 — dark (conclusion: `failure`), 2026-11-20 14:34 UTC
+- Latest run on `next`: https://github.com/webiny/webiny-js/actions/runs/45156522914 — dark (conclusion: `failure`), 2026-11-23 10:29 UTC
 - Dark since: 2026-11-20 14:34 UTC (first run of the current streak)
 - Likely cause: no cause found in annotations
 

@@ -4,36 +4,37 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/ccch1mneyyy/dsh-Go/issues/new
-- **Stars:** 30380 · **Generated:** 2026-11-23T06:58:02.022Z
+- **Stars:** 30561 · **Generated:** 2026-11-23T12:44:06.505Z
 - Nothing in this file has been sent anywhere.
+- **Note for Joshua:** cancelled by a concurrency group — likely noise
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: "iOS compile" workflow failing on main since 2026-11-20
+CI: "iOS compile" workflow getting cancelled on main since 2026-11-20
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! The **iOS compile** workflow (`.github/workflows/ios-compile.yml`) on `main` has been failing since 2026-11-20. Here is what I saw, in case it's useful:
+Hi! The **iOS compile** workflow (`.github/workflows/ios-compile.yml`) on `main` has been getting cancelled since 2026-11-20. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/ccch1mneyyy/dsh-Go/actions/runs/45116277153 — dark (conclusion: `failure`), 2026-11-23 05:12 UTC
+- Latest run on `main`: https://github.com/ccch1mneyyy/dsh-Go/actions/runs/45172614244 — dark (conclusion: `cancelled`), 2026-11-23 12:15 UTC
 - Dark since: 2026-11-20 18:29 UTC (first run of the current streak)
-- Job / step: `engine` → `Call the browser and system tools inside the app`
-- Likely cause: searchd EXC_CRASH SIGABRT  Abort trap: 6 | libsystem_kernel.dylib __pthread_kill+8 | libsystem_pthread.dylib pthread_kill+264 | libsystem_c.dylib abort+116 | libsystem_c.dylib abort_report_np+80 | SpotlightIndex __si_indexingWatchdogInit_bl
+- Job / step: `engine` → `Resolve dependencies`
+- Likely cause: Canceling since a higher priority waiting request for ios-compile-refs/heads/main exists
 
 <details><summary>End of the job log</summary>
 
 ```
-open {"url":"https://example.com/"} 31950ms ok: 已打开： https://example.com/ 接着用 read 看页面。
-WRONG read {"maxBytes":49152} 303ms error: 页面脚本出错了，页面可能已经变了。先用 read 重新看一遍。
-screenshot {} 6960ms ok image 123825: 当前页面的截图：https://example.com/
-##[notice]queued {} 0ms ok: perform before attach
-attached {} 0ms ok: perform after attach; no replay
-##[notice]file-collection {} 0ms ok: real file providers and sealed inbox
-total-byte-limit {} 0ms ok: two boundary-sized files, one byte beyond total refused
-##[error]browser read: expected ok
+  windows_file_picker 2.0.1 (2.0.2 available)
+  xml 7.0.1 (7.1.0 available)
+Got dependencies!
+48 packages have newer versions incompatible with dependency constraints.
+Try `flutter pub outdated` for more information.
+Because l10n.yaml exists, the options defined there will be used instead.
+To use the command line arguments, delete the l10n.yaml file in the Flutter project.
+##[error]The operation was canceled.
 ```
 
 </details>
