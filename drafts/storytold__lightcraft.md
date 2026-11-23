@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/storytold/lightcraft/issues/new
-- **Stars:** 16329 · **Generated:** 2026-11-23T12:44:06.505Z
+- **Stars:** 16338 · **Generated:** 2026-11-23T18:39:43.208Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -18,22 +18,22 @@ CI: "SonarCloud" workflow failing on main since 2026-11-18
 <!-- BEGIN BODY -->
 Hi! The **SonarCloud** workflow (`.github/workflows/sonarcloud.yml`) on `main` has been failing since 2026-11-18. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/storytold/lightcraft/actions/runs/45100534009 — dark (conclusion: `failure`), 2026-11-23 02:29 UTC
+- Latest run on `main`: https://github.com/storytold/lightcraft/actions/runs/45195582999 — dark (conclusion: `failure`), 2026-11-23 14:34 UTC
 - Dark since: 2026-11-18 23:57 UTC (first run of the current streak)
-- Job / step: `sonarcloud / Tests 4/8` → `Merge this shard's profiles`
-- Likely cause: llvm-profdata could not merge shard 4's profiles (exit 1)
+- Job / step: `sonarcloud / Tests 5/8` → `Merge this shard's profiles`
+- Likely cause: llvm-profdata could not merge shard 5's profiles (exit 1)
 
 <details><summary>End of the job log</summary>
 
 ```
 info: downloading 4 components
   1.100.0-x86_64-unknown-linux-gnu installed - rustc 1.100.0 (0ef1bc386 2026-11-09)
-Raw profiles: 1.4G in 877 files
+Raw profiles: 1.4G in 874 files
 Filesystem      Size  Used Avail Use% Mounted on
 /dev/root       145G   64G   82G  44% /
-warning: profraw/shard-4-9571-15144630631723491570_0.profraw: invalid instrumentation profile data (file header is corrupt)
+warning: profraw/shard-5-8936-15144630631723491570_0.profraw: invalid instrumentation profile data (file header is corrupt)
 error: no profile can be merged
-##[error]shard 4 wrote a truncated or corrupt coverage profile: profraw/shard-4-9571-15144630631723491570_0.profraw: invalid instrumentation profile data (file header is corrupt)
+##[error]shard 5 wrote a truncated or corrupt coverage profile: profraw/shard-5-8936-15144630631723491570_0.profraw: invalid instrumentation profile data (file header is corrupt)
 ```
 
 </details>

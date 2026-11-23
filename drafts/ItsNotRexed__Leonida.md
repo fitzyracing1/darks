@@ -4,8 +4,9 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/ItsNotRexed/Leonida/issues/new
-- **Stars:** 19336 · **Generated:** 2026-11-23T12:44:06.505Z
+- **Stars:** 27081 · **Generated:** 2026-11-23T18:39:43.208Z
 - Nothing in this file has been sent anywhere.
+- **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Skipped: upstream already tracking
 
@@ -16,33 +17,25 @@ These workflows are left out of the body below.
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: "CI" workflow failing on main since 2026-11-22
+CI: 2 workflows dark on main ("CI", "No Game Data")
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! The **CI** workflow (`.github/workflows/ci.yml`) on `main` has been failing since 2026-11-22. Here is what I saw, in case it's useful:
+Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
 
-- Latest run on `main`: https://github.com/ItsNotRexed/Leonida/actions/runs/45089467016 — dark (conclusion: `failure`), 2026-11-23 00:33 UTC
+### CI (`.github/workflows/ci.yml`)
+
+- Latest run on `main`: https://github.com/ItsNotRexed/Leonida/actions/runs/45238973350 — dark (conclusion: `cancelled`), 2026-11-23 18:29 UTC
 - Dark since: 2026-11-22 13:02 UTC (first run of the current streak)
-- Job / step: `translator-tests` → `Translator tests`
-- Likely cause: 1 failed, 1637 passed, 11 skipped, 99 subtests passed in 48.68s
+- Likely cause: run cancelled
 
-<details><summary>End of the job log</summary>
+### No Game Data (`.github/workflows/no-game-data.yml`)
 
-```
-tests/test_u16_high_half.py:83: AssertionError
-=========================== short test summary info ============================
-FAILED tests/test_u16_high_half.py::test_d16_buffer_store_no_redundant_extract_after_shr16 - AssertionError: error: line 153: Operand '135[%135]' requires a previous definition
-    %_arr_uint_135 = OpTypeArray %uint %135
-assert 1 == 0
- +  where 1 = CompletedProcess(args=['spirv-val', '--target-env', 'vulkan1.2', '/tmp/pytest-of-runner/pytest-0/test_d16_buffer_store...r="error: line 153: Operand '135[%135]' requires a previous definition\n  %_arr_uint…
-1 failed, 1637 passed, 11 skipped, 99 subtests passed in 48.68s
-##[error]Process completed with exit code 1.
-```
-
-</details>
+- Latest run on `main`: https://github.com/ItsNotRexed/Leonida/actions/runs/45238973265 — dark (conclusion: `cancelled`), 2026-11-23 18:29 UTC
+- Dark since: 2026-11-23 16:29 UTC (first run of the current streak)
+- Likely cause: run cancelled
 
 If this is already known or expected, feel free to close. Thanks for maintaining Leonida!
 

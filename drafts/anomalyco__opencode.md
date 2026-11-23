@@ -4,28 +4,19 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/anomalyco/opencode/issues/new
-- **Stars:** 228722 · **Generated:** 2026-11-23T12:44:06.505Z
+- **Stars:** 228776 · **Generated:** 2026-11-23T18:39:43.208Z
 - Nothing in this file has been sent anywhere.
-- **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 2 workflows dark on dev ("release", "nightly-beta")
+CI: "nightly-beta" workflow failing on dev since 2026-11-23
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! A few workflows on `dev` have been dark recently. Details below, in case they're useful:
-
-### release (`.github/workflows/release.yml`)
-
-- Latest run on `dev`: https://github.com/anomalyco/opencode/actions/runs/45125689987 — dark (conclusion: `cancelled`), 2026-11-23 06:40 UTC
-- Dark since: 2026-11-23 06:40 UTC (first run of the current streak)
-- Likely cause: run cancelled
-
-### nightly-beta (`.github/workflows/nightly-beta.yml`)
+Hi! The **nightly-beta** workflow (`.github/workflows/nightly-beta.yml`) on `dev` has been failing since 2026-11-23. Here is what I saw, in case it's useful:
 
 - Latest run on `dev`: https://github.com/anomalyco/opencode/actions/runs/45147056123 — dark (conclusion: `failure`), 2026-11-23 09:26 UTC
 - Dark since: 2026-11-23 09:26 UTC (first run of the current streak)

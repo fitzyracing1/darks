@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/1Panel-dev/MaxKB/issues/new
-- **Stars:** 23192 · **Generated:** 2026-11-23T12:44:06.505Z
+- **Stars:** 23191 · **Generated:** 2026-11-23T18:39:43.208Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title

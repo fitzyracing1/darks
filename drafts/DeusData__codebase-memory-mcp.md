@@ -4,14 +4,15 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/DeusData/codebase-memory-mcp/issues/new
-- **Stars:** 49062 · **Generated:** 2026-11-23T12:44:06.505Z
+- **Stars:** 49076 · **Generated:** 2026-11-23T18:39:43.208Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
+- **Note for Joshua:** cancelled by a concurrency group — likely noise
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 2 workflows dark on main ("Nightly Soak", "test-impact-artifact")
+CI: 3 workflows dark on main ("Nightly Soak", "test-impact-artifact", "CodeQL SAST")
 <!-- END TITLE -->
 
 ## Body
@@ -43,25 +44,16 @@ OK: baseline RSS=8732672 FDs=21
 
 ### test-impact-artifact (`.github/workflows/test-impact-artifact.yml`)
 
-- Latest run on `main`: https://github.com/DeusData/codebase-memory-mcp/actions/runs/44980880256 — dark (conclusion: `cancelled`), 2026-11-22 03:29 UTC
+- Latest run on `main`: https://github.com/DeusData/codebase-memory-mcp/actions/runs/45229252150 — dark (conclusion: `cancelled`), 2026-11-23 17:35 UTC
 - Dark since: 2026-11-13 18:51 UTC (first run of the current streak)
-- Job / step: `publish` → `Publish the bundle`
-- Likely cause: The job has exceeded the maximum execution time of 2h0m0s
+- Likely cause: run cancelled
 
-<details><summary>End of the job log</summary>
+### CodeQL SAST (`.github/workflows/codeql.yml`)
 
-```
-grammar_probe_b: 43 tests, 0 incomplete, exit 0, 2.1 s
-grammar_probe_c: 42 tests, 0 incomplete, exit 0, 1.1 s
-grammar_probe_d: 75 tests, 0 incomplete, exit 0, 4.4 s
-grammar_probe_e: 56 tests, 0 incomplete, exit 0, 3.0 s
-grammar_probe_f: 184 tests, 0 incomplete, exit 0, 20.1 s
-grammar_probe_g: 45 tests, 0 incomplete, exit 0, 2.4 s
-map: 10500 tests, 323 incomplete, 28295 functions -> /tmp/tmp.LONWdjAMpl/coverage
-##[error]The operation was canceled.
-```
-
-</details>
+- Latest run on `main`: https://github.com/DeusData/codebase-memory-mcp/actions/runs/45229252329 — dark (conclusion: `cancelled`), 2026-11-23 17:35 UTC
+- Dark since: 2026-11-23 17:05 UTC (first run of the current streak)
+- Job / step: `analyze (c-cpp, manual, codeql-cpp)`
+- Likely cause: Canceling since a higher priority waiting request for codeql-c-cpp-refs/heads/main exists
 
 If this is already known or expected, feel free to close. Thanks for maintaining codebase-memory-mcp!
 

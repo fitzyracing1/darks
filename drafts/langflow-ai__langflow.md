@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/langflow-ai/langflow/issues/new
-- **Stars:** 156871 · **Generated:** 2026-11-23T12:44:06.505Z
+- **Stars:** 156882 · **Generated:** 2026-11-23T18:39:43.208Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -66,7 +66,7 @@ FAILED languages: ['fr', 'ja', 'es', 'de', 'pt', 'zh-Hans']
 
 - Latest run on `main`: https://github.com/langflow-ai/langflow/actions/runs/45088580511 — dark (conclusion: `failure`), 2026-11-23 00:24 UTC
 - Dark since: 2026-11-18 00:22 UTC (first run of the current streak)
-- Likely cause: cause not readable (GET /repos/langflow-ai/langflow/actions/runs/45088580511/jobs?filter=latest&per_)
+- Likely cause: no cause found in annotations
 
 If this is already known or expected, feel free to close. Thanks for maintaining langflow!
 

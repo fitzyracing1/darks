@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/xpzouying/xiaohongshu-mcp/issues/new
-- **Stars:** 17294 · **Generated:** 2026-11-23T12:44:06.505Z
+- **Stars:** 17296 · **Generated:** 2026-11-23T18:39:43.208Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -18,7 +18,7 @@ CI: "Test" workflow failing on main since 2026-11-22
 <!-- BEGIN BODY -->
 Hi! The **Test** workflow (`.github/workflows/test.yml`) on `main` has been failing since 2026-11-22. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/xpzouying/xiaohongshu-mcp/actions/runs/45086080623 — dark (conclusion: `failure`), 2026-11-22 23:58 UTC
+- Latest run on `main`: https://github.com/xpzouying/xiaohongshu-mcp/actions/runs/45205362541 — dark (conclusion: `failure`), 2026-11-23 15:27 UTC
 - Dark since: 2026-11-22 23:58 UTC (first run of the current streak)
 - Job / step: `test` → `Check Go vulnerabilities`
 - Likely cause: browser.NewBrowser calls headless_browser.New, which eventually calls http.ReadResponse

@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/headroomlabs-ai/headroom/issues/new
-- **Stars:** 80613 · **Generated:** 2026-11-23T12:44:06.505Z
+- **Stars:** 80650 · **Generated:** 2026-11-23T18:39:43.208Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
@@ -25,7 +25,7 @@ CI: "PR Governance" workflow getting cancelled on main since 2026-11-17
 <!-- BEGIN BODY -->
 Hi! The **PR Governance** workflow (`.github/workflows/pr-health.yml`) on `main` has been getting cancelled since 2026-11-17. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/headroomlabs-ai/headroom/actions/runs/44753536028 — dark (conclusion: `cancelled`), 2026-11-20 14:26 UTC
+- Latest run on `main`: https://github.com/headroomlabs-ai/headroom/actions/runs/45194461640 — dark (conclusion: `cancelled`), 2026-11-23 14:27 UTC
 - Dark since: 2026-11-17 14:26 UTC (first run of the current streak)
 - Job / step: `label` → `Label open pull requests`
 - Likely cause: The job has exceeded the maximum execution time of 10m0s
@@ -33,13 +33,13 @@ Hi! The **PR Governance** workflow (`.github/workflows/pr-health.yml`) on `main`
 <details><summary>End of the job log</summary>
 
 ```
-https://github.com/headroomlabs-ai/headroom/pull/4588
-https://github.com/headroomlabs-ai/headroom/pull/4588
-https://github.com/headroomlabs-ai/headroom/pull/4588
-https://github.com/headroomlabs-ai/headroom/pull/4588
-https://github.com/headroomlabs-ai/headroom/pull/4579
-https://github.com/headroomlabs-ai/headroom/pull/4579
-https://github.com/headroomlabs-ai/headroom/pull/4579
+https://github.com/headroomlabs-ai/headroom/pull/4798
+https://github.com/headroomlabs-ai/headroom/pull/4798
+https://github.com/headroomlabs-ai/headroom/pull/4798
+https://github.com/headroomlabs-ai/headroom/pull/4797
+https://github.com/headroomlabs-ai/headroom/pull/4797
+https://github.com/headroomlabs-ai/headroom/pull/4797
+https://github.com/headroomlabs-ai/headroom/pull/4797
 ##[error]The operation was canceled.
 ```
 

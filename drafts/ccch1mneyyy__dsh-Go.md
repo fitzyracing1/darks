@@ -4,40 +4,24 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/ccch1mneyyy/dsh-Go/issues/new
-- **Stars:** 30561 · **Generated:** 2026-11-23T12:44:06.505Z
+- **Stars:** 30714 · **Generated:** 2026-11-23T18:39:43.208Z
 - Nothing in this file has been sent anywhere.
-- **Note for Joshua:** cancelled by a concurrency group — likely noise
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: "iOS compile" workflow getting cancelled on main since 2026-11-20
+CI: "OHOS compile" workflow failing on main since 2026-11-23
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! The **iOS compile** workflow (`.github/workflows/ios-compile.yml`) on `main` has been getting cancelled since 2026-11-20. Here is what I saw, in case it's useful:
+Hi! The **OHOS compile** workflow (`.github/workflows/ohos-compile.yml`) on `main` has been failing since 2026-11-23. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/ccch1mneyyy/dsh-Go/actions/runs/45172614244 — dark (conclusion: `cancelled`), 2026-11-23 12:15 UTC
-- Dark since: 2026-11-20 18:29 UTC (first run of the current streak)
-- Job / step: `engine` → `Resolve dependencies`
-- Likely cause: Canceling since a higher priority waiting request for ios-compile-refs/heads/main exists
-
-<details><summary>End of the job log</summary>
-
-```
-  windows_file_picker 2.0.1 (2.0.2 available)
-  xml 7.0.1 (7.1.0 available)
-Got dependencies!
-48 packages have newer versions incompatible with dependency constraints.
-Try `flutter pub outdated` for more information.
-Because l10n.yaml exists, the options defined there will be used instead.
-To use the command line arguments, delete the l10n.yaml file in the Flutter project.
-##[error]The operation was canceled.
-```
-
-</details>
+- Latest run on `main`: https://github.com/ccch1mneyyy/dsh-Go/actions/runs/45221522959 — dark (conclusion: `failure`), 2026-11-23 16:53 UTC
+- Dark since: 2026-11-23 16:53 UTC (first run of the current streak)
+- Job / step: `compile`
+- Likely cause: The job was not acquired by Runner of type hosted even after multiple attempts
 
 If this is already known or expected, feel free to close. Thanks for maintaining dsh-Go!
 
