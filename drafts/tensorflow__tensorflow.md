@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/tensorflow/tensorflow/issues/new
-- **Stars:** 201768 · **Generated:** 2026-11-22T18:35:55.565Z
+- **Stars:** 201774 · **Generated:** 2026-11-23T00:56:34.623Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** latest run was skipped, not failed — probably not worth filing
 

@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/seedds/nxnative/issues/new
-- **Stars:** 16483 · **Generated:** 2026-11-22T18:35:55.565Z
+- **Stars:** 16503 · **Generated:** 2026-11-23T00:56:34.623Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
@@ -21,13 +21,13 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### lint-c (`.github/workflows/lint-c.yml`)
 
-- Latest run on `main`: https://github.com/seedds/nxnative/actions/runs/45053853755 — dark (conclusion: `cancelled`), 2026-11-22 18:13 UTC
+- Latest run on `main`: https://github.com/seedds/nxnative/actions/runs/45089632586 — dark (conclusion: `cancelled`), 2026-11-23 00:35 UTC
 - Dark since: 2026-11-22 01:45 UTC (first run of the current streak)
 - Likely cause: run cancelled
 
 ### tests (`.github/workflows/tests.yml`)
 
-- Latest run on `main`: https://github.com/seedds/nxnative/actions/runs/45053853715 — dark (conclusion: `cancelled`), 2026-11-22 18:13 UTC
+- Latest run on `main`: https://github.com/seedds/nxnative/actions/runs/45089632449 — dark (conclusion: `cancelled`), 2026-11-23 00:35 UTC
 - Dark since: 2026-11-22 07:46 UTC (first run of the current streak)
 - Likely cause: run cancelled
 

@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/huggingface/transformers/issues/new
-- **Stars:** 169391 · **Generated:** 2026-11-22T18:35:55.565Z
+- **Stars:** 169399 · **Generated:** 2026-11-23T00:56:34.623Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** workflow failed to start (config/permissions on their side)
 - **Note for Joshua:** self-hosted runner problem — maintainers usually know
@@ -12,7 +12,7 @@
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 7 workflows dark on main ("Build docker images (scheduled)", "Self-hosted runner (nightly-past-ci-caller)", "Self-hosted runner (Intel Gaudi3 scheduled CI caller)", +4 more)
+CI: 4 workflows dark on main ("Self-hosted runner (nightly-past-ci-caller)", "Nvidia CI - Flash Attn", "Nvidia CI", +1 more)
 <!-- END TITLE -->
 
 ## Body
@@ -20,46 +20,11 @@ CI: 7 workflows dark on main ("Build docker images (scheduled)", "Self-hosted ru
 <!-- BEGIN BODY -->
 Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
 
-### Build docker images (scheduled) (`.github/workflows/build-docker-images.yml`)
-
-- Latest run on `main`: https://github.com/huggingface/transformers/actions/runs/44967881564 — dark (conclusion: `failure`), 2026-11-22 00:41 UTC
-- Dark since: 2026-11-21 00:38 UTC (first run of the current streak)
-- Job / step: `Latest PyTorch (AMD) [dev]` → `Build, scan and push`
-- Likely cause: buildx failed with: ERROR: failed to build: failed to solve: process "/bin/sh -c python3 -c \"import torch, torchvision, torchcodec, flash_attn, bitsandbytes, onnxscript, peft, numpy, pyarrow, datasets, transformers; assert torch.version.hi
-
-<details><summary>End of the job log</summary>
-
-```
-  73 |     # Fail the build if the installs above broke the ROCm stack.
-  74 | >>> RUN python3 -c "import torch, torchvision, torchcodec, flash_attn, bitsandbytes, onnxscript, peft, numpy, pyarrow, datasets, transformers; assert torch.version.hip is not None; print(torch.__version__, torch.…
-  75 |
---------------------
-ERROR: failed to build: failed to solve: process "/bin/sh -c python3 -c \"import torch, torchvision, torchcodec, flash_attn, bitsandbytes, onnxscript, peft, numpy, pyarrow, datasets, transformers; assert torch.version.h…
-builder-f4bc98ae-a48b-489a-9faf-c9c2726a9cbd/builder-f4bc98ae-a48b-489a-9faf-c9c2726a9cbd0/5xa72zbvv6gpubarkyurjs78u
-Build summary supported!
-##[error]buildx failed with: ERROR: failed to build: failed to solve: process "/bin/sh -c python3 -c \"import torch, torchvision, torchcodec, flash_attn, bitsandbytes, onnxscript, peft, numpy, pyarrow, datasets, transfo…
-```
-
-</details>
-
 ### Self-hosted runner (nightly-past-ci-caller) (`.github/workflows/self-nightly-past-ci-caller.yml`)
 
 - Latest run on `main`: https://github.com/huggingface/transformers/actions/runs/45031998399 — dark (conclusion: `startup_failure`), 2026-11-22 14:17 UTC
 - Dark since: 2026-11-21 02:21 UTC (first run of the current streak)
 - Likely cause: run startup_failure
-
-### Self-hosted runner (Intel Gaudi3 scheduled CI caller) (`.github/workflows/self-scheduled-intel-gaudi3-caller.yml`)
-
-- Latest run on `main`: https://github.com/huggingface/transformers/actions/runs/44975807638 — dark (conclusion: `failure`), 2026-11-22 02:22 UTC
-- Dark since: 2026-11-21 02:21 UTC (first run of the current streak)
-- Job / step: `Pipeline CI / Pipelines (2gaudi)`
-- Likely cause: Required runner group 'itac-bm-emr-gaudi3-dell-2gaudi' not found
-
-### Doctests (`.github/workflows/doctests.yml`)
-
-- Latest run on `main`: https://github.com/huggingface/transformers/actions/runs/44975878481 — dark (conclusion: `failure`), 2026-11-22 02:23 UTC
-- Dark since: 2026-11-21 02:22 UTC (first run of the current streak)
-- Likely cause: no cause found in annotations
 
 ### Nvidia CI - Flash Attn (`.github/workflows/self-scheduled-flash-attn-caller.yml`)
 

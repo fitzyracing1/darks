@@ -4,14 +4,8 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/PrefectHQ/fastmcp/issues/new
-- **Stars:** 28712 · **Generated:** 2026-11-22T18:35:55.565Z
+- **Stars:** 28714 · **Generated:** 2026-11-23T00:56:34.623Z
 - Nothing in this file has been sent anywhere.
-
-## Skipped: upstream already tracking
-
-- Upgrade checks (`.github/workflows/run-upgrade-checks.yml`): [issue #6590](https://github.com/PrefectHQ/fastmcp/issues/6590) "Upgrade checks failing on main branch"
-
-These workflows are left out of the body below.
 
 ## Suggested title
 

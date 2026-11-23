@@ -4,13 +4,13 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/open-metadata/OpenMetadata/issues/new
-- **Stars:** 15834 · **Generated:** 2026-11-22T18:35:55.565Z
+- **Stars:** 15838 · **Generated:** 2026-11-23T00:56:34.623Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 9 workflows dark on main ("monitor-slack-link", "py-tests", "Postgresql PR Playwright E2E Tests", +6 more)
+CI: 10 workflows dark on main ("monitor-slack-link", "py-tests", "Postgresql PR Playwright E2E Tests", +7 more)
 <!-- END TITLE -->
 
 ## Body
@@ -20,7 +20,7 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### monitor-slack-link (`.github/workflows/monitor-slack-link.yml`)
 
-- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/45053601510 — dark (conclusion: `failure`), 2026-11-22 18:11 UTC
+- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/45089175636 — dark (conclusion: `failure`), 2026-11-23 00:30 UTC
 - Dark since: 2026-11-06 22:08 UTC (first run of the current streak)
 - Job / step: `monitor-slack-link` → `Set up Python 3.9`
 - Likely cause: The version '3.9' with architecture 'x64' was not found for Ubuntu 26.04.
@@ -212,6 +212,28 @@ cannot iterate over: null
 [INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.009 s -- in org.openmetadata.service.apps.bundles.rdf.RdfIndexingRunContextTest
 [INFO] Running org.openmetadata.service.apps.bundles.rdf.sink.RdfBulkSinkTest
 ##[error]Exception in thread "rdf-sink-writer" java.lang.OutOfMemoryError: simulated: batch too large to write
+```
+
+</details>
+
+### security-scan (`.github/workflows/security-scan.yml`)
+
+- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/45088777425 — dark (conclusion: `failure`), 2026-11-23 00:26 UTC
+- Dark since: 2026-11-23 00:26 UTC (first run of the current streak)
+- Job / step: `security-scan` → `Install Ubuntu dependencies`
+- Likely cause: E: Package 'wkhtmltopdf' has no installation candidate
+
+<details><summary>End of the job log</summary>
+
+```
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Package wkhtmltopdf is not available, but is referred to by another package.
+This may mean that the package is missing, has been obsoleted, or
+is only available from another source
+E: Package 'wkhtmltopdf' has no installation candidate
+##[error]Process completed with exit code 100.
 ```
 
 </details>

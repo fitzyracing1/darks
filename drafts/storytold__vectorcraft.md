@@ -4,13 +4,13 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/storytold/vectorcraft/issues/new
-- **Stars:** 12014 · **Generated:** 2026-11-22T18:35:55.565Z
+- **Stars:** 12021 · **Generated:** 2026-11-23T00:56:34.623Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 2 workflows dark on main ("Release", "FreeBSD")
+CI: 3 workflows dark on main ("Release", "FreeBSD", "SonarCloud")
 <!-- END TITLE -->
 
 ## Body
@@ -58,6 +58,28 @@ failures:
 test result: FAILED. 8293 passed; 1 failed; 15 ignored; 0 measured; 0 filtered out; finished in 247.85s
 error: test failed, to rerun pass `-p vectorcraft-engine --lib`
 ##[error]Process completed with exit code 101.
+```
+
+</details>
+
+### SonarCloud (`.github/workflows/sonarcloud.yml`)
+
+- Latest run on `main`: https://github.com/storytold/vectorcraft/actions/runs/45085930900 — dark (conclusion: `failure`), 2026-11-22 23:56 UTC
+- Dark since: 2026-11-22 18:16 UTC (first run of the current streak)
+- Job / step: `sonarcloud / Build instrumented test archive` → `Build instrumented test archive`
+- Likely cause: Compiling vectorcraft-cli v0.24.1 (/home/runner/work/vectorcraft/vectorcraft/apps/vectorcraft-cli)
+
+<details><summary>End of the job log</summary>
+
+```
+   Compiling craft-print v0.1.0 (https://github.com/storytold/craft-libs?rev=d7c9632bfb3040cf45db394e7500cc93c81c49e0#d7c9632b)
+   Compiling eframe v0.37.0 (https://github.com/storytold/egui.git?rev=6d518fc799681571963842f95b55a6b68431b15a#6d518fc7)
+   Compiling webbrowser v1.2.5
+   Compiling craft-window v0.1.0 (https://github.com/storytold/craft-libs?rev=d7c9632bfb3040cf45db394e7500cc93c81c49e0#d7c9632b)
+   Compiling craft-web-api v0.1.0 (https://github.com/storytold/craft-libs?rev=50b0ee7bf811e363b5f238382b5c77318cf33e46#50b0ee7b)
+   Compiling vectorcraft-web v0.24.1 (/home/runner/work/vectorcraft/vectorcraft/apps/vectorcraft-web)
+   Compiling vectorcraft-cli v0.24.1 (/home/runner/work/vectorcraft/vectorcraft/apps/vectorcraft-cli)
+##[error]Process completed with exit code 143.
 ```
 
 </details>

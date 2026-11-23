@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/tangency-labs/solidcraft/issues/new
-- **Stars:** 17735 · **Generated:** 2026-11-22T18:35:55.565Z
+- **Stars:** 17764 · **Generated:** 2026-11-23T00:56:34.623Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
@@ -27,7 +27,7 @@ CI: "CI" workflow getting cancelled on main since 2026-11-22
 <!-- BEGIN BODY -->
 Hi! The **CI** workflow (`.github/workflows/ci.yml`) on `main` has been getting cancelled since 2026-11-22. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/tangency-labs/solidcraft/actions/runs/45054447593 — dark (conclusion: `cancelled`), 2026-11-22 18:19 UTC
+- Latest run on `main`: https://github.com/tangency-labs/solidcraft/actions/runs/45090411205 — dark (conclusion: `cancelled`), 2026-11-23 00:43 UTC
 - Dark since: 2026-11-22 18:19 UTC (first run of the current streak)
 - Likely cause: run cancelled
 

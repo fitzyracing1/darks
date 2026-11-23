@@ -4,14 +4,14 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/storytold/photocraft/issues/new
-- **Stars:** 81004 · **Generated:** 2026-11-22T18:35:55.565Z
+- **Stars:** 81045 · **Generated:** 2026-11-23T00:56:34.623Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 4 workflows dark on main ("FreeBSD", "Perf (nightly)", "Release", +1 more)
+CI: 5 workflows dark on main ("FreeBSD", "Perf (nightly)", "Release", +2 more)
 <!-- END TITLE -->
 
 ## Body
@@ -87,9 +87,47 @@ ModuleNotFoundError: No module named 'tomllib'
 
 ### SonarCloud (`.github/workflows/sonarcloud.yml`)
 
-- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/45052334192 — dark (conclusion: `cancelled`), 2026-11-22 17:57 UTC
+- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/45080918084 — dark (conclusion: `failure`), 2026-11-22 23:01 UTC
 - Dark since: 2026-11-22 05:03 UTC (first run of the current streak)
-- Likely cause: run cancelled
+- Job / step: `sonarcloud / SonarCloud Scan` → `Fail on Rust shard test failures`
+- Likely cause: Coverage shard 3 tests failed (exit 100); analysis was still uploaded
+
+<details><summary>End of the job log</summary>
+
+```
+00:33:05.430 INFO  ------------- Upload SCA dependency files
+00:33:06.705 INFO  Successfully sent architecture data
+00:33:08.263 INFO  Sensor cache published successfully
+00:33:11.805 INFO  Analysis total time: 3:08.895 min
+00:33:11.806 INFO  SonarScanner Engine completed successfully
+00:33:11.954 INFO  EXECUTION SUCCESS
+00:33:11.955 INFO  Total time: 3:13.729s
+##[error]Coverage shard 3 tests failed (exit 100); analysis was still uploaded
+```
+
+</details>
+
+### CI (`.github/workflows/ci.yml`)
+
+- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/45084093244 — dark (conclusion: `failure`), 2026-11-22 23:35 UTC
+- Dark since: 2026-11-22 22:17 UTC (first run of the current streak)
+- Job / step: `gate / test 3/4 (artcraft-k8s-main)` → `Gate`
+- Likely cause: skip  panic_hunt
+
+<details><summary>End of the job log</summary>
+
+```
+       4: <photocraft_engine_core::select_mask_edits::tests::thin_edits_across_a_huge_canvas_paint_only_their_tiles::{closure#0} as core::ops::function::FnOnce<()>>::call_once
+    note: Some details are omitted, run with `RUST_BACKTRACE=full` for a verbose backtrace.
+error: test run failed
+CI summary:
+error: ci failed at `test`
+  FAIL  test: cargo nextest run --profile ci --binaries-metadata /home/runner/_work/photocraft/photocraft/target/nextest-archive/target/nextest/binaries-metadata.json --cargo-metadata /home/runner/_work/photocraft/photo…
+  skip  panic_hunt
+##[error]Process completed with exit code 1.
+```
+
+</details>
 
 If this is already known or expected, feel free to close. Thanks for maintaining photocraft!
 

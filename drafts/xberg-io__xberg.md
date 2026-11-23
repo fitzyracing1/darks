@@ -4,14 +4,14 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/xberg-io/xberg/issues/new
-- **Stars:** 9611 · **Generated:** 2026-11-22T18:35:55.565Z
+- **Stars:** 9611 · **Generated:** 2026-11-23T00:56:34.623Z
 - Nothing in this file has been sent anywhere.
-- **Note for Joshua:** cancelled by a concurrency group — likely noise
+- **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 7 workflows dark on main ("CI Lint", "CI E2E", "CI Rust", +4 more)
+CI: 8 workflows dark on main ("CI Lint", "CI E2E", "CI Rust", +5 more)
 <!-- END TITLE -->
 
 ## Body
@@ -21,54 +21,24 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### CI Lint (`.github/workflows/ci-lint.yaml`)
 
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/45047547421 — dark (conclusion: `failure`), 2026-11-22 17:06 UTC
+- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/45060824143 — dark (conclusion: `cancelled`), 2026-11-22 19:27 UTC
 - Dark since: 2026-11-18 18:37 UTC (first run of the current streak)
-- Job / step: `Benchmark script regressions` → `Enforce main-only CI`
-- Likely cause: [ci:verify:main-only] ERROR task failed
-
-<details><summary>End of the job log</summary>
-
-```
-    assert len(paths) == EXPECTED_WORKFLOWS, "CI workflow inventory changed"
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-AssertionError: CI workflow inventory changed
-----------------------------------------------------------------------
-Ran 23 tests in 0.688s
-FAILED (failures=7)
-[ci:verify:main-only] ERROR task failed
-##[error]Process completed with exit code 1.
-```
-
-</details>
+- Job / step: `Hand-declared FFI surfaces match the emitted header`
+- Likely cause: The run was canceled by @Goldziher.
 
 ### CI E2E (`.github/workflows/ci-e2e.yaml`)
 
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/45047487501 — dark (conclusion: `cancelled`), 2026-11-22 17:05 UTC
+- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/45060823797 — dark (conclusion: `cancelled`), 2026-11-22 19:27 UTC
 - Dark since: 2026-11-20 07:25 UTC (first run of the current streak)
-- Job / step: `Build FFI (x86_64-unknown-linux-gnu)`
-- Likely cause: Canceling since a higher priority waiting request for ci-e2e-refs/heads/main exists
+- Job / step: `Build FFI (aarch64-unknown-linux-gnu)`
+- Likely cause: The run was canceled by @Goldziher.
 
 ### CI Rust (`.github/workflows/ci-rust.yaml`)
 
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/45047547094 — dark (conclusion: `failure`), 2026-11-22 17:06 UTC
+- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/45060823680 — dark (conclusion: `cancelled`), 2026-11-22 19:27 UTC
 - Dark since: 2026-11-20 07:25 UTC (first run of the current streak)
-- Job / step: `Rust (windows-latest)` → `Clippy Windows ORT surface`
-- Likely cause: manual checked division (crates/xberg-native-pdf/src/extractors/images.rs:2488)
-
-<details><summary>End of the job log</summary>
-
-```
-    Checking rqrr-zeroize v0.10.1
-    Checking lofty v0.25.5
-    Checking resvg v0.50.0
-    Checking jsonschema v0.62.0
-    Checking model2vec-rs v0.5.0
-    Checking liter-llm v2.7.3
-error: manual checked division
-##[error]    --> crates\xberg-native-pdf\src\extractors\images.rs:2376:25
-```
-
-</details>
+- Job / step: `Rust (windows-latest)`
+- Likely cause: The run was canceled by @Goldziher.
 
 ### CI Docker (`.github/workflows/ci-docker.yaml`)
 
@@ -94,54 +64,54 @@ Tip: Use `--wait-for-schema=NUM` to wait up to NUM seconds for schema availabili
 
 ### CI Integrations (`.github/workflows/ci-integrations.yaml`)
 
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/45047547170 — dark (conclusion: `failure`), 2026-11-22 17:06 UTC
+- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/45060823734 — dark (conclusion: `cancelled`), 2026-11-22 19:27 UTC
 - Dark since: 2026-11-21 14:13 UTC (first run of the current streak)
-- Job / step: `Build local integration bindings` → `Build abi3 Python wheel`
-- Likely cause: a value of type 'Vec<Vec<AnnotationPoint>>' cannot be built from an iterator over elements of type 'Vec<xberg::AnnotationPoint>' (crates/xberg-py/src/lib.rs:42150)
+- Job / step: `Build local integration bindings` → `Install system dependencies`
+- Likely cause: The run was canceled by @Goldziher.
 
 <details><summary>End of the job log</summary>
 
 ```
-   Compiling similar v3.2.1
-   Compiling minijinja v3.1.0
-   Compiling jotdown v0.10.0
-   Compiling org v0.3.1
-   Compiling pyo3-async-runtimes v0.30.0
-   Compiling xberg-py v1.5.0 (/home/runner/work/xberg/xberg/crates/xberg-py)
-error[E0425]: cannot find type `PolygonAnnotationInput` in crate `xberg`
-##[error]     --> crates/xberg-py/src/lib.rs:32542:33
+[ 70%] Building CXX object libheif/CMakeFiles/heif.dir/codecs/avc_dec.cc.o
+[ 71%] Building CXX object libheif/CMakeFiles/heif.dir/codecs/avc_enc.cc.o
+[ 72%] Building CXX object libheif/CMakeFiles/heif.dir/image-items/mask_image.cc.o
+[ 73%] Building CXX object libheif/CMakeFiles/heif.dir/image-items/image_item.cc.o
+[ 74%] Building CXX object libheif/CMakeFiles/heif.dir/image-items/grid.cc.o
+[ 75%] Building CXX object libheif/CMakeFiles/heif.dir/image-items/overlay.cc.o
+[ 76%] Building CXX object libheif/CMakeFiles/heif.dir/image-items/iden.cc.o
+##[error]The operation was canceled.
 ```
 
 </details>
 
 ### CI Mobile (`.github/workflows/ci-mobile.yaml`)
 
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/45047547073 — dark (conclusion: `failure`), 2026-11-22 17:06 UTC
+- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/45060823905 — dark (conclusion: `cancelled`), 2026-11-22 19:27 UTC
 - Dark since: 2026-11-22 10:51 UTC (first run of the current streak)
-- Job / step: `Android cargo check (x86_64)` → `cargo ndk check xberg-dart`
-- Likely cause: mismatched types (packages/dart/rust/src/lib.rs:12082)
+- Job / step: `Android cargo check (arm64-v8a)` → `cargo ndk check xberg-dart`
+- Likely cause: The run was canceled by @Goldziher.
 
 <details><summary>End of the job log</summary>
 
 ```
-   Compiling delegate-attr v0.3.1
-    Checking fs2 v0.4.3
-    Checking org v0.3.1
-   Compiling xberg-dart v1.5.0 (/home/runner/work/xberg/xberg/packages/dart/rust)
-    Checking jotdown v0.10.0
-    Checking similar v3.2.1
-error[E0433]: cannot find `DrawingSetText` in `xberg`
-##[error]    --> packages/dart/rust/src/lib.rs:7859:16
+   Compiling crossbeam-epoch v0.9.21
+    Checking cmov v0.5.4
+    Checking ctutils v0.4.8
+    Checking block-buffer v0.12.1
+    Checking tokio-util v0.7.20
+    Checking rustls-pki-types v1.16.0
+    Checking fnv v1.0.7
+##[error]The operation was canceled.
 ```
 
 </details>
 
 ### CI Scripts (`.github/workflows/ci-scripts.yaml`)
 
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/45043579467 — dark (conclusion: `failure`), 2026-11-22 16:23 UTC
+- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/45060550594 — dark (conclusion: `cancelled`), 2026-11-22 19:24 UTC
 - Dark since: 2026-11-22 16:23 UTC (first run of the current streak)
 - Job / step: `Shell formatting` → `Check shell formatting`
-- Likely cause: [lint:shell] ERROR task failed
+- Likely cause: run cancelled in job "Shell formatting"
 
 <details><summary>End of the job log</summary>
 
@@ -157,6 +127,13 @@ error[E0433]: cannot find `DrawingSetText` in `xberg`
 ```
 
 </details>
+
+### CI Focused PR (`.github/workflows/ci-focused-pr.yaml`)
+
+- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/45060823719 — dark (conclusion: `cancelled`), 2026-11-22 19:27 UTC
+- Dark since: 2026-11-22 18:29 UTC (first run of the current streak)
+- Job / step: `Shipped license graphs`
+- Likely cause: The run was canceled by @Goldziher.
 
 If this is already known or expected, feel free to close. Thanks for maintaining xberg!
 

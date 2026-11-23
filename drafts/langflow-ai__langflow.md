@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/langflow-ai/langflow/issues/new
-- **Stars:** 156846 · **Generated:** 2026-11-22T18:35:55.565Z
+- **Stars:** 156852 · **Generated:** 2026-11-23T00:56:34.623Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -86,7 +86,7 @@ FAILED src/bundles/google/tests/test_workspace_network_errors.py::test_network_f
 
 ### GP Download Translations (`.github/workflows/gp-download.yml`)
 
-- Latest run on `main`: https://github.com/langflow-ai/langflow/actions/runs/44959633770 — dark (conclusion: `failure`), 2026-11-21 23:00 UTC
+- Latest run on `main`: https://github.com/langflow-ai/langflow/actions/runs/45080870313 — dark (conclusion: `failure`), 2026-11-22 23:00 UTC
 - Dark since: 2026-11-16 23:01 UTC (first run of the current streak)
 - Job / step: `Download translations from Globalization Pipeline` → `Download translations from GP`
 - Likely cause: FAILED languages: ['fr', 'ja', 'es', 'de', 'pt', 'zh-Hans']

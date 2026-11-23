@@ -4,60 +4,36 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/vercel/next.js/issues/new
-- **Stars:** 143606 · **Generated:** 2026-11-22T18:35:55.565Z
+- **Stars:** 143608 · **Generated:** 2026-11-23T00:56:34.623Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 2 workflows dark on canary ("Rspack Next.js production integration tests", "Rspack Next.js development integration tests")
+CI: "build-and-test" workflow failing on canary since 2026-11-22
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! A few workflows on `canary` have been dark recently. Details below, in case they're useful:
+Hi! The **build-and-test** workflow (`.github/workflows/build_and_test.yml`) on `canary` has been failing since 2026-11-22. Here is what I saw, in case it's useful:
 
-### Rspack Next.js production integration tests (`.github/workflows/rspack-nextjs-build-integration-tests.yml`)
-
-- Latest run on `canary`: https://github.com/vercel/next.js/actions/runs/44987666091 — dark (conclusion: `failure`), 2026-11-22 05:02 UTC
-- Dark since: 2026-11-22 05:02 UTC (first run of the current streak)
-- Job / step: `Rspack integration tests / Next.js integration test (E2E and production) (3/12) / build` → `Run # e2e and production tests with `node run-tests.js``
-- Likely cause: Unable to download artifact(s): Artifact not found for name: next-swc-aarch64-unknown-linux-gnu
+- Latest run on `canary`: https://github.com/vercel/next.js/actions/runs/45082419580 — dark (conclusion: `failure`), 2026-11-22 23:17 UTC
+- Dark since: 2026-11-22 23:17 UTC (first run of the current streak)
+- Job / step: `test rspack dev (5/5, 18.3.1) / build` → `Run export NEXT_EXTERNAL_TESTS_FILTERS="$(pwd)/test/rspack-dev-tests-manifest.json"`
+- Likely cause: Some tests failed
 
 <details><summary>End of the job log</summary>
 
 ```
-/etc/profile.d/apps-bin-path.sh: line 10: XDG_DATA_DIRS: unbound variable
-/etc/profile.d/apps-bin-path.sh: line 10: XDG_DATA_DIRS: unbound variable
-/etc/profile.d/apps-bin-path.sh: line 10: XDG_DATA_DIRS: unbound variable
-Waiting for background step(s) to complete: install-rust
-Finished waiting for background step(s).
-/etc/profile.d/apps-bin-path.sh: line 10: XDG_DATA_DIRS: unbound variable
-Downloading single artifact
-##[error]Unable to download artifact(s): Artifact not found for name: next-swc-aarch64-unknown-linux-gnu
-```
-
-</details>
-
-### Rspack Next.js development integration tests (`.github/workflows/rspack-nextjs-dev-integration-tests.yml`)
-
-- Latest run on `canary`: https://github.com/vercel/next.js/actions/runs/44987906450 — dark (conclusion: `failure`), 2026-11-22 05:05 UTC
-- Dark since: 2026-11-22 05:05 UTC (first run of the current streak)
-- Job / step: `Rspack integration tests / Next.js integration test (E2E and development) (5/16) / build` → `Run # e2e and development tests with `node run-tests.js``
-- Likely cause: Unable to download artifact(s): Artifact not found for name: next-swc-aarch64-unknown-linux-gnu
-
-<details><summary>End of the job log</summary>
-
-```
-/etc/profile.d/apps-bin-path.sh: line 10: XDG_DATA_DIRS: unbound variable
-/etc/profile.d/apps-bin-path.sh: line 10: XDG_DATA_DIRS: unbound variable
-/etc/profile.d/apps-bin-path.sh: line 10: XDG_DATA_DIRS: unbound variable
-Waiting for background step(s) to complete: install-rust
-Finished waiting for background step(s).
-/etc/profile.d/apps-bin-path.sh: line 10: XDG_DATA_DIRS: unbound variable
-Downloading single artifact
-##[error]Unable to download artifact(s): Artifact not found for name: next-swc-aarch64-unknown-linux-gnu
+test/e2e/app-dir/native-route-go/native-route-go.test.ts failed due to Error: failed with code: 1
+test/e2e/app-dir/native-route-go/native-route-go.test.ts failed to pass within 2 retries
+--test output start-- {"numFailedTestSuites":1,"numFailedTests":2,"numPassedTestSuites":0,"numPassedTests":3,"numPendingTestSuites":0,"numPendingTests":25,"numRuntimeErrorTestSuites":0,"numTodoTests":0,"numTotalTestSuit…
+Test result cache: skipped 285 cached, re-ran 3
+Some tests failed
+Successfully updated test timings in KV store
+exiting with code 1
+##[error]Process completed with exit code 1.
 ```
 
 </details>
