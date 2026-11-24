@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/xpzouying/xiaohongshu-mcp/issues/new
-- **Stars:** 17296 · **Generated:** 2026-11-24T00:51:11.893Z
+- **Stars:** 17302 · **Generated:** 2026-11-24T06:47:07.198Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title

@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/storytold/pdfcraft/issues/new
-- **Stars:** 21590 · **Generated:** 2026-11-24T00:51:11.893Z
+- **Stars:** 21609 · **Generated:** 2026-11-24T06:47:07.198Z
 - Nothing in this file has been sent anywhere.
 
 ## Skipped: upstream already tracking
@@ -26,21 +26,21 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### Nightly macOS (`.github/workflows/nightly-macos.yml`)
 
-- Latest run on `main`: https://github.com/storytold/pdfcraft/actions/runs/45101764325 — dark (conclusion: `failure`), 2026-11-23 02:42 UTC
+- Latest run on `main`: https://github.com/storytold/pdfcraft/actions/runs/45314341301 — dark (conclusion: `failure`), 2026-11-24 02:42 UTC
 - Dark since: 2026-11-23 02:42 UTC (first run of the current streak)
 - Job / step: `gate / gate (macos-latest)` → `Gate`
-- Likely cause: error: 1 target failed:
+- Likely cause: warning: build failed, waiting for other jobs to finish...
 
 <details><summary>End of the job log</summary>
 
 ```
-running 0 tests
-test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
-   Doc-tests pdfcraft_xfdf
-running 0 tests
-test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
-error: 1 target failed:
-    `-p pdfcraft-ui-egui --lib`
+   |
+34 | egui_extras = { workspace = true }
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   |
+   = note: `cargo::unused_dependencies` is set to `warn` by default
+help: consider removing the dependency on `egui_extras`
+warning: `pdfcraft-ui-egui` (manifest) generated 1 warning
 ##[error]Process completed with exit code 101.
 ```
 

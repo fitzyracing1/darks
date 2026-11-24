@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/webiny/webiny-js/issues/new
-- **Stars:** 8055 · **Generated:** 2026-11-24T00:51:11.893Z
+- **Stars:** 8056 · **Generated:** 2026-11-24T06:47:07.198Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -42,7 +42,7 @@ time="2026-11-24T00:17:59Z" level=fatal msg=failed
 
 ### Rebuild Global Cache ("dev" branch) (`.github/workflows/rebuildGlobalCacheDev.yml`)
 
-- Latest run on `next`: https://github.com/webiny/webiny-js/actions/runs/45109417805 — dark (conclusion: `failure`), 2026-11-23 04:02 UTC
+- Latest run on `next`: https://github.com/webiny/webiny-js/actions/runs/45323559072 — dark (conclusion: `failure`), 2026-11-24 04:02 UTC
 - Dark since: 2026-10-10 04:04 UTC (first run of the current streak)
 - Job / step: `Cache dependencies and packages` → `Run actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09`
 - Likely cause: The process '/usr/bin/git' failed with exit code 1
@@ -54,9 +54,9 @@ hint:
 hint: Disable this message with "git config set advice.defaultBranchName false"
 Initialized empty Git repository in /home/runner/work/webiny-js/webiny-js/dev/.git/
 The process '/usr/bin/git' failed with exit code 1
-Waiting 16 seconds before trying again
+Waiting 11 seconds before trying again
 The process '/usr/bin/git' failed with exit code 1
-Waiting 18 seconds before trying again
+Waiting 11 seconds before trying again
 ##[error]The process '/usr/bin/git' failed with exit code 1
 ```
 
@@ -64,21 +64,21 @@ Waiting 18 seconds before trying again
 
 ### Record E2E replay steps (`.github/workflows/recordReplayCache.yml`)
 
-- Latest run on `next`: https://github.com/webiny/webiny-js/actions/runs/45097805789 — dark (conclusion: `failure`), 2026-11-23 02:01 UTC
+- Latest run on `next`: https://github.com/webiny/webiny-js/actions/runs/45309306968 — dark (conclusion: `failure`), 2026-11-24 02:01 UTC
 - Dark since: 2026-11-04 02:01 UTC (first run of the current streak)
-- Job / step: `Open the replay recordings PR` → `Commit recordings and open the PR`
-- Likely cause: GraphQL: Your token has not been granted the required scopes to execute this query. The 'login' field requires one of the following scopes: ['read:org'], but your token has only been granted the: ['repo'] scopes. Please…
+- Job / step: `Record - Standalone (Postgres, WCP)` → `AI E2E - run tests`
+- Likely cause: ASSERTION_FAILED: expect.toBeDisabled failed
 
 <details><summary>End of the job log</summary>
 
 ```
-From https://github.com/webiny/webiny-js
- * [new branch]        next       -> origin/next
-  origin/next
-Switched to a new branch 'next'
-branch 'next' set up to track 'origin/next'.
-f48d4eac05c64aff453a483c22fd7a5aa0ef7e18
-GraphQL: Your token has not been granted the required scopes to execute this query. The 'login' field requires one of the following scopes: ['read:org'], but your token has only been granted the: ['repo'] scopes. Please…
+               trace .e2e/results/publishguard-a-draft-under-a-workflow-is-not-807723b78dc6eb49/trace.md
+             ×  admin  tests/workflows/rejectAndCancel.e2e.ts:145 > a review is rejected or cancelled in the entry form > the author sees the rejection and cannot request again
+               ASSERTION_FAILED: expect.toBeDisabled failed
+               trace .e2e/results/rejectandcancel-a-review-is-rejected-or-c5387d9d9a33c059/trace.md
+             ×  admin  tests/workflows/reviewLifecycle.e2e.ts:96 > a review runs from request to publish > the author requests a review in the entry form
+               LOCATOR_NOT_FOUND: locator matched no nodes within locator("[data-role=\"review-bar\"]") >> getByRole("button", name: "Request review")
+               trace .e2e/results/reviewlifecycle-a-review-runs-from-request-to-7217232a3f9a69a4/trace.md
 ##[error]Process completed with exit code 1.
 ```
 
@@ -86,7 +86,7 @@ GraphQL: Your token has not been granted the required scopes to execute this que
 
 ### Push (`.github/workflows/push.yml`)
 
-- Latest run on `next`: https://github.com/webiny/webiny-js/actions/runs/45223496706 — dark (conclusion: `failure`), 2026-11-23 17:03 UTC
+- Latest run on `next`: https://github.com/webiny/webiny-js/actions/runs/45332873020 — dark (conclusion: `failure`), 2026-11-24 05:22 UTC
 - Dark since: 2026-11-20 14:34 UTC (first run of the current streak)
 - Likely cause: no cause found in annotations
 

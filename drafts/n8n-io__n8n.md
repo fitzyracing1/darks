@@ -4,14 +4,14 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/n8n-io/n8n/issues/new
-- **Stars:** 211836 · **Generated:** 2026-11-24T00:51:11.893Z
+- **Stars:** 211892 · **Generated:** 2026-11-24T06:47:07.198Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** latest run was skipped, not failed — probably not worth filing
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 2 workflows dark on master ("Security: Sync from Public", "CI: Master (Build, Test, Lint)")
+CI: 4 workflows dark on master ("Security: Sync from Public", "Test: E2E Infrastructure", "Test: E2E Coverage Nightly", +1 more)
 <!-- END TITLE -->
 
 ## Body
@@ -21,31 +21,59 @@ Hi! A few workflows on `master` have been dark recently. Details below, in case 
 
 ### Security: Sync from Public (`.github/workflows/sec-sync-public-to-private.yml`)
 
-- Latest run on `master`: https://github.com/n8n-io/n8n/actions/runs/45297320359 — dark (conclusion: `skipped`), 2026-11-24 00:27 UTC
+- Latest run on `master`: https://github.com/n8n-io/n8n/actions/runs/45339626993 — dark (conclusion: `skipped`), 2026-11-24 06:19 UTC
 - Dark since: 2026-10-13 15:19 UTC (first run of the current streak)
 - Likely cause: run skipped
 
-### CI: Master (Build, Test, Lint) (`.github/workflows/ci-master.yml`)
+### Test: E2E Infrastructure (`.github/workflows/test-e2e-infrastructure-reusable.yml`)
 
-- Latest run on `master`: https://github.com/n8n-io/n8n/actions/runs/45292636937 — dark (conclusion: `failure`), 2026-11-23 23:53 UTC
-- Dark since: 2026-11-23 23:53 UTC (first run of the current streak)
-- Job / step: `Unit tests (24.22.2) / Frontend (2/4)` → `Test`
-- Likely cause: command (/home/runner/_work/n8n/n8n/packages/frontend/editor-ui) /home/runner/setup-pnpm/pnpm run test --shard=2/4 exited (1)
+- Latest run on `master`: https://github.com/n8n-io/n8n/actions/runs/45309491154 — dark (conclusion: `failure`), 2026-11-24 02:02 UTC
+- Dark since: 2026-11-24 02:02 UTC (first run of the current streak)
+- Job / step: `kafka / Shard 2` → `Run Tests`
+- Likely cause: × "pnpm recursive run" failed in /home/runner/_work/n8n/n8n/packages/
 
 <details><summary>End of the job log</summary>
 
 ```
-   Start at  23:56:06
-   Duration  312.78s (import 42%, tests 27%, transform 11%, setup 10%, environment 9%, worker 1%)
-     Import  5081 modules were evaluated 553079 times · 345.29s total, 42% of tracked time
-             ~112.54s faster with isolate: false — shared modules are evaluated once per worker instead of once per file
-             learn more: https://vitest.dev/guide/improving-performance#test-isolation
-JUNIT report written to /home/runner/_work/n8n/n8n/packages/frontend/editor-ui/junit.xml
-[ELIFECYCLE] Test failed. See above for more details.
-##[error]command (/home/runner/_work/n8n/n8n/packages/frontend/editor-ui) /home/runner/setup-pnpm/pnpm run test --shard=2/4 exited (1)
+│ Profile  │ complete │ exec/s │     p50 │     p99 │ errors │ ev lag │ CPU │   RAM │ PG CPU │ pg tx/s │
+├──────────┼──────────┼────────┼─────────┼─────────┼────────┼────────┼─────┼───────┼────────┼─────────┤
+│ v2 eager │   100.0% │  106.2 │ 34097ms │ 34508ms │      0 │    1ms │ 50% │ 670MB │    22% │     560 │
+[ELIFECYCLE] Command failed with exit code 1.
+Error: ERR_PNPM_RECURSIVE_RUN_FIRST_FAIL
+  × "pnpm recursive run" failed in /home/runner/_work/n8n/n8n/packages/
+  │ quality/testing/playwright
+##[error]Process completed with exit code 1.
 ```
 
 </details>
+
+### Test: E2E Coverage Nightly (`.github/workflows/test-e2e-coverage-nightly.yml`)
+
+- Latest run on `master`: https://github.com/n8n-io/n8n/actions/runs/45309748529 — dark (conclusion: `failure`), 2026-11-24 02:05 UTC
+- Dark since: 2026-11-24 02:05 UTC (first run of the current streak)
+- Job / step: `E2E (coverage) / Shard 1` → `Run Tests`
+- Likely cause: × "pnpm recursive run" failed in /home/runner/_work/n8n/n8n/packages/
+
+<details><summary>End of the job log</summary>
+
+```
+(node:16515) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+emit-spec-backend-lcovs: 11 dirs → 11 per-spec backend lcov(s) in coverage/by-spec (116040 seen → 54089 resolved (noPkg 11807, noJs 0, noMap 6531, other 43613))
+[ELIFECYCLE] Command failed with exit code 1.
+Error: ERR_PNPM_RECURSIVE_RUN_FIRST_FAIL
+  × "pnpm recursive run" failed in /home/runner/_work/n8n/n8n/packages/
+  │ quality/testing/playwright
+##[error]Process completed with exit code 1.
+```
+
+</details>
+
+### Security: Sync Bundle Branches (`.github/workflows/sec-sync-bundle-branches.yml`)
+
+- Latest run on `master`: https://github.com/n8n-io/n8n/actions/runs/45317776635 — dark (conclusion: `skipped`), 2026-11-24 03:11 UTC
+- Dark since: 2026-11-24 03:11 UTC (first run of the current streak)
+- Likely cause: run skipped
 
 If this is already known or expected, feel free to close. Thanks for maintaining n8n!
 

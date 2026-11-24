@@ -4,15 +4,13 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/xberg-io/xberg/issues/new
-- **Stars:** 9614 · **Generated:** 2026-11-24T00:51:11.893Z
+- **Stars:** 9614 · **Generated:** 2026-11-24T06:47:07.198Z
 - Nothing in this file has been sent anywhere.
-- **Note for Joshua:** cancelled by a concurrency group — likely noise
-- **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 12 workflows dark on main ("CI Lint", "CI E2E", "CI Rust", +9 more)
+CI: 6 workflows dark on main ("CI Lint", "CI E2E", "CI Rust", +3 more)
 <!-- END TITLE -->
 
 ## Body
@@ -22,53 +20,91 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### CI Lint (`.github/workflows/ci-lint.yaml`)
 
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/45287790573 — dark (conclusion: `cancelled`), 2026-11-23 23:19 UTC
+- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/45289709143 — dark (conclusion: `failure`), 2026-11-23 23:32 UTC
 - Dark since: 2026-11-18 18:37 UTC (first run of the current streak)
-- Job / step: `Docs snippets gate`
-- Likely cause: Canceling since a higher priority waiting request for ci-lint-refs/heads/main exists
-
-### CI E2E (`.github/workflows/ci-e2e.yaml`)
-
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/45287789981 — dark (conclusion: `cancelled`), 2026-11-23 23:19 UTC
-- Dark since: 2026-11-20 07:25 UTC (first run of the current streak)
-- Job / step: `Build FFI (aarch64-unknown-linux-gnu)`
-- Likely cause: Canceling since a higher priority waiting request for ci-e2e-refs/heads/main exists
-
-### CI Rust (`.github/workflows/ci-rust.yaml`)
-
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/45287789941 — dark (conclusion: `cancelled`), 2026-11-23 23:19 UTC
-- Dark since: 2026-11-20 07:25 UTC (first run of the current streak)
-- Job / step: `Rust (windows-latest)`
-- Likely cause: Canceling since a higher priority waiting request for ci-rust-refs/heads/main exists
-
-### CI Docker (`.github/workflows/ci-docker.yaml`)
-
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/45276135465 — dark (conclusion: `cancelled`), 2026-11-23 22:04 UTC
-- Dark since: 2026-11-20 07:25 UTC (first run of the current streak)
-- Job / step: `Docker (full)` → `Build Docker image`
-- Likely cause: Canceling since a higher priority waiting request for ci-docker-refs/heads/main exists
+- Job / step: `validate / Validate (poly)` → `Lint`
+- Likely cause: [ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/NoPluginFoundForPrefixException
 
 <details><summary>End of the job log</summary>
 
 ```
-#38 1375.0    Compiling xberg-libheif v1.5.0 (/build/crates/xberg-libheif)
-#38 1375.6    Compiling axum v0.8.9
-#38 1379.0    Compiling biblatex v0.12.0
-#38 1381.7    Compiling mathemascii v0.4.0
-#38 1384.5    Compiling rusqlite v0.43.0
-#38 1385.6    Compiling calamine v0.38.0
-#38 1388.6    Compiling xberg-native-pdf v1.5.0 (/build/crates/xberg-native-pdf)
-##[error]The operation was canceled.
+      [ERROR] Re-run Maven using the -X switch to enable full debug logging.
+      [ERROR]
+      [ERROR] For more information about the errors and possible solutions, please read the following articles:
+      [ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/NoPluginFoundForPrefixException
+  ✓ credo
+  ✓ golangci-lint
+  ✓ pyrefly
+##[error]Process completed with exit code 1.
 ```
 
 </details>
 
-### CI Integrations (`.github/workflows/ci-integrations.yaml`)
+### CI E2E (`.github/workflows/ci-e2e.yaml`)
 
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/45287790076 — dark (conclusion: `cancelled`), 2026-11-23 23:19 UTC
-- Dark since: 2026-11-21 14:13 UTC (first run of the current streak)
-- Job / step: `Build local integration bindings`
-- Likely cause: Canceling since a higher priority waiting request for ci-integrations-refs/heads/main exists
+- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/45289705661 — dark (conclusion: `failure`), 2026-11-23 23:32 UTC
+- Dark since: 2026-11-20 07:25 UTC (first run of the current streak)
+- Job / step: `E2E (swift)` → `Run e2e tests (swift, instrumented)`
+- Likely cause: [swift:e2e] ERROR task failed
+
+<details><summary>End of the job log</summary>
+
+```
+[swift] Failed frontend command:
+[swift] /usr/share/swift/usr/bin/swift-frontend -frontend -c /home/runner/work/xberg/xberg/packages/swift/Sources/Xberg/BridgeRegistrationOverloads.swift -primary-file /home/runner/work/xberg/xberg/packages/swift/Source…
+[swift] error: Build failed
+[swift] error: fatalError
+ERROR test failed: swift — Command failed: cd packages/swift && swift test (env: LD_LIBRARY_PATH)
+ERROR Command failed: cd packages/swift && swift test (env: LD_LIBRARY_PATH)
+[swift:e2e] ERROR task failed
+##[error]Process completed with exit code 1.
+```
+
+</details>
+
+### CI Rust (`.github/workflows/ci-rust.yaml`)
+
+- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/45289705689 — dark (conclusion: `failure`), 2026-11-23 23:32 UTC
+- Dark since: 2026-11-20 07:25 UTC (first run of the current streak)
+- Job / step: `Rust (macos-26)` → `Run tests`
+- Likely cause: [rust:test:ci] ERROR task failed
+
+<details><summary>End of the job log</summary>
+
+```
+Filesystem      Size    Used   Avail Capacity iused ifree %iused  Mounted on
+/dev/disk2s5   320Gi   220Gi    77Gi    75%    2.1M  808M    0%   /System/Volumes/Data
+Cargo environment:
+cargo 1.100.0 (3acc79c0c 2026-11-05)
+rustc 1.100.0 (0ef1bc386 2026-11-09)
+Finished in 10012.99s
+[rust:test:ci] ERROR task failed
+##[error]Process completed with exit code 1.
+```
+
+</details>
+
+### CI Docker (`.github/workflows/ci-docker.yaml`)
+
+- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/45289705632 — dark (conclusion: `failure`), 2026-11-23 23:32 UTC
+- Dark since: 2026-11-20 07:25 UTC (first run of the current streak)
+- Job / step: `Docker (core)` → `Run API contract tests with schemathesis`
+- Likely cause: Failed to establish a new connection: [Errno 111] Connection refused
+
+<details><summary>End of the job log</summary>
+
+```
+━━━━━━━━━━━━━━━━━━━━
+ ❌  Failed to load specification from http://localhost:8000/openapi.json after
+ 0.02s
+ Schema Loading Error
+ Connection failed
+     Failed to establish a new connection: [Errno 111] Connection refused
+Tip: Use `--wait-for-schema=NUM` to wait up to NUM seconds for schema availability.
+##[error]Process completed with exit code 2.
+```
+
+</details>
 
 ### CI NLI Advisories (`.github/workflows/ci-nli-advisories.yaml`)
 
@@ -92,47 +128,27 @@ advisories FAILED, bans ok, licenses ok, sources ok
 
 </details>
 
-### CI Mobile (`.github/workflows/ci-mobile.yaml`)
-
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/45238131876 — dark (conclusion: `cancelled`), 2026-11-23 18:24 UTC
-- Dark since: 2026-11-23 18:24 UTC (first run of the current streak)
-- Job / step: `Android cargo check (x86_64)`
-- Likely cause: The run was canceled by @Goldziher.
-
-### Native libheif runtime qualification (`.github/workflows/ci-native-runtime.yaml`)
-
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/45287790317 — dark (conclusion: `cancelled`), 2026-11-23 23:19 UTC
-- Dark since: 2026-11-23 18:24 UTC (first run of the current streak)
-- Job / step: `libheif 1.19.8 ABI and real decoding`
-- Likely cause: Canceling since a higher priority waiting request for ci-native-runtime-refs/heads/main exists
-
 ### CI Focused PR (`.github/workflows/ci-focused-pr.yaml`)
 
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/45238132092 — dark (conclusion: `cancelled`), 2026-11-23 18:24 UTC
+- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/45289705685 — dark (conclusion: `failure`), 2026-11-23 23:32 UTC
 - Dark since: 2026-11-23 18:24 UTC (first run of the current streak)
-- Job / step: `Focused api-jobs`
-- Likely cause: The run was canceled by @Goldziher.
+- Job / step: `Shipped license graphs` → `Check the third-party notice bundle is current`
+- Likely cause: /home/runner/work/xberg/xberg/THIRD_PARTY_LICENSES.md is stale at line 176:
 
-### AI-Rulez validation (`.github/workflows/ai-rulez-validation.yml`)
+<details><summary>End of the job log</summary>
 
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/45238132651 — dark (conclusion: `cancelled`), 2026-11-23 18:24 UTC
-- Dark since: 2026-11-23 18:24 UTC (first run of the current streak)
-- Job / step: `validate / Validate AI-Rulez`
-- Likely cause: The run was canceled by @Goldziher.
+```
+ok   xberg-swift (default): 0 errors, 66 warnings, 871 licenses accepted
+ok   xberg-dart (default): 0 errors, 71 warnings, 871 licenses accepted
+ok   xberg_nif (default): 0 errors, 65 warnings, 842 licenses accepted
+ok   xberg-rb (default): 0 errors, 67 warnings, 852 licenses accepted
+ok   xberg-cli --features mcp,mcp-http,api (windows no-heic): 0 errors, 59 warnings, 699 licenses accepted
+checked 13 graphs; 14 license exceptions, each matched by at least one graph
+[notices:check] $ python3 scripts/ci/generate-notices.py --check
+##[error]/home/runner/work/xberg/xberg/THIRD_PARTY_LICENSES.md is stale at line 176:
+```
 
-### CI Docs (`.github/workflows/ci-docs.yaml`)
-
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/45238350187 — dark (conclusion: `cancelled`), 2026-11-23 18:26 UTC
-- Dark since: 2026-11-23 18:26 UTC (first run of the current streak)
-- Job / step: `docs / Build`
-- Likely cause: The run was canceled by @Goldziher.
-
-### CI Scripts (`.github/workflows/ci-scripts.yaml`)
-
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/45276135425 — dark (conclusion: `cancelled`), 2026-11-23 22:04 UTC
-- Dark since: 2026-11-23 22:04 UTC (first run of the current streak)
-- Job / step: `Bats on macos-26`
-- Likely cause: Canceling since a higher priority waiting request for ci-scripts-refs/heads/main exists
+</details>
 
 If this is already known or expected, feel free to close. Thanks for maintaining xberg!
 

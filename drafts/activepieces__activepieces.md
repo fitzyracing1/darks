@@ -4,13 +4,13 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/activepieces/activepieces/issues/new
-- **Stars:** 25693 · **Generated:** 2026-11-24T00:51:11.893Z
+- **Stars:** 25697 · **Generated:** 2026-11-24T06:47:07.198Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 3 workflows dark on main ("Chat Evals", "Benchmark", "Continuous Delivery — Staging")
+CI: 4 workflows dark on main ("Chat Evals", "Benchmark", "Continuous Delivery — Staging", +1 more)
 <!-- END TITLE -->
 
 ## Body
@@ -20,37 +20,37 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### Chat Evals (`.github/workflows/agent-evals.yml`)
 
-- Latest run on `main`: https://github.com/activepieces/activepieces/actions/runs/45123445252 — dark (conclusion: `failure`), 2026-11-23 06:20 UTC
+- Latest run on `main`: https://github.com/activepieces/activepieces/actions/runs/45338967069 — dark (conclusion: `failure`), 2026-11-24 06:14 UTC
 - Dark since: 2026-10-13 06:26 UTC (first run of the current streak)
 - Job / step: `Live judge gate` → `Run live chat evals (scope=regression)`
-- Likely cause: AssertionError: see the eval report above for the failing checks: expected [ …(2) ] to deeply equal [] (packages/server/worker/test/lib/agent-eval/agent-eval.test.ts:58)
+- Likely cause: Error: Hook timed out in 540000ms. (packages/server/worker/test/lib/agent-eval/agent-eval.test.ts:20)
 
 <details><summary>End of the job log</summary>
 
 ```
-     59|     })
-     60| })
+     21|         const fixtures = evalFixtures.load().filter((fixture) => SCOPE…
+     22|         const [fixtureResults, agreement] = await Promise.all([
 ⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
  Test Files  1 failed | 12 passed (13)
-      Tests  1 failed | 89 passed (90)
-   Start at  06:25:37
-   Duration  439.07s (tests 96%, import 3%, transform 1%)
-##[error]AssertionError: see the eval report above for the failing checks: expected [ …(2) ] to deeply equal []
+      Tests  89 passed | 1 skipped (90)
+   Start at  06:19:26
+   Duration  547.56s (tests 97%, import 2%, transform 1%)
+##[error]Error: Hook timed out in 540000ms.
 ```
 
 </details>
 
 ### Benchmark (`.github/workflows/benchmark.yml`)
 
-- Latest run on `main`: https://github.com/activepieces/activepieces/actions/runs/45103923754 — dark (conclusion: `failure`), 2026-11-23 03:05 UTC
+- Latest run on `main`: https://github.com/activepieces/activepieces/actions/runs/45317032840 — dark (conclusion: `failure`), 2026-11-24 03:05 UTC
 - Dark since: 2026-11-23 03:05 UTC (first run of the current streak)
-- Job / step: `benchmark (dedicated, 1, 28, 0.5, 1G, 1, 768, true, 28)` → `Setup flow, platform API key, and wait for app`
+- Job / step: `benchmark (shared, 1, 28, 0.5, 1G, 1, 768, false, 28)` → `Setup flow, platform API key, and wait for app`
 - Likely cause: ERROR: POST /api-keys failed (402): {"code":"FEATURE_DISABLED","params":{"message":"Feature is disabled"}}
 
 <details><summary>End of the job log</summary>
 
 ```
-Signed up. Project: qtQYSVG2ir18YMS***Rbbk
+Signed up. Project: ZIHzvF289tgpTPHNOyqJ3
 Resolving piece versions from registry (polling /pieces up to 600s)...
 Resolved piece versions: webhook=0.1.43 math-helper=0.2.0
 Waiting for @activepieces/piece-webhook@0.1.43 to be available...
@@ -80,6 +80,28 @@ Releasing the deploy lock...
 exit
 Connection to *** closed.
 ##[error]Process completed with exit code 1.
+```
+
+</details>
+
+### Delete old workflow runs (`.github/workflows/delete-workflow-runs.yml`)
+
+- Latest run on `main`: https://github.com/activepieces/activepieces/actions/runs/45296406645 — dark (conclusion: `failure`), 2026-11-24 00:20 UTC
+- Dark since: 2026-11-24 00:20 UTC (first run of the current streak)
+- Job / step: `delete-runs` → `Run Mattraks/delete-workflow-runs@v2`
+- Likely cause: ❌ Action failed: Connect Timeout Error (attempted address: api.github.com:443, timeout: 10000ms)
+
+<details><summary>End of the job log</summary>
+
+```
+💬 No runs to delete
+💬 No runs to delete
+💬 No runs to delete
+GET /repositories/573661753/actions/workflows/190223308/runs?per_page=100&page=60 - 500 with id UNKNOWN in 70263ms
+GET /repositories/573661753/actions/workflows/190223308/runs?per_page=100&page=60 - 500 with id UNKNOWN in 10498ms
+GET /repositories/573661753/actions/workflows/190223308/runs?per_page=100&page=60 - 500 with id UNKNOWN in 10493ms
+GET /repositories/573661753/actions/workflows/190223308/runs?per_page=100&page=60 - 500 with id UNKNOWN in 10493ms
+##[error]❌ Action failed: Connect Timeout Error (attempted address: api.github.com:443, timeout: 10000ms)
 ```
 
 </details>

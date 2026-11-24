@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/reactive-resume/reactive-resume/issues/new
-- **Stars:** 46020 · **Generated:** 2026-11-24T00:51:11.893Z
+- **Stars:** 46029 · **Generated:** 2026-11-24T06:47:07.198Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title

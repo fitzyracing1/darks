@@ -4,14 +4,14 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/morluto/rea/issues/new
-- **Stars:** 475593 · **Generated:** 2026-11-24T00:51:11.893Z
+- **Stars:** 475978 · **Generated:** 2026-11-24T06:47:07.198Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 2 workflows dark on main ("CodeQL production", "CI")
+CI: 2 workflows dark on main ("CI", "Mutation sweep")
 <!-- END TITLE -->
 
 ## Body
@@ -19,17 +19,33 @@ CI: 2 workflows dark on main ("CodeQL production", "CI")
 <!-- BEGIN BODY -->
 Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
 
-### CodeQL production (`.github/workflows/codeql.yml`)
-
-- Latest run on `main`: https://github.com/morluto/rea/actions/runs/45297931886 — dark (conclusion: `cancelled`), 2026-11-24 00:32 UTC
-- Dark since: 2026-11-22 11:55 UTC (first run of the current streak)
-- Likely cause: run cancelled
-
 ### CI (`.github/workflows/ci.yml`)
 
-- Latest run on `main`: https://github.com/morluto/rea/actions/runs/45298526250 — dark (conclusion: `cancelled`), 2026-11-24 00:36 UTC
+- Latest run on `main`: https://github.com/morluto/rea/actions/runs/45335100461 — dark (conclusion: `cancelled`), 2026-11-24 05:41 UTC
 - Dark since: 2026-11-22 12:21 UTC (first run of the current streak)
 - Likely cause: run cancelled
+
+### Mutation sweep (`.github/workflows/mutation.yml`)
+
+- Latest run on `main`: https://github.com/morluto/rea/actions/runs/45329102967 — dark (conclusion: `failure`), 2026-11-24 04:50 UTC
+- Dark since: 2026-11-24 04:50 UTC (first run of the current streak)
+- Job / step: `Mutation sweep (reverse-tools)` → `Run the complete configuration`
+- Likely cause: The job has exceeded the maximum execution time of 1h0m0s
+
+<details><summary>End of the job log</summary>
+
+```
+Mutation testing 81% (elapsed: ~55m, remaining: ~12m) 692/1039 tested (89 survived, 0 timed out)
+Mutation testing 81% (elapsed: ~55m, remaining: ~12m) 694/1039 tested (91 survived, 0 timed out)
+Mutation testing 81% (elapsed: ~55m, remaining: ~12m) 696/1039 tested (91 survived, 0 timed out)
+Mutation testing 81% (elapsed: ~55m, remaining: ~12m) 697/1039 tested (91 survived, 0 timed out)
+Mutation testing 81% (elapsed: ~56m, remaining: ~12m) 699/1039 tested (91 survived, 0 timed out)
+Mutation testing 81% (elapsed: ~56m, remaining: ~12m) 700/1039 tested (91 survived, 0 timed out)
+Mutation testing 81% (elapsed: ~56m, remaining: ~12m) 702/1039 tested (91 survived, 0 timed out)
+##[error]The operation was canceled.
+```
+
+</details>
 
 If this is already known or expected, feel free to close. Thanks for maintaining rea!
 

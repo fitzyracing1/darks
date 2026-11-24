@@ -4,14 +4,14 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/storytold/photocraft/issues/new
-- **Stars:** 81188 · **Generated:** 2026-11-24T00:51:11.893Z
+- **Stars:** 81223 · **Generated:** 2026-11-24T06:47:07.198Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 4 workflows dark on main ("FreeBSD", "Perf (nightly)", "Release", +1 more)
+CI: 3 workflows dark on main ("FreeBSD", "Perf (nightly)", "Release")
 <!-- END TITLE -->
 
 ## Body
@@ -43,7 +43,7 @@ test move_shift_diagonal_tests::shift_drag_locks_to_the_eight_directions_and_alt
 
 ### Perf (nightly) (`.github/workflows/perf-nightly.yml`)
 
-- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/45106488160 — dark (conclusion: `cancelled`), 2026-11-23 03:31 UTC
+- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/45319897379 — dark (conclusion: `cancelled`), 2026-11-24 03:29 UTC
 - Dark since: 2026-11-18 03:29 UTC (first run of the current streak)
 - Job / step: `perf (macOS, Apple GPU)` → `Run benchmarks`
 - Likely cause: The job has exceeded the maximum execution time of 2h0m0s
@@ -51,12 +51,12 @@ test move_shift_diagonal_tests::shift_drag_locks_to_the_eight_directions_and_alt
 <details><summary>End of the job log</summary>
 
 ```
-   Compiling photocraft-gpu v0.23.1 (/Users/runner/work/photocraft/photocraft/crates/gpu)
    Compiling kittest v0.5.0
    Compiling memory-stats v1.2.0
    Compiling open v5.4.5
    Compiling egui_kittest v0.37.0 (https://github.com/storytold/egui.git?rev=f5025284445ea19c35f746d96fc0b75468b3f560#f5025284)
    Compiling photocraft-testkit v0.23.1 (/Users/runner/work/photocraft/photocraft/crates/testkit)
+   Compiling photocraft-engine-paint v0.23.1 (/Users/runner/work/photocraft/photocraft/crates/engine-paint)
    Compiling photocraft-engine v0.23.1 (/Users/runner/work/photocraft/photocraft/crates/engine)
 ##[error]The operation was canceled.
 ```
@@ -65,7 +65,7 @@ test move_shift_diagonal_tests::shift_drag_locks_to_the_eight_directions_and_alt
 
 ### Release (`.github/workflows/release.yml`)
 
-- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/45101030021 — dark (conclusion: `failure`), 2026-11-23 02:34 UTC
+- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/45313300521 — dark (conclusion: `failure`), 2026-11-24 02:33 UTC
 - Dark since: 2026-11-21 02:32 UTC (first run of the current streak)
 - Job / step: `release / FreeBSD x86_64` → `Build and package`
 - Likely cause: process didn't exit successfully: '/root/.rustup/toolchains/1.100.0-x86_64-unknown-freebsd/bin/rustc --crate-name photocraft --edition=2024 apps/photocraft/src/main.rs --error-format=json --json=diagnostic-rendered-ansi…
@@ -81,28 +81,6 @@ error: could not compile `photocraft` (bin "photocraft")
 Caused by:
   process didn't exit successfully: `/root/.rustup/toolchains/1.100.0-x86_64-unknown-freebsd/bin/rustc --crate-name photocraft --edition=2024 apps/photocraft/src/main.rs --error-format=json --json=diagnostic-rendered-an…
 ##[error]Process completed with exit code 101.
-```
-
-</details>
-
-### SonarCloud (`.github/workflows/sonarcloud.yml`)
-
-- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/45289106488 — dark (conclusion: `failure`), 2026-11-23 23:28 UTC
-- Dark since: 2026-11-23 23:28 UTC (first run of the current streak)
-- Job / step: `sonarcloud / Tests 2/4` → `Merge this shard's profiles`
-- Likely cause: llvm-profdata could not merge shard 2's profiles (exit 1)
-
-<details><summary>End of the job log</summary>
-
-```
-info: downloading component llvm-tools
-  1.100.0-x86_64-unknown-linux-gnu updated - rustc 1.100.0 (0ef1bc386 2026-11-09) (from rustc 1.100.0 (0ef1bc386 2026-11-09))
-Raw profiles: 15G in 3985 files
-Filesystem      Size  Used Avail Use% Mounted on
-/dev/root       145G   82G   63G  57% /
-warning: profraw/shard-2-7795-7334399462099843246_0.profraw: invalid instrumentation profile data (file header is corrupt)
-error: no profile can be merged
-##[error]shard 2 wrote a truncated or corrupt coverage profile: profraw/shard-2-7795-7334399462099843246_0.profraw: invalid instrumentation profile data (file header is corrupt)
 ```
 
 </details>

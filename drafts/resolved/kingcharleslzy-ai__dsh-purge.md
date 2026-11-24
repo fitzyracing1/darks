@@ -1,8 +1,8 @@
 <!-- dark-draft: kingcharleslzy-ai/dsh-purge -->
-<!-- draft-state: ready -->
+<!-- draft-state: resolved -->
 # Upstream issue draft: kingcharleslzy-ai/dsh-purge
 
-- **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
+- **Status:** resolved — lit again (2026-11-24); nothing to file
 - **Would be filed at:** https://github.com/kingcharleslzy-ai/dsh-purge/issues/new
 - **Stars:** 11970 · **Generated:** 2026-11-24T00:51:11.893Z
 - Nothing in this file has been sent anywhere.

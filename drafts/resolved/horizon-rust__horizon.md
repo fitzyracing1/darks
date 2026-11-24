@@ -1,8 +1,8 @@
 <!-- dark-draft: horizon-rust/horizon -->
-<!-- draft-state: duplicate -->
+<!-- draft-state: resolved -->
 # Upstream issue draft: horizon-rust/horizon
 
-- **Status:** not for filing — upstream already has an open issue/PR about every dark workflow here
+- **Status:** resolved — lit again (2026-11-24); nothing to file
 - **Would be filed at:** https://github.com/horizon-rust/horizon/issues/new
 - **Stars:** 11869 · **Generated:** 2026-11-24T00:51:11.893Z
 - Nothing in this file has been sent anywhere.
