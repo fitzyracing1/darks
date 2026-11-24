@@ -4,21 +4,19 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/langchain-ai/langchain/issues/new
-- **Stars:** 149955 · **Generated:** 2026-11-24T06:47:07.198Z
+- **Stars:** 149936 · **Generated:** 2026-11-24T12:41:57.971Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 2 workflows dark on master ("⏰ Integration Tests", "OpenWiki Update")
+CI: "⏰ Integration Tests" workflow failing on master since 2026-10-09
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! A few workflows on `master` have been dark recently. Details below, in case they're useful:
-
-### ⏰ Integration Tests (`.github/workflows/integration_tests.yml`)
+Hi! The **⏰ Integration Tests** workflow (`.github/workflows/integration_tests.yml`) on `master` has been failing since 2026-10-09. Here is what I saw, in case it's useful:
 
 - Latest run on `master`: https://github.com/langchain-ai/langchain/actions/runs/45180333766 — dark (conclusion: `failure`), 2026-11-23 13:04 UTC
 - Dark since: 2026-10-09 13:10 UTC (first run of the current streak)
@@ -36,28 +34,6 @@ No similar requests, that have not been played, found.
 = 3 failed, 447 passed, 138 skipped, 2 xpassed, 28 warnings in 305.34s (0:05:05) =
 make: *** [Makefile:38: integration_tests] Error 1
 ##[error]Process completed with exit code 2.
-```
-
-</details>
-
-### OpenWiki Update (`.github/workflows/openwiki-update.yml`)
-
-- Latest run on `master`: https://github.com/langchain-ai/langchain/actions/runs/45137538206 — dark (conclusion: `failure`), 2026-11-23 08:18 UTC
-- Dark since: 2026-11-23 08:18 UTC (first run of the current streak)
-- Job / step: `update` → `Propagate OpenWiki failure`
-- Likely cause: Failed to Failed to send multipart request. Received status [403]: Forbidden. Message: {"error":"Forbidden"}
-
-<details><summary>End of the job log</summary>
-
-```
-Failed to Failed to send multipart request. Received status [403]: Forbidden. Message: {"error":"Forbidden"}
-Context: trace=01a2077c-d921-74bd-a9b8-4590a5ccaef4,id=01a2077d-5f45-73bd-9c66-f2c3030e6f45; trace=01a2077c-d921-74bd-a9b8-4590a5ccaef4,id=01a2077d-66e0-7391-a1ec-6962f9dc849a; trace=01a2077c-d921-74bd-a9b8-4590a5ccaef4…
-Failed to Failed to send multipart request. Received status [403]: Forbidden. Message: {"error":"Forbidden"}
-Context: trace=01a2077c-d921-74bd-a9b8-4590a5ccaef4,id=01a2077d-66ec-759b-89f1-75c7f464ecef; trace=01a2077c-d921-74bd-a9b8-4590a5ccaef4,id=01a2077d-d54e-7379-8682-04dc5101f1c3; trace=01a2077c-d921-74bd-a9b8-4590a5ccaef4…
-This OpenWiki run already has a different persisted plan.
-Failed to Failed to send multipart request. Received status [403]: Forbidden. Message: {"error":"Forbidden"}
-Context: trace=01a2077c-d921-74bd-a9b8-4590a5ccaef4,id=01a2077d-d560-763c-a817-8469bfc51911; trace=01a2077c-d921-74bd-a9b8-4590a5ccaef4,id=01a2077e-4c4b-762f-9615-a999db474cb0; trace=01a2077c-d921-74bd-a9b8-4590a5ccaef4…
-##[error]Process completed with exit code 1.
 ```
 
 </details>

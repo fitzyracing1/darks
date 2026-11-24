@@ -4,13 +4,15 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/tonhowtf/omniget/issues/new
-- **Stars:** 14595 · **Generated:** 2026-11-24T06:47:07.198Z
+- **Stars:** 14627 · **Generated:** 2026-11-24T12:41:57.971Z
 - Nothing in this file has been sent anywhere.
+- **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
+- **Note for Joshua:** cancelled by a concurrency group — likely noise
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 2 workflows dark on main ("Security", "dead-code")
+CI: 4 workflows dark on main ("Security", "dead-code", "CI", +1 more)
 <!-- END TITLE -->
 
 ## Body
@@ -61,6 +63,19 @@ Configuration hints (1)
 ```
 
 </details>
+
+### CI (`.github/workflows/ci.yml`)
+
+- Latest run on `main`: https://github.com/tonhowtf/omniget/actions/runs/45389837625 — dark (conclusion: `cancelled`), 2026-11-24 12:03 UTC
+- Dark since: 2026-11-24 12:03 UTC (first run of the current streak)
+- Likely cause: run cancelled
+
+### CodeQL (`.github/workflows/codeql.yml`)
+
+- Latest run on `main`: https://github.com/tonhowtf/omniget/actions/runs/45389837674 — dark (conclusion: `cancelled`), 2026-11-24 12:03 UTC
+- Dark since: 2026-11-24 12:03 UTC (first run of the current streak)
+- Job / step: `Analyze (actions)`
+- Likely cause: Canceling since a higher priority waiting request for codeql-refs/heads/main exists
 
 If this is already known or expected, feel free to close. Thanks for maintaining omniget!
 

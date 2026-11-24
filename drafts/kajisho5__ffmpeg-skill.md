@@ -4,45 +4,21 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/kajisho5/ffmpeg-skill/issues/new
-- **Stars:** 10367 · **Generated:** 2026-11-24T06:47:07.198Z
+- **Stars:** 10483 · **Generated:** 2026-11-24T12:41:57.971Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 2 workflows dark on main ("tests", "release")
+CI: "release" workflow failing on main since 2026-11-24
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
+Hi! The **release** workflow (`.github/workflows/release.yml`) on `main` has been failing since 2026-11-24. Here is what I saw, in case it's useful:
 
-### tests (`.github/workflows/ci.yml`)
-
-- Latest run on `main`: https://github.com/kajisho5/ffmpeg-skill/actions/runs/45329597995 — dark (conclusion: `failure`), 2026-11-24 04:54 UTC
-- Dark since: 2026-11-24 04:54 UTC (first run of the current streak)
-- Job / step: `test (windows-latest, py3.10, 1/3)` → `Install ffmpeg (Windows)`
-- Likely cause: - ffmpeg - ffmpeg not installed. The package was not found with the source(s) listed.
-
-<details><summary>End of the job log</summary>
-
-```
- NOTE: When you specify explicit sources, it overrides default sources.
-If the package version is a prerelease and you didn't specify `--pre`,
- the package may not be found.
-Version was specified as '9.0.2'. It is possible that version
- does not exist for 'ffmpeg' at the source specified.
-Please see https://docs.chocolatey.org/en-us/troubleshooting for more
- assistance.
-##[error]Process completed with exit code 1.
-```
-
-</details>
-
-### release (`.github/workflows/release.yml`)
-
-- Latest run on `main`: https://github.com/kajisho5/ffmpeg-skill/actions/runs/45329597844 — dark (conclusion: `failure`), 2026-11-24 04:54 UTC
+- Latest run on `main`: https://github.com/kajisho5/ffmpeg-skill/actions/runs/45363217544 — dark (conclusion: `failure`), 2026-11-24 09:13 UTC
 - Dark since: 2026-11-24 04:54 UTC (first run of the current streak)
 - Job / step: `release` → `Resolve the next version from merged PR labels`
 - Likely cause: raise CalledProcessError(retcode, process.args,

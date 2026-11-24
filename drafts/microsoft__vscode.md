@@ -1,26 +1,26 @@
 <!-- dark-draft: microsoft/vscode -->
-<!-- draft-state: resolved -->
+<!-- draft-state: ready -->
 # Upstream issue draft: microsoft/vscode
 
-- **Status:** resolved — lit again (2026-11-21); nothing to file
+- **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/microsoft/vscode/issues/new
-- **Stars:** 195694 · **Generated:** 2026-11-21T00:52:59.041Z
+- **Stars:** 195642 · **Generated:** 2026-11-24T12:41:57.971Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: "CodeQL" workflow getting cancelled on main since 2026-11-20
+CI: "CodeQL" workflow getting cancelled on main since 2026-11-24
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! The **CodeQL** workflow (`.github/workflows/codeql.yml`) on `main` has been getting cancelled since 2026-11-20. Here is what I saw, in case it's useful:
+Hi! The **CodeQL** workflow (`.github/workflows/codeql.yml`) on `main` has been getting cancelled since 2026-11-24. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/microsoft/vscode/actions/runs/44844531469 — dark (conclusion: `cancelled`), 2026-11-21 00:32 UTC
-- Dark since: 2026-11-20 12:08 UTC (first run of the current streak)
+- Latest run on `main`: https://github.com/microsoft/vscode/actions/runs/45393410375 — dark (conclusion: `cancelled`), 2026-11-24 12:25 UTC
+- Dark since: 2026-11-24 11:41 UTC (first run of the current streak)
 - Likely cause: run cancelled
 
 If this is already known or expected, feel free to close. Thanks for maintaining vscode!

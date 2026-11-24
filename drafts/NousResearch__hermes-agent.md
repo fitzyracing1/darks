@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/NousResearch/hermes-agent/issues/new
-- **Stars:** 265718 · **Generated:** 2026-11-24T06:47:07.198Z
+- **Stars:** 265769 · **Generated:** 2026-11-24T12:41:57.971Z
 - Nothing in this file has been sent anywhere.
 
 ## Skipped: upstream already tracking
@@ -24,22 +24,22 @@ CI: "Deploy Site" workflow failing on main since 2026-11-24
 <!-- BEGIN BODY -->
 Hi! The **Deploy Site** workflow (`.github/workflows/deploy-site.yml`) on `main` has been failing since 2026-11-24. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/NousResearch/hermes-agent/actions/runs/45325301596 — dark (conclusion: `failure`), 2026-11-24 04:17 UTC
+- Latest run on `main`: https://github.com/NousResearch/hermes-agent/actions/runs/45391440327 — dark (conclusion: `failure`), 2026-11-24 12:13 UTC
 - Dark since: 2026-11-24 02:37 UTC (first run of the current streak)
 - Job / step: `deploy-docs` → `Deploy to GitHub Pages`
-- Likely cause: Deployment failed, try again later.
+- Likely cause: Error: No artifacts named "github-pages" were found for this workflow run. Ensure artifacts are uploaded with actions/upload-artifact@v4 or later.
 
 <details><summary>End of the job log</summary>
 
 ```
-{
-	"artifact_id": 14890195272,
-	"pages_build_version": "084538cdb605f3aeacbbeb32903bceefed59a905",
-	"oidc_token": "***"
-}
-Created deployment for 084538cdb605f3aeacbbeb32903bceefed59a905, ID: 084538cdb605f3aeacbbeb32903bceefed59a905
-Getting Pages deployment status...
-##[error]Deployment failed, try again later.
+Artifact github-pages has been successfully uploaded! Final size is 136333172 bytes. Artifact ID is 14918453922
+Artifact download URL: https://github.com/NousResearch/hermes-agent/actions/runs/45391440327/artifacts/14918453922
+##[end-action id=__actions_upload-pages-artifact.upload-artifact;outcome=success;conclusion=success;duration_ms=6492]
+(node:4399) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+Fetching artifact metadata for "github-pages" in this workflow run
+Found 0 artifact(s)
+##[error]Fetching artifact metadata failed. Is githubstatus.com reporting issues with API requests, Pages, or Actions? Please re-run the deployment at a later time.
 ```
 
 </details>

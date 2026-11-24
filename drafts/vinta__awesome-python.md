@@ -1,35 +1,35 @@
 <!-- dark-draft: vinta/awesome-python -->
-<!-- draft-state: resolved -->
+<!-- draft-state: ready -->
 # Upstream issue draft: vinta/awesome-python
 
-- **Status:** resolved — lit again (2026-11-22); nothing to file
+- **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/vinta/awesome-python/issues/new
-- **Stars:** 336220 · **Generated:** 2026-11-21T18:36:18.976Z
+- **Stars:** 336826 · **Generated:** 2026-11-24T12:41:57.971Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: "Deploy Website" workflow failing on master since 2026-11-21
+CI: "Deploy Website" workflow failing on master since 2026-11-24
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! The **Deploy Website** workflow (`.github/workflows/deploy-website.yml`) on `master` has been failing since 2026-11-21. Here is what I saw, in case it's useful:
+Hi! The **Deploy Website** workflow (`.github/workflows/deploy-website.yml`) on `master` has been failing since 2026-11-24. Here is what I saw, in case it's useful:
 
-- Latest run on `master`: https://github.com/vinta/awesome-python/actions/runs/44840978209 — dark (conclusion: `failure`), 2026-11-21 00:01 UTC
-- Dark since: 2026-11-21 00:01 UTC (first run of the current streak)
+- Latest run on `master`: https://github.com/vinta/awesome-python/actions/runs/45293737460 — dark (conclusion: `failure`), 2026-11-24 00:01 UTC
+- Dark since: 2026-11-24 00:01 UTC (first run of the current streak)
 - Job / step: `deploy` → `Deploy to GitHub Pages`
 - Likely cause: Error: No artifacts named "github-pages" were found for this workflow run. Ensure artifacts are uploaded with actions/upload-artifact@v4 or later.
 
 <details><summary>End of the job log</summary>
 
 ```
-Artifact github-pages has been successfully uploaded! Final size is 1012224 bytes. Artifact ID is 14680372327
-Artifact download URL: https://github.com/vinta/awesome-python/actions/runs/44840978209/artifacts/14680372327
-##[end-action id=__actions_upload-pages-artifact.upload-artifact;outcome=success;conclusion=success;duration_ms=880]
-(node:3260) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+Artifact github-pages has been successfully uploaded! Final size is 1009792 bytes. Artifact ID is 14876425510
+Artifact download URL: https://github.com/vinta/awesome-python/actions/runs/45293737460/artifacts/14876425510
+##[end-action id=__actions_upload-pages-artifact.upload-artifact;outcome=success;conclusion=success;duration_ms=1791]
+(node:3427) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
 (Use `node --trace-deprecation ...` to show where the warning was created)
 Fetching artifact metadata for "github-pages" in this workflow run
 Found 0 artifact(s)

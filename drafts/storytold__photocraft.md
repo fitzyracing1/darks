@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/storytold/photocraft/issues/new
-- **Stars:** 81223 · **Generated:** 2026-11-24T06:47:07.198Z
+- **Stars:** 81275 · **Generated:** 2026-11-24T12:41:57.971Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
@@ -21,7 +21,7 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### FreeBSD (`.github/workflows/freebsd.yml`)
 
-- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/45100414094 — dark (conclusion: `cancelled`), 2026-11-23 02:28 UTC
+- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/45312546433 — dark (conclusion: `cancelled`), 2026-11-24 02:27 UTC
 - Dark since: 2026-11-18 02:26 UTC (first run of the current streak)
 - Job / step: `freebsd / FreeBSD 15 x86_64 (build + test)` → `Build and test`
 - Likely cause: The job has exceeded the maximum execution time of 5h0m0s

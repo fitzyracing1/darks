@@ -4,13 +4,14 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/storytold/vectorcraft/issues/new
-- **Stars:** 12045 · **Generated:** 2026-11-24T06:47:07.198Z
+- **Stars:** 12055 · **Generated:** 2026-11-24T12:41:57.971Z
 - Nothing in this file has been sent anywhere.
+- **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 4 workflows dark on main ("FreeBSD", "SonarCloud", "CI", +1 more)
+CI: 5 workflows dark on main ("FreeBSD", "SonarCloud", "CI", +2 more)
 <!-- END TITLE -->
 
 ## Body
@@ -20,20 +21,20 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### FreeBSD (`.github/workflows/freebsd.yml`)
 
-- Latest run on `main`: https://github.com/storytold/vectorcraft/actions/runs/45111661096 — dark (conclusion: `failure`), 2026-11-23 04:24 UTC
+- Latest run on `main`: https://github.com/storytold/vectorcraft/actions/runs/45326000401 — dark (conclusion: `failure`), 2026-11-24 04:23 UTC
 - Dark since: 2026-11-22 04:21 UTC (first run of the current streak)
 - Job / step: `freebsd / FreeBSD 15 x86_64 (build + test)` → `Build and test`
-- Likely cause: help: consider removing the dependency on 'thiserror'
+- Likely cause: process didn't exit successfully: '/root/.rustup/toolchains/stable-x86_64-unknown-freebsd/bin/rustc --crate-name vectorcraft_engine --edition=2024 crates/engine/src/lib.rs --error-format=json --json=diagnostic-rendered-…
 
 <details><summary>End of the job log</summary>
 
 ```
    |
-20 | craft-web-api = { git = "https://github.com/storytold/craft-libs", rev = "50b0ee7bf811e363b5f238382b5c77318cf33e46", version = "0.1.0" }
-   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+23 | egui_extras = { workspace = true }
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
    |
    = note: `cargo::unused_dependencies` is set to `warn` by default
-help: consider removing the dependency on `craft-web-api`
+help: consider removing the dependency on `egui_extras`
 warning: `vectorcraft-web` (manifest) generated 1 warning
 ##[error]Process completed with exit code 101.
 ```
@@ -42,44 +43,28 @@ warning: `vectorcraft-web` (manifest) generated 1 warning
 
 ### SonarCloud (`.github/workflows/sonarcloud.yml`)
 
-- Latest run on `main`: https://github.com/storytold/vectorcraft/actions/runs/45328344049 — dark (conclusion: `failure`), 2026-11-24 04:43 UTC
+- Latest run on `main`: https://github.com/storytold/vectorcraft/actions/runs/45376362006 — dark (conclusion: `cancelled`), 2026-11-24 10:36 UTC
 - Dark since: 2026-11-24 01:25 UTC (first run of the current streak)
-- Job / step: `sonarcloud / SonarCloud Scan` → `Fail on Rust shard test failures`
-- Likely cause: Coverage shard 4 tests failed (exit 100); analysis was still uploaded
-
-<details><summary>End of the job log</summary>
-
-```
-06:14:52.276 INFO  ------------- Upload SCA dependency files
-06:14:53.185 INFO  Successfully sent architecture data
-06:14:54.372 INFO  Sensor cache published successfully
-06:14:57.349 INFO  Analysis total time: 3:57.366 min
-06:14:57.353 INFO  SonarScanner Engine completed successfully
-06:14:57.505 INFO  EXECUTION SUCCESS
-06:14:57.506 INFO  Total time: 4:01.547s
-##[error]Coverage shard 1 tests failed (exit 100); analysis was still uploaded
-```
-
-</details>
+- Likely cause: run cancelled
 
 ### CI (`.github/workflows/ci.yml`)
 
-- Latest run on `main`: https://github.com/storytold/vectorcraft/actions/runs/45328344013 — dark (conclusion: `failure`), 2026-11-24 04:43 UTC
+- Latest run on `main`: https://github.com/storytold/vectorcraft/actions/runs/45376361830 — dark (conclusion: `failure`), 2026-11-24 10:36 UTC
 - Dark since: 2026-11-24 01:25 UTC (first run of the current streak)
-- Job / step: `gate / test 1/5 (ubuntu-24.04)` → `Gate`
-- Likely cause: error: ci failed at 'test'
+- Job / step: `gate / cache warm (ubuntu-24.04)` → `Gate`
+- Likely cause: The job has exceeded the maximum execution time of 1h30m0s
 
 <details><summary>End of the job log</summary>
 
 ```
-warning: 2828/3856 tests were not run due to test failure (run with --no-fail-fast to run all tests, or run with --max-fail)
-error: test run failed
-CI summary:
-  FAIL  test: cargo nextest run -p vectorcraft-ui-egui --lib --bins --tests: exited with exit status: 100
-  skip  doctests
-  skip  i18n-report
-error: ci failed at `test`
-##[error]Process completed with exit code 1.
+   Compiling vectorcraft-pdf v0.24.1 (/home/runner/work/vectorcraft/vectorcraft/crates/pdf)
+   Compiling vectorcraft-svg v0.24.1 (/home/runner/work/vectorcraft/vectorcraft/crates/svg)
+   Compiling vectorcraft-eps v0.24.1 (/home/runner/work/vectorcraft/vectorcraft/crates/eps)
+   Compiling vectorcraft-tools v0.24.1 (/home/runner/work/vectorcraft/vectorcraft/crates/tools)
+   Compiling vectorcraft-cad v0.24.1 (/home/runner/work/vectorcraft/vectorcraft/crates/cad)
+   Compiling vectorcraft-engine v0.24.1 (/home/runner/work/vectorcraft/vectorcraft/crates/engine)
+   Compiling weezl v0.2.1
+##[error]The operation was canceled.
 ```
 
 </details>
@@ -102,6 +87,28 @@ error: ci failed at `test`
    Compiling vectorcraft-cli v0.24.1 (/home/runner/work/vectorcraft/vectorcraft/apps/vectorcraft-cli)
 packaging/freebsd/package.sh: line 52:  9696 Killed                     ( cd "$ROOT" && cargo build --release --locked -p vectorcraft -p vectorcraft-cli ${CARGO_BUILD_TARGET:+--target "$CARGO_BUILD_TARGET"} )
 ##[error]Process completed with exit code 137.
+```
+
+</details>
+
+### Windows ARM64 (`.github/workflows/windows-arm64.yml`)
+
+- Latest run on `main`: https://github.com/storytold/vectorcraft/actions/runs/45331574892 — dark (conclusion: `cancelled`), 2026-11-24 05:11 UTC
+- Dark since: 2026-11-24 05:11 UTC (first run of the current streak)
+- Job / step: `windows-arm64 / package (cross-compiled on x64)` → `Build and package (unsigned)`
+- Likely cause: The job has exceeded the maximum execution time of 1h30m0s
+
+<details><summary>End of the job log</summary>
+
+```
+   Compiling enum-map-derive v1.0.1
+   Compiling vectorcraft v0.24.1 (D:\a\vectorcraft\vectorcraft\apps\vectorcraft)
+   Compiling enum-map v3.1.0
+   Compiling resvg v0.45.1
+   Compiling egui_extras v0.37.0 (https://github.com/storytold/egui.git?rev=f5025284445ea19c35f746d96fc0b75468b3f560#f5025284)
+   Compiling vectorcraft-mcp v0.24.1 (D:\a\vectorcraft\vectorcraft\crates\mcp)
+   Compiling vectorcraft-cli v0.24.1 (D:\a\vectorcraft\vectorcraft\apps\vectorcraft-cli)
+##[error]The operation was canceled.
 ```
 
 </details>
