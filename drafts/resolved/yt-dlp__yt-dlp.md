@@ -1,8 +1,8 @@
 <!-- dark-draft: yt-dlp/yt-dlp -->
-<!-- draft-state: ready -->
+<!-- draft-state: resolved -->
 # Upstream issue draft: yt-dlp/yt-dlp
 
-- **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
+- **Status:** resolved — lit again (2026-11-24); nothing to file
 - **Would be filed at:** https://github.com/yt-dlp/yt-dlp/issues/new
 - **Stars:** 210355 · **Generated:** 2026-11-24T12:41:57.971Z
 - Nothing in this file has been sent anywhere.

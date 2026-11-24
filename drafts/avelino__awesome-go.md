@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/avelino/awesome-go/issues/new
-- **Stars:** 195699 · **Generated:** 2026-11-24T12:41:57.971Z
+- **Stars:** 195764 · **Generated:** 2026-11-24T18:40:09.799Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -20,7 +20,7 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### Auto-merge README PRs (`.github/workflows/auto-merge-readme.yaml`)
 
-- Latest run on `main`: https://github.com/avelino/awesome-go/actions/runs/45393385644 — dark (conclusion: `failure`), 2026-11-24 12:25 UTC
+- Latest run on `main`: https://github.com/avelino/awesome-go/actions/runs/45458588714 — dark (conclusion: `failure`), 2026-11-24 18:21 UTC
 - Dark since: 2026-11-17 11:48 UTC (first run of the current streak)
 - Job / step: `Auto-merge README PRs` → `Merge eligible PRs`
 - Likely cause: "message": "Not Found",

@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/open-metadata/OpenMetadata/issues/new
-- **Stars:** 15859 · **Generated:** 2026-11-24T12:41:57.971Z
+- **Stars:** 15859 · **Generated:** 2026-11-24T18:40:09.799Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -20,7 +20,7 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### monitor-slack-link (`.github/workflows/monitor-slack-link.yml`)
 
-- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/45391841994 — dark (conclusion: `failure`), 2026-11-24 12:16 UTC
+- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/45456983102 — dark (conclusion: `failure`), 2026-11-24 18:12 UTC
 - Dark since: 2026-11-06 22:08 UTC (first run of the current streak)
 - Job / step: `monitor-slack-link` → `Set up Python 3.9`
 - Likely cause: The version '3.9' with architecture 'x64' was not found for Ubuntu 26.04.
@@ -28,12 +28,12 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 <details><summary>End of the job log</summary>
 
 ```
-Updating files:  99% (27589/27867)
-Updating files: 100% (27867/27867)
-Updating files: 100% (27867/27867), done.
+Updating files:  99% (27594/27872)
+Updating files: 100% (27872/27872)
+Updating files: 100% (27872/27872), done.
 Switched to a new branch 'main'
 branch 'main' set up to track 'origin/main'.
-8cf6180e5c1b8e3ef1c2964957d6504014bbc1e4
+5d8ec8ae558773db1b1db7f63cf7ee20f630a461
 Version 3.9 was not found in the local cache
 ##[error]The version '3.9' with architecture 'x64' was not found for Ubuntu 26.04.
 ```
@@ -42,7 +42,7 @@ Version 3.9 was not found in the local cache
 
 ### Merge Queue Dequeue Report (`.github/workflows/merge-queue-dequeue-report.yml`)
 
-- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/45388143188 — dark (conclusion: `failure`), 2026-11-24 11:52 UTC
+- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/45457869257 — dark (conclusion: `failure`), 2026-11-24 18:17 UTC
 - Dark since: 2026-11-22 17:03 UTC (first run of the current streak)
 - Job / step: `evict-main-conflicts` → `Remove queue entries that conflict with main`
 - Likely cause: cannot iterate over: null
@@ -64,21 +64,21 @@ cannot iterate over: null
 
 ### Integration Tests - PostgreSQL + Elasticsearch + Redis (`.github/workflows/integration-tests-postgres-elasticsearch-redis.yml`)
 
-- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/45376228419 — dark (conclusion: `failure`), 2026-11-24 10:35 UTC
+- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/45446722145 — dark (conclusion: `failure`), 2026-11-24 17:16 UTC
 - Dark since: 2026-11-23 14:51 UTC (first run of the current streak)
 - Job / step: `Integration Test Lane (parallel)` → `Run Integration Tests (PostgreSQL + Elasticsearch + Redis)`
-- Likely cause: [INFO] org.openmetadata.it.tests.alerts.WebhookSecretsIT.aValueNoKeyDecryptsIsRefusedStopsNoEditAndDeliversOnceEntered(TestNamespace) -- Time elapsed: 2.950 s
+- Likely cause: INFO  [2026-11-24 18:27:14,824] org.openmetadata.service.apps.bundles.searchIndex.distributed.JobRecoveryManager: Startup recovery completed: 0 locks cleaned, 0 orphaned jobs processed (0 recovered, 0 marked failed)
 
 <details><summary>End of the job log</summary>
 
 ```
-[INFO] org.openmetadata.it.tests.alerts.WebhookSecretsIT.aStatusSentWithTheAlertIsNeverStored(TestNamespace) -- Time elapsed: 0.103 s
-[INFO] org.openmetadata.it.tests.alerts.WebhookSecretsIT.credentialsStoredBeforeTheUpgradeKeepSending(TestNamespace) -- Time elapsed: 2.965 s
-[INFO] org.openmetadata.it.tests.alerts.WebhookSecretsIT.aListOfAlertsReadsEachDestinationsStatus(TestNamespace) -- Time elapsed: 2.916 s
-[INFO] org.openmetadata.it.tests.alerts.WebhookSecretsIT.secretsEnteredForADestinationStillDeliver(TestNamespace) -- Time elapsed: 2.965 s
-[INFO] Running org.openmetadata.it.tests.alerts.AlertTickOutcomesIT
-INFO  [2026-11-24 11:44:51,873] org.openmetadata.service.jdbi3.EntityRepository: Created eventsubscription:cf58ae30-3e71-441d-8f6f-7288e148bcc5:self_driven__84717cd853a14fc1b27d5768220e0ef3__AlertTickOutcomesIT__selfDri…
-[0:0:0:0:0:0:0:1] - - [24/Nov/2026:11:44:51 +0000] "POST /api/v1/events/subscriptions HTTP/1.1" 201 545 "-" "okhttp/5.5.0" 13
+INFO  [2026-11-24 18:26:21,145] org.openmetadata.service.audit.AuditLogRepository: eventType=entityCreated user=admin actorType=USER entityType=team entityFQN=legacy_cipher_team__c0421c3dd9a24fa09b72f69593f3b95c__Webhoo…
+INFO  [2026-11-24 18:26:21,146] org.openmetadata.service.audit.AuditLogRepository: eventType=entityCreated user=admin actorType=USER entityType=team entityFQN=legacy_team__c0421c3dd9a24fa09b72f69593f3b95c__WebhookSecret…
+INFO  [2026-11-24 18:26:21,147] org.openmetadata.service.audit.AuditLogRepository: eventType=entityUpdated user=admin actorType=USER entityType=team entityFQN=null entityId=3d8bea51-2739-4154-9df5-d54d7cf2dda3 service=n…
+INFO  [2026-11-24 18:26:21,147] org.openmetadata.service.audit.AuditLogRepository: eventType=entityCreated user=admin actorType=USER entityType=team entityFQN=stopped_team__c0421c3dd9a24fa09b72f69593f3b95c__WebhookSecre…
+INFO  [2026-11-24 18:26:32,748] org.openmetadata.service.alerting.channel.feed.ActivityStreamPublisher: Closing Activity Stream Publisher
+INFO  [2026-11-24 18:27:14,822] org.openmetadata.service.apps.bundles.searchIndex.distributed.JobRecoveryManager: Performing startup recovery for distributed indexing jobs...
+INFO  [2026-11-24 18:27:14,824] org.openmetadata.service.apps.bundles.searchIndex.distributed.JobRecoveryManager: Startup recovery completed: 0 locks cleaned, 0 orphaned jobs processed (0 recovered, 0 marked failed)
 ##[error]Process completed with exit code 124.
 ```
 
@@ -86,7 +86,7 @@ INFO  [2026-11-24 11:44:51,873] org.openmetadata.service.jdbi3.EntityRepository:
 
 ### Integration Tests - MySQL + Elasticsearch (`.github/workflows/integration-tests-mysql-elasticsearch.yml`)
 
-- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/45376228237 — dark (conclusion: `failure`), 2026-11-24 10:35 UTC
+- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/45446722085 — dark (conclusion: `failure`), 2026-11-24 17:16 UTC
 - Dark since: 2026-11-23 14:59 UTC (first run of the current streak)
 - Job / step: `Integration Test Lane (parallel)` → `Run Integration Tests (MySQL + Elasticsearch)`
 - Likely cause: [ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
@@ -108,7 +108,7 @@ INFO  [2026-11-24 11:44:51,873] org.openmetadata.service.jdbi3.EntityRepository:
 
 ### Integration Tests - PostgreSQL + OpenSearch (`.github/workflows/integration-tests-postgres-opensearch.yml`)
 
-- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/45376228275 — dark (conclusion: `failure`), 2026-11-24 10:35 UTC
+- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/45446722190 — dark (conclusion: `failure`), 2026-11-24 17:16 UTC
 - Dark since: 2026-11-23 14:59 UTC (first run of the current streak)
 - Job / step: `Integration Test Lane (parallel)` → `Run Integration Tests (PostgreSQL + OpenSearch)`
 - Likely cause: [ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
@@ -130,29 +130,29 @@ INFO  [2026-11-24 11:44:51,873] org.openmetadata.service.jdbi3.EntityRepository:
 
 ### Maven Collate Tests (`.github/workflows/maven-build-collate.yml`)
 
-- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/45383757618 — dark (conclusion: `failure`), 2026-11-24 11:23 UTC
+- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/45456127565 — dark (conclusion: `failure`), 2026-11-24 18:07 UTC
 - Dark since: 2026-11-23 16:56 UTC (first run of the current streak)
 - Job / step: `maven-collate-ci` → `Trigger Collate build & wait`
-- Likely cause: Collate run did not succeed: https://github.com/open-metadata/openmetadata-collate/actions/runs/45383772526
+- Likely cause: Collate run did not succeed: https://github.com/open-metadata/openmetadata-collate/actions/runs/45456149720
 
 <details><summary>End of the job log</summary>
 
 ```
-* maven-collate-om-ci (ID 138409298882)
-  * Integration Tests (MySQL + Elasticsearch)
-X main OpenMetadata Collate Test open-metadata/openmetadata-collate#2548 · 45383772526
-Triggered via workflow_dispatch about 57 minutes ago
-JOBS
-X maven-collate-om-ci in 56m25s (ID 138409298882)
-  X Force workflow fail
-##[error]Collate run did not succeed: https://github.com/open-metadata/openmetadata-collate/actions/runs/45383772526
+Secret source: Actions
+Cache mode: write
+Prepare workflow directory
+Prepare all required actions
+Complete job name: maven-collate-ci
+Collate run: https://github.com/open-metadata/openmetadata-collate/actions/runs/45456149720
+failed to get run: HTTP 404: Not Found (https://api.github.com/repos/open-metadata/openmetadata-collate/actions/runs/45456149720?exclude_pull_requests=true)
+##[error]Collate run did not succeed: https://github.com/open-metadata/openmetadata-collate/actions/runs/45456149720
 ```
 
 </details>
 
 ### Populate Playwright CI caches (`.github/workflows/populate-playwright-caches.yml`)
 
-- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/45389894227 — dark (conclusion: `failure`), 2026-11-24 12:03 UTC
+- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/45457869721 — dark (conclusion: `failure`), 2026-11-24 18:17 UTC
 - Dark since: 2026-11-24 10:17 UTC (first run of the current streak)
 - Job / step: `warm-fixture / plan-playwright` → `Verify browser helper behavior`
 - Likely cause: Error: Cannot find module '/workspace/openmetadata-ui/src/main/resources/ui/node_modules/playwright-core/lib/generated/storageScriptSource.js'

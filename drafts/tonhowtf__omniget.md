@@ -4,15 +4,13 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/tonhowtf/omniget/issues/new
-- **Stars:** 14627 · **Generated:** 2026-11-24T12:41:57.971Z
+- **Stars:** 14643 · **Generated:** 2026-11-24T18:40:09.799Z
 - Nothing in this file has been sent anywhere.
-- **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
-- **Note for Joshua:** cancelled by a concurrency group — likely noise
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 4 workflows dark on main ("Security", "dead-code", "CI", +1 more)
+CI: 3 workflows dark on main ("Security", "dead-code", "Scorecard")
 <!-- END TITLE -->
 
 ## Body
@@ -64,18 +62,27 @@ Configuration hints (1)
 
 </details>
 
-### CI (`.github/workflows/ci.yml`)
+### Scorecard (`.github/workflows/scorecard.yml`)
 
-- Latest run on `main`: https://github.com/tonhowtf/omniget/actions/runs/45389837625 — dark (conclusion: `cancelled`), 2026-11-24 12:03 UTC
-- Dark since: 2026-11-24 12:03 UTC (first run of the current streak)
-- Likely cause: run cancelled
+- Latest run on `main`: https://github.com/tonhowtf/omniget/actions/runs/45424267999 — dark (conclusion: `failure`), 2026-11-24 15:20 UTC
+- Dark since: 2026-11-24 13:42 UTC (first run of the current streak)
+- Job / step: `OpenSSF Scorecard` → `Pull ghcr.io/ossf/scorecard-action:v2.6.0`
+- Likely cause: Docker pull failed with exit code 1
 
-### CodeQL (`.github/workflows/codeql.yml`)
+<details><summary>End of the job log</summary>
 
-- Latest run on `main`: https://github.com/tonhowtf/omniget/actions/runs/45389837674 — dark (conclusion: `cancelled`), 2026-11-24 12:03 UTC
-- Dark since: 2026-11-24 12:03 UTC (first run of the current streak)
-- Job / step: `Analyze (actions)`
-- Likely cause: Canceling since a higher priority waiting request for codeql-refs/heads/main exists
+```
+##[command]/usr/bin/docker pull ghcr.io/ossf/scorecard-action:v2.6.0
+v2.6.0: Pulling from ossf/scorecard-action
+failed to copy: httpReadSeeker: failed open: content at https://ghcr.io/v2/ossf/scorecard-action/manifests/sha256:7a62770a1e88f3bcaed20cbf9a57206c6531eb77653e415ca3c3c6e8d140877b not found: not found
+##[warning]Docker pull failed with exit code 1, back off 4.356 seconds before retry.
+##[command]/usr/bin/docker pull ghcr.io/ossf/scorecard-action:v2.6.0
+v2.6.0: Pulling from ossf/scorecard-action
+failed to copy: httpReadSeeker: failed open: content at https://ghcr.io/v2/ossf/scorecard-action/manifests/sha256:7a62770a1e88f3bcaed20cbf9a57206c6531eb77653e415ca3c3c6e8d140877b not found: not found
+##[error]Docker pull failed with exit code 1
+```
+
+</details>
 
 If this is already known or expected, feel free to close. Thanks for maintaining omniget!
 

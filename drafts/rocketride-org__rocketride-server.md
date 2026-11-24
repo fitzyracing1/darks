@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/rocketride-org/rocketride-server/issues/new
-- **Stars:** 19990 · **Generated:** 2026-11-24T12:41:57.971Z
+- **Stars:** 19986 · **Generated:** 2026-11-24T18:40:09.799Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -42,21 +42,21 @@ libc++abi: terminating due to uncaught exception of type pybind11::attribute_err
 
 ### CI (`.github/workflows/ci.yml`)
 
-- Latest run on `develop`: https://github.com/rocketride-org/rocketride-server/actions/runs/45349859347 — dark (conclusion: `failure`), 2026-11-24 07:40 UTC
+- Latest run on `develop`: https://github.com/rocketride-org/rocketride-server/actions/runs/45450262483 — dark (conclusion: `failure`), 2026-11-24 17:35 UTC
 - Dark since: 2026-11-24 07:40 UTC (first run of the current streak)
-- Job / step: `Build / macOS (ARM64)` → `Test`
-- Likely cause: [OUTPUT] Message: Python error 1
+- Job / step: `Build / Windows Server 2022` → `Test`
+- Likely cause: Tests:       2 failed, 12 skipped, 498 passed, 512 total
 
 <details><summary>End of the job log</summary>
 
 ```
-[OUTPUT] PASSED [ 28%]
-[OUTPUT] ../../packages/client-python/tests/test_diff_cli.py::test_recursion_error_reaches_the_exit_code_through_the_real_entry_point[normal]
-[OUTPUT] [98MB] Exit: Python (ap:0x3c) init.cpp:624
-[OUTPUT] Message: Python error 1
-[STARTED] └ node-test-server:teardown
-[OUTPUT] Stopping server...
-[OUTPUT] Server stopped
+Force exiting Jest: Have you considered using `--detectOpenHandles` to detect async operations that kept running after all tests finished?
+    at ChildProcess.<anonymous> (D:\a\rocketride-server\rocketride-server\scripts\lib\exec.js:266:12)
+    at ChildProcess.emit (node:events:519:28)
+    at maybeClose (node:internal/child_process:1101:16)
+    at Socket.<anonymous> (node:internal/child_process:456:11)
+    at Socket.emit (node:events:519:28)
+    at Pipe.<anonymous> (node:net:347:12)
 ##[error]Process completed with exit code 1.
 ```
 

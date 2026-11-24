@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/langflow-ai/langflow/issues/new
-- **Stars:** 156904 · **Generated:** 2026-11-24T12:41:57.971Z
+- **Stars:** 156909 · **Generated:** 2026-11-24T18:40:09.799Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -20,10 +20,10 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### Deploy Storybook to GitHub Pages (`.github/workflows/deploy-storybook.yml`)
 
-- Latest run on `main`: https://github.com/langflow-ai/langflow/actions/runs/44160401480 — dark (conclusion: `failure`), 2026-11-17 19:36 UTC
+- Latest run on `main`: https://github.com/langflow-ai/langflow/actions/runs/45445024191 — dark (conclusion: `failure`), 2026-11-24 17:07 UTC
 - Dark since: 2026-09-16 01:11 UTC (first run of the current streak)
 - Job / step: `Deploy Storybook` → `Deploy to GitHub Pages`
-- Likely cause: Error: Failed to create deployment (status: 400) with build version 7296958064e7dde5a0a71b0afce2d4510c6d5ada. Request ID 24C2:36E96:109A579:344B896:6AFCAD4B Responded with: Missing environment. Ensure your workflow's deployment job has an e
+- Likely cause: Error: Failed to create deployment (status: 400) with build version 6c9aea6f5d5f47a76a25e8e3e1b4779a4f83d522. Request ID 409B:49A4E:19EFC81:51EDA6E:6B05C4DC Responded with: Missing environment. Ensure your workflow's deployment job has an e
 
 <details><summary>End of the job log</summary>
 
@@ -31,8 +31,8 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 Found 1 artifact(s)
 Creating Pages deployment with payload:
 {
-	"artifact_id": 14363870300,
-	"pages_build_version": "7296958064e7dde5a0a71b0afce2d4510c6d5ada",
+	"artifact_id": 14943824757,
+	"pages_build_version": "6c9aea6f5d5f47a76a25e8e3e1b4779a4f83d522",
 	"oidc_token": "***"
 }
 ##[error]Creating Pages deployment failed

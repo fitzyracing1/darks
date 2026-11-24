@@ -4,14 +4,14 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/storytold/vectorcraft/issues/new
-- **Stars:** 12055 · **Generated:** 2026-11-24T12:41:57.971Z
+- **Stars:** 12062 · **Generated:** 2026-11-24T18:40:09.799Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 5 workflows dark on main ("FreeBSD", "SonarCloud", "CI", +2 more)
+CI: 4 workflows dark on main ("FreeBSD", "SonarCloud", "Release", +1 more)
 <!-- END TITLE -->
 
 ## Body
@@ -43,31 +43,9 @@ warning: `vectorcraft-web` (manifest) generated 1 warning
 
 ### SonarCloud (`.github/workflows/sonarcloud.yml`)
 
-- Latest run on `main`: https://github.com/storytold/vectorcraft/actions/runs/45376362006 — dark (conclusion: `cancelled`), 2026-11-24 10:36 UTC
+- Latest run on `main`: https://github.com/storytold/vectorcraft/actions/runs/45453935450 — dark (conclusion: `cancelled`), 2026-11-24 17:55 UTC
 - Dark since: 2026-11-24 01:25 UTC (first run of the current streak)
 - Likely cause: run cancelled
-
-### CI (`.github/workflows/ci.yml`)
-
-- Latest run on `main`: https://github.com/storytold/vectorcraft/actions/runs/45376361830 — dark (conclusion: `failure`), 2026-11-24 10:36 UTC
-- Dark since: 2026-11-24 01:25 UTC (first run of the current streak)
-- Job / step: `gate / cache warm (ubuntu-24.04)` → `Gate`
-- Likely cause: The job has exceeded the maximum execution time of 1h30m0s
-
-<details><summary>End of the job log</summary>
-
-```
-   Compiling vectorcraft-pdf v0.24.1 (/home/runner/work/vectorcraft/vectorcraft/crates/pdf)
-   Compiling vectorcraft-svg v0.24.1 (/home/runner/work/vectorcraft/vectorcraft/crates/svg)
-   Compiling vectorcraft-eps v0.24.1 (/home/runner/work/vectorcraft/vectorcraft/crates/eps)
-   Compiling vectorcraft-tools v0.24.1 (/home/runner/work/vectorcraft/vectorcraft/crates/tools)
-   Compiling vectorcraft-cad v0.24.1 (/home/runner/work/vectorcraft/vectorcraft/crates/cad)
-   Compiling vectorcraft-engine v0.24.1 (/home/runner/work/vectorcraft/vectorcraft/crates/engine)
-   Compiling weezl v0.2.1
-##[error]The operation was canceled.
-```
-
-</details>
 
 ### Release (`.github/workflows/release.yml`)
 

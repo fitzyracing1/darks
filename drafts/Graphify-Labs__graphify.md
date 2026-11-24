@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/Graphify-Labs/graphify/issues/new
-- **Stars:** 152758 · **Generated:** 2026-11-24T12:41:57.971Z
+- **Stars:** 152906 · **Generated:** 2026-11-24T18:40:09.799Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -18,21 +18,21 @@ CI: "CI" workflow failing on v8 since 2026-11-23
 <!-- BEGIN BODY -->
 Hi! The **CI** workflow (`.github/workflows/ci.yml`) on `v8` has been failing since 2026-11-23. Here is what I saw, in case it's useful:
 
-- Latest run on `v8`: https://github.com/Graphify-Labs/graphify/actions/runs/45246779017 — dark (conclusion: `failure`), 2026-11-23 19:14 UTC
+- Latest run on `v8`: https://github.com/Graphify-Labs/graphify/actions/runs/45424865542 — dark (conclusion: `failure`), 2026-11-24 15:23 UTC
 - Dark since: 2026-11-23 13:38 UTC (first run of the current streak)
-- Job / step: `test (3.11)` → `Run tests`
-- Likely cause: The strategy configuration was canceled because "test._3_12" failed
+- Job / step: `test (3.14)` → `Run tests`
+- Likely cause: The strategy configuration was canceled because "test._3_11" failed
 
 <details><summary>End of the job log</summary>
 
 ```
-........................................................................ [ 88%]
 ........................................................................ [ 89%]
-s....................................................................... [ 89%]
+...................................................................s.... [ 90%]
 ........................................................................ [ 90%]
 ........................................................................ [ 91%]
-........................................................................ [ 91%]
 ........................................................................ [ 92%]
+........................................................................ [ 92%]
+........................................................................ [ 93%]
 ##[error]The operation was canceled.
 ```
 

@@ -4,41 +4,20 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/xberg-io/xberg/issues/new
-- **Stars:** 9614 · **Generated:** 2026-11-24T12:41:57.971Z
+- **Stars:** 9615 · **Generated:** 2026-11-24T18:40:09.799Z
 - Nothing in this file has been sent anywhere.
+- **Note for Joshua:** cancelled by a concurrency group — likely noise
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 6 workflows dark on main ("CI Lint", "CI E2E", "CI Rust", +3 more)
+CI: 5 workflows dark on main ("CI E2E", "CI Rust", "CI Docker", +2 more)
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
 Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
-
-### CI Lint (`.github/workflows/ci-lint.yaml`)
-
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/45289709143 — dark (conclusion: `failure`), 2026-11-23 23:32 UTC
-- Dark since: 2026-11-18 18:37 UTC (first run of the current streak)
-- Job / step: `validate / Validate (poly)` → `Lint`
-- Likely cause: [ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/NoPluginFoundForPrefixException
-
-<details><summary>End of the job log</summary>
-
-```
-      [ERROR] Re-run Maven using the -X switch to enable full debug logging.
-      [ERROR]
-      [ERROR] For more information about the errors and possible solutions, please read the following articles:
-      [ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/NoPluginFoundForPrefixException
-  ✓ credo
-  ✓ golangci-lint
-  ✓ pyrefly
-##[error]Process completed with exit code 1.
-```
-
-</details>
 
 ### CI E2E (`.github/workflows/ci-e2e.yaml`)
 
@@ -64,29 +43,29 @@ ERROR Command failed: cd packages/swift && swift test (env: LD_LIBRARY_PATH)
 
 ### CI Rust (`.github/workflows/ci-rust.yaml`)
 
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/45289705689 — dark (conclusion: `failure`), 2026-11-23 23:32 UTC
+- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/45392191742 — dark (conclusion: `cancelled`), 2026-11-24 12:18 UTC
 - Dark since: 2026-11-20 07:25 UTC (first run of the current streak)
-- Job / step: `Rust (macos-26)` → `Run tests`
-- Likely cause: [rust:test:ci] ERROR task failed
+- Job / step: `Rust tract-only (no-ORT)` → `Run ./.github/actions/qualify-ocr-orientation`
+- Likely cause: Canceling since a higher priority waiting request for ci-rust-refs/heads/main exists
 
 <details><summary>End of the job log</summary>
 
 ```
-Filesystem      Size    Used   Avail Capacity iused ifree %iused  Mounted on
-/dev/disk2s5   320Gi   220Gi    77Gi    75%    2.1M  808M    0%   /System/Volumes/Data
-Cargo environment:
-cargo 1.100.0 (3acc79c0c 2026-11-05)
-rustc 1.100.0 (0ef1bc386 2026-11-09)
-Finished in 10012.99s
-[rust:test:ci] ERROR task failed
-##[error]Process completed with exit code 1.
+test cached_context_changed_during_extraction_is_not_written ... ok
+test cached_engine_bytes_recover_when_osd_is_installed_without_changing_the_configuration ... ok
+test cached_file_recovers_when_osd_is_installed_without_changing_the_configuration ... ok
+test caller_psm1_word_elements_on_an_upside_down_page_carry_no_internal_marker ... ok
+test explicit_language_block_recovers_the_counterclockwise_source_grid ... ok
+test explicit_language_block_recovers_the_upside_down_source_grid ... ok
+test explicit_language_block_recovers_without_classifier_features ... ok
+##[error]The operation was canceled.
 ```
 
 </details>
 
 ### CI Docker (`.github/workflows/ci-docker.yaml`)
 
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/45289705632 — dark (conclusion: `failure`), 2026-11-23 23:32 UTC
+- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/45392191745 — dark (conclusion: `failure`), 2026-11-24 12:18 UTC
 - Dark since: 2026-11-20 07:25 UTC (first run of the current streak)
 - Job / step: `Docker (core)` → `Run API contract tests with schemathesis`
 - Likely cause: Failed to establish a new connection: [Errno 111] Connection refused
@@ -130,10 +109,10 @@ advisories FAILED, bans ok, licenses ok, sources ok
 
 ### CI Focused PR (`.github/workflows/ci-focused-pr.yaml`)
 
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/45289705685 — dark (conclusion: `failure`), 2026-11-23 23:32 UTC
+- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/45392191301 — dark (conclusion: `failure`), 2026-11-24 12:18 UTC
 - Dark since: 2026-11-23 18:24 UTC (first run of the current streak)
 - Job / step: `Shipped license graphs` → `Check the third-party notice bundle is current`
-- Likely cause: /home/runner/work/xberg/xberg/THIRD_PARTY_LICENSES.md is stale at line 176:
+- Likely cause: /home/runner/work/xberg/xberg/THIRD_PARTY_LICENSES.md is stale at line 185:
 
 <details><summary>End of the job log</summary>
 
@@ -145,7 +124,7 @@ ok   xberg-rb (default): 0 errors, 67 warnings, 852 licenses accepted
 ok   xberg-cli --features mcp,mcp-http,api (windows no-heic): 0 errors, 59 warnings, 699 licenses accepted
 checked 13 graphs; 14 license exceptions, each matched by at least one graph
 [notices:check] $ python3 scripts/ci/generate-notices.py --check
-##[error]/home/runner/work/xberg/xberg/THIRD_PARTY_LICENSES.md is stale at line 176:
+##[error]/home/runner/work/xberg/xberg/THIRD_PARTY_LICENSES.md is stale at line 185:
 ```
 
 </details>
