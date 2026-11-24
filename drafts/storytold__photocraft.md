@@ -4,14 +4,14 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/storytold/photocraft/issues/new
-- **Stars:** 81154 · **Generated:** 2026-11-23T18:39:43.208Z
+- **Stars:** 81188 · **Generated:** 2026-11-24T00:51:11.893Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 3 workflows dark on main ("FreeBSD", "Perf (nightly)", "Release")
+CI: 4 workflows dark on main ("FreeBSD", "Perf (nightly)", "Release", +1 more)
 <!-- END TITLE -->
 
 ## Body
@@ -81,6 +81,28 @@ error: could not compile `photocraft` (bin "photocraft")
 Caused by:
   process didn't exit successfully: `/root/.rustup/toolchains/1.100.0-x86_64-unknown-freebsd/bin/rustc --crate-name photocraft --edition=2024 apps/photocraft/src/main.rs --error-format=json --json=diagnostic-rendered-an…
 ##[error]Process completed with exit code 101.
+```
+
+</details>
+
+### SonarCloud (`.github/workflows/sonarcloud.yml`)
+
+- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/45289106488 — dark (conclusion: `failure`), 2026-11-23 23:28 UTC
+- Dark since: 2026-11-23 23:28 UTC (first run of the current streak)
+- Job / step: `sonarcloud / Tests 2/4` → `Merge this shard's profiles`
+- Likely cause: llvm-profdata could not merge shard 2's profiles (exit 1)
+
+<details><summary>End of the job log</summary>
+
+```
+info: downloading component llvm-tools
+  1.100.0-x86_64-unknown-linux-gnu updated - rustc 1.100.0 (0ef1bc386 2026-11-09) (from rustc 1.100.0 (0ef1bc386 2026-11-09))
+Raw profiles: 15G in 3985 files
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/root       145G   82G   63G  57% /
+warning: profraw/shard-2-7795-7334399462099843246_0.profraw: invalid instrumentation profile data (file header is corrupt)
+error: no profile can be merged
+##[error]shard 2 wrote a truncated or corrupt coverage profile: profraw/shard-2-7795-7334399462099843246_0.profraw: invalid instrumentation profile data (file header is corrupt)
 ```
 
 </details>

@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/xerj-org/xerj/issues/new
-- **Stars:** 20217 · **Generated:** 2026-11-23T18:39:43.208Z
+- **Stars:** 20255 · **Generated:** 2026-11-24T00:51:11.893Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
@@ -28,7 +28,7 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### CI (`.github/workflows/ci.yml`)
 
-- Latest run on `main`: https://github.com/xerj-org/xerj/actions/runs/45035864550 — dark (conclusion: `failure`), 2026-11-22 15:00 UTC
+- Latest run on `main`: https://github.com/xerj-org/xerj/actions/runs/45292237111 — dark (conclusion: `failure`), 2026-11-23 23:50 UTC
 - Dark since: 2026-11-07 06:22 UTC (first run of the current streak)
 - Likely cause: no cause found in annotations
 
@@ -78,19 +78,19 @@ repin: classes=weekly; 8 corpus(es) moved
 
 ### Fresh-agent field report (`.github/workflows/field-report-e2e.yml`)
 
-- Latest run on `main`: https://github.com/xerj-org/xerj/actions/runs/45020468103 — dark (conclusion: `failure`), 2026-11-22 12:05 UTC
+- Latest run on `main`: https://github.com/xerj-org/xerj/actions/runs/45292237217 — dark (conclusion: `failure`), 2026-11-23 23:50 UTC
 - Dark since: 2026-11-17 17:53 UTC (first run of the current streak)
 - Likely cause: no cause found in annotations
 
 ### Deploy site (Cloudflare Pages) (`.github/workflows/deploy-pages.yml`)
 
-- Latest run on `main`: https://github.com/xerj-org/xerj/actions/runs/45020455893 — dark (conclusion: `failure`), 2026-11-22 12:05 UTC
+- Latest run on `main`: https://github.com/xerj-org/xerj/actions/runs/45292237172 — dark (conclusion: `failure`), 2026-11-23 23:50 UTC
 - Dark since: 2026-11-18 17:14 UTC (first run of the current streak)
 - Likely cause: no cause found in annotations
 
 ### SEO (`.github/workflows/seo.yml`)
 
-- Latest run on `main`: https://github.com/xerj-org/xerj/actions/runs/45020455890 — dark (conclusion: `failure`), 2026-11-22 12:05 UTC
+- Latest run on `main`: https://github.com/xerj-org/xerj/actions/runs/45292237170 — dark (conclusion: `failure`), 2026-11-23 23:50 UTC
 - Dark since: 2026-11-18 17:14 UTC (first run of the current streak)
 - Likely cause: no cause found in annotations
 

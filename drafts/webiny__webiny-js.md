@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/webiny/webiny-js/issues/new
-- **Stars:** 8055 · **Generated:** 2026-11-23T18:39:43.208Z
+- **Stars:** 8055 · **Generated:** 2026-11-24T00:51:11.893Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -20,21 +20,21 @@ Hi! A few workflows on `next` have been dark recently. Details below, in case th
 
 ### Cloud infrastructure Cleanup (`.github/workflows/cleanup.yml`)
 
-- Latest run on `next`: https://github.com/webiny/webiny-js/actions/runs/45087545120 — dark (conclusion: `failure`), 2026-11-23 00:14 UTC
+- Latest run on `next`: https://github.com/webiny/webiny-js/actions/runs/45295279567 — dark (conclusion: `failure`), 2026-11-24 00:12 UTC
 - Dark since: 2026-10-10 00:23 UTC (first run of the current streak)
 - Job / step: `aws-nuke` → `Run AWS Nuke`
-- Likely cause: time="2026-11-23T00:16:58Z" level=fatal msg=failed
+- Likely cause: time="2026-11-24T00:17:59Z" level=fatal msg=failed
 
 <details><summary>End of the job log</summary>
 
 ```
 global - IAMPolicy - arn:aws:iam::726952677045:policy/DeployWebinyProjectExtra - [ARN: "arn:aws:iam::726952677045:policy/DeployWebinyProjectExtra", CreateDate: "2024-11-08T04:19:21Z", Name: "DeployWebinyProjectExtra", P…
 DeleteConflict: Cannot delete a policy attached to entities.
-	status code: 409, request id: cdce237b-a908-4963-94aa-e395f0f310d1
+	status code: 409, request id: 8e89772b-8d6a-4221-b0ed-645eceeaf390
 global - IAMPolicy - arn:aws:iam::726952677045:policy/DeployWebinyProjectGroup3 - [ARN: "arn:aws:iam::726952677045:policy/DeployWebinyProjectGroup3", CreateDate: "2024-11-28T06:06:51Z", Name: "DeployWebinyProjectGroup3"…
 DeleteConflict: Cannot delete a policy attached to entities.
-	status code: 409, request id: 0f35fe56-9eac-41bc-a825-ee1f7f5cf6db
-time="2026-11-23T00:16:58Z" level=fatal msg=failed
+	status code: 409, request id: 80800e7c-c7aa-4c40-9b54-a4cd8ac81553
+time="2026-11-24T00:17:59Z" level=fatal msg=failed
 ##[error]Process completed with exit code 1.
 ```
 
