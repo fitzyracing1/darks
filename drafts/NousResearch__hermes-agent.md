@@ -4,45 +4,31 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/NousResearch/hermes-agent/issues/new
-- **Stars:** 266008 · **Generated:** 2026-11-25T12:42:48.491Z
+- **Stars:** 266065 · **Generated:** 2026-11-25T18:39:22.716Z
 - Nothing in this file has been sent anywhere.
+- **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Skipped: upstream already tracking
 
 - Docker Build, Test, and Publish (`.github/workflows/docker.yml`): [issue #155129](https://github.com/NousResearch/hermes-agent/issues/155129) "Docker Build, Test, and Publish on main stuck since Nov 5 — run 42066863849 holds the concurrency group (publish jobs waiting on never-evaluated container-publish deployments)"
+- Skills Index Freshness Check (`.github/workflows/skills-index-freshness.yml`): [issue #139372](https://github.com/NousResearch/hermes-agent/issues/139372) "fix(ci): align skills-index freshness watchdog floors with build_skills_index.py EXPECTED_FLOORS"
 
 These workflows are left out of the body below.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: "Deploy Site" workflow failing on main since 2026-11-24
+CI: "Deploy Site" workflow getting cancelled on main since 2026-11-24
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! The **Deploy Site** workflow (`.github/workflows/deploy-site.yml`) on `main` has been failing since 2026-11-24. Here is what I saw, in case it's useful:
+Hi! The **Deploy Site** workflow (`.github/workflows/deploy-site.yml`) on `main` has been getting cancelled since 2026-11-24. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/NousResearch/hermes-agent/actions/runs/45609630464 — dark (conclusion: `failure`), 2026-11-25 12:00 UTC
+- Latest run on `main`: https://github.com/NousResearch/hermes-agent/actions/runs/45657257577 — dark (conclusion: `cancelled`), 2026-11-25 16:44 UTC
 - Dark since: 2026-11-24 02:37 UTC (first run of the current streak)
-- Job / step: `deploy-docs` → `Deploy to GitHub Pages`
-- Likely cause: Error: No artifacts named "github-pages" were found for this workflow run. Ensure artifacts are uploaded with actions/upload-artifact@v4 or later.
-
-<details><summary>End of the job log</summary>
-
-```
-HTTP 200, not listed yet; checking again in 3 s
-HTTP 200, not listed yet; checking again in 3 s
-github-pages artifact is listed
-(node:4403) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
-(Use `node --trace-deprecation ...` to show where the warning was created)
-Fetching artifact metadata for "github-pages" in this workflow run
-Found 0 artifact(s)
-##[error]Fetching artifact metadata failed. Is githubstatus.com reporting issues with API requests, Pages, or Actions? Please re-run the deployment at a later time.
-```
-
-</details>
+- Likely cause: run cancelled
 
 If this is already known or expected, feel free to close. Thanks for maintaining hermes-agent!
 

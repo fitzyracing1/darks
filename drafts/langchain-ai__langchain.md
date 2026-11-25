@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/langchain-ai/langchain/issues/new
-- **Stars:** 149978 · **Generated:** 2026-11-25T12:42:48.491Z
+- **Stars:** 149986 · **Generated:** 2026-11-25T18:39:22.716Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title

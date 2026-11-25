@@ -1,8 +1,8 @@
 <!-- dark-draft: tailwindlabs/tailwindcss -->
-<!-- draft-state: ready -->
+<!-- draft-state: resolved -->
 # Upstream issue draft: tailwindlabs/tailwindcss
 
-- **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
+- **Status:** resolved — lit again (2026-11-25); nothing to file
 - **Would be filed at:** https://github.com/tailwindlabs/tailwindcss/issues/new
 - **Stars:** 98821 · **Generated:** 2026-11-25T12:42:48.491Z
 - Nothing in this file has been sent anywhere.

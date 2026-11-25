@@ -4,15 +4,14 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/storytold/vectorcraft/issues/new
-- **Stars:** 12094 · **Generated:** 2026-11-25T12:42:48.491Z
+- **Stars:** 12103 · **Generated:** 2026-11-25T18:39:22.716Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
-- **Note for Joshua:** cancelled by a concurrency group — likely noise
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 5 workflows dark on main ("FreeBSD", "Windows ARM64", "CI", +2 more)
+CI: 3 workflows dark on main ("FreeBSD", "Windows ARM64", "SonarCloud")
 <!-- END TITLE -->
 
 ## Body
@@ -64,55 +63,11 @@ Line |
 
 </details>
 
-### CI (`.github/workflows/ci.yml`)
-
-- Latest run on `main`: https://github.com/storytold/vectorcraft/actions/runs/45603627199 — dark (conclusion: `failure`), 2026-11-25 11:21 UTC
-- Dark since: 2026-11-24 23:00 UTC (first run of the current streak)
-- Job / step: `gate / test 1/5 (ubuntu-24.04)` → `Gate`
-- Likely cause: error: ci failed at 'test'
-
-<details><summary>End of the job log</summary>
-
-```
-warning: 2502/3957 tests were not run due to test failure (run with --no-fail-fast to run all tests, or run with --max-fail)
-error: test run failed
-CI summary:
-  FAIL  test: cargo nextest run -p vectorcraft-ui-egui --lib --bins --tests: exited with exit status: 100
-  skip  doctests
-  skip  i18n-report
-error: ci failed at `test`
-##[error]Process completed with exit code 1.
-```
-
-</details>
-
 ### SonarCloud (`.github/workflows/sonarcloud.yml`)
 
-- Latest run on `main`: https://github.com/storytold/vectorcraft/actions/runs/45614755581 — dark (conclusion: `cancelled`), 2026-11-25 12:32 UTC
+- Latest run on `main`: https://github.com/storytold/vectorcraft/actions/runs/45665661976 — dark (conclusion: `cancelled`), 2026-11-25 17:31 UTC
 - Dark since: 2026-11-25 04:27 UTC (first run of the current streak)
 - Likely cause: run cancelled
-
-### Affinity 3 corpus (`.github/workflows/affinity-corpus.yml`)
-
-- Latest run on `main`: https://github.com/storytold/vectorcraft/actions/runs/45614755692 — dark (conclusion: `cancelled`), 2026-11-25 12:32 UTC
-- Dark since: 2026-11-25 12:25 UTC (first run of the current streak)
-- Job / step: `affinity3 / gate (ubuntu-24.04)` → `Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1`
-- Likely cause: Canceling since a higher priority waiting request for affinity-corpus-refs/heads/main exists
-
-<details><summary>End of the job log</summary>
-
-```
-hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
-hint: 'development'. The just-created branch can be renamed via this command:
-hint:
-hint: 	git branch -m <name>
-hint:
-hint: Disable this message with "git config set advice.defaultBranchName false"
-Initialized empty Git repository in /home/runner/work/vectorcraft/vectorcraft/.git/
-##[error]The operation was canceled.
-```
-
-</details>
 
 If this is already known or expected, feel free to close. Thanks for maintaining vectorcraft!
 
