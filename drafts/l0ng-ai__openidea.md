@@ -4,31 +4,23 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/l0ng-ai/openidea/issues/new
-- **Stars:** 10147 · **Generated:** 2026-11-25T06:46:34.527Z
+- **Stars:** 10189 · **Generated:** 2026-11-25T12:42:48.491Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 2 workflows dark on main ("CI", "Language smoke")
+CI: "CI" workflow getting cancelled on main since 2026-11-10
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
+Hi! The **CI** workflow (`.github/workflows/ci.yml`) on `main` has been getting cancelled since 2026-11-10. Here is what I saw, in case it's useful:
 
-### CI (`.github/workflows/ci.yml`)
-
-- Latest run on `main`: https://github.com/l0ng-ai/openidea/actions/runs/45561894950 — dark (conclusion: `cancelled`), 2026-11-25 06:36 UTC
+- Latest run on `main`: https://github.com/l0ng-ai/openidea/actions/runs/45609820504 — dark (conclusion: `cancelled`), 2026-11-25 12:01 UTC
 - Dark since: 2026-11-10 13:06 UTC (first run of the current streak)
-- Likely cause: run cancelled
-
-### Language smoke (`.github/workflows/language-smoke.yml`)
-
-- Latest run on `main`: https://github.com/l0ng-ai/openidea/actions/runs/45561895176 — dark (conclusion: `cancelled`), 2026-11-25 06:36 UTC
-- Dark since: 2026-11-23 04:42 UTC (first run of the current streak)
 - Likely cause: run cancelled
 
 If this is already known or expected, feel free to close. Thanks for maintaining openidea!

@@ -4,13 +4,13 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/zylon-ai/private-gpt/issues/new
-- **Stars:** 57652 · **Generated:** 2026-11-25T06:46:34.527Z
+- **Stars:** 57652 · **Generated:** 2026-11-25T12:42:48.491Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 3 workflows dark on main ("update-claude-specs", "publish docs", "tests")
+CI: 2 workflows dark on main ("update-claude-specs", "publish docs")
 <!-- END TITLE -->
 
 ## Body
@@ -58,28 +58,6 @@ WARN  2026-11-18T03:28:09.388Z [docs]: Response example "Combined semantic and k
 ##[warning]Response example "Combined semantic and keyword search" on POST /v1/primitives/search has no matching request example with the same summary. Falling back to a base request with no body. To pair them, set the …
 ERROR 2026-11-18T03:28:09.389Z [docs]: API validation for fern/openapi/openapi.json completed with 61 errors.
 ##[error]API validation for fern/openapi/openapi.json completed with 61 errors.
-```
-
-</details>
-
-### tests (`.github/workflows/tests.yml`)
-
-- Latest run on `main`: https://github.com/zylon-ai/private-gpt/actions/runs/45186057757 — dark (conclusion: `failure`), 2026-11-23 13:39 UTC
-- Dark since: 2026-11-23 13:39 UTC (first run of the current streak)
-- Job / step: `format` → `run format`
-- Likely cause: make: *** [Makefile:37: format] Error 1
-
-<details><summary>End of the job log</summary>
-
-```
-Resolved 349 packages in 1ms
-Checked 134 packages in 1ms
-uv run --no-sync ruff format . --check
-Would reformat: .github/scripts/release_policy.py
-Would reformat: .github/scripts/test_release_policy.py
-2 files would be reformatted, 976 files already formatted
-make: *** [Makefile:37: format] Error 1
-##[error]Process completed with exit code 2.
 ```
 
 </details>

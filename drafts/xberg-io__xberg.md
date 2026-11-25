@@ -4,13 +4,15 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/xberg-io/xberg/issues/new
-- **Stars:** 9617 · **Generated:** 2026-11-25T06:46:34.527Z
+- **Stars:** 9617 · **Generated:** 2026-11-25T12:42:48.491Z
 - Nothing in this file has been sent anywhere.
+- **Note for Joshua:** cancelled by a concurrency group — likely noise
+- **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 5 workflows dark on main ("CI E2E", "CI Rust", "CI Docker", +2 more)
+CI: 8 workflows dark on main ("CI E2E", "CI Rust", "CI Docker", +5 more)
 <!-- END TITLE -->
 
 ## Body
@@ -20,51 +22,21 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### CI E2E (`.github/workflows/ci-e2e.yaml`)
 
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/45392191209 — dark (conclusion: `failure`), 2026-11-24 12:18 UTC
+- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/45565767712 — dark (conclusion: `cancelled`), 2026-11-25 07:08 UTC
 - Dark since: 2026-11-20 07:25 UTC (first run of the current streak)
-- Job / step: `E2E (swift)` → `Run e2e tests (swift, instrumented)`
-- Likely cause: [swift:e2e] ERROR task failed
-
-<details><summary>End of the job log</summary>
-
-```
-[swift] Failed frontend command:
-[swift] /usr/share/swift/usr/bin/swift-frontend -frontend -c /home/runner/work/xberg/xberg/packages/swift/Sources/Xberg/BridgeRegistrationOverloads.swift -primary-file /home/runner/work/xberg/xberg/packages/swift/Source…
-[swift] error: Build failed
-[swift] error: fatalError
-ERROR test failed: swift — Command failed: cd packages/swift && swift test (env: LD_LIBRARY_PATH)
-ERROR Command failed: cd packages/swift && swift test (env: LD_LIBRARY_PATH)
-[swift:e2e] ERROR task failed
-##[error]Process completed with exit code 1.
-```
-
-</details>
+- Job / step: `E2E (ruby)`
+- Likely cause: Canceling since a higher priority waiting request for ci-e2e-refs/heads/main exists
 
 ### CI Rust (`.github/workflows/ci-rust.yaml`)
 
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/45402101255 — dark (conclusion: `failure`), 2026-11-24 13:18 UTC
+- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/45576027318 — dark (conclusion: `cancelled`), 2026-11-25 08:24 UTC
 - Dark since: 2026-11-20 07:25 UTC (first run of the current streak)
-- Job / step: `xberg-cli feature leg (paddle-ocr)` → `cargo clippy -p xberg-cli --features paddle-ocr`
-- Likely cause: unused variable: 'options' (crates/xberg-cli/src/commands/cache.rs:736)
-
-<details><summary>End of the job log</summary>
-
-```
-    Checking org v0.3.1
-    Checking similar v3.2.1
-    Checking hex v0.4.3
-    Checking jotdown v0.10.0
-   Compiling xberg-cli v1.5.2 (/home/runner/work/xberg/xberg/crates/xberg-cli)
-    Checking clap_complete v4.6.12
-error: unused variable: `options`
-##[error]   --> crates/xberg-cli/src/commands/cache.rs:736:5
-```
-
-</details>
+- Job / step: `Rust (ubuntu-24.04)`
+- Likely cause: cause not readable (GET /repos/xberg-io/xberg/actions/runs/45576027318/jobs?filter=latest&per_page=5)
 
 ### CI Docker (`.github/workflows/ci-docker.yaml`)
 
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/45392191745 — dark (conclusion: `failure`), 2026-11-24 12:18 UTC
+- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/45565767373 — dark (conclusion: `failure`), 2026-11-25 07:08 UTC
 - Dark since: 2026-11-20 07:25 UTC (first run of the current streak)
 - Job / step: `Docker (core)` → `Run API contract tests with schemathesis`
 - Likely cause: Failed to establish a new connection: [Errno 111] Connection refused
@@ -108,7 +80,7 @@ advisories FAILED, bans ok, licenses ok, sources ok
 
 ### CI Focused PR (`.github/workflows/ci-focused-pr.yaml`)
 
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/45392191301 — dark (conclusion: `failure`), 2026-11-24 12:18 UTC
+- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/45576027400 — dark (conclusion: `failure`), 2026-11-25 08:24 UTC
 - Dark since: 2026-11-23 18:24 UTC (first run of the current streak)
 - Job / step: `Shipped license graphs` → `Check the third-party notice bundle is current`
 - Likely cause: /home/runner/work/xberg/xberg/THIRD_PARTY_LICENSES.md is stale at line 185:
@@ -124,6 +96,57 @@ ok   xberg-cli --features mcp,mcp-http,api (windows no-heic): 0 errors, 59 warni
 checked 13 graphs; 14 license exceptions, each matched by at least one graph
 [notices:check] $ python3 scripts/ci/generate-notices.py --check
 ##[error]/home/runner/work/xberg/xberg/THIRD_PARTY_LICENSES.md is stale at line 185:
+```
+
+</details>
+
+### CI Integrations (`.github/workflows/ci-integrations.yaml`)
+
+- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/45576027289 — dark (conclusion: `cancelled`), 2026-11-25 08:24 UTC
+- Dark since: 2026-11-25 06:57 UTC (first run of the current streak)
+- Job / step: `Build local integration bindings` → `Install system dependencies`
+- Likely cause: Canceling since a higher priority waiting request for ci-integrations-refs/heads/main exists
+
+<details><summary>End of the job log</summary>
+
+```
+Download snap "snapd" (28332) from channel "stable"                            \
+Download snap "snapd" (28332) from channel "stable"                            |
+Download snap "snapd" (28332) from channel "stable"            0% 1.57MB/s 21.6s
+Download snap "snapd" (28332) from channel "stable"            3% 4.36MB/s 7.61s
+Download snap "snapd" (28332) from channel "stable"           14% 15.3MB/s 1.92s
+Download snap "snapd" (28332) from channel "stable"           59% 48.9MB/s 285ms
+Download snap "snapd" (28332) from channel "stable"          100% 51.5MB/s 0.0ns
+##[error]The operation was canceled.
+```
+
+</details>
+
+### CI Lint (`.github/workflows/ci-lint.yaml`)
+
+- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/45576028097 — dark (conclusion: `cancelled`), 2026-11-25 08:24 UTC
+- Dark since: 2026-11-25 06:57 UTC (first run of the current streak)
+- Job / step: `AI governance validation`
+- Likely cause: Canceling since a higher priority waiting request for ci-lint-refs/heads/main exists
+
+### CI Scripts (`.github/workflows/ci-scripts.yaml`)
+
+- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/45576259420 — dark (conclusion: `failure`), 2026-11-25 08:26 UTC
+- Dark since: 2026-11-25 06:57 UTC (first run of the current streak)
+- Job / step: `Bats on macos-26` → `Run the shell contract tests`
+- Likely cause: ok 800 WASM test runner should propagate the actual wasm-pack test failure
+
+<details><summary>End of the job log</summary>
+
+```
+ok 799 WASM test runner should reject a failing executed POSIX probe rather than only checking the binary exists
+ok 800 WASM test runner should propagate the actual wasm-pack test failure
+The following warnings were encountered during tests:
+BW02: Using flags on `run` requires at least BATS_VERSION=1.5.0. Use `bats_require_minimum_version 1.5.0` to fix this message.
+      (from function `bats_warn_minimum_guaranteed_version' in file /Users/runner/work/_temp/bats/bats-core-1.14.0/lib/bats-core/warnings.bash, line 32,
+       from function `run' in file /Users/runner/work/_temp/bats/bats-core-1.14.0/lib/bats-core/test_functions.bash, line 359,
+       in test file scripts/tests/bats/benchmark_liteparse.bats, line 26)
+##[error]Process completed with exit code 1.
 ```
 
 </details>

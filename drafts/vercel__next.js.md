@@ -4,23 +4,21 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/vercel/next.js/issues/new
-- **Stars:** 143688 · **Generated:** 2026-11-25T06:46:34.527Z
+- **Stars:** 143716 · **Generated:** 2026-11-25T12:42:48.491Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 3 workflows dark on canary ("Next Maintainer Auto Close", "Rspack Next.js production integration tests", "Rspack Next.js development integration tests")
+CI: "Next Maintainer Auto Close" workflow failing on canary since 2026-11-24
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! A few workflows on `canary` have been dark recently. Details below, in case they're useful:
+Hi! The **Next Maintainer Auto Close** workflow (`.github/workflows/next-maintainer-auto-close.yml`) on `canary` has been failing since 2026-11-24. Here is what I saw, in case it's useful:
 
-### Next Maintainer Auto Close (`.github/workflows/next-maintainer-auto-close.yml`)
-
-- Latest run on `canary`: https://github.com/vercel/next.js/actions/runs/45558484358 — dark (conclusion: `failure`), 2026-11-25 06:09 UTC
+- Latest run on `canary`: https://github.com/vercel/next.js/actions/runs/45610876376 — dark (conclusion: `failure`), 2026-11-25 12:08 UTC
 - Dark since: 2026-11-24 22:05 UTC (first run of the current streak)
 - Job / step: `close-one-verified-issue` → `Pull and deliver every released close`
 - Likely cause: Unhandled error: Error: Queue returned 404: Not found
@@ -28,58 +26,14 @@ Hi! A few workflows on `canary` have been dark recently. Details below, in case 
 <details><summary>End of the job log</summary>
 
 ```
-/home/runner/work/_temp/git-credentials-ed657a44-f32d-4211-a780-1e0ea85a4cb1.config
-/home/runner/work/_temp/git-credentials-ed657a44-f32d-4211-a780-1e0ea85a4cb1.config
-/github/runner_temp/git-credentials-ed657a44-f32d-4211-a780-1e0ea85a4cb1.config
-/github/runner_temp/git-credentials-ed657a44-f32d-4211-a780-1e0ea85a4cb1.config
-Removing credentials config '/home/runner/work/_temp/git-credentials-ed657a44-f32d-4211-a780-1e0ea85a4cb1.config'
+Removing credentials config '/home/runner/work/_temp/git-credentials-1a205562-ead4-46bf-8a5b-7ad019d3614f.config'
 Error: Queue returned 404: Not found
     at queueRequest (/home/runner/work/next.js/next.js/.github/scripts/next-maintainer-auto-close.js:24:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async deliverVerifiedCloses (/home/runner/work/next.js/next.js/.github/scripts/next-maintainer-auto-close.js:160:19)
+    at async eval (eval at callAsyncFunction (/home/runner/work/_actions/actions/github-script/3a2844b7e9c422d3c10d287c895573f7108da1b3/dist/index.js:64949:16), <anonymous>:4:1)
+    at async main (/home/runner/work/_actions/actions/github-script/3a2844b7e9c422d3c10d287c895573f7108da1b3/dist/index.js:65100:20)
 ##[error]Unhandled error: Error: Queue returned 404: Not found
-```
-
-</details>
-
-### Rspack Next.js production integration tests (`.github/workflows/rspack-nextjs-build-integration-tests.yml`)
-
-- Latest run on `canary`: https://github.com/vercel/next.js/actions/runs/45550836645 — dark (conclusion: `failure`), 2026-11-25 05:02 UTC
-- Dark since: 2026-11-25 05:02 UTC (first run of the current streak)
-- Job / step: `Rspack integration tests / Next.js integration test (E2E and production) (11/12) / build` → `Run # e2e and production tests with `node run-tests.js``
-- Likely cause: Unable to download artifact(s): Artifact not found for name: next-swc-aarch64-unknown-linux-gnu
-
-<details><summary>End of the job log</summary>
-
-```
-/etc/profile.d/apps-bin-path.sh: line 10: XDG_DATA_DIRS: unbound variable
-/etc/profile.d/apps-bin-path.sh: line 10: XDG_DATA_DIRS: unbound variable
-/etc/profile.d/apps-bin-path.sh: line 10: XDG_DATA_DIRS: unbound variable
-Waiting for background step(s) to complete: install-rust
-Finished waiting for background step(s).
-/etc/profile.d/apps-bin-path.sh: line 10: XDG_DATA_DIRS: unbound variable
-Downloading single artifact
-##[error]Unable to download artifact(s): Artifact not found for name: next-swc-aarch64-unknown-linux-gnu
-```
-
-</details>
-
-### Rspack Next.js development integration tests (`.github/workflows/rspack-nextjs-dev-integration-tests.yml`)
-
-- Latest run on `canary`: https://github.com/vercel/next.js/actions/runs/45551284416 — dark (conclusion: `failure`), 2026-11-25 05:06 UTC
-- Dark since: 2026-11-25 05:06 UTC (first run of the current streak)
-- Job / step: `Rspack integration tests / Next.js integration test (E2E and development) (14/16) / build` → `Run # e2e and development tests with `node run-tests.js``
-- Likely cause: Unable to download artifact(s): Artifact not found for name: next-swc-aarch64-unknown-linux-gnu
-
-<details><summary>End of the job log</summary>
-
-```
-/etc/profile.d/apps-bin-path.sh: line 10: XDG_DATA_DIRS: unbound variable
-/etc/profile.d/apps-bin-path.sh: line 10: XDG_DATA_DIRS: unbound variable
-/etc/profile.d/apps-bin-path.sh: line 10: XDG_DATA_DIRS: unbound variable
-Waiting for background step(s) to complete: install-rust
-Finished waiting for background step(s).
-/etc/profile.d/apps-bin-path.sh: line 10: XDG_DATA_DIRS: unbound variable
-Downloading single artifact
-##[error]Unable to download artifact(s): Artifact not found for name: next-swc-aarch64-unknown-linux-gnu
 ```
 
 </details>

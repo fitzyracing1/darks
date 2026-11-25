@@ -4,13 +4,15 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/storytold/vectorcraft/issues/new
-- **Stars:** 12079 · **Generated:** 2026-11-25T06:46:34.527Z
+- **Stars:** 12094 · **Generated:** 2026-11-25T12:42:48.491Z
 - Nothing in this file has been sent anywhere.
+- **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
+- **Note for Joshua:** cancelled by a concurrency group — likely noise
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 4 workflows dark on main ("FreeBSD", "Windows ARM64", "CI", +1 more)
+CI: 5 workflows dark on main ("FreeBSD", "Windows ARM64", "CI", +2 more)
 <!-- END TITLE -->
 
 ## Body
@@ -20,22 +22,22 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### FreeBSD (`.github/workflows/freebsd.yml`)
 
-- Latest run on `main`: https://github.com/storytold/vectorcraft/actions/runs/45326000401 — dark (conclusion: `failure`), 2026-11-24 04:23 UTC
+- Latest run on `main`: https://github.com/storytold/vectorcraft/actions/runs/45546463928 — dark (conclusion: `failure`), 2026-11-25 04:23 UTC
 - Dark since: 2026-11-22 04:21 UTC (first run of the current streak)
-- Job / step: `freebsd / FreeBSD 15 x86_64 (build + test)` → `Build and test`
-- Likely cause: process didn't exit successfully: '/root/.rustup/toolchains/stable-x86_64-unknown-freebsd/bin/rustc --crate-name vectorcraft_engine --edition=2024 crates/engine/src/lib.rs --error-format=json --json=diagnostic-rendered-…
+- Job / step: `freebsd / FreeBSD 15 aarch64 (build + test)` → `Build and test`
+- Likely cause: The job has exceeded the maximum execution time of 5h0m0s
 
 <details><summary>End of the job log</summary>
 
 ```
-   |
-23 | egui_extras = { workspace = true }
-   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-   |
-   = note: `cargo::unused_dependencies` is set to `warn` by default
-help: consider removing the dependency on `egui_extras`
-warning: `vectorcraft-web` (manifest) generated 1 warning
-##[error]Process completed with exit code 101.
+   Compiling winresource v0.1.34
+   Compiling socket2 v0.6.5
+   Compiling vectorcraft v0.24.1 (/home/runner/work/vectorcraft/vectorcraft/apps/vectorcraft)
+   Compiling craft-psd v0.1.0 (https://github.com/storytold/craft-libs?rev=a4b6d3b6ca04a65d5972339b808d1049a14c7167#a4b6d3b6)
+   Compiling weezl v0.2.1
+   Compiling vectorcraft-cli v0.24.1 (/home/runner/work/vectorcraft/vectorcraft/apps/vectorcraft-cli)
+   Compiling vectorcraft-web v0.24.1 (/home/runner/work/vectorcraft/vectorcraft/apps/vectorcraft-web)
+##[error]The operation was canceled.
 ```
 
 </details>
@@ -64,21 +66,21 @@ Line |
 
 ### CI (`.github/workflows/ci.yml`)
 
-- Latest run on `main`: https://github.com/storytold/vectorcraft/actions/runs/45547733852 — dark (conclusion: `failure`), 2026-11-25 04:34 UTC
+- Latest run on `main`: https://github.com/storytold/vectorcraft/actions/runs/45603627199 — dark (conclusion: `failure`), 2026-11-25 11:21 UTC
 - Dark since: 2026-11-24 23:00 UTC (first run of the current streak)
-- Job / step: `gate / cache warm (ubuntu-24.04)` → `Gate`
-- Likely cause: FAIL  build tests: cargo test --lib --bins --no-run (vectorcraft-ui-egui): exited with exit status: 101
+- Job / step: `gate / test 1/5 (ubuntu-24.04)` → `Gate`
+- Likely cause: error: ci failed at 'test'
 
 <details><summary>End of the job log</summary>
 
 ```
-  FAIL  build tests: cargo test --lib --bins --no-run (vectorcraft-ui-egui): exited with exit status: 101
-  skip  build tests
-  skip  build tests
-  skip  build tests
-  skip  clippy
-  skip  no-bundled-fonts
-  skip  wasm
+warning: 2502/3957 tests were not run due to test failure (run with --no-fail-fast to run all tests, or run with --max-fail)
+error: test run failed
+CI summary:
+  FAIL  test: cargo nextest run -p vectorcraft-ui-egui --lib --bins --tests: exited with exit status: 100
+  skip  doctests
+  skip  i18n-report
+error: ci failed at `test`
 ##[error]Process completed with exit code 1.
 ```
 
@@ -86,22 +88,28 @@ Line |
 
 ### SonarCloud (`.github/workflows/sonarcloud.yml`)
 
-- Latest run on `main`: https://github.com/storytold/vectorcraft/actions/runs/45547733949 — dark (conclusion: `failure`), 2026-11-25 04:34 UTC
+- Latest run on `main`: https://github.com/storytold/vectorcraft/actions/runs/45614755581 — dark (conclusion: `cancelled`), 2026-11-25 12:32 UTC
 - Dark since: 2026-11-25 04:27 UTC (first run of the current streak)
-- Job / step: `sonarcloud / Build instrumented test archive` → `Build instrumented test archive`
-- Likely cause: warning: build failed, waiting for other jobs to finish...
+- Likely cause: run cancelled
+
+### Affinity 3 corpus (`.github/workflows/affinity-corpus.yml`)
+
+- Latest run on `main`: https://github.com/storytold/vectorcraft/actions/runs/45614755692 — dark (conclusion: `cancelled`), 2026-11-25 12:32 UTC
+- Dark since: 2026-11-25 12:25 UTC (first run of the current streak)
+- Job / step: `affinity3 / gate (ubuntu-24.04)` → `Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1`
+- Likely cause: Canceling since a higher priority waiting request for affinity-corpus-refs/heads/main exists
 
 <details><summary>End of the job log</summary>
 
 ```
-     |                                           ^^^ not found in this scope
-Some errors have detailed explanations: E0423, E0425.
-For more information about an error, try `rustc --explain E0423`.
-error: process didn't exit successfully: `/home/runner/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/bin/rustc --crate-name vectorcraft_ui_egui --edition=2024 crates/ui-egui/src/lib.rs --error-format=json --json=di…
-error: could not compile `vectorcraft-ui-egui` (lib) due to 7 previous errors
-warning: build failed, waiting for other jobs to finish...
-error: command `/home/runner/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/bin/cargo '--color=always' test --no-run '--message-format=json-render-diagnostics' --workspace` exited with code 101
-##[error]Process completed with exit code 101.
+hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+hint: 'development'. The just-created branch can be renamed via this command:
+hint:
+hint: 	git branch -m <name>
+hint:
+hint: Disable this message with "git config set advice.defaultBranchName false"
+Initialized empty Git repository in /home/runner/work/vectorcraft/vectorcraft/.git/
+##[error]The operation was canceled.
 ```
 
 </details>

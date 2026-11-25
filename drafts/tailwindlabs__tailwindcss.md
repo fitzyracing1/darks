@@ -4,36 +4,83 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/tailwindlabs/tailwindcss/issues/new
-- **Stars:** 98784 · **Generated:** 2026-11-25T06:46:34.527Z
+- **Stars:** 98821 · **Generated:** 2026-11-25T12:42:48.491Z
 - Nothing in this file has been sent anywhere.
+- **Note for Joshua:** cancelled by a concurrency group — likely noise
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: "Integration Tests" workflow failing on main since 2026-11-24
+CI: 3 workflows dark on main ("Integration Tests", "Release", "CI")
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! The **Integration Tests** workflow (`.github/workflows/integration-tests.yml`) on `main` has been failing since 2026-11-24. Here is what I saw, in case it's useful:
+Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
 
-- Latest run on `main`: https://github.com/tailwindlabs/tailwindcss/actions/runs/45455596771 — dark (conclusion: `failure`), 2026-11-24 18:04 UTC
+### Integration Tests (`.github/workflows/integration-tests.yml`)
+
+- Latest run on `main`: https://github.com/tailwindlabs/tailwindcss/actions/runs/45612734070 — dark (conclusion: `cancelled`), 2026-11-25 12:20 UTC
 - Dark since: 2026-11-24 18:04 UTC (first run of the current streak)
-- Job / step: `Linux /  cli` → `Test cli`
-- Likely cause: AssertionError: expected '' to contain '.flex' (integrations/cli/index.test.ts:488)
+- Job / step: `macOS /  vite` → `Test vite`
+- Likely cause: Canceling since a higher priority waiting request for Integration Tests-refs/heads/main exists
 
 <details><summary>End of the job log</summary>
 
 ```
-    490|   )
- ❯ utils.ts:632:14
-⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
- Test Files  1 failed | 3 passed (4)
-      Tests  1 failed | 67 passed | 2 skipped (70)
-   Start at  18:07:13
-   Duration  92.33s (transform 239ms, setup 0ms, import 786ms, tests 134.71s, environment 1ms)
-##[error]AssertionError: expected '' to contain '.flex'
+   ✓ dev mode  14817ms
+   ✓ build mode  11478ms
+   ✓ import aliases should work in <style> blocks  11590ms
+stdout | vite/qwik.test.ts > dev mode
+  ➜  Local:   http://localhost:5173/
+ ✓ vite/qwik.test.ts (1 test) 7750ms
+   ✓ dev mode  7749ms
+##[error]The operation was canceled.
+```
+
+</details>
+
+### Release (`.github/workflows/release.yml`)
+
+- Latest run on `main`: https://github.com/tailwindlabs/tailwindcss/actions/runs/45612733848 — dark (conclusion: `cancelled`), 2026-11-25 12:20 UTC
+- Dark since: 2026-11-25 12:20 UTC (first run of the current streak)
+- Job / step: `Build x86_64-unknown-freebsd (OXIDE)` → `Build FreeBSD`
+- Likely cause: Canceling since a higher priority waiting request for Release-push-refs/heads/main exists
+
+<details><summary>End of the job log</summary>
+
+```
+   Compiling futures v0.3.32
+   Compiling tailwind-oxide v0.0.0 (/home/runner/work/tailwindcss/tailwindcss/crates/node)
+   Compiling classification-macros v0.1.0 (/home/runner/work/tailwindcss/tailwindcss/crates/classification-macros)
+   Compiling ctor v1.0.12
+   Compiling nohash-hasher v0.2.0
+   Compiling napi-derive v3.7.1
+   Compiling tailwindcss-oxide v0.1.0 (/home/runner/work/tailwindcss/tailwindcss/crates/oxide)
+##[error]The operation was canceled.
+```
+
+</details>
+
+### CI (`.github/workflows/ci.yml`)
+
+- Latest run on `main`: https://github.com/tailwindlabs/tailwindcss/actions/runs/45612733881 — dark (conclusion: `cancelled`), 2026-11-25 12:20 UTC
+- Dark since: 2026-11-25 12:20 UTC (first run of the current streak)
+- Job / step: `Windows` → `Install Playwright Browsers`
+- Likely cause: Canceling since a higher priority waiting request for CI-refs/heads/main exists
+
+<details><summary>End of the job log</summary>
+
+```
+     ✓ keeps `--tw-*` declarations that are not related to a sibling with the same value  683ms
+     ✓ reuses dynamic utility lookups across candidate collapse groups  674ms
+     ✓ keeps the CSS the same  952ms
+ Test Files  86 passed (86)
+      Tests  6103 passed | 1 skipped (6104)
+   Start at  12:25:34
+   Duration  87.47s (transform 8.95s, setup 0ms, import 22.88s, tests 160.03s, environment 16ms)
+##[error]The operation was canceled.
 ```
 
 </details>

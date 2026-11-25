@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/google-gemini/gemini-cli/issues/new
-- **Stars:** 109090 · **Generated:** 2026-11-25T06:46:34.527Z
+- **Stars:** 109096 · **Generated:** 2026-11-25T12:42:48.491Z
 - Nothing in this file has been sent anywhere.
 
 ## Skipped: upstream already tracking
@@ -26,7 +26,7 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### 📋 Gemini Scheduled Issue Triage (`.github/workflows/gemini-scheduled-issue-triage.yml`)
 
-- Latest run on `main`: https://github.com/google-gemini/gemini-cli/actions/runs/45558897412 — dark (conclusion: `failure`), 2026-11-25 06:12 UTC
+- Latest run on `main`: https://github.com/google-gemini/gemini-cli/actions/runs/45611309162 — dark (conclusion: `failure`), 2026-11-25 12:10 UTC
 - Dark since: 2026-11-11 14:07 UTC (first run of the current streak)
 - Job / step: `triage-issues` → `Run Standard Triage Analysis`
 - Likely cause: google-github-actions/auth failed with: failed to generate Google Cloud federated token for //iam.googleapis.com/projects/710019748844/locations/global/workloadIdentityPools/github-29fc077a/providers/gh-29fc077a: {"error":"invalid_target","
@@ -34,13 +34,13 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 <details><summary>End of the job log</summary>
 
 ```
-##[end-action id=gemini_standard_issue_analysis.sanitize_workflow_name;outcome=success;conclusion=success;duration_ms=12]
+##[end-action id=gemini_standard_issue_analysis.sanitize_workflow_name;outcome=success;conclusion=success;duration_ms=16]
 ##[start-action display=Configure Gemini CLI;id=gemini_standard_issue_analysis.__run]
-##[end-action id=gemini_standard_issue_analysis.__run;outcome=success;conclusion=success;duration_ms=9]
+##[end-action id=gemini_standard_issue_analysis.__run;outcome=success;conclusion=success;duration_ms=12]
 ##[start-action display=Install Custom Commands;id=gemini_standard_issue_analysis.__run_2]
-##[end-action id=gemini_standard_issue_analysis.__run_2;outcome=success;conclusion=success;duration_ms=10]
+##[end-action id=gemini_standard_issue_analysis.__run_2;outcome=success;conclusion=success;duration_ms=13]
 ##[start-action display=Authenticate to Google Cloud;id=gemini_standard_issue_analysis.auth]
-Created credentials file at "/home/runner/work/gemini-cli/gemini-cli/gha-creds-a4344bb0685f0bd7.json"
+Created credentials file at "/home/runner/work/gemini-cli/gemini-cli/gha-creds-693be61f1c0bec86.json"
 ##[error]google-github-actions/auth failed with: failed to generate Google Cloud federated token for //iam.googleapis.com/projects/710019748844/locations/global/workloadIdentityPools/github-29fc077a/providers/gh-29fc077…
 ```
 
