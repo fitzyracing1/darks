@@ -4,13 +4,19 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/open-metadata/OpenMetadata/issues/new
-- **Stars:** 15859 · **Generated:** 2026-11-24T18:40:09.799Z
+- **Stars:** 15861 · **Generated:** 2026-11-25T00:55:54.614Z
 - Nothing in this file has been sent anywhere.
+
+## Skipped: upstream already tracking
+
+- security-scan (`.github/workflows/security-scan.yml`): [issue #38522](https://github.com/open-metadata/OpenMetadata/issues/38522) "security-scan fails on ubuntu-latest (Ubuntu 26.04): E: Package 'wkhtmltopdf' has no installation candidate"
+
+These workflows are left out of the body below.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 7 workflows dark on main ("monitor-slack-link", "Merge Queue Dequeue Report", "Integration Tests - PostgreSQL + Elasticsearch + Redis", +4 more)
+CI: 9 workflows dark on main ("monitor-slack-link", "Merge Queue Dequeue Report", "Integration Tests - PostgreSQL + Elasticsearch + Redis", +6 more)
 <!-- END TITLE -->
 
 ## Body
@@ -20,7 +26,7 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### monitor-slack-link (`.github/workflows/monitor-slack-link.yml`)
 
-- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/45456983102 — dark (conclusion: `failure`), 2026-11-24 18:12 UTC
+- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/45518312403 — dark (conclusion: `failure`), 2026-11-25 00:28 UTC
 - Dark since: 2026-11-06 22:08 UTC (first run of the current streak)
 - Job / step: `monitor-slack-link` → `Set up Python 3.9`
 - Likely cause: The version '3.9' with architecture 'x64' was not found for Ubuntu 26.04.
@@ -28,12 +34,12 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 <details><summary>End of the job log</summary>
 
 ```
-Updating files:  99% (27594/27872)
-Updating files: 100% (27872/27872)
-Updating files: 100% (27872/27872), done.
+Updating files:  99% (27615/27893)
+Updating files: 100% (27893/27893)
+Updating files: 100% (27893/27893), done.
 Switched to a new branch 'main'
 branch 'main' set up to track 'origin/main'.
-5d8ec8ae558773db1b1db7f63cf7ee20f630a461
+03a162fb8797f3735690237b1492f9902eac051d
 Version 3.9 was not found in the local cache
 ##[error]The version '3.9' with architecture 'x64' was not found for Ubuntu 26.04.
 ```
@@ -42,7 +48,7 @@ Version 3.9 was not found in the local cache
 
 ### Merge Queue Dequeue Report (`.github/workflows/merge-queue-dequeue-report.yml`)
 
-- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/45457869257 — dark (conclusion: `failure`), 2026-11-24 18:17 UTC
+- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/45517666013 — dark (conclusion: `failure`), 2026-11-25 00:23 UTC
 - Dark since: 2026-11-22 17:03 UTC (first run of the current streak)
 - Job / step: `evict-main-conflicts` → `Remove queue entries that conflict with main`
 - Likely cause: cannot iterate over: null
@@ -64,109 +70,153 @@ cannot iterate over: null
 
 ### Integration Tests - PostgreSQL + Elasticsearch + Redis (`.github/workflows/integration-tests-postgres-elasticsearch-redis.yml`)
 
-- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/45446722145 — dark (conclusion: `failure`), 2026-11-24 17:16 UTC
+- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/45517666306 — dark (conclusion: `failure`), 2026-11-25 00:23 UTC
 - Dark since: 2026-11-23 14:51 UTC (first run of the current streak)
-- Job / step: `Integration Test Lane (parallel)` → `Run Integration Tests (PostgreSQL + Elasticsearch + Redis)`
-- Likely cause: INFO  [2026-11-24 18:27:14,824] org.openmetadata.service.apps.bundles.searchIndex.distributed.JobRecoveryManager: Startup recovery completed: 0 locks cleaned, 0 orphaned jobs processed (0 recovered, 0 marked failed)
+- Job / step: `Build Integration Test Runtime` → `Build and Bundle Integration Test Runtime`
+- Likely cause: cannot find symbol (openmetadata-service/src/test/java/org/openmetadata/service/jdbi3/IncidentGroupTrendSqlTest.java:51)
 
 <details><summary>End of the job log</summary>
 
 ```
-INFO  [2026-11-24 18:26:21,145] org.openmetadata.service.audit.AuditLogRepository: eventType=entityCreated user=admin actorType=USER entityType=team entityFQN=legacy_cipher_team__c0421c3dd9a24fa09b72f69593f3b95c__Webhoo…
-INFO  [2026-11-24 18:26:21,146] org.openmetadata.service.audit.AuditLogRepository: eventType=entityCreated user=admin actorType=USER entityType=team entityFQN=legacy_team__c0421c3dd9a24fa09b72f69593f3b95c__WebhookSecret…
-INFO  [2026-11-24 18:26:21,147] org.openmetadata.service.audit.AuditLogRepository: eventType=entityUpdated user=admin actorType=USER entityType=team entityFQN=null entityId=3d8bea51-2739-4154-9df5-d54d7cf2dda3 service=n…
-INFO  [2026-11-24 18:26:21,147] org.openmetadata.service.audit.AuditLogRepository: eventType=entityCreated user=admin actorType=USER entityType=team entityFQN=stopped_team__c0421c3dd9a24fa09b72f69593f3b95c__WebhookSecre…
-INFO  [2026-11-24 18:26:32,748] org.openmetadata.service.alerting.channel.feed.ActivityStreamPublisher: Closing Activity Stream Publisher
-INFO  [2026-11-24 18:27:14,822] org.openmetadata.service.apps.bundles.searchIndex.distributed.JobRecoveryManager: Performing startup recovery for distributed indexing jobs...
-INFO  [2026-11-24 18:27:14,824] org.openmetadata.service.apps.bundles.searchIndex.distributed.JobRecoveryManager: Startup recovery completed: 0 locks cleaned, 0 orphaned jobs processed (0 recovered, 0 marked failed)
-##[error]Process completed with exit code 124.
+##[warning][WARNING] /home/runner/work/OpenMetadata/OpenMetadata/openmetadata-service/src/test/java/org/openmetadata/service/apps/scheduler/OmAppJobListenerTest.java:[50,16] sun.misc.Unsafe is internal proprietary API a…
+##[warning][WARNING] /home/runner/work/OpenMetadata/OpenMetadata/openmetadata-service/src/test/java/org/openmetadata/service/resources/apps/AppResourceRetryQueueTest.java:[49,16] sun.misc.Unsafe is internal proprietary …
+[INFO] 16 warnings
+[INFO] -------------------------------------------------------------
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR :
+[INFO] -------------------------------------------------------------
+##[error][ERROR] /home/runner/work/OpenMetadata/OpenMetadata/openmetadata-service/src/test/java/org/openmetadata/service/jdbi3/IncidentGroupQueriesSqlTest.java:[39,37] package org.testcontainers.containers does not exist
 ```
 
 </details>
 
 ### Integration Tests - MySQL + Elasticsearch (`.github/workflows/integration-tests-mysql-elasticsearch.yml`)
 
-- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/45446722085 — dark (conclusion: `failure`), 2026-11-24 17:16 UTC
+- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/45517666072 — dark (conclusion: `failure`), 2026-11-25 00:23 UTC
 - Dark since: 2026-11-23 14:59 UTC (first run of the current streak)
-- Job / step: `Integration Test Lane (parallel)` → `Run Integration Tests (MySQL + Elasticsearch)`
-- Likely cause: [ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+- Job / step: `Build Integration Test Runtime` → `Build and Bundle Integration Test Runtime`
+- Likely cause: cannot find symbol (openmetadata-service/src/test/java/org/openmetadata/service/jdbi3/IncidentGroupTrendSqlTest.java:51)
 
 <details><summary>End of the job log</summary>
 
 ```
-[ERROR] -> [Help 1]
-[ERROR]
-[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
-[ERROR] Re-run Maven using the -X switch to enable full debug logging.
-[ERROR]
-[ERROR] For more information about the errors and possible solutions, please read the following articles:
-[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
-##[error]Process completed with exit code 1.
+##[warning][WARNING] /home/runner/work/OpenMetadata/OpenMetadata/openmetadata-service/src/test/java/org/openmetadata/service/apps/scheduler/OmAppJobListenerTest.java:[50,16] sun.misc.Unsafe is internal proprietary API a…
+##[warning][WARNING] /home/runner/work/OpenMetadata/OpenMetadata/openmetadata-service/src/test/java/org/openmetadata/service/resources/apps/AppResourceRetryQueueTest.java:[49,16] sun.misc.Unsafe is internal proprietary …
+[INFO] 16 warnings
+[INFO] -------------------------------------------------------------
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR :
+[INFO] -------------------------------------------------------------
+##[error][ERROR] /home/runner/work/OpenMetadata/OpenMetadata/openmetadata-service/src/test/java/org/openmetadata/service/jdbi3/IncidentGroupQueriesSqlTest.java:[39,37] package org.testcontainers.containers does not exist
 ```
 
 </details>
 
 ### Integration Tests - PostgreSQL + OpenSearch (`.github/workflows/integration-tests-postgres-opensearch.yml`)
 
-- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/45446722190 — dark (conclusion: `failure`), 2026-11-24 17:16 UTC
+- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/45517666084 — dark (conclusion: `failure`), 2026-11-25 00:23 UTC
 - Dark since: 2026-11-23 14:59 UTC (first run of the current streak)
-- Job / step: `Integration Test Lane (parallel)` → `Run Integration Tests (PostgreSQL + OpenSearch)`
-- Likely cause: [ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+- Job / step: `Build Integration Test Runtime` → `Build and Bundle Integration Test Runtime`
+- Likely cause: cannot find symbol (openmetadata-service/src/test/java/org/openmetadata/service/jdbi3/IncidentGroupTrendSqlTest.java:51)
 
 <details><summary>End of the job log</summary>
 
 ```
-[ERROR] -> [Help 1]
-[ERROR]
-[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
-[ERROR] Re-run Maven using the -X switch to enable full debug logging.
-[ERROR]
-[ERROR] For more information about the errors and possible solutions, please read the following articles:
-[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
-##[error]Process completed with exit code 1.
-```
-
-</details>
-
-### Maven Collate Tests (`.github/workflows/maven-build-collate.yml`)
-
-- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/45456127565 — dark (conclusion: `failure`), 2026-11-24 18:07 UTC
-- Dark since: 2026-11-23 16:56 UTC (first run of the current streak)
-- Job / step: `maven-collate-ci` → `Trigger Collate build & wait`
-- Likely cause: Collate run did not succeed: https://github.com/open-metadata/openmetadata-collate/actions/runs/45456149720
-
-<details><summary>End of the job log</summary>
-
-```
-Secret source: Actions
-Cache mode: write
-Prepare workflow directory
-Prepare all required actions
-Complete job name: maven-collate-ci
-Collate run: https://github.com/open-metadata/openmetadata-collate/actions/runs/45456149720
-failed to get run: HTTP 404: Not Found (https://api.github.com/repos/open-metadata/openmetadata-collate/actions/runs/45456149720?exclude_pull_requests=true)
-##[error]Collate run did not succeed: https://github.com/open-metadata/openmetadata-collate/actions/runs/45456149720
+##[warning][WARNING] /home/runner/work/OpenMetadata/OpenMetadata/openmetadata-service/src/test/java/org/openmetadata/service/apps/scheduler/OmAppJobListenerTest.java:[50,16] sun.misc.Unsafe is internal proprietary API a…
+##[warning][WARNING] /home/runner/work/OpenMetadata/OpenMetadata/openmetadata-service/src/test/java/org/openmetadata/service/resources/apps/AppResourceRetryQueueTest.java:[49,16] sun.misc.Unsafe is internal proprietary …
+[INFO] 16 warnings
+[INFO] -------------------------------------------------------------
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR :
+[INFO] -------------------------------------------------------------
+##[error][ERROR] /home/runner/work/OpenMetadata/OpenMetadata/openmetadata-service/src/test/java/org/openmetadata/service/jdbi3/IncidentGroupQueriesSqlTest.java:[39,37] package org.testcontainers.containers does not exist
 ```
 
 </details>
 
 ### Populate Playwright CI caches (`.github/workflows/populate-playwright-caches.yml`)
 
-- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/45457869721 — dark (conclusion: `failure`), 2026-11-24 18:17 UTC
+- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/45517667049 — dark (conclusion: `failure`), 2026-11-25 00:23 UTC
 - Dark since: 2026-11-24 10:17 UTC (first run of the current streak)
-- Job / step: `warm-fixture / plan-playwright` → `Verify browser helper behavior`
-- Likely cause: Error: Cannot find module '/workspace/openmetadata-ui/src/main/resources/ui/node_modules/playwright-core/lib/generated/storageScriptSource.js'
+- Job / step: `warm-fixture / build` → `Build with Maven`
+- Likely cause: cannot find symbol (openmetadata-service/src/test/java/org/openmetadata/service/jdbi3/IncidentGroupTrendSqlTest.java:51)
 
 <details><summary>End of the job log</summary>
 
 ```
-  53 | } = require('../../scripts/patch-playwright-indexeddb.cjs');
-> 54 | const installedStorageSource: string = require(join(
-     |                                        ^
-  55 |   dirname(require.resolve('playwright-core/package.json')),
-  56 |   'lib/generated/storageScriptSource.js'
-  57 | )).source;
-    at Object.<anonymous> (/workspace/openmetadata-ui/src/main/resources/ui/playwright/browser-tests/indexedDbStorage.spec.ts:54:40)
+##[warning][WARNING] /home/runner/work/OpenMetadata/OpenMetadata/openmetadata-service/src/test/java/org/openmetadata/service/apps/scheduler/OmAppJobListenerTest.java:[50,16] sun.misc.Unsafe is internal proprietary API a…
+##[warning][WARNING] /home/runner/work/OpenMetadata/OpenMetadata/openmetadata-service/src/test/java/org/openmetadata/service/resources/apps/AppResourceRetryQueueTest.java:[49,16] sun.misc.Unsafe is internal proprietary …
+[INFO] 16 warnings
+[INFO] -------------------------------------------------------------
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR :
+[INFO] -------------------------------------------------------------
+##[error][ERROR] /home/runner/work/OpenMetadata/OpenMetadata/openmetadata-service/src/test/java/org/openmetadata/service/jdbi3/IncidentGroupQueriesSqlTest.java:[39,37] package org.testcontainers.containers does not exist
+```
+
+</details>
+
+### OpenMetadata Service Unit Tests (`.github/workflows/openmetadata-service-unit-tests.yml`)
+
+- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/45517666163 — dark (conclusion: `failure`), 2026-11-25 00:23 UTC
+- Dark since: 2026-11-24 22:56 UTC (first run of the current streak)
+- Job / step: `openmetadata-service-unit-tests` → `Run openmetadata-service unit tests`
+- Likely cause: cannot find symbol (openmetadata-service/src/test/java/org/openmetadata/service/jdbi3/IncidentGroupTrendSqlTest.java:51)
+
+<details><summary>End of the job log</summary>
+
+```
+##[warning][WARNING] /home/runner/work/OpenMetadata/OpenMetadata/openmetadata-service/src/test/java/org/openmetadata/service/apps/scheduler/OmAppJobListenerTest.java:[50,16] sun.misc.Unsafe is internal proprietary API a…
+##[warning][WARNING] /home/runner/work/OpenMetadata/OpenMetadata/openmetadata-service/src/test/java/org/openmetadata/service/resources/apps/AppResourceRetryQueueTest.java:[49,16] sun.misc.Unsafe is internal proprietary …
+[INFO] 16 warnings
+[INFO] -------------------------------------------------------------
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR :
+[INFO] -------------------------------------------------------------
+##[error][ERROR] /home/runner/work/OpenMetadata/OpenMetadata/openmetadata-service/src/test/java/org/openmetadata/service/jdbi3/IncidentGroupQueriesSqlTest.java:[39,37] package org.testcontainers.containers does not exist
+```
+
+</details>
+
+### Publish Package to Maven Central Repository (`.github/workflows/publish-maven-package.yml`)
+
+- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/45517665946 — dark (conclusion: `failure`), 2026-11-25 00:23 UTC
+- Dark since: 2026-11-24 22:56 UTC (first run of the current streak)
+- Job / step: `publish-maven-packages` → `Build openmetadata-service`
+- Likely cause: cannot find symbol (openmetadata-service/src/test/java/org/openmetadata/service/jdbi3/IncidentGroupTrendSqlTest.java:51)
+
+<details><summary>End of the job log</summary>
+
+```
+##[warning][WARNING] /home/runner/work/OpenMetadata/OpenMetadata/openmetadata-service/src/test/java/org/openmetadata/service/apps/scheduler/OmAppJobListenerTest.java:[50,16] sun.misc.Unsafe is internal proprietary API a…
+##[warning][WARNING] /home/runner/work/OpenMetadata/OpenMetadata/openmetadata-service/src/test/java/org/openmetadata/service/resources/apps/AppResourceRetryQueueTest.java:[49,16] sun.misc.Unsafe is internal proprietary …
+[INFO] 16 warnings
+[INFO] -------------------------------------------------------------
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR :
+[INFO] -------------------------------------------------------------
+##[error][ERROR] /home/runner/work/OpenMetadata/OpenMetadata/openmetadata-service/src/test/java/org/openmetadata/service/jdbi3/IncidentGroupQueriesSqlTest.java:[39,37] package org.testcontainers.containers does not exist
+```
+
+</details>
+
+### Java Checkstyle (`.github/workflows/java-checkstyle.yml`)
+
+- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/45517666156 — dark (conclusion: `failure`), 2026-11-25 00:23 UTC
+- Dark since: 2026-11-25 00:23 UTC (first run of the current streak)
+- Job / step: `java-checkstyle` → `Java checkstyle failed`
+- Likely cause: Run 'mvn spotless:apply' in the repository root and commit the changes. The job summary lists the files.
+
+<details><summary>End of the job log</summary>
+
+```
+[INFO] OpenMetadata Java Client ........................... SUCCESS [  0.171 s]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  02:05 min
+[INFO] Finished at: 2026-11-25T00:25:44Z
+[INFO] ------------------------------------------------------------------------
 ##[error]Process completed with exit code 1.
 ```
 

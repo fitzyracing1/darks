@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/rocketride-org/rocketride-server/issues/new
-- **Stars:** 19986 · **Generated:** 2026-11-24T18:40:09.799Z
+- **Stars:** 19987 · **Generated:** 2026-11-25T00:55:54.614Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -42,10 +42,10 @@ libc++abi: terminating due to uncaught exception of type pybind11::attribute_err
 
 ### CI (`.github/workflows/ci.yml`)
 
-- Latest run on `develop`: https://github.com/rocketride-org/rocketride-server/actions/runs/45450262483 — dark (conclusion: `failure`), 2026-11-24 17:35 UTC
+- Latest run on `develop`: https://github.com/rocketride-org/rocketride-server/actions/runs/45453292033 — dark (conclusion: `failure`), 2026-11-24 17:52 UTC
 - Dark since: 2026-11-24 07:40 UTC (first run of the current streak)
 - Job / step: `Build / Windows Server 2022` → `Test`
-- Likely cause: Tests:       2 failed, 12 skipped, 498 passed, 512 total
+- Likely cause: Tests:       1 failed, 12 skipped, 499 passed, 512 total
 
 <details><summary>End of the job log</summary>
 

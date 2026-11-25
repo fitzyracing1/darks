@@ -4,22 +4,20 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/headroomlabs-ai/headroom/issues/new
-- **Stars:** 80750 · **Generated:** 2026-11-24T18:40:09.799Z
+- **Stars:** 80780 · **Generated:** 2026-11-25T00:55:54.614Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 2 workflows dark on main ("PR Governance", "CI")
+CI: "PR Governance" workflow getting cancelled on main since 2026-11-17
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
-
-### PR Governance (`.github/workflows/pr-health.yml`)
+Hi! The **PR Governance** workflow (`.github/workflows/pr-health.yml`) on `main` has been getting cancelled since 2026-11-17. Here is what I saw, in case it's useful:
 
 - Latest run on `main`: https://github.com/headroomlabs-ai/headroom/actions/runs/45414272930 — dark (conclusion: `cancelled`), 2026-11-24 14:27 UTC
 - Dark since: 2026-11-17 14:26 UTC (first run of the current streak)
@@ -40,12 +38,6 @@ https://github.com/headroomlabs-ai/headroom/pull/4917
 ```
 
 </details>
-
-### CI (`.github/workflows/ci.yml`)
-
-- Latest run on `main`: https://github.com/headroomlabs-ai/headroom/actions/runs/45453059974 — dark (conclusion: `cancelled`), 2026-11-24 17:50 UTC
-- Dark since: 2026-11-24 17:50 UTC (first run of the current streak)
-- Likely cause: run cancelled
 
 If this is already known or expected, feel free to close. Thanks for maintaining headroom!
 

@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/iamkun/dayjs/issues/new
-- **Stars:** 48642 · **Generated:** 2026-11-24T18:40:09.799Z
+- **Stars:** 48642 · **Generated:** 2026-11-25T00:55:54.614Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title

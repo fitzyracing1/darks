@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/public-apis/public-apis/issues/new
-- **Stars:** 501178 · **Generated:** 2026-11-24T18:40:09.799Z
+- **Stars:** 501226 · **Generated:** 2026-11-25T00:55:54.614Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -42,7 +42,7 @@ Version 3.8 was not found in the local cache
 
 ### Validate links (`.github/workflows/validate_links.yml`)
 
-- Latest run on `master`: https://github.com/public-apis/public-apis/actions/runs/45295833667 — dark (conclusion: `failure`), 2026-11-24 00:16 UTC
+- Latest run on `master`: https://github.com/public-apis/public-apis/actions/runs/45516971875 — dark (conclusion: `failure`), 2026-11-25 00:17 UTC
 - Dark since: 2026-10-03 00:29 UTC (first run of the current streak)
 - Job / step: `Check all links are working` → `Set up Python`
 - Likely cause: Version 3.8 with arch x64 not found
@@ -54,9 +54,9 @@ Reset branch 'master'
 branch 'master' set up to track 'origin/master'.
 '9fb3bdb62643400aaebee03a2ecce0cd1ec934eb'
 Version 3.8 was not found in the local cache
-(node:2358) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+(node:2150) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
 (Use `node --trace-deprecation ...` to show where the warning was created)
-(node:2358) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabili…
+(node:2150) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabili…
 ##[error]Version 3.8 with arch x64 not found
 ```
 

@@ -4,23 +4,31 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/morluto/rea/issues/new
-- **Stars:** 476835 · **Generated:** 2026-11-24T18:40:09.799Z
+- **Stars:** 477124 · **Generated:** 2026-11-25T00:55:54.614Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: "CodeQL production" workflow getting cancelled on main since 2026-11-24
+CI: 2 workflows dark on main ("CodeQL production", "CI")
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! The **CodeQL production** workflow (`.github/workflows/codeql.yml`) on `main` has been getting cancelled since 2026-11-24. Here is what I saw, in case it's useful:
+Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
 
-- Latest run on `main`: https://github.com/morluto/rea/actions/runs/45452635834 — dark (conclusion: `cancelled`), 2026-11-24 17:48 UTC
+### CodeQL production (`.github/workflows/codeql.yml`)
+
+- Latest run on `main`: https://github.com/morluto/rea/actions/runs/45520204967 — dark (conclusion: `cancelled`), 2026-11-25 00:42 UTC
 - Dark since: 2026-11-24 17:48 UTC (first run of the current streak)
+- Likely cause: run cancelled
+
+### CI (`.github/workflows/ci.yml`)
+
+- Latest run on `main`: https://github.com/morluto/rea/actions/runs/45519748993 — dark (conclusion: `cancelled`), 2026-11-25 00:39 UTC
+- Dark since: 2026-11-25 00:39 UTC (first run of the current streak)
 - Likely cause: run cancelled
 
 If this is already known or expected, feel free to close. Thanks for maintaining rea!

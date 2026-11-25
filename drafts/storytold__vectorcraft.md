@@ -4,14 +4,14 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/storytold/vectorcraft/issues/new
-- **Stars:** 12062 · **Generated:** 2026-11-24T18:40:09.799Z
+- **Stars:** 12069 · **Generated:** 2026-11-25T00:55:54.614Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 4 workflows dark on main ("FreeBSD", "SonarCloud", "Release", +1 more)
+CI: 4 workflows dark on main ("FreeBSD", "Release", "Windows ARM64", +1 more)
 <!-- END TITLE -->
 
 ## Body
@@ -40,12 +40,6 @@ warning: `vectorcraft-web` (manifest) generated 1 warning
 ```
 
 </details>
-
-### SonarCloud (`.github/workflows/sonarcloud.yml`)
-
-- Latest run on `main`: https://github.com/storytold/vectorcraft/actions/runs/45453935450 — dark (conclusion: `cancelled`), 2026-11-24 17:55 UTC
-- Dark since: 2026-11-24 01:25 UTC (first run of the current streak)
-- Likely cause: run cancelled
 
 ### Release (`.github/workflows/release.yml`)
 
@@ -86,6 +80,28 @@ packaging/freebsd/package.sh: line 52:  9696 Killed                     ( cd "$R
    Compiling egui_extras v0.37.0 (https://github.com/storytold/egui.git?rev=f5025284445ea19c35f746d96fc0b75468b3f560#f5025284)
    Compiling vectorcraft-mcp v0.24.1 (D:\a\vectorcraft\vectorcraft\crates\mcp)
    Compiling vectorcraft-cli v0.24.1 (D:\a\vectorcraft\vectorcraft\apps\vectorcraft-cli)
+##[error]The operation was canceled.
+```
+
+</details>
+
+### CI (`.github/workflows/ci.yml`)
+
+- Latest run on `main`: https://github.com/storytold/vectorcraft/actions/runs/45506123572 — dark (conclusion: `cancelled`), 2026-11-24 23:00 UTC
+- Dark since: 2026-11-24 23:00 UTC (first run of the current streak)
+- Job / step: `gate / cache warm (ubuntu-24.04)` → `Gate`
+- Likely cause: The job has exceeded the maximum execution time of 1h30m0s
+
+<details><summary>End of the job log</summary>
+
+```
+warning: patch `egui_system_font_provider v0.37.0 (https://github.com/storytold/egui.git?rev=f5025284445ea19c35f746d96fc0b75468b3f560#f5025284)` was not used in the crate graph
+help: Check that the patched package version and available features are compatible
+      with the dependency requirements. If the patch has a different version from
+      what is locked in the Cargo.lock file, run `cargo update` to use the new
+      version. This may also occur with an optional dependency that is not enabled.
+warning: vectorcraft-text@0.24.1: web build won't fetch: Cairo Regular, Tajawal ExtraLight, Tajawal Light, Tajawal Regular, Tajawal Medium, Tajawal Bold, Tajawal ExtraBold, Tajawal Black, Almarai Light, Almarai Regular,…
+   Compiling vectorcraft-ui-egui v0.24.1 (/home/runner/work/vectorcraft/vectorcraft/crates/ui-egui)
 ##[error]The operation was canceled.
 ```
 

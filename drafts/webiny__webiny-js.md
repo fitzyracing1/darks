@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/webiny/webiny-js/issues/new
-- **Stars:** 8056 · **Generated:** 2026-11-24T18:40:09.799Z
+- **Stars:** 8056 · **Generated:** 2026-11-25T00:55:54.614Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -64,7 +64,7 @@ Waiting 11 seconds before trying again
 
 ### Push (`.github/workflows/push.yml`)
 
-- Latest run on `next`: https://github.com/webiny/webiny-js/actions/runs/45401366967 — dark (conclusion: `failure`), 2026-11-24 13:14 UTC
+- Latest run on `next`: https://github.com/webiny/webiny-js/actions/runs/45459711553 — dark (conclusion: `failure`), 2026-11-24 18:27 UTC
 - Dark since: 2026-11-20 14:34 UTC (first run of the current streak)
 - Likely cause: no cause found in annotations
 

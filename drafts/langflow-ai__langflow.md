@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/langflow-ai/langflow/issues/new
-- **Stars:** 156909 · **Generated:** 2026-11-24T18:40:09.799Z
+- **Stars:** 156911 · **Generated:** 2026-11-25T00:55:54.614Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -42,7 +42,7 @@ Creating Pages deployment with payload:
 
 ### GP Download Translations (`.github/workflows/gp-download.yml`)
 
-- Latest run on `main`: https://github.com/langflow-ai/langflow/actions/runs/45285050604 — dark (conclusion: `failure`), 2026-11-23 23:01 UTC
+- Latest run on `main`: https://github.com/langflow-ai/langflow/actions/runs/45506169249 — dark (conclusion: `failure`), 2026-11-24 23:00 UTC
 - Dark since: 2026-11-16 23:01 UTC (first run of the current streak)
 - Job / step: `Download translations from Globalization Pipeline` → `Download translations from GP`
 - Likely cause: FAILED languages: ['fr', 'ja', 'es', 'de', 'pt', 'zh-Hans']
@@ -51,9 +51,9 @@ Creating Pages deployment with payload:
 
 ```
 Downloading 'de' translations...
-  Error downloading 'de': 401 Client Error: Unauthorized for url: https://g11n-pipeline-api.straker.global/translate/rest/langflow-test/v2/bundles/langflow-ui/de
+  Error downloading 'de': 403 Client Error: Forbidden for url: https://g11n-pipeline-api.straker.global/translate/rest/langflow-test/v2/bundles/langflow-ui/de
 Downloading 'pt' translations...
-  Error downloading 'pt': 401 Client Error: Unauthorized for url: https://g11n-pipeline-api.straker.global/translate/rest/langflow-test/v2/bundles/langflow-ui/pt
+  Error downloading 'pt': 403 Client Error: Forbidden for url: https://g11n-pipeline-api.straker.global/translate/rest/langflow-test/v2/bundles/langflow-ui/pt
 Downloading 'zh-Hans' translations...
   Error downloading 'zh-Hans': 401 Client Error: Unauthorized for url: https://g11n-pipeline-api.straker.global/translate/rest/langflow-test/v2/bundles/langflow-ui/zh-Hans
 FAILED languages: ['fr', 'ja', 'es', 'de', 'pt', 'zh-Hans']

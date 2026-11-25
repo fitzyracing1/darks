@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/xberg-io/xberg/issues/new
-- **Stars:** 9615 · **Generated:** 2026-11-24T18:40:09.799Z
+- **Stars:** 9615 · **Generated:** 2026-11-25T00:55:54.614Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** cancelled by a concurrency group — likely noise
 
@@ -21,7 +21,7 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### CI E2E (`.github/workflows/ci-e2e.yaml`)
 
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/45289705661 — dark (conclusion: `failure`), 2026-11-23 23:32 UTC
+- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/45392191209 — dark (conclusion: `failure`), 2026-11-24 12:18 UTC
 - Dark since: 2026-11-20 07:25 UTC (first run of the current streak)
 - Job / step: `E2E (swift)` → `Run e2e tests (swift, instrumented)`
 - Likely cause: [swift:e2e] ERROR task failed
