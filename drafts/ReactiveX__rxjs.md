@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/ReactiveX/rxjs/issues/new
-- **Stars:** 31717 · **Generated:** 2026-11-25T00:55:54.614Z
+- **Stars:** 31717 · **Generated:** 2026-11-25T06:46:34.527Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -20,7 +20,7 @@ Hi! A few workflows on `master` have been dark recently. Details below, in case 
 
 ### Extended property fuzzing (`.github/workflows/fuzz.yml`)
 
-- Latest run on `master`: https://github.com/ReactiveX/rxjs/actions/runs/44252186161 — dark (conclusion: `failure`), 2026-11-18 06:33 UTC
+- Latest run on `master`: https://github.com/ReactiveX/rxjs/actions/runs/45561676502 — dark (conclusion: `failure`), 2026-11-25 06:35 UTC
 - Dark since: 2026-09-16 06:45 UTC (first run of the current streak)
 - Job / step: `Observable and release-policy properties` → `Run extended properties; fast-check reports the reproduction seed on failure`
 - Likely cause: Could not find 'scripts/release/authorize-stage.test.mjs, scripts/release/install-pinned-npm.test.mjs, scripts/release/release-policy.test.mjs, scripts/release/release-candidate.test.mjs, scripts/release/stage-release.t…
@@ -29,12 +29,12 @@ Hi! A few workflows on `master` have been dark recently. Details below, in case 
 <details><summary>End of the job log</summary>
 
 ```
- ✓ src/lifecycle.fuzz.spec.ts (1 test) 1003ms
-     ✓ preserves sharing, ref-count, restart, terminal, abort, and teardown invariants  1002ms
+ ✓ src/lifecycle.fuzz.spec.ts (1 test) 706ms
+     ✓ preserves sharing, ref-count, restart, terminal, abort, and teardown invariants  704ms
  Test Files  1 passed (1)
       Tests  1 passed (1)
-   Start at  06:33:44
-   Duration  1.26s (transform 92ms, setup 0ms, import 121ms, tests 1.00s, environment 0ms)
+   Start at  06:35:28
+   Duration  920ms (transform 87ms, setup 0ms, import 112ms, tests 706ms, environment 0ms)
 Could not find 'scripts/release/authorize-stage.test.mjs, scripts/release/install-pinned-npm.test.mjs, scripts/release/release-policy.test.mjs, scripts/release/release-candidate.test.mjs, scripts/release/stage-release.t…
 ##[error]Process completed with exit code 1.
 ```

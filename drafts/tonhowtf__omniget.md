@@ -4,13 +4,13 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/tonhowtf/omniget/issues/new
-- **Stars:** 14644 · **Generated:** 2026-11-25T00:55:54.614Z
+- **Stars:** 14656 · **Generated:** 2026-11-25T06:46:34.527Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 3 workflows dark on main ("Security", "dead-code", "Scorecard")
+CI: 2 workflows dark on main ("Security", "dead-code")
 <!-- END TITLE -->
 
 ## Body
@@ -58,28 +58,6 @@ Configuration hints (1)
 . (root)    knip.json  Add entry and/or refine project files (898 unused files)
  ELIFECYCLE  Command failed with exit code 2.
 ##[error]Process completed with exit code 2.
-```
-
-</details>
-
-### Scorecard (`.github/workflows/scorecard.yml`)
-
-- Latest run on `main`: https://github.com/tonhowtf/omniget/actions/runs/45424267999 — dark (conclusion: `failure`), 2026-11-24 15:20 UTC
-- Dark since: 2026-11-24 13:42 UTC (first run of the current streak)
-- Job / step: `OpenSSF Scorecard` → `Pull ghcr.io/ossf/scorecard-action:v2.6.0`
-- Likely cause: Docker pull failed with exit code 1
-
-<details><summary>End of the job log</summary>
-
-```
-##[command]/usr/bin/docker pull ghcr.io/ossf/scorecard-action:v2.6.0
-v2.6.0: Pulling from ossf/scorecard-action
-failed to copy: httpReadSeeker: failed open: content at https://ghcr.io/v2/ossf/scorecard-action/manifests/sha256:7a62770a1e88f3bcaed20cbf9a57206c6531eb77653e415ca3c3c6e8d140877b not found: not found
-##[warning]Docker pull failed with exit code 1, back off 4.356 seconds before retry.
-##[command]/usr/bin/docker pull ghcr.io/ossf/scorecard-action:v2.6.0
-v2.6.0: Pulling from ossf/scorecard-action
-failed to copy: httpReadSeeker: failed open: content at https://ghcr.io/v2/ossf/scorecard-action/manifests/sha256:7a62770a1e88f3bcaed20cbf9a57206c6531eb77653e415ca3c3c6e8d140877b not found: not found
-##[error]Docker pull failed with exit code 1
 ```
 
 </details>

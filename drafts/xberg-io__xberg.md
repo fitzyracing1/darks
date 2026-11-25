@@ -4,9 +4,8 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/xberg-io/xberg/issues/new
-- **Stars:** 9615 · **Generated:** 2026-11-25T00:55:54.614Z
+- **Stars:** 9617 · **Generated:** 2026-11-25T06:46:34.527Z
 - Nothing in this file has been sent anywhere.
-- **Note for Joshua:** cancelled by a concurrency group — likely noise
 
 ## Suggested title
 
@@ -43,22 +42,22 @@ ERROR Command failed: cd packages/swift && swift test (env: LD_LIBRARY_PATH)
 
 ### CI Rust (`.github/workflows/ci-rust.yaml`)
 
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/45392191742 — dark (conclusion: `cancelled`), 2026-11-24 12:18 UTC
+- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/45402101255 — dark (conclusion: `failure`), 2026-11-24 13:18 UTC
 - Dark since: 2026-11-20 07:25 UTC (first run of the current streak)
-- Job / step: `Rust tract-only (no-ORT)` → `Run ./.github/actions/qualify-ocr-orientation`
-- Likely cause: Canceling since a higher priority waiting request for ci-rust-refs/heads/main exists
+- Job / step: `xberg-cli feature leg (paddle-ocr)` → `cargo clippy -p xberg-cli --features paddle-ocr`
+- Likely cause: unused variable: 'options' (crates/xberg-cli/src/commands/cache.rs:736)
 
 <details><summary>End of the job log</summary>
 
 ```
-test cached_context_changed_during_extraction_is_not_written ... ok
-test cached_engine_bytes_recover_when_osd_is_installed_without_changing_the_configuration ... ok
-test cached_file_recovers_when_osd_is_installed_without_changing_the_configuration ... ok
-test caller_psm1_word_elements_on_an_upside_down_page_carry_no_internal_marker ... ok
-test explicit_language_block_recovers_the_counterclockwise_source_grid ... ok
-test explicit_language_block_recovers_the_upside_down_source_grid ... ok
-test explicit_language_block_recovers_without_classifier_features ... ok
-##[error]The operation was canceled.
+    Checking org v0.3.1
+    Checking similar v3.2.1
+    Checking hex v0.4.3
+    Checking jotdown v0.10.0
+   Compiling xberg-cli v1.5.2 (/home/runner/work/xberg/xberg/crates/xberg-cli)
+    Checking clap_complete v4.6.12
+error: unused variable: `options`
+##[error]   --> crates/xberg-cli/src/commands/cache.rs:736:5
 ```
 
 </details>

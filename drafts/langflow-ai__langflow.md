@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/langflow-ai/langflow/issues/new
-- **Stars:** 156911 · **Generated:** 2026-11-25T00:55:54.614Z
+- **Stars:** 156921 · **Generated:** 2026-11-25T06:46:34.527Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -64,25 +64,9 @@ FAILED languages: ['fr', 'ja', 'es', 'de', 'pt', 'zh-Hans']
 
 ### Nightly Build (`.github/workflows/nightly_build.yml`)
 
-- Latest run on `main`: https://github.com/langflow-ai/langflow/actions/runs/45296409620 — dark (conclusion: `failure`), 2026-11-24 00:20 UTC
+- Latest run on `main`: https://github.com/langflow-ai/langflow/actions/runs/45517586599 — dark (conclusion: `failure`), 2026-11-25 00:22 UTC
 - Dark since: 2026-11-18 00:22 UTC (first run of the current streak)
-- Job / step: `create-nightly-tag` → `Commit tag`
-- Likely cause: Tag push failed. Check if the tag already exists. Exiting the workflow.
-
-<details><summary>End of the job log</summary>
-
-```
-+ git push origin v1.14.0.dev37
-To https://github.com/langflow-ai/langflow
- ! [remote rejected]       v1.14.0.dev37 -> v1.14.0.dev37 (Unable to determine if workflow can be created or updated due to timeout; `workflows` scope may be required.)
-error: failed to push some refs to 'https://github.com/langflow-ai/langflow'
-+ echo 'Tag push failed. Check if the tag already exists. Exiting the workflow.'
-Tag push failed. Check if the tag already exists. Exiting the workflow.
-+ exit 1
-##[error]Process completed with exit code 1.
-```
-
-</details>
+- Likely cause: no cause found in annotations
 
 If this is already known or expected, feel free to close. Thanks for maintaining langflow!
 

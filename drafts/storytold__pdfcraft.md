@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/storytold/pdfcraft/issues/new
-- **Stars:** 21687 · **Generated:** 2026-11-25T00:55:54.614Z
+- **Stars:** 21708 · **Generated:** 2026-11-25T06:46:34.527Z
 - Nothing in this file has been sent anywhere.
 
 ## Skipped: upstream already tracking
@@ -26,7 +26,7 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### Nightly macOS (`.github/workflows/nightly-macos.yml`)
 
-- Latest run on `main`: https://github.com/storytold/pdfcraft/actions/runs/45314341301 — dark (conclusion: `failure`), 2026-11-24 02:42 UTC
+- Latest run on `main`: https://github.com/storytold/pdfcraft/actions/runs/45534836355 — dark (conclusion: `failure`), 2026-11-25 02:42 UTC
 - Dark since: 2026-11-23 02:42 UTC (first run of the current streak)
 - Job / step: `gate / gate (macos-latest)` → `Gate`
 - Likely cause: warning: build failed, waiting for other jobs to finish...

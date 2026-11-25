@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/HeyPuter/everything/issues/new
-- **Stars:** 9496 · **Generated:** 2026-11-25T00:55:54.614Z
+- **Stars:** 9517 · **Generated:** 2026-11-25T06:46:34.527Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -18,21 +18,21 @@ CI: "Browser tests" workflow failing on main since 2026-11-24
 <!-- BEGIN BODY -->
 Hi! The **Browser tests** workflow (`.github/workflows/e2e.yml`) on `main` has been failing since 2026-11-24. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/HeyPuter/everything/actions/runs/45338730565 — dark (conclusion: `failure`), 2026-11-24 06:12 UTC
+- Latest run on `main`: https://github.com/HeyPuter/everything/actions/runs/45558893254 — dark (conclusion: `failure`), 2026-11-25 06:12 UTC
 - Dark since: 2026-11-24 06:12 UTC (first run of the current streak)
-- Job / step: `documents (4/8)` → `Run npm run test:browser -- --shard=4/8`
-- Likely cause: 26 failed
+- Job / step: `parametric` → `Run npm run test:e2e -- --shard=1/1`
+- Likely cause: [desktop] › tests/e2e/assistant.spec.ts:78:1 › files go with a message: picked, pasted or dropped, and refused when the assistant cannot read them
 
 <details><summary>End of the job log</summary>
 
 ```
-    tests/browser/manual-break-metrics.spec.js:8:27 › native manual-break metrics and editing, compatibility 14
-    tests/browser/manual-break-metrics.spec.js:8:27 › native manual-break metrics and editing, compatibility 15
-    tests/browser/merged-ending-rows.spec.js:7:27 › matches native merged ending rows in compatibility 14
-    tests/browser/merged-ending-rows.spec.js:7:27 › matches native merged ending rows in compatibility 15
-    tests/browser/metafile-fonts.spec.js:23:1 › missing EMF fonts are reported once without disabling editing or changing the package
-  14 skipped
-  374 passed (21.3m)
+    [mobile] › tests/e2e/mobile.spec.ts:356:1 › a small phone shows the equations table, Delete buttons included, without scrolling sideways
+  3 flaky
+    [desktop] › tests/e2e/chrome.spec.ts:240:1 › a value under a field's minimum says what is allowed in plain words
+    [desktop] › tests/e2e/chrome.spec.ts:968:1 › selected rows, chosen tabs and pressed buttons stand out in high contrast mode
+    [desktop] › tests/e2e/sketch.spec.ts:605:3 › sketching › a collapsed mirror axis gives feedback without adding geometry or undo history
+  1 skipped
+  677 passed (17.3m)
 ##[error]Process completed with exit code 1.
 ```
 

@@ -4,14 +4,14 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/storytold/photocraft/issues/new
-- **Stars:** 81336 · **Generated:** 2026-11-25T00:55:54.614Z
+- **Stars:** 81384 · **Generated:** 2026-11-25T06:46:34.527Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 3 workflows dark on main ("FreeBSD", "Perf (nightly)", "Release")
+CI: 2 workflows dark on main ("FreeBSD", "Perf (nightly)")
 <!-- END TITLE -->
 
 ## Body
@@ -43,7 +43,7 @@ test move_shift_diagonal_tests::shift_drag_locks_to_the_eight_directions_and_alt
 
 ### Perf (nightly) (`.github/workflows/perf-nightly.yml`)
 
-- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/45319897379 — dark (conclusion: `cancelled`), 2026-11-24 03:29 UTC
+- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/45540536281 — dark (conclusion: `cancelled`), 2026-11-25 03:31 UTC
 - Dark since: 2026-11-18 03:29 UTC (first run of the current streak)
 - Job / step: `perf (macOS, Apple GPU)` → `Run benchmarks`
 - Likely cause: The job has exceeded the maximum execution time of 2h0m0s
@@ -51,36 +51,14 @@ test move_shift_diagonal_tests::shift_drag_locks_to_the_eight_directions_and_alt
 <details><summary>End of the job log</summary>
 
 ```
+   Compiling photocraft-engine v0.23.1 (/Users/runner/work/photocraft/photocraft/crates/engine)
+   Compiling photocraft-gpu v0.23.1 (/Users/runner/work/photocraft/photocraft/crates/gpu)
    Compiling kittest v0.5.0
    Compiling memory-stats v1.2.0
    Compiling open v5.4.5
-   Compiling egui_kittest v0.37.0 (https://github.com/storytold/egui.git?rev=f5025284445ea19c35f746d96fc0b75468b3f560#f5025284)
+   Compiling egui_kittest v0.37.0 (https://github.com/storytold/egui.git?rev=a87d00caaec947ea781657c6ff410c9838016d18#a87d00ca)
    Compiling photocraft-testkit v0.23.1 (/Users/runner/work/photocraft/photocraft/crates/testkit)
-   Compiling photocraft-engine-paint v0.23.1 (/Users/runner/work/photocraft/photocraft/crates/engine-paint)
-   Compiling photocraft-engine v0.23.1 (/Users/runner/work/photocraft/photocraft/crates/engine)
 ##[error]The operation was canceled.
-```
-
-</details>
-
-### Release (`.github/workflows/release.yml`)
-
-- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/45313300521 — dark (conclusion: `failure`), 2026-11-24 02:33 UTC
-- Dark since: 2026-11-21 02:32 UTC (first run of the current streak)
-- Job / step: `release / FreeBSD x86_64` → `Build and package`
-- Likely cause: process didn't exit successfully: '/root/.rustup/toolchains/1.100.0-x86_64-unknown-freebsd/bin/rustc --crate-name photocraft --edition=2024 apps/photocraft/src/main.rs --error-format=json --json=diagnostic-rendered-ansi…
-
-<details><summary>End of the job log</summary>
-
-```
-   Compiling quick-xml v0.42.0
-   Compiling plist v1.10.3
-   Compiling open v5.4.5
-   Compiling photocraft-tablet v0.23.1 (/home/runner/work/photocraft/photocraft/crates/tablet)
-error: could not compile `photocraft` (bin "photocraft")
-Caused by:
-  process didn't exit successfully: `/root/.rustup/toolchains/1.100.0-x86_64-unknown-freebsd/bin/rustc --crate-name photocraft --edition=2024 apps/photocraft/src/main.rs --error-format=json --json=diagnostic-rendered-an…
-##[error]Process completed with exit code 101.
 ```
 
 </details>

@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/NousResearch/hermes-agent/issues/new
-- **Stars:** 265891 · **Generated:** 2026-11-25T00:55:54.614Z
+- **Stars:** 265955 · **Generated:** 2026-11-25T06:46:34.527Z
 - Nothing in this file has been sent anywhere.
 
 ## Skipped: upstream already tracking
@@ -24,7 +24,7 @@ CI: "Deploy Site" workflow failing on main since 2026-11-24
 <!-- BEGIN BODY -->
 Hi! The **Deploy Site** workflow (`.github/workflows/deploy-site.yml`) on `main` has been failing since 2026-11-24. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/NousResearch/hermes-agent/actions/runs/45516541464 — dark (conclusion: `failure`), 2026-11-25 00:14 UTC
+- Latest run on `main`: https://github.com/NousResearch/hermes-agent/actions/runs/45542367179 — dark (conclusion: `failure`), 2026-11-25 03:47 UTC
 - Dark since: 2026-11-24 02:37 UTC (first run of the current streak)
 - Job / step: `deploy-docs` → `Deploy to GitHub Pages`
 - Likely cause: Error: No artifacts named "github-pages" were found for this workflow run. Ensure artifacts are uploaded with actions/upload-artifact@v4 or later.
@@ -32,10 +32,10 @@ Hi! The **Deploy Site** workflow (`.github/workflows/deploy-site.yml`) on `main`
 <details><summary>End of the job log</summary>
 
 ```
-Artifact github-pages has been successfully uploaded! Final size is 136430096 bytes. Artifact ID is 14979165830
-Artifact download URL: https://github.com/NousResearch/hermes-agent/actions/runs/45516541464/artifacts/14979165830
-##[end-action id=__actions_upload-pages-artifact.upload-artifact;outcome=success;conclusion=success;duration_ms=6354]
-(node:4423) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+Artifact github-pages has been successfully uploaded! Final size is 136366011 bytes. Artifact ID is 14989883116
+Artifact download URL: https://github.com/NousResearch/hermes-agent/actions/runs/45542367179/artifacts/14989883116
+##[end-action id=__actions_upload-pages-artifact.upload-artifact;outcome=success;conclusion=success;duration_ms=5937]
+(node:4424) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
 (Use `node --trace-deprecation ...` to show where the warning was created)
 Fetching artifact metadata for "github-pages" in this workflow run
 Found 0 artifact(s)

@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/webiny/webiny-js/issues/new
-- **Stars:** 8056 · **Generated:** 2026-11-25T00:55:54.614Z
+- **Stars:** 8057 · **Generated:** 2026-11-25T06:46:34.527Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -20,7 +20,7 @@ Hi! A few workflows on `next` have been dark recently. Details below, in case th
 
 ### Rebuild Global Cache ("dev" branch) (`.github/workflows/rebuildGlobalCacheDev.yml`)
 
-- Latest run on `next`: https://github.com/webiny/webiny-js/actions/runs/45323559072 — dark (conclusion: `failure`), 2026-11-24 04:02 UTC
+- Latest run on `next`: https://github.com/webiny/webiny-js/actions/runs/45544012064 — dark (conclusion: `failure`), 2026-11-25 04:02 UTC
 - Dark since: 2026-10-10 04:04 UTC (first run of the current streak)
 - Job / step: `Cache dependencies and packages` → `Run actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09`
 - Likely cause: The process '/usr/bin/git' failed with exit code 1
@@ -32,9 +32,9 @@ hint:
 hint: Disable this message with "git config set advice.defaultBranchName false"
 Initialized empty Git repository in /home/runner/work/webiny-js/webiny-js/dev/.git/
 The process '/usr/bin/git' failed with exit code 1
-Waiting 11 seconds before trying again
+Waiting 16 seconds before trying again
 The process '/usr/bin/git' failed with exit code 1
-Waiting 11 seconds before trying again
+Waiting 13 seconds before trying again
 ##[error]The process '/usr/bin/git' failed with exit code 1
 ```
 
@@ -42,9 +42,9 @@ Waiting 11 seconds before trying again
 
 ### Record E2E replay steps (`.github/workflows/recordReplayCache.yml`)
 
-- Latest run on `next`: https://github.com/webiny/webiny-js/actions/runs/45309306968 — dark (conclusion: `failure`), 2026-11-24 02:01 UTC
+- Latest run on `next`: https://github.com/webiny/webiny-js/actions/runs/45529951050 — dark (conclusion: `failure`), 2026-11-25 02:01 UTC
 - Dark since: 2026-11-04 02:01 UTC (first run of the current streak)
-- Job / step: `Record - Standalone (Postgres, WCP)` → `AI E2E - run tests`
+- Job / step: `Record - Standalone (SQLite, WCP)` → `AI E2E - run tests`
 - Likely cause: ASSERTION_FAILED: expect.toBeDisabled failed
 
 <details><summary>End of the job log</summary>

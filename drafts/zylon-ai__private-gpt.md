@@ -4,25 +4,41 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/zylon-ai/private-gpt/issues/new
-- **Stars:** 57652 · **Generated:** 2026-11-25T00:55:54.614Z
+- **Stars:** 57652 · **Generated:** 2026-11-25T06:46:34.527Z
 - Nothing in this file has been sent anywhere.
-
-## Skipped: upstream already tracking
-
-- update-claude-specs (`.github/workflows/update-claude-specs.yml`): [issue #2441](https://github.com/zylon-ai/private-gpt/issues/2441) "CI: update-claude-specs failing: openapi_spec_url not found in anthropic-sdk-typescript .stats.yml"
-
-These workflows are left out of the body below.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 2 workflows dark on main ("publish docs", "tests")
+CI: 3 workflows dark on main ("update-claude-specs", "publish docs", "tests")
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
 Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
+
+### update-claude-specs (`.github/workflows/update-claude-specs.yml`)
+
+- Latest run on `main`: https://github.com/zylon-ai/private-gpt/actions/runs/45104606321 — dark (conclusion: `failure`), 2026-11-23 03:12 UTC
+- Dark since: 2026-09-14 03:19 UTC (first run of the current streak)
+- Job / step: `update` → `Update Claude specs and lock file`
+- Likely cause: RuntimeError: openapi_spec_url not found in https://raw.githubusercontent.com/anthropics/anthropic-sdk-typescript/main/.stats.yml
+
+<details><summary>End of the job log</summary>
+
+```
+    main()
+  File "/home/runner/work/private-gpt/private-gpt/scripts/update_claude_specs.py", line 85, in main
+    latest_url = fetch_openapi_spec_url()
+                 ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/private-gpt/private-gpt/scripts/update_claude_specs.py", line 26, in fetch_openapi_spec_url
+    raise RuntimeError(f"openapi_spec_url not found in {ANTHROPIC_STATS_URL}")
+RuntimeError: openapi_spec_url not found in https://raw.githubusercontent.com/anthropics/anthropic-sdk-typescript/main/.stats.yml
+##[error]Process completed with exit code 1.
+```
+
+</details>
 
 ### publish docs (`.github/workflows/publish-docs.yml`)
 

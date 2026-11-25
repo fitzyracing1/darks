@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/rocketride-org/rocketride-server/issues/new
-- **Stars:** 19987 · **Generated:** 2026-11-25T00:55:54.614Z
+- **Stars:** 19989 · **Generated:** 2026-11-25T06:46:34.527Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -20,7 +20,7 @@ Hi! A few workflows on `develop` have been dark recently. Details below, in case
 
 ### check-externals (`.github/workflows/check-externals.yml`)
 
-- Latest run on `develop`: https://github.com/rocketride-org/rocketride-server/actions/runs/45317480771 — dark (conclusion: `failure`), 2026-11-24 03:09 UTC
+- Latest run on `develop`: https://github.com/rocketride-org/rocketride-server/actions/runs/45537964129 — dark (conclusion: `failure`), 2026-11-25 03:09 UTC
 - Dark since: 2026-11-19 03:09 UTC (first run of the current streak)
 - Job / step: `check-externals (nightly)` → `Run check-externals`
 - Likely cause: libc++abi: terminating due to uncaught exception of type pybind11::attribute_error: module 'matplotlib.ft2font' has no attribute '__path__'
