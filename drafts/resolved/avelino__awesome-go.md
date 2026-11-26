@@ -1,8 +1,8 @@
 <!-- dark-draft: avelino/awesome-go -->
-<!-- draft-state: ready -->
+<!-- draft-state: resolved -->
 # Upstream issue draft: avelino/awesome-go
 
-- **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
+- **Status:** resolved — lit again (2026-11-26); nothing to file
 - **Would be filed at:** https://github.com/avelino/awesome-go/issues/new
 - **Stars:** 196069 · **Generated:** 2026-11-26T12:43:47.548Z
 - Nothing in this file has been sent anywhere.

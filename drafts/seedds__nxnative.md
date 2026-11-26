@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/seedds/nxnative/issues/new
-- **Stars:** 16769 · **Generated:** 2026-11-26T12:43:47.548Z
+- **Stars:** 16780 · **Generated:** 2026-11-26T18:38:05.420Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
@@ -21,38 +21,22 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### lint-c (`.github/workflows/lint-c.yml`)
 
-- Latest run on `main`: https://github.com/seedds/nxnative/actions/runs/45810630407 — dark (conclusion: `failure`), 2026-11-26 11:26 UTC
+- Latest run on `main`: https://github.com/seedds/nxnative/actions/runs/45871476289 — dark (conclusion: `cancelled`), 2026-11-26 17:53 UTC
 - Dark since: 2026-11-22 01:45 UTC (first run of the current streak)
-- Job / step: `clang-tidy (ratchet)` → `clang-tidy against the baseline`
-- Likely cause: Nullable pointer is passed to a callee that requires a non-null 1st parameter [clang-analyzer-nullability.NullablePassedToNonnull] (1 in this file, the baseline has 0) (dm/gfx/tests/t_gpu_lost.m:57)
-
-<details><summary>End of the job log</summary>
-
-```
-[415/419] dm/host/tests/t_watch_sample.c: 0 findings
-[416/419] dm/host/tests/t_web_apple.m: 0 findings
-[417/419] dm/host/tests/t_web_stack.c: 0 findings
-[418/419] dm/host/thread.c: 1 findings
-[419/419] dm/host/web_apple.m: 0 findings
-LLVM 23.1.4: 196 findings in 71 files, 116 file/check pairs
-dm/gfx/gl/hle_gl.m: misc-misplaced-const: 2 findings, the baseline has 0
-##[error]'gl_config' declared with a const-qualified typedef; results in the type being 'void *const' instead of 'const void *' [misc-misplaced-const] (2 in this file, the baseline has 0)
-```
-
-</details>
+- Likely cause: run cancelled
 
 ### tests (`.github/workflows/tests.yml`)
 
-- Latest run on `main`: https://github.com/seedds/nxnative/actions/runs/45809738280 — dark (conclusion: `cancelled`), 2026-11-26 11:20 UTC
+- Latest run on `main`: https://github.com/seedds/nxnative/actions/runs/45875954375 — dark (conclusion: `cancelled`), 2026-11-26 18:26 UTC
 - Dark since: 2026-11-22 07:46 UTC (first run of the current streak)
 - Likely cause: run cancelled
 
 ### lint-python (`.github/workflows/lint-python.yml`)
 
-- Latest run on `main`: https://github.com/seedds/nxnative/actions/runs/45809738367 — dark (conclusion: `failure`), 2026-11-26 11:20 UTC
+- Latest run on `main`: https://github.com/seedds/nxnative/actions/runs/45875966025 — dark (conclusion: `failure`), 2026-11-26 18:26 UTC
 - Dark since: 2026-11-26 08:40 UTC (first run of the current streak)
 - Job / step: `ruff and pyright (ratchet)` → `ruff and pyright against the baseline`
-- Likely cause: Argument of type "ModuleSpec | None" cannot be assigned to parameter "spec" of type "ModuleSpec" in function "module_from_spec" Type "ModuleSpec | None" is not assignable to type "ModuleSpec" "None" is not assignable to "ModuleSpec" (dm/tools/tests/test_regress.py:1239)
+- Likely cause: No overloads for "object" match the provided arguments (dm/tools/tests/test_nsp_multi_program.py:271)
 
 <details><summary>End of the job log</summary>
 

@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/open-metadata/OpenMetadata/issues/new
-- **Stars:** 15884 · **Generated:** 2026-11-26T12:43:47.548Z
+- **Stars:** 15888 · **Generated:** 2026-11-26T18:38:05.420Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -20,7 +20,7 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### monitor-slack-link (`.github/workflows/monitor-slack-link.yml`)
 
-- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/45817934097 — dark (conclusion: `failure`), 2026-11-26 12:15 UTC
+- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/45874039353 — dark (conclusion: `failure`), 2026-11-26 18:12 UTC
 - Dark since: 2026-11-06 22:08 UTC (first run of the current streak)
 - Job / step: `monitor-slack-link` → `Set up Python 3.9`
 - Likely cause: The version '3.9' with architecture 'x64' was not found for Ubuntu 26.04.
@@ -28,12 +28,12 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 <details><summary>End of the job log</summary>
 
 ```
-Updating files:  99% (27794/28074)
-Updating files: 100% (28074/28074)
-Updating files: 100% (28074/28074), done.
+Updating files:  99% (27859/28140)
+Updating files: 100% (28140/28140)
+Updating files: 100% (28140/28140), done.
 Switched to a new branch 'main'
 branch 'main' set up to track 'origin/main'.
-1007201f6b8b04970b1df02b5c8c9f22e207254b
+5ce6e5fee87950306219546f857a3286417a4e2e
 Version 3.9 was not found in the local cache
 ##[error]The version '3.9' with architecture 'x64' was not found for Ubuntu 26.04.
 ```
@@ -42,7 +42,7 @@ Version 3.9 was not found in the local cache
 
 ### Merge Queue Dequeue Report (`.github/workflows/merge-queue-dequeue-report.yml`)
 
-- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/45809511882 — dark (conclusion: `failure`), 2026-11-26 11:19 UTC
+- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/45876333485 — dark (conclusion: `failure`), 2026-11-26 18:29 UTC
 - Dark since: 2026-11-22 17:03 UTC (first run of the current streak)
 - Job / step: `evict-main-conflicts` → `Remove queue entries that conflict with main`
 - Likely cause: cannot iterate over: null

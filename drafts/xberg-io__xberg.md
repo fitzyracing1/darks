@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/xberg-io/xberg/issues/new
-- **Stars:** 9621 · **Generated:** 2026-11-26T12:43:47.548Z
+- **Stars:** 9621 · **Generated:** 2026-11-26T18:38:05.420Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
@@ -27,10 +27,25 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### CI Rust (`.github/workflows/ci-rust.yaml`)
 
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/45627495298 — dark (conclusion: `cancelled`), 2026-11-25 13:49 UTC
+- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/45782178108 — dark (conclusion: `failure`), 2026-11-26 08:19 UTC
 - Dark since: 2026-11-20 07:25 UTC (first run of the current streak)
-- Job / step: `Chunking scaling guard`
-- Likely cause: The run was canceled by @Goldziher.
+- Job / step: `Rust (ubuntu-24.04-arm)` → `Run tests`
+- Likely cause: [rust:test:ci] ERROR task failed
+
+<details><summary>End of the job log</summary>
+
+```
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/root       145G   48G   97G  33% /
+Cargo environment:
+cargo 1.100.0 (3acc79c0c 2026-11-05)
+rustc 1.100.0 (0ef1bc386 2026-11-09)
+Finished in 14860.63s
+[rust:test:ci] ERROR task failed
+##[error]Process completed with exit code 1.
+```
+
+</details>
 
 ### CI Docker (`.github/workflows/ci-docker.yaml`)
 

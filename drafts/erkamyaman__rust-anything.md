@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/erkamyaman/rust-anything/issues/new
-- **Stars:** 9842 · **Generated:** 2026-11-26T12:43:47.548Z
+- **Stars:** 10065 · **Generated:** 2026-11-26T18:38:05.420Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -18,22 +18,22 @@ CI: "CI" workflow failing on main since 2026-11-25
 <!-- BEGIN BODY -->
 Hi! The **CI** workflow (`.github/workflows/ci.yml`) on `main` has been failing since 2026-11-25. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/erkamyaman/rust-anything/actions/runs/45721172488 — dark (conclusion: `failure`), 2026-11-25 23:24 UTC
+- Latest run on `main`: https://github.com/erkamyaman/rust-anything/actions/runs/45853601304 — dark (conclusion: `failure`), 2026-11-26 15:53 UTC
 - Dark since: 2026-11-25 20:39 UTC (first run of the current streak)
-- Job / step: `macos` → `Gate every demo port`
-- Likely cause: Gate failed.
+- Job / step: `macos` → `Run cargo test`
+- Likely cause: error: test failed, to rerun pass '--test http'
 
 <details><summary>End of the job log</summary>
 
 ```
-pass  tests      0 tests, 0 assertions; saved as the baseline once gate passes
-pass  error cases the original fails on purpose nowhere
-pass  panics     no unwrap, expect or panic where the original returns an error
-pass  build      built /Users/runner/work/rust-anything/rust-anything/demo/fixtures/python-textkit-rs/python/textkit_rs
-pass  api        exports slugify, word_counts, chunk, page_count, mean, class Stack
-pass  behavior   1144/1144 recorded cases match
-Gate failed.
-##[error]Process completed with exit code 1.
+thread 'a_ready_request_that_never_answers_2xx_fails_and_stops_the_server' (204262) panicked at tests/http.rs:507:5:
+`python3 server.py` did not listen within 1s on port 53121
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+failures:
+    a_ready_request_that_never_answers_2xx_fails_and_stops_the_server
+test result: FAILED. 26 passed; 1 failed; 0 ignored; 0 measured; 0 filtered out; finished in 736.58s
+error: test failed, to rerun pass `--test http`
+##[error]Process completed with exit code 101.
 ```
 
 </details>

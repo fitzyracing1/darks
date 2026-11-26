@@ -4,8 +4,9 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/storytold/pdfcraft/issues/new
-- **Stars:** 21831 · **Generated:** 2026-11-26T12:43:47.548Z
+- **Stars:** 21855 · **Generated:** 2026-11-26T18:38:05.420Z
 - Nothing in this file has been sent anywhere.
+- **Note for Joshua:** cancelled by a concurrency group — likely noise
 
 ## Skipped: upstream already tracking
 
@@ -16,7 +17,7 @@ These workflows are left out of the body below.
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 4 workflows dark on main ("Nightly macOS", "FreeBSD", "CI", +1 more)
+CI: 5 workflows dark on main ("Nightly macOS", "FreeBSD", "CI", +2 more)
 <!-- END TITLE -->
 
 ## Body
@@ -48,43 +49,43 @@ warning: `pdfcraft-ui-egui` (manifest) generated 1 warning
 
 ### FreeBSD (`.github/workflows/freebsd.yml`)
 
-- Latest run on `main`: https://github.com/storytold/pdfcraft/actions/runs/45266379428 — dark (conclusion: `failure`), 2026-11-23 21:07 UTC
+- Latest run on `main`: https://github.com/storytold/pdfcraft/actions/runs/45868009624 — dark (conclusion: `cancelled`), 2026-11-26 17:28 UTC
 - Dark since: 2026-11-23 19:45 UTC (first run of the current streak)
 - Job / step: `freebsd / FreeBSD 15 x86_64 (build + test)` → `Build and test`
-- Likely cause: warning: build failed, waiting for other jobs to finish...
+- Likely cause: Canceling since a higher priority waiting request for freebsd-refs/heads/main exists
 
 <details><summary>End of the job log</summary>
 
 ```
-  --> apps/pdfcraft-web/Cargo.toml:13:1
-   |
-13 | pdfcraft-ui-egui = { workspace = true }
-   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-   |
-help: consider removing the dependency on `pdfcraft-ui-egui`
-warning: `pdfcraft-web` (manifest) generated 2 warnings
-##[error]Process completed with exit code 101.
+   Compiling egui-wgpu v0.37.0 (https://github.com/storytold/egui.git?rev=f5025284445ea19c35f746d96fc0b75468b3f560#f5025284)
+   Compiling egui-winit v0.37.0 (https://github.com/storytold/egui.git?rev=f5025284445ea19c35f746d96fc0b75468b3f560#f5025284)
+   Compiling craft-ui-panels v0.1.0 (https://github.com/storytold/craft-libs?rev=0a6e42b80bfd586aee6ee1144aa98cf1ea37a844#0a6e42b8)
+   Compiling pdfcraft-edit v0.22.0 (/home/runner/work/pdfcraft/pdfcraft/crates/edit)
+   Compiling egui_glow v0.37.0 (https://github.com/storytold/egui.git?rev=f5025284445ea19c35f746d96fc0b75468b3f560#f5025284)
+   Compiling pollster v1.0.1
+   Compiling eframe v0.37.0 (https://github.com/storytold/egui.git?rev=f5025284445ea19c35f746d96fc0b75468b3f560#f5025284)
+##[error]The operation was canceled.
 ```
 
 </details>
 
 ### CI (`.github/workflows/ci.yml`)
 
-- Latest run on `main`: https://github.com/storytold/pdfcraft/actions/runs/45266379543 — dark (conclusion: `failure`), 2026-11-23 21:07 UTC
+- Latest run on `main`: https://github.com/storytold/pdfcraft/actions/runs/45868009605 — dark (conclusion: `failure`), 2026-11-26 17:28 UTC
 - Dark since: 2026-11-23 20:01 UTC (first run of the current streak)
 - Job / step: `gate / gate (ubuntu-24.04)` → `Gate`
-- Likely cause: xtask ci: error: ci failed at 'test'
+- Likely cause: CI: 9 of 11 steps passed, FAILED: test, deny
 
 <details><summary>End of the job log</summary>
 
 ```
-        FAIL [   0.479s] (7982/8867) pdfcraft-ui-egui::it snapshot_tabs::save_as_image_writes_this_tabs_area
-        FAIL [   0.455s] (7983/8867) pdfcraft-ui-egui::it snapshot_tabs::the_area_stays_after_print_area
-        FAIL [   0.621s] (8092/8867) pdfcraft-ui-egui::it ui::long_german_tool_labels_stay_within_the_sidebar
-        FAIL [   0.524s] (8111/8867) pdfcraft-ui-egui::it updates::a_newer_release_is_offered_for_download
-error: test run failed
-CI: 4 passed, FAILED at `test`: cargo nextest run --no-fail-fast --workspace --lib --bins --tests: exited with exit status: 100
-xtask ci: error: ci failed at `test`
+  K Optimize and standards                  58       20       12      44.8%
+  L Print and print production              41       21        3      54.9%
+  M Accessibility                           61       39       10      72.1%
+  N Compare, automation, AI, misc           76       19       14      34.2%
+note: 100 shipped feature(s) have no automation tool yet (AGENTS.md §3): core.malformed-input-safety, core.xref-streams, core.stream-filters, core.decompression-limits, core.unicode-passwords, core.permissions-enforced,…
+xtask ci: error: ci failed at `test`, `deny`
+CI: 9 of 11 steps passed, FAILED: test, deny
 ##[error]Process completed with exit code 1.
 ```
 
@@ -108,6 +109,28 @@ fuzz: 787 seeds, 2 jobs, 900 s, timeout 10 s, seed 34
 fuzz: 170179 runs in 900 s (189.1/s): 1 distinct crash(es), 0 hang(s)
 xtask fuzz: error: 1 crash(es): see fuzz-out/findings/
 ##[error]Process completed with exit code 1.
+```
+
+</details>
+
+### Windows ARM64 (`.github/workflows/windows-arm64.yml`)
+
+- Latest run on `main`: https://github.com/storytold/pdfcraft/actions/runs/45868009562 — dark (conclusion: `cancelled`), 2026-11-26 17:28 UTC
+- Dark since: 2026-11-26 15:23 UTC (first run of the current streak)
+- Job / step: `windows-arm64 / package (cross-compiled on x64)` → `Build and package (unsigned)`
+- Likely cause: Canceling since a higher priority waiting request for windows-arm64-refs/heads/main exists
+
+<details><summary>End of the job log</summary>
+
+```
+   Compiling pdfcraft-platform v0.22.0 (D:\a\pdfcraft\pdfcraft\crates\platform)
+   Compiling pdfcraft-ui-egui v0.22.0 (D:\a\pdfcraft\pdfcraft\crates\ui-egui)
+   Compiling pdfcraft-prc-render v0.22.0 (D:\a\pdfcraft\pdfcraft\crates\prc-render)
+   Compiling pdfcraft v0.22.0 (D:\a\pdfcraft\pdfcraft\apps\pdfcraft)
+   Compiling pdfcraft-cli v0.22.0 (D:\a\pdfcraft\pdfcraft\apps\pdfcraft-cli)
+   Compiling edit-session v0.1.0-alpha.2 (D:\a\pdfcraft\pdfcraft\vendor\edit-session)
+   Compiling pdfcraft-automation v0.22.0 (D:\a\pdfcraft\pdfcraft\crates\automation)
+##[error]The operation was canceled.
 ```
 
 </details>
