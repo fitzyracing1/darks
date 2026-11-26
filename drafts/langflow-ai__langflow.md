@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/langflow-ai/langflow/issues/new
-- **Stars:** 156938 · **Generated:** 2026-11-25T18:39:22.716Z
+- **Stars:** 156950 · **Generated:** 2026-11-26T00:53:15.119Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -42,7 +42,7 @@ Creating Pages deployment with payload:
 
 ### GP Download Translations (`.github/workflows/gp-download.yml`)
 
-- Latest run on `main`: https://github.com/langflow-ai/langflow/actions/runs/45506169249 — dark (conclusion: `failure`), 2026-11-24 23:00 UTC
+- Latest run on `main`: https://github.com/langflow-ai/langflow/actions/runs/45717946481 — dark (conclusion: `failure`), 2026-11-25 23:00 UTC
 - Dark since: 2026-11-16 23:01 UTC (first run of the current streak)
 - Job / step: `Download translations from Globalization Pipeline` → `Download translations from GP`
 - Likely cause: FAILED languages: ['fr', 'ja', 'es', 'de', 'pt', 'zh-Hans']
@@ -51,9 +51,9 @@ Creating Pages deployment with payload:
 
 ```
 Downloading 'de' translations...
-  Error downloading 'de': 403 Client Error: Forbidden for url: https://g11n-pipeline-api.straker.global/translate/rest/langflow-test/v2/bundles/langflow-ui/de
+  Error downloading 'de': 401 Client Error: Unauthorized for url: https://g11n-pipeline-api.straker.global/translate/rest/langflow-test/v2/bundles/langflow-ui/de
 Downloading 'pt' translations...
-  Error downloading 'pt': 403 Client Error: Forbidden for url: https://g11n-pipeline-api.straker.global/translate/rest/langflow-test/v2/bundles/langflow-ui/pt
+  Error downloading 'pt': 401 Client Error: Unauthorized for url: https://g11n-pipeline-api.straker.global/translate/rest/langflow-test/v2/bundles/langflow-ui/pt
 Downloading 'zh-Hans' translations...
   Error downloading 'zh-Hans': 401 Client Error: Unauthorized for url: https://g11n-pipeline-api.straker.global/translate/rest/langflow-test/v2/bundles/langflow-ui/zh-Hans
 FAILED languages: ['fr', 'ja', 'es', 'de', 'pt', 'zh-Hans']
@@ -64,9 +64,25 @@ FAILED languages: ['fr', 'ja', 'es', 'de', 'pt', 'zh-Hans']
 
 ### Nightly Build (`.github/workflows/nightly_build.yml`)
 
-- Latest run on `main`: https://github.com/langflow-ai/langflow/actions/runs/45517586599 — dark (conclusion: `failure`), 2026-11-25 00:22 UTC
+- Latest run on `main`: https://github.com/langflow-ai/langflow/actions/runs/45728206452 — dark (conclusion: `failure`), 2026-11-26 00:21 UTC
 - Dark since: 2026-11-18 00:22 UTC (first run of the current streak)
-- Likely cause: no cause found in annotations
+- Job / step: `create-nightly-tag` → `Commit tag`
+- Likely cause: Tag push failed. Check if the tag already exists. Exiting the workflow.
+
+<details><summary>End of the job log</summary>
+
+```
++ git push origin v1.14.0.dev39
+To https://github.com/langflow-ai/langflow
+ ! [remote rejected]       v1.14.0.dev39 -> v1.14.0.dev39 (Unable to determine if workflow can be created or updated due to timeout; `workflows` scope may be required.)
+error: failed to push some refs to 'https://github.com/langflow-ai/langflow'
++ echo 'Tag push failed. Check if the tag already exists. Exiting the workflow.'
+Tag push failed. Check if the tag already exists. Exiting the workflow.
++ exit 1
+##[error]Process completed with exit code 1.
+```
+
+</details>
 
 If this is already known or expected, feel free to close. Thanks for maintaining langflow!
 

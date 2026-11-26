@@ -4,44 +4,19 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/storytold/vectorcraft/issues/new
-- **Stars:** 12103 · **Generated:** 2026-11-25T18:39:22.716Z
+- **Stars:** 12108 · **Generated:** 2026-11-26T00:53:15.119Z
 - Nothing in this file has been sent anywhere.
-- **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 3 workflows dark on main ("FreeBSD", "Windows ARM64", "SonarCloud")
+CI: "Windows ARM64" workflow failing on main since 2026-11-24
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
-
-### FreeBSD (`.github/workflows/freebsd.yml`)
-
-- Latest run on `main`: https://github.com/storytold/vectorcraft/actions/runs/45546463928 — dark (conclusion: `failure`), 2026-11-25 04:23 UTC
-- Dark since: 2026-11-22 04:21 UTC (first run of the current streak)
-- Job / step: `freebsd / FreeBSD 15 aarch64 (build + test)` → `Build and test`
-- Likely cause: The job has exceeded the maximum execution time of 5h0m0s
-
-<details><summary>End of the job log</summary>
-
-```
-   Compiling winresource v0.1.34
-   Compiling socket2 v0.6.5
-   Compiling vectorcraft v0.24.1 (/home/runner/work/vectorcraft/vectorcraft/apps/vectorcraft)
-   Compiling craft-psd v0.1.0 (https://github.com/storytold/craft-libs?rev=a4b6d3b6ca04a65d5972339b808d1049a14c7167#a4b6d3b6)
-   Compiling weezl v0.2.1
-   Compiling vectorcraft-cli v0.24.1 (/home/runner/work/vectorcraft/vectorcraft/apps/vectorcraft-cli)
-   Compiling vectorcraft-web v0.24.1 (/home/runner/work/vectorcraft/vectorcraft/apps/vectorcraft-web)
-##[error]The operation was canceled.
-```
-
-</details>
-
-### Windows ARM64 (`.github/workflows/windows-arm64.yml`)
+Hi! The **Windows ARM64** workflow (`.github/workflows/windows-arm64.yml`) on `main` has been failing since 2026-11-24. Here is what I saw, in case it's useful:
 
 - Latest run on `main`: https://github.com/storytold/vectorcraft/actions/runs/45551854191 — dark (conclusion: `failure`), 2026-11-25 05:11 UTC
 - Dark since: 2026-11-24 05:11 UTC (first run of the current streak)
@@ -62,12 +37,6 @@ Line |
 ```
 
 </details>
-
-### SonarCloud (`.github/workflows/sonarcloud.yml`)
-
-- Latest run on `main`: https://github.com/storytold/vectorcraft/actions/runs/45665661976 — dark (conclusion: `cancelled`), 2026-11-25 17:31 UTC
-- Dark since: 2026-11-25 04:27 UTC (first run of the current streak)
-- Likely cause: run cancelled
 
 If this is already known or expected, feel free to close. Thanks for maintaining vectorcraft!
 

@@ -1,8 +1,8 @@
 <!-- dark-draft: czlonkowski/n8n-mcp -->
-<!-- draft-state: ready -->
+<!-- draft-state: resolved -->
 # Upstream issue draft: czlonkowski/n8n-mcp
 
-- **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
+- **Status:** resolved — lit again (2026-11-26); nothing to file
 - **Would be filed at:** https://github.com/czlonkowski/n8n-mcp/issues/new
 - **Stars:** 23308 · **Generated:** 2026-11-25T18:39:22.716Z
 - Nothing in this file has been sent anywhere.

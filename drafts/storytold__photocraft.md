@@ -4,14 +4,14 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/storytold/photocraft/issues/new
-- **Stars:** 81474 · **Generated:** 2026-11-25T18:39:22.716Z
+- **Stars:** 81504 · **Generated:** 2026-11-26T00:53:15.119Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 2 workflows dark on main ("FreeBSD", "Perf (nightly)")
+CI: 4 workflows dark on main ("FreeBSD", "Perf (nightly)", "SonarCloud", +1 more)
 <!-- END TITLE -->
 
 ## Body
@@ -59,6 +59,34 @@ test move_shift_diagonal_tests::shift_drag_locks_to_the_eight_directions_and_alt
    Compiling egui_kittest v0.37.0 (https://github.com/storytold/egui.git?rev=a87d00caaec947ea781657c6ff410c9838016d18#a87d00ca)
    Compiling photocraft-testkit v0.23.1 (/Users/runner/work/photocraft/photocraft/crates/testkit)
 ##[error]The operation was canceled.
+```
+
+</details>
+
+### SonarCloud (`.github/workflows/sonarcloud.yml`)
+
+- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/45726866256 — dark (conclusion: `cancelled`), 2026-11-26 00:10 UTC
+- Dark since: 2026-11-25 22:49 UTC (first run of the current streak)
+- Likely cause: run cancelled
+
+### CI (`.github/workflows/ci.yml`)
+
+- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/45726866333 — dark (conclusion: `failure`), 2026-11-26 00:10 UTC
+- Dark since: 2026-11-26 00:10 UTC (first run of the current streak)
+- Job / step: `windows / lint (windows-latest)` → `Gate`
+- Likely cause: error: process didn't exit successfully: 'D:\t\debug\xtask.exe ci clippy' (exit code: 1)
+
+<details><summary>End of the job log</summary>
+
+```
+   = note: `cargo::unused_dependencies` is set to `warn` by default
+help: consider removing the dependency on `photocraft-ui-egui`
+warning: `photocraft-web` (manifest) generated 1 warning
+error: ci failed at `clippy`
+CI summary:
+  FAIL  clippy: cargo clippy --workspace --locked --features heif --all-targets --keep-going -- -D warnings: exited with exit code: 101
+error: process didn't exit successfully: `D:\t\debug\xtask.exe ci clippy` (exit code: 1)
+##[error]Process completed with exit code 1.
 ```
 
 </details>
