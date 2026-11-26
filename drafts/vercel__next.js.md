@@ -4,36 +4,60 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/vercel/next.js/issues/new
-- **Stars:** 143728 · **Generated:** 2026-11-26T00:53:15.119Z
+- **Stars:** 143733 · **Generated:** 2026-11-26T06:45:55.978Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: "Next Maintainer Auto Close" workflow failing on canary since 2026-11-24
+CI: 2 workflows dark on canary ("Rspack Next.js production integration tests", "Rspack Next.js development integration tests")
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! The **Next Maintainer Auto Close** workflow (`.github/workflows/next-maintainer-auto-close.yml`) on `canary` has been failing since 2026-11-24. Here is what I saw, in case it's useful:
+Hi! A few workflows on `canary` have been dark recently. Details below, in case they're useful:
 
-- Latest run on `canary`: https://github.com/vercel/next.js/actions/runs/45727103845 — dark (conclusion: `failure`), 2026-11-26 00:12 UTC
-- Dark since: 2026-11-24 22:05 UTC (first run of the current streak)
-- Job / step: `close-one-verified-issue` → `Pull and deliver every released close`
-- Likely cause: Unhandled error: Error: Queue returned 404: Not found
+### Rspack Next.js production integration tests (`.github/workflows/rspack-nextjs-build-integration-tests.yml`)
+
+- Latest run on `canary`: https://github.com/vercel/next.js/actions/runs/45758994711 — dark (conclusion: `failure`), 2026-11-26 05:02 UTC
+- Dark since: 2026-11-26 05:02 UTC (first run of the current streak)
+- Job / step: `Rspack integration tests / Next.js integration test (E2E and production) (11/12) / build` → `Run # e2e and production tests with `node run-tests.js``
+- Likely cause: Unable to download artifact(s): Artifact not found for name: next-swc-aarch64-unknown-linux-gnu
 
 <details><summary>End of the job log</summary>
 
 ```
-Removing credentials config '/home/runner/work/_temp/git-credentials-d69757b9-1639-4fff-8968-a75fbb082dda.config'
-Error: Queue returned 404: Not found
-    at queueRequest (/home/runner/work/next.js/next.js/.github/scripts/next-maintainer-auto-close.js:24:13)
-    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
-    at async deliverVerifiedCloses (/home/runner/work/next.js/next.js/.github/scripts/next-maintainer-auto-close.js:160:19)
-    at async eval (eval at callAsyncFunction (/home/runner/work/_actions/actions/github-script/3a2844b7e9c422d3c10d287c895573f7108da1b3/dist/index.js:64949:16), <anonymous>:4:1)
-    at async main (/home/runner/work/_actions/actions/github-script/3a2844b7e9c422d3c10d287c895573f7108da1b3/dist/index.js:65100:20)
-##[error]Unhandled error: Error: Queue returned 404: Not found
+/etc/profile.d/apps-bin-path.sh: line 10: XDG_DATA_DIRS: unbound variable
+/etc/profile.d/apps-bin-path.sh: line 10: XDG_DATA_DIRS: unbound variable
+/etc/profile.d/apps-bin-path.sh: line 10: XDG_DATA_DIRS: unbound variable
+Waiting for background step(s) to complete: install-rust
+Finished waiting for background step(s).
+/etc/profile.d/apps-bin-path.sh: line 10: XDG_DATA_DIRS: unbound variable
+Downloading single artifact
+##[error]Unable to download artifact(s): Artifact not found for name: next-swc-aarch64-unknown-linux-gnu
+```
+
+</details>
+
+### Rspack Next.js development integration tests (`.github/workflows/rspack-nextjs-dev-integration-tests.yml`)
+
+- Latest run on `canary`: https://github.com/vercel/next.js/actions/runs/45759406546 — dark (conclusion: `failure`), 2026-11-26 05:06 UTC
+- Dark since: 2026-11-26 05:06 UTC (first run of the current streak)
+- Job / step: `Rspack integration tests / Next.js integration test (Integration) (4/16) / build` → `Run # legacy integration tests with `node run-tests.js``
+- Likely cause: Unable to download artifact(s): Artifact not found for name: next-swc-aarch64-unknown-linux-gnu
+
+<details><summary>End of the job log</summary>
+
+```
+/etc/profile.d/apps-bin-path.sh: line 10: XDG_DATA_DIRS: unbound variable
+/etc/profile.d/apps-bin-path.sh: line 10: XDG_DATA_DIRS: unbound variable
+/etc/profile.d/apps-bin-path.sh: line 10: XDG_DATA_DIRS: unbound variable
+Waiting for background step(s) to complete: install-rust
+Finished waiting for background step(s).
+/etc/profile.d/apps-bin-path.sh: line 10: XDG_DATA_DIRS: unbound variable
+Downloading single artifact
+##[error]Unable to download artifact(s): Artifact not found for name: next-swc-aarch64-unknown-linux-gnu
 ```
 
 </details>

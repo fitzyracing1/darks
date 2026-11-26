@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/rocketride-org/rocketride-server/issues/new
-- **Stars:** 19984 · **Generated:** 2026-11-26T00:53:15.119Z
+- **Stars:** 19981 · **Generated:** 2026-11-26T06:45:55.978Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -18,7 +18,7 @@ CI: "check-externals" workflow failing on develop since 2026-11-19
 <!-- BEGIN BODY -->
 Hi! The **check-externals** workflow (`.github/workflows/check-externals.yml`) on `develop` has been failing since 2026-11-19. Here is what I saw, in case it's useful:
 
-- Latest run on `develop`: https://github.com/rocketride-org/rocketride-server/actions/runs/45537964129 — dark (conclusion: `failure`), 2026-11-25 03:09 UTC
+- Latest run on `develop`: https://github.com/rocketride-org/rocketride-server/actions/runs/45747049035 — dark (conclusion: `failure`), 2026-11-26 03:09 UTC
 - Dark since: 2026-11-19 03:09 UTC (first run of the current streak)
 - Job / step: `check-externals (nightly)` → `Run check-externals`
 - Likely cause: libc++abi: terminating due to uncaught exception of type pybind11::attribute_error: module 'matplotlib.ft2font' has no attribute '__path__'

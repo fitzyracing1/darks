@@ -1,8 +1,8 @@
 <!-- dark-draft: HeyPuter/everything -->
-<!-- draft-state: ready -->
+<!-- draft-state: resolved -->
 # Upstream issue draft: HeyPuter/everything
 
-- **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
+- **Status:** resolved — lit again (2026-11-26); nothing to file
 - **Would be filed at:** https://github.com/HeyPuter/everything/issues/new
 - **Stars:** 9586 · **Generated:** 2026-11-26T00:53:15.119Z
 - Nothing in this file has been sent anywhere.

@@ -4,14 +4,14 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/storytold/photocraft/issues/new
-- **Stars:** 81504 · **Generated:** 2026-11-26T00:53:15.119Z
+- **Stars:** 81550 · **Generated:** 2026-11-26T06:45:55.978Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 4 workflows dark on main ("FreeBSD", "Perf (nightly)", "SonarCloud", +1 more)
+CI: 3 workflows dark on main ("FreeBSD", "Perf (nightly)", "CI")
 <!-- END TITLE -->
 
 ## Body
@@ -43,7 +43,7 @@ test move_shift_diagonal_tests::shift_drag_locks_to_the_eight_directions_and_alt
 
 ### Perf (nightly) (`.github/workflows/perf-nightly.yml`)
 
-- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/45540536281 — dark (conclusion: `cancelled`), 2026-11-25 03:31 UTC
+- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/45749298352 — dark (conclusion: `cancelled`), 2026-11-26 03:30 UTC
 - Dark since: 2026-11-18 03:29 UTC (first run of the current streak)
 - Job / step: `perf (macOS, Apple GPU)` → `Run benchmarks`
 - Likely cause: The job has exceeded the maximum execution time of 2h0m0s
@@ -51,41 +51,35 @@ test move_shift_diagonal_tests::shift_drag_locks_to_the_eight_directions_and_alt
 <details><summary>End of the job log</summary>
 
 ```
-   Compiling photocraft-engine v0.23.1 (/Users/runner/work/photocraft/photocraft/crates/engine)
+   Compiling egui_extras v0.37.0 (https://github.com/storytold/egui.git?rev=b9770908e0f304896f9658d239a7b29cf8af1564#b9770908)
    Compiling photocraft-gpu v0.23.1 (/Users/runner/work/photocraft/photocraft/crates/gpu)
    Compiling kittest v0.5.0
-   Compiling memory-stats v1.2.0
    Compiling open v5.4.5
-   Compiling egui_kittest v0.37.0 (https://github.com/storytold/egui.git?rev=a87d00caaec947ea781657c6ff410c9838016d18#a87d00ca)
+   Compiling memory-stats v1.2.0
    Compiling photocraft-testkit v0.23.1 (/Users/runner/work/photocraft/photocraft/crates/testkit)
+   Compiling egui_kittest v0.37.0 (https://github.com/storytold/egui.git?rev=b9770908e0f304896f9658d239a7b29cf8af1564#b9770908)
 ##[error]The operation was canceled.
 ```
 
 </details>
 
-### SonarCloud (`.github/workflows/sonarcloud.yml`)
-
-- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/45726866256 — dark (conclusion: `cancelled`), 2026-11-26 00:10 UTC
-- Dark since: 2026-11-25 22:49 UTC (first run of the current streak)
-- Likely cause: run cancelled
-
 ### CI (`.github/workflows/ci.yml`)
 
-- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/45726866333 — dark (conclusion: `failure`), 2026-11-26 00:10 UTC
+- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/45748135697 — dark (conclusion: `failure`), 2026-11-26 03:19 UTC
 - Dark since: 2026-11-26 00:10 UTC (first run of the current streak)
-- Job / step: `windows / lint (windows-latest)` → `Gate`
-- Likely cause: error: process didn't exit successfully: 'D:\t\debug\xtask.exe ci clippy' (exit code: 1)
+- Job / step: `gate / test 2/4 (artcraft-k8s-main)` → `Gate`
+- Likely cause: skip  panic_hunt
 
 <details><summary>End of the job log</summary>
 
 ```
-   = note: `cargo::unused_dependencies` is set to `warn` by default
-help: consider removing the dependency on `photocraft-ui-egui`
-warning: `photocraft-web` (manifest) generated 1 warning
-error: ci failed at `clippy`
+    corpus/psd-tools: all 309 files (PHOTOCRAFT_FULL_SWEEP=1)
+    (test timed out)
+error: test run failed
+error: ci failed at `test`
 CI summary:
-  FAIL  clippy: cargo clippy --workspace --locked --features heif --all-targets --keep-going -- -D warnings: exited with exit code: 101
-error: process didn't exit successfully: `D:\t\debug\xtask.exe ci clippy` (exit code: 1)
+  FAIL  test: cargo nextest run --profile ci --binaries-metadata /home/runner/_work/photocraft/photocraft/target/nextest-archive/target/nextest/binaries-metadata.json --cargo-metadata /home/runner/_work/photocraft/photo…
+  skip  panic_hunt
 ##[error]Process completed with exit code 1.
 ```
 
