@@ -4,36 +4,37 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/ccch1mneyyy/dsh-Go/issues/new
-- **Stars:** 32199 · **Generated:** 2026-11-26T06:45:55.978Z
+- **Stars:** 32418 · **Generated:** 2026-11-26T12:43:47.548Z
 - Nothing in this file has been sent anywhere.
+- **Note for Joshua:** cancelled by a concurrency group — likely noise
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: "iOS compile" workflow failing on main since 2026-11-26
+CI: "iOS compile" workflow getting cancelled on main since 2026-11-26
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! The **iOS compile** workflow (`.github/workflows/ios-compile.yml`) on `main` has been failing since 2026-11-26. Here is what I saw, in case it's useful:
+Hi! The **iOS compile** workflow (`.github/workflows/ios-compile.yml`) on `main` has been getting cancelled since 2026-11-26. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/ccch1mneyyy/dsh-Go/actions/runs/45725659952 — dark (conclusion: `failure`), 2026-11-26 00:01 UTC
+- Latest run on `main`: https://github.com/ccch1mneyyy/dsh-Go/actions/runs/45808685029 — dark (conclusion: `cancelled`), 2026-11-26 11:13 UTC
 - Dark since: 2026-11-26 00:01 UTC (first run of the current streak)
-- Job / step: `engine` → `Exercise Swift phone and companion voice contracts`
-- Likely cause: searchd EXC_CRASH SIGABRT  Abort trap: 6 | libsystem_kernel.dylib __pthread_kill+8 | libsystem_pthread.dylib pthread_kill+264 | libsystem_c.dylib abort+116 | libsystem_c.dylib abort_report_np+80 | SpotlightIndex __si_indexingWatchdogInit_bl
+- Job / step: `engine` → `Archive as for TestFlight, and look inside`
+- Likely cause: Canceling since a higher priority waiting request for ios-compile-refs/heads/main exists
 
 <details><summary>End of the job log</summary>
 
 ```
-Test session results, code coverage, and logs:
-	/Users/runner/work/_temp/swift-contracts.xcresult
-Failing tests:
-	IOSAudioSessionCoordinatorTests.testMainThreadCleanupIsOneShotAcrossQueuedAndImmediateCalls()
-** TEST FAILED **
-Testing started
-##[notice]IOSPhoneSelfRunnerTests 16, IOSPhonePairingStoreTests 13, IOSPhoneCoreDeviceTests 37, IOSPhoneScreenTests 38, IOSPhoneDDIBackgroundTests 4, IOSPhoneOperationTests 36, IOSPhoneApprovalTests 8, IOSPhoneClipboard…
-##[error]IOSAudioSessionCoordinatorTests.testMainThreadCleanupIsOneShotAcrossQueuedAndImmediateCalls() Failed IOSAudioSessionCoordinatorTests.swift:852: Asynchronous wait failed: Exceeded timeout of 2 seconds, with unfu…
+Finished uploading artifact content to blob storage!
+SHA256 digest of uploaded artifact zip is de953d6fa590ff7158d37992af4530d37c6dbdd3a4daf773038fca489e70ed3f
+Finalizing artifact upload
+Artifact ios-native-tools.zip successfully finalized. Artifact ID 15115542071
+Artifact ios-native-tools has been successfully uploaded! Final size is 7510 bytes. Artifact ID is 15115542071
+Artifact download URL: https://github.com/ccch1mneyyy/dsh-Go/actions/runs/45808685029/artifacts/15115542071
+Shared CoreDevice/XCTest native owner restored for these inputs; nothing to build.
+##[error]The operation was canceled.
 ```
 
 </details>

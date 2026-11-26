@@ -1,45 +1,12 @@
 <!-- dark-draft: kajisho5/ffmpeg-skill -->
-<!-- draft-state: ready -->
+<!-- draft-state: duplicate -->
 # Upstream issue draft: kajisho5/ffmpeg-skill
 
-- **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
+- **Status:** not for filing — upstream already has an open issue/PR about every dark workflow here
 - **Would be filed at:** https://github.com/kajisho5/ffmpeg-skill/issues/new
-- **Stars:** 11225 · **Generated:** 2026-11-26T06:45:55.978Z
+- **Stars:** 11343 · **Generated:** 2026-11-26T12:43:47.548Z
 - Nothing in this file has been sent anywhere.
 
-## Suggested title
+## Skipped: upstream already tracking
 
-<!-- BEGIN TITLE -->
-CI: "release" workflow failing on main since 2026-11-24
-<!-- END TITLE -->
-
-## Body
-
-<!-- BEGIN BODY -->
-Hi! The **release** workflow (`.github/workflows/release.yml`) on `main` has been failing since 2026-11-24. Here is what I saw, in case it's useful:
-
-- Latest run on `main`: https://github.com/kajisho5/ffmpeg-skill/actions/runs/45705268547 — dark (conclusion: `failure`), 2026-11-25 21:32 UTC
-- Dark since: 2026-11-24 04:54 UTC (first run of the current streak)
-- Job / step: `release` → `Resolve the next version from merged PR labels`
-- Likely cause: raise CalledProcessError(retcode, process.args,
-
-<details><summary>End of the job log</summary>
-
-```
-        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-        capture_output=True, text=True, check=True).stdout
-        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/lib/python3.14/subprocess.py", line 578, in run
-    raise CalledProcessError(retcode, process.args,
-                             output=stdout, stderr=stderr)
-subprocess.CalledProcessError: Command '['gh', 'api', 'repos/kajisho5/ffmpeg-skill/pulls/453', '--jq', '[.labels[].name]']' returned non-zero exit status 1.
-##[error]Process completed with exit code 1.
-```
-
-</details>
-
-If this is already known or expected, feel free to close. Thanks for maintaining ffmpeg-skill!
-
----
-<sub>Found by the [dark crawler](https://github.com/fitzyracing1/darks), which checks the latest default-branch run of each workflow in popular repos. Reviewed and filed by hand.</sub>
-<!-- END BODY -->
+- pages (`.github/workflows/pages.yml`): [issue #690](https://github.com/kajisho5/ffmpeg-skill/issues/690) "Use-case pages, the first five minutes, and a Japanese README"

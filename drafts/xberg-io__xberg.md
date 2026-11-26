@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/xberg-io/xberg/issues/new
-- **Stars:** 9620 · **Generated:** 2026-11-26T06:45:55.978Z
+- **Stars:** 9621 · **Generated:** 2026-11-26T12:43:47.548Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
@@ -77,10 +77,10 @@ advisories FAILED, bans ok, licenses ok, sources ok
 
 ### CI Lint (`.github/workflows/ci-lint.yaml`)
 
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/45761526008 — dark (conclusion: `cancelled`), 2026-11-26 05:25 UTC
+- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/45782178668 — dark (conclusion: `failure`), 2026-11-26 08:19 UTC
 - Dark since: 2026-11-25 06:57 UTC (first run of the current streak)
 - Job / step: `Generated e2e suites freshness` → `Verify generated e2e suites are current`
-- Likely cause: run cancelled in job "Generated e2e suites freshness"
+- Likely cause: [e2e:verify] ERROR task failed
 
 <details><summary>End of the job log</summary>
 
@@ -99,10 +99,10 @@ advisories FAILED, bans ok, licenses ok, sources ok
 
 ### CI Scripts (`.github/workflows/ci-scripts.yaml`)
 
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/45761525764 — dark (conclusion: `cancelled`), 2026-11-26 05:25 UTC
+- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/45782178312 — dark (conclusion: `failure`), 2026-11-26 08:19 UTC
 - Dark since: 2026-11-25 06:57 UTC (first run of the current streak)
-- Job / step: `Bats on ubuntu-latest` → `Run the shell contract tests`
-- Likely cause: run cancelled in job "Bats on ubuntu-latest"
+- Job / step: `Bats on macos-26` → `Run the shell contract tests`
+- Likely cause: ok 809 WASM test runner should propagate the actual wasm-pack test failure
 
 <details><summary>End of the job log</summary>
 
@@ -111,8 +111,8 @@ ok 808 WASM test runner should reject a failing executed POSIX probe rather than
 ok 809 WASM test runner should propagate the actual wasm-pack test failure
 The following warnings were encountered during tests:
 BW02: Using flags on `run` requires at least BATS_VERSION=1.5.0. Use `bats_require_minimum_version 1.5.0` to fix this message.
-      (from function `bats_warn_minimum_guaranteed_version' in file /home/runner/work/_temp/bats/bats-core-1.14.0/lib/bats-core/warnings.bash, line 32,
-       from function `run' in file /home/runner/work/_temp/bats/bats-core-1.14.0/lib/bats-core/test_functions.bash, line 359,
+      (from function `bats_warn_minimum_guaranteed_version' in file /Users/runner/work/_temp/bats/bats-core-1.14.0/lib/bats-core/warnings.bash, line 32,
+       from function `run' in file /Users/runner/work/_temp/bats/bats-core-1.14.0/lib/bats-core/test_functions.bash, line 359,
        in test file scripts/tests/bats/benchmark_liteparse.bats, line 26)
 ##[error]Process completed with exit code 1.
 ```

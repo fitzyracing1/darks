@@ -4,14 +4,14 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/storytold/photocraft/issues/new
-- **Stars:** 81550 · **Generated:** 2026-11-26T06:45:55.978Z
+- **Stars:** 81607 · **Generated:** 2026-11-26T12:43:47.548Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 3 workflows dark on main ("FreeBSD", "Perf (nightly)", "CI")
+CI: 2 workflows dark on main ("FreeBSD", "Perf (nightly)")
 <!-- END TITLE -->
 
 ## Body
@@ -21,7 +21,7 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### FreeBSD (`.github/workflows/freebsd.yml`)
 
-- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/45533132861 — dark (conclusion: `cancelled`), 2026-11-25 02:27 UTC
+- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/45742471809 — dark (conclusion: `cancelled`), 2026-11-26 02:26 UTC
 - Dark since: 2026-11-18 02:26 UTC (first run of the current streak)
 - Job / step: `freebsd / FreeBSD 15 x86_64 (build + test)` → `Build and test`
 - Likely cause: The job has exceeded the maximum execution time of 5h0m0s
@@ -59,28 +59,6 @@ test move_shift_diagonal_tests::shift_drag_locks_to_the_eight_directions_and_alt
    Compiling photocraft-testkit v0.23.1 (/Users/runner/work/photocraft/photocraft/crates/testkit)
    Compiling egui_kittest v0.37.0 (https://github.com/storytold/egui.git?rev=b9770908e0f304896f9658d239a7b29cf8af1564#b9770908)
 ##[error]The operation was canceled.
-```
-
-</details>
-
-### CI (`.github/workflows/ci.yml`)
-
-- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/45748135697 — dark (conclusion: `failure`), 2026-11-26 03:19 UTC
-- Dark since: 2026-11-26 00:10 UTC (first run of the current streak)
-- Job / step: `gate / test 2/4 (artcraft-k8s-main)` → `Gate`
-- Likely cause: skip  panic_hunt
-
-<details><summary>End of the job log</summary>
-
-```
-    corpus/psd-tools: all 309 files (PHOTOCRAFT_FULL_SWEEP=1)
-    (test timed out)
-error: test run failed
-error: ci failed at `test`
-CI summary:
-  FAIL  test: cargo nextest run --profile ci --binaries-metadata /home/runner/_work/photocraft/photocraft/target/nextest-archive/target/nextest/binaries-metadata.json --cargo-metadata /home/runner/_work/photocraft/photo…
-  skip  panic_hunt
-##[error]Process completed with exit code 1.
 ```
 
 </details>

@@ -4,39 +4,24 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/storytold/lightcraft/issues/new
-- **Stars:** 16427 · **Generated:** 2026-11-26T06:45:55.978Z
+- **Stars:** 16440 · **Generated:** 2026-11-26T12:43:47.548Z
 - Nothing in this file has been sent anywhere.
+- **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: "SonarCloud" workflow failing on main since 2026-11-18
+CI: "SonarCloud" workflow getting cancelled on main since 2026-11-18
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! The **SonarCloud** workflow (`.github/workflows/sonarcloud.yml`) on `main` has been failing since 2026-11-18. Here is what I saw, in case it's useful:
+Hi! The **SonarCloud** workflow (`.github/workflows/sonarcloud.yml`) on `main` has been getting cancelled since 2026-11-18. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/storytold/lightcraft/actions/runs/45746891007 — dark (conclusion: `failure`), 2026-11-26 03:07 UTC
+- Latest run on `main`: https://github.com/storytold/lightcraft/actions/runs/45817449813 — dark (conclusion: `cancelled`), 2026-11-26 12:12 UTC
 - Dark since: 2026-11-18 23:57 UTC (first run of the current streak)
-- Job / step: `sonarcloud / Tests 6/8` → `Merge this shard's profiles`
-- Likely cause: llvm-profdata could not merge shard 6's profiles (exit 1)
-
-<details><summary>End of the job log</summary>
-
-```
-info: downloading 4 components
-  1.100.0-x86_64-unknown-linux-gnu installed - rustc 1.100.0 (0ef1bc386 2026-11-09)
-Raw profiles: 1.4G in 877 files
-Filesystem      Size  Used Avail Use% Mounted on
-/dev/root       145G   64G   82G  44% /
-warning: profraw/shard-6-46582-193888115116449464_0.profraw: invalid instrumentation profile data (file header is corrupt)
-error: no profile can be merged
-##[error]shard 6 wrote a truncated or corrupt coverage profile: profraw/shard-6-46582-193888115116449464_0.profraw: invalid instrumentation profile data (file header is corrupt)
-```
-
-</details>
+- Likely cause: run cancelled
 
 If this is already known or expected, feel free to close. Thanks for maintaining lightcraft!
 

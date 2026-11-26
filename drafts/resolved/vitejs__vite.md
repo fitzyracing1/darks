@@ -1,8 +1,8 @@
 <!-- dark-draft: vitejs/vite -->
-<!-- draft-state: ready -->
+<!-- draft-state: resolved -->
 # Upstream issue draft: vitejs/vite
 
-- **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
+- **Status:** resolved — lit again (2026-11-26); nothing to file
 - **Would be filed at:** https://github.com/vitejs/vite/issues/new
 - **Stars:** 84112 · **Generated:** 2026-11-26T06:45:55.978Z
 - Nothing in this file has been sent anywhere.
