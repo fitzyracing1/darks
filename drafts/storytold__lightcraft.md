@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/storytold/lightcraft/issues/new
-- **Stars:** 16454 · **Generated:** 2026-11-27T00:52:53.857Z
+- **Stars:** 16462 · **Generated:** 2026-11-27T06:46:20.331Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title

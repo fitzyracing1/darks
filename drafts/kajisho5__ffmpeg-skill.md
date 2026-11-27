@@ -4,7 +4,7 @@
 
 - **Status:** not for filing — upstream already has an open issue/PR about every dark workflow here
 - **Would be filed at:** https://github.com/kajisho5/ffmpeg-skill/issues/new
-- **Stars:** 11531 · **Generated:** 2026-11-27T00:52:53.857Z
+- **Stars:** 11628 · **Generated:** 2026-11-27T06:46:20.331Z
 - Nothing in this file has been sent anywhere.
 
 ## Skipped: upstream already tracking

@@ -1,38 +1,38 @@
 <!-- dark-draft: HeyPuter/everything -->
-<!-- draft-state: resolved -->
+<!-- draft-state: ready -->
 # Upstream issue draft: HeyPuter/everything
 
-- **Status:** resolved — lit again (2026-11-26); nothing to file
+- **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/HeyPuter/everything/issues/new
-- **Stars:** 9586 · **Generated:** 2026-11-26T00:53:15.119Z
+- **Stars:** 9654 · **Generated:** 2026-11-27T06:46:20.331Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: "Browser tests" workflow failing on main since 2026-11-24
+CI: "Browser tests" workflow failing on main since 2026-11-27
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! The **Browser tests** workflow (`.github/workflows/e2e.yml`) on `main` has been failing since 2026-11-24. Here is what I saw, in case it's useful:
+Hi! The **Browser tests** workflow (`.github/workflows/e2e.yml`) on `main` has been failing since 2026-11-27. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/HeyPuter/everything/actions/runs/45558893254 — dark (conclusion: `failure`), 2026-11-25 06:12 UTC
-- Dark since: 2026-11-24 06:12 UTC (first run of the current streak)
+- Latest run on `main`: https://github.com/HeyPuter/everything/actions/runs/45950379725 — dark (conclusion: `failure`), 2026-11-27 06:12 UTC
+- Dark since: 2026-11-27 06:12 UTC (first run of the current streak)
 - Job / step: `parametric` → `Run npm run test:e2e -- --shard=1/1`
 - Likely cause: [desktop] › tests/e2e/assistant.spec.ts:78:1 › files go with a message: picked, pasted or dropped, and refused when the assistant cannot read them
 
 <details><summary>End of the job log</summary>
 
 ```
+    [desktop] › tests/e2e/sketch.spec.ts:1306:3 › sketching › Enter does not repeat Delete or Redo on what is selected next
+    [desktop] › tests/e2e/sketch.spec.ts:1422:3 › sketching › Ctrl+A is the browser select-all outside a sketch and in text fields
     [mobile] › tests/e2e/mobile.spec.ts:356:1 › a small phone shows the equations table, Delete buttons included, without scrolling sideways
-  3 flaky
-    [desktop] › tests/e2e/chrome.spec.ts:240:1 › a value under a field's minimum says what is allowed in plain words
-    [desktop] › tests/e2e/chrome.spec.ts:968:1 › selected rows, chosen tabs and pressed buttons stand out in high contrast mode
-    [desktop] › tests/e2e/sketch.spec.ts:605:3 › sketching › a collapsed mirror axis gives feedback without adding geometry or undo history
+  1 flaky
+    [desktop] › tests/e2e/modeling.spec.ts:514:1 › dragging the rollback bar rolls back past several features in one undo step
   1 skipped
-  677 passed (17.3m)
+  721 passed (25.3m)
 ##[error]Process completed with exit code 1.
 ```
 

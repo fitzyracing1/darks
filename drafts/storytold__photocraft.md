@@ -4,14 +4,14 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/storytold/photocraft/issues/new
-- **Stars:** 81694 · **Generated:** 2026-11-27T00:52:53.857Z
+- **Stars:** 81749 · **Generated:** 2026-11-27T06:46:20.331Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 2 workflows dark on main ("FreeBSD", "Perf (nightly)")
+CI: 3 workflows dark on main ("FreeBSD", "Perf (nightly)", "CI")
 <!-- END TITLE -->
 
 ## Body
@@ -43,7 +43,7 @@ test move_shift_diagonal_tests::shift_drag_locks_to_the_eight_directions_and_alt
 
 ### Perf (nightly) (`.github/workflows/perf-nightly.yml`)
 
-- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/45749298352 — dark (conclusion: `cancelled`), 2026-11-26 03:30 UTC
+- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/45934550833 — dark (conclusion: `cancelled`), 2026-11-27 03:30 UTC
 - Dark since: 2026-11-18 03:29 UTC (first run of the current streak)
 - Job / step: `perf (macOS, Apple GPU)` → `Run benchmarks`
 - Likely cause: The job has exceeded the maximum execution time of 2h0m0s
@@ -54,11 +54,33 @@ test move_shift_diagonal_tests::shift_drag_locks_to_the_eight_directions_and_alt
    Compiling egui_extras v0.37.0 (https://github.com/storytold/egui.git?rev=b9770908e0f304896f9658d239a7b29cf8af1564#b9770908)
    Compiling photocraft-gpu v0.23.1 (/Users/runner/work/photocraft/photocraft/crates/gpu)
    Compiling kittest v0.5.0
-   Compiling open v5.4.5
    Compiling memory-stats v1.2.0
-   Compiling photocraft-testkit v0.23.1 (/Users/runner/work/photocraft/photocraft/crates/testkit)
+   Compiling open v5.4.5
    Compiling egui_kittest v0.37.0 (https://github.com/storytold/egui.git?rev=b9770908e0f304896f9658d239a7b29cf8af1564#b9770908)
+   Compiling photocraft-testkit v0.23.1 (/Users/runner/work/photocraft/photocraft/crates/testkit)
 ##[error]The operation was canceled.
+```
+
+</details>
+
+### CI (`.github/workflows/ci.yml`)
+
+- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/45933480475 — dark (conclusion: `failure`), 2026-11-27 03:19 UTC
+- Dark since: 2026-11-27 03:19 UTC (first run of the current streak)
+- Job / step: `gate / test 2/4 (artcraft-k8s-main)` → `Gate`
+- Likely cause: skip  panic_hunt
+
+<details><summary>End of the job log</summary>
+
+```
+    corpus/psd-tools: all 309 files (PHOTOCRAFT_FULL_SWEEP=1)
+    (test timed out)
+error: test run failed
+error: ci failed at `test`
+CI summary:
+  FAIL  test: cargo nextest run --profile ci --binaries-metadata /home/runner/_work/photocraft/photocraft/target/nextest-archive/target/nextest/binaries-metadata.json --cargo-metadata /home/runner/_work/photocraft/photo…
+  skip  panic_hunt
+##[error]Process completed with exit code 1.
 ```
 
 </details>
