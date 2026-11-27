@@ -4,13 +4,19 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/open-metadata/OpenMetadata/issues/new
-- **Stars:** 15888 · **Generated:** 2026-11-26T18:38:05.420Z
+- **Stars:** 15889 · **Generated:** 2026-11-27T00:52:53.857Z
 - Nothing in this file has been sent anywhere.
+
+## Skipped: upstream already tracking
+
+- security-scan (`.github/workflows/security-scan.yml`): [issue #38522](https://github.com/open-metadata/OpenMetadata/issues/38522) "security-scan fails on ubuntu-latest (Ubuntu 26.04): E: Package 'wkhtmltopdf' has no installation candidate"
+
+These workflows are left out of the body below.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 2 workflows dark on main ("monitor-slack-link", "Merge Queue Dequeue Report")
+CI: 3 workflows dark on main ("monitor-slack-link", "Merge Queue Dequeue Report", "Backend CI")
 <!-- END TITLE -->
 
 ## Body
@@ -20,7 +26,7 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### monitor-slack-link (`.github/workflows/monitor-slack-link.yml`)
 
-- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/45874039353 — dark (conclusion: `failure`), 2026-11-26 18:12 UTC
+- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/45916892850 — dark (conclusion: `failure`), 2026-11-27 00:28 UTC
 - Dark since: 2026-11-06 22:08 UTC (first run of the current streak)
 - Job / step: `monitor-slack-link` → `Set up Python 3.9`
 - Likely cause: The version '3.9' with architecture 'x64' was not found for Ubuntu 26.04.
@@ -28,12 +34,12 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 <details><summary>End of the job log</summary>
 
 ```
-Updating files:  99% (27859/28140)
-Updating files: 100% (28140/28140)
-Updating files: 100% (28140/28140), done.
+Updating files:  99% (27861/28142)
+Updating files: 100% (28142/28142)
+Updating files: 100% (28142/28142), done.
 Switched to a new branch 'main'
 branch 'main' set up to track 'origin/main'.
-5ce6e5fee87950306219546f857a3286417a4e2e
+8c4010a70491e69aa0eea73937001ef062639a73
 Version 3.9 was not found in the local cache
 ##[error]The version '3.9' with architecture 'x64' was not found for Ubuntu 26.04.
 ```
@@ -42,7 +48,7 @@ Version 3.9 was not found in the local cache
 
 ### Merge Queue Dequeue Report (`.github/workflows/merge-queue-dequeue-report.yml`)
 
-- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/45876333485 — dark (conclusion: `failure`), 2026-11-26 18:29 UTC
+- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/45884124037 — dark (conclusion: `failure`), 2026-11-26 19:30 UTC
 - Dark since: 2026-11-22 17:03 UTC (first run of the current streak)
 - Job / step: `evict-main-conflicts` → `Remove queue entries that conflict with main`
 - Likely cause: cannot iterate over: null
@@ -58,6 +64,28 @@ Prepare all required actions
 Complete job name: evict-main-conflicts
 cannot iterate over: null
 ##[error]Process completed with exit code 1.
+```
+
+</details>
+
+### Backend CI (`.github/workflows/openmetadata-service-unit-tests.yml`)
+
+- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/45884124448 — dark (conclusion: `failure`), 2026-11-26 19:30 UTC
+- Dark since: 2026-11-26 19:30 UTC (first run of the current streak)
+- Job / step: `it-postgres-elasticsearch-redis / Integration Test Lane (postgres-elasticsearch-redis, parallel)` → `Run Integration Tests (postgres-elasticsearch-redis)`
+- Likely cause: INFO  [2026-11-26 20:40:37,770] org.openmetadata.service.apps.bundles.searchIndex.distributed.JobRecoveryManager: Startup recovery completed: 0 locks cleaned, 0 orphaned jobs processed (0 recovered, 0 marked failed)
+
+<details><summary>End of the job log</summary>
+
+```
+INFO  [2026-11-26 20:40:25,687] org.openmetadata.service.alerting.channel.feed.ActivityStreamPublisher: Closing Activity Stream Publisher
+INFO  [2026-11-26 20:40:37,090] org.openmetadata.mcp.server.auth.repository.OAuthTokenRepository: Deleted expired access and refresh tokens
+INFO  [2026-11-26 20:40:37,091] org.openmetadata.mcp.server.auth.repository.OAuthAuthorizationCodeRepository: Deleted expired authorization codes
+INFO  [2026-11-26 20:40:37,092] org.openmetadata.mcp.server.auth.repository.McpPendingAuthRequestRepository: Deleted expired pending auth requests
+INFO  [2026-11-26 20:40:37,092] org.openmetadata.mcp.server.auth.jobs.OAuthTokenCleanupJob: OAuth token cleanup completed successfully
+INFO  [2026-11-26 20:40:37,768] org.openmetadata.service.apps.bundles.searchIndex.distributed.JobRecoveryManager: Performing startup recovery for distributed indexing jobs...
+INFO  [2026-11-26 20:40:37,770] org.openmetadata.service.apps.bundles.searchIndex.distributed.JobRecoveryManager: Startup recovery completed: 0 locks cleaned, 0 orphaned jobs processed (0 recovered, 0 marked failed)
+##[error]Process completed with exit code 124.
 ```
 
 </details>

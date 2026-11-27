@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/langflow-ai/langflow/issues/new
-- **Stars:** 156970 · **Generated:** 2026-11-26T18:38:05.420Z
+- **Stars:** 156973 · **Generated:** 2026-11-27T00:52:53.857Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -42,7 +42,7 @@ Creating Pages deployment with payload:
 
 ### GP Download Translations (`.github/workflows/gp-download.yml`)
 
-- Latest run on `main`: https://github.com/langflow-ai/langflow/actions/runs/45717946481 — dark (conclusion: `failure`), 2026-11-25 23:00 UTC
+- Latest run on `main`: https://github.com/langflow-ai/langflow/actions/runs/45908320437 — dark (conclusion: `failure`), 2026-11-26 23:00 UTC
 - Dark since: 2026-11-16 23:01 UTC (first run of the current streak)
 - Job / step: `Download translations from Globalization Pipeline` → `Download translations from GP`
 - Likely cause: FAILED languages: ['fr', 'ja', 'es', 'de', 'pt', 'zh-Hans']
@@ -64,7 +64,7 @@ FAILED languages: ['fr', 'ja', 'es', 'de', 'pt', 'zh-Hans']
 
 ### Nightly Build (`.github/workflows/nightly_build.yml`)
 
-- Latest run on `main`: https://github.com/langflow-ai/langflow/actions/runs/45728206452 — dark (conclusion: `failure`), 2026-11-26 00:21 UTC
+- Latest run on `main`: https://github.com/langflow-ai/langflow/actions/runs/45916331000 — dark (conclusion: `failure`), 2026-11-27 00:22 UTC
 - Dark since: 2026-11-18 00:22 UTC (first run of the current streak)
 - Job / step: `create-nightly-tag` → `Commit tag`
 - Likely cause: Tag push failed. Check if the tag already exists. Exiting the workflow.
@@ -72,9 +72,9 @@ FAILED languages: ['fr', 'ja', 'es', 'de', 'pt', 'zh-Hans']
 <details><summary>End of the job log</summary>
 
 ```
-+ git push origin v1.14.0.dev39
++ git push origin v1.14.0.dev40
 To https://github.com/langflow-ai/langflow
- ! [remote rejected]       v1.14.0.dev39 -> v1.14.0.dev39 (Unable to determine if workflow can be created or updated due to timeout; `workflows` scope may be required.)
+ ! [remote rejected]       v1.14.0.dev40 -> v1.14.0.dev40 (Unable to determine if workflow can be created or updated due to timeout; `workflows` scope may be required.)
 error: failed to push some refs to 'https://github.com/langflow-ai/langflow'
 + echo 'Tag push failed. Check if the tag already exists. Exiting the workflow.'
 Tag push failed. Check if the tag already exists. Exiting the workflow.

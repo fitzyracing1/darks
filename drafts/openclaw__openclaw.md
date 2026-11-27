@@ -1,10 +1,10 @@
 <!-- dark-draft: openclaw/openclaw -->
-<!-- draft-state: resolved -->
+<!-- draft-state: ready -->
 # Upstream issue draft: openclaw/openclaw
 
-- **Status:** resolved — lit again (2026-11-26); nothing to file
+- **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/openclaw/openclaw/issues/new
-- **Stars:** 395230 · **Generated:** 2026-11-26T00:53:15.119Z
+- **Stars:** 395301 · **Generated:** 2026-11-27T00:52:53.857Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** latest run was skipped, not failed — probably not worth filing
 
@@ -19,8 +19,8 @@ CI: "Docs" workflow not completing (runs skipped) on main since 2026-11-22
 <!-- BEGIN BODY -->
 Hi! The **Docs** workflow (`.github/workflows/docs.yml`) on `main` has been not completing (runs skipped) since 2026-11-22. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/openclaw/openclaw/actions/runs/45276500849 — dark (conclusion: `skipped`), 2026-11-23 22:07 UTC
-- Dark since: 2026-11-22 08:11 UTC (first run of the current streak)
+- Latest run on `main`: https://github.com/openclaw/openclaw/actions/runs/45001101340 — dark (conclusion: `skipped`), 2026-11-22 08:04 UTC
+- Dark since: 2026-11-22 08:04 UTC (first run of the current streak)
 - Likely cause: run skipped
 
 If this is already known or expected, feel free to close. Thanks for maintaining openclaw!

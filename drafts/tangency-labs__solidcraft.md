@@ -4,7 +4,7 @@
 
 - **Status:** not for filing — upstream already has an open issue/PR about every dark workflow here
 - **Would be filed at:** https://github.com/tangency-labs/solidcraft/issues/new
-- **Stars:** 18480 · **Generated:** 2026-11-26T18:38:05.420Z
+- **Stars:** 18551 · **Generated:** 2026-11-27T00:52:53.857Z
 - Nothing in this file has been sent anywhere.
 
 ## Skipped: upstream already tracking

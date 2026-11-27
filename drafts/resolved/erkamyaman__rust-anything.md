@@ -1,8 +1,8 @@
 <!-- dark-draft: erkamyaman/rust-anything -->
-<!-- draft-state: ready -->
+<!-- draft-state: resolved -->
 # Upstream issue draft: erkamyaman/rust-anything
 
-- **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
+- **Status:** resolved — lit again (2026-11-27); nothing to file
 - **Would be filed at:** https://github.com/erkamyaman/rust-anything/issues/new
 - **Stars:** 10065 · **Generated:** 2026-11-26T18:38:05.420Z
 - Nothing in this file has been sent anywhere.
