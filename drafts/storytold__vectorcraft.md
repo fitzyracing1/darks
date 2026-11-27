@@ -4,45 +4,37 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/storytold/vectorcraft/issues/new
-- **Stars:** 12137 · **Generated:** 2026-11-27T06:46:20.331Z
+- **Stars:** 12139 · **Generated:** 2026-11-27T12:42:45.007Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 2 workflows dark on main ("SonarCloud", "CI")
+CI: "SonarCloud" workflow getting cancelled on main since 2026-11-26
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
+Hi! The **SonarCloud** workflow (`.github/workflows/sonarcloud.yml`) on `main` has been getting cancelled since 2026-11-26. Here is what I saw, in case it's useful:
 
-### SonarCloud (`.github/workflows/sonarcloud.yml`)
-
-- Latest run on `main`: https://github.com/storytold/vectorcraft/actions/runs/45948635697 — dark (conclusion: `cancelled`), 2026-11-27 05:55 UTC
+- Latest run on `main`: https://github.com/storytold/vectorcraft/actions/runs/45983575309 — dark (conclusion: `cancelled`), 2026-11-27 10:36 UTC
 - Dark since: 2026-11-26 09:43 UTC (first run of the current streak)
-- Likely cause: run cancelled
-
-### CI (`.github/workflows/ci.yml`)
-
-- Latest run on `main`: https://github.com/storytold/vectorcraft/actions/runs/45948896849 — dark (conclusion: `failure`), 2026-11-27 05:58 UTC
-- Dark since: 2026-11-27 05:31 UTC (first run of the current streak)
-- Job / step: `gate / test 5/5 (ubuntu-24.04)` → `Gate`
-- Likely cause: FAIL  clippy: cargo clippy --workspace --all-targets --keep-going -- -D warnings: exited with exit status: 101
+- Job / step: `sonarcloud / Build instrumented test archive` → `Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9`
+- Likely cause: The job has exceeded the maximum execution time of 1h30m0s
 
 <details><summary>End of the job log</summary>
 
 ```
-  skip  pdf-deps
-  skip  assets
-  skip  brands
-  skip  cursors
-  skip  ui-commands
-  skip  layers
-  skip  wasm
-##[error]Process completed with exit code 1.
+Uploaded bytes 1098907648
+Uploaded bytes 1107296256
+Uploaded bytes 1115684864
+Uploaded bytes 1124073472
+Uploaded bytes 1132462080
+Uploaded bytes 1140850688
+Uploaded bytes 1149239296
+##[error]The operation was canceled.
 ```
 
 </details>

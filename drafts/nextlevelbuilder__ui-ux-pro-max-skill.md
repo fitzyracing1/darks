@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/issues/new
-- **Stars:** 154741 · **Generated:** 2026-11-27T06:46:20.331Z
+- **Stars:** 154868 · **Generated:** 2026-11-27T12:42:45.007Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -20,7 +20,7 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### Release (`.github/workflows/release.yml`)
 
-- Latest run on `main`: https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/actions/runs/45937912254 — dark (conclusion: `failure`), 2026-11-27 04:05 UTC
+- Latest run on `main`: https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/actions/runs/45956335689 — dark (conclusion: `failure`), 2026-11-27 07:07 UTC
 - Dark since: 2026-10-03 16:05 UTC (first run of the current streak)
 - Job / step: `Semantic release` → `Run semantic-release`
 - Likely cause: at default (file:///home/runner/.npm/_npx/63271f8df082dd7b/node_modules/@semantic-release/npm/lib/get-error.js:7:10)

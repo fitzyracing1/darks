@@ -4,14 +4,14 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/xberg-io/xberg/issues/new
-- **Stars:** 9623 · **Generated:** 2026-11-27T06:46:20.331Z
+- **Stars:** 9624 · **Generated:** 2026-11-27T12:42:45.007Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 12 workflows dark on main ("CI E2E", "CI Rust", "CI Docker", +9 more)
+CI: 8 workflows dark on main ("CI E2E", "CI Rust", "CI Docker", +5 more)
 <!-- END TITLE -->
 
 ## Body
@@ -49,10 +49,25 @@ Finished in 14860.63s
 
 ### CI Docker (`.github/workflows/ci-docker.yaml`)
 
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/45627495515 — dark (conclusion: `cancelled`), 2026-11-25 13:49 UTC
+- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/45962348767 — dark (conclusion: `failure`), 2026-11-27 08:00 UTC
 - Dark since: 2026-11-20 07:25 UTC (first run of the current streak)
-- Job / step: `Docker (cli)`
-- Likely cause: The run was canceled by @Goldziher.
+- Job / step: `Docker (core)` → `Run API contract tests with schemathesis`
+- Likely cause: Failed to establish a new connection: [Errno 111] Connection refused
+
+<details><summary>End of the job log</summary>
+
+```
+━━━━━━━━━━━━━━━━━━━━
+ ❌  Failed to load specification from http://localhost:8000/openapi.json after
+ 0.02s
+ Schema Loading Error
+ Connection failed
+     Failed to establish a new connection: [Errno 111] Connection refused
+Tip: Use `--wait-for-schema=NUM` to wait up to NUM seconds for schema availability.
+##[error]Process completed with exit code 2.
+```
+
+</details>
 
 ### CI NLI Advisories (`.github/workflows/ci-nli-advisories.yaml`)
 
@@ -76,23 +91,9 @@ advisories FAILED, bans ok, licenses ok, sources ok
 
 </details>
 
-### CI Focused PR (`.github/workflows/ci-focused-pr.yaml`)
-
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/45627495361 — dark (conclusion: `cancelled`), 2026-11-25 13:49 UTC
-- Dark since: 2026-11-23 18:24 UTC (first run of the current streak)
-- Job / step: `Shipped license graphs`
-- Likely cause: The run was canceled by @Goldziher.
-
-### CI Integrations (`.github/workflows/ci-integrations.yaml`)
-
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/45627495147 — dark (conclusion: `cancelled`), 2026-11-25 13:49 UTC
-- Dark since: 2026-11-25 06:57 UTC (first run of the current streak)
-- Job / step: `Build local integration bindings`
-- Likely cause: The run was canceled by @Goldziher.
-
 ### CI Lint (`.github/workflows/ci-lint.yaml`)
 
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/45782178668 — dark (conclusion: `failure`), 2026-11-26 08:19 UTC
+- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/45964081844 — dark (conclusion: `failure`), 2026-11-27 08:13 UTC
 - Dark since: 2026-11-25 06:57 UTC (first run of the current streak)
 - Job / step: `Generated e2e suites freshness` → `Verify generated e2e suites are current`
 - Likely cause: [e2e:verify] ERROR task failed
@@ -134,25 +135,11 @@ BW02: Using flags on `run` requires at least BATS_VERSION=1.5.0. Use `bats_requi
 
 </details>
 
-### CI Mobile (`.github/workflows/ci-mobile.yaml`)
-
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/45627495301 — dark (conclusion: `cancelled`), 2026-11-25 13:49 UTC
-- Dark since: 2026-11-25 13:49 UTC (first run of the current streak)
-- Job / step: `Android cargo check (x86_64)`
-- Likely cause: The run was canceled by @Goldziher.
-
 ### Native libheif runtime qualification (`.github/workflows/ci-native-runtime.yaml`)
 
 - Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/45627495194 — dark (conclusion: `cancelled`), 2026-11-25 13:49 UTC
 - Dark since: 2026-11-25 13:49 UTC (first run of the current streak)
 - Job / step: `libheif 1.23.7 ABI and real decoding`
-- Likely cause: The run was canceled by @Goldziher.
-
-### CI Docs (`.github/workflows/ci-docs.yaml`)
-
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/45642042236 — dark (conclusion: `cancelled`), 2026-11-25 15:09 UTC
-- Dark since: 2026-11-25 13:49 UTC (first run of the current streak)
-- Job / step: `docs / Build`
 - Likely cause: The run was canceled by @Goldziher.
 
 ### AI-Rulez validation (`.github/workflows/ai-rulez-validation.yml`)

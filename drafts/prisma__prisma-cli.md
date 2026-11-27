@@ -4,36 +4,36 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/prisma/prisma-cli/issues/new
-- **Stars:** 26 · **Generated:** 2026-11-27T06:46:20.331Z
+- **Stars:** 26 · **Generated:** 2026-11-27T12:42:45.007Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: "Test" workflow failing on main since 2026-11-26
+CI: "Publish to npm" workflow failing on main since 2026-11-27
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! The **Test** workflow (`.github/workflows/test.yml`) on `main` has been failing since 2026-11-26. Here is what I saw, in case it's useful:
+Hi! The **Publish to npm** workflow (`.github/workflows/publish.yml`) on `main` has been failing since 2026-11-27. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/prisma/prisma-cli/actions/runs/45799058095 — dark (conclusion: `failure`), 2026-11-26 10:11 UTC
-- Dark since: 2026-11-26 10:11 UTC (first run of the current streak)
-- Job / step: `test (windows-latest)` → `Run CLI tests`
-- Likely cause: Error: Test timed out in 5000ms. (packages/cli/tests/skills-sync.test.ts:106)
+- Latest run on `main`: https://github.com/prisma/prisma-cli/actions/runs/45965380342 — dark (conclusion: `failure`), 2026-11-27 08:24 UTC
+- Dark since: 2026-11-27 08:09 UTC (first run of the current streak)
+- Job / step: `Publish packages to npm` → `Check the dev version`
+- Likely cause: AssertionError: expected [ 'migration ref policy delete', …(2) ] to deeply equal [] (packages/cli/tests/mount-coverage.test.ts:186)
 
 <details><summary>End of the job log</summary>
 
 ```
- FAIL  tests/skills-sync.test.ts > skills sync > installs a skill into every harness directory from an npm layout
-Error: ENOTEMPTY: directory not empty, rmdir 'C:\Users\RUNNER~1\AppData\Local\Temp\prisma-cli-skills-lAfPE9\.devin\skills\prisma-8'
-⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/2]⎯
- Test Files  1 failed | 71 passed | 1 skipped (73)
-      Tests  1 failed | 1346 passed | 10 skipped (1357)
-   Start at  10:13:35
-   Duration  54.05s (transform 7.71s, setup 0ms, import 63.87s, tests 79.33s, environment 8ms)
-##[error]Error: Test timed out in 5000ms.
+ℹ Granting execute permission to dist/cli.js
+ℹ dist/cli.js                        593.96 kB │ gzip: 141.35 kB
+ℹ dist/sender.js                       6.56 kB │ gzip:   2.85 kB
+ℹ dist/payload-B88Qvzxk-CrtTXSOe.js    1.60 kB │ gzip:   0.76 kB
+ℹ 3 files, total: 602.12 kB
+✔ Build complete in 114ms
+@prisma/cli:check:grammar
+##[error]command (/home/runner/work/prisma-cli/prisma-cli/packages/cli) /home/runner/setup-pnpm/node_modules/.bin/bin/pnpm run check:grammar exited (1)
 ```
 
 </details>

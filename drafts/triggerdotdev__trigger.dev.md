@@ -4,19 +4,23 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/triggerdotdev/trigger.dev/issues/new
-- **Stars:** 16831 · **Generated:** 2026-11-27T06:46:20.331Z
+- **Stars:** 16833 · **Generated:** 2026-11-27T12:42:45.007Z
 - Nothing in this file has been sent anywhere.
+- **Note for Joshua:** cancelled by a concurrency group — likely noise
+- **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: "🛡️ E2E Tests: Webapp Auth (full)" workflow failing on main since 2026-11-11
+CI: 5 workflows dark on main ("🛡️ E2E Tests: Webapp Auth (full)", "CodeQL", "🚀 Publish Trigger.dev Docker", +2 more)
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! The **🛡️ E2E Tests: Webapp Auth (full)** workflow (`.github/workflows/e2e-webapp-auth-full.yml`) on `main` has been failing since 2026-11-11. Here is what I saw, in case it's useful:
+Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
+
+### 🛡️ E2E Tests: Webapp Auth (full) (`.github/workflows/e2e-webapp-auth-full.yml`)
 
 - Latest run on `main`: https://github.com/triggerdotdev/trigger.dev/actions/runs/45937411680 — dark (conclusion: `failure`), 2026-11-27 04:00 UTC
 - Dark since: 2026-11-11 04:00 UTC (first run of the current streak)
@@ -37,6 +41,46 @@ Hi! The **🛡️ E2E Tests: Webapp Auth (full)** workflow (`.github/workflows/e
 ```
 
 </details>
+
+### CodeQL (`.github/workflows/codeql.yml`)
+
+- Latest run on `main`: https://github.com/triggerdotdev/trigger.dev/actions/runs/45999389976 — dark (conclusion: `cancelled`), 2026-11-27 12:31 UTC
+- Dark since: 2026-11-27 12:28 UTC (first run of the current streak)
+- Job / step: `Analyze (actions)` → `Checkout repository`
+- Likely cause: Canceling since a higher priority waiting request for CodeQL-refs/heads/main exists
+
+<details><summary>End of the job log</summary>
+
+```
+hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+hint: 'development'. The just-created branch can be renamed via this command:
+hint:
+hint: 	git branch -m <name>
+hint:
+hint: Disable this message with "git config set advice.defaultBranchName false"
+Initialized empty Git repository in /home/runner/work/trigger.dev/trigger.dev/.git/
+##[error]The operation was canceled.
+```
+
+</details>
+
+### 🚀 Publish Trigger.dev Docker (`.github/workflows/publish.yml`)
+
+- Latest run on `main`: https://github.com/triggerdotdev/trigger.dev/actions/runs/45999407155 — dark (conclusion: `cancelled`), 2026-11-27 12:31 UTC
+- Dark since: 2026-11-27 12:29 UTC (first run of the current streak)
+- Likely cause: run cancelled
+
+### 🦋 Changesets PR (`.github/workflows/changesets-pr.yml`)
+
+- Latest run on `main`: https://github.com/triggerdotdev/trigger.dev/actions/runs/45999344159 — dark (conclusion: `cancelled`), 2026-11-27 12:31 UTC
+- Dark since: 2026-11-27 12:29 UTC (first run of the current streak)
+- Likely cause: run cancelled
+
+### Dispatch RepoOps sync (`.github/workflows/dispatch-repo-ops-sync.yml`)
+
+- Latest run on `main`: https://github.com/triggerdotdev/trigger.dev/actions/runs/45999389871 — dark (conclusion: `cancelled`), 2026-11-27 12:31 UTC
+- Dark since: 2026-11-27 12:31 UTC (first run of the current streak)
+- Likely cause: run cancelled
 
 If this is already known or expected, feel free to close. Thanks for maintaining trigger.dev!
 
