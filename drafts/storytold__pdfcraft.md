@@ -4,14 +4,8 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/storytold/pdfcraft/issues/new
-- **Stars:** 21924 · **Generated:** 2026-11-27T12:42:45.007Z
+- **Stars:** 21937 · **Generated:** 2026-11-27T18:37:03.333Z
 - Nothing in this file has been sent anywhere.
-
-## Skipped: upstream already tracking
-
-- SonarCloud (`.github/workflows/sonarcloud.yml`): [issue #7225](https://github.com/storytold/pdfcraft/issues/7225) "SonarCloud coverage runs without the gate's craft-fonts, so glyph tests fail there"
-
-These workflows are left out of the body below.
 
 ## Suggested title
 
@@ -70,22 +64,22 @@ warning: build failed, waiting for other jobs to finish...
 
 ### CI (`.github/workflows/ci.yml`)
 
-- Latest run on `main`: https://github.com/storytold/pdfcraft/actions/runs/45889982203 — dark (conclusion: `failure`), 2026-11-26 20:17 UTC
+- Latest run on `main`: https://github.com/storytold/pdfcraft/actions/runs/46000404092 — dark (conclusion: `failure`), 2026-11-27 12:39 UTC
 - Dark since: 2026-11-23 20:01 UTC (first run of the current streak)
-- Job / step: `gate / gate (ubuntu-24.04)` → `Gate`
-- Likely cause: CI: 9 of 11 steps passed, FAILED: test, deny
+- Job / step: `gate / gate (windows-latest)` → `Gate`
+- Likely cause: error: test failed, to rerun pass '-p pdfcraft-ui-egui --test it'
 
 <details><summary>End of the job log</summary>
 
 ```
-  K Optimize and standards                  58       20       12      44.8%
-  L Print and print production              41       21        3      54.9%
-  M Accessibility                           61       39       10      72.1%
-  N Compare, automation, AI, misc           76       19       14      34.2%
-xtask ci: error: ci failed at `test`, `deny`
-note: 100 shipped feature(s) have no automation tool yet (AGENTS.md §3): core.malformed-input-safety, core.xref-streams, core.stream-filters, core.decompression-limits, core.unicode-passwords, core.permissions-enforced,…
-CI: 9 of 11 steps passed, FAILED: test, deny
-##[error]Process completed with exit code 1.
+             at /rustc/0ef1bc386059596dada8fb65b50425aab2ea637a/library/core\src\ops\function.rs:250
+note: Some details are omitted, run with `RUST_BACKTRACE=full` for a verbose backtrace.
+failures:
+    editing::the_last_session_reopens_its_files_pages_and_active_tab
+    pickers::attachment_save_preserves_bytes_metadata_and_selected_destination
+test result: FAILED. 1561 passed; 2 failed; 10 ignored; 0 measured; 0 filtered out; finished in 357.18s
+error: test failed, to rerun pass `-p pdfcraft-ui-egui --test it`
+##[error]Process completed with exit code 101.
 ```
 
 </details>

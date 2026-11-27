@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/prisma/prisma-cli/issues/new
-- **Stars:** 26 · **Generated:** 2026-11-27T12:42:45.007Z
+- **Stars:** 26 · **Generated:** 2026-11-27T18:37:03.333Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title

@@ -4,43 +4,19 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/ruvnet/ruflo/issues/new
-- **Stars:** 82534 · **Generated:** 2026-11-27T12:42:45.007Z
+- **Stars:** 82548 · **Generated:** 2026-11-27T18:37:03.333Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 2 workflows dark on main ("CI/CD Pipeline", "Clone Tracker (14-day rolling)")
+CI: "Clone Tracker (14-day rolling)" workflow failing on main since 2026-11-27
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
-
-### CI/CD Pipeline (`.github/workflows/ci.yml`)
-
-- Latest run on `main`: https://github.com/ruvnet/ruflo/actions/runs/45926645948 — dark (conclusion: `failure`), 2026-11-27 02:09 UTC
-- Dark since: 2026-11-27 02:09 UTC (first run of the current streak)
-- Job / step: `Test Suite (ubuntu-latest)` → `Run all tests`
-- Likely cause: AssertionError: expected 0.0002508610486984253 to be greater than 0.001
-
-<details><summary>End of the job log</summary>
-
-```
-  duration_ms: 2.572636
-  ...
-JSON report written to /home/runner/work/ruflo/ruflo/.test-results/vitest.json
-CI test ratchet: FAILED — 1 unexpected failing file(s)
-  + v3/@claude-flow/neural/__tests__/moe-router-load-balance.test.ts
-      ✗ computeLoadBalanceLoss() uses the mean router probability (#4381) is not driven by the current call: one divergent query leaves the loss at the historical value
-        AssertionError: expected 0.0002508610486984253 to be greater than 0.001
-##[error]Process completed with exit code 1.
-```
-
-</details>
-
-### Clone Tracker (14-day rolling) (`.github/workflows/clone-tracker.yml`)
+Hi! The **Clone Tracker (14-day rolling)** workflow (`.github/workflows/clone-tracker.yml`) on `main` has been failing since 2026-11-27. Here is what I saw, in case it's useful:
 
 - Latest run on `main`: https://github.com/ruvnet/ruflo/actions/runs/45952416396 — dark (conclusion: `failure`), 2026-11-27 06:31 UTC
 - Dark since: 2026-11-27 06:31 UTC (first run of the current streak)

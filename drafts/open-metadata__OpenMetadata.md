@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/open-metadata/OpenMetadata/issues/new
-- **Stars:** 15894 · **Generated:** 2026-11-27T12:42:45.007Z
+- **Stars:** 15895 · **Generated:** 2026-11-27T18:37:03.333Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -18,7 +18,7 @@ CI: "monitor-slack-link" workflow failing on main since 2026-11-06
 <!-- BEGIN BODY -->
 Hi! The **monitor-slack-link** workflow (`.github/workflows/monitor-slack-link.yml`) on `main` has been failing since 2026-11-06. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/45997145695 — dark (conclusion: `failure`), 2026-11-27 12:15 UTC
+- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/46047654790 — dark (conclusion: `failure`), 2026-11-27 18:12 UTC
 - Dark since: 2026-11-06 22:08 UTC (first run of the current streak)
 - Job / step: `monitor-slack-link` → `Set up Python 3.9`
 - Likely cause: The version '3.9' with architecture 'x64' was not found for Ubuntu 26.04.
@@ -26,12 +26,12 @@ Hi! The **monitor-slack-link** workflow (`.github/workflows/monitor-slack-link.y
 <details><summary>End of the job log</summary>
 
 ```
-Updating files:  99% (27893/28174)
-Updating files: 100% (28174/28174)
-Updating files: 100% (28174/28174), done.
+Updating files:  99% (27915/28196)
+Updating files: 100% (28196/28196)
+Updating files: 100% (28196/28196), done.
 Switched to a new branch 'main'
 branch 'main' set up to track 'origin/main'.
-2b3e6de6973116a511e399bc1883681d7fa85fd0
+730a1e0c7ed613732e4d7515285afd8d39eeb650
 Version 3.9 was not found in the local cache
 ##[error]The version '3.9' with architecture 'x64' was not found for Ubuntu 26.04.
 ```

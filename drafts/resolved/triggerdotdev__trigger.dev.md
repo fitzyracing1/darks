@@ -1,8 +1,8 @@
 <!-- dark-draft: triggerdotdev/trigger.dev -->
-<!-- draft-state: ready -->
+<!-- draft-state: resolved -->
 # Upstream issue draft: triggerdotdev/trigger.dev
 
-- **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
+- **Status:** resolved — lit again (2026-11-27); nothing to file
 - **Would be filed at:** https://github.com/triggerdotdev/trigger.dev/issues/new
 - **Stars:** 16833 · **Generated:** 2026-11-27T12:42:45.007Z
 - Nothing in this file has been sent anywhere.

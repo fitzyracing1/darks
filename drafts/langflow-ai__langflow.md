@@ -4,13 +4,13 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/langflow-ai/langflow/issues/new
-- **Stars:** 156986 · **Generated:** 2026-11-27T12:42:45.007Z
+- **Stars:** 156989 · **Generated:** 2026-11-27T18:37:03.333Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 3 workflows dark on main ("Deploy Storybook to GitHub Pages", "GP Download Translations", "Nightly Build")
+CI: 4 workflows dark on main ("Deploy Storybook to GitHub Pages", "GP Download Translations", "Nightly Build", +1 more)
 <!-- END TITLE -->
 
 ## Body
@@ -64,21 +64,27 @@ FAILED languages: ['fr', 'ja', 'es', 'de', 'pt', 'zh-Hans']
 
 ### Nightly Build (`.github/workflows/nightly_build.yml`)
 
-- Latest run on `main`: https://github.com/langflow-ai/langflow/actions/runs/45916331000 — dark (conclusion: `failure`), 2026-11-27 00:22 UTC
+- Latest run on `main`: https://github.com/langflow-ai/langflow/actions/runs/45728206452 — dark (conclusion: `failure`), 2026-11-26 00:21 UTC
 - Dark since: 2026-11-18 00:22 UTC (first run of the current streak)
-- Job / step: `create-nightly-tag` → `Commit tag`
-- Likely cause: Tag push failed. Check if the tag already exists. Exiting the workflow.
+- Likely cause: cause not readable (GET /repos/langflow-ai/langflow/actions/runs/45728206452/jobs?filter=latest&per_)
+
+### Mend (`.github/workflows/mend.yml`)
+
+- Latest run on `main`: https://github.com/langflow-ai/langflow/actions/runs/46038755846 — dark (conclusion: `failure`), 2026-11-27 17:03 UTC
+- Dark since: 2026-11-27 17:03 UTC (first run of the current streak)
+- Job / step: `mend-scan` → `Export Python deps for Mend`
+- Likely cause: your requirements are unsatisfiable.
 
 <details><summary>End of the job log</summary>
 
 ```
-+ git push origin v1.14.0.dev40
-To https://github.com/langflow-ai/langflow
- ! [remote rejected]       v1.14.0.dev40 -> v1.14.0.dev40 (Unable to determine if workflow can be created or updated due to timeout; `workflows` scope may be required.)
-error: failed to push some refs to 'https://github.com/langflow-ai/langflow'
-+ echo 'Tag push failed. Check if the tag already exists. Exiting the workflow.'
-Tag push failed. Check if the tag already exists. Exiting the workflow.
-+ exit 1
+Trying to restore cache from GitHub Actions cache with key: setup-uv-2-x86_64-unknown-linux-gnu-ubuntu-26.04-3.12.16-be95da31be1baf32d25a8995254a454b8e8f20dfb3c8162ec547963fb44abd7a
+No GitHub Actions cache found for key: setup-uv-2-x86_64-unknown-linux-gnu-ubuntu-26.04-3.12.16-be95da31be1baf32d25a8995254a454b8e8f20dfb3c8162ec547963fb44abd7a
+  × No solution found when resolving dependencies:
+  ╰─▶ Because there is no version of ibm-db{platform_machine != 'aarch64' or
+      sys_platform != 'linux'}==3.2.9 and you require ibm-db{platform_machine
+      != 'aarch64' or sys_platform != 'linux'}==3.2.9, we can conclude that
+      your requirements are unsatisfiable.
 ##[error]Process completed with exit code 1.
 ```
 

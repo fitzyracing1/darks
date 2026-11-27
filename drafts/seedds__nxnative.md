@@ -4,13 +4,14 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/seedds/nxnative/issues/new
-- **Stars:** 16817 · **Generated:** 2026-11-27T12:42:45.007Z
+- **Stars:** 16836 · **Generated:** 2026-11-27T18:37:03.333Z
 - Nothing in this file has been sent anywhere.
+- **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 2 workflows dark on main ("lint-c", "lint-python")
+CI: 2 workflows dark on main ("lint-python", "tests")
 <!-- END TITLE -->
 
 ## Body
@@ -18,31 +19,9 @@ CI: 2 workflows dark on main ("lint-c", "lint-python")
 <!-- BEGIN BODY -->
 Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
 
-### lint-c (`.github/workflows/lint-c.yml`)
-
-- Latest run on `main`: https://github.com/seedds/nxnative/actions/runs/45983446953 — dark (conclusion: `failure`), 2026-11-27 10:35 UTC
-- Dark since: 2026-11-27 10:01 UTC (first run of the current streak)
-- Job / step: `clang-tidy (ratchet)` → `clang-tidy against the baseline`
-- Likely cause: either cast from 'int' to 'NSUInteger' (aka 'unsigned long') is ineffective, or there is loss of precision before the conversion [bugprone-misplaced-widening-cast] (1 in this file, the baseline has 0) (dm/gfx/tests/t_perf_order.m:175)
-
-<details><summary>End of the job log</summary>
-
-```
-[416/420] dm/host/tests/t_watch_sample.c: 0 findings
-[417/420] dm/host/tests/t_web_apple.m: 0 findings
-[418/420] dm/host/tests/t_web_stack.c: 0 findings
-[419/420] dm/host/thread.c: 1 findings
-[420/420] dm/host/web_apple.m: 0 findings
-LLVM 23.1.4: 177 findings in 63 files, 100 file/check pairs
-dm/gfx/tests/t_perf_order.m: bugprone-misplaced-widening-cast: 1 findings, the baseline has 0
-##[error]either cast from 'int' to 'NSUInteger' (aka 'unsigned long') is ineffective, or there is loss of precision before the conversion [bugprone-misplaced-widening-cast] (1 in this file, the baseline has 0)
-```
-
-</details>
-
 ### lint-python (`.github/workflows/lint-python.yml`)
 
-- Latest run on `main`: https://github.com/seedds/nxnative/actions/runs/45992613930 — dark (conclusion: `failure`), 2026-11-27 11:42 UTC
+- Latest run on `main`: https://github.com/seedds/nxnative/actions/runs/46033036406 — dark (conclusion: `failure`), 2026-11-27 16:22 UTC
 - Dark since: 2026-11-27 11:07 UTC (first run of the current streak)
 - Job / step: `ruff and pyright (ratchet)` → `ruff and pyright against the baseline`
 - Likely cause: "worker" is not a known attribute of "None" (dm/tools/tests/test_shader_cache.py:748)
@@ -58,6 +37,28 @@ Using cached typing_extensions-4.16.0-py3-none-any.whl (45 kB)
 Installing collected packages: typing-extensions, ruff, nodeenv, lz4, fonttools, capstone, pyright
 Successfully installed capstone-5.0.9 fonttools-4.67.0 lz4-4.4.5 nodeenv-1.12.0 pyright-1.1.414 ruff-0.17.2 typing-extensions-4.16.0
 ##[error]"worker" is not a known attribute of "None"
+```
+
+</details>
+
+### tests (`.github/workflows/tests.yml`)
+
+- Latest run on `main`: https://github.com/seedds/nxnative/actions/runs/46034242824 — dark (conclusion: `cancelled`), 2026-11-27 16:30 UTC
+- Dark since: 2026-11-27 16:22 UTC (first run of the current streak)
+- Job / step: `Tool tests` → `Post Run actions/setup-dotnet@a98b56852c35b8e3190ac28c8c2271da59106c68`
+- Likely cause: The job has exceeded the maximum execution time of 15m0s
+
+<details><summary>End of the job log</summary>
+
+```
+/Users/runner/work/nxnative/nxnative/dm/gfx/tools/dmsh_build.py:977: ResourceWarning: unclosed file <_io.TextIOWrapper name='/var/folders/5n/5t77mfb93jd7q8v9s6f0dn0m0000gn/T/vs_mask_uniform_7mlgahfo/built.metal' mode='w…
+  src = dmsh_entry.vs_base_instance(dmsh_entry.vs_layer(dmsh_entry.vs_init(src))); open(msl, 'w').write(src)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ok
+----------------------------------------------------------------------
+Ran 7 tests in 2.037s
+OK (skipped=1)
+##[error]The operation was canceled.
 ```
 
 </details>
