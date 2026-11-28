@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/liketrek/TREK/issues/new
-- **Stars:** 15976 · **Generated:** 2026-11-27T18:37:03.333Z
+- **Stars:** 15992 · **Generated:** 2026-11-28T00:52:21.970Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title

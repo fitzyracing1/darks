@@ -4,9 +4,15 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/l0ng-ai/openidea/issues/new
-- **Stars:** 10455 · **Generated:** 2026-11-27T18:37:03.333Z
+- **Stars:** 10463 · **Generated:** 2026-11-28T00:52:21.970Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
+
+## Skipped: upstream already tracking
+
+- Language smoke (`.github/workflows/language-smoke.yml`): [issue #6550](https://github.com/l0ng-ai/openidea/issues/6550) "Language smoke misses changes to refactor providers"
+
+These workflows are left out of the body below.
 
 ## Suggested title
 
@@ -19,7 +25,7 @@ CI: "CI" workflow getting cancelled on main since 2026-11-10
 <!-- BEGIN BODY -->
 Hi! The **CI** workflow (`.github/workflows/ci.yml`) on `main` has been getting cancelled since 2026-11-10. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/l0ng-ai/openidea/actions/runs/46048681228 — dark (conclusion: `cancelled`), 2026-11-27 18:20 UTC
+- Latest run on `main`: https://github.com/l0ng-ai/openidea/actions/runs/46088843269 — dark (conclusion: `cancelled`), 2026-11-28 00:37 UTC
 - Dark since: 2026-11-10 13:06 UTC (first run of the current streak)
 - Likely cause: run cancelled
 

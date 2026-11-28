@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/langflow-ai/langflow/issues/new
-- **Stars:** 156989 · **Generated:** 2026-11-27T18:37:03.333Z
+- **Stars:** 156989 · **Generated:** 2026-11-28T00:52:21.970Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -42,21 +42,21 @@ Creating Pages deployment with payload:
 
 ### GP Download Translations (`.github/workflows/gp-download.yml`)
 
-- Latest run on `main`: https://github.com/langflow-ai/langflow/actions/runs/45908320437 — dark (conclusion: `failure`), 2026-11-26 23:00 UTC
+- Latest run on `main`: https://github.com/langflow-ai/langflow/actions/runs/46080012552 — dark (conclusion: `failure`), 2026-11-27 23:00 UTC
 - Dark since: 2026-11-16 23:01 UTC (first run of the current streak)
 - Job / step: `Download translations from Globalization Pipeline` → `Download translations from GP`
-- Likely cause: FAILED languages: ['fr', 'ja', 'es', 'de', 'pt', 'zh-Hans']
+- Likely cause: FAILED languages: ['fr', 'ja', 'es', 'de', 'pt', 'zh-Hans', 'tr']
 
 <details><summary>End of the job log</summary>
 
 ```
-Downloading 'de' translations...
-  Error downloading 'de': 401 Client Error: Unauthorized for url: https://g11n-pipeline-api.straker.global/translate/rest/langflow-test/v2/bundles/langflow-ui/de
 Downloading 'pt' translations...
   Error downloading 'pt': 401 Client Error: Unauthorized for url: https://g11n-pipeline-api.straker.global/translate/rest/langflow-test/v2/bundles/langflow-ui/pt
 Downloading 'zh-Hans' translations...
   Error downloading 'zh-Hans': 401 Client Error: Unauthorized for url: https://g11n-pipeline-api.straker.global/translate/rest/langflow-test/v2/bundles/langflow-ui/zh-Hans
-FAILED languages: ['fr', 'ja', 'es', 'de', 'pt', 'zh-Hans']
+Downloading 'tr' translations...
+  Error downloading 'tr': 401 Client Error: Unauthorized for url: https://g11n-pipeline-api.straker.global/translate/rest/langflow-test/v2/bundles/langflow-ui/tr
+FAILED languages: ['fr', 'ja', 'es', 'de', 'pt', 'zh-Hans', 'tr']
 ##[error]Process completed with exit code 1.
 ```
 

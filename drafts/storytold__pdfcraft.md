@@ -4,8 +4,9 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/storytold/pdfcraft/issues/new
-- **Stars:** 21937 · **Generated:** 2026-11-27T18:37:03.333Z
+- **Stars:** 21955 · **Generated:** 2026-11-28T00:52:21.970Z
 - Nothing in this file has been sent anywhere.
+- **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
@@ -64,22 +65,22 @@ warning: build failed, waiting for other jobs to finish...
 
 ### CI (`.github/workflows/ci.yml`)
 
-- Latest run on `main`: https://github.com/storytold/pdfcraft/actions/runs/46000404092 — dark (conclusion: `failure`), 2026-11-27 12:39 UTC
+- Latest run on `main`: https://github.com/storytold/pdfcraft/actions/runs/46077053718 — dark (conclusion: `cancelled`), 2026-11-27 22:30 UTC
 - Dark since: 2026-11-23 20:01 UTC (first run of the current streak)
 - Job / step: `gate / gate (windows-latest)` → `Gate`
-- Likely cause: error: test failed, to rerun pass '-p pdfcraft-ui-egui --test it'
+- Likely cause: The job has exceeded the maximum execution time of 1h30m0s
 
 <details><summary>End of the job log</summary>
 
 ```
-             at /rustc/0ef1bc386059596dada8fb65b50425aab2ea637a/library/core\src\ops\function.rs:250
-note: Some details are omitted, run with `RUST_BACKTRACE=full` for a verbose backtrace.
-failures:
-    editing::the_last_session_reopens_its_files_pages_and_active_tab
-    pickers::attachment_save_preserves_bytes_metadata_and_selected_destination
-test result: FAILED. 1561 passed; 2 failed; 10 ignored; 0 measured; 0 filtered out; finished in 357.18s
-error: test failed, to rerun pass `-p pdfcraft-ui-egui --test it`
-##[error]Process completed with exit code 101.
+   Compiling async-lock v3.4.2
+   Compiling ordered-stream v0.2.0
+   Compiling zbus v5.19.0
+   Compiling craft-web-api v0.1.0 (https://github.com/storytold/craft-libs?rev=0a6e42b80bfd586aee6ee1144aa98cf1ea37a844#0a6e42b8)
+   Compiling xtask v0.1.0 (D:\a\pdfcraft\pdfcraft\xtask)
+   Compiling pdfcraft-ocr-worker v0.22.0 (D:\a\pdfcraft\pdfcraft\apps\pdfcraft-ocr-worker)
+   Compiling pdfcraft-web v0.22.0 (D:\a\pdfcraft\pdfcraft\apps\pdfcraft-web)
+##[error]The operation was canceled.
 ```
 
 </details>

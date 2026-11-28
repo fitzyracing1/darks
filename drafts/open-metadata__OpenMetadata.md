@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/open-metadata/OpenMetadata/issues/new
-- **Stars:** 15895 · **Generated:** 2026-11-27T18:37:03.333Z
+- **Stars:** 15896 · **Generated:** 2026-11-28T00:52:21.970Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -18,7 +18,7 @@ CI: "monitor-slack-link" workflow failing on main since 2026-11-06
 <!-- BEGIN BODY -->
 Hi! The **monitor-slack-link** workflow (`.github/workflows/monitor-slack-link.yml`) on `main` has been failing since 2026-11-06. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/46047654790 — dark (conclusion: `failure`), 2026-11-27 18:12 UTC
+- Latest run on `main`: https://github.com/open-metadata/OpenMetadata/actions/runs/46087853472 — dark (conclusion: `failure`), 2026-11-28 00:26 UTC
 - Dark since: 2026-11-06 22:08 UTC (first run of the current streak)
 - Job / step: `monitor-slack-link` → `Set up Python 3.9`
 - Likely cause: The version '3.9' with architecture 'x64' was not found for Ubuntu 26.04.

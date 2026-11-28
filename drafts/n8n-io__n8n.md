@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/n8n-io/n8n/issues/new
-- **Stars:** 212389 · **Generated:** 2026-11-27T18:37:03.333Z
+- **Stars:** 212334 · **Generated:** 2026-11-28T00:52:21.970Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** latest run was skipped, not failed — probably not worth filing
 
@@ -21,13 +21,13 @@ Hi! A few workflows on `master` have been dark recently. Details below, in case 
 
 ### Security: Sync from Public (`.github/workflows/sec-sync-public-to-private.yml`)
 
-- Latest run on `master`: https://github.com/n8n-io/n8n/actions/runs/46047751945 — dark (conclusion: `skipped`), 2026-11-27 18:12 UTC
+- Latest run on `master`: https://github.com/n8n-io/n8n/actions/runs/46088075734 — dark (conclusion: `skipped`), 2026-11-28 00:28 UTC
 - Dark since: 2026-10-13 15:19 UTC (first run of the current streak)
 - Likely cause: run skipped
 
 ### CI: Master (Build, Test, Lint) (`.github/workflows/ci-master.yml`)
 
-- Latest run on `master`: https://github.com/n8n-io/n8n/actions/runs/46047206160 — dark (conclusion: `failure`), 2026-11-27 18:08 UTC
+- Latest run on `master`: https://github.com/n8n-io/n8n/actions/runs/46048318244 — dark (conclusion: `failure`), 2026-11-27 18:17 UTC
 - Dark since: 2026-11-27 17:22 UTC (first run of the current streak)
 - Job / step: `Unit tests (26) / Frontend (2/4)` → `Test`
 - Likely cause: command (/home/runner/_work/n8n/n8n/packages/modules/roles/frontend) /usr/local/bin/pnpm run test --shard=2/4 exited (1)
@@ -35,13 +35,13 @@ Hi! A few workflows on `master` have been dark recently. Details below, in case 
 <details><summary>End of the job log</summary>
 
 ```
- ✓ src/features/ai/assistant/focusedNodes.store.test.ts (59 tests) 524ms
- ✓ src/app/views/OAuthConsentView.test.ts (38 tests) 1059ms
- ✓ src/features/ai/instanceAi/composables/useMcpServerConnect.test.ts (38 tests) 197ms
- ✓ src/features/ai/instanceAi/components/__tests__/InstanceAiInput.attachments.test.ts (35 tests) 2102ms
- ✓ src/features/execution/logs/components/LogsPanel.test.ts (30 tests) 2687ms
- ✓ src/features/credentials/__tests__/credentials.store.test.ts (35 tests) 35ms
- ✓ src/app/composables/useWorkflowActivate.test.ts (29 tests) 17ms
+    at /home/runner/_work/n8n/n8n/node_modules/.pnpm/jsdom@23.0.1_bufferutil@4.0.9_supports-color@8.1.1_utf-8-validate@5.0.10/node_modules/jsdom/lib/jsdom/browser/Window.js:898:7
+    at openSafeUrl (/home/runner/_work/n8n/n8n/packages/frontend/@n8n/frontend-utils/src/htmlUtils.ts:73:10)
+    at openResource (/home/runner/_work/n8n/n8n/packages/frontend/editor-ui/src/features/ndv/parameters/components/ResourceLocator/ResourceLocator.vue:718:2)
+    at handleAddResourceClick (/home/runner/_work/n8n/n8n/packages/frontend/editor-ui/src/features/ndv/parameters/components/ResourceLocator/ResourceLocator.vue:495:3)
+    at callWithErrorHandling (/home/runner/_work/n8n/n8n/node_modules/.pnpm/@vue+runtime-core@3.5.26/node_modules/@vue/runtime-core/dist/runtime-core.cjs.js:200:19)
+    at callWithAsyncErrorHandling (/home/runner/_work/n8n/n8n/node_modules/.pnpm/@vue+runtime-core@3.5.26/node_modules/@vue/runtime-core/dist/runtime-core.cjs.js:207:17)
+    at emit (/home/runner/_work/n8n/n8n/node_modules/.pnpm/@vue+runtime-core@3.5.26/node_modules/@vue/runtime-core/dist/runtime-core.cjs.js:4358:5)
 ##[error]command (/home/runner/_work/n8n/n8n/packages/modules/roles/frontend) /usr/local/bin/pnpm run test --shard=2/4 exited (1)
 ```
 
