@@ -1,8 +1,8 @@
 <!-- dark-draft: l0ng-ai/openidea -->
-<!-- draft-state: ready -->
+<!-- draft-state: resolved -->
 # Upstream issue draft: l0ng-ai/openidea
 
-- **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
+- **Status:** resolved — lit again (2026-11-28); nothing to file
 - **Would be filed at:** https://github.com/l0ng-ai/openidea/issues/new
 - **Stars:** 10463 · **Generated:** 2026-11-28T00:52:21.970Z
 - Nothing in this file has been sent anywhere.

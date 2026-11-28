@@ -4,9 +4,9 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/kajisho5/ffmpeg-skill/issues/new
-- **Stars:** 11896 · **Generated:** 2026-11-28T00:52:21.970Z
+- **Stars:** 12028 · **Generated:** 2026-11-28T06:43:29.854Z
 - Nothing in this file has been sent anywhere.
-- **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
+- **Note for Joshua:** cancelled by a concurrency group — likely noise
 
 ## Skipped: upstream already tracking
 
@@ -25,22 +25,22 @@ CI: "tests" workflow getting cancelled on main since 2026-11-27
 <!-- BEGIN BODY -->
 Hi! The **tests** workflow (`.github/workflows/ci.yml`) on `main` has been getting cancelled since 2026-11-27. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/kajisho5/ffmpeg-skill/actions/runs/46080964895 — dark (conclusion: `cancelled`), 2026-11-27 23:10 UTC
+- Latest run on `main`: https://github.com/kajisho5/ffmpeg-skill/actions/runs/46110902524 — dark (conclusion: `cancelled`), 2026-11-28 05:10 UTC
 - Dark since: 2026-11-27 15:00 UTC (first run of the current streak)
-- Job / step: `test (debian-trixie container, py3.13, ffmpeg 7.1 apt, 1/3)` → `Run python3 tests/run_parallel.py --part 1/3`
-- Likely cause: run cancelled in job "test (debian-trixie container, py3.13, ffmpeg 7.1 apt, 1/3)"
+- Job / step: `test (macos-latest, py3.10, 1/3)` → `Run python tests/run_parallel.py --part 1/3`
+- Likely cause: Canceling since a higher priority waiting request for tests-refs/heads/main exists
 
 <details><summary>End of the job log</summary>
 
 ```
-    1  the Windows tree kill: runs on the Windows CI job
-    1  this FFmpeg does not read the mislabelled fixture back as written: 15 not less than or equal to 7 : fixture pq_bt2020nc: red (192, 48, 40) came back (197, 53, 37); green (48, 192, 80) came back (43, 177, 77); blu…
-    1  this FFmpeg reads the fixture's matrix as 'gbr', not None
-    1  this ffmpeg's drawtext does not draw a box at a line break
-    1  this machine has no font covering hi
-    1  this machine has no font covering ja
-873 tests, 5 modules in 6 processes, 4 at a time, 1912s wall; FAILED: test_contract
-##[error]Process completed with exit code 1.
+OK (skipped=1)
+===== test_guards: OK in 413s (OK) =====
+Ran 14 tests in 412.741s
+OK
+===== test_audio: OK in 707s (OK) =====
+Ran 93 tests in 706.252s
+OK
+##[error]The operation was canceled.
 ```
 
 </details>

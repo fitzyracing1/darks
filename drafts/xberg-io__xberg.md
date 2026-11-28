@@ -4,9 +4,8 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/xberg-io/xberg/issues/new
-- **Stars:** 9626 · **Generated:** 2026-11-28T00:52:21.970Z
+- **Stars:** 9627 · **Generated:** 2026-11-28T06:43:29.854Z
 - Nothing in this file has been sent anywhere.
-- **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
@@ -21,7 +20,7 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### CI E2E (`.github/workflows/ci-e2e.yaml`)
 
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/46064838336 — dark (conclusion: `failure`), 2026-11-27 20:36 UTC
+- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/46091241038 — dark (conclusion: `failure`), 2026-11-28 01:04 UTC
 - Dark since: 2026-11-20 07:25 UTC (first run of the current streak)
 - Job / step: `E2E (swift)` → `Run e2e tests (swift, instrumented)`
 - Likely cause: [swift:e2e] ERROR task failed
@@ -43,22 +42,22 @@ ERROR Command failed: cd packages/swift && swift test (env: LD_LIBRARY_PATH)
 
 ### CI Rust (`.github/workflows/ci-rust.yaml`)
 
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/46060119799 — dark (conclusion: `cancelled`), 2026-11-27 19:56 UTC
+- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/46091240980 — dark (conclusion: `failure`), 2026-11-28 01:04 UTC
 - Dark since: 2026-11-20 07:25 UTC (first run of the current streak)
-- Job / step: `Rust (windows-latest, static-embeddings link)` → `Build xberg test harness (ocr + static-embeddings, real MSVC link)`
-- Likely cause: method 'take_list_item_source_label' is never used (crates/xberg/src/types/internal.rs:801)
+- Job / step: `Rust (macos-26)` → `Install system dependencies`
+- Likely cause: Expected Tesseract pkg-config 5.5.4
 
 <details><summary>End of the job log</summary>
 
 ```
-   Compiling hex v0.4.3
-   Compiling jotdown v0.10.0
-   Compiling xberg-child-test v0.0.0 (D:\a\xberg\xberg\crates\xberg\tests\support\child-process)
-   Compiling dotenvy v0.15.7
-   Compiling jpeg-encoder v0.7.1
-   Compiling memmap2 v0.9.12
-error: method `take_list_item_source_label` is never used
-##[error]   --> crates\xberg\src\types\internal.rs:801:19
+CMake:
+cmake version 4.5.1
+✓ Set CMAKE=/opt/homebrew/bin/cmake in GITHUB_ENV
+✓ Added cmake directory to GITHUB_PATH: /opt/homebrew/bin
+Tesseract:
+tesseract 5.5.5
+Expected Tesseract pkg-config 5.5.4
+##[error]Process completed with exit code 1.
 ```
 
 </details>
@@ -87,7 +86,7 @@ advisories FAILED, bans ok, licenses ok, sources ok
 
 ### CI Lint (`.github/workflows/ci-lint.yaml`)
 
-- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/46064838600 — dark (conclusion: `failure`), 2026-11-27 20:36 UTC
+- Latest run on `main`: https://github.com/xberg-io/xberg/actions/runs/46091241424 — dark (conclusion: `failure`), 2026-11-28 01:04 UTC
 - Dark since: 2026-11-25 06:57 UTC (first run of the current streak)
 - Job / step: `Alef-generated bindings freshness` → `Verify alef-generated bindings are current`
 - Likely cause: [alef:verify] ERROR task failed
@@ -97,7 +96,7 @@ advisories FAILED, bans ok, licenses ok, sources ok
 ```
       of which 324 are excluded from those headings by `[crates.verify].ignore_ephemeral` (declared ephemeral and never committed; still counted in the 347 above)
     15 declared user-owned by `[workspace.ownership] user_owned` in alef.toml: not written, stamped or content-checked. Remove the pattern to hand a path back to alef (-vv lists them)
-  tree walk: 10556 file(s) opened, 973 never examined (name and extension outside the ownership walk's scan set, or not readable as text)
+  tree walk: 10557 file(s) opened, 973 never examined (name and extension outside the ownership walk's scan set, or not readable as text)
 Crates whose generation inputs (Rust sources or alef.toml) changed since their last successful `alef generate`/`alef all` run (rerun to see which files, if any, actually changed):
   xberg
 ERROR generated bindings, versions, or snippet coverage are out of date

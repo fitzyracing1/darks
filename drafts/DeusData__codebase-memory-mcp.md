@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/DeusData/codebase-memory-mcp/issues/new
-- **Stars:** 49258 · **Generated:** 2026-11-28T00:52:21.970Z
+- **Stars:** 49263 · **Generated:** 2026-11-28T06:43:29.854Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
@@ -43,9 +43,25 @@ OK: baseline RSS=8732672 FDs=21
 
 ### test-impact-artifact (`.github/workflows/test-impact-artifact.yml`)
 
-- Latest run on `main`: https://github.com/DeusData/codebase-memory-mcp/actions/runs/46079825529 — dark (conclusion: `cancelled`), 2026-11-27 22:58 UTC
+- Latest run on `main`: https://github.com/DeusData/codebase-memory-mcp/actions/runs/46096892471 — dark (conclusion: `failure`), 2026-11-28 02:12 UTC
 - Dark since: 2026-11-27 22:58 UTC (first run of the current streak)
-- Likely cause: run cancelled
+- Job / step: `publish` → `Publish the bundle`
+- Likely cause: test-impact publish: status 1: the graph of HEAD could not be built: frozen status 11, evidence 25, 199 file error(s): graph-ui/src/architecture/architecture-scenes.test.tsx 9-9
+
+<details><summary>End of the job log</summary>
+
+```
+grammar_probe_c: 42 tests, 0 incomplete, exit 0, 0.8 s
+grammar_probe_d: 75 tests, 0 incomplete, exit 0, 2.9 s
+grammar_probe_e: 56 tests, 0 incomplete, exit 0, 1.9 s
+grammar_probe_f: 205 tests, 0 incomplete, exit 0, 12.5 s
+grammar_probe_g: 45 tests, 0 incomplete, exit 0, 1.5 s
+map: 10702 tests, 323 incomplete, 28951 functions -> /tmp/tmp.SJVNwDmQUH/coverage
+test-impact publish: status 1: the graph of HEAD could not be built: frozen status 11, evidence 25, 199 file error(s): graph-ui/src/architecture/architecture-scenes.test.tsx 9-9
+##[error]Process completed with exit code 1.
+```
+
+</details>
 
 If this is already known or expected, feel free to close. Thanks for maintaining codebase-memory-mcp!
 

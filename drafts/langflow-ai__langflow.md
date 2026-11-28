@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/langflow-ai/langflow/issues/new
-- **Stars:** 156989 · **Generated:** 2026-11-28T00:52:21.970Z
+- **Stars:** 156993 · **Generated:** 2026-11-28T06:43:29.854Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -64,9 +64,25 @@ FAILED languages: ['fr', 'ja', 'es', 'de', 'pt', 'zh-Hans', 'tr']
 
 ### Nightly Build (`.github/workflows/nightly_build.yml`)
 
-- Latest run on `main`: https://github.com/langflow-ai/langflow/actions/runs/45728206452 — dark (conclusion: `failure`), 2026-11-26 00:21 UTC
+- Latest run on `main`: https://github.com/langflow-ai/langflow/actions/runs/46087440189 — dark (conclusion: `failure`), 2026-11-28 00:21 UTC
 - Dark since: 2026-11-18 00:22 UTC (first run of the current streak)
-- Likely cause: cause not readable (GET /repos/langflow-ai/langflow/actions/runs/45728206452/jobs?filter=latest&per_)
+- Job / step: `Run Frontend Tests - Linux / Live provider smoke tests` → `Run live-provider smoke tests`
+- Likely cause: 1 failed
+
+<details><summary>End of the job log</summary>
+
+```
+Removing the temp database
+tempDbPath /home/runner/work/langflow/langflow/src/frontend/temp
+Temp database directory does not exist, skipping removal
+  1 failed
+    [chromium] › tests/live/admin-upgrade-repair.spec.ts:16:5 › distinguishes report imports and explains running-version history @release @database
+  2 skipped
+  4 passed (5.1m)
+##[error]Process completed with exit code 1.
+```
+
+</details>
 
 ### Mend (`.github/workflows/mend.yml`)
 

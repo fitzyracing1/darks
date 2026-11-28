@@ -4,14 +4,14 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/storytold/pdfcraft/issues/new
-- **Stars:** 21955 · **Generated:** 2026-11-28T00:52:21.970Z
+- **Stars:** 21972 · **Generated:** 2026-11-28T06:43:29.854Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 3 workflows dark on main ("Nightly macOS", "FreeBSD", "CI")
+CI: 2 workflows dark on main ("Nightly macOS", "CI")
 <!-- END TITLE -->
 
 ## Body
@@ -21,7 +21,7 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### Nightly macOS (`.github/workflows/nightly-macos.yml`)
 
-- Latest run on `main`: https://github.com/storytold/pdfcraft/actions/runs/45929832851 — dark (conclusion: `failure`), 2026-11-27 02:41 UTC
+- Latest run on `main`: https://github.com/storytold/pdfcraft/actions/runs/46099338968 — dark (conclusion: `failure`), 2026-11-28 02:41 UTC
 - Dark since: 2026-11-23 02:42 UTC (first run of the current streak)
 - Job / step: `gate / gate (macos-latest)` → `Gate`
 - Likely cause: warning: build failed, waiting for other jobs to finish...
@@ -36,28 +36,6 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
    = note: `cargo::unused_dependencies` is set to `warn` by default
 help: consider removing the dependency on `egui_extras`
 warning: `pdfcraft-ui-egui` (manifest) generated 1 warning
-##[error]Process completed with exit code 101.
-```
-
-</details>
-
-### FreeBSD (`.github/workflows/freebsd.yml`)
-
-- Latest run on `main`: https://github.com/storytold/pdfcraft/actions/runs/45934692416 — dark (conclusion: `failure`), 2026-11-27 03:31 UTC
-- Dark since: 2026-11-23 19:45 UTC (first run of the current streak)
-- Job / step: `freebsd / FreeBSD 15 aarch64 (build + test)` → `Build and test`
-- Likely cause: warning: build failed, waiting for other jobs to finish...
-
-<details><summary>End of the job log</summary>
-
-```
-833 |     assert!(h.state().views[0].crop_drag.is_none(), "the Crop tool must not receive a wheel drag");
-    |                                ^^^^^^^^^ unknown field
-    |
-    = note: available fields are: `id`, `from_attachment`, `view`, `session`, `textures` ... and 23 others
-For more information about this error, try `rustc --explain E0609`.
-error: could not compile `pdfcraft-ui-egui` (test "it") due to 1 previous error
-warning: build failed, waiting for other jobs to finish...
 ##[error]Process completed with exit code 101.
 ```
 

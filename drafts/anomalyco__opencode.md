@@ -4,36 +4,36 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/anomalyco/opencode/issues/new
-- **Stars:** 229637 · **Generated:** 2026-11-28T00:52:21.970Z
+- **Stars:** 229661 · **Generated:** 2026-11-28T06:43:29.854Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: "check-test" workflow failing on dev since 2026-11-27
+CI: "deploy-site" workflow failing on dev since 2026-11-28
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! The **check-test** workflow (`.github/workflows/check-test.yml`) on `dev` has been failing since 2026-11-27. Here is what I saw, in case it's useful:
+Hi! The **deploy-site** workflow (`.github/workflows/deploy-site.yml`) on `dev` has been failing since 2026-11-28. Here is what I saw, in case it's useful:
 
-- Latest run on `dev`: https://github.com/anomalyco/opencode/actions/runs/46083382924 — dark (conclusion: `failure`), 2026-11-27 23:35 UTC
-- Dark since: 2026-11-27 18:09 UTC (first run of the current streak)
-- Job / step: `e2e (linux, app-2)` → `Run app e2e tests against production build`
-- Likely cause: TypeError: Cannot read properties of undefined (reading 'VITE_OPENCODE_CHANNEL')
+- Latest run on `dev`: https://github.com/anomalyco/opencode/actions/runs/46108945861 — dark (conclusion: `failure`), 2026-11-28 04:44 UTC
+- Dark since: 2026-11-28 04:16 UTC (first run of the current streak)
+- Job / step: `site-deploy` → `Deploy`
+- Likely cause: The site's Worker config in the artifact is not the pinned target (/home/runner/_work/opencode/opencode/.github/release/targets/site/dev/worker.json)
 
 <details><summary>End of the job log</summary>
 
 ```
-> 157 |   ...(import.meta.env.VITE_OPENCODE_CHANNEL === "local" || import.meta.env.VITE_OPENCODE_CHANNEL === "dev"
-      |                       ^
-  158 |     ? [
-  159 |         {
-  160 |           tab: "experimental",
-    at /home/runner/_work/opencode/opencode/packages/app/src/settings/search-catalog.ts:157:23
-error: script "test:e2e:built" exited with code 1
-##[error]Process completed with exit code 1.
+##[end-action id=__self.__actions_download-artifact;outcome=success;conclusion=success;duration_ms=5181]
+##[start-action display=Run bash "${GITHUB_ACTION_PATH//\\//}/../verify-artifacts.sh" "$RUNNER_TEMP/in";id=__self.__run]
+verified site-dev (463ebf7bfe42a7185de2cc6c2dbfe62ccf12ca0671d3e94f7fa0b58ab376af45)
+##[end-action id=__self.__run;outcome=success;conclusion=success;duration_ms=190]
+Assuming role with OIDC
+Authenticated as assumedRoleId AROAYZO3B27FTPKUCQ7A2:opencode-46108945861
+##[notice]Cloudflare token ready; expires 2026-11-28T05:05:05Z
+##[error]The site's Worker config in the artifact is not the pinned target (/home/runner/_work/opencode/opencode/.github/release/targets/site/dev/worker.json)
 ```
 
 </details>

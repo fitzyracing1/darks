@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/activepieces/activepieces/issues/new
-- **Stars:** 25758 · **Generated:** 2026-11-28T00:52:21.970Z
+- **Stars:** 25762 · **Generated:** 2026-11-28T06:43:29.854Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
@@ -18,22 +18,22 @@ CI: "Chat Evals" workflow failing on main since 2026-10-13
 <!-- BEGIN BODY -->
 Hi! The **Chat Evals** workflow (`.github/workflows/agent-evals.yml`) on `main` has been failing since 2026-10-13. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/activepieces/activepieces/actions/runs/45950601043 — dark (conclusion: `failure`), 2026-11-27 06:14 UTC
+- Latest run on `main`: https://github.com/activepieces/activepieces/actions/runs/46115604794 — dark (conclusion: `failure`), 2026-11-28 06:13 UTC
 - Dark since: 2026-10-13 06:26 UTC (first run of the current streak)
 - Job / step: `Live judge gate` → `Run live chat evals (scope=regression)`
-- Likely cause: AssertionError: see the eval report above for the failing checks: expected [ …(2) ] to deeply equal [] (packages/server/worker/test/lib/agent-eval/agent-eval.test.ts:58)
+- Likely cause: Error: Hook timed out in 540000ms. (packages/server/worker/test/lib/agent-eval/agent-eval.test.ts:20)
 
 <details><summary>End of the job log</summary>
 
 ```
-     59|     })
-     60| })
+     21|         const fixtures = evalFixtures.load().filter((fixture) => SCOPE…
+     22|         const [fixtureResults, agreement] = await Promise.all([
 ⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
  Test Files  1 failed | 12 passed (13)
-      Tests  1 failed | 89 passed (90)
-   Start at  06:18:26
-   Duration  454.81s (tests 97%, import 2%, transform 1%)
-##[error]AssertionError: see the eval report above for the failing checks: expected [ …(2) ] to deeply equal []
+      Tests  89 passed | 1 skipped (90)
+   Start at  06:16:46
+   Duration  544.19s (tests 98%, import 1%)
+##[error]Error: Hook timed out in 540000ms.
 ```
 
 </details>

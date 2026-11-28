@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/openfilm/openfilm/issues/new
-- **Stars:** 9621 · **Generated:** 2026-11-28T00:52:21.970Z
+- **Stars:** 9647 · **Generated:** 2026-11-28T06:43:29.854Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title

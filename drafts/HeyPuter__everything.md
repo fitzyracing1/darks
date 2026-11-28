@@ -4,19 +4,21 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/HeyPuter/everything/issues/new
-- **Stars:** 9709 · **Generated:** 2026-11-28T00:52:21.970Z
+- **Stars:** 9725 · **Generated:** 2026-11-28T06:43:29.854Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: "Browser tests" workflow failing on main since 2026-11-27
+CI: 2 workflows dark on main ("Browser tests", "CI")
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! The **Browser tests** workflow (`.github/workflows/e2e.yml`) on `main` has been failing since 2026-11-27. Here is what I saw, in case it's useful:
+Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
+
+### Browser tests (`.github/workflows/e2e.yml`)
 
 - Latest run on `main`: https://github.com/HeyPuter/everything/actions/runs/45950379725 — dark (conclusion: `failure`), 2026-11-27 06:12 UTC
 - Dark since: 2026-11-27 06:12 UTC (first run of the current streak)
@@ -34,6 +36,28 @@ Hi! The **Browser tests** workflow (`.github/workflows/e2e.yml`) on `main` has b
   1 skipped
   721 passed (25.3m)
 ##[error]Process completed with exit code 1.
+```
+
+</details>
+
+### CI (`.github/workflows/ci.yml`)
+
+- Latest run on `main`: https://github.com/HeyPuter/everything/actions/runs/46091451758 — dark (conclusion: `failure`), 2026-11-28 01:06 UTC
+- Dark since: 2026-11-28 01:06 UTC (first run of the current streak)
+- Job / step: `spreadsheet (2/4)` → `Test`
+- Likely cause: 7: 0x1467825 v8::internal::HeapAllocator::AllocateRawWithRetryOrFailSlowPath(int, v8::internal::AllocationType, v8::internal::AllocationOrigin, v8::internal::AllocationAlignment) [node]
+
+<details><summary>End of the job log</summary>
+
+```
+ 5: 0x14921f9 v8::internal::Heap::CollectGarbage(v8::internal::AllocationSpace, v8::internal::GarbageCollectionReason, v8::GCCallbackFlags) [node]
+ 6: 0x14668f8 v8::internal::HeapAllocator::AllocateRawWithLightRetrySlowPath(int, v8::internal::AllocationType, v8::internal::AllocationOrigin, v8::internal::AllocationAlignment) [node]
+ 7: 0x1467825 v8::internal::HeapAllocator::AllocateRawWithRetryOrFailSlowPath(int, v8::internal::AllocationType, v8::internal::AllocationOrigin, v8::internal::AllocationAlignment) [node]
+ 8: 0x144042e v8::internal::Factory::NewFillerObject(int, v8::internal::AllocationAlignment, v8::internal::AllocationType, v8::internal::AllocationOrigin) [node]
+ 9: 0x18a2d3c v8::internal::Runtime_AllocateInYoungGeneration(int, unsigned long*, v8::internal::Isolate*) [node]
+10: 0x71a444e6caf6
+Aborted (core dumped)
+##[error]Process completed with exit code 134.
 ```
 
 </details>

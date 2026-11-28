@@ -4,22 +4,22 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/tangency-labs/solidcraft/issues/new
-- **Stars:** 18773 · **Generated:** 2026-11-28T00:52:21.970Z
+- **Stars:** 18815 · **Generated:** 2026-11-28T06:43:29.854Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Skipped: upstream already tracking
 
 - Pages (`.github/workflows/pages.yml`): [issue #17903](https://github.com/tangency-labs/solidcraft/issues/17903) "solidcraft: the Preferences pages (Appearance, Layout, Graphics, Navigation) as kit pages"
-- Kernel rig (`.github/workflows/kernel-rig.yml`): [issue #11647](https://github.com/tangency-labs/solidcraft/issues/11647) "Remove the kernel rig's transitional checks when the kernel cases run in solidcore", [issue #13820](https://github.com/tangency-labs/solidcraft/issues/13820) "CI: SolidCraft's kernel rig as solidcore's operation-level gate, by area, with per-area known-failing lists and the parity gap to the fork", [issue #13717](https://github.com/tangency-labs/solidcraft/issues/13717) "Kernel rig CI deadline: G2 boss-root fillet leaves 711 cases unrun", [issue #13715](https://github.com/tangency-labs/solidcraft/issues/13715) "Kernel rig: a traced miss before a malformed pick grades the case unsupported instead of failing"
-- Lists (`.github/workflows/lists.yml`): [issue #9795](https://github.com/tangency-labs/solidcraft/issues/9795) "Weldments: round-tube bend lists with developed stations and bend-plane rotation", [issue #13859](https://github.com/tangency-labs/solidcraft/issues/13859) "SmPolyBrep::CombineCoincidentVertices lists a slit PolyFace twice; CheckForSqueezeVertices squeezes it through its deleted PolyBrep", [issue #3820](https://github.com/tangency-labs/solidcraft/issues/3820) "RFC Cut lists from the model: stock sizes, nesting onto boards and sheets, and build plans", [issue #4671](https://github.com/tangency-labs/solidcraft/issues/4671) "The drop-down command lists do not let the user choose his command at a glance - They need several graphic design tweaks", [issue #12457](https://github.com/tangency-labs/solidcraft/issues/12457) "Boolean refused when a STEP part has edges a few micrometres off their faces ("the second operand already fails it"), inspect.interference lists the pair as unchecked"
+- Claim (`.github/workflows/claim.yml`): [issue #6739](https://github.com/tangency-labs/solidcraft/issues/6739) "Claim bot: a cross-reference blocks legitimate PRs, and the bot cannot post its own message", [issue #4405](https://github.com/tangency-labs/solidcraft/issues/4405) "Claim bot: some claim PRs fail with 403 "Resource not accessible by integration""
+- Docker (`.github/workflows/docker.yml`): [issue #14063](https://github.com/tangency-labs/solidcraft/issues/14063) "Native server-side project storage for Docker / self-hosted installations", [issue #20820](https://github.com/tangency-labs/solidcraft/issues/20820) "Publish a Docker/web image variant with the optional bundled-render-library texture/HDR pack"
 
 These workflows are left out of the body below.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 2 workflows dark on main ("CI", "Fillet rig")
+CI: 2 workflows dark on main ("CI", "Release")
 <!-- END TITLE -->
 
 ## Body
@@ -29,15 +29,31 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
 
 ### CI (`.github/workflows/ci.yml`)
 
-- Latest run on `main`: https://github.com/tangency-labs/solidcraft/actions/runs/46088052070 — dark (conclusion: `cancelled`), 2026-11-28 00:28 UTC
+- Latest run on `main`: https://github.com/tangency-labs/solidcraft/actions/runs/46116790918 — dark (conclusion: `cancelled`), 2026-11-28 06:28 UTC
 - Dark since: 2026-11-27 18:08 UTC (first run of the current streak)
 - Likely cause: run cancelled
 
-### Fillet rig (`.github/workflows/fillet-rig.yml`)
+### Release (`.github/workflows/release.yml`)
 
-- Latest run on `main`: https://github.com/tangency-labs/solidcraft/actions/runs/46088051854 — dark (conclusion: `cancelled`), 2026-11-28 00:28 UTC
-- Dark since: 2026-11-28 00:28 UTC (first run of the current streak)
-- Likely cause: run cancelled
+- Latest run on `main`: https://github.com/tangency-labs/solidcraft/actions/runs/46110157334 — dark (conclusion: `failure`), 2026-11-28 05:01 UTC
+- Dark since: 2026-11-28 05:01 UTC (first run of the current streak)
+- Job / step: `Python wheel and CLI archives` → `Check the wheel downloads its CLI from these files`
+- Likely cause: Artifact download URL: https://github.com/tangency-labs/solidcraft/actions/runs/46110157334/artifacts/15251025392
+
+<details><summary>End of the job log</summary>
+
+```
+Uploaded bytes 553229174
+Finished uploading artifact content to blob storage!
+SHA256 digest of uploaded artifact is a1b817b306cf7eac1aaffac06e32d4e5c2467223334f3bcd55c26dfc5910de19
+Finalizing artifact upload
+Artifact release-python successfully finalized. Artifact ID 15251025392
+Artifact release-python has been successfully uploaded! Final size is 553229174 bytes. Artifact ID is 15251025392
+Artifact download URL: https://github.com/tangency-labs/solidcraft/actions/runs/46110157334/artifacts/15251025392
+##[error]Process completed with exit code 1.
+```
+
+</details>
 
 If this is already known or expected, feel free to close. Thanks for maintaining solidcraft!
 
