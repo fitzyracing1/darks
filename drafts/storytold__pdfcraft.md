@@ -4,44 +4,26 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/storytold/pdfcraft/issues/new
-- **Stars:** 21972 · **Generated:** 2026-11-28T06:43:29.854Z
+- **Stars:** 21994 · **Generated:** 2026-11-28T12:37:57.165Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
+
+## Skipped: upstream already tracking
+
+- Nightly macOS (`.github/workflows/nightly-macos.yml`): [issue #8595](https://github.com/storytold/pdfcraft/issues/8595) "CI: macOS-only breakage reaches main unnoticed (nightly macOS red since 2026-11-23)"
+
+These workflows are left out of the body below.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 2 workflows dark on main ("Nightly macOS", "CI")
+CI: "CI" workflow getting cancelled on main since 2026-11-23
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
-
-### Nightly macOS (`.github/workflows/nightly-macos.yml`)
-
-- Latest run on `main`: https://github.com/storytold/pdfcraft/actions/runs/46099338968 — dark (conclusion: `failure`), 2026-11-28 02:41 UTC
-- Dark since: 2026-11-23 02:42 UTC (first run of the current streak)
-- Job / step: `gate / gate (macos-latest)` → `Gate`
-- Likely cause: warning: build failed, waiting for other jobs to finish...
-
-<details><summary>End of the job log</summary>
-
-```
-   |
-34 | egui_extras = { workspace = true }
-   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-   |
-   = note: `cargo::unused_dependencies` is set to `warn` by default
-help: consider removing the dependency on `egui_extras`
-warning: `pdfcraft-ui-egui` (manifest) generated 1 warning
-##[error]Process completed with exit code 101.
-```
-
-</details>
-
-### CI (`.github/workflows/ci.yml`)
+Hi! The **CI** workflow (`.github/workflows/ci.yml`) on `main` has been getting cancelled since 2026-11-23. Here is what I saw, in case it's useful:
 
 - Latest run on `main`: https://github.com/storytold/pdfcraft/actions/runs/46077053718 — dark (conclusion: `cancelled`), 2026-11-27 22:30 UTC
 - Dark since: 2026-11-23 20:01 UTC (first run of the current streak)

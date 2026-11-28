@@ -4,14 +4,14 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/storytold/photocraft/issues/new
-- **Stars:** 81905 · **Generated:** 2026-11-28T06:43:29.854Z
+- **Stars:** 81932 · **Generated:** 2026-11-28T12:37:57.165Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 3 workflows dark on main ("FreeBSD", "Perf (nightly)", "CI")
+CI: 3 workflows dark on main ("FreeBSD", "Perf (nightly)", "SonarCloud")
 <!-- END TITLE -->
 
 ## Body
@@ -63,24 +63,24 @@ warning: `photocraft-web` (manifest) generated 1 warning
 
 </details>
 
-### CI (`.github/workflows/ci.yml`)
+### SonarCloud (`.github/workflows/sonarcloud.yml`)
 
-- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/46102142798 — dark (conclusion: `failure`), 2026-11-28 03:17 UTC
-- Dark since: 2026-11-28 03:17 UTC (first run of the current streak)
-- Job / step: `gate / test 2/4 (artcraft-k8s-main)` → `Gate`
-- Likely cause: skip  panic_hunt
+- Latest run on `main`: https://github.com/storytold/photocraft/actions/runs/46138025137 — dark (conclusion: `failure`), 2026-11-28 11:03 UTC
+- Dark since: 2026-11-28 11:03 UTC (first run of the current streak)
+- Job / step: `sonarcloud / Tests 2/4` → `Merge this shard's profiles`
+- Likely cause: llvm-profdata could not merge shard 2's profiles (exit 1)
 
 <details><summary>End of the job log</summary>
 
 ```
-    corpus/psd-tools: all 309 files (PHOTOCRAFT_FULL_SWEEP=1)
-    (test timed out)
-error: test run failed
-error: ci failed at `test`
-CI summary:
-  FAIL  test: cargo nextest run --profile ci --binaries-metadata /home/runner/_work/photocraft/photocraft/target/nextest-archive/target/nextest/binaries-metadata.json --cargo-metadata /home/runner/_work/photocraft/photo…
-  skip  panic_hunt
-##[error]Process completed with exit code 1.
+  1.100.0-x86_64-unknown-linux-gnu updated - rustc 1.100.0 (0ef1bc386 2026-11-09) (from rustc 1.100.0 (0ef1bc386 2026-11-09))
+Raw profiles: 17G in 4240 files
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/root       145G   85G   61G  59% /
+warning: profraw/shard-2-10885-2493178448070436744_0.profraw: invalid instrumentation profile data (file header is corrupt)
+warning: profraw/shard-2-10928-2493178448070436744_0.profraw: invalid instrumentation profile data (file header is corrupt)
+error: no profile can be merged
+##[error]shard 2 wrote a truncated or corrupt coverage profile: profraw/shard-2-10885-2493178448070436744_0.profraw: invalid instrumentation profile data (file header is corrupt)
 ```
 
 </details>

@@ -4,23 +4,21 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/HeyPuter/everything/issues/new
-- **Stars:** 9725 · **Generated:** 2026-11-28T06:43:29.854Z
+- **Stars:** 9735 · **Generated:** 2026-11-28T12:37:57.165Z
 - Nothing in this file has been sent anywhere.
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 2 workflows dark on main ("Browser tests", "CI")
+CI: "Browser tests" workflow failing on main since 2026-11-27
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
-Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
+Hi! The **Browser tests** workflow (`.github/workflows/e2e.yml`) on `main` has been failing since 2026-11-27. Here is what I saw, in case it's useful:
 
-### Browser tests (`.github/workflows/e2e.yml`)
-
-- Latest run on `main`: https://github.com/HeyPuter/everything/actions/runs/45950379725 — dark (conclusion: `failure`), 2026-11-27 06:12 UTC
+- Latest run on `main`: https://github.com/HeyPuter/everything/actions/runs/46115413756 — dark (conclusion: `failure`), 2026-11-28 06:10 UTC
 - Dark since: 2026-11-27 06:12 UTC (first run of the current streak)
 - Job / step: `parametric` → `Run npm run test:e2e -- --shard=1/1`
 - Likely cause: [desktop] › tests/e2e/assistant.spec.ts:78:1 › files go with a message: picked, pasted or dropped, and refused when the assistant cannot read them
@@ -34,30 +32,8 @@ Hi! A few workflows on `main` have been dark recently. Details below, in case th
   1 flaky
     [desktop] › tests/e2e/modeling.spec.ts:514:1 › dragging the rollback bar rolls back past several features in one undo step
   1 skipped
-  721 passed (25.3m)
+  768 passed (27.0m)
 ##[error]Process completed with exit code 1.
-```
-
-</details>
-
-### CI (`.github/workflows/ci.yml`)
-
-- Latest run on `main`: https://github.com/HeyPuter/everything/actions/runs/46091451758 — dark (conclusion: `failure`), 2026-11-28 01:06 UTC
-- Dark since: 2026-11-28 01:06 UTC (first run of the current streak)
-- Job / step: `spreadsheet (2/4)` → `Test`
-- Likely cause: 7: 0x1467825 v8::internal::HeapAllocator::AllocateRawWithRetryOrFailSlowPath(int, v8::internal::AllocationType, v8::internal::AllocationOrigin, v8::internal::AllocationAlignment) [node]
-
-<details><summary>End of the job log</summary>
-
-```
- 5: 0x14921f9 v8::internal::Heap::CollectGarbage(v8::internal::AllocationSpace, v8::internal::GarbageCollectionReason, v8::GCCallbackFlags) [node]
- 6: 0x14668f8 v8::internal::HeapAllocator::AllocateRawWithLightRetrySlowPath(int, v8::internal::AllocationType, v8::internal::AllocationOrigin, v8::internal::AllocationAlignment) [node]
- 7: 0x1467825 v8::internal::HeapAllocator::AllocateRawWithRetryOrFailSlowPath(int, v8::internal::AllocationType, v8::internal::AllocationOrigin, v8::internal::AllocationAlignment) [node]
- 8: 0x144042e v8::internal::Factory::NewFillerObject(int, v8::internal::AllocationAlignment, v8::internal::AllocationType, v8::internal::AllocationOrigin) [node]
- 9: 0x18a2d3c v8::internal::Runtime_AllocateInYoungGeneration(int, unsigned long*, v8::internal::Isolate*) [node]
-10: 0x71a444e6caf6
-Aborted (core dumped)
-##[error]Process completed with exit code 134.
 ```
 
 </details>

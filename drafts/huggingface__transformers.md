@@ -4,43 +4,21 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/huggingface/transformers/issues/new
-- **Stars:** 169316 · **Generated:** 2026-11-28T06:43:29.854Z
+- **Stars:** 169313 · **Generated:** 2026-11-28T12:37:57.165Z
 - Nothing in this file has been sent anywhere.
-- **Note for Joshua:** self-hosted runner problem — maintainers usually know
 - **Note for Joshua:** workflow failed to start (config/permissions on their side)
+- **Note for Joshua:** self-hosted runner problem — maintainers usually know
 
 ## Suggested title
 
 <!-- BEGIN TITLE -->
-CI: 9 workflows dark on main ("Slow tests on important models (on Push - A10)", "Build docker images (scheduled)", "Self-hosted runner (nightly-past-ci-caller)", +6 more)
+CI: 9 workflows dark on main ("Build docker images (scheduled)", "Self-hosted runner (nightly-past-ci-caller)", "Self-hosted runner (Intel Gaudi3 scheduled CI caller)", +6 more)
 <!-- END TITLE -->
 
 ## Body
 
 <!-- BEGIN BODY -->
 Hi! A few workflows on `main` have been dark recently. Details below, in case they're useful:
-
-### Slow tests on important models (on Push - A10) (`.github/workflows/push-important-models.yml`)
-
-- Latest run on `main`: https://github.com/huggingface/transformers/actions/runs/46040449098 — dark (conclusion: `failure`), 2026-11-27 17:15 UTC
-- Dark since: 2026-11-27 17:15 UTC (first run of the current streak)
-- Job / step: `Model CI / run_models_gpu (aws-g5-12xlarge-cache, 0) / run_models_gpu (models/auto)` → `Run all tests on GPU`
-- Likely cause: Executing the custom container implementation failed. Please contact your self hosted runner administrator.
-
-<details><summary>End of the job log</summary>
-
-```
-drwxr-xr-x. 3 root root       71 Nov 27 17:17 reports
-drwxr-xr-x. 3 root root       84 Nov 19 00:42 scripts
--rw-r--r--. 1 root root    12742 Nov 27 17:17 setup.py
-drwxr-xr-x. 1 root root       67 Nov 19 00:42 src
--rw-r--r--. 1 root root    84839 Nov 27 17:19 test_outputs.txt
-drwxr-xr-x. 1 root root     4096 Nov 27 17:17 tests
-drwxr-xr-x. 1 root root     4096 Nov 27 17:17 utils
-##[error]Error: failed to run script step: command terminated with non-zero exit code: error executing command [sh -e /__w/_temp/714bb420-ea86-11f1-aa40-67b4898fc67a.sh], exit code 1
-```
-
-</details>
 
 ### Build docker images (scheduled) (`.github/workflows/build-docker-images.yml`)
 
@@ -167,6 +145,28 @@ FAILED test/registered/unit/utils/test_hf_transformers.py::TestNormalizeTpStyle:
 ======== 3 failed, 95 passed, 19 warnings, 17 subtests passed in 8.87s =========
 sys:1: DeprecationWarning: builtin type swigvarlink has no __module__ attribute
 ##[error]Error: failed to run script step: command terminated with non-zero exit code: error executing command [sh -e /__w/_temp/ed8a33a0-eadf-11f1-b8fc-b19198867cf8.sh], exit code 1
+```
+
+</details>
+
+### PR CI (`.github/workflows/pr-ci-caller.yml`)
+
+- Latest run on `main`: https://github.com/huggingface/transformers/actions/runs/46143201063 — dark (conclusion: `failure`), 2026-11-28 12:08 UTC
+- Dark since: 2026-11-28 12:08 UTC (first run of the current streak)
+- Job / step: `pr-ci / tests_tensor_parallel_ci / tests_tensor_parallel_ci [shard 7/8]` → `Run tests`
+- Likely cause: Executing the custom container implementation failed. Please contact your self hosted runner administrator.
+
+<details><summary>End of the job log</summary>
+
+```
+  File "/usr/local/lib/python3.11/site-packages/huggingface_hub/file_download.py", line 1234, in _hf_hub_download_to_cache_dir
+    os.makedirs(os.path.dirname(blob_path), exist_ok=True)
+  File "<frozen os>", line 215, in makedirs
+  File "<frozen os>", line 225, in makedirs
+OSError: [Errno 30] Read-only file system: '/mnt/cache/hub/models--trl-internal-testing--tiny-Qwen3ForCausalLM'
+== 1 failed, 42 passed, 36 skipped, 9 warnings, 5 rerun in 169.58s (0:02:49) ===
+OTEL TRACE END trace_id=1a8329562a06b150233c74511bf8bfcd service=pytest-observability job=tests_tensor_parallel_ci exporter_version=0.1.0+gca2e2ae exit_code=1
+##[error]Error: failed to run script step: command terminated with non-zero exit code: error executing command [sh -e /__w/_temp/47f51f40-eb25-11f1-a77d-e1f5e794d8ab.sh], exit code 1
 ```
 
 </details>

@@ -4,7 +4,7 @@
 
 - **Status:** ready to file — awaiting Joshua's OK (check its box in QUEUE.md)
 - **Would be filed at:** https://github.com/PrefectHQ/fastmcp/issues/new
-- **Stars:** 28793 · **Generated:** 2026-11-28T06:43:29.854Z
+- **Stars:** 28796 · **Generated:** 2026-11-28T12:37:57.165Z
 - Nothing in this file has been sent anywhere.
 - **Note for Joshua:** infra-class dark (runner/timeout/cancel) — lower value
 
@@ -19,7 +19,7 @@ CI: "PBT campaign" workflow getting cancelled on main since 2026-11-25
 <!-- BEGIN BODY -->
 Hi! The **PBT campaign** workflow (`.github/workflows/pbt-campaign.yml`) on `main` has been getting cancelled since 2026-11-25. Here is what I saw, in case it's useful:
 
-- Latest run on `main`: https://github.com/PrefectHQ/fastmcp/actions/runs/45957933341 — dark (conclusion: `cancelled`), 2026-11-27 07:21 UTC
+- Latest run on `main`: https://github.com/PrefectHQ/fastmcp/actions/runs/46120674302 — dark (conclusion: `cancelled`), 2026-11-28 07:19 UTC
 - Dark since: 2026-11-25 07:22 UTC (first run of the current streak)
 - Job / step: `campaign` → `Hunt`
 - Likely cause: The job has exceeded the maximum execution time of 20m0s
@@ -30,8 +30,8 @@ Hi! The **PBT campaign** workflow (`.github/workflows/pbt-campaign.yml`) on `mai
  + watchfiles==1.2.0
  + wcwidth==0.8.2
  + websockets==16.1.1
-##[end-action id=__self.__run;outcome=success;conclusion=success;duration_ms=3263]
-Cache not found for input keys: pbt-db-45957933341-1, pbt-db-
+##[end-action id=__self.__run;outcome=success;conclusion=success;duration_ms=3866]
+Cache not found for input keys: pbt-db-46120674302-1, pbt-db-
 bringing up nodes...
 bringing up nodes...
 ##[error]The operation was canceled.
